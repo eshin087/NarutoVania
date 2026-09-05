@@ -1,0 +1,150 @@
+ASSET 01: character-reference.png
+Use case: stylized-concept
+Asset type: character reference sheet for a cel-shaded anime 2D side-scrolling action game, Naruto: Land of Waves.
+Primary request: One polished character lineup reference image, wide landscape, all five characters fully visible from head to foot, separate evenly spaced figures, no overlap.
+Subjects left to right: recognizable young Naruto Uzumaki with spiky blond hair, blue forehead protector, orange and blue jacket and orange pants, blue ninja sandals; Zabuza Momochi with lower face wrapped in white bandages, dark spiky hair, sleeveless grey outfit, arm warmers and giant broad cleaver greatsword; Haku with long dark hair, pale teal kimono-style robes and sash, distinctive white hunter-nin mask with red markings held beside the face; a rugged melee bandit in brown wraps with a short sword; a ranged shinobi in charcoal blue cloth with scarf and a handful of senbon.
+Style/medium: authentic polished hand-drawn cel-shaded anime game artwork, crisp dark outlines, clean color fills and restrained two-tone shadows. Coherent human proportions, readable silhouettes.
+Composition: neutral standing full bodies, roughly three-quarter or side facing right; scale believable, Naruto shorter than Zabuza. Spacious light neutral background, no scenery.
+Constraints: one depiction of each character, no duplicate figures, no text, no labels, no grid, no logo, no watermark. Keep clothing and identity details consistent for subsequent sprite sheets.
+
+
+ASSET 02: naruto-sprites.png
+Use case: stylized-concept
+Asset type: production-ready 2D side-scrolling anime game sprite atlas, square 1536x1536 PNG with true transparent alpha background.
+Input image 1: visual identity/style reference ONLY. Generate a new sprite sheet, not an edited lineup.
+Style: clean dark anime outlines, sharp cel-shading, uncluttered readable silhouettes; faithfully preserve the referenced character's face, hair, clothes, palette and proportions.
+Layout is critical: exactly FOUR columns and FOUR rows, 16 equal square cells, row-major order as specified. NO drawn grid, no frame lines, no numbers, no labels, no text. Every cell has exactly one full-body pose. Character faces screen RIGHT in every cell. Keep same scale, torso size and foot baseline 86% down each cell for all grounded poses. Center each pose inside its own cell. Wide transparent margins: art stays entirely inside the middle 80% of each cell, including weapons, effects, limbs, hair. No overlaps, no cropping, no background scenery, no cast floor shadows. All transparent space must be actual alpha transparency, not checkerboard painting or opaque white. All 16 poses fully visible.
+Subject: young Naruto Uzumaki, first character of reference, orange/blue clothing, spiky blond hair, forehead protector, ninja sandals.
+Required poses row 1 left to right: 1 idle relaxed ready stance, 2 idle slight breathing ready stance, 3 running stride left leg forward, 4 running passing stride.
+Row 2: 5 running stride right leg forward, 6 running airborne stride, 7 jumping upward with bent knees, 8 falling downward with spread arms.
+Row 3: 9 rightward straight punch, 10 rightward high kick, 11 spinning combo finisher kick to right, 12 throwing a shuriken to right.
+Row 4: 13 shadow-clone cross-finger hand seal at chest, 14 rightward forward Rasengan rush holding a compact brilliant blue chakra orb in extended hand, 15 hurt recoiling, 16 defeated crouched on one knee head down.
+Only render Naruto. No duplicate ghost bodies or extra characters. Keep action effects compact inside cell.
+
+ASSET 03: zabuza-sprites.png
+Use case: stylized-concept
+Asset type: production-ready 2D side-scrolling anime game sprite atlas, square 1536x1536 PNG with true transparent alpha background.
+Input image 1: visual identity/style reference ONLY. Generate a new sprite sheet, not an edited lineup.
+Style: clean dark anime outlines, sharp cel-shading, uncluttered readable silhouettes; faithfully preserve the referenced character's face, hair, clothes, palette and proportions.
+Layout is critical: exactly FOUR columns and FOUR rows, 16 equal square cells, row-major order as specified. NO drawn grid, no frame lines, no numbers, no labels, no text. Every cell has exactly one full-body pose. Character faces screen RIGHT in every cell. Keep same scale, torso size and foot baseline 86% down each cell for all grounded poses. Center each pose inside its own cell. Wide transparent margins: art stays entirely inside the middle 80% of each cell, including weapons, effects, limbs, hair. No overlaps, no cropping, no background scenery, no cast floor shadows. All transparent space must be actual alpha transparency, not checkerboard painting or opaque white. All 16 poses fully visible.
+Subject: Zabuza Momochi, second character of reference, tall muscular adult ninja, dark hair, bandaged lower face, grey sleeveless outfit, enormous broad cleaver sword. Sword must be fully contained in each cell, scale the entire character consistently small enough to fit it in attack poses.
+Required poses row 1 left to right: 1 idle sword low, 2 idle sword shouldered, 3 running stride left leg forward, 4 running passing stride.
+Row 2: 5 running stride right leg forward, 6 running airborne stride, 7 overhead sword windup, 8 rightward horizontal sword slash starting.
+Row 3: 9 rightward sword slash follow through, 10 water technique hand seal, 11 water technique outward casting palm with compact blue water accent, 12 low forward lunge anticipation.
+Row 4: 13 extended forward sword lunge to right, 14 hurt recoil, 15 defeated kneeling, 16 defeated slumped lying low on ground.
+Only render Zabuza. No duplicate ghost bodies or extra characters.
+
+ASSET 04: haku-sprites.png
+Use case: stylized-concept
+Asset type: production-ready 2D side-scrolling anime game sprite atlas, square 1536x1536 PNG with true transparent alpha background.
+Input image 1: visual identity/style reference ONLY. Generate a new sprite sheet, not an edited lineup.
+Style: clean dark anime outlines, sharp cel-shading, uncluttered readable silhouettes; faithfully preserve the referenced character's face, hair, clothes, palette and proportions.
+Layout is critical: exactly FOUR columns and FOUR rows, 16 equal square cells, row-major order as specified. NO drawn grid, no frame lines, no numbers, no labels, no text. Every cell has exactly one full-body pose. Character faces screen RIGHT in every cell. Keep same scale, torso size and foot baseline 86% down each cell for all grounded poses. Center each pose inside its own cell. Wide transparent margins: art stays entirely inside the middle 80% of each cell, including weapons, effects, limbs, hair. No overlaps, no cropping, no background scenery, no cast floor shadows. All transparent space must be actual alpha transparency, not checkerboard painting or opaque white. All 16 poses fully visible.
+Subject: Haku, third character of reference. Slender youthful ninja, pale teal robes, dark long hair, white hunter mask with red markings WORN ON FACE for all 16 frames. Mask and clothing must stay identical across poses.
+Required poses row 1 left to right: 1 idle ready, 2 idle breathing, 3 running stride left leg forward, 4 running passing stride.
+Row 2: 5 running stride right leg forward, 6 running airborne stride, 7 senbon needle throwing windup with hand by face, 8 throwing senbon right starting.
+Row 3: 9 throwing senbon right follow through, 10 ice mirror technique one-hand seal, 11 ice mirror technique casting arm extended with tiny icy glint, 12 rapid low mirror dash to right.
+Row 4: 13 hurt recoil standing, 14 hurt recoil bent, 15 defeated kneeling, 16 defeated slumped lying low on ground.
+Only render Haku. No actual large mirrors on this sheet. No duplicate ghost bodies or extra characters.
+
+ASSET 05: enemy-sprites.png
+Use case: stylized-concept
+Asset type: production-ready 2D side-scrolling anime game sprite atlas, square 1536x1536 PNG with true transparent alpha background.
+Input image 1: visual identity/style reference ONLY. Generate a new sprite sheet, not an edited lineup.
+Style: clean dark anime outlines, sharp cel-shading, uncluttered readable silhouettes; faithfully preserve the referenced character's face, hair, clothes, palette and proportions.
+Layout is critical: exactly FOUR columns and FOUR rows, 16 equal square cells, row-major order as specified. NO drawn grid, no frame lines, no numbers, no labels, no text. Every cell has exactly one full-body pose. Character faces screen RIGHT in every cell. Keep same scale, torso size and foot baseline 86% down each cell for all grounded poses. Center each pose inside its own cell. Wide transparent margins: art stays entirely inside the middle 80% of each cell, including weapons, effects, limbs, hair. No overlaps, no cropping, no background scenery, no cast floor shadows. All transparent space must be actual alpha transparency, not checkerboard painting or opaque white. All 16 poses fully visible.
+Subjects: ONLY the fourth character from reference (brown-clad melee bandit with short sword) and fifth character (charcoal blue ranged shinobi with scarf and senbon).
+Top two rows are eight frames of the SAME melee bandit.
+Row 1 left to right: 1 idle ready, 2 running stride A, 3 running stride B, 4 short sword overhead windup.
+Row 2: 5 rightward short sword attack, 6 hurt recoiling, 7 falling wounded, 8 defeated lying low on ground.
+Bottom two rows are eight frames of the SAME ranged shinobi.
+Row 3: 9 idle ready, 10 running stride A, 11 running stride B, 12 senbon throwing windup.
+Row 4: 13 rightward senbon throw with extended arm, 14 hurt recoiling, 15 falling wounded, 16 defeated lying low on ground.
+Precisely four rows and four columns total. No Naruto, Zabuza, or Haku. No duplicate ghost bodies or extra characters.
+
+
+ASSET 06: forest-background.png
+Use case: stylized-concept
+Asset type: full-bleed background artwork for Naruto: Land of Waves, a 2D side-scrolling anime game.
+Primary request: atmospheric painted anime landscape, ultrawide 16:9 composition, 1792x1024 or wider, polished traditional anime background painting with crisp foreground details and softly layered distant depth. Cool blue-green misty atmosphere, readable dark-to-light silhouettes.
+Composition: strict side-scrolling side-view, level horizontal ground line only in lower quarter of image, open uncluttered space through middle half for gameplay sprites. No perspective path receding toward a vanishing point. No people, no creatures, no text, no logos, no interface, no borders. This is a background plate, keep decorative foreground objects at extreme edges.
+Scene: misty anime forest in the Land of Waves. Massive dark mossy tree trunks at sides, layered tall pines and deciduous silhouettes fading into turquoise mist, subtle cool light shafts through canopy, forest floor with ferns and damp roots in lower quarter. Tall trees make depth through layered silhouettes, clean middle play space, slightly ominous early morning. The ground is horizontal and side-on across entire image.
+
+ASSET 07: river-background.png
+Use case: stylized-concept
+Asset type: full-bleed background artwork for Naruto: Land of Waves, a 2D side-scrolling anime game.
+Primary request: atmospheric painted anime landscape, ultrawide 16:9 composition, 1792x1024 or wider, polished traditional anime background painting with crisp foreground details and softly layered distant depth. Cool blue-green misty atmosphere, readable dark-to-light silhouettes.
+Composition: strict side-scrolling side-view, level horizontal ground line only in lower quarter of image, open uncluttered space through middle half for gameplay sprites. No perspective path receding toward a vanishing point. No people, no creatures, no text, no logos, no interface, no borders. This is a background plate, keep decorative foreground objects at extreme edges.
+Scene: a misty river clearing in the Land of Waves. Broad calm shallow blue-green river across the scene, far wooded bank and layered dark tree silhouettes fading into dense pale mist, a few broad rounded wet rocks near lower edge, earth and grassy bank in bottom quarter, open misty central clearing. Side-on view across the river, never looking down a receding path, restrained cool blue palette, tranquil but suspenseful.
+
+ASSET 08: bridge-background.png
+Use case: stylized-concept
+Asset type: full-bleed background artwork for Naruto: Land of Waves, a 2D side-scrolling anime game.
+Primary request: atmospheric painted anime landscape, ultrawide 16:9 composition, 1792x1024 or wider, polished traditional anime background painting with crisp foreground details and softly layered distant depth. Cool blue-green misty atmosphere, readable dark-to-light silhouettes.
+Composition: strict side-scrolling side-view, level horizontal ground line only in lower quarter of image, open uncluttered space through middle half for gameplay sprites. No perspective path receding toward a vanishing point. No people, no creatures, no text, no logos, no interface, no borders. This is a background plate, keep decorative foreground objects at extreme edges.
+Scene: the long Great Naruto Bridge in the Land of Waves, an expansive pale grey stone bridge spanning mist-covered sea and estuary. Camera is at side-scroller ground height showing a long continuous horizontal deck in bottom quarter, massive stone balustrade and repeating low posts along the back edge of deck, beyond it pale grey-blue fog, distant wooded island silhouettes and hints of water below. Long horizontal side-on bridge, no vanishing-point perspective, open pale foggy center and upper area for boss fight silhouettes, dramatic cold mist with slight blue light.
+
+ASSET 09: props-effects.png
+Use case: stylized-concept
+Asset type: production-ready 2D anime side-scrolling game props and effects sprite atlas. Square 1536x1536 PNG with actual transparent alpha background.
+Style: polished hand-drawn cel-shaded anime matching Naruto: Land of Waves, sharp dark outlines for physical objects and crisp translucent blue/white anime energy for effects.
+Layout: EXACTLY FOUR equal columns and FOUR equal rows, 16 separate square cells in row-major order. No visible grid, no labels, no text. Each object is isolated, centered and COMPLETELY contained in the middle 78% of its own cell with ample transparent separation. Empty space must be actual alpha transparency. No painted checkerboard, white backdrop, floor shadows, or scenery.
+Row 1 left to right: 1 horizontally wide forest ground platform ledge, straight flat green mossy grassy top with shallow brown rocky dirt underside, side-view; 2 horizontally wide pale stone bridge platform ledge, straight flat stone top with shallow masonry underside, side-view; 3 upright cylindrical brown substitution wood log with cut wood top and bark, side view; 4 single small dark steel four-point shuriken.
+Row 2: 5 single thin silver senbon needle, exactly horizontal; 6 round white anime smoke puff cloud with curling lobes; 7 brilliant bright blue Rasengan orb sphere with visible swirling chakra lines; 8 swirling blue circular impact burst.
+Row 3: 9 tall vertical oval ice mirror with crystalline blue frame and pale translucent reflective glass, straight front view; 10 isolated scattering of broken ice shards; 11 horizontal blue water-wave projectile traveling right, crest and trail; 12 crescent white slash arc.
+Row 4: 13 small tuft of green grass; 14 vertical tree trunk with a short branch extending sideways, foreground prop, entirely within its cell; 15 single glowing blue chakra mote; 16 sharp white starburst impact spark.
+No characters, no additional objects, each cell contains only its specified item. All physical props fully side-facing or front-facing as specified, clean silhouettes, no perspective floor plane.
+
+CORRECTION 01: naruto-sprites-alpha.png
+Use case: background-extraction
+Asset type: transparent PNG game sprite sheet.
+Input image 1 is the EDIT TARGET. It is a Naruto 4x4 sprite sheet with a FAKE checkerboard background mistakenly baked into the RGB pixels.
+Primary request: Remove the entire grey and white checkerboard background from this image and return a genuine transparent PNG RGBA cutout. Every background checker square must become alpha=0. The checkerboard must not be depicted in the output. Do not replace it with any opaque color. Preserve the visible Naruto figures and blue/white effects only, with clean antialiased transparent edges.
+Invariants: keep every one of the 16 poses unchanged; keep exact same 4-column 4-row placement, dimensions, scale, color, costume, outlines and effects. Do not redraw or rearrange the characters. No text, no grid, no additional elements. TRUE transparent background, not the visual appearance of a transparency checkerboard.
+
+
+CORRECTION 02: haku-sprites-alpha.png
+Use case: background-extraction
+Asset type: transparent PNG game sprite sheet.
+Input image 1 is the EDIT TARGET. It has a FAKE grey/white checkerboard mistakenly baked into the RGB pixels.
+Primary request: Remove the entire grey and white checkerboard background and return a genuine transparent PNG RGBA cutout. All checker squares must become alpha=0. Do not depict a checkerboard. Do not replace with an opaque color. Preserve the visible character figures, clothing, weapons and effects only with clean antialiased transparent edges. All transparent regions between limbs must also be properly removed.
+Invariants: preserve the 16 required poses and 4-column 4-row cell sequence, character identities, clothing, colors, outlines, scale and effects. No text, no grid, no additional elements. TRUE transparent background, not the visual appearance of transparency.
+Keep Haku's exact original poses and placement unchanged. One small containment repair: the three thrown needles in row 3 column 1 must end before the right edge of that cell (at 25% of full canvas width). Move those needles a little left without changing Haku.
+
+CORRECTION 03: enemy-sprites-alpha.png
+Use case: background-extraction
+Asset type: transparent PNG game sprite sheet.
+Input image 1 is the EDIT TARGET. It has a FAKE grey/white checkerboard mistakenly baked into the RGB pixels.
+Primary request: Remove the entire grey and white checkerboard background and return a genuine transparent PNG RGBA cutout. All checker squares must become alpha=0. Do not depict a checkerboard. Do not replace with an opaque color. Preserve the visible character figures, clothing, weapons and effects only with clean antialiased transparent edges. All transparent regions between limbs must also be properly removed.
+Invariants: preserve the 16 required poses and 4-column 4-row cell sequence, character identities, clothing, colors, outlines, scale and effects. No text, no grid, no additional elements. TRUE transparent background, not the visual appearance of transparency.
+Keep both enemy identities and original poses unchanged. Make only these containment repairs: row 2 column 1 melee thrust sword and row 4 column 1 ranged thrown projectile must fit entirely inside their own cells and end before 25% of full canvas width; shorten/move projectiles as needed. Otherwise preserve exact positions.
+
+CORRECTION 04: zabuza-sprites-alpha.png
+Use case: background-extraction
+Asset type: transparent PNG game sprite sheet.
+Input image 1 is the EDIT TARGET. It has a FAKE grey/white checkerboard mistakenly baked into the RGB pixels.
+Primary request: Remove the entire grey and white checkerboard background and return a genuine transparent PNG RGBA cutout. All checker squares must become alpha=0. Do not depict a checkerboard. Do not replace with an opaque color. Preserve the visible character figures, clothing, weapons and effects only with clean antialiased transparent edges. All transparent regions between limbs must also be properly removed.
+Invariants: preserve the 16 required poses and 4-column 4-row cell sequence, character identities, clothing, colors, outlines, scale and effects. No text, no grid, no additional elements. TRUE transparent background, not the visual appearance of transparency.
+Also make one required containment repair: row 4 column 1 is Zabuza's horizontal sword lunge. Currently its long sword extends into row 4 column 2. Shrink ONLY that entire pose proportionally and center it inside row 4 column 1 so every sword tip and limb fits between 3% and 23% of full canvas width. Preserve its foot baseline at 94% of full canvas height. All other poses and positions unchanged. No sword may overlap another cell.
+
+
+CORRECTION 05: haku-sprites-alpha.png
+Use case: background-extraction
+Asset type: transparent PNG game sprite sheet.
+Input image 1 is the EDIT TARGET. It is a Haku 4x4 sprite sheet with a FAKE checkerboard background mistakenly baked into the RGB pixels.
+Primary request: Remove the entire grey and white checkerboard background from this image and return a genuine transparent PNG RGBA cutout. Every background checker square must become alpha=0. The checkerboard must not be depicted in the output. Do not replace it with any opaque color. Preserve the visible Haku figures and blue/white effects only, with clean antialiased transparent edges.
+Invariants: keep every one of the 16 poses unchanged; keep exact same 4-column 4-row placement, dimensions, scale, color, costume, outlines and effects. Do not redraw or rearrange the characters. No text, no grid, no additional elements. TRUE transparent background, not the visual appearance of a transparency checkerboard.
+
+CORRECTION 06: enemy-sprites-alpha.png
+Use case: background-extraction
+Asset type: transparent PNG game sprite sheet.
+Input image 1 is the EDIT TARGET. It is a enemy 4x4 sprite sheet with a FAKE checkerboard background mistakenly baked into the RGB pixels.
+Primary request: Remove the entire grey and white checkerboard background from this image and return a genuine transparent PNG RGBA cutout. Every background checker square must become alpha=0. The checkerboard must not be depicted in the output. Do not replace it with any opaque color. Preserve the visible enemy figures and blue/white effects only, with clean antialiased transparent edges.
+Invariants: keep every one of the 16 poses unchanged; keep exact same 4-column 4-row placement, dimensions, scale, color, costume, outlines and effects. Do not redraw or rearrange the characters. No text, no grid, no additional elements. TRUE transparent background, not the visual appearance of a transparency checkerboard.
+
+CORRECTION 07: zabuza-sprites-alpha.png
+Use case: background-extraction
+Asset type: transparent PNG game sprite sheet.
+Input image 1 is the EDIT TARGET. It is a Zabuza 4x4 sprite sheet with a FAKE checkerboard background mistakenly baked into the RGB pixels.
+Primary request: Remove the entire grey and white checkerboard background from this image and return a genuine transparent PNG RGBA cutout. Every background checker square must become alpha=0. The checkerboard must not be depicted in the output. Do not replace it with any opaque color. Preserve the visible Zabuza figures and blue/white effects only, with clean antialiased transparent edges.
+Invariants: keep every one of the 16 poses unchanged; keep exact same 4-column 4-row placement, dimensions, scale, color, costume, outlines and effects. Do not redraw or rearrange the characters. No text, no grid, no additional elements. TRUE transparent background, not the visual appearance of a transparency checkerboard.
