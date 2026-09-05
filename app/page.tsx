@@ -19,6 +19,8 @@ export default function Home(){
  const [muted,setMuted]=useState(false);
  const [reduced,setReduced]=useState(false);
  const [helpPaused,setHelpPaused]=useState(false);
+ const [expanded,setExpanded]=useState(false);
+ useEffect(()=>{if(!expanded)return;const exit=(e:KeyboardEvent)=>{if(e.code==='Escape'){e.preventDefault();e.stopImmediatePropagation();setExpanded(false);if(document.fullscreenElement)void document.exitFullscreen();}};const changed=()=>{if(!document.fullscreenElement)setExpanded(false);};window.addEventListener('keydown',exit,true);document.addEventListener('fullscreenchange',changed);return()=>{window.removeEventListener('keydown',exit,true);document.removeEventListener('fullscreenchange',changed);};},[expanded]);
  useEffect(()=>{
   const unsubscribe=bridge.subscribe(()=>setState({...bridge.get()}));let cancelled=false;let game:{destroy:(remove:boolean)=>void}|undefined;
   import('@/game/runtime').then(({mountGame})=>{if(!cancelled&&host.current){game=mountGame(host.current);setMuted(bridge.settings().muted);setReduced(bridge.settings().reducedShake);}}).catch(()=>bridge.patch({screen:'error',error:'The game could not start. Please reload this page.'}));
@@ -28,12 +30,13 @@ export default function Home(){
  const showControls=()=>{if(state.screen==='playing'){bridge.command('pause');setHelpPaused(true);}setControls(true);};
  const closeControls=()=>{setControls(false);if(helpPaused){bridge.command('resume');setHelpPaused(false);}};
  const toggleMute=()=>{bridge.setSettings({muted:!muted});setMuted(!muted);};
- const fullscreen=()=>{const el=document.querySelector('.game-frame');if(!document.fullscreenElement)void el?.requestFullscreen().catch(()=>{});else void document.exitFullscreen();};
+ const fullscreen=()=>{const el=document.querySelector('.game-frame');if(expanded){setExpanded(false);if(document.fullscreenElement)void document.exitFullscreen();}else{setExpanded(true);void el?.requestFullscreen?.().catch(()=>{});}};
  const active=['playing','paused','intro','dead'].includes(state.screen);
  const time=`${Math.floor(state.elapsed/60).toString().padStart(2,'0')}:${Math.floor(state.elapsed%60).toString().padStart(2,'0')}`;
  return <main className="game-page">
   <header className="masthead"><button className="brand" aria-label="Narutovania home" onClick={()=>command('title')}><span className="brand-mark">忍</span><span>NARUTO<span className="brand-light">VANIA</span></span></button><div className="chapter-label"><span className="status-dot"/> CHAPTER 01 <span className="header-divider"/> LAND OF WAVES</div><div className="header-tools"><Button variant="ghost" size="icon" aria-label={muted?'Unmute sound':'Mute sound'} onClick={toggleMute}>{muted?<VolumeX/>:<Volume2/>}</Button><Button variant="ghost" size="icon" aria-label="Controls and settings" onClick={showControls}><Settings2/></Button><Button variant="ghost" size="icon" aria-label="Toggle fullscreen" onClick={fullscreen}><Maximize/></Button></div></header>
-  <section className="game-frame" aria-label="Naruto action game">
+  <section className={`game-frame ${expanded?'full-view':''}`} aria-label="Naruto action game">
+   {expanded&&<Button className="exit-fullscreen" variant="ghost" size="icon" aria-label="Exit fullscreen" onClick={fullscreen}><X/></Button>}
    <div ref={host} className="canvas-host"/>
    <div className="screen-grain" aria-hidden="true"/>
    {state.screen==='loading'&&<div className="loading-screen"><span className="eyebrow">LAND OF WAVES</span><h1>Entering the mist.</h1><div className="load-track"><span style={{width:`${state.progress*100}%`}}/></div><span className="load-percent">{Math.round(state.progress*100)}%</span></div>}
