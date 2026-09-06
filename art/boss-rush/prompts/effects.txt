@@ -1,0 +1,14 @@
+Use case: stylized-concept
+Asset type: essential jutsu effects atlas for a Naruto Land of Waves side-view action game.
+Create exactly EIGHT isolated special-effect illustrations in an invisible uniform4-COLUMN by2-ROW grid, requested1536x1024 landscape canvas. Each effect is completely contained within its own cell with at least12% clean padding. All traveling effects move RIGHT. Detailed clean cel-shaded anime effects with sharp dynamic silhouettes and internally painted luminosity. NO characters, scenery or text.
+TOP ROW left to right:
+1 WATER DRAGON: a long SERPENTINE BLUE WATER DRAGON striking toward RIGHT, recognizable fierce dragon head with open jaws, watery fangs and angular eye; its long slender sinuous body curls horizontally in an S behind the head and trails to a tapering foamy tail on the LEFT. Full body is at least THREE head lengths long. It is entirely made of flowing blue-white water, no solid animal scales, no generic wave substitute. Full head, long curved body, and tail contained in cell, with a wider-than-tall overall silhouette.
+2 WATERFALL: a tall powerful descending column/curtain of light BLUE water with white rushing streaks and a broad foamy SPLASH at its base, all contained in cell, no cliffs or ground.
+3 FIREBALL: a large compact bright GOLDEN-ORANGE fireball traveling RIGHT, dense yellow-white round front and short curled flame tail to left, vivid red-orange edges, no magenta.
+4 LIGHTNING: a jagged BLUE-WHITE lightning blade/burst firing RIGHT, bright central electric arc with branching thin bolts, no hand or character.
+BOTTOM ROW left to right:
+1 SMOKE: a billowing ninja substitution smoke puff made of curled white and pale cool-gray lobes, wide low cloud, several wisps and small separate puffs, no ground.
+2 PARRY SPARK: a crisp energetic blue-white and pale-gold four-point impact flash with sharp fine radiating sparks, asymmetric rightward impact feeling, no weapon.
+3 ICE SHARDS: a burst of multiple pale CYAN crystalline ice shards and short white streaks radiating diagonally right, triangular angular transparent-looking fragments, no mirror or person.
+4 CHAKRA AURA: a hollow tall flame-shaped ring of vivid RED-orange fox chakra tongues around an EMPTY interior, wisps rising, designed as an overlay around one standing young ninja; no body or face, no tails, no Rasengan or chakra ball.
+BACKGROUND: absolutely SOLID PURE MAGENTA #FF00FF outside the shapes AND through empty interior/holes. The red aura is red-orange and clearly distinct from magenta. NO colored glow contaminating the background, no gradients, black, checkerboard, ground, labels, borders, gridlines or lettering. Paint blue-white and golden effects bright inside their silhouettes, preserve crisp isolated edges.

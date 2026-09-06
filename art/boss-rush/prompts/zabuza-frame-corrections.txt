@@ -1,0 +1,8 @@
+Use case: stylized-concept
+Asset type: two corrected Zabuza character sprites on one 2-column, 1-row sheet.
+Input image 1 is the edit target. It contains two flawed pose crops: LEFT has an absent sword; RIGHT has a clipped sword tip and stray feet from the row above.
+Make exactly TWO complete isolated full-body sprites, both face RIGHT, faithful to this target's detailed cel-shaded original-series Zabuza costume and drawing quality. Maintain comparable adult body proportions between the two sprites, never chibi.
+LEFT sprite: preserve the airborne crouched recovery pose, knees tucked and one forearm raised, but ADD his enormous rectangular executioner sword held diagonally behind his back. The entire blade, circular hole near its tip, curved notch and handle must be visible and fit fully inside the left half of canvas, with generous 15% empty padding. No missing weapon.
+RIGHT sprite: preserve the relaxed recovery posture and sword held down diagonally to the right, restore the complete curved sword tip, and REMOVE the extra stray feet at top. Exactly one full character and one full huge sword in this right half, generous 15% empty padding around ALL edges. Right arm drawn slightly lifted from idle to distinguish recovery.
+Both: bare muscular chest, bandages over lower face, dark hair and headband, striped armguards, dark trousers and navy sandals. Full intact feet. No extra body parts.
+Canvas requested 1536x768 landscape, TWO equal cells. Absolutely flat pure magenta #ff00ff background and sword holes. No floor, shadow, text, grid, border, extra sprites or cropped objects.

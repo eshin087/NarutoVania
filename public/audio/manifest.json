@@ -1,0 +1,567 @@
+{
+  "version": 2,
+  "sources": {
+    "isao": {
+      "title": "Japanese Samurai Ninja Battle Trailer",
+      "author": "SOUND AIRYLUVS by ISAo",
+      "url": "https://opengameart.org/content/japanese-samurai-ninja-battle-trailer",
+      "attribution": "SOUND AIRYLUVS by ISAo https://airyluvs.com/",
+      "license": "OGA-BY 3.0",
+      "licenseUrl": "https://opengameart.org/content/oga-by-30-faq"
+    },
+    "samurai": {
+      "title": "Samurai Nights",
+      "author": "Majadroid / Maik Hoffmann",
+      "url": "https://opengameart.org/content/samurai-nights",
+      "license": "CC-BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+    },
+    "grunts": {
+      "title": "Male Grunt/Yelling sounds",
+      "author": "HaelDB",
+      "url": "https://opengameart.org/content/male-gruntyelling-sounds",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "female": {
+      "title": "Female Gruntwork - 1",
+      "author": "PlumpDev",
+      "url": "https://opengameart.org/content/female-gruntwork-1",
+      "license": "CC-BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "note": "Page metadata says CC-BY-SA 4.0; attribution text says CC-BY 4.0. These edited clips are offered under the stricter CC-BY-SA 4.0."
+    },
+    "rpg": {
+      "title": "RPG Audio",
+      "author": "Kenney",
+      "url": "https://kenney.nl/assets/rpg-audio",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "impacts": {
+      "title": "Impact Sounds",
+      "author": "Kenney",
+      "url": "https://kenney.nl/assets/impact-sounds",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "water": {
+      "title": "40 CC0 water / splash / slime SFX",
+      "author": "rubberduck",
+      "url": "https://opengameart.org/content/40-cc0-water-splash-slime-sfx",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "electric": {
+      "title": "Spell sounds",
+      "author": "Augmentality (Brandon Morris), submitted by HaelDB",
+      "url": "https://opengameart.org/content/spell-sounds",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "magic": {
+      "title": "Magic Spell SFX",
+      "author": "JaggedStone",
+      "url": "https://opengameart.org/content/magic-spell-sfx",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    }
+  },
+  "records": [
+    {
+      "id": "music-lakeside",
+      "file": "/audio/music-lakeside.mp3",
+      "source": "isao",
+      "original": "lakeside.mp3",
+      "seconds": 108.72,
+      "peakDb": -6.030087,
+      "edits": "Selected from 0s, max 300s; loudnorm=I=-20:TP=-3:LRA=9; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "music-mirrors",
+      "file": "/audio/music-mirrors.mp3",
+      "source": "samurai",
+      "original": "samurai/Samurai-Nights-Demo.mp3",
+      "seconds": 68.65,
+      "peakDb": -6.015347,
+      "edits": "Selected from 0s, max 300s; loudnorm=I=-20:TP=-3:LRA=9; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "music-snow",
+      "file": "/audio/music-snow.mp3",
+      "source": "samurai",
+      "original": "samurai/SingleLoops/Base-L1-Qin.mp3",
+      "seconds": 13.79,
+      "peakDb": -10.703725,
+      "edits": "Selected from 0s, max 300s; loudnorm=I=-20:TP=-3:LRA=9; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "swing",
+      "file": "/audio/swing.mp3",
+      "source": "rpg",
+      "original": "rpg/Audio/knifeSlice.ogg",
+      "seconds": 0.31,
+      "peakDb": -4.26182,
+      "edits": "Selected from 0s, max 2s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "swing2",
+      "file": "/audio/swing2.mp3",
+      "source": "rpg",
+      "original": "rpg/Audio/knifeSlice2.ogg",
+      "seconds": 0.42,
+      "peakDb": -4.791583,
+      "edits": "Selected from 0s, max 2s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "dash",
+      "file": "/audio/dash.mp3",
+      "source": "rpg",
+      "original": "rpg/Audio/cloth1.ogg",
+      "seconds": 0.5,
+      "peakDb": -3.39518,
+      "edits": "Selected from 0s, max 2s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "smoke",
+      "file": "/audio/smoke.mp3",
+      "source": "rpg",
+      "original": "rpg/Audio/clothBelt2.ogg",
+      "seconds": 0.47,
+      "peakDb": -3.656044,
+      "edits": "Selected from 0s, max 2s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "impact",
+      "file": "/audio/impact.mp3",
+      "source": "impacts",
+      "original": "impacts/Audio/impactPunch_medium_000.ogg",
+      "seconds": 0.21,
+      "peakDb": -3.142823,
+      "edits": "Selected from 0s, max 2s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "impact2",
+      "file": "/audio/impact2.mp3",
+      "source": "impacts",
+      "original": "impacts/Audio/impactPunch_heavy_001.ogg",
+      "seconds": 0.31,
+      "peakDb": -3.088663,
+      "edits": "Selected from 0s, max 2s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "parry",
+      "file": "/audio/parry.mp3",
+      "source": "impacts",
+      "original": "impacts/Audio/impactMetal_heavy_000.ogg",
+      "seconds": 0.18,
+      "peakDb": -3.204314,
+      "edits": "Selected from 0s, max 2s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "guard",
+      "file": "/audio/guard.mp3",
+      "source": "impacts",
+      "original": "impacts/Audio/impactPlate_light_000.ogg",
+      "seconds": 0.13,
+      "peakDb": -3.367822,
+      "edits": "Selected from 0s, max 2s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "break",
+      "file": "/audio/break.mp3",
+      "source": "impacts",
+      "original": "impacts/Audio/impactPlank_medium_001.ogg",
+      "seconds": 0.16,
+      "peakDb": -3.063679,
+      "edits": "Selected from 0s, max 2s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "warning",
+      "file": "/audio/warning.mp3",
+      "source": "impacts",
+      "original": "impacts/Audio/impactBell_heavy_001.ogg",
+      "seconds": 1.12,
+      "peakDb": -3.149647,
+      "edits": "Selected from 0s, max 2s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "ice",
+      "file": "/audio/ice.mp3",
+      "source": "impacts",
+      "original": "impacts/Audio/impactGlass_heavy_001.ogg",
+      "seconds": 0.18,
+      "peakDb": -3.161417,
+      "edits": "Selected from 0s, max 2s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "step",
+      "file": "/audio/step.mp3",
+      "source": "impacts",
+      "original": "impacts/Audio/footstep_concrete_001.ogg",
+      "seconds": 0.13,
+      "peakDb": -3.011171,
+      "edits": "Selected from 0s, max 2s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "water",
+      "file": "/audio/water.mp3",
+      "source": "water",
+      "original": "water/splash_08.ogg",
+      "seconds": 0.44,
+      "peakDb": -3.388983,
+      "edits": "Selected from 0s, max 2s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "water2",
+      "file": "/audio/water2.mp3",
+      "source": "water",
+      "original": "water/splash_12.ogg",
+      "seconds": 0.21,
+      "peakDb": -2.980725,
+      "edits": "Selected from 0s, max 2s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "lightning",
+      "file": "/audio/lightning.mp3",
+      "source": "electric",
+      "original": "electric.ogg",
+      "seconds": 1.54,
+      "peakDb": -12.089738,
+      "edits": "Selected from 0s, max 1.5s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "fire",
+      "file": "/audio/fire.mp3",
+      "source": "magic",
+      "original": "magic.ogg",
+      "seconds": 1.59,
+      "peakDb": -9.86338,
+      "edits": "Selected from 0s, max 2s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-kakashi-0",
+      "file": "/audio/voice-kakashi-0.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/3grunt3.wav",
+      "seconds": 1.28,
+      "peakDb": -6.122985,
+      "edits": "Selected from 0s, max 1.25s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=41895,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-kakashi-1",
+      "file": "/audio/voice-kakashi-1.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/3grunt4.wav",
+      "seconds": 0.71,
+      "peakDb": -6.118658,
+      "edits": "Selected from 0s, max 1.25s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=41895,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-kakashi-2",
+      "file": "/audio/voice-kakashi-2.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/3grunt5.wav",
+      "seconds": 1.28,
+      "peakDb": -6.119809,
+      "edits": "Selected from 0s, max 1.25s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=41895,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-kakashi-3",
+      "file": "/audio/voice-kakashi-3.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/3yell12.wav",
+      "seconds": 1.28,
+      "peakDb": -14.062559,
+      "edits": "Selected from 0s, max 1.25s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=41895,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-kakashi-4",
+      "file": "/audio/voice-kakashi-4.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/3grunt1.wav",
+      "seconds": 1.28,
+      "peakDb": -6.119649,
+      "edits": "Selected from 0s, max 1.25s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=41895,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-kakashi-5",
+      "file": "/audio/voice-kakashi-5.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/3yell7.wav",
+      "seconds": 2.04,
+      "peakDb": -10.365091,
+      "edits": "Selected from 0s, max 2s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=41895,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1.7:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-naruto-0",
+      "file": "/audio/voice-naruto-0.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/1yell1.wav",
+      "seconds": 1.02,
+      "peakDb": -6.114509,
+      "edits": "Selected from 0s, max 1.25s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=50715,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-naruto-1",
+      "file": "/audio/voice-naruto-1.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/1yell8.wav",
+      "seconds": 1.28,
+      "peakDb": -8.827986,
+      "edits": "Selected from 0s, max 1.25s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=50715,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-naruto-2",
+      "file": "/audio/voice-naruto-2.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/1yell9.wav",
+      "seconds": 0.65,
+      "peakDb": -6.104008,
+      "edits": "Selected from 0s, max 1.25s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=50715,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-naruto-3",
+      "file": "/audio/voice-naruto-3.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/1yell13.wav",
+      "seconds": 1.28,
+      "peakDb": -7.50073,
+      "edits": "Selected from 0s, max 1.25s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=50715,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-naruto-4",
+      "file": "/audio/voice-naruto-4.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/1yell2.wav",
+      "seconds": 1.28,
+      "peakDb": -6.107985,
+      "edits": "Selected from 0s, max 1.25s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=50715,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-naruto-5",
+      "file": "/audio/voice-naruto-5.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/1yell14.wav",
+      "seconds": 1.52,
+      "peakDb": -6.110121,
+      "edits": "Selected from 0s, max 2s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=50715,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1.7:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-sasuke-0",
+      "file": "/audio/voice-sasuke-0.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/2yell1.wav",
+      "seconds": 1.15,
+      "peakDb": -6.119624,
+      "edits": "Selected from 0s, max 1.25s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=46305,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-sasuke-1",
+      "file": "/audio/voice-sasuke-1.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/2yell3.wav",
+      "seconds": 1.28,
+      "peakDb": -16.164974,
+      "edits": "Selected from 0s, max 1.25s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=46305,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-sasuke-2",
+      "file": "/audio/voice-sasuke-2.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/2yell10.wav",
+      "seconds": 1.28,
+      "peakDb": -12.677407,
+      "edits": "Selected from 0s, max 1.25s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=46305,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-sasuke-3",
+      "file": "/audio/voice-sasuke-3.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/2yell8.wav",
+      "seconds": 1.28,
+      "peakDb": -12.257909,
+      "edits": "Selected from 0s, max 1.25s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=46305,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-sasuke-4",
+      "file": "/audio/voice-sasuke-4.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/2yell2.wav",
+      "seconds": 1.28,
+      "peakDb": -11.564255,
+      "edits": "Selected from 0s, max 1.25s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=46305,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-sasuke-5",
+      "file": "/audio/voice-sasuke-5.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/2yell11.wav",
+      "seconds": 2.04,
+      "peakDb": -12.078661,
+      "edits": "Selected from 0s, max 2s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=46305,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1.7:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-zabuza-0",
+      "file": "/audio/voice-zabuza-0.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/yell6.wav",
+      "seconds": 1.28,
+      "peakDb": -9.761943,
+      "edits": "Selected from 0s, max 1.25s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=38367,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-zabuza-1",
+      "file": "/audio/voice-zabuza-1.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/yell9.wav",
+      "seconds": 1.28,
+      "peakDb": -7.446498,
+      "edits": "Selected from 0s, max 1.25s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=38367,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-zabuza-2",
+      "file": "/audio/voice-zabuza-2.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/yell12.wav",
+      "seconds": 1.28,
+      "peakDb": -14.618345,
+      "edits": "Selected from 0s, max 1.25s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=38367,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-zabuza-3",
+      "file": "/audio/voice-zabuza-3.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/yell3.wav",
+      "seconds": 1.28,
+      "peakDb": -8.744783,
+      "edits": "Selected from 0s, max 1.25s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=38367,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-zabuza-4",
+      "file": "/audio/voice-zabuza-4.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/yell10.wav",
+      "seconds": 1.28,
+      "peakDb": -13.397399,
+      "edits": "Selected from 0s, max 1.25s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=38367,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-zabuza-5",
+      "file": "/audio/voice-zabuza-5.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/yell13.wav",
+      "seconds": 2.04,
+      "peakDb": -10.96987,
+      "edits": "Selected from 0s, max 2s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=38367,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1.7:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-haku-0",
+      "file": "/audio/voice-haku-0.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/3grunt4.wav",
+      "seconds": 0.55,
+      "peakDb": -6.115528,
+      "edits": "Selected from 0s, max 1.25s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=53802,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-haku-1",
+      "file": "/audio/voice-haku-1.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/3grunt5.wav",
+      "seconds": 1.2,
+      "peakDb": -6.112758,
+      "edits": "Selected from 0s, max 1.25s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=53802,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-haku-2",
+      "file": "/audio/voice-haku-2.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/3grunt3.wav",
+      "seconds": 1.28,
+      "peakDb": -6.117212,
+      "edits": "Selected from 0s, max 1.25s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=53802,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-haku-3",
+      "file": "/audio/voice-haku-3.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/3yell15.wav",
+      "seconds": 1.28,
+      "peakDb": -12.44972,
+      "edits": "Selected from 0s, max 1.25s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=53802,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-haku-4",
+      "file": "/audio/voice-haku-4.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/3grunt2.wav",
+      "seconds": 1.28,
+      "peakDb": -9.479859,
+      "edits": "Selected from 0s, max 1.25s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=53802,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-haku-5",
+      "file": "/audio/voice-haku-5.mp3",
+      "source": "grunts",
+      "original": "grunts/yelling sounds/3yell12.wav",
+      "seconds": 2.04,
+      "peakDb": -13.422582,
+      "edits": "Selected from 0s, max 2s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7,asetrate=53802,aresample=44100,afade=t=in:d=0.005,afade=t=out:st=1.7:d=0.18; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-sakura-0",
+      "file": "/audio/voice-sakura-0.mp3",
+      "source": "female",
+      "original": "female.mp3",
+      "seconds": 0.47,
+      "peakDb": -4.056894,
+      "edits": "Selected from 0.19s, max 0.44s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-sakura-1",
+      "file": "/audio/voice-sakura-1.mp3",
+      "source": "female",
+      "original": "female.mp3",
+      "seconds": 0.73,
+      "peakDb": -6.912346,
+      "edits": "Selected from 1.04s, max 0.68s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-sakura-2",
+      "file": "/audio/voice-sakura-2.mp3",
+      "source": "female",
+      "original": "female.mp3",
+      "seconds": 0.63,
+      "peakDb": -4.412001,
+      "edits": "Selected from 2.3s, max 0.58s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-sakura-3",
+      "file": "/audio/voice-sakura-3.mp3",
+      "source": "female",
+      "original": "female.mp3",
+      "seconds": 0.89,
+      "peakDb": -3.490163,
+      "edits": "Selected from 9.4s, max 0.85s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-sakura-4",
+      "file": "/audio/voice-sakura-4.mp3",
+      "source": "female",
+      "original": "female.mp3",
+      "seconds": 0.94,
+      "peakDb": -8.074317,
+      "edits": "Selected from 11.8s, max 0.9s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "voice-sakura-5",
+      "file": "/audio/voice-sakura-5.mp3",
+      "source": "female",
+      "original": "female.mp3",
+      "seconds": 1.31,
+      "peakDb": -9.349052,
+      "edits": "Selected from 18.24s, max 1.28s; silenceremove=start_periods=1:start_duration=0.006:start_threshold=-42dB,areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-42dB,areverse,highpass=f=65,loudnorm=I=-20:TP=-3:LRA=7; final limiter 0.65, gain 0.8; encoded MP3"
+    }
+  ]
+}

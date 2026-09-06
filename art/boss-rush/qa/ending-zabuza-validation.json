@@ -1,0 +1,13 @@
+{
+  "file": "ending-zabuza.png",
+  "frames": 12,
+  "paddedCells": true,
+  "nonemptyCells": true,
+  "noStrongMagenta": true,
+  "dimensions": [
+    2304,
+    768
+  ],
+  "standingHeightMatchedTo": "zabuza-techniques frame17",
+  "standingBodyHeight": 230
+}

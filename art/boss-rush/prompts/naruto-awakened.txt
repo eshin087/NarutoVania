@@ -1,0 +1,8 @@
+Use case: stylized-concept
+Asset type: awakened Naruto variant sprite atlas for a Naruto original-series Land of Waves side-view fighting game.
+Input image 1 is a costume/style reference only.
+Character: exactly the YOUNG Naruto from reference bottom-left, spiky blond hair, forehead protector, orange zip jacket with navy blue shoulders and white collar, orange pants, blue shinobi sandals, three whisker marks on cheeks. His original face now has RED irises with narrow feral slit pupils, intensified whisker markings, small canines, furious expression. Small RED nine-tail chakra tongues hug his outline; clearly red orange not magenta. NO Rasengan, no sphere, no fox tails, no body transformation.
+Composition: EXACTLY 8 full-body poses arranged 4 COLUMNS by 2 ROWS, equal invisible cells on a requested 1536x1024 landscape canvas. All facing RIGHT, crisp cel-shaded detailed anime sprite style. Keep one constant natural boy body scale for every pose. Full feet and all aura flames inside cells, generous 12% padding, planted foot baseline at 80% cell height, no cropping.
+Row1 left to right: 1 feral idle guard fists at sides; 2 aggressive breathing idle crouched shoulders; 3 low explosive dash coil; 4 rightward dash extended with clenched fists.
+Row2 left to right: 1 coiled right fist anticipation; 2 fully extended feral right punch; 3 knee-lift front-kick anticipation; 4 forceful extended front kick.
+Scene/backdrop: EXACT SOLID PURE MAGENTA RGB255,0,255 #FF00FF chroma-key background only. No transparency simulation, checkerboard, gradient, glow behind character, floor, shadow, text, labels, frames or gridlines. Red aura is drawn only around body edges, kept distinct from magenta background. Color and proportions identical in all eight cells.

@@ -1,0 +1,12 @@
+Use case: stylized-concept
+Asset type: corrected Zabuza animation sprite sheet for a side-view game.
+Input image 1 is the EDIT TARGET. Preserve its exact character design, costume, anime linework and the requested chronological motion sequence. Correct the failed layout and sword visibility.
+Critical correction: remake this as a WIDE LANDSCAPE canvas, requested 1536x1024, with EXACTLY 6 COLUMNS x 4 ROWS of equal SQUARE invisible cells. Reduce all 24 figures together until EVERY ENTIRE CHARACTER AND SWORD fits comfortably in its own cell, with at least 12% empty magenta padding on all sides. Absolutely NO blade may touch a neighboring sprite, cross a cell boundary, touch the image edge, or be cut off. Each Zabuza retains one enormous complete rectangular sword with circle hole and curved notch, including crouches and air-dash recovery. Rotate the whole sword diagonally if needed to keep it in cell. DO NOT crop or shorten the sword or omit it. Maintain one uniform body scale in all 24 cells, including crouches. All sword tips visibly finished. No fractional or chopped blades.
+Zabuza identity: tall muscular adult, bare chest, cloth bandages over lower face, dark short hair and tilted headband, striped forearm guards, baggy dark trousers, white ankle wraps and navy shinobi sandals. Detailed original-series cel-shaded anime art.
+Animation content, in STRICT row-major order:
+ROW1: SIX chronological RUN cycle frames facing right with natural alternating leg/arm strides, distinct forward contact, recoil, passing, rear contact, recoil, passing.
+ROW2: 1 idle guard A; 2 idle guard B with subtle breathing and hand change; 3 ascending jump knees bent; 4 descending jump legs extending; 5 deep landing crouch; 6 rising landing recovery.
+ROW3: 1 ground-dash anticipation crouch; 2 low accelerating rightward lean; 3 fastest dash with rear leg extended; 4 dash braking recover; 5 steady guarded idle A; 6 guarded idle B.
+ROW4: 1 airborne dash coil; 2 airborne dash extension to right; 3 fast horizontal airborne streak posture (NO drawn trail); 4 airborne dash recovery knees tuck; 5 low grounded foot-first slide initial; 6 low grounded slide extension.
+Keep all six characters' atlases consistent in line quality, view and cell layout. One figure per cell only.
+Background remains ABSOLUTELY SOLID PURE MAGENTA #FF00FF, including clear gap between every sprite and all sword holes. No gradients, floors, shadows, checkerboard, labels, borders or text. Only this layout/sword completion correction; preserve the successful costume and choreography.

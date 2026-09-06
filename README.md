@@ -1,31 +1,33 @@
-# Narutovania: Land of Waves
+# Naruto: Land of Waves — Story Boss Rush
 
-A single-player desktop browser action chapter built with the Sites starter, TypeScript, React, and Phaser 3.90.0. Young Naruto crosses the forest and bridge, fights Zabuza's sword/water/mist phases, and faces Haku's six-mirror prison.
+A desktop browser fan game built with TypeScript, React, Phaser 3.90.0, and the Sites starter. Seven consecutive story encounters follow Team 7 from the lakeside confrontation with Zabuza to the bridge battle and snowy aftermath. There are no traversal levels or filler enemy waves.
 
 ## Play
 
-Move with A/D or arrows. Hold Space for a higher jump. Hold J for a three-hit melee combo and K for shuriken. Q summons two six-second shadow clones; L substitutes a targetable log and grants brief immunity; R spends a full combat-earned meter on Rasengan. Escape pauses. Controls, sound, reduced shake, and fullscreen are available in the interface.
+Move with A/D or arrows; crouch with S/down. Space jumps, J attacks, and down + hold J charges a heavy strike. K throws a ranged tool. Shift dashes, including one air dash per jump; down + direction + Shift slides. F parries on a fresh, timed press and blocks while held. Red attacks require evasion. Q/E use the active character's techniques, L substitutes a decoy, and R uses a charged ultimate. Escape pauses; Enter skips cinematics or retries after defeat.
 
-Standard gamepad: stick/D-pad move, A/Cross jump, X/Square melee, Y/Triangle shuriken, LB clones, B/Circle substitution, RB Rasengan, Start pause. Prompts switch with input activity and return to keyboard on controller disconnection.
+Standard controller: stick/D-pad move, A jump, X melee, Y tool, B dash, LB parry/block, RB/RT techniques, LT substitution, right-stick click ultimate, and Start pause. The controls menu includes each active character's kit and separate music, effects, and voice levels. Fullscreen and reduced shake are supported.
 
-Checkpoints restore health and chakra before each boss. A Haku retry keeps Zabuza defeated. Only checkpoint and sound/shake settings persist locally. Active play time includes retries within a session and excludes menus and pauses. A saved-checkpoint reload starts a new session timer. First-play duration depends on exploration, combat proficiency, and retries; a practiced clear can be shorter than the 5–8 minute first-play target.
+Control Kakashi, Naruto, Kakashi, Sakura, Sasuke, Naruto, and Kakashi in story order. Characters have arc-appropriate techniques: no Rasengan, Chidori, later healing, or super-strength. Sakura's short Tazuna protection encounter is a gameplay expansion of her protective role. Cinematic objectives handle canonical setbacks; players never have to lose deliberately. Every phase saves a checkpoint. Retries restore its starting resources and skip viewed introductions.
+
+The chapter targets 15–20 minutes, excluding retries. Timing depends on combat proficiency and cinematic skipping. The active-play timer excludes pauses and cinematics, includes retries, and resets when continuing a saved checkpoint in a new session. Only settings and the current chapter checkpoint persist locally; legacy saves begin at the boss-rush opening.
 
 ## Development
 
-`npm install`, then `npm run dev -- --port 5173`. Use `npm run typecheck`, `npm test`, and `npm run build` to validate. The client-only static build is written to `dist/client`; Sites hosting configuration lives in `.openai/hosting.json`.
+Run `npm install`, then `npm run dev` (the current starter serves port 3000 by default). Run `npm run typecheck`, `npm run lint`, `npm test`, and `node scripts/verify-boss-assets.mjs`. `npm run build` creates the client-only static output in `dist/client`; hosting configuration is in `.openai/hosting.json`.
 
-## Artwork
+The entry point is `game/boss-page.tsx`. `boss-runtime.ts` mounts separate loading, title, gameplay, HUD, and results scenes. `boss-gameplay.ts` integrates Arcade Physics with bounded combat hitboxes; `combat-core.ts` owns action timing, resources, defenses, and damage rules. `chapter.ts`, `story-director.ts`, and `boss-ai.ts` define character kits, phase outcomes, and boss decisions. `battle-input.ts` provides shared keyboard/controller actions. Earlier platformer source is retained as history and is not imported by the new entry point.
 
-All character, enemy, scenery, prop, and combat-effect raster artwork was generated with imagegen before gameplay implementation. The selected reference and exact generation prompts are in `art/`. Runtime images are in `public/art/`. `game/assets.json` records frame rectangles, action sequences, scale information, and foot anchors. Clones reuse Naruto frames. Animation combines generated key poses with movement and transient effects.
+## Artwork and sound
 
-The user authorized code cleanup of baked sprite backgrounds. `scripts/clean-background.mjs` preserves the generated character interior and clears border-connected checkerboard pixels. `scripts/analyze-art.mjs` measures component bounds and anchors. These are provenance tools; source paths in them refer to the original local generation workspace.
+Generated character, arena, prop, and effect assets are in `public/art-v2/`. The animation manifest records rectangles, anchors, timing, hit events, and attachments. References, generation prompts, and inspection notes are in `art/boss-rush/`. The core set contains 432 frames across six characters, with additional awakened Naruto, unmasked Haku, and ending Zabuza animation. The user authorized code removal of baked backgrounds; generated character art remains intact.
 
-This is an unofficial fan game. Naruto and its characters belong to their respective rights holders. Audio is original synthesized ambient and combat sound, activated after interaction.
+`public/audio/manifest.json` records all recording sources, licenses, attributions, and edits. Music and fighter efforts are reusable substitute recordings, not the original Naruto soundtrack or cast. The game uses decoded assets with bounded playback, volume controls, crossfades, and pause/retry cleanup. There is no continuous oscillator drone. Full attribution and story references are available from the in-game Credits menu. Sakura's edited voice clips retain CC-BY-SA 4.0 terms.
 
-## Browser automation
+This is an unofficial fan game. Naruto and its characters belong to Masashi Kishimoto and their respective rights holders.
 
-When `document.modelContext.registerTool` is available, the game exposes `read_game_status`, `start_chapter`, `set_game_paused`, `retry_checkpoint`, and `continue_encounter`. Mutation tools use the same game commands as UI controls and validate input. A development-only bounded normal-input sequence tool supports repeatable playtesting; it is excluded from production.
+## Browser tools and verification
 
-## Validation
+When WebMCP is available, the game exposes status, start, pause/resume, retry, and cinematic-skip actions through the same commands as the interface. Development-only normal-input sequence and combat-pilot tools support repeatable browser playtests. They do not override resources, positions, time, or story outcomes and are excluded from production.
 
-See `VALIDATION.md` for the browser playtest and known scope limits.
+See `VALIDATION.md` for verification results and scope limitations.

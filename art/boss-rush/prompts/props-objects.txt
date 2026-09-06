@@ -1,0 +1,17 @@
+Use case: stylized-concept
+Asset type: nine isolated cinematic object cutouts for Naruto original-series Land of Waves.
+Input image1 is a character/cel-shading style reference only.
+Create a requested1536x1536 square atlas with EXACTLY 3 COLUMNS x3 ROWS. Each object centered in its own equal cell, at least15% clean padding. Detailed cel-shaded anime art, clean dark outlines, large legible silhouettes, no perspective ground.
+TOP ROW left to right:
+1 A WOOD SUBSTITUTION DECOY: a thick short broken tree log standing diagonally slightly, rough brown bark, cut circular end with growth rings, small branch stubs, a loose pale cloth band wrapped around it. Full object visible.
+2 KAKASHI TRAPPED IN WATER PRISON: a complete circular translucent BLUE WATER ORB with thin rotating watery shell and a few enclosed bubbles. Inside, full-body silver-haired Kakashi crouches suspended helplessly, original green jonin vest, dark mask, navy clothes; slanted Leaf headband fully covers his left eye. Entire spherical orb and trapped man fully inside cell. Small footprint but clearly readable.
+3 A DEMONIC ICE MIRROR: one tall vertical elongated oval/hexagonal faceted mirror of pale icy cyan crystal, beveled crystalline rim and bright blue reflective interior, slim angular shape, simple crisp specular reflections, no person reflected. Full object visible.
+MIDDLE ROW left to right:
+1 one large dark steel WINDMILL SHURIKEN with exactly FOUR long curved pointed blades around a circular central hole, side-on flat silhouette tilted20degrees, fully open, silver beveled edges, complete uncut tips.
+2 a small group of SIX distinct pale white-blue crystalline SNOWFLAKES, evenly scattered within their one cell, crisp detailed sixfold patterns, no glowing background.
+3 a single wide elliptical BLUE WATER RIPPLE ring with two concentric thin foam ripples and small drops, seen from low side angle, isolated no water rectangle.
+BOTTOM ROW left to right:
+1 a STANDARD SHURIKEN: one small steel four-point ninja throwing star with short symmetrical triangular tips, round center hole, distinct from the much larger long-bladed windmill shuriken above.
+2 SENBON: three long thin silver throwing needles fanned slightly apart, sharp complete tips visible, no ribbons or hand.
+3 HAKU'S HUNTER-NIN MASK: one complete smooth white porcelain oval mask, red angular markings around two narrow eye slits and small red chin markings, dark red cord neatly behind, front-three-quarter view, no face or head.
+Scene/backdrop: absolutely flat PURE MAGENTA #FF00FF everywhere outside objects and through holes. Magenta must not tint any object or watery shell. No gradients, checkerboard, shadow, floor, labels, text, borders, cell grid, extra objects. All parts unclipped.

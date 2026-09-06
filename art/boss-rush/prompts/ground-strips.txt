@@ -1,0 +1,7 @@
+Use case: stylized-concept
+Asset type: TWO isolated continuous horizontal foreground ground strips for a cel-shaded anime side-view game, on one sheet.
+Requested canvas: 1536x1024 landscape with exactly TWO full-width flat horizontal strips and broad pure magenta space between. Each strip should extend cleanly all the way to both left and right image edges for horizontal tiling.
+Top strip occupies y=240..390 approximately: a level lakeside shore platform made of dark damp earth, light sandy top, tiny flat pebbles, small low grasses and a few thin exposed roots. STRICTLY flat continuous walkable upper edge. View directly from side, 12% top surface visible, earthy olive and warm gray-brown colors. No tall rocks, hills, trees, giant roots or separate platforms. Thin natural irregular bottom edge.
+Bottom strip occupies y=720..865 approximately: the level pale LIGHT-GRAY CONCRETE DECK of unfinished Great Naruto Bridge, a continuous straight slab spanning full width. Slight surface aggregate texture, subtle panel joints and weathered vertical front edge, a few restrained hairline cracks, never a broken gap. Strictly flat walkable top edge and horizontal lower edge. No poles or rails.
+Style: detailed anime cel-shaded background painting consistent with original Naruto.
+Background: absolutely PURE SOLID MAGENTA #ff00ff outside the two strips, no gradients or variation. No magenta in ground art. No black background, checkers, fake alpha, shadows beneath strips, text, guides, dividing lines, people, objects or UI.

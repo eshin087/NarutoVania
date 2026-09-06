@@ -1,0 +1,358 @@
+{
+  "generationMode": "built-in image_gen",
+  "root": "C:\\Users\\eshin\\.codex\\visualizations\\2026\\09\\05\\01a0700e-9aab-7040-b123-d472c87e3925\\boss-rush-art",
+  "characters": {
+    "kakashi": {
+      "locomotion": {
+        "image": "kakashi-locomotion.png",
+        "metadata": "kakashi-locomotion.json",
+        "width": 1536,
+        "height": 1536,
+        "cellWidth": 256,
+        "cellHeight": 384,
+        "anchor": [
+          128,
+          307
+        ]
+      },
+      "melee": {
+        "image": "kakashi-melee.png",
+        "metadata": "kakashi-melee.json",
+        "width": 1536,
+        "height": 1536,
+        "cellWidth": 256,
+        "cellHeight": 384,
+        "anchor": [
+          128,
+          307
+        ]
+      },
+      "techniques": {
+        "image": "kakashi-techniques.png",
+        "metadata": "kakashi-techniques.json",
+        "width": 1536,
+        "height": 1536,
+        "cellWidth": 256,
+        "cellHeight": 384,
+        "anchor": [
+          128,
+          307
+        ]
+      }
+    },
+    "sasuke": {
+      "locomotion": {
+        "image": "sasuke-locomotion.png",
+        "metadata": "sasuke-locomotion.json",
+        "width": 1536,
+        "height": 1536,
+        "cellWidth": 256,
+        "cellHeight": 384,
+        "anchor": [
+          128,
+          307
+        ]
+      },
+      "melee": {
+        "image": "sasuke-melee.png",
+        "metadata": "sasuke-melee.json",
+        "width": 1536,
+        "height": 1536,
+        "cellWidth": 256,
+        "cellHeight": 384,
+        "anchor": [
+          128,
+          307
+        ]
+      },
+      "techniques": {
+        "image": "sasuke-techniques.png",
+        "metadata": "sasuke-techniques.json",
+        "width": 1536,
+        "height": 1536,
+        "cellWidth": 256,
+        "cellHeight": 384,
+        "anchor": [
+          128,
+          307
+        ]
+      }
+    },
+    "sakura": {
+      "locomotion": {
+        "image": "sakura-locomotion.png",
+        "metadata": "sakura-locomotion.json",
+        "width": 1536,
+        "height": 1536,
+        "cellWidth": 256,
+        "cellHeight": 384,
+        "anchor": [
+          128,
+          307
+        ]
+      },
+      "melee": {
+        "image": "sakura-melee.png",
+        "metadata": "sakura-melee.json",
+        "width": 1536,
+        "height": 1536,
+        "cellWidth": 256,
+        "cellHeight": 384,
+        "anchor": [
+          128,
+          307
+        ]
+      },
+      "techniques": {
+        "image": "sakura-techniques.png",
+        "metadata": "sakura-techniques.json",
+        "width": 1536,
+        "height": 1536,
+        "cellWidth": 256,
+        "cellHeight": 384,
+        "anchor": [
+          128,
+          307
+        ]
+      }
+    },
+    "naruto": {
+      "locomotion": {
+        "image": "naruto-locomotion.png",
+        "metadata": "naruto-locomotion.json",
+        "width": 1536,
+        "height": 1536,
+        "cellWidth": 256,
+        "cellHeight": 384,
+        "anchor": [
+          128,
+          307
+        ]
+      },
+      "melee": {
+        "image": "naruto-melee.png",
+        "metadata": "naruto-melee.json",
+        "width": 1536,
+        "height": 1536,
+        "cellWidth": 256,
+        "cellHeight": 384,
+        "anchor": [
+          128,
+          307
+        ]
+      },
+      "techniques": {
+        "image": "naruto-techniques.png",
+        "metadata": "naruto-techniques.json",
+        "width": 1536,
+        "height": 1536,
+        "cellWidth": 256,
+        "cellHeight": 384,
+        "anchor": [
+          128,
+          307
+        ]
+      }
+    },
+    "zabuza": {
+      "locomotion": {
+        "image": "zabuza-locomotion.png",
+        "metadata": "zabuza-locomotion.json",
+        "width": 2304,
+        "height": 1536,
+        "cellWidth": 384,
+        "cellHeight": 384,
+        "anchor": [
+          192,
+          307
+        ]
+      },
+      "melee": {
+        "image": "zabuza-melee.png",
+        "metadata": "zabuza-melee.json",
+        "width": 2304,
+        "height": 1536,
+        "cellWidth": 384,
+        "cellHeight": 384,
+        "anchor": [
+          192,
+          307
+        ]
+      },
+      "techniques": {
+        "image": "zabuza-techniques.png",
+        "metadata": "zabuza-techniques.json",
+        "width": 2304,
+        "height": 1536,
+        "cellWidth": 384,
+        "cellHeight": 384,
+        "anchor": [
+          192,
+          307
+        ]
+      }
+    },
+    "haku": {
+      "locomotion": {
+        "image": "haku-locomotion.png",
+        "metadata": "haku-locomotion.json",
+        "width": 1536,
+        "height": 1536,
+        "cellWidth": 256,
+        "cellHeight": 384,
+        "anchor": [
+          128,
+          307
+        ]
+      },
+      "melee": {
+        "image": "haku-melee.png",
+        "metadata": "haku-melee.json",
+        "width": 1536,
+        "height": 1536,
+        "cellWidth": 256,
+        "cellHeight": 384,
+        "anchor": [
+          128,
+          307
+        ]
+      },
+      "techniques": {
+        "image": "haku-techniques.png",
+        "metadata": "haku-techniques.json",
+        "width": 1536,
+        "height": 1536,
+        "cellWidth": 256,
+        "cellHeight": 384,
+        "anchor": [
+          128,
+          307
+        ]
+      }
+    }
+  },
+  "extras": {
+    "naruto-awakened": {
+      "image": "naruto-awakened.png",
+      "metadata": "naruto-awakened.json",
+      "width": 1024,
+      "height": 768
+    },
+    "props": {
+      "image": "props.png",
+      "metadata": "props.json",
+      "width": 1536,
+      "height": 1920
+    },
+    "effects": {
+      "image": "effects.png",
+      "metadata": "effects.json",
+      "width": 2048,
+      "height": 1024
+    },
+    "lakeside-ground": {
+      "image": "lakeside-ground.png",
+      "metadata": "lakeside-ground.json",
+      "width": 1536,
+      "height": 124
+    },
+    "bridge-ground": {
+      "image": "bridge-ground.png",
+      "metadata": "bridge-ground.json",
+      "width": 1536,
+      "height": 139
+    },
+    "lakeside-background": {
+      "image": "lakeside-background.png",
+      "width": 1672,
+      "height": 941
+    },
+    "bridge-background": {
+      "image": "bridge-background.png",
+      "width": 1672,
+      "height": 941
+    },
+    "ending-zabuza": {
+      "image": "ending-zabuza.png",
+      "metadata": "ending-zabuza.json",
+      "width": 2304,
+      "height": 768,
+      "frames": 12,
+      "cellWidth": 384,
+      "cellHeight": 384,
+      "anchor": [
+        192,
+        307
+      ]
+    },
+    "zabuza-sword": {
+      "image": "zabuza-sword.png",
+      "metadata": "zabuza-sword.json",
+      "width": 1697,
+      "height": 286,
+      "orientation": "horizontal-right"
+    }
+  },
+  "prompts": [
+    "00-character-reference.txt",
+    "bridge-background.txt",
+    "effects.txt",
+    "ending-zabuza.txt",
+    "ground-strips.txt",
+    "haku-locomotion-v2.txt",
+    "haku-locomotion.txt",
+    "haku-melee-v2.txt",
+    "haku-melee.txt",
+    "haku-techniques-v2.txt",
+    "haku-techniques.txt",
+    "kakashi-locomotion.txt",
+    "kakashi-melee.txt",
+    "kakashi-techniques.txt",
+    "lakeside-background.txt",
+    "naruto-awakened.txt",
+    "naruto-locomotion.txt",
+    "naruto-melee.txt",
+    "naruto-techniques.txt",
+    "props-actors.txt",
+    "props-objects.txt",
+    "sakura-locomotion.txt",
+    "sakura-melee.txt",
+    "sakura-techniques.txt",
+    "sasuke-locomotion.txt",
+    "sasuke-melee.txt",
+    "sasuke-techniques.txt",
+    "zabuza-frame-corrections.txt",
+    "zabuza-locomotion-v2.txt",
+    "zabuza-locomotion.txt",
+    "zabuza-melee-v2.txt",
+    "zabuza-melee.txt",
+    "zabuza-sword.txt",
+    "zabuza-techniques.txt"
+  ],
+  "reference": "00-character-reference.png",
+  "qa": [
+    "qa/effects-contact.png",
+    "qa/ending-zabuza-contact.png",
+    "qa/haku-contact.png",
+    "qa/kakashi-contact.png",
+    "qa/naruto-contact.png",
+    "qa/props-contact.png",
+    "qa/sakura-contact.png",
+    "qa/sasuke-contact.png",
+    "qa/zabuza-contact.png"
+  ],
+  "unmaskedCinematicVariants": [
+    "haku-unmasked-locomotion.png",
+    "haku-unmasked-melee.png",
+    "haku-unmasked-techniques.png"
+  ],
+  "notes": [
+    "Core character atlases contain 24 frames in a 6 by 4 grid.",
+    "One uniform scale per character is used across its three raw sheets; crouched poses retain their shorter height.",
+    "Zabuza uses wider 384px cells to retain the complete enormous sword.",
+    "Haku wears the white/red hunter-nin mask over his entire face in every core combat frame.",
+    "The 3 original Haku uncovered-face sheets are preserved for cinematic use.",
+    "All final cutouts have real RGBA alpha. Generated source sheets and prompts remain archived.",
+    "Scene backgrounds are native 1672 by 941 and may be cropped to 1280 by 720."
+  ]
+}

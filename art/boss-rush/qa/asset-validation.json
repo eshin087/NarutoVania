@@ -1,0 +1,140 @@
+[
+  {
+    "file": "kakashi-locomotion.png",
+    "frames": 24,
+    "transparentPercent": 90.38,
+    "strongMagentaPixels": 0,
+    "allCellsPadded": true
+  },
+  {
+    "file": "kakashi-melee.png",
+    "frames": 24,
+    "transparentPercent": 87.94,
+    "strongMagentaPixels": 0,
+    "allCellsPadded": true
+  },
+  {
+    "file": "kakashi-techniques.png",
+    "frames": 24,
+    "transparentPercent": 90.1,
+    "strongMagentaPixels": 0,
+    "allCellsPadded": true
+  },
+  {
+    "file": "sasuke-locomotion.png",
+    "frames": 24,
+    "transparentPercent": 91.99,
+    "strongMagentaPixels": 0,
+    "allCellsPadded": true
+  },
+  {
+    "file": "sasuke-melee.png",
+    "frames": 24,
+    "transparentPercent": 89.91,
+    "strongMagentaPixels": 0,
+    "allCellsPadded": true
+  },
+  {
+    "file": "sasuke-techniques.png",
+    "frames": 24,
+    "transparentPercent": 90.07,
+    "strongMagentaPixels": 0,
+    "allCellsPadded": true
+  },
+  {
+    "file": "sakura-locomotion.png",
+    "frames": 24,
+    "transparentPercent": 90.51,
+    "strongMagentaPixels": 0,
+    "allCellsPadded": true
+  },
+  {
+    "file": "sakura-melee.png",
+    "frames": 24,
+    "transparentPercent": 88.51,
+    "strongMagentaPixels": 0,
+    "allCellsPadded": true
+  },
+  {
+    "file": "sakura-techniques.png",
+    "frames": 24,
+    "transparentPercent": 87.21,
+    "strongMagentaPixels": 0,
+    "allCellsPadded": true
+  },
+  {
+    "file": "naruto-locomotion.png",
+    "frames": 24,
+    "transparentPercent": 89.1,
+    "strongMagentaPixels": 0,
+    "allCellsPadded": true
+  },
+  {
+    "file": "naruto-melee.png",
+    "frames": 24,
+    "transparentPercent": 86.56,
+    "strongMagentaPixels": 0,
+    "allCellsPadded": true
+  },
+  {
+    "file": "naruto-techniques.png",
+    "frames": 24,
+    "transparentPercent": 86.78,
+    "strongMagentaPixels": 0,
+    "allCellsPadded": true
+  },
+  {
+    "file": "zabuza-locomotion.png",
+    "frames": 24,
+    "transparentPercent": 92.6,
+    "strongMagentaPixels": 0,
+    "allCellsPadded": true
+  },
+  {
+    "file": "zabuza-melee.png",
+    "frames": 24,
+    "transparentPercent": 91.81,
+    "strongMagentaPixels": 0,
+    "allCellsPadded": true
+  },
+  {
+    "file": "zabuza-techniques.png",
+    "frames": 24,
+    "transparentPercent": 90.52,
+    "strongMagentaPixels": 0,
+    "allCellsPadded": true
+  },
+  {
+    "file": "haku-locomotion.png",
+    "frames": 24,
+    "transparentPercent": 88.77,
+    "strongMagentaPixels": 0,
+    "allCellsPadded": true
+  },
+  {
+    "file": "haku-melee.png",
+    "frames": 24,
+    "transparentPercent": 85.41,
+    "strongMagentaPixels": 0,
+    "allCellsPadded": true
+  },
+  {
+    "file": "haku-techniques.png",
+    "frames": 24,
+    "transparentPercent": 84.91,
+    "strongMagentaPixels": 0,
+    "allCellsPadded": true
+  },
+  {
+    "file": "props.png",
+    "items": 17,
+    "requiredNamesPresent": true,
+    "allRectsValid": true
+  },
+  {
+    "file": "effects.png",
+    "items": 8,
+    "requiredNamesPresent": true,
+    "allRectsValid": true
+  }
+]

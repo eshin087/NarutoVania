@@ -1,0 +1,14 @@
+Use case: stylized-concept
+Asset type: cinematic actor cutout atlas for the Naruto original-series Land of Waves story, same polished cel-shaded anime style as input reference.
+Input image 1 is an art-style reference only. Generate EXACTLY EIGHT isolated full-body actors in a 4-COLUMN by 2-ROW invisible grid, requested canvas1536x1024. All are SIDE-VIEW facing RIGHT, full body and weapons inside their own cell, at least15% empty padding, no overlap. Retain natural scale: ninja hounds much shorter than adult humans.
+TOP ROW left to right:
+1 TAZUNA the elderly bridge builder: stocky old man, gray hair under simple small tan woven cap, round glasses, red nose, gray stubble beard, loose sleeveless gray-blue worker tunic, belt, gray pants and sandals, arms folded with worried brave expression.
+2 PAKKUN: small squat brown pug ninja hound, dark muzzle, droopy eyes, tiny blue Leaf forehead protector and blue ninja vest, alert on four paws.
+3 a medium brown-and-cream ninja hound with floppy ears, simple navy Leaf forehead protector and short blue vest, side-on walking step on four paws.
+4 a large black-and-gray bulldog ninja hound with broad muzzle and white teeth visible, navy forehead protector, simple dark collar/vest, standing on four paws.
+BOTTOM ROW left to right:
+1 GATO: very short stocky corrupt businessman, thick shaggy brown hair, dark sunglasses, dark purple suit jacket and trousers, white shirt, burgundy tie, polished shoes, thin wooden walking cane, sneering expression.
+2 Gato henchman: tall rough adult male mercenary with tied-back dark hair, earth-brown loose robe, dark sash and sandals, steel katana held angled down fully visible.
+3 Gato henchman: bulky bald adult man, olive vest over charcoal clothes, dark trousers and sandals, wooden club resting at side.
+4 Gato henchman: lean adult man with messy black hair and dark bandana, muted dark-blue robe and pale sash, dark sandals, short blade held low.
+Scene/backdrop: absolutely FLAT SOLID PURE MAGENTA #FF00FF with no variation; no magenta in character art. No texture, ground, shadows, checkers, labels, text, cell lines, captions, duplicates, extra people or cropped weapons. Detailed expressive original anime art, not chibi.
