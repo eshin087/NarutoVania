@@ -24,9 +24,9 @@ export function registerBossTools(inputs: BattleInput, scene: () => BossGameScen
     if (bridge.get().screen !== 'intro') return result({error: 'There is no active cinematic.'}); bridge.command('skip'); return result(status());
   }});
   if (import.meta.env.DEV) {
-    add({name: 'run_combat_playtest', description: 'Development-only bounded browser input pilot for testing combat timing. Uses ordinary keyboard actions; never overrides resources, positions, time or story outcomes. Pauses after at most 30 seconds.', inputSchema: {type: 'object', properties: {milliseconds: {type: 'integer', minimum: 1000, maximum: 30000}, noUltimate: {type: 'boolean'}}, required: ['milliseconds'], additionalProperties: false}, execute: async args => {
+    add({name: 'run_combat_playtest', description: 'Development-only bounded browser input pilot for testing combat timing. Uses ordinary keyboard actions; never overrides resources, positions, time or story outcomes. Casual mode deliberately mistimes half its guards. Pauses after at most 30 seconds.', inputSchema: {type: 'object', properties: {milliseconds: {type: 'integer', minimum: 1000, maximum: 30000}, noUltimate: {type: 'boolean'},casual:{type:'boolean'}}, required: ['milliseconds'], additionalProperties: false}, execute: async args => {
       const game = scene(); if (busy || !game || !['playing', 'paused', 'intro'].includes(bridge.get().screen)) return {error: 'Start a fight first.'};
-      busy = true; try {const {driveCombat} = await import('./playtest-driver'); return await driveCombat(game, inputs, Math.max(1000, Math.min(30000, Number(args.milliseconds))), args.noUltimate === true);} finally {busy = false;}
+      busy = true; try {const {driveCombat} = await import('./playtest-driver'); return await driveCombat(game, inputs, Math.max(1000, Math.min(30000, Number(args.milliseconds))), args.noUltimate === true,args.casual===true);} finally {busy = false;}
     }});
     const actions: Action[] = ['left', 'right', 'down', 'jump', 'melee', 'tool', 'dash', 'parry', 'skill1', 'skill2', 'substitute', 'ultimate'];
     add({name: 'play_input_sequence', description: 'Development browser playtest: hold ordinary game inputs for bounded durations. No stat, phase or outcome overrides. Pauses after the sequence by default.',

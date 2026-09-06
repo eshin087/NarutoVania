@@ -1,0 +1,305 @@
+{
+  "width": 2048,
+  "height": 768,
+  "columns": 4,
+  "rows": 3,
+  "cell": [
+    512,
+    256
+  ],
+  "anchor": [
+    256,
+    128
+  ],
+  "background": "transparent",
+  "frames": [
+    {
+      "index": 0,
+      "animation": "pressure_water_jet",
+      "frame": 0,
+      "rect": [
+        0,
+        0,
+        512,
+        256
+      ],
+      "sourceRect": [
+        31,
+        59,
+        478,
+        168
+      ],
+      "contentRect": [
+        43,
+        73,
+        447,
+        109
+      ],
+      "scale": 1.0
+    },
+    {
+      "index": 1,
+      "animation": "pressure_water_jet",
+      "frame": 1,
+      "rect": [
+        512,
+        0,
+        512,
+        256
+      ],
+      "sourceRect": [
+        538,
+        58,
+        987,
+        196
+      ],
+      "contentRect": [
+        41,
+        59,
+        449,
+        138
+      ],
+      "scale": 1.0
+    },
+    {
+      "index": 2,
+      "animation": "pressure_water_jet",
+      "frame": 2,
+      "rect": [
+        1024,
+        0,
+        512,
+        256
+      ],
+      "sourceRect": [
+        1056,
+        46,
+        1504,
+        195
+      ],
+      "contentRect": [
+        42,
+        53,
+        448,
+        149
+      ],
+      "scale": 1.0
+    },
+    {
+      "index": 3,
+      "animation": "pressure_water_jet",
+      "frame": 3,
+      "rect": [
+        1536,
+        0,
+        512,
+        256
+      ],
+      "sourceRect": [
+        1568,
+        58,
+        2014,
+        166
+      ],
+      "contentRect": [
+        44,
+        74,
+        446,
+        108
+      ],
+      "scale": 1.0
+    },
+    {
+      "index": 4,
+      "animation": "water_dragon_lunge",
+      "frame": 0,
+      "rect": [
+        0,
+        256,
+        512,
+        256
+      ],
+      "sourceRect": [
+        25,
+        260,
+        484,
+        488
+      ],
+      "contentRect": [
+        72,
+        24,
+        418,
+        207
+      ],
+      "scale": 0.9098712446351931
+    },
+    {
+      "index": 5,
+      "animation": "water_dragon_lunge",
+      "frame": 1,
+      "rect": [
+        512,
+        256,
+        512,
+        256
+      ],
+      "sourceRect": [
+        524,
+        254,
+        984,
+        487
+      ],
+      "contentRect": [
+        71,
+        22,
+        419,
+        212
+      ],
+      "scale": 0.9098712446351931
+    },
+    {
+      "index": 6,
+      "animation": "water_dragon_lunge",
+      "frame": 2,
+      "rect": [
+        1024,
+        256,
+        512,
+        256
+      ],
+      "sourceRect": [
+        1048,
+        253,
+        1502,
+        486
+      ],
+      "contentRect": [
+        77,
+        22,
+        413,
+        212
+      ],
+      "scale": 0.9098712446351931
+    },
+    {
+      "index": 7,
+      "animation": "water_dragon_lunge",
+      "frame": 3,
+      "rect": [
+        1536,
+        256,
+        512,
+        256
+      ],
+      "sourceRect": [
+        1558,
+        261,
+        2007,
+        486
+      ],
+      "contentRect": [
+        81,
+        25,
+        409,
+        205
+      ],
+      "scale": 0.9098712446351931
+    },
+    {
+      "index": 8,
+      "animation": "water_wave_surge",
+      "frame": 0,
+      "rect": [
+        0,
+        512,
+        512,
+        256
+      ],
+      "sourceRect": [
+        25,
+        536,
+        485,
+        729
+      ],
+      "contentRect": [
+        43,
+        34,
+        447,
+        188
+      ],
+      "scale": 0.9724770642201835
+    },
+    {
+      "index": 9,
+      "animation": "water_wave_surge",
+      "frame": 1,
+      "rect": [
+        512,
+        512,
+        512,
+        256
+      ],
+      "sourceRect": [
+        535,
+        515,
+        999,
+        733
+      ],
+      "contentRect": [
+        39,
+        22,
+        451,
+        212
+      ],
+      "scale": 0.9724770642201835
+    },
+    {
+      "index": 10,
+      "animation": "water_wave_surge",
+      "frame": 2,
+      "rect": [
+        1024,
+        512,
+        512,
+        256
+      ],
+      "sourceRect": [
+        1047,
+        518,
+        1504,
+        731
+      ],
+      "contentRect": [
+        46,
+        24,
+        444,
+        207
+      ],
+      "scale": 0.9724770642201835
+    },
+    {
+      "index": 11,
+      "animation": "water_wave_surge",
+      "frame": 3,
+      "rect": [
+        1536,
+        512,
+        512,
+        256
+      ],
+      "sourceRect": [
+        1559,
+        539,
+        2020,
+        730
+      ],
+      "contentRect": [
+        42,
+        35,
+        448,
+        186
+      ],
+      "scale": 0.9724770642201835
+    }
+  ]
+}

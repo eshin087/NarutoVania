@@ -1,6 +1,8 @@
 import {bossBridge as bridge} from './boss-bridge';
 export type Action = 'left' | 'right' | 'down' | 'jump' | 'melee' | 'tool' | 'dash' | 'parry' | 'skill1' | 'skill2' | 'substitute' | 'ultimate';
 export const KEYBOARD: Record<string, Action> = {KeyA: 'left', ArrowLeft: 'left', KeyD: 'right', ArrowRight: 'right', KeyS: 'down', ArrowDown: 'down', Space: 'jump', KeyJ: 'melee', KeyK: 'tool', ShiftLeft: 'dash', ShiftRight: 'dash', KeyF: 'parry', KeyQ: 'skill1', KeyE: 'skill2', KeyL: 'substitute', KeyR: 'ultimate'};
+const LOGICAL_KEYS:Record<string,Action>={a:'left',arrowleft:'left',d:'right',arrowright:'right',s:'down',arrowdown:'down',' ':'jump',j:'melee',k:'tool',shift:'dash',f:'parry',q:'skill1',e:'skill2',l:'substitute',r:'ultimate'};
+export const keyboardAction=(event:Pick<KeyboardEvent,'code'|'key'>)=>KEYBOARD[event.code]||LOGICAL_KEYS[event.key?.toLowerCase()];
 export const PAD_BUTTONS: Record<number, Action> = {0: 'jump', 1: 'dash', 2: 'melee', 3: 'tool', 4: 'parry', 5: 'skill1', 6: 'substitute', 7: 'skill2', 11: 'ultimate', 13: 'down', 14: 'left', 15: 'right'};
 export function mapGamepad(pad: Pick<Gamepad, 'axes' | 'buttons'>): Set<Action> {
   const actions = new Set<Action>();
@@ -14,13 +16,13 @@ export class BattleInput {
   down = (event: KeyboardEvent) => {
     if ((event.target as HTMLElement)?.closest('[role="dialog"],input,select,textarea')) return;
     const screen = bridge.get().screen;
-    if (event.code === 'Escape') {event.preventDefault(); if (!event.repeat) bridge.command(screen === 'paused' ? 'resume' : 'pause'); return;}
-    if (event.code === 'Enter') {event.preventDefault(); if (!event.repeat) this.confirm(); return;}
-    const action = KEYBOARD[event.code]; if (!action) return;
+    if (event.code === 'Escape'||event.key==='Escape') {event.preventDefault(); if (!event.repeat) bridge.command(screen === 'paused' ? 'resume' : 'pause'); return;}
+    if (event.code === 'Enter'||event.key==='Enter') {event.preventDefault(); if (!event.repeat) this.confirm(); return;}
+    const action = keyboardAction(event); if (!action) return;
     if (['playing', 'intro', 'dead', 'paused'].includes(screen)) event.preventDefault();
     this.device = 'keyboard'; if (!this.keyboard.has(action)) this.edges.add(action); this.keyboard.add(action);
   };
-  up = (event: KeyboardEvent) => {const action = KEYBOARD[event.code]; if (action) {this.keyboard.delete(action); this.releases.add(action);}};
+  up = (event: KeyboardEvent) => {const action = keyboardAction(event); if (action) {this.keyboard.delete(action); this.releases.add(action);}};
   blur = () => {this.clear(); if (['playing', 'intro'].includes(bridge.get().screen)) bridge.command('pause');};
   visibility = () => {if (document.hidden) this.blur();};
   disconnect = () => {for (const action of this.pad) this.releases.add(action); this.pad.clear(); this.padStart = false; this.padConfirm = false; this.device = 'keyboard';};

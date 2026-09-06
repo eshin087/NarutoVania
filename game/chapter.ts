@@ -10,20 +10,20 @@ export interface PhaseDefinition {
   playerX: number; bossX: number; targetSeconds: number; protectionSeconds?: number;
 }
 export const PHASES: Record<StoryPhaseId, PhaseDefinition> = {
-  mist: {id: 'mist', number: 1, title: 'Assassin of the Mist', character: 'kakashi', boss: 'zabuza', arena: 'lakeside', hp: 4200,
-    objective: 'Read Zabuza’s sword. Break his defense.', intro: 'arrival', outro: 'prison', playerX: 400, bossX: 990, targetSeconds: 130},
-  rescue: {id: 'rescue', number: 2, title: 'Rescue Kakashi', character: 'naruto', boss: 'zabuza', arena: 'lakeside', hp: 2300,
-    objective: 'With Sasuke, overcome the water clone.', intro: 'prison', outro: 'shuriken', playerX: 430, bossX: 1000, targetSeconds: 100},
-  copy: {id: 'copy', number: 3, title: 'The Copy Ninja', character: 'kakashi', boss: 'zabuza', arena: 'lakeside', hp: 4900,
-    objective: 'Turn Zabuza’s water techniques against him.', intro: 'shuriken', outro: 'hunter', playerX: 420, bossX: 1010, targetSeconds: 140},
+  mist: {id: 'mist', number: 1, title: 'Assassin of the Mist', character: 'kakashi', boss: 'zabuza', arena: 'lakeside', hp: 1600,
+    objective: 'Deflect the sword. Punish a broken guard.', intro: 'arrival', outro: 'prison', playerX: 400, bossX: 990, targetSeconds: 60},
+  rescue: {id: 'rescue', number: 2, title: 'Rescue Kakashi', character: 'naruto', boss: 'zabuza', arena: 'lakeside', hp: 1000,
+    objective: 'With Sasuke, overcome the water clone.', intro: 'prison', outro: 'shuriken', playerX: 430, bossX: 1000, targetSeconds: 50},
+  copy: {id: 'copy', number: 3, title: 'The Copy Ninja', character: 'kakashi', boss: 'zabuza', arena: 'lakeside', hp: 1800,
+    objective: 'Restrain Zabuza. Strike with Lightning Blade.', intro: 'shuriken', outro: 'hunter', playerX: 420, bossX: 1010, targetSeconds: 65},
   protect: {id: 'protect', number: 4, title: 'Protect the Bridge Builder', character: 'sakura', boss: 'zabuza', arena: 'bridge', hp: 1400,
-    objective: 'Keep Tazuna safe until Kakashi returns.', intro: 'bridge', outro: 'bridge', playerX: 370, bossX: 1010, targetSeconds: 65, protectionSeconds: 65},
-  mirrors: {id: 'mirrors', number: 5, title: 'Crystal Ice Mirrors', character: 'sasuke', boss: 'haku', arena: 'bridge', hp: 4200,
-    objective: 'Read Haku’s openings. Survive the ice prison.', intro: 'bridge', outro: 'sacrifice', playerX: 480, bossX: 1080, targetSeconds: 160},
-  seal: {id: 'seal', number: 6, title: 'The Broken Seal', character: 'naruto', boss: 'haku', arena: 'bridge', hp: 4600,
-    objective: 'Break the mirrors. Reach Haku.', intro: 'sacrifice', outro: 'hesitation', playerX: 530, bossX: 1090, targetSeconds: 140},
-  lightning: {id: 'lightning', number: 7, title: 'Lightning Blade', character: 'kakashi', boss: 'zabuza', arena: 'bridge', hp: 5200,
-    objective: 'Counter silent killing. Restrain Zabuza.', intro: 'hesitation', outro: 'ending', playerX: 410, bossX: 1030, targetSeconds: 150},
+    objective: 'Keep Tazuna safe until Kakashi returns.', intro: 'bridge', outro: 'bridge', playerX: 370, bossX: 1010, targetSeconds: 50, protectionSeconds: 50},
+  mirrors: {id: 'mirrors', number: 5, title: 'Crystal Ice Mirrors', character: 'sasuke', boss: 'haku', arena: 'bridge', hp: 1600,
+    objective: 'Read Haku’s openings. Survive the ice prison.', intro: 'bridge', outro: 'sacrifice', playerX: 480, bossX: 1080, targetSeconds: 65},
+  seal: {id: 'seal', number: 6, title: 'The Broken Seal', character: 'naruto', boss: 'haku', arena: 'bridge', hp: 1800,
+    objective: 'Break the mirrors. Reach Haku.', intro: 'sacrifice', outro: 'hesitation', playerX: 530, bossX: 1090, targetSeconds: 65},
+  lightning: {id: 'lightning', number: 7, title: 'Lightning Blade', character: 'kakashi', boss: 'zabuza', arena: 'bridge', hp: 2000,
+    objective: 'Counter silent killing. Restrain Zabuza.', intro: 'hesitation', outro: 'ending', playerX: 410, bossX: 1030, targetSeconds: 70},
 };
 export const ARENAS = {lakeside: {width: 1560, floor: 592, min: 70, max: 1490}, bridge: {width: 1660, floor: 590, min: 70, max: 1590}} as const;
 export const CHARACTER = {
@@ -43,26 +43,26 @@ function technique(id: string, action: 'skill1' | 'skill2' | 'ultimate', chakra:
     events: [{at: ultimate ? 370 : 240, kind: 'technique', effect, damage, posture: ultimate ? 62 : 26}]};
 }
 const ABILITIES = {
-  read: {label: 'Sharingan', icon: 'eye', description: 'Read attack origins for six seconds. Parry recovery is more forgiving.', attack: technique('reading', 'skill1', 20, 9000, 'smoke')},
+  read: {label: 'Sharingan', icon: 'eye', description: '6s: earlier attack cues and +50% stamina damage on perfect parries. 24 chakra.', attack: technique('reading', 'skill1', 24, 9000, 'smoke')},
   dragon: {label: 'Water Dragon', icon: 'water', description: 'A copied water dragon strikes across the arena.', attack: technique('dragon', 'skill2', 30, 7200, 'water', 105)},
   waterfall: {label: 'Great Waterfall', icon: 'water', description: 'A powerful copied water surge breaks Zabuza’s stance.', attack: technique('waterfall', 'ultimate', 0, 0, 'water', 290)},
-  hounds: {label: 'Ninja Hounds', icon: 'dog', description: 'Summon ninja hounds to restrain Zabuza briefly.', attack: technique('hounds', 'skill2', 30, 11000, 'smoke', 45)},
-  blade: {label: 'Lightning Blade', icon: 'bolt', description: 'A short, concentrated lightning rush. The final story attack is automatic.', attack: technique('lightning', 'ultimate', 0, 0, 'lightning', 280)},
+  hounds: {label: 'Ninja Hounds', icon: 'dog', description: 'Pin Zabuza for 1.7s and damage his guard. 32 chakra.', attack: technique('hounds', 'skill2', 32, 11000, 'smoke', 80)},
+  blade: {label: 'Chidori', icon: 'bolt', description: 'ULTIMATE · Lightning Blade. Lock on, charge lightning, then pierce the guard with a cinematic rush.', attack: technique('lightning', 'ultimate', 0, 0, 'lightning', 420)},
   clones: {label: 'Shadow Clones', icon: 'clone', description: 'Two allies distract and attack for six seconds; each disappears after one hit.', attack: technique('clones', 'skill1', 30, 8500, 'smoke')},
   feint: {label: 'Transformation', icon: 'feint', description: 'Leave a targetable transformed decoy and reposition behind your guard.', attack: technique('feint', 'skill2', 20, 6200, 'smoke', 35)},
-  teamwork: {label: 'Clone Barrage', icon: 'rush', description: 'A coordinated clone rush. The rescue shuriken sequence follows the phase objective.', attack: technique('barrage', 'ultimate', 0, 0, 'impact', 250)},
+  teamwork: {label: 'Clone Barrage', icon: 'rush', description: 'ULTIMATE · Clones surround the target for a coordinated three-strike takedown.', attack: technique('barrage', 'ultimate', 0, 0, 'impact', 370)},
   redRush: {label: 'Chakra Rush', icon: 'rush', description: 'Nine-Tails chakra drives a rush that can shatter ice mirrors.', attack: technique('red-rush', 'skill2', 25, 6500, 'impact', 125)},
-  nineTails: {label: 'Unsealed Fury', icon: 'rush', description: 'An empowered multi-strike rush. No ultimate is required to break mirrors.', attack: technique('fury', 'ultimate', 0, 0, 'impact', 340)},
+  nineTails: {label: 'Unsealed Fury', icon: 'rush', description: 'ULTIMATE · Erupt in red chakra, smash the mirrors, and unleash a brutal rush.', attack: technique('fury', 'ultimate', 0, 0, 'impact', 450)},
   fireball: {label: 'Great Fireball', icon: 'fire', description: 'Breathe a broad fireball toward an exposed mirror or Haku.', attack: technique('fireball', 'skill1', 27, 5600, 'fire', 100)},
   windmill: {label: 'Windmill Shuriken', icon: 'shuriken', description: 'A wide spinning projectile with a returning pass.', attack: technique('windmill', 'skill2', 18, 4200, 'impact', 63)},
-  focus: {label: 'Sharingan Focus', icon: 'eye', description: 'A precise kunai counter sequence. The Sharingan awakens during the mirror battle.', attack: technique('focus', 'ultimate', 0, 0, 'impact', 240)},
+  focus: {label: 'Sharingan Focus', icon: 'eye', description: 'ULTIMATE · Read Haku, leave three afterimages, and strike with a precise kunai finisher.', attack: technique('focus', 'ultimate', 0, 0, 'impact', 390)},
   intercept: {label: 'Kunai Intercept', icon: 'kunai', description: 'A fan of kunai intercepts incoming projectiles and protects Tazuna.', attack: technique('intercept', 'skill1', 18, 4200, 'impact', 44)},
   protection: {label: 'Protective Stance', icon: 'shield', description: 'Brace near Tazuna, restoring guard stamina and drawing attacks.', attack: technique('protect', 'skill2', 22, 7800, 'smoke')},
-  resolve: {label: 'Resolve Counter', icon: 'kunai', description: 'A restrained kunai counter sequence with a brief defensive window.', attack: technique('resolve', 'ultimate', 0, 0, 'impact', 190)},
+  resolve: {label: 'Resolve Counter', icon: 'kunai', description: 'ULTIMATE · Intercept the threat to Tazuna and deliver a decisive kunai counter.', attack: technique('resolve', 'ultimate', 0, 0, 'impact', 340)},
 } satisfies Record<string, Ability>;
 export function kit(phase: StoryPhaseId): [Ability, Ability, Ability] {
   switch (phase) {
-    case 'mist': case 'copy': return [ABILITIES.read, ABILITIES.dragon, ABILITIES.waterfall];
+    case 'mist': case 'copy': return [ABILITIES.read, ABILITIES.hounds, ABILITIES.blade];
     case 'rescue': return [ABILITIES.clones, ABILITIES.feint, ABILITIES.teamwork];
     case 'protect': return [ABILITIES.intercept, ABILITIES.protection, ABILITIES.resolve];
     case 'mirrors': return [ABILITIES.fireball, ABILITIES.windmill, ABILITIES.focus];

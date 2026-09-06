@@ -1,0 +1,21 @@
+Use case: stylized-concept.
+Asset type: final raster ability icon atlas for an original-series Naruto 2D action game.
+Create exactly one square 4 by 4 atlas of 16 distinct ability icons. It is an invisible equal grid: exactly four columns and four rows, every square the same size, no gaps, no outer margin, no grid lines, no letters or numbers. Each icon has a flat opaque dark ink-blue background extending to its square edges. Bold vivid cel-shaded anime line art and simple powerful silhouettes must read clearly when each icon is shown at only 48 pixels. Keep each main icon centered with 12 percent safety margin and no art crossing cell boundaries.
+Exact row-major content:
+Row 1 column 1: close scarlet Sharingan eye with black three-tomoe iris, angular eyelids and ominous red gleam.
+Row 1 column 2: Kakashi's small tan ninja hound Pakkun head in a dark blue forehead protector, confident expression, cream muzzle and dark ears.
+Row 1 column 3: gloved ninja hand thrusting forward wrapped in brilliant blue-white Chidori lightning.
+Row 1 column 4: three clearly separated original-series Naruto heads and shoulders as shadow clones, spiky blond hair, blue forehead protector, orange-and-blue jacket.
+Row 2 column 1: wood substitution log diagonally framed by curling white smoke.
+Row 2 column 2: original-series Naruto clone barrage, three orange-sleeved fists striking toward the viewer with clone silhouettes.
+Row 2 column 3: Naruto sprinting right as a red Nine Tails chakra rush, spiky blond head and orange suit within a red fox-tailed streak.
+Row 2 column 4: Naruto Unsealed Fury, expressive roaring red translucent fox chakra face with sharp ears and fierce eyes, orange-red aura.
+Row 3 column 1: Sasuke Great Fireball, a huge orange-red blazing fireball streaming right from a small dark-haired ninja profile.
+Row 3 column 2: a large four-bladed dark steel windmill shuriken, broad folded blades with a silver center.
+Row 3 column 3: Sasuke counter, scarlet three-tomoe Sharingan eye above one gleaming steel kunai.
+Row 3 column 4: long-haired original-series Sakura intercept, pink-haired focused young ninja head in profile with a steel kunai blocking an incoming blade.
+Row 4 column 1: original-series Sakura protective stance, pink-haired head and red sleeveless upper tunic, forearms crossed defensively with a subtle protective pink arc.
+Row 4 column 2: Sakura resolve counter, determined green eye, flowing pink hair and a single kunai reversing upward with a pink slash trail.
+Row 4 column 3: one clean single four-point steel throwing shuriken viewed face-on, bright silver rim and dark core.
+Row 4 column 4: two crossed steel kunai parrying with a sharp white-gold impact spark.
+No text, no lettering, no labels, no numbers, no logos, no watermark, no decorative frames. Distinct focal forms, restrained details, strong saturated highlights on dark blue. Deliver a 2048 by 2048 square atlas if possible.

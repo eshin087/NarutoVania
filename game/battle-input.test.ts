@@ -1,5 +1,5 @@
 import {afterEach, beforeEach, describe, expect, it, vi} from 'vitest';
-import {BattleInput, KEYBOARD, PAD_BUTTONS, mapGamepad, type Action} from './battle-input';
+import {BattleInput, KEYBOARD, PAD_BUTTONS, mapGamepad, keyboardAction, type Action} from './battle-input';
 import {bossBridge, readCheckpoint, readSettings} from './boss-bridge';
 function pad(actions: Action[], axes = [0, 0]): Gamepad {
   const buttons = Array.from({length: 17}, (_, i) => ({pressed: actions.includes(PAD_BUTTONS[i]), value: actions.includes(PAD_BUTTONS[i]) ? 1 : 0, touched: false}));
@@ -31,6 +31,12 @@ describe('controller parity and lifecycle', () => {
   it('virtual ordinary inputs have deliberate press/release edges', () => {
     input.inject(['parry']); expect(input.pressed('parry')).toBe(true); input.endFrame(); input.inject(['parry']); expect(input.pressed('parry')).toBe(false);
     input.inject([]); expect(input.released('parry')).toBe(true); input.endFrame(); input.inject(['parry']); expect(input.pressed('parry')).toBe(true);
+  });
+  it('supports browsers that provide logical keys without a physical code',()=>{
+    expect(keyboardAction({code:'',key:'r'})).toBe('ultimate');expect(keyboardAction({code:'',key:'Shift'})).toBe('dash');
+    expect(keyboardAction({code:'KeyJ',key:'x'})).toBe('melee');
+    const event={code:'',key:'r',target:null,preventDefault:vi.fn(),repeat:false} as unknown as KeyboardEvent;
+    input.down(event);expect(input.pressed('ultimate')).toBe(true);input.endFrame();input.up(event);expect(input.held('ultimate')).toBe(false);
   });
 });
 describe('save migration', () => {

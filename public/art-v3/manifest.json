@@ -1,0 +1,1529 @@
+{
+  "version": 3,
+  "generator": "Built-in imagegen",
+  "cleanup": "User-authorized background removal and frame alignment; generated character art retained",
+  "icons": {
+    "reading": {
+      "file": "icons/reading.webp",
+      "sourceRect": [
+        0,
+        0,
+        256,
+        256
+      ]
+    },
+    "hounds": {
+      "file": "icons/hounds.webp",
+      "sourceRect": [
+        256,
+        0,
+        256,
+        256
+      ]
+    },
+    "lightning": {
+      "file": "icons/lightning.webp",
+      "sourceRect": [
+        512,
+        0,
+        256,
+        256
+      ]
+    },
+    "clones": {
+      "file": "icons/clones.webp",
+      "sourceRect": [
+        768,
+        0,
+        256,
+        256
+      ]
+    },
+    "feint": {
+      "file": "icons/feint.webp",
+      "sourceRect": [
+        0,
+        256,
+        256,
+        256
+      ]
+    },
+    "barrage": {
+      "file": "icons/barrage.webp",
+      "sourceRect": [
+        256,
+        256,
+        256,
+        256
+      ]
+    },
+    "red-rush": {
+      "file": "icons/red-rush.webp",
+      "sourceRect": [
+        512,
+        256,
+        256,
+        256
+      ]
+    },
+    "fury": {
+      "file": "icons/fury.webp",
+      "sourceRect": [
+        768,
+        256,
+        256,
+        256
+      ]
+    },
+    "fireball": {
+      "file": "icons/fireball.webp",
+      "sourceRect": [
+        0,
+        512,
+        256,
+        256
+      ]
+    },
+    "windmill": {
+      "file": "icons/windmill.webp",
+      "sourceRect": [
+        256,
+        512,
+        256,
+        256
+      ]
+    },
+    "focus": {
+      "file": "icons/focus.webp",
+      "sourceRect": [
+        512,
+        512,
+        256,
+        256
+      ]
+    },
+    "intercept": {
+      "file": "icons/intercept.webp",
+      "sourceRect": [
+        768,
+        512,
+        256,
+        256
+      ]
+    },
+    "protect": {
+      "file": "icons/protect.webp",
+      "sourceRect": [
+        0,
+        768,
+        256,
+        256
+      ]
+    },
+    "resolve": {
+      "file": "icons/resolve.webp",
+      "sourceRect": [
+        256,
+        768,
+        256,
+        256
+      ]
+    },
+    "tool": {
+      "file": "icons/tool.webp",
+      "sourceRect": [
+        512,
+        768,
+        256,
+        256
+      ]
+    },
+    "parry": {
+      "file": "icons/parry.webp",
+      "sourceRect": [
+        768,
+        768,
+        256,
+        256
+      ]
+    }
+  },
+  "ultimates": {
+    "file": "ultimate-cutins.png",
+    "frames": {
+      "kakashi": [
+        0,
+        0,
+        1024,
+        512
+      ],
+      "naruto": [
+        1024,
+        0,
+        1024,
+        512
+      ],
+      "sasuke": [
+        0,
+        512,
+        1024,
+        512
+      ],
+      "sakura": [
+        1024,
+        512,
+        1024,
+        512
+      ]
+    },
+    "timing": {
+      "cutIn": 600,
+      "first": 880,
+      "second": 1100,
+      "impact": 1330,
+      "end": 1700
+    }
+  },
+  "water": {
+    "file": "water-attacks.png",
+    "frames": [
+      {
+        "rect": [
+          0,
+          0,
+          512,
+          256
+        ],
+        "anchor": [
+          256,
+          128
+        ],
+        "row": 0,
+        "duration": 85
+      },
+      {
+        "rect": [
+          512,
+          0,
+          512,
+          256
+        ],
+        "anchor": [
+          256,
+          128
+        ],
+        "row": 0,
+        "duration": 85
+      },
+      {
+        "rect": [
+          1024,
+          0,
+          512,
+          256
+        ],
+        "anchor": [
+          256,
+          128
+        ],
+        "row": 0,
+        "duration": 85
+      },
+      {
+        "rect": [
+          1536,
+          0,
+          512,
+          256
+        ],
+        "anchor": [
+          256,
+          128
+        ],
+        "row": 0,
+        "duration": 85
+      },
+      {
+        "rect": [
+          0,
+          256,
+          512,
+          256
+        ],
+        "anchor": [
+          256,
+          128
+        ],
+        "row": 1,
+        "duration": 85
+      },
+      {
+        "rect": [
+          512,
+          256,
+          512,
+          256
+        ],
+        "anchor": [
+          256,
+          128
+        ],
+        "row": 1,
+        "duration": 85
+      },
+      {
+        "rect": [
+          1024,
+          256,
+          512,
+          256
+        ],
+        "anchor": [
+          256,
+          128
+        ],
+        "row": 1,
+        "duration": 85
+      },
+      {
+        "rect": [
+          1536,
+          256,
+          512,
+          256
+        ],
+        "anchor": [
+          256,
+          128
+        ],
+        "row": 1,
+        "duration": 85
+      },
+      {
+        "rect": [
+          0,
+          512,
+          512,
+          256
+        ],
+        "anchor": [
+          256,
+          128
+        ],
+        "row": 2,
+        "duration": 85
+      },
+      {
+        "rect": [
+          512,
+          512,
+          512,
+          256
+        ],
+        "anchor": [
+          256,
+          128
+        ],
+        "row": 2,
+        "duration": 85
+      },
+      {
+        "rect": [
+          1024,
+          512,
+          512,
+          256
+        ],
+        "anchor": [
+          256,
+          128
+        ],
+        "row": 2,
+        "duration": 85
+      },
+      {
+        "rect": [
+          1536,
+          512,
+          512,
+          256
+        ],
+        "anchor": [
+          256,
+          128
+        ],
+        "row": 2,
+        "duration": 85
+      }
+    ],
+    "source": {
+      "width": 2048,
+      "height": 768,
+      "columns": 4,
+      "rows": 3,
+      "cell": [
+        512,
+        256
+      ],
+      "anchor": [
+        256,
+        128
+      ],
+      "background": "transparent",
+      "frames": [
+        {
+          "index": 0,
+          "animation": "pressure_water_jet",
+          "frame": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            256
+          ],
+          "sourceRect": [
+            31,
+            59,
+            478,
+            168
+          ],
+          "contentRect": [
+            43,
+            73,
+            447,
+            109
+          ],
+          "scale": 1
+        },
+        {
+          "index": 1,
+          "animation": "pressure_water_jet",
+          "frame": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            256
+          ],
+          "sourceRect": [
+            538,
+            58,
+            987,
+            196
+          ],
+          "contentRect": [
+            41,
+            59,
+            449,
+            138
+          ],
+          "scale": 1
+        },
+        {
+          "index": 2,
+          "animation": "pressure_water_jet",
+          "frame": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            256
+          ],
+          "sourceRect": [
+            1056,
+            46,
+            1504,
+            195
+          ],
+          "contentRect": [
+            42,
+            53,
+            448,
+            149
+          ],
+          "scale": 1
+        },
+        {
+          "index": 3,
+          "animation": "pressure_water_jet",
+          "frame": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            256
+          ],
+          "sourceRect": [
+            1568,
+            58,
+            2014,
+            166
+          ],
+          "contentRect": [
+            44,
+            74,
+            446,
+            108
+          ],
+          "scale": 1
+        },
+        {
+          "index": 4,
+          "animation": "water_dragon_lunge",
+          "frame": 0,
+          "rect": [
+            0,
+            256,
+            512,
+            256
+          ],
+          "sourceRect": [
+            25,
+            260,
+            484,
+            488
+          ],
+          "contentRect": [
+            72,
+            24,
+            418,
+            207
+          ],
+          "scale": 0.9098712446351931
+        },
+        {
+          "index": 5,
+          "animation": "water_dragon_lunge",
+          "frame": 1,
+          "rect": [
+            512,
+            256,
+            512,
+            256
+          ],
+          "sourceRect": [
+            524,
+            254,
+            984,
+            487
+          ],
+          "contentRect": [
+            71,
+            22,
+            419,
+            212
+          ],
+          "scale": 0.9098712446351931
+        },
+        {
+          "index": 6,
+          "animation": "water_dragon_lunge",
+          "frame": 2,
+          "rect": [
+            1024,
+            256,
+            512,
+            256
+          ],
+          "sourceRect": [
+            1048,
+            253,
+            1502,
+            486
+          ],
+          "contentRect": [
+            77,
+            22,
+            413,
+            212
+          ],
+          "scale": 0.9098712446351931
+        },
+        {
+          "index": 7,
+          "animation": "water_dragon_lunge",
+          "frame": 3,
+          "rect": [
+            1536,
+            256,
+            512,
+            256
+          ],
+          "sourceRect": [
+            1558,
+            261,
+            2007,
+            486
+          ],
+          "contentRect": [
+            81,
+            25,
+            409,
+            205
+          ],
+          "scale": 0.9098712446351931
+        },
+        {
+          "index": 8,
+          "animation": "water_wave_surge",
+          "frame": 0,
+          "rect": [
+            0,
+            512,
+            512,
+            256
+          ],
+          "sourceRect": [
+            25,
+            536,
+            485,
+            729
+          ],
+          "contentRect": [
+            43,
+            34,
+            447,
+            188
+          ],
+          "scale": 0.9724770642201835
+        },
+        {
+          "index": 9,
+          "animation": "water_wave_surge",
+          "frame": 1,
+          "rect": [
+            512,
+            512,
+            512,
+            256
+          ],
+          "sourceRect": [
+            535,
+            515,
+            999,
+            733
+          ],
+          "contentRect": [
+            39,
+            22,
+            451,
+            212
+          ],
+          "scale": 0.9724770642201835
+        },
+        {
+          "index": 10,
+          "animation": "water_wave_surge",
+          "frame": 2,
+          "rect": [
+            1024,
+            512,
+            512,
+            256
+          ],
+          "sourceRect": [
+            1047,
+            518,
+            1504,
+            731
+          ],
+          "contentRect": [
+            46,
+            24,
+            444,
+            207
+          ],
+          "scale": 0.9724770642201835
+        },
+        {
+          "index": 11,
+          "animation": "water_wave_surge",
+          "frame": 3,
+          "rect": [
+            1536,
+            512,
+            512,
+            256
+          ],
+          "sourceRect": [
+            1559,
+            539,
+            2020,
+            730
+          ],
+          "contentRect": [
+            42,
+            35,
+            448,
+            186
+          ],
+          "scale": 0.9724770642201835
+        }
+      ]
+    }
+  },
+  "kakashi": {
+    "file": "kakashi-melee.png",
+    "baseHeight": 232,
+    "frames": [
+      {
+        "rect": [
+          0,
+          0,
+          256,
+          384
+        ],
+        "footAnchor": [
+          128,
+          307
+        ]
+      },
+      {
+        "rect": [
+          256,
+          0,
+          256,
+          384
+        ],
+        "footAnchor": [
+          128,
+          307
+        ]
+      },
+      {
+        "rect": [
+          512,
+          0,
+          256,
+          384
+        ],
+        "footAnchor": [
+          128,
+          307
+        ]
+      },
+      {
+        "rect": [
+          768,
+          0,
+          256,
+          384
+        ],
+        "footAnchor": [
+          128,
+          307
+        ]
+      },
+      {
+        "rect": [
+          1024,
+          0,
+          256,
+          384
+        ],
+        "footAnchor": [
+          128,
+          307
+        ]
+      },
+      {
+        "rect": [
+          1280,
+          0,
+          256,
+          384
+        ],
+        "footAnchor": [
+          128,
+          307
+        ]
+      },
+      {
+        "rect": [
+          0,
+          384,
+          256,
+          384
+        ],
+        "footAnchor": [
+          128,
+          307
+        ]
+      },
+      {
+        "rect": [
+          256,
+          384,
+          256,
+          384
+        ],
+        "footAnchor": [
+          128,
+          307
+        ]
+      },
+      {
+        "rect": [
+          512,
+          384,
+          256,
+          384
+        ],
+        "footAnchor": [
+          128,
+          307
+        ]
+      },
+      {
+        "rect": [
+          768,
+          384,
+          256,
+          384
+        ],
+        "footAnchor": [
+          128,
+          307
+        ]
+      },
+      {
+        "rect": [
+          1024,
+          384,
+          256,
+          384
+        ],
+        "footAnchor": [
+          128,
+          307
+        ]
+      },
+      {
+        "rect": [
+          1280,
+          384,
+          256,
+          384
+        ],
+        "footAnchor": [
+          128,
+          307
+        ]
+      },
+      {
+        "rect": [
+          0,
+          768,
+          256,
+          384
+        ],
+        "footAnchor": [
+          128,
+          307
+        ]
+      },
+      {
+        "rect": [
+          256,
+          768,
+          256,
+          384
+        ],
+        "footAnchor": [
+          128,
+          307
+        ]
+      },
+      {
+        "rect": [
+          512,
+          768,
+          256,
+          384
+        ],
+        "footAnchor": [
+          128,
+          307
+        ]
+      },
+      {
+        "rect": [
+          768,
+          768,
+          256,
+          384
+        ],
+        "footAnchor": [
+          128,
+          307
+        ]
+      },
+      {
+        "rect": [
+          1024,
+          768,
+          256,
+          384
+        ],
+        "footAnchor": [
+          128,
+          307
+        ]
+      },
+      {
+        "rect": [
+          1280,
+          768,
+          256,
+          384
+        ],
+        "footAnchor": [
+          128,
+          307
+        ]
+      },
+      {
+        "rect": [
+          0,
+          1152,
+          256,
+          384
+        ],
+        "footAnchor": [
+          128,
+          307
+        ]
+      },
+      {
+        "rect": [
+          256,
+          1152,
+          256,
+          384
+        ],
+        "footAnchor": [
+          128,
+          307
+        ]
+      },
+      {
+        "rect": [
+          512,
+          1152,
+          256,
+          384
+        ],
+        "footAnchor": [
+          128,
+          307
+        ]
+      },
+      {
+        "rect": [
+          768,
+          1152,
+          256,
+          384
+        ],
+        "footAnchor": [
+          128,
+          307
+        ]
+      },
+      {
+        "rect": [
+          1024,
+          1152,
+          256,
+          384
+        ],
+        "footAnchor": [
+          128,
+          307
+        ]
+      },
+      {
+        "rect": [
+          1280,
+          1152,
+          256,
+          384
+        ],
+        "footAnchor": [
+          128,
+          307
+        ]
+      }
+    ],
+    "source": {
+      "width": 1536,
+      "height": 1536,
+      "columns": 6,
+      "rows": 4,
+      "cell": [
+        256,
+        384
+      ],
+      "foot": [
+        128,
+        307
+      ],
+      "background": "transparent",
+      "scale": 1,
+      "frames": [
+        {
+          "index": 0,
+          "animation": "palm_kunai_strike",
+          "frame": 0,
+          "rect": [
+            0,
+            0,
+            256,
+            384
+          ],
+          "sourceRect": [
+            48,
+            81,
+            182,
+            312
+          ],
+          "contentRect": [
+            61,
+            76,
+            134,
+            231
+          ]
+        },
+        {
+          "index": 1,
+          "animation": "palm_kunai_strike",
+          "frame": 1,
+          "rect": [
+            256,
+            0,
+            256,
+            384
+          ],
+          "sourceRect": [
+            252,
+            76,
+            400,
+            313
+          ],
+          "contentRect": [
+            54,
+            70,
+            148,
+            237
+          ]
+        },
+        {
+          "index": 2,
+          "animation": "palm_kunai_strike",
+          "frame": 2,
+          "rect": [
+            512,
+            0,
+            256,
+            384
+          ],
+          "sourceRect": [
+            459,
+            86,
+            650,
+            313
+          ],
+          "contentRect": [
+            32,
+            80,
+            191,
+            227
+          ]
+        },
+        {
+          "index": 3,
+          "animation": "palm_kunai_strike",
+          "frame": 3,
+          "rect": [
+            768,
+            0,
+            256,
+            384
+          ],
+          "sourceRect": [
+            667,
+            84,
+            878,
+            313
+          ],
+          "contentRect": [
+            22,
+            78,
+            211,
+            229
+          ]
+        },
+        {
+          "index": 4,
+          "animation": "palm_kunai_strike",
+          "frame": 4,
+          "rect": [
+            1024,
+            0,
+            256,
+            384
+          ],
+          "sourceRect": [
+            892,
+            82,
+            1025,
+            313
+          ],
+          "contentRect": [
+            61,
+            76,
+            133,
+            231
+          ]
+        },
+        {
+          "index": 5,
+          "animation": "palm_kunai_strike",
+          "frame": 5,
+          "rect": [
+            1280,
+            0,
+            256,
+            384
+          ],
+          "sourceRect": [
+            1085,
+            80,
+            1204,
+            313
+          ],
+          "contentRect": [
+            68,
+            74,
+            119,
+            233
+          ]
+        },
+        {
+          "index": 6,
+          "animation": "high_side_kick",
+          "frame": 0,
+          "rect": [
+            0,
+            384,
+            256,
+            384
+          ],
+          "sourceRect": [
+            46,
+            399,
+            181,
+            625
+          ],
+          "contentRect": [
+            60,
+            81,
+            135,
+            226
+          ]
+        },
+        {
+          "index": 7,
+          "animation": "high_side_kick",
+          "frame": 1,
+          "rect": [
+            256,
+            384,
+            256,
+            384
+          ],
+          "sourceRect": [
+            250,
+            373,
+            360,
+            626
+          ],
+          "contentRect": [
+            73,
+            54,
+            110,
+            253
+          ]
+        },
+        {
+          "index": 8,
+          "animation": "high_side_kick",
+          "frame": 2,
+          "rect": [
+            512,
+            384,
+            256,
+            384
+          ],
+          "sourceRect": [
+            442,
+            385,
+            632,
+            625
+          ],
+          "contentRect": [
+            33,
+            67,
+            190,
+            240
+          ]
+        },
+        {
+          "index": 9,
+          "animation": "high_side_kick",
+          "frame": 3,
+          "rect": [
+            768,
+            384,
+            256,
+            384
+          ],
+          "sourceRect": [
+            679,
+            384,
+            888,
+            625
+          ],
+          "contentRect": [
+            23,
+            66,
+            209,
+            241
+          ]
+        },
+        {
+          "index": 10,
+          "animation": "high_side_kick",
+          "frame": 4,
+          "rect": [
+            1024,
+            384,
+            256,
+            384
+          ],
+          "sourceRect": [
+            922,
+            391,
+            1012,
+            625
+          ],
+          "contentRect": [
+            83,
+            73,
+            90,
+            234
+          ]
+        },
+        {
+          "index": 11,
+          "animation": "high_side_kick",
+          "frame": 5,
+          "rect": [
+            1280,
+            384,
+            256,
+            384
+          ],
+          "sourceRect": [
+            1085,
+            395,
+            1204,
+            627
+          ],
+          "contentRect": [
+            68,
+            75,
+            119,
+            232
+          ]
+        },
+        {
+          "index": 12,
+          "animation": "low_sweep_finisher",
+          "frame": 0,
+          "rect": [
+            0,
+            768,
+            256,
+            384
+          ],
+          "sourceRect": [
+            43,
+            723,
+            185,
+            881
+          ],
+          "contentRect": [
+            57,
+            149,
+            142,
+            158
+          ]
+        },
+        {
+          "index": 13,
+          "animation": "low_sweep_finisher",
+          "frame": 1,
+          "rect": [
+            256,
+            768,
+            256,
+            384
+          ],
+          "sourceRect": [
+            235,
+            724,
+            375,
+            880
+          ],
+          "contentRect": [
+            58,
+            151,
+            140,
+            156
+          ]
+        },
+        {
+          "index": 14,
+          "animation": "low_sweep_finisher",
+          "frame": 2,
+          "rect": [
+            512,
+            768,
+            256,
+            384
+          ],
+          "sourceRect": [
+            410,
+            731,
+            627,
+            876
+          ],
+          "contentRect": [
+            19,
+            162,
+            217,
+            145
+          ]
+        },
+        {
+          "index": 15,
+          "animation": "low_sweep_finisher",
+          "frame": 3,
+          "rect": [
+            768,
+            768,
+            256,
+            384
+          ],
+          "sourceRect": [
+            651,
+            734,
+            885,
+            876
+          ],
+          "contentRect": [
+            11,
+            165,
+            234,
+            142
+          ]
+        },
+        {
+          "index": 16,
+          "animation": "low_sweep_finisher",
+          "frame": 4,
+          "rect": [
+            1024,
+            768,
+            256,
+            384
+          ],
+          "sourceRect": [
+            919,
+            731,
+            1043,
+            876
+          ],
+          "contentRect": [
+            66,
+            162,
+            124,
+            145
+          ]
+        },
+        {
+          "index": 17,
+          "animation": "low_sweep_finisher",
+          "frame": 5,
+          "rect": [
+            1280,
+            768,
+            256,
+            384
+          ],
+          "sourceRect": [
+            1093,
+            716,
+            1194,
+            875
+          ],
+          "contentRect": [
+            77,
+            148,
+            101,
+            159
+          ]
+        },
+        {
+          "index": 18,
+          "animation": "heavy_rising_kick",
+          "frame": 0,
+          "rect": [
+            0,
+            1152,
+            256,
+            384
+          ],
+          "sourceRect": [
+            42,
+            1035,
+            176,
+            1191
+          ],
+          "contentRect": [
+            61,
+            151,
+            134,
+            156
+          ]
+        },
+        {
+          "index": 19,
+          "animation": "heavy_rising_kick",
+          "frame": 1,
+          "rect": [
+            256,
+            1152,
+            256,
+            384
+          ],
+          "sourceRect": [
+            265,
+            954,
+            373,
+            1200
+          ],
+          "contentRect": [
+            74,
+            61,
+            108,
+            246
+          ]
+        },
+        {
+          "index": 20,
+          "animation": "heavy_rising_kick",
+          "frame": 2,
+          "rect": [
+            512,
+            1152,
+            256,
+            384
+          ],
+          "sourceRect": [
+            445,
+            955,
+            620,
+            1200
+          ],
+          "contentRect": [
+            40,
+            62,
+            175,
+            245
+          ]
+        },
+        {
+          "index": 21,
+          "animation": "heavy_rising_kick",
+          "frame": 3,
+          "rect": [
+            768,
+            1152,
+            256,
+            384
+          ],
+          "sourceRect": [
+            672,
+            910,
+            799,
+            1200
+          ],
+          "contentRect": [
+            64,
+            17,
+            127,
+            290
+          ]
+        },
+        {
+          "index": 22,
+          "animation": "heavy_rising_kick",
+          "frame": 4,
+          "rect": [
+            1024,
+            1152,
+            256,
+            384
+          ],
+          "sourceRect": [
+            900,
+            960,
+            994,
+            1201
+          ],
+          "contentRect": [
+            81,
+            66,
+            94,
+            241
+          ]
+        },
+        {
+          "index": 23,
+          "animation": "heavy_rising_kick",
+          "frame": 5,
+          "rect": [
+            1280,
+            1152,
+            256,
+            384
+          ],
+          "sourceRect": [
+            1084,
+            972,
+            1206,
+            1202
+          ],
+          "contentRect": [
+            67,
+            77,
+            122,
+            230
+          ]
+        }
+      ]
+    }
+  }
+}

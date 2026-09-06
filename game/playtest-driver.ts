@@ -5,7 +5,7 @@ import type {Action, BattleInput} from './battle-input';
 
 /** Development-only input pilot. It presses the same actions as a keyboard;
  * it never changes health, positions, clocks, boss choices, or story outcomes. */
-export async function driveCombat(scene: BossGameScene, inputs: BattleInput, milliseconds: number, noUltimate = false) {
+export async function driveCombat(scene: BossGameScene, inputs: BattleInput, milliseconds: number, noUltimate = false, casual = false) {
   if (bridge.get().screen === 'paused') bridge.command('resume');
   const end = performance.now() + milliseconds;
   let previous: Action[] = [], holdUntil = 0, held: Action[] = [], heavyRelease = 0, lastJump = -9999, lastAttack = -9999;
@@ -27,7 +27,10 @@ export async function driveCombat(scene: BossGameScene, inputs: BattleInput, mil
     // React to the visible leading edge, rather than the center of a wide water projectile.
     const incoming = scene.projectiles.filter(q => !q.friendly && q.expires > now && (p.x - q.x) * q.vx > 0).map(q => ({q, seconds: (p.x - q.x) / q.vx - (q.rx + 22) / Math.abs(q.vx)})).filter(({q, seconds}) => seconds > 0 && seconds < .4 && Math.abs(q.y + q.vy * seconds - (p.y - 70)) < q.ry + 62).sort((a, b) => a.seconds - b.seconds)[0];
     const redThreat = !!melee?.red && meleeDelay < 270 && Math.abs(b.x - p.x) < (melee.range || 200) + 80 || !!incoming?.q.red && incoming.seconds < .12;
-    const parryThreat = !!melee && !melee.red && meleeDelay < 105 && Math.abs(b.x - p.x) < (melee.range || 180) + 28 || !!incoming && !incoming.q.red && incoming.seconds < .1;
+    // Casual mode deliberately guards early on alternate boss attacks. It never
+    // changes combat rules and does not use perfect defense to justify huge HP.
+    const guardEarly=casual&&scene.brain.attacks%2===0;
+    const parryThreat = !!melee && !melee.red && meleeDelay < (guardEarly?310:105) && Math.abs(b.x - p.x) < (melee.range || 180) + 28 || !!incoming && !incoming.q.red && incoming.seconds < (guardEarly?.3:.1);
     if (now < holdUntil) actions = held;
     else if (floorWarning && p.canAct(now, true)) {
       const evade: Action = scene.targetX < 250 ? 'right' : scene.targetX > scene.arenaMax - 250 ? 'left' : p.x < scene.targetX ? 'left' : 'right';
@@ -38,7 +41,7 @@ export async function driveCombat(scene: BossGameScene, inputs: BattleInput, mil
       actions = [evade, 'dash']; held = actions; holdUntil = now + 220;
     } else if (parryThreat && p.canAct(now, true) && p.stamina > 0) {
       const face: Action = incoming ? incoming.q.x > p.x ? 'right' : 'left' : b.x > p.x ? 'right' : 'left';
-      actions = [face, 'parry']; held = actions; holdUntil = now + 145;
+      actions = [face, 'parry']; held = actions; holdUntil = now + (guardEarly?340:145);
     } else if (p.chargeStarted !== null) {
       actions = now < heavyRelease ? ['down', 'melee'] : [];
     } else if (p.action) {
@@ -47,6 +50,7 @@ export async function driveCombat(scene: BossGameScene, inputs: BattleInput, mil
       actions = [p.x < 170 ? 'right' : p.x > scene.arenaMax - 170 ? 'left' : away];
     } else if (scene.phase === 'protect' && Math.abs(p.x - 260) > 100) actions = [p.x > 260 ? 'left' : 'right'];
     else if (delay < 520 && Math.abs(p.x - b.x) < 290) actions = [direction];
+    else if (!noUltimate && p.ultimate>=100 && delay>780 && (scene.phase!=='mirrors'||scene.sharingan)) {actions=[direction,'ultimate'];lastAttack=now;}
     else if (p.chakra >= 30 && delay > 780 && now - lastAttack > 400 && !previous.some(a => a.startsWith('skill'))) {
       const abilities = kit(scene.phase);
       let choice = noUltimate ? -1 : p.ultimate >= 100 && delay > 1200 && (scene.phase !== 'mirrors' || scene.sharingan) ? 2 : -1;

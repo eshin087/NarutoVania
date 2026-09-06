@@ -32,8 +32,8 @@ describe('timed defense', () => {
   });
   it('boss exhaustion is a punish window, not health loss or phase completion', () => {
     const f = new Combatant('zabuza', 1500, true); f.stamina = 20; f.exhaust(24, 1000);
-    expect(f.health).toBe(1500); expect(f.guardBrokenUntil).toBe(3000);
-    f.update(2999, 0); expect(f.stamina).toBe(0); f.update(3000, 0); expect(f.stamina).toBe(100);
+    expect(f.health).toBe(1500); expect(f.guardBrokenUntil).toBe(3400);
+    f.update(3399, 0); expect(f.stamina).toBe(0); f.update(3400, 0); expect(f.stamina).toBe(100);
   });
 });
 describe('movement resources and hitboxes', () => {
@@ -80,7 +80,7 @@ describe('action scheduler', () => {
     expect(f.start(UNIVERSAL.tool, 200)).toBe(false); expect(f.start(UNIVERSAL.dash, 279)).toBe(false);
     expect(f.start(UNIVERSAL.dash, 280)).toBe(true);
   });
-  it('buffers the next strike for 130 ms and does not turn holding melee into infinite combos', () => {
+  it('buffers the next strike for 240 ms and does not turn holding melee into infinite combos', () => {
     const f = new Combatant('naruto'); f.bufferMelee(0); expect(f.consumeMelee(0)).toBe(true);
     f.bufferMelee(280); f.update(390, 390); expect(f.consumeMelee(390)).toBe(true); expect(f.action?.definition.id).toBe('light2');
     f.update(820, 430); expect(f.consumeMelee(820)).toBe(false);
@@ -106,8 +106,44 @@ describe('canonical checkpoint state', () => {
     expect(stateForPhase('seal')).toMatchObject({narutoInMirrors: true, sasukeFallen: true, sharinganAwakened: true, sealBroken: true});
     expect(stateForPhase('lightning')).toMatchObject({hakuDefeated: true, hakuIntercepted: false});
   });
-  it('changes Kakashi and Naruto techniques with the arc and excludes later abilities', () => {
-    expect(kit('copy')[2].label).toBe('Great Waterfall'); expect(kit('lightning')[2].label).toBe('Lightning Blade');
-    expect(JSON.stringify(PHASE_IDS.map(kit))).not.toMatch(/Rasengan|Chidori|healing|Kamui/);
+  it('gives Kakashi his own kit throughout and keeps the other characters arc appropriate', () => {
+    for(const phase of ['mist','copy','lightning'] as const)expect(kit(phase).map(a=>a.attack.id)).toEqual(['reading','hounds','lightning']);
+    expect(kit('mist')[2].label).toBe('Chidori');
+    expect(JSON.stringify(['rescue','protect','mirrors','seal'].map(p=>kit(p as 'rescue')))).not.toMatch(/Rasengan|Chidori|healing|Kamui/);
+  });
+});
+
+describe('close-combat rebalance',()=>{
+  it('every successful parry removes at least 32 boss stamina and interrupts an ordinary attack',()=>{
+    const defender=guard();defender.chakra=20;
+    const boss=new Combatant('zabuza',1600,true);boss.start(UNIVERSAL.light1,1000);
+    const result=defender.receive(ordinary,1070);boss.deflected(result.attackerPosture,1070);
+    expect(boss.stamina).toBe(63);expect(boss.action).toBeNull();expect(boss.hurtUntil).toBe(1370);
+    expect(defender.chakra).toBe(24);expect(defender.ultimate).toBe(12);
+  });
+  it('broken boss guard takes 75% extra damage and hits never extend its punish window',()=>{
+    const boss=new Combatant('zabuza',1000,true);boss.exhaust(100,1000);
+    const hit=boss.receive({...ordinary,damage:100},1100);expect(hit.damage).toBe(175);expect(boss.health).toBe(825);
+    boss.exhaust(90,2000);expect(boss.guardBrokenUntil).toBe(3400);
+    boss.update(3400,0);expect(boss.receive({...ordinary,damage:100},3401).damage).toBe(100);
+  });
+  it('armor preserves a committed boss attack, but ordinary recoveries can flinch without a stun lock',()=>{
+    const boss=new Combatant('haku',1000,true);boss.start({...UNIVERSAL.heavy,events:[{at:800,kind:'hit',damage:20,red:true}]},0);
+    boss.receive(ordinary,200);expect(boss.hurtUntil).toBe(0);expect(boss.action).not.toBeNull();
+    boss.action=null;boss.receive(ordinary,900);expect(boss.hurtUntil).toBe(1160);
+    boss.receive(ordinary,1200);expect(boss.hurtUntil).toBe(1160);
+    boss.receive(ordinary,1600);expect(boss.hurtUntil).toBe(1860);
+  });
+  it('shurikens require four chakra, spending delays regen, and empty chakra leaves melee available',()=>{
+    const player=new Combatant('naruto');player.chakra=4;expect(player.start(UNIVERSAL.tool,0)).toBe(true);expect(player.chakra).toBe(0);
+    player.update(400,400);expect(player.start(UNIVERSAL.tool,400)).toBe(false);
+    player.update(1399,999);expect(player.chakra).toBe(0);
+    player.update(2400,1000);expect(player.chakra).toBeCloseTo(1.8);
+    expect(player.start(UNIVERSAL.light1,2400)).toBe(true);
+  });
+  it('a deliberate early tap carries into the kick, then sweep, without overwriting the active strike',()=>{
+    const p=new Combatant('kakashi');p.bufferMelee(0);p.consumeMelee(0);
+    p.bufferMelee(180);expect(p.consumeMelee(180)).toBe(false);p.update(390,0);expect(p.consumeMelee(390)).toBe(true);
+    expect(p.action?.definition.animation).toBe('light2');p.bufferMelee(610);p.update(815,0);p.consumeMelee(815);expect(p.action?.definition.animation).toBe('light3');
   });
 });

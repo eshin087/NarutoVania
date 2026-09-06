@@ -33,10 +33,11 @@ export interface AttackDefinition {
   events: AttackEvent[];
 }
 export const COMBAT = {
-  enemyDamage: .55,
+  enemyDamage: .5,
   stamina: 100, staminaRegen: 35, regenDelay: 650, parryWindow: 140, parryRearm: 300,
-  parryRestore: 10, parryPosture: 24, guardBreak: 800, bossBreak: 2000,
-  inputBuffer: 130, damageImmunity: 650, speed: 295, guardSpeed: 88,
+  parryRestore: 10, parryPosture: 32, guardBreak: 800, bossBreak: 2400, breakDamage: 1.75,
+  chakraRegen: 1.8, chakraDelay: 1400, meleeChakra: 2, parryChakra: 4,
+  inputBuffer: 240, damageImmunity: 650, speed: 315, guardSpeed: 100,
   jump: 840, gravity: 1800, coyote: 100, jumpBuffer: 130,
 } as const;
 export const clamp = (n: number, lo: number, hi: number) => Math.max(lo, Math.min(hi, n));
@@ -44,18 +45,18 @@ export const defensive = (action: CombatAction) => ['dash', 'airdash', 'slide', 
 const strike = (index: number): AttackDefinition => ({
   id: `light${index}`, action: `light${index}` as CombatAction, animation: `light${index}` as AnimationName,
   duration: [0, 390, 425, 520][index], cancelAt: [0, 280, 310, 390][index],
-  stamina: [0, 5, 6, 8][index], move: [0, 65, 80, 115][index],
+  stamina: [0, 5, 6, 8][index], move: [0, 100, 125, 150][index],
   events: [{at: [0, 130, 150, 205][index], kind: 'effect', effect: 'swing'},
-    {at: [0, 170, 195, 245][index], kind: 'hit', damage: [0, 15, 18, 27][index], posture: [0, 9, 12, 17][index], range: [0, 100, 114, 134][index], height: 92}],
+    {at: [0, 170, 195, 245][index], kind: 'hit', damage: [0, 24, 30, 42][index], posture: [0, 10, 14, 21][index], range: [0, 100, 122, 140][index], height: 100}],
 });
 export const UNIVERSAL: Record<string, AttackDefinition> = {
   light1: strike(1), light2: strike(2), light3: strike(3),
   heavy: {id: 'heavy', action: 'heavy', animation: 'heavy', duration: 770, cancelAt: 570, stamina: 18, move: 95,
-    events: [{at: 270, kind: 'effect', effect: 'swing'}, {at: 355, kind: 'hit', damage: 39, posture: 35, range: 145, height: 102}]},
+    events: [{at: 270, kind: 'effect', effect: 'swing'}, {at: 355, kind: 'hit', damage: 62, posture: 38, range: 150, height: 115}]},
   aerial: {id: 'aerial', action: 'aerial', animation: 'light2', duration: 430, cancelAt: 300, stamina: 7, move: 55,
-    events: [{at: 145, kind: 'hit', damage: 22, posture: 12, range: 115, height: 135}]},
-  tool: {id: 'tool', action: 'tool', animation: 'cast', duration: 350, cancelAt: 255, stamina: 3, cooldown: 390,
-    events: [{at: 125, kind: 'projectile', damage: 8, posture: 3, speed: 770, effect: 'swing'}]},
+    events: [{at: 145, kind: 'hit', damage: 32, posture: 14, range: 125, height: 135}]},
+  tool: {id: 'tool', action: 'tool', animation: 'cast', duration: 350, cancelAt: 255, stamina: 3, chakra: 4, cooldown: 390,
+    events: [{at: 125, kind: 'projectile', damage: 16, posture: 4, speed: 770, effect: 'swing'}]},
   dash: {id: 'dash', action: 'dash', animation: 'dash', duration: 220, cancelAt: 220, stamina: 22, move: 820, invulnerable: 140, events: [{at: 0, kind: 'effect', effect: 'dash'}]},
   airdash: {id: 'airdash', action: 'airdash', animation: 'airdash', duration: 220, cancelAt: 220, stamina: 25, move: 740, invulnerable: 120, events: [{at: 0, kind: 'effect', effect: 'dash'}]},
   slide: {id: 'slide', action: 'slide', animation: 'slide', duration: 350, cancelAt: 280, stamina: 15, move: 690, events: [{at: 0, kind: 'effect', effect: 'dash'}]},
@@ -73,6 +74,7 @@ export class Combatant {
   guard = false; guardBrokenUntil = 0; immuneUntil = 0; hurtUntil = 0;
   parryAt = -Infinity; lastParryPress = -Infinity; parryReleased = true; deflectUntil = 0;
   lastSpend = -Infinity; action: ScheduledAction | null = null; serial = 0;
+  lastChakraSpend = -Infinity; lastStagger = -Infinity; damagedAt = -Infinity; postureHitAt = -Infinity;
   cooldowns = new Map<string, number>(); hitTargets = new Set<string>();
   meleeBufferedAt = -Infinity; combo = 0; comboExpires = 0; chargeStarted: number | null = null;
   lastActionEnded: AttackDefinition | null = null;
@@ -91,6 +93,7 @@ export class Combatant {
     if (definition.action === 'airdash' && (this.grounded || this.airDashUsed)) return false;
     if (!this.spend(definition.stamina, now)) return false;
     this.chakra -= definition.chakra || 0; this.ultimate -= definition.ultimate || 0;
+    if (definition.chakra) this.lastChakraSpend = now;
     this.guard = false; this.chargeStarted = null;
     if (definition.action === 'airdash') this.airDashUsed = true;
     this.action = {definition, started: now, serial: ++this.serial, emitted: new Set(), charge, facing: this.facing};
@@ -107,7 +110,7 @@ export class Combatant {
     if (!this.guard && this.chargeStarted === null && now - this.lastSpend >= COMBAT.regenDelay && now >= this.guardBrokenUntil) {
       this.stamina = Math.min(100, this.stamina + (this.isBoss ? 16 : COMBAT.staminaRegen) * dt / 1000);
     }
-    this.chakra = Math.min(100, this.chakra + dt * .006);
+    if (!this.guard && now - this.lastChakraSpend >= COMBAT.chakraDelay) this.chakra = Math.min(100, this.chakra + dt * COMBAT.chakraRegen / 1000);
     const action = this.action;
     if (action) {
       const age = now - action.started;
@@ -127,10 +130,20 @@ export class Combatant {
     }
   }
   exhaust(amount: number, now: number) {
+    if (this.isBoss && now < this.guardBrokenUntil) return;
     this.stamina = Math.max(0, this.stamina - amount); this.lastSpend = now;
+    this.postureHitAt = now;
     if (this.stamina <= 0 && this.isBoss && now >= this.guardBrokenUntil) {
       this.guardBrokenUntil = now + COMBAT.bossBreak; this.action = null; this.guard = false;
     }
+  }
+  deflected(amount: number, now: number) {
+    this.exhaust(amount, now);
+    if (this.isBoss && now >= this.guardBrokenUntil) this.stagger(now, 300);
+  }
+  stagger(now: number, duration: number) {
+    this.hurtUntil = Math.max(this.hurtUntil, now + duration); this.lastStagger = now;
+    this.action = null; this.chargeStarted = null; this.guard = false;
   }
   receive(hit: IncomingHit, now: number): DefenseOutcome {
     if (this.health <= 0 || now < this.immuneUntil) return {result: 'immune', damage: 0, attackerPosture: 0};
@@ -138,7 +151,7 @@ export class Combatant {
     if (!hit.red && frontal && this.guard && now >= this.guardBrokenUntil) {
       if (this.stamina > 0 && now >= this.parryAt && now - this.parryAt < COMBAT.parryWindow) {
         this.stamina = Math.min(100, this.stamina + COMBAT.parryRestore);
-        this.ultimate = Math.min(100, this.ultimate + 7);
+        this.ultimate = Math.min(100, this.ultimate + 12); this.chakra = Math.min(100, this.chakra + COMBAT.parryChakra);
         // One press deflects one hit. A release and new deliberate press can deflect the next.
         this.parryAt = -Infinity; this.lastParryPress = now - COMBAT.parryRearm; this.deflectUntil = now + 240;
         return {result: 'parry', damage: 0, attackerPosture: Math.max(COMBAT.parryPosture, hit.posture)};
@@ -146,22 +159,28 @@ export class Combatant {
       const cost = clamp(hit.posture + 12, 20, 40);
       if (this.stamina >= cost) {this.spend(cost, now); return {result: 'block', damage: 0, attackerPosture: 3};}
       this.stamina = 0; this.lastSpend = now; this.guardBrokenUntil = now + COMBAT.guardBreak; this.guard = false;
-      this.takeDamage(hit.damage, now); return {result: 'guardbreak', damage: hit.damage, attackerPosture: 0};
+      const damage = this.takeDamage(hit.damage, now, hit.posture, hit.projectile); return {result: 'guardbreak', damage, attackerPosture: 0};
     }
-    this.takeDamage(hit.damage, now);
-    return {result: 'damage', damage: hit.damage, attackerPosture: 0};
+    const damage = this.takeDamage(hit.damage, now, hit.posture, hit.projectile);
+    return {result: 'damage', damage, attackerPosture: 0};
   }
-  takeDamage(amount: number, now: number) {
-    this.health = Math.max(0, this.health - amount); this.immuneUntil = now + (this.isBoss ? 95 : COMBAT.damageImmunity);
-    this.hurtUntil = now + (this.isBoss ? 0 : 200);
-    if (!this.isBoss) {this.action = null; this.chargeStarted = null; this.guard = false;}
+  takeDamage(amount: number, now: number, posture = 0, projectile = false) {
+    const damage = amount * (this.isBoss && now < this.guardBrokenUntil ? COMBAT.breakDamage : 1);
+    this.health = Math.max(0, this.health - damage); this.damagedAt = now;
+    this.immuneUntil = now + (this.isBoss ? 95 : COMBAT.damageImmunity);
+    // Committed boss attacks have armor. A parry or depleted guard interrupts them;
+    // ordinary melee can stagger a recovery, with a rearm gap to prevent stun locks.
+    const committed = this.action?.definition.events.some(e => e.at > now - this.action!.started && e.kind !== 'effect');
+    if (!this.isBoss) this.stagger(now, 320);
+    else if (!projectile && !committed && now - this.lastStagger >= 700 && now >= this.guardBrokenUntil) this.stagger(now, posture >= 30 ? 420 : 260);
+    return damage;
   }
   bufferMelee(now: number) {this.meleeBufferedAt = now;}
   consumeMelee(now: number) {
     if (now - this.meleeBufferedAt > COMBAT.inputBuffer || !this.canAct(now)) return false;
     const index = this.grounded ? (now <= this.comboExpires ? this.combo % 3 + 1 : 1) : 0;
     if (!this.start(index ? UNIVERSAL[`light${index}`] : UNIVERSAL.aerial, now)) return false;
-    this.combo = index; this.comboExpires = now + 850; this.meleeBufferedAt = -Infinity; return true;
+    this.combo = index; this.comboExpires = now + 1150; this.meleeBufferedAt = -Infinity; return true;
   }
   beginCharge(now: number) {if (!this.canAct(now) || this.guard || this.stamina < 18) return false; this.chargeStarted = now; return true;}
   releaseCharge(now: number) {

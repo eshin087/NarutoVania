@@ -1,0 +1,570 @@
+{
+  "width": 1536,
+  "height": 1536,
+  "columns": 6,
+  "rows": 4,
+  "cell": [
+    256,
+    384
+  ],
+  "foot": [
+    128,
+    307
+  ],
+  "background": "transparent",
+  "scale": 1.0,
+  "frames": [
+    {
+      "index": 0,
+      "animation": "palm_kunai_strike",
+      "frame": 0,
+      "rect": [
+        0,
+        0,
+        256,
+        384
+      ],
+      "sourceRect": [
+        48,
+        81,
+        182,
+        312
+      ],
+      "contentRect": [
+        61,
+        76,
+        134,
+        231
+      ]
+    },
+    {
+      "index": 1,
+      "animation": "palm_kunai_strike",
+      "frame": 1,
+      "rect": [
+        256,
+        0,
+        256,
+        384
+      ],
+      "sourceRect": [
+        252,
+        76,
+        400,
+        313
+      ],
+      "contentRect": [
+        54,
+        70,
+        148,
+        237
+      ]
+    },
+    {
+      "index": 2,
+      "animation": "palm_kunai_strike",
+      "frame": 2,
+      "rect": [
+        512,
+        0,
+        256,
+        384
+      ],
+      "sourceRect": [
+        459,
+        86,
+        650,
+        313
+      ],
+      "contentRect": [
+        32,
+        80,
+        191,
+        227
+      ]
+    },
+    {
+      "index": 3,
+      "animation": "palm_kunai_strike",
+      "frame": 3,
+      "rect": [
+        768,
+        0,
+        256,
+        384
+      ],
+      "sourceRect": [
+        667,
+        84,
+        878,
+        313
+      ],
+      "contentRect": [
+        22,
+        78,
+        211,
+        229
+      ]
+    },
+    {
+      "index": 4,
+      "animation": "palm_kunai_strike",
+      "frame": 4,
+      "rect": [
+        1024,
+        0,
+        256,
+        384
+      ],
+      "sourceRect": [
+        892,
+        82,
+        1025,
+        313
+      ],
+      "contentRect": [
+        61,
+        76,
+        133,
+        231
+      ]
+    },
+    {
+      "index": 5,
+      "animation": "palm_kunai_strike",
+      "frame": 5,
+      "rect": [
+        1280,
+        0,
+        256,
+        384
+      ],
+      "sourceRect": [
+        1085,
+        80,
+        1204,
+        313
+      ],
+      "contentRect": [
+        68,
+        74,
+        119,
+        233
+      ]
+    },
+    {
+      "index": 6,
+      "animation": "high_side_kick",
+      "frame": 0,
+      "rect": [
+        0,
+        384,
+        256,
+        384
+      ],
+      "sourceRect": [
+        46,
+        399,
+        181,
+        625
+      ],
+      "contentRect": [
+        60,
+        81,
+        135,
+        226
+      ]
+    },
+    {
+      "index": 7,
+      "animation": "high_side_kick",
+      "frame": 1,
+      "rect": [
+        256,
+        384,
+        256,
+        384
+      ],
+      "sourceRect": [
+        250,
+        373,
+        360,
+        626
+      ],
+      "contentRect": [
+        73,
+        54,
+        110,
+        253
+      ]
+    },
+    {
+      "index": 8,
+      "animation": "high_side_kick",
+      "frame": 2,
+      "rect": [
+        512,
+        384,
+        256,
+        384
+      ],
+      "sourceRect": [
+        442,
+        385,
+        632,
+        625
+      ],
+      "contentRect": [
+        33,
+        67,
+        190,
+        240
+      ]
+    },
+    {
+      "index": 9,
+      "animation": "high_side_kick",
+      "frame": 3,
+      "rect": [
+        768,
+        384,
+        256,
+        384
+      ],
+      "sourceRect": [
+        679,
+        384,
+        888,
+        625
+      ],
+      "contentRect": [
+        23,
+        66,
+        209,
+        241
+      ]
+    },
+    {
+      "index": 10,
+      "animation": "high_side_kick",
+      "frame": 4,
+      "rect": [
+        1024,
+        384,
+        256,
+        384
+      ],
+      "sourceRect": [
+        922,
+        391,
+        1012,
+        625
+      ],
+      "contentRect": [
+        83,
+        73,
+        90,
+        234
+      ]
+    },
+    {
+      "index": 11,
+      "animation": "high_side_kick",
+      "frame": 5,
+      "rect": [
+        1280,
+        384,
+        256,
+        384
+      ],
+      "sourceRect": [
+        1085,
+        395,
+        1204,
+        627
+      ],
+      "contentRect": [
+        68,
+        75,
+        119,
+        232
+      ]
+    },
+    {
+      "index": 12,
+      "animation": "low_sweep_finisher",
+      "frame": 0,
+      "rect": [
+        0,
+        768,
+        256,
+        384
+      ],
+      "sourceRect": [
+        43,
+        723,
+        185,
+        881
+      ],
+      "contentRect": [
+        57,
+        149,
+        142,
+        158
+      ]
+    },
+    {
+      "index": 13,
+      "animation": "low_sweep_finisher",
+      "frame": 1,
+      "rect": [
+        256,
+        768,
+        256,
+        384
+      ],
+      "sourceRect": [
+        235,
+        724,
+        375,
+        880
+      ],
+      "contentRect": [
+        58,
+        151,
+        140,
+        156
+      ]
+    },
+    {
+      "index": 14,
+      "animation": "low_sweep_finisher",
+      "frame": 2,
+      "rect": [
+        512,
+        768,
+        256,
+        384
+      ],
+      "sourceRect": [
+        410,
+        731,
+        627,
+        876
+      ],
+      "contentRect": [
+        19,
+        162,
+        217,
+        145
+      ]
+    },
+    {
+      "index": 15,
+      "animation": "low_sweep_finisher",
+      "frame": 3,
+      "rect": [
+        768,
+        768,
+        256,
+        384
+      ],
+      "sourceRect": [
+        651,
+        734,
+        885,
+        876
+      ],
+      "contentRect": [
+        11,
+        165,
+        234,
+        142
+      ]
+    },
+    {
+      "index": 16,
+      "animation": "low_sweep_finisher",
+      "frame": 4,
+      "rect": [
+        1024,
+        768,
+        256,
+        384
+      ],
+      "sourceRect": [
+        919,
+        731,
+        1043,
+        876
+      ],
+      "contentRect": [
+        66,
+        162,
+        124,
+        145
+      ]
+    },
+    {
+      "index": 17,
+      "animation": "low_sweep_finisher",
+      "frame": 5,
+      "rect": [
+        1280,
+        768,
+        256,
+        384
+      ],
+      "sourceRect": [
+        1093,
+        716,
+        1194,
+        875
+      ],
+      "contentRect": [
+        77,
+        148,
+        101,
+        159
+      ]
+    },
+    {
+      "index": 18,
+      "animation": "heavy_rising_kick",
+      "frame": 0,
+      "rect": [
+        0,
+        1152,
+        256,
+        384
+      ],
+      "sourceRect": [
+        42,
+        1035,
+        176,
+        1191
+      ],
+      "contentRect": [
+        61,
+        151,
+        134,
+        156
+      ]
+    },
+    {
+      "index": 19,
+      "animation": "heavy_rising_kick",
+      "frame": 1,
+      "rect": [
+        256,
+        1152,
+        256,
+        384
+      ],
+      "sourceRect": [
+        265,
+        954,
+        373,
+        1200
+      ],
+      "contentRect": [
+        74,
+        61,
+        108,
+        246
+      ]
+    },
+    {
+      "index": 20,
+      "animation": "heavy_rising_kick",
+      "frame": 2,
+      "rect": [
+        512,
+        1152,
+        256,
+        384
+      ],
+      "sourceRect": [
+        445,
+        955,
+        620,
+        1200
+      ],
+      "contentRect": [
+        40,
+        62,
+        175,
+        245
+      ]
+    },
+    {
+      "index": 21,
+      "animation": "heavy_rising_kick",
+      "frame": 3,
+      "rect": [
+        768,
+        1152,
+        256,
+        384
+      ],
+      "sourceRect": [
+        672,
+        910,
+        799,
+        1200
+      ],
+      "contentRect": [
+        64,
+        17,
+        127,
+        290
+      ]
+    },
+    {
+      "index": 22,
+      "animation": "heavy_rising_kick",
+      "frame": 4,
+      "rect": [
+        1024,
+        1152,
+        256,
+        384
+      ],
+      "sourceRect": [
+        900,
+        960,
+        994,
+        1201
+      ],
+      "contentRect": [
+        81,
+        66,
+        94,
+        241
+      ]
+    },
+    {
+      "index": 23,
+      "animation": "heavy_rising_kick",
+      "frame": 5,
+      "rect": [
+        1280,
+        1152,
+        256,
+        384
+      ],
+      "sourceRect": [
+        1084,
+        972,
+        1206,
+        1202
+      ],
+      "contentRect": [
+        67,
+        77,
+        122,
+        230
+      ]
+    }
+  ]
+}
