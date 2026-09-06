@@ -20,7 +20,7 @@ export function registerBossTools(inputs: BattleInput, scene: () => BossGameScen
   add({name: 'retry_checkpoint', description: 'After defeat, retry the current story phase with starting resources and skip the viewed introduction.', inputSchema: empty, execute: () => {
     if (bridge.get().screen !== 'dead') return result({error: 'Retry is available after defeat.'}); bridge.command('retry'); return result(status());
   }});
-  add({name:'advance_cinematic',description:'Continue the current held manga panel through the same Continue action as the menu.',inputSchema:empty,execute:()=>{bridge.command('advance');return result(status());}});
+  add({name:'advance_cinematic',description:'Compatibility action: story scenes now advance automatically; returns the current status.',inputSchema:empty,execute:()=>{bridge.command('advance');return result(status());}});
   add({name: 'skip_cinematic', description: 'Skip only the current scene and enter its next story beat, exactly like Skip scene.', inputSchema: empty, execute: () => {
     if (bridge.get().screen !== 'intro') return result({error: 'There is no active cinematic.'}); bridge.command('skip'); return result(status());
   }});

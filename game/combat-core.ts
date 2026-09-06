@@ -70,6 +70,7 @@ export type DefenseResult = 'immune' | 'parry' | 'block' | 'guardbreak' | 'damag
 export interface DefenseOutcome {result: DefenseResult; damage: number; attackerPosture: number;}
 
 export class Combatant {
+  choreography=0; comboPresentations=0;
   health: number; stamina = 100; chakra = 100; ultimate = 0;
   x = 0; y = 0; facing: Facing = 1; grounded = true; airDashUsed = false;
   guard = false; guardBrokenUntil = 0; immuneUntil = 0; hurtUntil = 0;
@@ -97,6 +98,7 @@ export class Combatant {
     if (definition.chakra) this.lastChakraSpend = now;
     this.guard = false; this.chargeStarted = null;
     if (definition.action === 'airdash') this.airDashUsed = true;
+    if(definition.action==='light1'||definition.action==='boss')this.choreography=this.comboPresentations++%2;
     this.action = {definition, started: now, serial: ++this.serial, emitted: new Set(), charge, facing: this.facing};
     this.hitTargets.clear();
     if (definition.invulnerable) this.immuneUntil = Math.max(this.immuneUntil, now + definition.invulnerable);

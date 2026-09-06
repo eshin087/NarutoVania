@@ -1,0 +1,5398 @@
+{
+  "assets": [
+    {
+      "name": "teamwork",
+      "columns": 6,
+      "rows": 4,
+      "width": 2304,
+      "height": 1536,
+      "transparentFraction": 0.9095023826316551,
+      "frames": [
+        {
+          "index": 0,
+          "row": 0,
+          "column": 0,
+          "rect": [
+            0,
+            0,
+            384,
+            384
+          ],
+          "inkBounds": [
+            145,
+            125,
+            277,
+            363
+          ],
+          "lowestInkAnchor": [
+            164,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            362
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            0,
+            0,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            81,
+            19,
+            213,
+            257
+          ],
+          "sourceToCellTranslation": [
+            64,
+            106
+          ]
+        },
+        {
+          "index": 1,
+          "row": 0,
+          "column": 1,
+          "rect": [
+            384,
+            0,
+            384,
+            384
+          ],
+          "inkBounds": [
+            136,
+            173,
+            263,
+            361
+          ],
+          "lowestInkAnchor": [
+            160,
+            361
+          ],
+          "rootAnchor": [
+            192,
+            360
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            256,
+            0,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            328,
+            67,
+            455,
+            255
+          ],
+          "sourceToCellTranslation": [
+            -192,
+            106
+          ]
+        },
+        {
+          "index": 2,
+          "row": 0,
+          "column": 2,
+          "rect": [
+            768,
+            0,
+            384,
+            384
+          ],
+          "inkBounds": [
+            131,
+            222,
+            258,
+            362
+          ],
+          "lowestInkAnchor": [
+            203,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            361
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            512,
+            0,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            579,
+            116,
+            706,
+            256
+          ],
+          "sourceToCellTranslation": [
+            -448,
+            106
+          ]
+        },
+        {
+          "index": 3,
+          "row": 0,
+          "column": 3,
+          "rect": [
+            1152,
+            0,
+            384,
+            384
+          ],
+          "inkBounds": [
+            122,
+            165,
+            304,
+            362
+          ],
+          "lowestInkAnchor": [
+            202,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            361
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            768,
+            0,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            826,
+            59,
+            1008,
+            256
+          ],
+          "sourceToCellTranslation": [
+            -704,
+            106
+          ]
+        },
+        {
+          "index": 4,
+          "row": 0,
+          "column": 4,
+          "rect": [
+            1536,
+            0,
+            384,
+            384
+          ],
+          "inkBounds": [
+            107,
+            166,
+            285,
+            361
+          ],
+          "lowestInkAnchor": [
+            190,
+            361
+          ],
+          "rootAnchor": [
+            192,
+            360
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1024,
+            0,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            1067,
+            60,
+            1245,
+            255
+          ],
+          "sourceToCellTranslation": [
+            -960,
+            106
+          ]
+        },
+        {
+          "index": 5,
+          "row": 0,
+          "column": 5,
+          "rect": [
+            1920,
+            0,
+            384,
+            384
+          ],
+          "inkBounds": [
+            106,
+            233,
+            238,
+            359
+          ],
+          "lowestInkAnchor": [
+            168,
+            359
+          ],
+          "rootAnchor": [
+            192,
+            358
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1280,
+            0,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            1322,
+            127,
+            1454,
+            253
+          ],
+          "sourceToCellTranslation": [
+            -1216,
+            106
+          ]
+        },
+        {
+          "index": 6,
+          "row": 1,
+          "column": 0,
+          "rect": [
+            0,
+            384,
+            384,
+            384
+          ],
+          "inkBounds": [
+            129,
+            141,
+            293,
+            356
+          ],
+          "lowestInkAnchor": [
+            144,
+            356
+          ],
+          "rootAnchor": [
+            192,
+            355
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            0,
+            256,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            65,
+            291,
+            229,
+            506
+          ],
+          "sourceToCellTranslation": [
+            64,
+            -150
+          ]
+        },
+        {
+          "index": 7,
+          "row": 1,
+          "column": 1,
+          "rect": [
+            384,
+            384,
+            384,
+            384
+          ],
+          "inkBounds": [
+            108,
+            148,
+            246,
+            355
+          ],
+          "lowestInkAnchor": [
+            140,
+            355
+          ],
+          "rootAnchor": [
+            192,
+            354
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            256,
+            256,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            300,
+            298,
+            438,
+            505
+          ],
+          "sourceToCellTranslation": [
+            -192,
+            -150
+          ]
+        },
+        {
+          "index": 8,
+          "row": 1,
+          "column": 2,
+          "rect": [
+            768,
+            384,
+            384,
+            384
+          ],
+          "inkBounds": [
+            100,
+            156,
+            230,
+            357
+          ],
+          "lowestInkAnchor": [
+            119,
+            357
+          ],
+          "rootAnchor": [
+            192,
+            356
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            512,
+            256,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            548,
+            306,
+            678,
+            507
+          ],
+          "sourceToCellTranslation": [
+            -448,
+            -150
+          ]
+        },
+        {
+          "index": 9,
+          "row": 1,
+          "column": 3,
+          "rect": [
+            1152,
+            384,
+            384,
+            384
+          ],
+          "inkBounds": [
+            73,
+            156,
+            276,
+            355
+          ],
+          "lowestInkAnchor": [
+            274,
+            356
+          ],
+          "rootAnchor": [
+            192,
+            354
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            768,
+            256,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            777,
+            306,
+            980,
+            505
+          ],
+          "sourceToCellTranslation": [
+            -704,
+            -150
+          ]
+        },
+        {
+          "index": 10,
+          "row": 1,
+          "column": 4,
+          "rect": [
+            1536,
+            384,
+            384,
+            384
+          ],
+          "inkBounds": [
+            15,
+            165,
+            324,
+            356
+          ],
+          "lowestInkAnchor": [
+            153,
+            352
+          ],
+          "rootAnchor": [
+            192,
+            355
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1024,
+            256,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            975,
+            315,
+            1284,
+            506
+          ],
+          "sourceToCellTranslation": [
+            -960,
+            -150
+          ]
+        },
+        {
+          "index": 11,
+          "row": 1,
+          "column": 5,
+          "rect": [
+            1920,
+            384,
+            384,
+            384
+          ],
+          "inkBounds": [
+            104,
+            154,
+            230,
+            354
+          ],
+          "lowestInkAnchor": [
+            197,
+            354
+          ],
+          "rootAnchor": [
+            192,
+            353
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1280,
+            256,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            1320,
+            304,
+            1446,
+            504
+          ],
+          "sourceToCellTranslation": [
+            -1216,
+            -150
+          ]
+        },
+        {
+          "index": 12,
+          "row": 2,
+          "column": 0,
+          "rect": [
+            0,
+            768,
+            384,
+            384
+          ],
+          "inkBounds": [
+            111,
+            138,
+            337,
+            341
+          ],
+          "lowestInkAnchor": [
+            137,
+            341
+          ],
+          "rootAnchor": [
+            192,
+            340
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            0,
+            512,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            47,
+            544,
+            273,
+            747
+          ],
+          "sourceToCellTranslation": [
+            64,
+            -406
+          ]
+        },
+        {
+          "index": 13,
+          "row": 2,
+          "column": 1,
+          "rect": [
+            384,
+            768,
+            384,
+            384
+          ],
+          "inkBounds": [
+            106,
+            138,
+            303,
+            341
+          ],
+          "lowestInkAnchor": [
+            133,
+            341
+          ],
+          "rootAnchor": [
+            192,
+            340
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            256,
+            512,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            298,
+            544,
+            495,
+            747
+          ],
+          "sourceToCellTranslation": [
+            -192,
+            -406
+          ]
+        },
+        {
+          "index": 14,
+          "row": 2,
+          "column": 2,
+          "rect": [
+            768,
+            768,
+            384,
+            384
+          ],
+          "inkBounds": [
+            114,
+            178,
+            257,
+            337
+          ],
+          "lowestInkAnchor": [
+            204,
+            337
+          ],
+          "rootAnchor": [
+            192,
+            336
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            512,
+            512,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            562,
+            584,
+            705,
+            743
+          ],
+          "sourceToCellTranslation": [
+            -448,
+            -406
+          ]
+        },
+        {
+          "index": 15,
+          "row": 2,
+          "column": 3,
+          "rect": [
+            1152,
+            768,
+            384,
+            384
+          ],
+          "inkBounds": [
+            170,
+            143,
+            307,
+            292
+          ],
+          "lowestInkAnchor": [
+            243,
+            292
+          ],
+          "rootAnchor": [
+            192,
+            291
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            768,
+            512,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            874,
+            549,
+            1011,
+            698
+          ],
+          "sourceToCellTranslation": [
+            -704,
+            -406
+          ]
+        },
+        {
+          "index": 16,
+          "row": 2,
+          "column": 4,
+          "rect": [
+            1536,
+            768,
+            384,
+            384
+          ],
+          "inkBounds": [
+            155,
+            136,
+            286,
+            286
+          ],
+          "lowestInkAnchor": [
+            224,
+            286
+          ],
+          "rootAnchor": [
+            192,
+            285
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1024,
+            512,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            1115,
+            542,
+            1246,
+            692
+          ],
+          "sourceToCellTranslation": [
+            -960,
+            -406
+          ]
+        },
+        {
+          "index": 17,
+          "row": 2,
+          "column": 5,
+          "rect": [
+            1920,
+            768,
+            384,
+            384
+          ],
+          "inkBounds": [
+            137,
+            196,
+            266,
+            341
+          ],
+          "lowestInkAnchor": [
+            223,
+            341
+          ],
+          "rootAnchor": [
+            192,
+            340
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1280,
+            512,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            1353,
+            602,
+            1482,
+            747
+          ],
+          "sourceToCellTranslation": [
+            -1216,
+            -406
+          ]
+        },
+        {
+          "index": 18,
+          "row": 3,
+          "column": 0,
+          "rect": [
+            0,
+            1152,
+            384,
+            384
+          ],
+          "inkBounds": [
+            105,
+            117,
+            307,
+            311
+          ],
+          "lowestInkAnchor": [
+            176,
+            311
+          ],
+          "rootAnchor": [
+            192,
+            310
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            0,
+            768,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            41,
+            779,
+            243,
+            973
+          ],
+          "sourceToCellTranslation": [
+            64,
+            -662
+          ]
+        },
+        {
+          "index": 19,
+          "row": 3,
+          "column": 1,
+          "rect": [
+            384,
+            1152,
+            384,
+            384
+          ],
+          "inkBounds": [
+            95,
+            124,
+            267,
+            312
+          ],
+          "lowestInkAnchor": [
+            104,
+            312
+          ],
+          "rootAnchor": [
+            192,
+            311
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            256,
+            768,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            287,
+            786,
+            459,
+            974
+          ],
+          "sourceToCellTranslation": [
+            -192,
+            -662
+          ]
+        },
+        {
+          "index": 20,
+          "row": 3,
+          "column": 2,
+          "rect": [
+            768,
+            1152,
+            384,
+            384
+          ],
+          "inkBounds": [
+            104,
+            132,
+            237,
+            316
+          ],
+          "lowestInkAnchor": [
+            115,
+            316
+          ],
+          "rootAnchor": [
+            192,
+            315
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            512,
+            768,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            552,
+            794,
+            685,
+            978
+          ],
+          "sourceToCellTranslation": [
+            -448,
+            -662
+          ]
+        },
+        {
+          "index": 21,
+          "row": 3,
+          "column": 3,
+          "rect": [
+            1152,
+            1152,
+            384,
+            384
+          ],
+          "inkBounds": [
+            54,
+            127,
+            338,
+            314
+          ],
+          "lowestInkAnchor": [
+            67,
+            314
+          ],
+          "rootAnchor": [
+            192,
+            313
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            768,
+            768,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            758,
+            789,
+            1042,
+            976
+          ],
+          "sourceToCellTranslation": [
+            -704,
+            -662
+          ]
+        },
+        {
+          "index": 22,
+          "row": 3,
+          "column": 4,
+          "rect": [
+            1536,
+            1152,
+            384,
+            384
+          ],
+          "inkBounds": [
+            101,
+            121,
+            245,
+            312
+          ],
+          "lowestInkAnchor": [
+            113,
+            312
+          ],
+          "rootAnchor": [
+            192,
+            311
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1024,
+            768,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            1061,
+            783,
+            1205,
+            974
+          ],
+          "sourceToCellTranslation": [
+            -960,
+            -662
+          ]
+        },
+        {
+          "index": 23,
+          "row": 3,
+          "column": 5,
+          "rect": [
+            1920,
+            1152,
+            384,
+            384
+          ],
+          "inkBounds": [
+            98,
+            171,
+            215,
+            309
+          ],
+          "lowestInkAnchor": [
+            171,
+            309
+          ],
+          "rootAnchor": [
+            192,
+            308
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1280,
+            768,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            1314,
+            833,
+            1431,
+            971
+          ],
+          "sourceToCellTranslation": [
+            -1216,
+            -662
+          ]
+        }
+      ],
+      "scalePolicy": "Use one scale per character across all poses; never normalize by individual inkBounds height.",
+      "sourceAlphaSheet": "C:\\Users\\eshin\\.codex\\visualizations\\2026\\09\\05\\01a0700e-9aab-7040-b123-d472c87e3925\\v14-cinema-art\\teamwork.png",
+      "cellWidth": 384,
+      "cellHeight": 384,
+      "normalized": true,
+      "normalization": "Full-image 8-connected alpha components assigned by centroid to source pose cells; source pixel scale unchanged; translated to padded root baseline. No cell crop used to extract characters.",
+      "normalizationValidation": {
+        "sourceNontransparentPixels": 320266,
+        "outputNontransparentPixels": 320266,
+        "pixelCountPreserved": true,
+        "allFramesPaddedAtLeastPx": 8,
+        "individualPoseScaling": false
+      },
+      "file": "teamwork.webp",
+      "bodyReferences": [
+        238,
+        218,
+        222,
+        238
+      ]
+    },
+    {
+      "name": "carry",
+      "columns": 4,
+      "rows": 4,
+      "width": 2048,
+      "height": 1536,
+      "transparentFraction": 0.8641112645467123,
+      "frames": [
+        {
+          "index": 0,
+          "row": 0,
+          "column": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "inkBounds": [
+            39,
+            158,
+            393,
+            360
+          ],
+          "lowestInkAnchor": [
+            228,
+            381
+          ],
+          "rootAnchor": [
+            300,
+            359
+          ],
+          "anchorMeaning": "Kakashi supporting foot/knee ground contact, manually estimated; never composite bbox center",
+          "sourceNominalRect": [
+            0,
+            0,
+            384,
+            256
+          ],
+          "sourceFullBounds": [
+            24,
+            33,
+            378,
+            235
+          ],
+          "sourceToCellTranslation": [
+            15,
+            125
+          ]
+        },
+        {
+          "index": 1,
+          "row": 0,
+          "column": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "inkBounds": [
+            84,
+            135,
+            424,
+            358
+          ],
+          "lowestInkAnchor": [
+            231,
+            381
+          ],
+          "rootAnchor": [
+            300,
+            357
+          ],
+          "anchorMeaning": "Kakashi supporting foot/knee ground contact, manually estimated; never composite bbox center",
+          "sourceNominalRect": [
+            384,
+            0,
+            384,
+            256
+          ],
+          "sourceFullBounds": [
+            418,
+            10,
+            758,
+            233
+          ],
+          "sourceToCellTranslation": [
+            -334,
+            125
+          ]
+        },
+        {
+          "index": 2,
+          "row": 0,
+          "column": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "inkBounds": [
+            182,
+            132,
+            496,
+            355
+          ],
+          "lowestInkAnchor": [
+            313,
+            378
+          ],
+          "rootAnchor": [
+            300,
+            354
+          ],
+          "anchorMeaning": "Kakashi supporting foot/knee ground contact, manually estimated; never composite bbox center",
+          "sourceNominalRect": [
+            768,
+            0,
+            384,
+            256
+          ],
+          "sourceFullBounds": [
+            817,
+            10,
+            1131,
+            233
+          ],
+          "sourceToCellTranslation": [
+            -635,
+            122
+          ]
+        },
+        {
+          "index": 3,
+          "row": 0,
+          "column": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "inkBounds": [
+            215,
+            126,
+            502,
+            350
+          ],
+          "lowestInkAnchor": [
+            323,
+            377
+          ],
+          "rootAnchor": [
+            300,
+            349
+          ],
+          "anchorMeaning": "Kakashi supporting foot/knee ground contact, manually estimated; never composite bbox center",
+          "sourceNominalRect": [
+            1152,
+            0,
+            384,
+            256
+          ],
+          "sourceFullBounds": [
+            1228,
+            5,
+            1515,
+            229
+          ],
+          "sourceToCellTranslation": [
+            -1013,
+            121
+          ]
+        },
+        {
+          "index": 4,
+          "row": 1,
+          "column": 0,
+          "rect": [
+            0,
+            384,
+            512,
+            384
+          ],
+          "inkBounds": [
+            194,
+            106,
+            461,
+            355
+          ],
+          "lowestInkAnchor": [
+            326,
+            355
+          ],
+          "rootAnchor": [
+            300,
+            354
+          ],
+          "anchorMeaning": "Kakashi supporting foot/knee ground contact, manually estimated; never composite bbox center",
+          "sourceNominalRect": [
+            0,
+            256,
+            384,
+            256
+          ],
+          "sourceFullBounds": [
+            97,
+            244,
+            364,
+            493
+          ],
+          "sourceToCellTranslation": [
+            97,
+            -138
+          ]
+        },
+        {
+          "index": 5,
+          "row": 1,
+          "column": 1,
+          "rect": [
+            512,
+            384,
+            512,
+            384
+          ],
+          "inkBounds": [
+            175,
+            84,
+            433,
+            353
+          ],
+          "lowestInkAnchor": [
+            297,
+            361
+          ],
+          "rootAnchor": [
+            300,
+            352
+          ],
+          "anchorMeaning": "Kakashi supporting foot/knee ground contact, manually estimated; never composite bbox center",
+          "sourceNominalRect": [
+            384,
+            256,
+            384,
+            256
+          ],
+          "sourceFullBounds": [
+            464,
+            235,
+            722,
+            504
+          ],
+          "sourceToCellTranslation": [
+            -289,
+            -151
+          ]
+        },
+        {
+          "index": 6,
+          "row": 1,
+          "column": 2,
+          "rect": [
+            1024,
+            384,
+            512,
+            384
+          ],
+          "inkBounds": [
+            149,
+            103,
+            362,
+            356
+          ],
+          "lowestInkAnchor": [
+            250,
+            366
+          ],
+          "rootAnchor": [
+            300,
+            355
+          ],
+          "anchorMeaning": "Kakashi supporting foot/knee ground contact, manually estimated; never composite bbox center",
+          "sourceNominalRect": [
+            768,
+            256,
+            384,
+            256
+          ],
+          "sourceFullBounds": [
+            851,
+            249,
+            1064,
+            502
+          ],
+          "sourceToCellTranslation": [
+            -702,
+            -146
+          ]
+        },
+        {
+          "index": 7,
+          "row": 1,
+          "column": 3,
+          "rect": [
+            1536,
+            384,
+            512,
+            384
+          ],
+          "inkBounds": [
+            157,
+            102,
+            384,
+            355
+          ],
+          "lowestInkAnchor": [
+            262,
+            365
+          ],
+          "rootAnchor": [
+            300,
+            354
+          ],
+          "anchorMeaning": "Kakashi supporting foot/knee ground contact, manually estimated; never composite bbox center",
+          "sourceNominalRect": [
+            1152,
+            256,
+            384,
+            256
+          ],
+          "sourceFullBounds": [
+            1244,
+            249,
+            1471,
+            502
+          ],
+          "sourceToCellTranslation": [
+            -1087,
+            -147
+          ]
+        },
+        {
+          "index": 8,
+          "row": 2,
+          "column": 0,
+          "rect": [
+            0,
+            768,
+            512,
+            384
+          ],
+          "inkBounds": [
+            206,
+            110,
+            434,
+            360
+          ],
+          "lowestInkAnchor": [
+            240,
+            360
+          ],
+          "rootAnchor": [
+            300,
+            359
+          ],
+          "anchorMeaning": "Kakashi supporting foot/knee ground contact, manually estimated; never composite bbox center",
+          "sourceNominalRect": [
+            0,
+            512,
+            384,
+            256
+          ],
+          "sourceFullBounds": [
+            108,
+            517,
+            336,
+            767
+          ],
+          "sourceToCellTranslation": [
+            98,
+            -407
+          ]
+        },
+        {
+          "index": 9,
+          "row": 2,
+          "column": 1,
+          "rect": [
+            512,
+            768,
+            512,
+            384
+          ],
+          "inkBounds": [
+            204,
+            103,
+            428,
+            360
+          ],
+          "lowestInkAnchor": [
+            241,
+            360
+          ],
+          "rootAnchor": [
+            300,
+            359
+          ],
+          "anchorMeaning": "Kakashi supporting foot/knee ground contact, manually estimated; never composite bbox center",
+          "sourceNominalRect": [
+            384,
+            512,
+            384,
+            256
+          ],
+          "sourceFullBounds": [
+            478,
+            510,
+            702,
+            767
+          ],
+          "sourceToCellTranslation": [
+            -274,
+            -407
+          ]
+        },
+        {
+          "index": 10,
+          "row": 2,
+          "column": 2,
+          "rect": [
+            1024,
+            768,
+            512,
+            384
+          ],
+          "inkBounds": [
+            151,
+            102,
+            377,
+            360
+          ],
+          "lowestInkAnchor": [
+            274,
+            360
+          ],
+          "rootAnchor": [
+            300,
+            359
+          ],
+          "anchorMeaning": "Kakashi supporting foot/knee ground contact, manually estimated; never composite bbox center",
+          "sourceNominalRect": [
+            768,
+            512,
+            384,
+            256
+          ],
+          "sourceFullBounds": [
+            853,
+            508,
+            1079,
+            766
+          ],
+          "sourceToCellTranslation": [
+            -702,
+            -406
+          ]
+        },
+        {
+          "index": 11,
+          "row": 2,
+          "column": 3,
+          "rect": [
+            1536,
+            768,
+            512,
+            384
+          ],
+          "inkBounds": [
+            168,
+            106,
+            395,
+            367
+          ],
+          "lowestInkAnchor": [
+            200,
+            365
+          ],
+          "rootAnchor": [
+            300,
+            366
+          ],
+          "anchorMeaning": "Kakashi supporting foot/knee ground contact, manually estimated; never composite bbox center",
+          "sourceNominalRect": [
+            1152,
+            512,
+            384,
+            256
+          ],
+          "sourceFullBounds": [
+            1245,
+            509,
+            1472,
+            770
+          ],
+          "sourceToCellTranslation": [
+            -1077,
+            -403
+          ]
+        },
+        {
+          "index": 12,
+          "row": 3,
+          "column": 0,
+          "rect": [
+            0,
+            1152,
+            512,
+            384
+          ],
+          "inkBounds": [
+            219,
+            122,
+            462,
+            349
+          ],
+          "lowestInkAnchor": [
+            278,
+            349
+          ],
+          "rootAnchor": [
+            300,
+            348
+          ],
+          "anchorMeaning": "Kakashi supporting foot/knee ground contact, manually estimated; never composite bbox center",
+          "sourceNominalRect": [
+            0,
+            768,
+            384,
+            256
+          ],
+          "sourceFullBounds": [
+            96,
+            777,
+            339,
+            1004
+          ],
+          "sourceToCellTranslation": [
+            123,
+            -655
+          ]
+        },
+        {
+          "index": 13,
+          "row": 3,
+          "column": 1,
+          "rect": [
+            512,
+            1152,
+            512,
+            384
+          ],
+          "inkBounds": [
+            213,
+            143,
+            503,
+            353
+          ],
+          "lowestInkAnchor": [
+            364,
+            353
+          ],
+          "rootAnchor": [
+            300,
+            352
+          ],
+          "anchorMeaning": "Kakashi supporting foot/knee ground contact, manually estimated; never composite bbox center",
+          "sourceNominalRect": [
+            384,
+            768,
+            384,
+            256
+          ],
+          "sourceFullBounds": [
+            457,
+            788,
+            747,
+            998
+          ],
+          "sourceToCellTranslation": [
+            -244,
+            -645
+          ]
+        },
+        {
+          "index": 14,
+          "row": 3,
+          "column": 2,
+          "rect": [
+            1024,
+            1152,
+            512,
+            384
+          ],
+          "inkBounds": [
+            113,
+            148,
+            478,
+            351
+          ],
+          "lowestInkAnchor": [
+            295,
+            351
+          ],
+          "rootAnchor": [
+            300,
+            350
+          ],
+          "anchorMeaning": "Kakashi supporting foot/knee ground contact, manually estimated; never composite bbox center",
+          "sourceNominalRect": [
+            768,
+            768,
+            384,
+            256
+          ],
+          "sourceFullBounds": [
+            785,
+            795,
+            1150,
+            998
+          ],
+          "sourceToCellTranslation": [
+            -672,
+            -647
+          ]
+        },
+        {
+          "index": 15,
+          "row": 3,
+          "column": 3,
+          "rect": [
+            1536,
+            1152,
+            512,
+            384
+          ],
+          "inkBounds": [
+            114,
+            129,
+            462,
+            355
+          ],
+          "lowestInkAnchor": [
+            287,
+            355
+          ],
+          "rootAnchor": [
+            300,
+            354
+          ],
+          "anchorMeaning": "Kakashi supporting foot/knee ground contact, manually estimated; never composite bbox center",
+          "sourceNominalRect": [
+            1152,
+            768,
+            384,
+            256
+          ],
+          "sourceFullBounds": [
+            1169,
+            776,
+            1517,
+            1002
+          ],
+          "sourceToCellTranslation": [
+            -1055,
+            -647
+          ]
+        }
+      ],
+      "scalePolicy": "Use one scale per character across all poses; never normalize by individual inkBounds height.",
+      "standingReference": {
+        "character": "Kakashi",
+        "frame": 5,
+        "sourceBodyHeightPx": 247,
+        "targetBodyHeightPx": 157,
+        "scale": 0.6356275303643725,
+        "meaning": "Kakashi crown-to-foot standing height only; excludes carried Zabuza composite width and height"
+      },
+      "sourceAlphaSheet": "C:\\Users\\eshin\\.codex\\visualizations\\2026\\09\\05\\01a0700e-9aab-7040-b123-d472c87e3925\\v14-cinema-art\\carry.png",
+      "cellWidth": 512,
+      "cellHeight": 384,
+      "normalized": true,
+      "normalization": "Full-image 8-connected alpha components assigned by centroid to source pose cells; source pixel scale unchanged; translated to padded root baseline. No cell crop used to extract characters.",
+      "normalizationValidation": {
+        "sourceNontransparentPixels": 427469,
+        "outputNontransparentPixels": 427469,
+        "pixelCountPreserved": true,
+        "allFramesPaddedAtLeastPx": 8,
+        "individualPoseScaling": false
+      },
+      "file": "carry.webp"
+    },
+    {
+      "name": "reactions",
+      "columns": 6,
+      "rows": 4,
+      "width": 2304,
+      "height": 1536,
+      "transparentFraction": 0.8952857123480903,
+      "frames": [
+        {
+          "index": 0,
+          "row": 0,
+          "column": 0,
+          "rect": [
+            0,
+            0,
+            384,
+            384
+          ],
+          "inkBounds": [
+            97,
+            131,
+            296,
+            346
+          ],
+          "lowestInkAnchor": [
+            240,
+            346
+          ],
+          "rootAnchor": [
+            192,
+            345
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            0,
+            0,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            33,
+            25,
+            232,
+            240
+          ],
+          "sourceToCellTranslation": [
+            64,
+            106
+          ]
+        },
+        {
+          "index": 1,
+          "row": 0,
+          "column": 1,
+          "rect": [
+            384,
+            0,
+            384,
+            384
+          ],
+          "inkBounds": [
+            103,
+            132,
+            298,
+            348
+          ],
+          "lowestInkAnchor": [
+            172,
+            348
+          ],
+          "rootAnchor": [
+            192,
+            347
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            256,
+            0,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            295,
+            26,
+            490,
+            242
+          ],
+          "sourceToCellTranslation": [
+            -192,
+            106
+          ]
+        },
+        {
+          "index": 2,
+          "row": 0,
+          "column": 2,
+          "rect": [
+            768,
+            0,
+            384,
+            384
+          ],
+          "inkBounds": [
+            104,
+            143,
+            285,
+            347
+          ],
+          "lowestInkAnchor": [
+            136,
+            347
+          ],
+          "rootAnchor": [
+            192,
+            346
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            512,
+            0,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            552,
+            37,
+            733,
+            241
+          ],
+          "sourceToCellTranslation": [
+            -448,
+            106
+          ]
+        },
+        {
+          "index": 3,
+          "row": 0,
+          "column": 3,
+          "rect": [
+            1152,
+            0,
+            384,
+            384
+          ],
+          "inkBounds": [
+            109,
+            175,
+            234,
+            341
+          ],
+          "lowestInkAnchor": [
+            220,
+            341
+          ],
+          "rootAnchor": [
+            192,
+            340
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            768,
+            0,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            813,
+            69,
+            938,
+            235
+          ],
+          "sourceToCellTranslation": [
+            -704,
+            106
+          ]
+        },
+        {
+          "index": 4,
+          "row": 0,
+          "column": 4,
+          "rect": [
+            1536,
+            0,
+            384,
+            384
+          ],
+          "inkBounds": [
+            102,
+            197,
+            243,
+            347
+          ],
+          "lowestInkAnchor": [
+            190,
+            347
+          ],
+          "rootAnchor": [
+            192,
+            346
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1024,
+            0,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            1062,
+            91,
+            1203,
+            241
+          ],
+          "sourceToCellTranslation": [
+            -960,
+            106
+          ]
+        },
+        {
+          "index": 5,
+          "row": 0,
+          "column": 5,
+          "rect": [
+            1920,
+            0,
+            384,
+            384
+          ],
+          "inkBounds": [
+            65,
+            270,
+            297,
+            344
+          ],
+          "lowestInkAnchor": [
+            219,
+            344
+          ],
+          "rootAnchor": [
+            192,
+            343
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1280,
+            0,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            1281,
+            164,
+            1513,
+            238
+          ],
+          "sourceToCellTranslation": [
+            -1216,
+            106
+          ]
+        },
+        {
+          "index": 6,
+          "row": 1,
+          "column": 0,
+          "rect": [
+            0,
+            384,
+            384,
+            384
+          ],
+          "inkBounds": [
+            116,
+            203,
+            259,
+            332
+          ],
+          "lowestInkAnchor": [
+            176,
+            332
+          ],
+          "rootAnchor": [
+            192,
+            331
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            0,
+            256,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            52,
+            353,
+            195,
+            482
+          ],
+          "sourceToCellTranslation": [
+            64,
+            -150
+          ]
+        },
+        {
+          "index": 7,
+          "row": 1,
+          "column": 1,
+          "rect": [
+            384,
+            384,
+            384,
+            384
+          ],
+          "inkBounds": [
+            117,
+            132,
+            230,
+            332
+          ],
+          "lowestInkAnchor": [
+            159,
+            332
+          ],
+          "rootAnchor": [
+            192,
+            331
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            256,
+            256,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            309,
+            282,
+            422,
+            482
+          ],
+          "sourceToCellTranslation": [
+            -192,
+            -150
+          ]
+        },
+        {
+          "index": 8,
+          "row": 1,
+          "column": 2,
+          "rect": [
+            768,
+            384,
+            384,
+            384
+          ],
+          "inkBounds": [
+            113,
+            130,
+            236,
+            334
+          ],
+          "lowestInkAnchor": [
+            212,
+            334
+          ],
+          "rootAnchor": [
+            192,
+            333
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            512,
+            256,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            561,
+            280,
+            684,
+            484
+          ],
+          "sourceToCellTranslation": [
+            -448,
+            -150
+          ]
+        },
+        {
+          "index": 9,
+          "row": 1,
+          "column": 3,
+          "rect": [
+            1152,
+            384,
+            384,
+            384
+          ],
+          "inkBounds": [
+            112,
+            138,
+            254,
+            338
+          ],
+          "lowestInkAnchor": [
+            235,
+            338
+          ],
+          "rootAnchor": [
+            192,
+            337
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            768,
+            256,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            816,
+            288,
+            958,
+            488
+          ],
+          "sourceToCellTranslation": [
+            -704,
+            -150
+          ]
+        },
+        {
+          "index": 10,
+          "row": 1,
+          "column": 4,
+          "rect": [
+            1536,
+            384,
+            384,
+            384
+          ],
+          "inkBounds": [
+            120,
+            113,
+            238,
+            344
+          ],
+          "lowestInkAnchor": [
+            142,
+            344
+          ],
+          "rootAnchor": [
+            192,
+            343
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1024,
+            256,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            1080,
+            263,
+            1198,
+            494
+          ],
+          "sourceToCellTranslation": [
+            -960,
+            -150
+          ]
+        },
+        {
+          "index": 11,
+          "row": 1,
+          "column": 5,
+          "rect": [
+            1920,
+            384,
+            384,
+            384
+          ],
+          "inkBounds": [
+            80,
+            165,
+            245,
+            346
+          ],
+          "lowestInkAnchor": [
+            148,
+            346
+          ],
+          "rootAnchor": [
+            192,
+            345
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1280,
+            256,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            1296,
+            315,
+            1461,
+            496
+          ],
+          "sourceToCellTranslation": [
+            -1216,
+            -150
+          ]
+        },
+        {
+          "index": 12,
+          "row": 2,
+          "column": 0,
+          "rect": [
+            0,
+            768,
+            384,
+            384
+          ],
+          "inkBounds": [
+            138,
+            117,
+            254,
+            316
+          ],
+          "lowestInkAnchor": [
+            193,
+            316
+          ],
+          "rootAnchor": [
+            192,
+            315
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            0,
+            512,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            74,
+            523,
+            190,
+            722
+          ],
+          "sourceToCellTranslation": [
+            64,
+            -406
+          ]
+        },
+        {
+          "index": 13,
+          "row": 2,
+          "column": 1,
+          "rect": [
+            384,
+            768,
+            384,
+            384
+          ],
+          "inkBounds": [
+            132,
+            117,
+            276,
+            317
+          ],
+          "lowestInkAnchor": [
+            187,
+            317
+          ],
+          "rootAnchor": [
+            192,
+            316
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            256,
+            512,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            324,
+            523,
+            468,
+            723
+          ],
+          "sourceToCellTranslation": [
+            -192,
+            -406
+          ]
+        },
+        {
+          "index": 14,
+          "row": 2,
+          "column": 2,
+          "rect": [
+            768,
+            768,
+            384,
+            384
+          ],
+          "inkBounds": [
+            113,
+            117,
+            246,
+            318
+          ],
+          "lowestInkAnchor": [
+            163,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            317
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            512,
+            512,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            561,
+            523,
+            694,
+            724
+          ],
+          "sourceToCellTranslation": [
+            -448,
+            -406
+          ]
+        },
+        {
+          "index": 15,
+          "row": 2,
+          "column": 3,
+          "rect": [
+            1152,
+            768,
+            384,
+            384
+          ],
+          "inkBounds": [
+            70,
+            138,
+            259,
+            316
+          ],
+          "lowestInkAnchor": [
+            81,
+            316
+          ],
+          "rootAnchor": [
+            192,
+            315
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            768,
+            512,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            774,
+            544,
+            963,
+            722
+          ],
+          "sourceToCellTranslation": [
+            -704,
+            -406
+          ]
+        },
+        {
+          "index": 16,
+          "row": 2,
+          "column": 4,
+          "rect": [
+            1536,
+            768,
+            384,
+            384
+          ],
+          "inkBounds": [
+            62,
+            117,
+            282,
+            321
+          ],
+          "lowestInkAnchor": [
+            269,
+            321
+          ],
+          "rootAnchor": [
+            192,
+            320
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1024,
+            512,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            1022,
+            523,
+            1242,
+            727
+          ],
+          "sourceToCellTranslation": [
+            -960,
+            -406
+          ]
+        },
+        {
+          "index": 17,
+          "row": 2,
+          "column": 5,
+          "rect": [
+            1920,
+            768,
+            384,
+            384
+          ],
+          "inkBounds": [
+            64,
+            232,
+            305,
+            312
+          ],
+          "lowestInkAnchor": [
+            167,
+            312
+          ],
+          "rootAnchor": [
+            192,
+            311
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1280,
+            512,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            1280,
+            638,
+            1521,
+            718
+          ],
+          "sourceToCellTranslation": [
+            -1216,
+            -406
+          ]
+        },
+        {
+          "index": 18,
+          "row": 3,
+          "column": 0,
+          "rect": [
+            0,
+            1152,
+            384,
+            384
+          ],
+          "inkBounds": [
+            96,
+            141,
+            277,
+            324
+          ],
+          "lowestInkAnchor": [
+            177,
+            324
+          ],
+          "rootAnchor": [
+            192,
+            323
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            0,
+            768,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            32,
+            803,
+            213,
+            986
+          ],
+          "sourceToCellTranslation": [
+            64,
+            -662
+          ]
+        },
+        {
+          "index": 19,
+          "row": 3,
+          "column": 1,
+          "rect": [
+            384,
+            1152,
+            384,
+            384
+          ],
+          "inkBounds": [
+            94,
+            106,
+            256,
+            313
+          ],
+          "lowestInkAnchor": [
+            108,
+            313
+          ],
+          "rootAnchor": [
+            192,
+            312
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            256,
+            768,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            286,
+            768,
+            448,
+            975
+          ],
+          "sourceToCellTranslation": [
+            -192,
+            -662
+          ]
+        },
+        {
+          "index": 20,
+          "row": 3,
+          "column": 2,
+          "rect": [
+            768,
+            1152,
+            384,
+            384
+          ],
+          "inkBounds": [
+            108,
+            78,
+            196,
+            337
+          ],
+          "lowestInkAnchor": [
+            132,
+            337
+          ],
+          "rootAnchor": [
+            192,
+            336
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            512,
+            768,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            556,
+            740,
+            644,
+            999
+          ],
+          "sourceToCellTranslation": [
+            -448,
+            -662
+          ]
+        },
+        {
+          "index": 21,
+          "row": 3,
+          "column": 3,
+          "rect": [
+            1152,
+            1152,
+            384,
+            384
+          ],
+          "inkBounds": [
+            96,
+            122,
+            269,
+            321
+          ],
+          "lowestInkAnchor": [
+            200,
+            321
+          ],
+          "rootAnchor": [
+            192,
+            320
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            768,
+            768,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            800,
+            784,
+            973,
+            983
+          ],
+          "sourceToCellTranslation": [
+            -704,
+            -662
+          ]
+        },
+        {
+          "index": 22,
+          "row": 3,
+          "column": 4,
+          "rect": [
+            1536,
+            1152,
+            384,
+            384
+          ],
+          "inkBounds": [
+            72,
+            207,
+            293,
+            325
+          ],
+          "lowestInkAnchor": [
+            283,
+            325
+          ],
+          "rootAnchor": [
+            192,
+            324
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1024,
+            768,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            1032,
+            869,
+            1253,
+            987
+          ],
+          "sourceToCellTranslation": [
+            -960,
+            -662
+          ]
+        },
+        {
+          "index": 23,
+          "row": 3,
+          "column": 5,
+          "rect": [
+            1920,
+            1152,
+            384,
+            384
+          ],
+          "inkBounds": [
+            62,
+            234,
+            304,
+            316
+          ],
+          "lowestInkAnchor": [
+            283,
+            316
+          ],
+          "rootAnchor": [
+            192,
+            315
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1280,
+            768,
+            256,
+            256
+          ],
+          "sourceFullBounds": [
+            1278,
+            896,
+            1520,
+            978
+          ],
+          "sourceToCellTranslation": [
+            -1216,
+            -662
+          ]
+        }
+      ],
+      "scalePolicy": "Use one scale per character across all poses; never normalize by individual inkBounds height.",
+      "sourceAlphaSheet": "C:\\Users\\eshin\\.codex\\visualizations\\2026\\09\\05\\01a0700e-9aab-7040-b123-d472c87e3925\\v14-cinema-art\\reactions.png",
+      "cellWidth": 384,
+      "cellHeight": 384,
+      "normalized": true,
+      "normalization": "Full-image 8-connected alpha components assigned by centroid to source pose cells; source pixel scale unchanged; translated to padded root baseline. No cell crop used to extract characters.",
+      "normalizationValidation": {
+        "sourceNontransparentPixels": 370578,
+        "outputNontransparentPixels": 370578,
+        "pixelCountPreserved": true,
+        "allFramesPaddedAtLeastPx": 8,
+        "individualPoseScaling": false
+      },
+      "file": "reactions.webp",
+      "bodyReferences": [
+        215,
+        226,
+        223,
+        232
+      ]
+    },
+    {
+      "name": "ultimate-a",
+      "columns": 6,
+      "rows": 5,
+      "width": 2304,
+      "height": 1920,
+      "transparentFraction": 0.9143556948061342,
+      "frames": [
+        {
+          "index": 0,
+          "row": 0,
+          "column": 0,
+          "rect": [
+            0,
+            0,
+            384,
+            384
+          ],
+          "inkBounds": [
+            101,
+            165,
+            268,
+            370
+          ],
+          "lowestInkAnchor": [
+            240,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            369
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            0,
+            0,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            37,
+            8,
+            204,
+            213
+          ],
+          "sourceToCellTranslation": [
+            64,
+            157
+          ]
+        },
+        {
+          "index": 1,
+          "row": 0,
+          "column": 1,
+          "rect": [
+            384,
+            0,
+            384,
+            384
+          ],
+          "inkBounds": [
+            103,
+            170,
+            266,
+            369
+          ],
+          "lowestInkAnchor": [
+            238,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            368
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            256,
+            0,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            295,
+            13,
+            458,
+            212
+          ],
+          "sourceToCellTranslation": [
+            -192,
+            157
+          ]
+        },
+        {
+          "index": 2,
+          "row": 0,
+          "column": 2,
+          "rect": [
+            768,
+            0,
+            384,
+            384
+          ],
+          "inkBounds": [
+            102,
+            248,
+            272,
+            369
+          ],
+          "lowestInkAnchor": [
+            196,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            368
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            512,
+            0,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            550,
+            91,
+            720,
+            212
+          ],
+          "sourceToCellTranslation": [
+            -448,
+            157
+          ]
+        },
+        {
+          "index": 3,
+          "row": 0,
+          "column": 3,
+          "rect": [
+            1152,
+            0,
+            384,
+            384
+          ],
+          "inkBounds": [
+            79,
+            205,
+            289,
+            369
+          ],
+          "lowestInkAnchor": [
+            196,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            368
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            768,
+            0,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            783,
+            48,
+            993,
+            212
+          ],
+          "sourceToCellTranslation": [
+            -704,
+            157
+          ]
+        },
+        {
+          "index": 4,
+          "row": 0,
+          "column": 4,
+          "rect": [
+            1536,
+            0,
+            384,
+            384
+          ],
+          "inkBounds": [
+            69,
+            218,
+            299,
+            370
+          ],
+          "lowestInkAnchor": [
+            86,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            369
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1024,
+            0,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            1029,
+            61,
+            1259,
+            213
+          ],
+          "sourceToCellTranslation": [
+            -960,
+            157
+          ]
+        },
+        {
+          "index": 5,
+          "row": 0,
+          "column": 5,
+          "rect": [
+            1920,
+            0,
+            384,
+            384
+          ],
+          "inkBounds": [
+            99,
+            165,
+            285,
+            372
+          ],
+          "lowestInkAnchor": [
+            257,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            371
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1280,
+            0,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            1315,
+            8,
+            1501,
+            215
+          ],
+          "sourceToCellTranslation": [
+            -1216,
+            157
+          ]
+        },
+        {
+          "index": 6,
+          "row": 1,
+          "column": 0,
+          "rect": [
+            0,
+            384,
+            384,
+            384
+          ],
+          "inkBounds": [
+            97,
+            168,
+            261,
+            364
+          ],
+          "lowestInkAnchor": [
+            108,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            363
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            0,
+            205,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            33,
+            216,
+            197,
+            412
+          ],
+          "sourceToCellTranslation": [
+            64,
+            -48
+          ]
+        },
+        {
+          "index": 7,
+          "row": 1,
+          "column": 1,
+          "rect": [
+            384,
+            384,
+            384,
+            384
+          ],
+          "inkBounds": [
+            91,
+            171,
+            268,
+            369
+          ],
+          "lowestInkAnchor": [
+            108,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            368
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            256,
+            205,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            283,
+            219,
+            460,
+            417
+          ],
+          "sourceToCellTranslation": [
+            -192,
+            -48
+          ]
+        },
+        {
+          "index": 8,
+          "row": 1,
+          "column": 2,
+          "rect": [
+            768,
+            384,
+            384,
+            384
+          ],
+          "inkBounds": [
+            80,
+            255,
+            264,
+            366
+          ],
+          "lowestInkAnchor": [
+            221,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            365
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            512,
+            205,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            528,
+            303,
+            712,
+            414
+          ],
+          "sourceToCellTranslation": [
+            -448,
+            -48
+          ]
+        },
+        {
+          "index": 9,
+          "row": 1,
+          "column": 3,
+          "rect": [
+            1152,
+            384,
+            384,
+            384
+          ],
+          "inkBounds": [
+            75,
+            189,
+            269,
+            366
+          ],
+          "lowestInkAnchor": [
+            91,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            365
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            768,
+            205,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            779,
+            237,
+            973,
+            414
+          ],
+          "sourceToCellTranslation": [
+            -704,
+            -48
+          ]
+        },
+        {
+          "index": 10,
+          "row": 1,
+          "column": 4,
+          "rect": [
+            1536,
+            384,
+            384,
+            384
+          ],
+          "inkBounds": [
+            52,
+            203,
+            295,
+            366
+          ],
+          "lowestInkAnchor": [
+            173,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            365
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1024,
+            205,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            1012,
+            251,
+            1255,
+            414
+          ],
+          "sourceToCellTranslation": [
+            -960,
+            -48
+          ]
+        },
+        {
+          "index": 11,
+          "row": 1,
+          "column": 5,
+          "rect": [
+            1920,
+            384,
+            384,
+            384
+          ],
+          "inkBounds": [
+            89,
+            175,
+            290,
+            367
+          ],
+          "lowestInkAnchor": [
+            253,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            366
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1280,
+            205,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            1305,
+            223,
+            1506,
+            415
+          ],
+          "sourceToCellTranslation": [
+            -1216,
+            -48
+          ]
+        },
+        {
+          "index": 12,
+          "row": 2,
+          "column": 0,
+          "rect": [
+            0,
+            768,
+            384,
+            384
+          ],
+          "inkBounds": [
+            91,
+            169,
+            262,
+            365
+          ],
+          "lowestInkAnchor": [
+            102,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            364
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            0,
+            410,
+            256,
+            204
+          ],
+          "sourceFullBounds": [
+            27,
+            421,
+            198,
+            617
+          ],
+          "sourceToCellTranslation": [
+            64,
+            -252
+          ]
+        },
+        {
+          "index": 13,
+          "row": 2,
+          "column": 1,
+          "rect": [
+            384,
+            768,
+            384,
+            384
+          ],
+          "inkBounds": [
+            77,
+            169,
+            256,
+            366
+          ],
+          "lowestInkAnchor": [
+            88,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            365
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            256,
+            410,
+            256,
+            204
+          ],
+          "sourceFullBounds": [
+            269,
+            421,
+            448,
+            618
+          ],
+          "sourceToCellTranslation": [
+            -192,
+            -252
+          ]
+        },
+        {
+          "index": 14,
+          "row": 2,
+          "column": 2,
+          "rect": [
+            768,
+            768,
+            384,
+            384
+          ],
+          "inkBounds": [
+            85,
+            225,
+            267,
+            362
+          ],
+          "lowestInkAnchor": [
+            139,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            361
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            512,
+            410,
+            256,
+            204
+          ],
+          "sourceFullBounds": [
+            533,
+            477,
+            715,
+            614
+          ],
+          "sourceToCellTranslation": [
+            -448,
+            -252
+          ]
+        },
+        {
+          "index": 15,
+          "row": 2,
+          "column": 3,
+          "rect": [
+            1152,
+            768,
+            384,
+            384
+          ],
+          "inkBounds": [
+            73,
+            204,
+            278,
+            354
+          ],
+          "lowestInkAnchor": [
+            312,
+            357
+          ],
+          "rootAnchor": [
+            192,
+            353
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            768,
+            410,
+            256,
+            204
+          ],
+          "sourceFullBounds": [
+            777,
+            456,
+            982,
+            606
+          ],
+          "sourceToCellTranslation": [
+            -704,
+            -252
+          ]
+        },
+        {
+          "index": 16,
+          "row": 2,
+          "column": 4,
+          "rect": [
+            1536,
+            768,
+            384,
+            384
+          ],
+          "inkBounds": [
+            55,
+            203,
+            308,
+            357
+          ],
+          "lowestInkAnchor": [
+            126,
+            357
+          ],
+          "rootAnchor": [
+            192,
+            356
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1024,
+            410,
+            256,
+            204
+          ],
+          "sourceFullBounds": [
+            1015,
+            455,
+            1268,
+            609
+          ],
+          "sourceToCellTranslation": [
+            -960,
+            -252
+          ]
+        },
+        {
+          "index": 17,
+          "row": 2,
+          "column": 5,
+          "rect": [
+            1920,
+            768,
+            384,
+            384
+          ],
+          "inkBounds": [
+            96,
+            178,
+            293,
+            366
+          ],
+          "lowestInkAnchor": [
+            110,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            365
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1280,
+            410,
+            256,
+            204
+          ],
+          "sourceFullBounds": [
+            1312,
+            430,
+            1509,
+            618
+          ],
+          "sourceToCellTranslation": [
+            -1216,
+            -252
+          ]
+        },
+        {
+          "index": 18,
+          "row": 3,
+          "column": 0,
+          "rect": [
+            0,
+            1152,
+            384,
+            384
+          ],
+          "inkBounds": [
+            89,
+            164,
+            264,
+            365
+          ],
+          "lowestInkAnchor": [
+            110,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            364
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            0,
+            614,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            25,
+            621,
+            200,
+            822
+          ],
+          "sourceToCellTranslation": [
+            64,
+            -457
+          ]
+        },
+        {
+          "index": 19,
+          "row": 3,
+          "column": 1,
+          "rect": [
+            384,
+            1152,
+            384,
+            384
+          ],
+          "inkBounds": [
+            96,
+            164,
+            266,
+            366
+          ],
+          "lowestInkAnchor": [
+            109,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            365
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            256,
+            614,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            288,
+            621,
+            458,
+            823
+          ],
+          "sourceToCellTranslation": [
+            -192,
+            -457
+          ]
+        },
+        {
+          "index": 20,
+          "row": 3,
+          "column": 2,
+          "rect": [
+            768,
+            1152,
+            384,
+            384
+          ],
+          "inkBounds": [
+            85,
+            214,
+            264,
+            360
+          ],
+          "lowestInkAnchor": [
+            121,
+            360
+          ],
+          "rootAnchor": [
+            192,
+            359
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            512,
+            614,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            533,
+            671,
+            712,
+            817
+          ],
+          "sourceToCellTranslation": [
+            -448,
+            -457
+          ]
+        },
+        {
+          "index": 21,
+          "row": 3,
+          "column": 3,
+          "rect": [
+            1152,
+            1152,
+            384,
+            384
+          ],
+          "inkBounds": [
+            68,
+            190,
+            275,
+            360
+          ],
+          "lowestInkAnchor": [
+            80,
+            360
+          ],
+          "rootAnchor": [
+            192,
+            359
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            768,
+            614,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            772,
+            647,
+            979,
+            817
+          ],
+          "sourceToCellTranslation": [
+            -704,
+            -457
+          ]
+        },
+        {
+          "index": 22,
+          "row": 3,
+          "column": 4,
+          "rect": [
+            1536,
+            1152,
+            384,
+            384
+          ],
+          "inkBounds": [
+            59,
+            186,
+            300,
+            360
+          ],
+          "lowestInkAnchor": [
+            71,
+            360
+          ],
+          "rootAnchor": [
+            192,
+            359
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1024,
+            614,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            1019,
+            643,
+            1260,
+            817
+          ],
+          "sourceToCellTranslation": [
+            -960,
+            -457
+          ]
+        },
+        {
+          "index": 23,
+          "row": 3,
+          "column": 5,
+          "rect": [
+            1920,
+            1152,
+            384,
+            384
+          ],
+          "inkBounds": [
+            92,
+            166,
+            300,
+            366
+          ],
+          "lowestInkAnchor": [
+            102,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            365
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1280,
+            614,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            1308,
+            623,
+            1516,
+            823
+          ],
+          "sourceToCellTranslation": [
+            -1216,
+            -457
+          ]
+        },
+        {
+          "index": 24,
+          "row": 4,
+          "column": 0,
+          "rect": [
+            0,
+            1536,
+            384,
+            384
+          ],
+          "inkBounds": [
+            98,
+            161,
+            259,
+            352
+          ],
+          "lowestInkAnchor": [
+            110,
+            352
+          ],
+          "rootAnchor": [
+            192,
+            351
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            0,
+            819,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            34,
+            823,
+            195,
+            1014
+          ],
+          "sourceToCellTranslation": [
+            64,
+            -662
+          ]
+        },
+        {
+          "index": 25,
+          "row": 4,
+          "column": 1,
+          "rect": [
+            384,
+            1536,
+            384,
+            384
+          ],
+          "inkBounds": [
+            92,
+            165,
+            254,
+            353
+          ],
+          "lowestInkAnchor": [
+            103,
+            353
+          ],
+          "rootAnchor": [
+            192,
+            352
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            256,
+            819,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            284,
+            827,
+            446,
+            1015
+          ],
+          "sourceToCellTranslation": [
+            -192,
+            -662
+          ]
+        },
+        {
+          "index": 26,
+          "row": 4,
+          "column": 2,
+          "rect": [
+            768,
+            1536,
+            384,
+            384
+          ],
+          "inkBounds": [
+            83,
+            221,
+            262,
+            348
+          ],
+          "lowestInkAnchor": [
+            119,
+            348
+          ],
+          "rootAnchor": [
+            192,
+            347
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            512,
+            819,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            531,
+            883,
+            710,
+            1010
+          ],
+          "sourceToCellTranslation": [
+            -448,
+            -662
+          ]
+        },
+        {
+          "index": 27,
+          "row": 4,
+          "column": 3,
+          "rect": [
+            1152,
+            1536,
+            384,
+            384
+          ],
+          "inkBounds": [
+            65,
+            182,
+            252,
+            350
+          ],
+          "lowestInkAnchor": [
+            83,
+            351
+          ],
+          "rootAnchor": [
+            192,
+            349
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            768,
+            819,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            769,
+            844,
+            956,
+            1012
+          ],
+          "sourceToCellTranslation": [
+            -704,
+            -662
+          ]
+        },
+        {
+          "index": 28,
+          "row": 4,
+          "column": 4,
+          "rect": [
+            1536,
+            1536,
+            384,
+            384
+          ],
+          "inkBounds": [
+            50,
+            189,
+            280,
+            351
+          ],
+          "lowestInkAnchor": [
+            67,
+            351
+          ],
+          "rootAnchor": [
+            192,
+            350
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1024,
+            819,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            1010,
+            851,
+            1240,
+            1013
+          ],
+          "sourceToCellTranslation": [
+            -960,
+            -662
+          ]
+        },
+        {
+          "index": 29,
+          "row": 4,
+          "column": 5,
+          "rect": [
+            1920,
+            1536,
+            384,
+            384
+          ],
+          "inkBounds": [
+            98,
+            168,
+            288,
+            354
+          ],
+          "lowestInkAnchor": [
+            109,
+            354
+          ],
+          "rootAnchor": [
+            192,
+            353
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1280,
+            819,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            1314,
+            830,
+            1504,
+            1016
+          ],
+          "sourceToCellTranslation": [
+            -1216,
+            -662
+          ]
+        }
+      ],
+      "scalePolicy": "Use one scale per character across all poses; never normalize by individual inkBounds height.",
+      "characterRows": [
+        "kakashi",
+        "naruto",
+        "awakenedNaruto",
+        "sasuke",
+        "sakura"
+      ],
+      "animationFrameOffset": 0,
+      "standingSourceBodyHeightPx": {
+        "kakashi": 204,
+        "naruto": 194,
+        "awakenedNaruto": 194,
+        "sasuke": 194,
+        "sakura": 190
+      },
+      "standingReferenceSource": "ultimate-a.png columns0-1; shared scale across A and B and every pose of that character",
+      "sourceAlphaSheet": "C:\\Users\\eshin\\.codex\\visualizations\\2026\\09\\05\\01a0700e-9aab-7040-b123-d472c87e3925\\v14-cinema-art\\ultimate-a.png",
+      "cellWidth": 384,
+      "cellHeight": 384,
+      "normalized": true,
+      "normalization": "Full-image 8-connected alpha components assigned by centroid to source pose cells; source pixel scale unchanged; translated to padded root baseline. No cell crop used to extract characters.",
+      "normalizationValidation": {
+        "sourceNontransparentPixels": 378863,
+        "outputNontransparentPixels": 378863,
+        "pixelCountPreserved": true,
+        "allFramesPaddedAtLeastPx": 8,
+        "individualPoseScaling": false
+      },
+      "file": "ultimate-a.webp",
+      "bodyReferences": [
+        204,
+        194,
+        194,
+        194,
+        190
+      ]
+    },
+    {
+      "name": "ultimate-b",
+      "columns": 6,
+      "rows": 5,
+      "width": 2304,
+      "height": 1920,
+      "transparentFraction": 0.9167139123987269,
+      "frames": [
+        {
+          "index": 0,
+          "row": 0,
+          "column": 0,
+          "rect": [
+            0,
+            0,
+            384,
+            384
+          ],
+          "inkBounds": [
+            96,
+            177,
+            301,
+            369
+          ],
+          "lowestInkAnchor": [
+            238,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            368
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            0,
+            0,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            32,
+            20,
+            237,
+            212
+          ],
+          "sourceToCellTranslation": [
+            64,
+            157
+          ]
+        },
+        {
+          "index": 1,
+          "row": 0,
+          "column": 1,
+          "rect": [
+            384,
+            0,
+            384,
+            384
+          ],
+          "inkBounds": [
+            67,
+            217,
+            307,
+            368
+          ],
+          "lowestInkAnchor": [
+            88,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            367
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            256,
+            0,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            259,
+            60,
+            499,
+            211
+          ],
+          "sourceToCellTranslation": [
+            -192,
+            157
+          ]
+        },
+        {
+          "index": 2,
+          "row": 0,
+          "column": 2,
+          "rect": [
+            768,
+            0,
+            384,
+            384
+          ],
+          "inkBounds": [
+            102,
+            179,
+            277,
+            369
+          ],
+          "lowestInkAnchor": [
+            249,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            368
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            512,
+            0,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            550,
+            22,
+            725,
+            212
+          ],
+          "sourceToCellTranslation": [
+            -448,
+            157
+          ]
+        },
+        {
+          "index": 3,
+          "row": 0,
+          "column": 3,
+          "rect": [
+            1152,
+            0,
+            384,
+            384
+          ],
+          "inkBounds": [
+            75,
+            184,
+            373,
+            375
+          ],
+          "lowestInkAnchor": [
+            226,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            374
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            768,
+            0,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            779,
+            27,
+            1077,
+            218
+          ],
+          "sourceToCellTranslation": [
+            -704,
+            157
+          ]
+        },
+        {
+          "index": 4,
+          "row": 0,
+          "column": 4,
+          "rect": [
+            1536,
+            0,
+            384,
+            384
+          ],
+          "inkBounds": [
+            122,
+            232,
+            282,
+            374
+          ],
+          "lowestInkAnchor": [
+            229,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            373
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1024,
+            0,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            1082,
+            75,
+            1242,
+            217
+          ],
+          "sourceToCellTranslation": [
+            -960,
+            157
+          ]
+        },
+        {
+          "index": 5,
+          "row": 0,
+          "column": 5,
+          "rect": [
+            1920,
+            0,
+            384,
+            384
+          ],
+          "inkBounds": [
+            115,
+            164,
+            286,
+            375
+          ],
+          "lowestInkAnchor": [
+            257,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            374
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1280,
+            0,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            1331,
+            7,
+            1502,
+            218
+          ],
+          "sourceToCellTranslation": [
+            -1216,
+            157
+          ]
+        },
+        {
+          "index": 6,
+          "row": 1,
+          "column": 0,
+          "rect": [
+            0,
+            384,
+            384,
+            384
+          ],
+          "inkBounds": [
+            106,
+            175,
+            294,
+            373
+          ],
+          "lowestInkAnchor": [
+            236,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            372
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            0,
+            205,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            42,
+            223,
+            230,
+            421
+          ],
+          "sourceToCellTranslation": [
+            64,
+            -48
+          ]
+        },
+        {
+          "index": 7,
+          "row": 1,
+          "column": 1,
+          "rect": [
+            384,
+            384,
+            384,
+            384
+          ],
+          "inkBounds": [
+            83,
+            172,
+            261,
+            374
+          ],
+          "lowestInkAnchor": [
+            233,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            373
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            256,
+            205,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            275,
+            220,
+            453,
+            422
+          ],
+          "sourceToCellTranslation": [
+            -192,
+            -48
+          ]
+        },
+        {
+          "index": 8,
+          "row": 1,
+          "column": 2,
+          "rect": [
+            768,
+            384,
+            384,
+            384
+          ],
+          "inkBounds": [
+            86,
+            170,
+            295,
+            342
+          ],
+          "lowestInkAnchor": [
+            153,
+            342
+          ],
+          "rootAnchor": [
+            192,
+            341
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            512,
+            205,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            534,
+            218,
+            743,
+            390
+          ],
+          "sourceToCellTranslation": [
+            -448,
+            -48
+          ]
+        },
+        {
+          "index": 9,
+          "row": 1,
+          "column": 3,
+          "rect": [
+            1152,
+            384,
+            384,
+            384
+          ],
+          "inkBounds": [
+            82,
+            187,
+            289,
+            369
+          ],
+          "lowestInkAnchor": [
+            269,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            368
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            768,
+            205,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            786,
+            235,
+            993,
+            417
+          ],
+          "sourceToCellTranslation": [
+            -704,
+            -48
+          ]
+        },
+        {
+          "index": 10,
+          "row": 1,
+          "column": 4,
+          "rect": [
+            1536,
+            384,
+            384,
+            384
+          ],
+          "inkBounds": [
+            121,
+            236,
+            253,
+            372
+          ],
+          "lowestInkAnchor": [
+            142,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            371
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1024,
+            205,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            1081,
+            284,
+            1213,
+            420
+          ],
+          "sourceToCellTranslation": [
+            -960,
+            -48
+          ]
+        },
+        {
+          "index": 11,
+          "row": 1,
+          "column": 5,
+          "rect": [
+            1920,
+            384,
+            384,
+            384
+          ],
+          "inkBounds": [
+            87,
+            179,
+            257,
+            373
+          ],
+          "lowestInkAnchor": [
+            229,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            372
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1280,
+            205,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            1303,
+            227,
+            1473,
+            421
+          ],
+          "sourceToCellTranslation": [
+            -1216,
+            -48
+          ]
+        },
+        {
+          "index": 12,
+          "row": 2,
+          "column": 0,
+          "rect": [
+            0,
+            768,
+            384,
+            384
+          ],
+          "inkBounds": [
+            111,
+            188,
+            276,
+            357
+          ],
+          "lowestInkAnchor": [
+            173,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            356
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            0,
+            410,
+            256,
+            204
+          ],
+          "sourceFullBounds": [
+            47,
+            440,
+            212,
+            609
+          ],
+          "sourceToCellTranslation": [
+            64,
+            -252
+          ]
+        },
+        {
+          "index": 13,
+          "row": 2,
+          "column": 1,
+          "rect": [
+            384,
+            768,
+            384,
+            384
+          ],
+          "inkBounds": [
+            85,
+            194,
+            296,
+            360
+          ],
+          "lowestInkAnchor": [
+            262,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            359
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            256,
+            410,
+            256,
+            204
+          ],
+          "sourceFullBounds": [
+            277,
+            446,
+            488,
+            612
+          ],
+          "sourceToCellTranslation": [
+            -192,
+            -252
+          ]
+        },
+        {
+          "index": 14,
+          "row": 2,
+          "column": 2,
+          "rect": [
+            768,
+            768,
+            384,
+            384
+          ],
+          "inkBounds": [
+            113,
+            173,
+            286,
+            324
+          ],
+          "lowestInkAnchor": [
+            180,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            323
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            512,
+            410,
+            256,
+            204
+          ],
+          "sourceFullBounds": [
+            561,
+            425,
+            734,
+            576
+          ],
+          "sourceToCellTranslation": [
+            -448,
+            -252
+          ]
+        },
+        {
+          "index": 15,
+          "row": 2,
+          "column": 3,
+          "rect": [
+            1152,
+            768,
+            384,
+            384
+          ],
+          "inkBounds": [
+            118,
+            191,
+            276,
+            356
+          ],
+          "lowestInkAnchor": [
+            192,
+            356
+          ],
+          "rootAnchor": [
+            192,
+            355
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            768,
+            410,
+            256,
+            204
+          ],
+          "sourceFullBounds": [
+            822,
+            443,
+            980,
+            608
+          ],
+          "sourceToCellTranslation": [
+            -704,
+            -252
+          ]
+        },
+        {
+          "index": 16,
+          "row": 2,
+          "column": 4,
+          "rect": [
+            1536,
+            768,
+            384,
+            384
+          ],
+          "inkBounds": [
+            113,
+            217,
+            283,
+            353
+          ],
+          "lowestInkAnchor": [
+            202,
+            353
+          ],
+          "rootAnchor": [
+            192,
+            352
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1024,
+            410,
+            256,
+            204
+          ],
+          "sourceFullBounds": [
+            1073,
+            469,
+            1243,
+            605
+          ],
+          "sourceToCellTranslation": [
+            -960,
+            -252
+          ]
+        },
+        {
+          "index": 17,
+          "row": 2,
+          "column": 5,
+          "rect": [
+            1920,
+            768,
+            384,
+            384
+          ],
+          "inkBounds": [
+            79,
+            182,
+            266,
+            359
+          ],
+          "lowestInkAnchor": [
+            156,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            358
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1280,
+            410,
+            256,
+            204
+          ],
+          "sourceFullBounds": [
+            1295,
+            434,
+            1482,
+            611
+          ],
+          "sourceToCellTranslation": [
+            -1216,
+            -252
+          ]
+        },
+        {
+          "index": 18,
+          "row": 3,
+          "column": 0,
+          "rect": [
+            0,
+            1152,
+            384,
+            384
+          ],
+          "inkBounds": [
+            86,
+            151,
+            280,
+            350
+          ],
+          "lowestInkAnchor": [
+            184,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            349
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            0,
+            614,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            22,
+            608,
+            216,
+            807
+          ],
+          "sourceToCellTranslation": [
+            64,
+            -457
+          ]
+        },
+        {
+          "index": 19,
+          "row": 3,
+          "column": 1,
+          "rect": [
+            384,
+            1152,
+            384,
+            384
+          ],
+          "inkBounds": [
+            96,
+            152,
+            262,
+            354
+          ],
+          "lowestInkAnchor": [
+            166,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            353
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            256,
+            614,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            288,
+            609,
+            454,
+            811
+          ],
+          "sourceToCellTranslation": [
+            -192,
+            -457
+          ]
+        },
+        {
+          "index": 20,
+          "row": 3,
+          "column": 2,
+          "rect": [
+            768,
+            1152,
+            384,
+            384
+          ],
+          "inkBounds": [
+            80,
+            143,
+            303,
+            352
+          ],
+          "lowestInkAnchor": [
+            106,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            351
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            512,
+            614,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            528,
+            600,
+            751,
+            809
+          ],
+          "sourceToCellTranslation": [
+            -448,
+            -457
+          ]
+        },
+        {
+          "index": 21,
+          "row": 3,
+          "column": 3,
+          "rect": [
+            1152,
+            1152,
+            384,
+            384
+          ],
+          "inkBounds": [
+            55,
+            173,
+            322,
+            359
+          ],
+          "lowestInkAnchor": [
+            69,
+            359
+          ],
+          "rootAnchor": [
+            192,
+            358
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            768,
+            614,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            759,
+            630,
+            1026,
+            816
+          ],
+          "sourceToCellTranslation": [
+            -704,
+            -457
+          ]
+        },
+        {
+          "index": 22,
+          "row": 3,
+          "column": 4,
+          "rect": [
+            1536,
+            1152,
+            384,
+            384
+          ],
+          "inkBounds": [
+            126,
+            205,
+            265,
+            347
+          ],
+          "lowestInkAnchor": [
+            255,
+            347
+          ],
+          "rootAnchor": [
+            192,
+            346
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1024,
+            614,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            1086,
+            662,
+            1225,
+            804
+          ],
+          "sourceToCellTranslation": [
+            -960,
+            -457
+          ]
+        },
+        {
+          "index": 23,
+          "row": 3,
+          "column": 5,
+          "rect": [
+            1920,
+            1152,
+            384,
+            384
+          ],
+          "inkBounds": [
+            66,
+            155,
+            261,
+            364
+          ],
+          "lowestInkAnchor": [
+            77,
+            362
+          ],
+          "rootAnchor": [
+            192,
+            363
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1280,
+            614,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            1282,
+            612,
+            1477,
+            821
+          ],
+          "sourceToCellTranslation": [
+            -1216,
+            -457
+          ]
+        },
+        {
+          "index": 24,
+          "row": 4,
+          "column": 0,
+          "rect": [
+            0,
+            1536,
+            384,
+            384
+          ],
+          "inkBounds": [
+            96,
+            154,
+            260,
+            348
+          ],
+          "lowestInkAnchor": [
+            107,
+            348
+          ],
+          "rootAnchor": [
+            192,
+            347
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            0,
+            819,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            32,
+            816,
+            196,
+            1010
+          ],
+          "sourceToCellTranslation": [
+            64,
+            -662
+          ]
+        },
+        {
+          "index": 25,
+          "row": 4,
+          "column": 1,
+          "rect": [
+            384,
+            1536,
+            384,
+            384
+          ],
+          "inkBounds": [
+            97,
+            155,
+            267,
+            346
+          ],
+          "lowestInkAnchor": [
+            113,
+            346
+          ],
+          "rootAnchor": [
+            192,
+            345
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            256,
+            819,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            289,
+            817,
+            459,
+            1008
+          ],
+          "sourceToCellTranslation": [
+            -192,
+            -662
+          ]
+        },
+        {
+          "index": 26,
+          "row": 4,
+          "column": 2,
+          "rect": [
+            768,
+            1536,
+            384,
+            384
+          ],
+          "inkBounds": [
+            66,
+            147,
+            275,
+            350
+          ],
+          "lowestInkAnchor": [
+            161,
+            350
+          ],
+          "rootAnchor": [
+            192,
+            349
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            512,
+            819,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            514,
+            809,
+            723,
+            1012
+          ],
+          "sourceToCellTranslation": [
+            -448,
+            -662
+          ]
+        },
+        {
+          "index": 27,
+          "row": 4,
+          "column": 3,
+          "rect": [
+            1152,
+            1536,
+            384,
+            384
+          ],
+          "inkBounds": [
+            63,
+            171,
+            281,
+            350
+          ],
+          "lowestInkAnchor": [
+            74,
+            350
+          ],
+          "rootAnchor": [
+            192,
+            349
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            768,
+            819,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            767,
+            833,
+            985,
+            1012
+          ],
+          "sourceToCellTranslation": [
+            -704,
+            -662
+          ]
+        },
+        {
+          "index": 28,
+          "row": 4,
+          "column": 4,
+          "rect": [
+            1536,
+            1536,
+            384,
+            384
+          ],
+          "inkBounds": [
+            98,
+            208,
+            237,
+            346
+          ],
+          "lowestInkAnchor": [
+            200,
+            346
+          ],
+          "rootAnchor": [
+            192,
+            345
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1024,
+            819,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            1058,
+            870,
+            1197,
+            1008
+          ],
+          "sourceToCellTranslation": [
+            -960,
+            -662
+          ]
+        },
+        {
+          "index": 29,
+          "row": 4,
+          "column": 5,
+          "rect": [
+            1920,
+            1536,
+            384,
+            384
+          ],
+          "inkBounds": [
+            72,
+            157,
+            238,
+            353
+          ],
+          "lowestInkAnchor": [
+            83,
+            353
+          ],
+          "rootAnchor": [
+            192,
+            352
+          ],
+          "anchorMeaning": "fixed per-cell ground baseline; retain airborne vertical offset",
+          "sourceNominalRect": [
+            1280,
+            819,
+            256,
+            205
+          ],
+          "sourceFullBounds": [
+            1288,
+            819,
+            1454,
+            1015
+          ],
+          "sourceToCellTranslation": [
+            -1216,
+            -662
+          ]
+        }
+      ],
+      "scalePolicy": "Use one scale per character across all poses; never normalize by individual inkBounds height.",
+      "characterRows": [
+        "kakashi",
+        "naruto",
+        "awakenedNaruto",
+        "sasuke",
+        "sakura"
+      ],
+      "animationFrameOffset": 6,
+      "standingSourceBodyHeightPx": {
+        "kakashi": 204,
+        "naruto": 194,
+        "awakenedNaruto": 194,
+        "sasuke": 194,
+        "sakura": 190
+      },
+      "standingReferenceSource": "ultimate-a.png columns0-1; shared scale across A and B and every pose of that character",
+      "sourceAlphaSheet": "C:\\Users\\eshin\\.codex\\visualizations\\2026\\09\\05\\01a0700e-9aab-7040-b123-d472c87e3925\\v14-cinema-art\\ultimate-b.png",
+      "cellWidth": 384,
+      "cellHeight": 384,
+      "normalized": true,
+      "normalization": "Full-image 8-connected alpha components assigned by centroid to source pose cells; source pixel scale unchanged; translated to padded root baseline. No cell crop used to extract characters.",
+      "normalizationValidation": {
+        "sourceNontransparentPixels": 368431,
+        "outputNontransparentPixels": 368431,
+        "pixelCountPreserved": true,
+        "allFramesPaddedAtLeastPx": 8,
+        "individualPoseScaling": false
+      },
+      "file": "ultimate-b.webp",
+      "bodyReferences": [
+        204,
+        194,
+        194,
+        194,
+        190
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "sources": {
+    "dragon": "C:/Users/eshin/.codex/generated_images/01a0700e-9aab-7040-b123-d472c87e3925/exec-96ce402c-1e10-4e02-8665-5264fd445554.png",
+    "wave": "C:/Users/eshin/.codex/generated_images/01a0700e-9aab-7040-b123-d472c87e3925/exec-4512073c-4f6d-44ce-97bb-1fc47f5d9f57.png",
+    "ice": "C:/Users/eshin/.codex/generated_images/01a0700e-9aab-7040-b123-d472c87e3925/exec-889f7cb0-5f85-4716-8d9d-0138546f8295.png",
+    "chakra": "C:/Users/eshin/.codex/generated_images/01a0700e-9aab-7040-b123-d472c87e3925/exec-58eb7ba1-d2e0-4f66-b336-94df180f6ec9.png"
+  },
+  "prompts": {
+    "dragon": "Use case stylized-concept. Production 2D Naruto original-series cel-shaded anime WATER EFFECT sprite atlas, crisp ink outlines and blue turquoise white foam palette to match detailed handdrawn anime characters. Transparent background, NO checkerboard, no text, no characters. EXACT 4 columns x 4 rows equal cells, landscape 2048x1536, each cell a complete unclipped SIDE VIEW water DRAGON flying RIGHT. Frames 0-3 formation: water ribbon coils becoming a fierce eastern dragon head; frames4-11 eight DISTINCT fluid surge animation phases with mane/foam rippling, sinuous long tail, believable water flow, recognizable snout and jaws; frames12-15 collision head compresses, bursting foamy splash, turbulent droplets, dissipating spray. Consistent dragon head contact at right 85% cell width; full dragon silhouette fills85%width55%height centered. NOT an illustration of sheet on paper, only isolated transparent sprite assets. Fine foam strands but broad legible head, match original-series Water Dragon visual style. Cell padding12percent, no adjoining sprites touching."
+  }
+}

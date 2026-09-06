@@ -8,14 +8,13 @@ import {redOutline,outlineHits} from './attack-geometry';
 import {animationFrame} from './animation-data';
 const make=()=>new StoryDirector('mist',{enter:()=>{},cinematic:()=>{},cue:()=>{},complete:()=>{}});
 afterEach(()=>vi.unstubAllGlobals());
-describe('held manga panels and isolated scene selection',()=>{
- it('freezes the story clock, refuses an early confirmation, and advances only one gate',()=>{
-  const d=make();d.startScene('shuriken');d.update(20000);expect(d.clock).toBe(3500);expect(d.waiting).toBe(true);expect(d.advance()).toBe(false);
-  d.update(349);expect(d.clock).toBe(3500);expect(d.advance()).toBe(false);d.update(1);expect(d.advance()).toBe(true);
-  d.update(20000);expect(d.clock).toBe(10800);expect(d.waiting).toBe(true);
+describe('automatic story scenes and isolated scene selection',()=>{
+ it('plays story dialogue automatically and ignores the obsolete panel advance action',()=>{
+  const d=make();d.startScene('shuriken');d.update(3500);expect(d.clock).toBe(3500);expect(d.waiting).toBe(false);expect(d.advance()).toBe(false);
+  d.update(1000);expect(d.clock).toBe(4500);expect(d.clip?.cues.every(c=>c.manga===undefined&&!c.awaitAdvance)).toBe(true);
  });
  it('skips only the current transition',()=>{const d=make();d.startScene('shuriken');d.skip();expect(d.clip?.id).toBe('hunter-nin-deception');d.skip();expect(d.clip?.id).toBe('simultaneous-bridge-battles');});
- it('requires the snowy ending panel acknowledgment before completion',()=>{const d=make();d.startScene('snow');d.update(99999);expect(d.state.complete).toBe(false);expect(d.waiting).toBe(true);d.update(99999);expect(d.state.complete).toBe(false);d.advance();d.update(99999);expect(d.state.complete).toBe(true);});
+ it('finishes the snowy tableau automatically only after its full duration',()=>{const d=make();d.startScene('snow');d.update(14199);expect(d.state.complete).toBe(false);expect(d.waiting).toBe(false);d.update(1);expect(d.state.complete).toBe(true);});
  it.each(DEBUG_ENTRIES)('initializes $id through canonical state',e=>{const d=new StoryDirector(e.phase,{enter:()=>{},cinematic:()=>{},cue:()=>{},complete:()=>{}});if(e.scene)d.startScene(e.scene);else d.start(false);expect(d.mode).toBe(e.kind==='scene'?'cinematic':'fight');});
  it('never writes normal progress or viewed history during a debug run',()=>{const setItem=vi.fn();vi.stubGlobal('localStorage',{setItem});bridge.reset();bridge.checkpoint('rescue');bridge.patch({elapsed:73,parries:9,retries:2});const before=bridge.get().seen;setItem.mockClear();bridge.beginDebug('fight-seal');bridge.patch({elapsed:999,parries:44,retries:7});bridge.checkpoint('seal');bridge.beginDebug('snow');bridge.checkpoint('lightning');expect(setItem).not.toHaveBeenCalled();expect(bridge.get().seen).toEqual(before);bridge.endDebug();expect(bridge.get().checkpoint).toBe('rescue');expect(bridge.get()).toMatchObject({elapsed:73,parries:9,retries:2});});
 });

@@ -1,10 +1,12 @@
+import {rescueScene,snowScene} from './story-scenes-v14';
+import {dialogueDuration} from './presentation-v14';
 import type {CinemaMotion} from './cinematic-v13';
 import type {StorySceneId} from './scene-catalog';
 import {PHASES, stateForPhase, type StoryPhaseId, type StoryState} from './chapter';
 
 import type {AnimationName, CharacterId, EffectName} from './combat-core';
 
-export type ActorId = CharacterId | 'tazuna' | 'gato' | 'hound1' | 'hound2' | 'hound3' | 'henchman1' | 'henchman2' | 'henchman3' | 'clone' | 'prisoner';
+export type ActorId = CharacterId | `reflection-${number}` | 'tazuna' | 'gato' | 'hound1' | 'hound2' | 'hound3' | 'henchman1' | 'henchman2' | 'henchman3' | 'clone' | 'prisoner';
 
 export interface CinemaActor {id: ActorId; x: number; y: number; facing: -1 | 1; animation: AnimationName; alpha?: number;}
 
@@ -20,7 +22,7 @@ export interface CinemaCue {
 
 }
 
-export interface CinemaClip {id: string; duration: number; arena: 'lakeside' | 'bridge'; offset?:number; actors: CinemaActor[]; cues: CinemaCue[];}
+export interface CinemaClip {authored?:boolean;id: string; duration: number; arena: 'lakeside' | 'bridge'; offset?:number; actors: CinemaActor[]; cues: CinemaCue[];}
 
 const actor = (id: ActorId, x: number, facing: -1 | 1 = 1, animation: AnimationName = 'idle', y = 590): CinemaActor => ({id, x, y, facing, animation});
 
@@ -70,26 +72,7 @@ export function outroClip(phase: StoryPhaseId): CinemaClip {
 
         {at: 8200, actor: 'naruto', animation: 'cast', effect: 'smoke'}, {at: 10400, fade: 'out'}]};
 
-    case 'rescue': return {id: 'transformed-shuriken', arena: 'lakeside', duration: 14500,
-
-      actors: [actor('naruto', 410), actor('sasuke', 535), actor('zabuza', 1040, 1, 'cast'), actor('prisoner', 1130, -1, 'guardbreak', 545)],
-
-      cues: [{at: 0, effect: 'prison', actor: 'prisoner', camera: 200}, {at: 1000, actor: 'naruto', animation: 'cast', effect: 'smoke'},
-
-        {at: 2400, actor: 'naruto', alpha: 0, effect: 'shuriken'}, {at: 3400, actor: 'sasuke', animation: 'cast'},
-
-        {at: 4000, actor: 'sasuke', effect: 'shuriken'}, {at: 4500,actor:'zabuza',facing:-1}, {at: 5000, actor: 'zabuza', animation: 'jump', y: 470, duration: 350},
-
-        {at:5700,actor:'zabuza',y:590,duration:400,animation:'land'},
-        {at: 6500, actor: 'naruto', facing: -1, x: 1260, y: 525, alpha: 1, animation: 'cast', effect: 'smoke'},
-
-        {at:7200,actor:'naruto',animation:'cast',motion:'rescue-shot'},
-
-
-
-        {at: 9500, actor: 'prisoner', x: 1020, duration: 450, animation: 'dash'}, {at: 10500, actor: 'zabuza', animation: 'block', effect: 'parry'},
-
-        {at: 7450, actor: 'naruto', y: 592, duration: 400, animation: 'land', facing: -1}, {at: 12500, camera: 400, duration: 900}, {at: 13700, fade: 'out'}]};
+    case 'rescue': return rescueScene();
 
     case 'copy': return {id:'hunter-nin-deception',arena:'lakeside',duration:17700,
       actors:[actor('kakashi',370),actor('zabuza',1210,-1),actor('naruto',230),actor('sasuke',135),actor('sakura',75),actor('tazuna',25),actor('haku',1450,-1)],
@@ -124,9 +107,9 @@ export function outroClip(phase: StoryPhaseId): CinemaClip {
 
         {at: 7000, actor: 'sasuke', x: 510, duration: 230, animation: 'dash', facing: -1},
 
-        {at: 7500, actor: 'sasuke', animation: 'hurt', effect: 'impact'}, {at: 9000, actor: 'sasuke', animation: 'defeat'},
+        {at: 7500, actor: 'sasuke', animation: 'hurt', effect: 'impact',motion:'sasuke-fall'}, {at: 9000, actor: 'sasuke', animation: 'defeat'},
 
-        {at: 10300, actor: 'naruto', facing: -1, x: 560, duration: 700, animation: 'guardbreak'}, {at: 12800, actor: 'naruto', animation: 'ultimate', effect: 'aura'},
+        {at: 10300, actor: 'naruto', facing: -1, x: 560, duration: 700, animation: 'guardbreak'}, {at: 12800, actor: 'naruto', animation: 'ultimate', effect: 'aura',motion:'awakening'},
 
         {at: 14400, actor: 'haku', x: 1170, duration: 500, animation: 'airdash'}, {at: 15000, actor: 'haku', facing: -1}, {at: 16500, fade: 'out'}]};
 
@@ -136,7 +119,7 @@ export function outroClip(phase: StoryPhaseId): CinemaClip {
 
       cues: [{at: 0, camera: 500, actor: 'haku', effect: 'ice'}, {at: 900, actor: 'naruto', animation: 'heavy', effect: 'aura'},
 
-        {at: 2200, actor: 'haku', effect: 'mask', animation: 'hurt'}, {at: 3900, actor: 'naruto', animation: 'idle'},
+        {at: 2200, actor: 'haku', animation: 'hurt',motion:'unmask'}, {at: 3900, actor: 'naruto', animation: 'idle'},
 
         {at: 6000, actor: 'naruto', x: 860, duration: 650, animation: 'run'}, {at: 7100, actor: 'naruto', animation: 'guardbreak'},
 
@@ -158,7 +141,7 @@ export function outroClip(phase: StoryPhaseId): CinemaClip {
 
         {at: 4400, actor: 'kakashi', animation: 'ultimate', effect: 'lightning'}, {at: 6300, actor: 'kakashi', x: 995, duration: 900, animation: 'dash'},
 
-        {at: 6800, actor: 'haku', x: 1050, duration: 320, animation: 'airdash'}, {at:7300,actor:'kakashi',animation:'light1',effect:'lightning'}, {at: 7400, actor: 'haku', animation: 'hurt', effect: 'lightning'}, {at:7950,actor:'kakashi',animation:'block'},
+        {at: 6800, actor: 'haku', x: 1050, duration: 320, animation: 'airdash'}, {at:7300,actor:'kakashi',animation:'light1',effect:'lightning'}, {at: 7400, actor: 'haku', animation: 'hurt', effect: 'lightning',motion:'intercept'}, {at:7950,actor:'kakashi',animation:'block'},
 
         {at: 8900, actor: 'haku', animation: 'defeat'}, {at: 10200, actor: 'hound1', alpha: 0, effect: 'smoke'}, {at: 10200, actor: 'hound2', alpha: 0}, {at: 10200, actor: 'hound3', alpha: 0},
 
@@ -239,17 +222,17 @@ export class StoryDirector {
  finishObjective(){if(this.mode!=='fight')return;const routes:Record<StoryPhaseId,StorySceneId>={mist:'prison',rescue:'shuriken',copy:'hunter',protect:'bridge',mirrors:'sacrifice',seal:'hesitation',lightning:'interception'};const next=()=>this.startScene(routes[this.state.phase]);if(this.callbacks.transition)this.callbacks.transition(next);else next();}
  update(dt:number){
   if(this.mode!=='cinematic'||!this.clip)return;
-  if(this.waiting){this.holdAge+=dt;return;}
+
   const target=this.clock+dt,clip=this.clip;
   for(let i=0;i<clip.cues.length;i++){
    const cue=clip.cues[i];if(this.emitted.has(i)||cue.at>target)continue;
-   this.clock=cue.at;this.emitted.add(i);if(cue.awaitAdvance){this.waiting=true;this.holdAge=0;}this.callbacks.cue(cue);
-   if(this.waiting)return;
+   this.clock=cue.at;this.emitted.add(i);this.callbacks.cue(cue);
+
   }
   this.clock=target;if(this.clock>=clip.duration&&this.callbacks.ready?.()!==false)this.finishClip();
  }
- get canAdvance(){return this.waiting&&this.holdAge>=350;}
- advance(){if(!this.canAdvance)return false;this.waiting=false;this.holdAge=0;return true;}
+ get canAdvance(){return false;}
+ advance(){return false;}
  skip(){if(this.mode==='cinematic')this.finishClip();}
  private finishClip(){if(this.mode!=='cinematic')return;const next=this.afterClip;this.afterClip=null;this.clip=null;this.waiting=false;if(next){if(this.callbacks.transition)this.callbacks.transition(next);else next();}}
  private complete(){this.state={...this.state,hakuDefeated:true,hakuIntercepted:true,complete:true};this.mode='complete';this.clip=null;this.waiting=false;this.callbacks.complete();}
@@ -257,6 +240,7 @@ export class StoryDirector {
 
 /** Each ending entry reconstructs the actors at its own canonical starting point. */
 function endingSegment(index:number):CinemaClip {
+ if(index===2)return snowScene();
  const full=withDialogue(outroClip('lightning')),starts=[0,11000,27600],ends=[11000,27600,36000],ids=['haku-interception','gatos-betrayal','snowy-rest'];
  const start=starts[index],end=ends[index];
  const actors=full.actors.map(a=>({...a,alpha:a.id.startsWith('hound')||a.id.startsWith('henchman')||a.id==='gato'?0:a.alpha}));
@@ -270,6 +254,7 @@ function endingSegment(index:number):CinemaClip {
 /** Original, concise dialogue paraphrases the scene; these are not anime transcript extracts. */
 
 function withDialogue(clip: CinemaClip): CinemaClip {
+  if(clip.authored)return clip;
 
   const lines: Record<string, CinemaCue[]> = {
 
@@ -353,7 +338,7 @@ function withDialogue(clip: CinemaClip): CinemaClip {
 
       {at: 18400, actor: 'zabuza', speech: 'Boy… lend me your kunai.', hold: 1400},
 
-      {at: 25000, actor: 'zabuza', speech: 'Kakashi… take me to Haku.', hold: 2500},
+      
 
       {at: 29700, actor: 'zabuza', speech: 'Let me stay beside you.', hold: 3200},
 
@@ -361,17 +346,20 @@ function withDialogue(clip: CinemaClip): CinemaClip {
 
   };
 
-  const panels:Record<string,CinemaCue[]>={
- 'transformed-shuriken':[{at:3500,manga:0,awaitAdvance:true,actor:'sasuke',speech:'Two shuriken. One hidden in the other. Naruto knows what comes next.'},{at:10800,manga:1,awaitAdvance:true,actor:'prisoner',speech:'You made him release the prison. Now it is my turn.'}],
- 'hunter-nin-deception':[{at:9300,manga:2,awaitAdvance:true,actor:'haku',speech:'I am a hunter-nin. Leave his body to me.'},{at:15300,manga:3,awaitAdvance:true,actor:'kakashi',speech:'Those needles… Was he truly killed?'}],
- 'simultaneous-bridge-battles':[{at:5200,manga:4,awaitAdvance:true,actor:'sakura',speech:'I will protect Tazuna. Sasuke, watch the mirrors!'}],
- 'sasuke-protects-naruto':[{at:7600,manga:5,awaitAdvance:true,actor:'sasuke',speech:'My body moved before I could think.'},{at:10600,manga:6,awaitAdvance:true,actor:'naruto',speech:'Sasuke… You were supposed to keep chasing your dream.'},{at:13400,manga:7,awaitAdvance:true,actor:'naruto',speech:'I will not let you hurt anyone else!'}],
- 'narutos-hesitation':[{at:4800,manga:8,awaitAdvance:true,actor:'haku',speech:'I fought to protect someone precious. Now he needs me.'}],
- 'a-demon-in-the-snow':[{at:7700,manga:9,awaitAdvance:true,actor:'haku',speech:'Zabuza… I will protect you.'},{at:23300,manga:10,awaitAdvance:true,actor:'zabuza',speech:'Gato. This is the end of our contract.'},{at:32200,manga:11,awaitAdvance:true,actor:'zabuza',speech:'Let me rest beside you, Haku.'}],
+  const storyBeats:Record<string,CinemaCue[]>={
+ 'transformed-shuriken':[{at:3500,actor:'sasuke',speech:'Two shuriken. One hidden in the other. Naruto knows what comes next.'},{at:10800,actor:'prisoner',speech:'You made him release the prison. Now it is my turn.'}],
+ 'hunter-nin-deception':[{at:9300,actor:'haku',speech:'I am a hunter-nin. Leave his body to me.'},{at:15300,actor:'kakashi',speech:'Those needles… Was he truly killed?'}],
+ 'simultaneous-bridge-battles':[{at:5200,actor:'sakura',speech:'I will protect Tazuna. Sasuke, watch the mirrors!'}],
+ 'sasuke-protects-naruto':[{at:7600,actor:'sasuke',speech:'My body moved before I could think.'},{at:10600,actor:'naruto',speech:'Sasuke… You were supposed to keep chasing your dream.'},{at:13400,actor:'naruto',speech:'I will not let you hurt anyone else!'}],
+ 'narutos-hesitation':[{at:4800,actor:'haku',speech:'I fought to protect someone precious. Now he needs me.'}],
+ 'a-demon-in-the-snow':[{at:7700,actor:'haku',speech:'Zabuza… I will protect you.'},{at:23300,actor:'zabuza',speech:'Gato. This is the end of our contract.'},{at:32200,actor:'zabuza',speech:'Let me rest beside you, Haku.'}],
  };
- if(!lines[clip.id]&&!panels[clip.id])return clip;
- const cues=[...clip.cues,...(lines[clip.id]||[])].map(c=>{const copy={...c};if(clip.id!=='water-prison')delete copy.moment;return copy;});
- return {...clip,cues:[...cues,...(panels[clip.id]||[])].sort((a,b)=>a.at-b.at)};
+ const beats=storyBeats[clip.id]||[];
+ const base=[...clip.cues,...(lines[clip.id]||[])].filter(c=>!c.speech||!beats.some(b=>b.speech&&Math.abs(b.at-c.at)<1500));
+ const cues=[...base,...beats].map(c=>{const copy={...c};delete copy.moment;delete copy.manga;delete copy.awaitAdvance;return copy;}).sort((a,b)=>a.at-b.at);
+ let spokenUntil=0;
+ for(const cue of cues)if(cue.speech){cue.at=Math.max(cue.at,spokenUntil);cue.hold=dialogueDuration(cue.speech);spokenUntil=cue.at+cue.hold+150;}
+ return {...clip,duration:Math.max(clip.duration,spokenUntil+250),cues:cues.sort((a,b)=>a.at-b.at)};
 
 }
 

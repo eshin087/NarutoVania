@@ -23,7 +23,7 @@ export class BattleInput {
     this.device = 'keyboard'; if (!this.keyboard.has(action)) this.edges.add(action); this.keyboard.add(action);
   };
   up = (event: KeyboardEvent) => {if(event.code==='Enter'||event.key==='Enter')this.enterHeld=false;const action = keyboardAction(event); if (action) {this.keyboard.delete(action); this.releases.add(action);}};
-  blur = () => {this.enterHeld=false;this.clear(); if (['playing', 'intro'].includes(bridge.get().screen)) bridge.command('pause');};
+  blur = () => {this.enterHeld=false;this.clear(); if (['playing', 'intro','preview'].includes(bridge.get().screen)) bridge.command('pause');};
   visibility = () => {if (document.hidden) this.blur();};
   disconnect = () => {for (const action of this.pad) this.releases.add(action); this.pad.clear(); this.padStart = false; this.padConfirm = false; this.device = 'keyboard';};
   constructor() {window.addEventListener('keydown', this.down); window.addEventListener('keyup', this.up); window.addEventListener('blur', this.blur); window.addEventListener('gamepaddisconnected', this.disconnect); document.addEventListener('visibilitychange', this.visibility);}

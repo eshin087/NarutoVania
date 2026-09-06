@@ -1,6 +1,6 @@
 import {PHASE_IDS, PHASES, type StoryPhaseId, type Ability} from './chapter';
 import {clamp, type PlayerId} from './combat-core';
-export type Screen = 'loading' | 'title' | 'playing' | 'paused' | 'intro' | 'dead' | 'victory' | 'error';
+export type Screen = 'loading' | 'title' | 'preview' | 'playing' | 'paused' | 'intro' | 'dead' | 'victory' | 'error';
 export type Command = 'start' | 'continue' | 'pause' | 'resume' | 'retry' | 'title' | 'skip' | 'advance' | 'debug-replay' | 'debug-exit' | {type:'debug';entry:string} | {type:'audition';id:string};
 export interface Settings {muted: boolean; reducedShake: boolean; musicVolume: number; effectsVolume: number; voiceVolume: number;}
 export interface Snapshot {
