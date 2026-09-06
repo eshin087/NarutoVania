@@ -109,6 +109,10 @@ export class StoryDirector {
   play(clip: CinemaClip, after: () => void) {
     this.clip = clip; this.clock = 0; this.emitted.clear(); this.mode = 'cinematic'; this.afterClip = after; this.callbacks.cinematic(clip); this.update(0);
   }
+  objectiveComplete(bossHealth: number, elapsedSeconds: number) {
+    if (this.mode !== 'fight') return false;
+    return bossHealth <= 0 || this.state.phase === 'protect' && elapsedSeconds >= PHASES.protect.protectionSeconds!;
+  }
   finishObjective() {
     if (this.mode !== 'fight') return;
     const phase = this.state.phase;

@@ -665,7 +665,7 @@ export class BossGameScene extends Phaser.Scene {
         this.burst('parry', this.player.model.x, this.player.model.y - 105, 55, 700); this.sounds.effect('parry', .6, .8);
       }
     }
-    const completed = this.phase === 'protect' ? this.phaseElapsed >= (PHASES.protect.protectionSeconds || 65) : this.boss.model.health <= 0;
+    const completed = this.director.objectiveComplete(this.boss.model.health, this.phaseElapsed);
     if (completed && !this.phaseEnding) {
       this.phaseEnding = true; this.inputs.clear(); this.sounds.stopEffects();
       if (this.phase === 'mirrors') {this.director.state.narutoInMirrors = true; this.director.state.sharinganAwakened = true;}

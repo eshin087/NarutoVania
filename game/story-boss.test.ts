@@ -59,6 +59,27 @@ describe('story director skip and replay', () => {
     expect(a.director.state).toEqual(b.director.state); expect(a.enter).toEqual(b.enter); expect(a.complete).toEqual(b.complete);
     a.director.skip(); expect(a.complete.length).toBeLessThanOrEqual(1);
   });
+  it('advances Sakura immediately after an early Zabuza defeat, through either cinematic route', () => {
+    for (const skip of [false, true]) {
+      const {director, enter} = make('protect'); director.start(false);
+      expect(director.objectiveComplete(1, 20)).toBe(false);
+      expect(director.objectiveComplete(0, 20)).toBe(true);
+      director.finishObjective();
+      expect(director.clip?.id).toBe('simultaneous-bridge-battles');
+      expect(director.objectiveComplete(0, 20)).toBe(false);
+      if (skip) director.skip(); else director.update(outroClip('protect').duration);
+      expect(enter).toEqual(['protect', 'mirrors']);
+      expect(director.state.phase).toBe('mirrors');
+    }
+  });
+  it('keeps the 50-second protection route and requires boss defeat in other duels', () => {
+    const {director} = make('protect'); director.start(false);
+    expect(director.objectiveComplete(1400, 49.999)).toBe(false);
+    expect(director.objectiveComplete(1400, 50)).toBe(true);
+    director.finishObjective(); director.skip();
+    expect(director.objectiveComplete(1, 100)).toBe(false);
+    expect(director.objectiveComplete(0, 1)).toBe(true);
+  });
   it('completes the full seven-phase chapter with canonical state and no forced deaths', () => {
     const {director, enter, complete} = make('mist'); director.start(true); director.skip();
     for (const phase of PHASE_IDS) {expect(director.state.phase).toBe(phase); director.finishObjective(); director.skip();}

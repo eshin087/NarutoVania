@@ -17,7 +17,7 @@ export const PHASES: Record<StoryPhaseId, PhaseDefinition> = {
   copy: {id: 'copy', number: 3, title: 'The Copy Ninja', character: 'kakashi', boss: 'zabuza', arena: 'lakeside', hp: 1800,
     objective: 'Restrain Zabuza. Strike with Lightning Blade.', intro: 'shuriken', outro: 'hunter', playerX: 420, bossX: 1010, targetSeconds: 65},
   protect: {id: 'protect', number: 4, title: 'Protect the Bridge Builder', character: 'sakura', boss: 'zabuza', arena: 'bridge', hp: 1400,
-    objective: 'Keep Tazuna safe until Kakashi returns.', intro: 'bridge', outro: 'bridge', playerX: 370, bossX: 1010, targetSeconds: 50, protectionSeconds: 50},
+    objective: 'Protect Tazuna for 50s or defeat Zabuza.', intro: 'bridge', outro: 'bridge', playerX: 370, bossX: 1010, targetSeconds: 50, protectionSeconds: 50},
   mirrors: {id: 'mirrors', number: 5, title: 'Crystal Ice Mirrors', character: 'sasuke', boss: 'haku', arena: 'bridge', hp: 1600,
     objective: 'Read Haku’s openings. Survive the ice prison.', intro: 'bridge', outro: 'sacrifice', playerX: 480, bossX: 1080, targetSeconds: 65},
   seal: {id: 'seal', number: 6, title: 'The Broken Seal', character: 'naruto', boss: 'haku', arena: 'bridge', hp: 1800,

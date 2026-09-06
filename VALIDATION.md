@@ -1,5 +1,9 @@
 # Combat revision validation — September 6, 2026
 
+## Sakura early-defeat fix
+
+Sakura's objective now completes on Zabuza's defeat or the 50-second protection timer. Previously it checked only the timer, leaving an early victory without an immediate transition. The objective text now describes both routes. Two additional regression tests cover defeat at 20 seconds, natural and skipped cinematics reaching Sasuke, the timer boundary, and unchanged boss-defeat requirements in other duels. All 72 tests, type checking, and lint pass. The chapter playthrough below records the preceding combat revision; this focused fix uses the shared runtime objective check and story-director regression tests.
+
 ## Combat and chapter
 
 The revised seven-phase chapter was played through to victory in the desktop browser. Tests combined ordinary keyboard presses, manual input sequences, and a development-only input pilot. The pilot uses the real action scheduler and never edits health, positions, clocks, or story state. Its casual mode mistimes alternate guards, but it still attacks efficiently; it is not evidence of an average human player's completion time.
