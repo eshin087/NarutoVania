@@ -50,6 +50,16 @@ export const ZABUZA_MOVES: BossMove[] = [
 
 ];
 
+// Sword anticipation is intentionally uncompressed: pose contact and hit events share these times.
+const swordTiming: Record<string, number[]> = {
+  'sword-string': [700,1360,2060], 'delayed-cleave':[1050], 'advancing-cut':[800],
+  'silent-killing':[950], 'demon-of-the-mist':[700,1350,1950,2850],
+};
+for (const attack of ZABUZA_MOVES) {
+  const times=swordTiming[attack.id]; if(!times)continue;
+  attack.events=attack.events.map((e,i)=>({...e,at:times[i]}));
+  attack.duration=times[times.length-1]+420;attack.cancelAt=attack.duration;
+}
 export const HAKU_MOVES: BossMove[] = [
 
   move('senbon-fan', 1560, 17, [shot(620, 8, 'ice', 3, false, 440)], {animation: 'cast', maxRange: 1500, minRange: 155, recovery: 660, cooldown: 4200}),

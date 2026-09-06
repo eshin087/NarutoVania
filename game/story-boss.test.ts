@@ -69,7 +69,7 @@ describe('story director skip and replay', () => {
     expect(director.mode).toBe('cinematic'); director.skip();
     expect(enter).toEqual([]); expect(complete).toEqual(['done']);
   });
-  it('completes the full five-phase chapter with canonical state and no forced deaths', () => {
+  it('completes the full four-phase chapter with canonical state and no forced deaths', () => {
     const {director, enter, complete} = make('mist'); director.start(true); director.skip();
     for (const phase of PLAYABLE_PHASE_IDS) {expect(director.state.phase).toBe(phase); director.finishObjective(); director.skip();}
     expect(enter).toEqual(PLAYABLE_PHASE_IDS); expect(complete).toEqual(['done']);

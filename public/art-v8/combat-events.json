@@ -1,0 +1,41 @@
+{
+  "sword": {
+    "framesPerStrike": 6,
+    "contactFrame": 3,
+    "anticipationFrames": [
+      0,
+      1,
+      2
+    ],
+    "contactMs": 80,
+    "followThroughMs": 110,
+    "recoveryFrame": 5,
+    "rows": [
+      "forehand",
+      "backhand",
+      "red-overhead",
+      "rising"
+    ],
+    "footAnchor": [
+      256,
+      320
+    ],
+    "effectAttachmentFromFoot": [
+      60,
+      -130
+    ],
+    "timingSource": "game/sword-presentation.ts and game/boss-ai.ts"
+  },
+  "glamour": {
+    "frameMs": 300,
+    "visibleMs": 1250,
+    "stunMs": 1000,
+    "range": 450,
+    "chakra": 24,
+    "cooldownMs": 10000,
+    "footAnchor": [
+      256,
+      450
+    ]
+  }
+}

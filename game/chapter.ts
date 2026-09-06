@@ -1,7 +1,7 @@
 import type {AttackDefinition, CharacterId, PlayerId} from './combat-core';
 
 export const PHASE_IDS = ['mist', 'rescue', 'copy', 'protect', 'mirrors', 'seal', 'lightning'] as const;
-export const PLAYABLE_PHASE_IDS = ['mist', 'rescue', 'copy', 'mirrors', 'seal'] as const;
+export const PLAYABLE_PHASE_IDS = ['mist', 'rescue', 'mirrors', 'seal'] as const;
 export type StoryPhaseId = typeof PHASE_IDS[number];
 export type ArenaId = 'lakeside' | 'bridge';
 export type CinematicId = 'arrival' | 'prison' | 'shuriken' | 'hunter' | 'bridge' | 'sacrifice' | 'hesitation' | 'ending';
@@ -14,14 +14,14 @@ export const PHASES: Record<StoryPhaseId, PhaseDefinition> = {
   mist: {id: 'mist', number: 1, title: 'Assassin of the Mist', character: 'kakashi', boss: 'zabuza', arena: 'lakeside', hp: 1250,
     objective: 'Deflect the sword. Punish a broken guard.', intro: 'arrival', outro: 'prison', playerX: 400, bossX: 990, targetSeconds: 50},
   rescue: {id: 'rescue', number: 2, title: 'Rescue Kakashi', character: 'naruto', boss: 'zabuza', arena: 'lakeside', hp: 850,
-    objective: 'With Sasuke, overcome the water clone.', intro: 'prison', outro: 'shuriken', playerX: 430, bossX: 1000, targetSeconds: 50},
+    objective: 'With Sasuke, overcome the water clone.', intro: 'prison', outro: 'shuriken', playerX: 430, bossX: 850, targetSeconds: 50},
   copy: {id: 'copy', number: 3, title: 'The Copy Ninja', character: 'kakashi', boss: 'zabuza', arena: 'lakeside', hp: 1200,
     objective: 'Restrain Zabuza. Strike with Lightning Blade.', intro: 'shuriken', outro: 'hunter', playerX: 420, bossX: 1010, targetSeconds: 50},
   protect: {id: 'protect', number: 4, title: 'Protect the Bridge Builder', character: 'sakura', boss: 'zabuza', arena: 'bridge', hp: 1400,
     objective: 'Protect Tazuna for 50s or defeat Zabuza.', intro: 'bridge', outro: 'bridge', playerX: 370, bossX: 1010, targetSeconds: 50, protectionSeconds: 50},
-  mirrors: {id: 'mirrors', number: 4, title: 'Crystal Ice Mirrors', character: 'sasuke', boss: 'haku', arena: 'bridge', hp: 1200,
+  mirrors: {id: 'mirrors', number: 3, title: 'Crystal Ice Mirrors', character: 'sasuke', boss: 'haku', arena: 'bridge', hp: 1200,
     objective: 'Hold out for 45 seconds. Break Haku’s guard once inside the mirrors.', intro: 'bridge', outro: 'sacrifice', playerX: 480, bossX: 1080, targetSeconds: 50},
-  seal: {id: 'seal', number: 5, title: 'The Broken Seal', character: 'naruto', boss: 'haku', arena: 'bridge', hp: 1200,
+  seal: {id: 'seal', number: 4, title: 'The Broken Seal', character: 'naruto', boss: 'haku', arena: 'bridge', hp: 1200,
     objective: 'Break the mirrors. Reach Haku.', intro: 'sacrifice', outro: 'hesitation', playerX: 530, bossX: 1090, targetSeconds: 50},
   lightning: {id: 'lightning', number: 7, title: 'Lightning Blade', character: 'kakashi', boss: 'zabuza', arena: 'bridge', hp: 2000,
     objective: 'Counter silent killing. Restrain Zabuza.', intro: 'hesitation', outro: 'ending', playerX: 410, bossX: 1030, targetSeconds: 70},
@@ -50,7 +50,7 @@ const ABILITIES = {
   hounds: {label: 'Ninja Hounds', icon: 'dog', description: 'Pin Zabuza for 1s and damage his guard. 32 chakra.', attack: technique('hounds', 'skill2', 32, 11000, 'smoke', 80)},
   blade: {label: 'Chidori', icon: 'bolt', description: 'ULTIMATE · Lightning Blade. Lock on, charge lightning, then pierce the guard with a cinematic rush.', attack: technique('lightning', 'ultimate', 0, 0, 'lightning', 420)},
   clones: {label: 'Shadow Clones', icon: 'clone', description: 'Two allies distract and attack for six seconds; each disappears after one hit.', attack: technique('clones', 'skill1', 30, 8500, 'smoke')},
-  feint: {label: 'Clone Launcher', icon: 'rush', description: 'A clone boosts an upward kick. Close-range guard pressure; no decoy. 24 chakra.', attack: {...technique('launcher', 'skill2', 24, 6500, 'impact', 85), duration: 900, cancelAt: 720, animation: 'light3'}},
+  feint: {label: 'Sexy no Jutsu', icon: 'feint', description: 'A fully clothed adult glamour illusion dazzles a nearby opponent for 1 second. 24 chakra.', attack: technique('glamour', 'skill2', 24, 10000, 'smoke')},
   teamwork: {label: 'Clone Barrage', icon: 'rush', description: 'ULTIMATE · Clones surround the target for a coordinated three-strike takedown.', attack: technique('barrage', 'ultimate', 0, 0, 'impact', 370)},
   redRush: {label: 'Chakra Rush', icon: 'rush', description: 'Nine-Tails chakra drives a rush that can shatter ice mirrors.', attack: technique('red-rush', 'skill2', 25, 6500, 'impact', 125)},
   nineTails: {label: 'Unsealed Fury', icon: 'rush', description: 'ULTIMATE · Erupt in red chakra, smash the mirrors, and unleash a brutal rush.', attack: technique('fury', 'ultimate', 0, 0, 'impact', 450)},

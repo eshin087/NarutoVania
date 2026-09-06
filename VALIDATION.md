@@ -1,3 +1,21 @@
+# Sword, support, and story revision — September 6, 2026
+
+## Current revision
+
+83 automated tests, TypeScript checking, and lint pass. Added sword contact/anticipation alignment, three-strike parry rewards, support decision/resource tests, one-second glamour stun expiry, four-phase progression, and legacy copy-checkpoint migration.
+
+A fresh headless Edge browser completed all four playable phases and the natural ending using the existing development input pilot. The pilot presses ordinary game actions without overriding HP, position, time, resources, or outcomes. Total active combat time was 164 seconds with accurate automated defense; this is not an average-human difficulty benchmark. Final Naruto health was 72, chakra 22. The removed copy duel was never entered. No browser console/page errors or missing audio were reported. Victory cleaned up all fighters, projectiles, effects and decoys; one music track remained.
+
+A separate normal saved-checkpoint test verified the rescue scene and new technique: 24 chakra consumed, boss stunned, one generated adult clothed illusion, no damage or ultimate charge granted by casting. The complete ending was replayed naturally and captured at interception, betrayal, final stand and snow; it reached victory with no page errors. Stable idle/pose settling, staged crowd entry, camera bounds, normal-scale prison rendering, and the new icon were visually inspected. A final small refinement corrected rescue landings, prisoner framing, and Kakashi's interception attack pose; automated checks were rerun afterward.
+
+The generated 24-frame Zabuza sword atlas and four-frame glamour atlas were inspected on a contrasting backdrop and checked for transparent cell borders, consistent anchors, complete swords, and scale. Prompts, per-frame rectangles/anchors, source bounds and QA are in public/art-v8. Senbon use a thin procedural silver needle and straight velocity-aligned trail instead of a spinning/diagonal bundle.
+
+Physical-controller hardware and listening evaluation were unavailable. Existing simulated input/controller tests pass. The headless run is a functional browser playtest, not a physical-input or subjective difficulty assessment.
+
+---
+
+## Previous-release evidence (historical)
+
 # Story and combat revision validation — September 6, 2026
 
 ## Latest ultimate adjustment
@@ -31,3 +49,5 @@ Browser access then failed with a Windows sandbox ACL initialization error, incl
 Built-in imagegen produced the four-frame grounded tidal-wave strip, six story panels, and Naruto launcher icon. The asset agent inspected frame bounds, transparency, alignment, and scene content; user-authorized code cleanup/normalization retained the generated art. Prompts and QA are in public/art-v5. The wave has a 900 ms presentation, delayed impact at 360 ms, and a fixed foot anchor. No original anime voice/music recordings were added.
 
 The browser reported high desktop frame rates during the observed fights and no asset-load error. Formal sustained performance, audio listening, physical-controller testing, and a completed final no-ultimate Haku clear remain unverified for this revision. Prior validation must not be read as verification of those updated behaviors.
+
+Final focused browser pass: Sasuke cast three techniques over roughly 20 seconds, including Great Fireball and Windmill Shuriken, used a dash, and moved between x=105 and x=461 while preserving spacing. The final ending replay confirmed Kakashi uses an attack pose at interception and reaches victory with no page errors after the last cinematic edits. Build completed successfully; final typecheck/lint/83 tests passed.

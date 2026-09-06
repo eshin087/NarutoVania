@@ -70,23 +70,24 @@ export function outroClip(phase: StoryPhaseId): CinemaClip {
 
     case 'rescue': return {id: 'transformed-shuriken', arena: 'lakeside', duration: 14500,
 
-      actors: [actor('naruto', 410), actor('sasuke', 535), actor('zabuza', 1040, -1, 'cast'), actor('prisoner', 1130, -1, 'guardbreak', 545)],
+      actors: [actor('naruto', 410), actor('sasuke', 535), actor('zabuza', 1040, 1, 'cast'), actor('prisoner', 1130, -1, 'guardbreak', 545)],
 
       cues: [{at: 0, effect: 'prison', actor: 'prisoner', camera: 200}, {at: 1000, actor: 'naruto', animation: 'cast', effect: 'smoke'},
 
         {at: 2400, actor: 'naruto', alpha: 0, effect: 'shuriken'}, {at: 3400, actor: 'sasuke', animation: 'cast'},
 
-        {at: 4000, actor: 'sasuke', effect: 'shuriken'}, {at: 5000, actor: 'zabuza', animation: 'jump', y: 470, duration: 350},
+        {at: 4000, actor: 'sasuke', effect: 'shuriken'}, {at: 4500,actor:'zabuza',facing:-1}, {at: 5000, actor: 'zabuza', animation: 'jump', y: 470, duration: 350},
 
-        {at: 6500, actor: 'naruto', facing: -1, x: 1260, y: 500, alpha: 1, animation: 'cast', effect: 'smoke'},
+        {at:5700,actor:'zabuza',y:590,duration:400,animation:'land'},
+        {at: 6500, actor: 'naruto', facing: -1, x: 1260, y: 525, alpha: 1, animation: 'cast', effect: 'smoke'},
 
-        {at: 7200, actor: 'naruto', effect: 'shuriken'}, {at: 7800, actor: 'zabuza', x: 960, y: 590, duration: 300, animation: 'hurt'},
+        {at: 7200, actor: 'naruto', effect: 'shuriken'}, {at: 7800, actor: 'zabuza', facing:1, x: 960, y: 590, duration: 300, animation: 'hurt'},
 
         {at: 8300, actor: 'prisoner', y: 590, animation: 'land', effect: 'water', duration: 450},
 
-        {at: 9500, actor: 'prisoner', x: 930, duration: 450, animation: 'dash'}, {at: 10500, actor: 'zabuza', animation: 'block', effect: 'parry'},
+        {at: 9500, actor: 'prisoner', x: 1020, duration: 450, animation: 'dash'}, {at: 10500, actor: 'zabuza', animation: 'block', effect: 'parry'},
 
-        {at: 8200, actor: 'naruto', y: 592, duration: 400, animation: 'land', facing: -1}, {at: 12500, camera: 400, duration: 900}, {at: 13700, fade: 'out'}]};
+        {at: 7450, actor: 'naruto', y: 592, duration: 400, animation: 'land', facing: -1}, {at: 12500, camera: 400, duration: 900}, {at: 13700, fade: 'out'}]};
 
     case 'copy': return {id: 'hunter-nin-deception', arena: 'lakeside', duration: 22000, actors: [...common, actor('haku', 1420, -1)],
 
@@ -152,9 +153,9 @@ export function outroClip(phase: StoryPhaseId): CinemaClip {
 
     case 'lightning': return {id: 'a-demon-in-the-snow', arena: 'bridge', duration: 36000,
 
-      actors: [actor('kakashi', 500), actor('zabuza', 1080, -1), actor('haku', 1530, -1), actor('naruto', 1380, -1), actor('sasuke', 1490, 1, 'defeat'),
+      actors: [actor('kakashi', 500), actor('zabuza', 1080, -1), actor('haku', 1530, -1), actor('naruto', 740), actor('sasuke', 480, 1, 'defeat'),
 
-        actor('sakura', 1515, -1), actor('gato', 1610, -1), actor('hound1', 650), actor('hound2', 720), actor('hound3', 760), actor('henchman1', 1560, -1), actor('henchman2', 1615, -1), actor('henchman3', 1670, -1)],
+        actor('sakura', 550, -1), actor('gato', 1610, -1), actor('hound1', 650), actor('hound2', 720), actor('hound3', 760), actor('henchman1', 1560, -1), actor('henchman2', 1615, -1), actor('henchman3', 1670, -1)],
 
       cues: [{at: 0, camera: 350}, {at: 600, actor: 'kakashi', animation: 'cast', effect: 'smoke'},
 
@@ -164,15 +165,17 @@ export function outroClip(phase: StoryPhaseId): CinemaClip {
 
         {at: 4400, actor: 'kakashi', animation: 'ultimate', effect: 'lightning'}, {at: 6300, actor: 'kakashi', x: 995, duration: 900, animation: 'dash'},
 
-        {at: 6800, actor: 'haku', x: 1050, duration: 320, animation: 'airdash'}, {at: 7400, actor: 'haku', animation: 'hurt', effect: 'lightning'},
+        {at: 6800, actor: 'haku', x: 1050, duration: 320, animation: 'airdash'}, {at:7300,actor:'kakashi',animation:'light1',effect:'lightning'}, {at: 7400, actor: 'haku', animation: 'hurt', effect: 'lightning'}, {at:7950,actor:'kakashi',animation:'block'},
 
         {at: 8900, actor: 'haku', animation: 'defeat'}, {at: 10200, actor: 'hound1', alpha: 0, effect: 'smoke'}, {at: 10200, actor: 'hound2', alpha: 0}, {at: 10200, actor: 'hound3', alpha: 0},
 
-        {at: 11800, actor: 'gato', x: 1250, duration: 1600, animation: 'run'}, {at: 12900, actor: 'kakashi', x: 810, duration: 900, animation: 'run'},
+        {at: 11000, actor:'gato',alpha:1},
+        {at:11000,actor:'henchman1',alpha:1,x:1330}, {at:11000,actor:'henchman2',alpha:1,x:1410}, {at:11000,actor:'henchman3',alpha:1,x:1550},
+        {at: 11800, actor: 'gato', x: 1510, duration: 1000, animation: 'run'}, {at: 12900, actor: 'kakashi', x: 810, duration: 900, animation: 'run'},
 
-        {at: 14000, actor: 'kakashi', facing: 1}, {at: 14900, actor: 'naruto', x: 1140, duration: 850, animation: 'run'}, {at: 16100, actor: 'zabuza', animation: 'guardbreak'},
+        {at: 14000, actor: 'kakashi', facing: 1}, {at: 14900, actor: 'naruto', x: 930, facing:1, duration: 850, animation: 'run'}, {at: 16100, actor: 'zabuza', animation: 'guardbreak'},
 
-        {at: 17900, actor: 'naruto', animation: 'cast'}, {at: 18700, actor: 'zabuza', animation: 'heavy'},
+        {at: 17900, actor: 'naruto', animation: 'cast'}, {at: 18700, actor: 'zabuza', facing:1, animation: 'heavy'},
 
         {at: 19800, actor: 'zabuza', facing: 1, x: 1500, duration: 1400, animation: 'dash'}, {at: 20300, actor: 'henchman1', animation: 'defeat', effect: 'impact'},
 
@@ -186,7 +189,10 @@ export function outroClip(phase: StoryPhaseId): CinemaClip {
 
         {at: 29100, actor: 'kakashi', x: 990, animation: 'idle'}, {at: 29300, effect: 'snow', fade: 'in', camera: 550},
 
-        {at: 30500, actor: 'sakura', x: 1450, animation: 'guardbreak'}, {at: 30700, actor: 'sasuke', animation: 'hurt'}, {at: 34900, fade: 'out'}]};
+        {at: 28900,actor:'naruto',x:830,facing:1,animation:'idle'},
+        {at: 28900,actor:'sasuke',x:1430,animation:'defeat'}, {at:28900,actor:'sakura',x:1530,facing:-1,animation:'guardbreak'},
+        {at:28900,actor:'henchman1',alpha:0},{at:28900,actor:'henchman2',alpha:0},{at:28900,actor:'henchman3',alpha:0},{at:28900,actor:'gato',alpha:0},
+        {at: 30700, actor: 'sasuke', facing:-1, animation: 'hurt'}, {at: 34900, fade: 'out'}]};
 
   }
 
@@ -210,6 +216,7 @@ export class StoryDirector {
 
   start(viewIntro: boolean) {
 
+    if (this.state.phase === 'copy') {this.play(outroClip('copy'), () => this.play(outroClip('protect'), () => this.enter('mirrors'))); return;}
     if (this.state.phase === 'protect') {this.play(outroClip('protect'), () => this.enter('mirrors')); return;}
 
     if (this.state.phase === 'lightning') {this.play(outroClip('lightning'), () => this.complete()); return;}
@@ -222,7 +229,7 @@ export class StoryDirector {
 
   play(clip: CinemaClip, after: () => void) {
 
-    clip = withDialogue(clip);
+    clip = withDialogue(clip); clip.cues.sort((a,b)=>a.at-b.at);
 
     this.clip = clip; this.clock = 0; this.emitted.clear(); this.mode = 'cinematic'; this.afterClip = after; this.callbacks.cinematic(clip); this.update(0);
 
@@ -244,6 +251,7 @@ export class StoryDirector {
 
     this.play(outroClip(phase), () => {
 
+      if (phase === 'rescue') {this.play(outroClip('copy'), () => this.play(outroClip('protect'), () => this.enter('mirrors'))); return;}
       if (phase === 'copy') {this.play(outroClip('protect'), () => this.enter('mirrors')); return;}
 
       if (phase === 'seal') {this.play(outroClip('lightning'), () => this.complete()); return;}

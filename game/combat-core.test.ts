@@ -96,8 +96,8 @@ describe('action scheduler', () => {
   });
 });
 describe('canonical checkpoint state', () => {
-  it('has five controlled phases and no traversal waves', () => {
-    expect(PLAYABLE_PHASE_IDS.map(id => PHASES[id].character)).toEqual(['kakashi', 'naruto', 'kakashi', 'sasuke', 'naruto']);
+  it('has four controlled phases and no traversal waves', () => {
+    expect(PLAYABLE_PHASE_IDS.map(id => PHASES[id].character)).toEqual(['kakashi', 'naruto', 'sasuke', 'naruto']);
     expect(nextPhase('lightning')).toBeNull();
   });
   it('restores the complete handoff state from any checkpoint', () => {

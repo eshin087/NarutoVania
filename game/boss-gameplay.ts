@@ -9,15 +9,18 @@ import {namedArt, poseBattle} from './battle-art';
 import {StoryDirector, type ActorId, type CinemaClip, type CinemaCue} from './story-director';
 import {attackBounds, fixedAim, projectileSweep} from './projectile-rules';
 import {CinemaPresentation} from './cinema-presentation';
+import {SupportBrain} from './support-ai';
+import {swordPresentation} from './sword-presentation';
+import {poseZabuzaSword} from './battle-art';
 import {UltimateBurst} from './ultimate-burst';
 
 type BodyObject = Phaser.GameObjects.Rectangle & {body: Phaser.Physics.Arcade.Body};
-interface Fighter {key: string; model: Combatant; body: BodyObject; sprite: Phaser.GameObjects.Sprite; shadow: Phaser.GameObjects.Ellipse; animation: AnimationName; animationAt: number; lastStep: number; ally: boolean; hostile: boolean; expires: number; nextAttack: number; rush?: {x: number; until: number; serial: number};}
+interface Fighter {key: string; model: Combatant; body: BodyObject; sprite: Phaser.GameObjects.Sprite; shadow: Phaser.GameObjects.Ellipse; animation: AnimationName; animationAt: number; lastStep: number; ally: boolean; hostile: boolean; expires: number; nextAttack: number; support?: SupportBrain; guardUntil?: number; supportCasts?: number; rush?: {x: number; until: number; serial: number};}
 interface Projectile {image: Phaser.GameObjects.Image; x: number; y: number; vx: number; vy: number; damage: number; posture: number; red: boolean; friendly: boolean; owner: Fighter; expires: number; rx: number; ry: number; kind: string; hit: Set<string>; returnAt?: number; waterRow?:number; born:number; trail:{x:number;y:number}[];}
 interface VisualEffect {image: Phaser.GameObjects.Image; born: number; duration: number; width: number; grow: number; spin: number; waterRow?:number; tidal?: {owner:Fighter;event:AttackEvent;key:string;x:number;hit:boolean};}
 interface MirrorVisual {image: Phaser.GameObjects.Image; reflection: Phaser.GameObjects.Sprite; halo: Phaser.GameObjects.Ellipse;}
 interface Decoy {image: Phaser.GameObjects.Image; x: number; y: number; expires: number;}
-interface CinemaVisual {sprite: Phaser.GameObjects.Sprite | Phaser.GameObjects.Image; id: ActorId; character?: CharacterId; animation: AnimationName; animationAt: number; facing: -1 | 1;}
+interface CinemaVisual {sprite: Phaser.GameObjects.Sprite | Phaser.GameObjects.Image; id: ActorId; character?: CharacterId; animation: AnimationName; animationAt: number; facing: -1 | 1; settleAt?: number;}
 
 export class BossGameScene extends Phaser.Scene {
   inputs!: BattleInput; sounds!: RecordedAudio; director!: StoryDirector; phase: StoryPhaseId = 'mist';
@@ -30,7 +33,7 @@ export class BossGameScene extends Phaser.Scene {
   mirrorGuardBreaks = 0; bossBreakAnnounced = 0;
   clonesCreated = 0; parries = 0; retries = 0; protection = 100; protectionHits = 0; protectionUntil = 0;
   sharingan = false; narutoJoined = false; phaseEnding = false; gameOver = false; pausedFrom: 'playing' | 'intro' = 'playing';
-  cinemaActors = new Map<ActorId, CinemaVisual>(); cinemaClock = 0; cinemaPrison: Phaser.GameObjects.Image | null = null;
+  cinemaActors = new Map<ActorId, CinemaVisual>(); cinemaClock = 0; cinemaPrison: Phaser.GameObjects.Graphics | null = null; prisonActor: CinemaVisual | null = null; glamour: {sprite:Phaser.GameObjects.Sprite;born:number} | null = null; parryFlashUntil=0; parryChain=0; lastParry=-9999;
   followups: {at: number; fighter: Fighter; event: AttackEvent; key: string; serial: number}[] = [];
   sceneryActors: Phaser.GameObjects.GameObject[] = []; snow: {x: number; y: number; speed: number}[] = []; snowActive = false;
   cinemaPresentation: CinemaPresentation | null = null;
@@ -55,7 +58,7 @@ export class BossGameScene extends Phaser.Scene {
     this.physics.world.timeScale = 1; this.readingSlow = 0; this.counterUntil = 0; this.cinemaPresentation = null;
     this.physics.world.resume(); this.tweens.killAll(); this.physics.world.colliders.destroy(); if (this.floors?.scene) this.floors.destroy(true);
     this.children.removeAll(true); this.fighters = []; this.projectiles = []; this.effects = []; this.decoys = []; this.mirrorVisuals = [];
-    this.backgrounds = []; this.mist = []; this.sceneryActors = []; this.followups = []; this.cinemaActors.clear(); this.cinemaPrison = null;
+    this.backgrounds = []; this.mist = []; this.sceneryActors = []; this.followups = []; this.cinemaActors.clear(); this.cinemaPrison = null; this.prisonActor=null; this.glamour=null; this.parryFlashUntil=0; this.parryChain=0;
     this.formation = new MirrorFormation(); this.snowActive = false;
   }
   private arena(name: 'lakeside' | 'bridge') {
@@ -101,9 +104,11 @@ export class BossGameScene extends Phaser.Scene {
   private stageStoryActors() {
     const prop = (name: string, x: number, width = 105) => {const p = namedArt(this, 'props', name, x, this.floor, width).setOrigin(.5, 1).setDepth(2); p.setScale(158 / p.height); this.sceneryActors.push(p); return p;};
     if (this.phase === 'rescue') {
-      this.sceneryActors.push(namedArt(this, 'props', 'water-prison', 1350, this.floor - 93, 170).setDepth(5));
-      const original = this.add.sprite(1240, this.floor, 'zabuza-techniques', '12').setDepth(2); poseBattle(original, 'zabuza', 'cast', 250, 1); this.sceneryActors.push(original);
-      this.boss.sprite.setTint(0x85c6da).setAlpha(.83); this.fighter('sasuke-ally', 'sasuke', 300, this.floor, false, 100, true);
+      const captive=this.add.sprite(1160,this.floor-48,'kakashi-techniques','8').setDepth(4);
+      poseBattle(captive,'kakashi','guardbreak',0,-1); this.sceneryActors.push(captive);
+      this.drawPrison(this.add.graphics().setDepth(5),captive.x,captive.y-78,0);
+      const original = this.add.sprite(1050, this.floor, 'zabuza-techniques', '12').setDepth(2); poseBattle(original, 'zabuza', 'cast', 250, 1); this.sceneryActors.push(original);
+      this.boss.sprite.setTint(0x85c6da).setAlpha(.83); const support=this.fighter('sasuke-ally', 'sasuke', 300, this.floor, false, 100, true); support.support=new SupportBrain();
     } else if (this.phase === 'protect') {prop('tazuna', 190, 92);}
     else if (this.phase === 'mirrors') {prop('tazuna', 120, 82);}
     else if (this.phase === 'seal' || this.phase === 'lightning') {
@@ -128,6 +133,9 @@ export class BossGameScene extends Phaser.Scene {
         const h = hits[index]; animation = h.red ? 'heavy' : (`light${index % 3 + 1}` as AnimationName); duration = 620; elapsed = clamp(280 + age - h.at, 0, 619);}
     }
     poseBattle(f.sprite, model.id, animation, elapsed, model.facing, duration, this.phase === 'seal' && model.id === 'naruto' ? 'awakened' : undefined); f.sprite.setPosition(model.x, model.y + 2);
+    if(model.id==='zabuza'&&model.action?.definition.action==='boss'&&this.now>=model.hurtUntil&&this.now>=model.guardBrokenUntil){
+      const sword=swordPresentation(model.action.definition,this.now-model.action.started);if(sword)poseZabuzaSword(f.sprite,sword.frame,model.facing);
+    }
     f.shadow.setPosition(model.x, this.floor + 2).setScale(clamp(1 - (this.floor - model.y) / 550, .25, 1));
     const hidden = f === this.boss && this.formation.active && this.formation.occupied >= 0 && this.now >= this.mirrorInterruptUntil;
     f.sprite.setVisible(!hidden); f.shadow.setVisible(!hidden);
@@ -301,6 +309,35 @@ export class BossGameScene extends Phaser.Scene {
       }
     }
   }
+  private controlSasukeSupport(f:Fighter) {
+    const p=f.model,b=this.boss.model,body=f.body.body;
+    if(p.action){body.setVelocityX(p.action.definition.action==='dash'?p.action.facing*820:0);return;}
+    p.facing=b.x>p.x?1:-1;
+    p.setGuard(this.now<(f.guardUntil||0),false,this.now);
+    let redIn=Infinity,ordinaryIn=Infinity,threatX=b.x;
+    if(b.action){const age=this.now-b.action.started;for(const e of b.action.definition.events){
+      if(e.kind==='hit'&&e.at>=age&&Math.abs(b.x-p.x)<(e.range||180)+80){if(e.red)redIn=Math.min(redIn,e.at-age);else ordinaryIn=Math.min(ordinaryIn,e.at-age);}
+    }}
+    for(const shot of this.projectiles){if(shot.friendly||shot.expires<=this.now||shot.vx===0)continue;
+      const t=((p.x-shot.x)/shot.vx-(shot.rx+22)/Math.abs(shot.vx))*1000;if(t<0||t>900||Math.abs(shot.y+shot.vy*t/1000-(p.y-70))>70)continue;
+      if(t<Math.min(redIn,ordinaryIn))threatX=shot.x;
+      if(shot.red)redIn=Math.min(redIn,t);else ordinaryIn=Math.min(ordinaryIn,t);
+    }
+    const decision=f.support!.decide({now:this.now,canAct:p.canAct(this.now),stamina:p.stamina,distance:Math.abs(b.x-p.x),redIn,ordinaryIn,
+      recovering:!b.action&&this.brain.readyAt>this.now+350,spellReady:p.chakra>=28});
+    body.setVelocityX(0);
+    if(decision==='dodge'){
+      p.setGuard(false,false,this.now);p.facing=threatX>p.x?-1:1;
+      if(p.x+p.facing*185<this.arenaMin+30||p.x+p.facing*185>this.arenaMax-30)p.facing=p.facing===1?-1:1;
+      if(p.start(UNIVERSAL.dash,this.now))body.setVelocityX(p.facing*820);
+    }else if(decision==='parry'){p.facing=threatX>p.x?1:-1;p.setGuard(false,false,this.now);p.setGuard(true,true,this.now);f.guardUntil=this.now+180;}
+    else if(decision==='retreat'){body.setVelocityX(p.x-p.facing*90>this.arenaMin&&p.x-p.facing*90<this.arenaMax?-p.facing*190:0);}
+    else if(decision==='approach')body.setVelocityX(p.facing*170);
+    else if(decision==='spell'){
+      const ability=kit('mirrors')[(f.supportCasts||0)%2].attack;
+      if(p.start({...ability,events:ability.events.map(e=>({...e,damage:(e.damage||0)*.35}))},this.now))f.supportCasts=(f.supportCasts||0)+1;
+    }else if(decision==='melee'||decision==='tool')p.start(decision==='melee'?UNIVERSAL.light2:UNIVERSAL.tool,this.now);
+  }
   private controlAllies() {
     for (const f of this.fighters) {
       if (f.hostile && f !== this.boss) {
@@ -315,6 +352,7 @@ export class BossGameScene extends Phaser.Scene {
         continue;
       }
       if (!f.ally) continue;
+      if(f.support){this.controlSasukeSupport(f);continue;}
       if (f.model.health <= 0 || f.expires && this.now >= f.expires) {this.removeFighter(f); continue;}
       const boss = this.boss.model, p = f.model; p.facing = boss.x > p.x ? 1 : -1;
       if (p.action) {f.body.body.setVelocityX(0); continue;}
@@ -361,8 +399,8 @@ export class BossGameScene extends Phaser.Scene {
     if (outcome.result === 'immune') return;
     if (attacker === this.player && outcome.damage > 0) this.counterUntil = 0;
     if (outcome.result === 'parry') {
-      attacker.model.deflected(outcome.attackerPosture * (target === this.player && this.readingUntil > this.now ? 2 : 1), this.now); this.sounds.effect('parry', 1.1); this.burst('parry', target.model.x + target.model.facing * 35, target.model.y - 80, 150, 270);
-      this.stopForImpact(45); this.shake(.0018, 85); if (target === this.player) {this.parries++; if (this.readingUntil > this.now) this.counterUntil = this.now + 1800; if (this.readingUntil > this.now) target.model.stamina = Math.min(100, target.model.stamina + 5);}
+      attacker.model.deflected(outcome.attackerPosture * (target === this.player && this.readingUntil > this.now ? 2 : 1), this.now); this.parryChain=this.now-this.lastParry<1500?this.parryChain+1:1;this.lastParry=this.now;this.parryFlashUntil=this.now+190;this.sounds.effect('parry', 1.1,1+Math.min(3,this.parryChain-1)*.08); this.burst('parry', target.model.x + target.model.facing * 35, target.model.y - 80, 150, 270);
+      this.stopForImpact(65); this.shake(.0018, 85); if (target === this.player) {this.parries++; if (this.readingUntil > this.now) this.counterUntil = this.now + 1800; if (this.readingUntil > this.now) target.model.stamina = Math.min(100, target.model.stamina + 5);}
       if (attacker === this.boss && attacker.model.stamina <= 0) this.guardBreakEffect(attacker);
       return;
     }
@@ -398,19 +436,19 @@ export class BossGameScene extends Phaser.Scene {
     if (friendly && event.effect !== 'water' && event.effect !== 'fire') image = namedArt(this, 'props', f.model.id === 'sasuke' ? 'windmill-shuriken' : 'shuriken', x, y, f.model.id === 'sasuke' ? 43 : 24);
     else if (name === 'senbon') {
       if (f.model.action?.definition.id === 'sword-throw') {image = this.add.image(x, y, 'v2-zabuza-sword').setDisplaySize(166, 28); rx = 65; ry = 13;}
-      else {image = namedArt(this, 'props', 'senbon', x, y, waterNeedle ? 65 : 47); if(waterNeedle)image.setTint(0x98e8ff);}
+      else {image = this.add.image(x,y,'v8-needle').setDisplaySize(waterNeedle?60:48,waterNeedle?4:3); rx=18;ry=3;if(waterNeedle)image.setTint(0x98e8ff);}
     }
     else if(waterRow!==undefined){const width=event.red?310:170;image=this.add.image(x,y,'v3-water',String(waterRow*4)).setDisplaySize(width,width*.5);rx=event.red?48:25;ry=event.red?52:12;}
     else {image = namedArt(this, 'effects', name, x, y, 138); rx = 44; ry = 40;}
     let target = friendly ? {x: x + f.model.facing * 1200, y} : {x: this.targetX, y: this.targetY};
     if (!friendly && event.red && event.effect === 'water') target = {x: this.targetX, y: this.floor - 62};
     const velocity = fixedAim({x, y}, target, event.speed || (friendly ? 770 : 440), offset);
-    image.setDepth(5).setRotation(velocity.angle - (velocity.vx < 0 && (event.effect === 'water' || event.effect === 'fire') ? Math.PI : 0));
-    if (event.effect === 'water' || event.effect === 'fire') image.setFlipX(velocity.vx < 0);
+    image.setDepth(5).setRotation(velocity.angle - (velocity.vx < 0 && (!waterNeedle && (event.effect === 'water' || event.effect === 'fire')) ? Math.PI : 0));
+    if (!waterNeedle && (event.effect === 'water' || event.effect === 'fire')) image.setFlipX(velocity.vx < 0);
     if(waterRow!==undefined)image.setOrigin(velocity.vx<0?.2:.8,.5);
     if (event.red && waterRow===undefined) image.setTint(0xff797b);
     this.projectiles.push({image, x, y, vx: velocity.vx, vy: velocity.vy, damage: event.damage || 8, posture: event.posture || 8,
-      red: !!event.red, friendly, owner: f, expires: this.now + 3900, rx, ry, kind: f.model.action?.definition.id === 'sword-throw' ? 'sword' : event.effect==='swing'?'tool':event.effect || 'tool', hit: new Set([key]),waterRow,born:this.now,trail:[]});
+      red: !!event.red, friendly, owner: f, expires: this.now + 3900, rx, ry, kind: !friendly&&f.model.id==='haku'?'needle':f.model.action?.definition.id === 'sword-throw' ? 'sword' : event.effect==='swing'?'tool':event.effect || 'tool', hit: new Set([key]),waterRow,born:this.now,trail:[]});
   }
   private updateProjectiles(dt: number) {
     for (const p of this.projectiles) {
@@ -422,6 +460,7 @@ export class BossGameScene extends Phaser.Scene {
         p.image.setFlipX(p.vx<0).setOrigin(p.vx<0?.2:.8,.5).setRotation(Math.atan2(p.vy,p.vx)-(p.vx<0?Math.PI:0));
         p.trail.push({x:nx,y:ny});if(p.trail.length>8)p.trail.shift();
       }
+      if(p.kind==='needle'){p.image.setRotation(Math.atan2(p.vy,p.vx));p.trail.push({x:nx,y:ny});if(p.trail.length>5)p.trail.shift();}
       if (p.kind === 'tool') p.image.rotation += dt * .023;
       if (p.kind === 'sword') p.image.rotation += dt * .009;
       if (p.returnAt && this.now >= p.returnAt) {p.returnAt = undefined; p.vx *= -1; p.hit.clear();}
@@ -484,13 +523,12 @@ export class BossGameScene extends Phaser.Scene {
       for (const offset of [-56, 56]) {const clone = this.fighter(`clone-${++this.clonesCreated}`, 'naruto', clamp(p.x + offset, this.arenaMin + 30, this.arenaMax - 30), p.y, false, 1, true);
         clone.expires = this.now + 6000; this.burst('smoke', clone.model.x, clone.model.y - 40, 120, 330);} return;
     }
-    if (id === 'launcher') {
-      const clone = this.add.sprite(p.x - p.facing * 35, this.floor, 'naruto-melee', '12').setDepth(3).setTint(0xaddbff).setAlpha(.75);
-      poseBattle(clone, 'naruto', 'light3', 120, p.facing, 600);
-      this.tweens.add({targets:clone, y:this.floor-65, alpha:0, duration:600, onComplete:()=>clone.destroy()});
-      this.burst('smoke', p.x-p.facing*35, this.floor-40, 100, 250);
-      f.rush = {x:clamp(p.x+p.facing*100,this.arenaMin+32,this.arenaMax-32),until:this.now+160,serial:p.action?.serial||0};
-      this.followups.push({at:this.now+180,fighter:f,key:`${key}-launcher`,serial:p.action?.serial||0,event:{at:0,kind:'hit',damage:85,posture:34,range:175,height:175,effect:'impact'}});
+    if (id === 'glamour') {
+      this.glamour?.sprite.destroy();
+      const x=clamp(p.x+p.facing*90,this.arenaMin+40,this.arenaMax-40);
+      const sprite=this.add.sprite(x,this.floor+2,'v8-glamour','0').setOrigin(.5,450/512).setScale(155/370).setDepth(4);
+      this.glamour={sprite,born:this.now};this.burst('smoke',x,this.floor-65,160,350);
+      if(Math.abs(this.boss.model.x-x)<450&&!this.formation.active){this.boss.model.stagger(this.now,1000);this.bossRestrainedUntil=this.now+1000;this.brain.stagger(this.now,1000);}
       return;
     }
     if (id === 'reading') {this.readingUntil = this.now + 4400; this.readingSlow = 3000; this.burst('parry', p.x, p.y - 118, 44, 450); return;}
@@ -628,6 +666,20 @@ export class BossGameScene extends Phaser.Scene {
   }
   private updateCues(dt: number) {
     const graphics = this.cueGraphics; graphics.clear();
+    if(this.glamour){const age=this.now-this.glamour.born;if(age>1250){this.burst('smoke',this.glamour.sprite.x,this.floor-70,110,240);this.glamour.sprite.destroy();this.glamour=null;}
+      else{const v=this.glamour.sprite;v.setFrame(String(Math.min(3,Math.floor(age/300))));v.setAlpha(Math.min(1,(1250-age)/200));
+        for(let i=0;i<6;i++){const a=age/500+i*Math.PI/3;graphics.fillStyle(0xffbbdd,.8);graphics.fillCircle(v.x+Math.cos(a)*50,v.y-100+Math.sin(a)*38,3);}
+        if(this.now<this.bossRestrainedUntil){const b=this.boss.model;graphics.lineStyle(2,0xff94c6,.9);graphics.strokeEllipse(b.x,b.y-180,52,15);}
+      }}
+    if(this.now<this.parryFlashUntil){const a=(this.parryFlashUntil-this.now)/190,x=this.player.model.x+this.player.model.facing*40,y=this.player.model.y-85;
+      graphics.lineStyle(3,0xffefac,a);for(let i=0;i<9;i++){const angle=i*Math.PI*2/9;graphics.lineBetween(x+Math.cos(angle)*20,y+Math.sin(angle)*20,x+Math.cos(angle)*(95-a*40),y+Math.sin(angle)*(95-a*40));}}
+    const attack=this.boss.model.action;
+    if(this.boss.model.id==='zabuza'&&attack){const cue=swordPresentation(attack.definition,this.now-attack.started);
+      if(cue&&cue.remaining>0&&cue.remaining<500){const b=this.boss.model,color=cue.red?0xff5365:0xffdfa0,alpha=cue.remaining<145?.95:.32;
+        graphics.lineStyle(cue.remaining<145?4:2,color,alpha);graphics.beginPath();graphics.arc(b.x,b.y-78,155,b.facing>0?-1.15:Math.PI-1.15,b.facing>0?1.15:Math.PI+1.15);graphics.strokePath();
+        if(cue.remaining<145){graphics.fillStyle(color,.95);graphics.fillCircle(b.x+b.facing*60,b.y-130,7);}
+      }}
+
     if (this.player.model.id === 'kakashi' && this.readingUntil > this.now) {
       const p=this.player.model,b=this.boss.model; graphics.lineStyle(5,0xf04b69,.3); graphics.strokeRect(this.cameras.main.scrollX+5,5,1270,710);
       graphics.lineStyle(2,0xff5d71,.65); graphics.strokeCircle(p.x,p.y-130,26);
@@ -635,6 +687,10 @@ export class BossGameScene extends Phaser.Scene {
       graphics.lineStyle(2,0xff7d8b,.32);graphics.lineBetween(p.x,p.y-100,b.x,b.y-85);
     }
     for(const projectile of this.projectiles){
+      if(projectile.kind==='needle'&&projectile.expires>this.now){
+        const speed=Math.hypot(projectile.vx,projectile.vy),dx=projectile.vx/speed,dy=projectile.vy/speed;
+        graphics.lineStyle(2,0xbdefff,.28);graphics.lineBetween(projectile.x-dx*18,projectile.y-dy*18,projectile.x-dx*70,projectile.y-dy*70);
+      }
       if(projectile.waterRow===undefined)continue;
       const direction=Math.sign(projectile.vx);
       projectile.trail.forEach((point,i)=>{graphics.fillStyle(0xb4f2ff,i/projectile.trail.length*.25);graphics.fillEllipse(point.x-direction*48,point.y+Math.sin(i*2+this.now/85)*12,8,3);});
@@ -719,6 +775,12 @@ export class BossGameScene extends Phaser.Scene {
         guardBroken: this.now < b.guardBrokenUntil, stunned:this.now<b.hurtUntil, postureFlash:this.now-b.postureHitAt<250, recovery:Math.max(0,Math.max(b.hurtUntil,b.guardBrokenUntil)-this.now)/1000,
         phase: this.formation.active ? 'Crystal Ice Mirrors' : this.now < this.mistUntil ? 'Silent Killing' : ''}});
   }
+  private drawPrison(g:Phaser.GameObjects.Graphics,x:number,y:number,time:number){
+    g.clear();g.fillStyle(0x73d9ee,.16);g.fillCircle(x,y,108);g.lineStyle(4,0x94efff,.7);g.strokeCircle(x,y,108);
+    g.lineStyle(2,0xdcffff,.7);g.beginPath();g.arc(x,y,99,-2.75,-1.05);g.strokePath();
+    g.lineStyle(1,0x9ce8ff,.3);g.strokeEllipse(x,y+Math.sin(time/600)*8,207,54);
+    for(let i=0;i<8;i++){const a=i*.78+time*.0002;g.fillStyle(0xe3ffff,.55);g.fillCircle(x+Math.cos(a)*95,y+Math.sin(a)*95,2);}
+  }
   private startCinema(clip: CinemaClip) {
     this.clearStage(); this.arena(clip.arena); this.physics.world.pause(); this.sounds.stopEffects(); this.sounds.sync(true); this.cinemaClock = 0;
     this.cinemaPresentation = new CinemaPresentation(this);
@@ -730,31 +792,33 @@ export class BossGameScene extends Phaser.Scene {
       sprite.setAlpha(a.alpha ?? 1);
       this.cinemaActors.set(a.id, {sprite, id: a.id, character, animation: a.animation, animationAt: 0, facing: a.facing});
     }
-    if (clip.id === 'a-demon-in-the-snow') {for (const id of ['hound1', 'hound2', 'hound3'] as ActorId[]) this.cinemaActors.get(id)?.sprite.setAlpha(0);}
+    if (clip.id === 'a-demon-in-the-snow') {for (const id of ['hound1', 'hound2', 'hound3','gato','henchman1','henchman2','henchman3'] as ActorId[]) this.cinemaActors.get(id)?.sprite.setAlpha(0);}
     this.inputs.clear(); bridge.patch({screen: 'intro', boss: null, cinematic: clip.id, elapsed: this.elapsed});
   }
   private cinemaCue(cue: CinemaCue) {
     this.cinemaPresentation?.cue(cue, this.cinemaClock);
     const actor = cue.actor ? this.cinemaActors.get(cue.actor) : undefined;
     if (actor) {
-      if (cue.animation) {actor.animation = cue.animation; actor.animationAt = this.cinemaClock;}
+      if (cue.animation) {actor.animation = cue.animation; actor.animationAt = this.cinemaClock; actor.settleAt=['idle','guardbreak','defeat','block'].includes(cue.animation)?undefined:this.cinemaClock+(cue.duration||(['ultimate'].includes(cue.animation)?1100:650));}
+      if(this.director.clip?.id==='water-prison'&&cue.actor==='zabuza'&&cue.animation==='cast')actor.settleAt=undefined;
       if (cue.facing) actor.facing = cue.facing;
       else if (cue.x !== undefined && ['run','dash','airdash'].includes(cue.animation || '') && Math.abs(cue.x-actor.sprite.x)>1) actor.facing = cue.x > actor.sprite.x ? 1 : -1;
       if (cue.alpha !== undefined) actor.sprite.setAlpha(cue.alpha);
       if (cue.actor?.startsWith('hound') && cue.x !== undefined) actor.sprite.setAlpha(1);
       if (cue.x !== undefined || cue.y !== undefined) {
+        this.tweens.killTweensOf(actor.sprite);
         if (cue.duration) this.tweens.add({targets: actor.sprite, x: cue.x ?? actor.sprite.x, y: cue.y ?? actor.sprite.y, duration: cue.duration, ease: cue.animation === 'run' ? 'Linear' : 'Cubic.easeInOut',
           onComplete: () => {if (actor.animation === cue.animation && ['run','dash','airdash','land'].includes(actor.animation)) {actor.animation = 'idle'; actor.animationAt = this.cinemaClock;}}});
         else actor.sprite.setPosition(cue.x ?? actor.sprite.x, cue.y ?? actor.sprite.y);
       }
       if (actor.character && ['hurt', 'cast', 'ultimate', 'heavy'].includes(cue.animation || '')) this.sounds.voice(actor.character, cue.animation === 'hurt' ? 'hurt' : 'cast');
     }
-    if (cue.camera !== undefined) this.tweens.add({targets: this.cameras.main, scrollX: clamp(cue.camera, 0, ARENAS[this.director.clip!.arena].width - 1280), duration: cue.duration || 1, ease: 'Sine.easeInOut'});
+    if (cue.camera !== undefined) {this.tweens.killTweensOf(this.cameras.main);this.tweens.add({targets: this.cameras.main, scrollX: clamp(cue.camera, 0, ARENAS[this.director.clip!.arena].width - 1280), duration: cue.duration || 1, ease: 'Sine.easeInOut'});}
     if (cue.zoom) this.cameras.main.zoomTo(cue.zoom, cue.duration || 600);
     if (cue.fade === 'out') this.cameras.main.fadeOut(650, 4, 15, 22); if (cue.fade === 'in') this.cameras.main.fadeIn(750, 4, 15, 22);
     if (!cue.effect) return;
     const x = actor?.sprite.x ?? 830, y = (actor?.sprite.y ?? this.floor) - 70;
-    if (cue.effect === 'prison') {this.cinemaPrison?.destroy(); actor?.sprite.setAlpha(0); this.cinemaPrison = namedArt(this, 'props', 'water-prison', x, y - 8, 190).setDepth(5); this.sounds.effect('water', .8);}
+    if (cue.effect === 'prison') {this.cinemaPrison?.destroy();this.prisonActor=actor||null;actor?.sprite.setAlpha(1);this.cinemaPrison=this.add.graphics().setDepth(5);this.drawPrison(this.cinemaPrison,x,y,this.cinemaClock);this.sounds.effect('water',.8);}
     else if (cue.effect === 'mirrors') {
       const formation = new MirrorFormation(); formation.create(830, this.floor);
       for (const m of formation.mirrors) namedArt(this, 'props', 'ice-mirror', m.x, m.y, m.foreground ? 104 : 94).setDepth(m.foreground ? 7 : 1).setAlpha(m.foreground ? .28 : .66);
@@ -768,24 +832,27 @@ export class BossGameScene extends Phaser.Scene {
       const effect = cue.effect === 'aura' ? 'chakra-aura' : cue.effect === 'water' ? 'water-dragon' : cue.effect === 'ice' ? 'ice-shards' : cue.effect === 'impact' ? 'parry' : cue.effect;
       this.burst(effect, x, y, cue.effect === 'water' ? 280 : cue.effect === 'aura' ? 185 : 130, cue.effect === 'aura' ? 2300 : 650, actor?.facing || 1);
       this.sounds.effect(cue.effect === 'aura' ? 'fire' : cue.effect as EffectName, .75);
-      if (cue.effect === 'water' && cue.actor === 'prisoner') {this.cinemaPrison?.destroy(); this.cinemaPrison = null; actor?.sprite.setAlpha(1);}
+      if (cue.effect === 'water' && cue.actor === 'prisoner') {this.cinemaPrison?.destroy(); this.cinemaPrison = null;this.prisonActor=null; actor?.sprite.setAlpha(1);}
     }
   }
   private updateCinema(dt: number) {
     this.now += dt; this.cinemaClock += dt;
     this.director.update(dt); if (this.director.mode !== 'cinematic') return;
     for (const actor of this.cinemaActors.values()) {
+      if(actor.settleAt&&this.cinemaClock>=actor.settleAt){actor.animation='idle';actor.animationAt=this.cinemaClock;actor.settleAt=undefined;}
       if (actor.character) {const clip = this.director.clip?.id;
         const variant = actor.character === 'zabuza' && clip === 'a-demon-in-the-snow' && this.cinemaClock >= 18700 ? 'final-stand' : actor.character === 'haku' && (clip === 'a-demon-in-the-snow' || clip === 'narutos-hesitation' && this.cinemaClock >= 2200) ? 'unmasked' : actor.character === 'naruto' && (clip === 'narutos-hesitation' || clip === 'sasuke-protects-naruto' && this.cinemaClock >= 12800) ? 'awakened' : undefined;
-        poseBattle(actor.sprite as Phaser.GameObjects.Sprite, actor.character, actor.animation, this.cinemaClock - actor.animationAt, actor.facing, undefined, variant);
+        poseBattle(actor.sprite as Phaser.GameObjects.Sprite, actor.character, actor.animation, ['idle','block','guardbreak'].includes(actor.animation)?0:this.cinemaClock - actor.animationAt, actor.facing, undefined, variant);
+        if(actor.animation==='idle')actor.sprite.setScale(actor.sprite.scaleX,actor.sprite.scaleY*(1+Math.sin(this.cinemaClock/550)*.006));
         if (actor.animation === 'defeat') actor.sprite.setDepth(1);}
-      else if (actor.animation === 'defeat') actor.sprite.setRotation(actor.facing > 0 ? Math.PI / 2 : -Math.PI / 2).setOrigin(.5, .65);
+      else {actor.sprite.setFlipX(actor.facing<0);if (actor.animation === 'defeat') actor.sprite.setRotation(actor.facing > 0 ? Math.PI / 2 : -Math.PI / 2).setOrigin(.5, .65);}
     }
     if (this.director.clip?.id === 'hunter-nin-deception' && this.cinemaClock > 15100 && this.cinemaClock < 16600) {
       // Zabuza is carried in the hunter-nin's arms during the retreat.
       const haku = this.cinemaActors.get('haku'), zabuza = this.cinemaActors.get('zabuza');
       if (haku && zabuza) zabuza.sprite.setPosition(haku.sprite.x - 18, haku.sprite.y - 57).setAlpha(1).setDepth(4);
     }
+    if(this.cinemaPrison&&this.prisonActor)this.drawPrison(this.cinemaPrison,this.prisonActor.sprite.x,this.prisonActor.sprite.y-78,this.cinemaClock);
     this.updateEffects(dt); this.cueGraphics.clear();
     this.cinemaPresentation?.update(this.cinemaClock, id => id ? this.cinemaActors.get(id)?.sprite : undefined);
     if (this.snowActive) for (const flake of this.snow) {
@@ -821,6 +888,6 @@ export class BossGameScene extends Phaser.Scene {
         move: this.boss.model.action?.definition.id, started: this.boss.model.action?.started, readyAt: Math.round(this.brain?.readyAt), recovery: !this.boss.model.action,
         hitAt: this.boss.model.action?.definition.events.map(e => ({at: e.at, red: !!e.red, kind: e.kind})), guardBrokenUntil: this.boss.model.guardBrokenUntil} : null,
       mirrors: {active: this.formation.active, occupied: this.formation.occupied, exposedUntil: this.formation.exposedUntil, count: this.formation.count(), mirrors: this.formation.mirrors},
-      counts: {fighters: this.fighters.length, projectiles: this.projectiles.length, effects: this.effects.length, decoys: this.decoys.length, displayObjects: this.children.length}, audio: this.sounds.status()};
+      allies:this.fighters.filter(f=>f.support).map(f=>({id:f.key,action:f.model.action?.definition.id,casts:f.supportCasts||0,stamina:f.model.stamina,guarding:f.model.guard,x:f.model.x})), counts: {fighters: this.fighters.length, projectiles: this.projectiles.length, effects: this.effects.length, decoys: this.decoys.length, displayObjects: this.children.length}, audio: this.sounds.status()};
   }
 }

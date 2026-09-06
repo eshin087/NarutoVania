@@ -1,0 +1,194 @@
+{
+  "zabuza-sword-atlas-v8": {
+    "size": [
+      3072,
+      1536
+    ],
+    "mode": "RGBA",
+    "transparentPixels": 4458333,
+    "visiblePixels": 235554,
+    "frames": [
+      {
+        "row": 0,
+        "column": 0,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      },
+      {
+        "row": 0,
+        "column": 1,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      },
+      {
+        "row": 0,
+        "column": 2,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      },
+      {
+        "row": 0,
+        "column": 3,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      },
+      {
+        "row": 0,
+        "column": 4,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      },
+      {
+        "row": 0,
+        "column": 5,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      },
+      {
+        "row": 1,
+        "column": 0,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      },
+      {
+        "row": 1,
+        "column": 1,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      },
+      {
+        "row": 1,
+        "column": 2,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      },
+      {
+        "row": 1,
+        "column": 3,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      },
+      {
+        "row": 1,
+        "column": 4,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      },
+      {
+        "row": 1,
+        "column": 5,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      },
+      {
+        "row": 2,
+        "column": 0,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      },
+      {
+        "row": 2,
+        "column": 1,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      },
+      {
+        "row": 2,
+        "column": 2,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      },
+      {
+        "row": 2,
+        "column": 3,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      },
+      {
+        "row": 2,
+        "column": 4,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      },
+      {
+        "row": 2,
+        "column": 5,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      },
+      {
+        "row": 3,
+        "column": 0,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      },
+      {
+        "row": 3,
+        "column": 1,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      },
+      {
+        "row": 3,
+        "column": 2,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      },
+      {
+        "row": 3,
+        "column": 3,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      },
+      {
+        "row": 3,
+        "column": 4,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      },
+      {
+        "row": 3,
+        "column": 5,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      }
+    ],
+    "allFramesUnclipped": true
+  },
+  "glamour-decoy-atlas-v8": {
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "transparentPixels": 893947,
+    "visiblePixels": 147151,
+    "frames": [
+      {
+        "row": 0,
+        "column": 0,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      },
+      {
+        "row": 0,
+        "column": 1,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      },
+      {
+        "row": 1,
+        "column": 0,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      },
+      {
+        "row": 1,
+        "column": 1,
+        "edgePixelsAbove16": 0,
+        "hasVisibleArt": true
+      }
+    ],
+    "allFramesUnclipped": true
+  }
+}

@@ -1,0 +1,795 @@
+{
+  "file": "zabuza-sword-atlas-v8.png",
+  "size": [
+    3072,
+    1536
+  ],
+  "columns": 6,
+  "rows": 4,
+  "cellSize": [
+    512,
+    384
+  ],
+  "anchor": [
+    256,
+    320
+  ],
+  "baseHeight": 150,
+  "bodyHeightNote": "Approximate upright body height150px; crouches naturally shorter. Uniform source scale0.82 preserves all long sword poses within512px cells.",
+  "rowNames": [
+    "forehand",
+    "backhand",
+    "overhead",
+    "rising"
+  ],
+  "frames": [
+    {
+      "row": 0,
+      "column": 0,
+      "rect": [
+        0,
+        0,
+        512,
+        384
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceBounds": [
+        27,
+        65,
+        272,
+        194
+      ],
+      "sourceFoot": [
+        113,
+        257
+      ],
+      "mirrored": false,
+      "scale": 0.82,
+      "contentBounds": [
+        185,
+        163,
+        223,
+        159
+      ]
+    },
+    {
+      "row": 0,
+      "column": 1,
+      "rect": [
+        512,
+        0,
+        512,
+        384
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceBounds": [
+        269,
+        11,
+        214,
+        251
+      ],
+      "sourceFoot": [
+        395,
+        260
+      ],
+      "mirrored": false,
+      "scale": 0.82,
+      "contentBounds": [
+        153,
+        116,
+        175,
+        206
+      ]
+    },
+    {
+      "row": 0,
+      "column": 2,
+      "rect": [
+        1024,
+        0,
+        512,
+        384
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceBounds": [
+        506,
+        7,
+        221,
+        254
+      ],
+      "sourceFoot": [
+        646,
+        259
+      ],
+      "mirrored": false,
+      "scale": 0.82,
+      "contentBounds": [
+        141,
+        113,
+        181,
+        208
+      ]
+    },
+    {
+      "row": 0,
+      "column": 3,
+      "rect": [
+        1536,
+        0,
+        512,
+        384
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceBounds": [
+        760,
+        79,
+        391,
+        182
+      ],
+      "sourceFoot": [
+        852,
+        259
+      ],
+      "mirrored": false,
+      "scale": 0.82,
+      "contentBounds": [
+        181,
+        172,
+        321,
+        149
+      ]
+    },
+    {
+      "row": 0,
+      "column": 4,
+      "rect": [
+        2048,
+        0,
+        512,
+        384
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceBounds": [
+        1087,
+        76,
+        259,
+        193
+      ],
+      "sourceFoot": [
+        1173,
+        267
+      ],
+      "mirrored": true,
+      "scale": 0.82,
+      "contentBounds": [
+        114,
+        163,
+        212,
+        158
+      ]
+    },
+    {
+      "row": 0,
+      "column": 5,
+      "rect": [
+        2560,
+        0,
+        512,
+        384
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceBounds": [
+        1312,
+        95,
+        219,
+        199
+      ],
+      "sourceFoot": [
+        1396,
+        255
+      ],
+      "mirrored": false,
+      "scale": 0.82,
+      "contentBounds": [
+        187,
+        189,
+        180,
+        163
+      ]
+    },
+    {
+      "row": 1,
+      "column": 0,
+      "rect": [
+        0,
+        384,
+        512,
+        384
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceBounds": [
+        24,
+        300,
+        230,
+        192
+      ],
+      "sourceFoot": [
+        118,
+        490
+      ],
+      "mirrored": false,
+      "scale": 0.82,
+      "contentBounds": [
+        179,
+        164,
+        189,
+        157
+      ]
+    },
+    {
+      "row": 1,
+      "column": 1,
+      "rect": [
+        512,
+        384,
+        512,
+        384
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceBounds": [
+        304,
+        326,
+        243,
+        168
+      ],
+      "sourceFoot": [
+        400,
+        492
+      ],
+      "mirrored": true,
+      "scale": 0.82,
+      "contentBounds": [
+        135,
+        184,
+        199,
+        138
+      ]
+    },
+    {
+      "row": 1,
+      "column": 2,
+      "rect": [
+        1024,
+        384,
+        512,
+        384
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceBounds": [
+        519,
+        292,
+        246,
+        200
+      ],
+      "sourceFoot": [
+        662,
+        490
+      ],
+      "mirrored": false,
+      "scale": 0.82,
+      "contentBounds": [
+        139,
+        158,
+        202,
+        164
+      ]
+    },
+    {
+      "row": 1,
+      "column": 3,
+      "rect": [
+        1536,
+        384,
+        512,
+        384
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceBounds": [
+        772,
+        322,
+        308,
+        173
+      ],
+      "sourceFoot": [
+        864,
+        493
+      ],
+      "mirrored": false,
+      "scale": 0.82,
+      "contentBounds": [
+        181,
+        180,
+        253,
+        142
+      ]
+    },
+    {
+      "row": 1,
+      "column": 4,
+      "rect": [
+        2048,
+        384,
+        512,
+        384
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceBounds": [
+        1060,
+        289,
+        278,
+        216
+      ],
+      "sourceFoot": [
+        1147,
+        503
+      ],
+      "mirrored": false,
+      "scale": 0.82,
+      "contentBounds": [
+        185,
+        145,
+        228,
+        177
+      ]
+    },
+    {
+      "row": 1,
+      "column": 5,
+      "rect": [
+        2560,
+        384,
+        512,
+        384
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceBounds": [
+        1308,
+        322,
+        212,
+        196
+      ],
+      "sourceFoot": [
+        1396,
+        493
+      ],
+      "mirrored": false,
+      "scale": 0.82,
+      "contentBounds": [
+        184,
+        180,
+        174,
+        161
+      ]
+    },
+    {
+      "row": 2,
+      "column": 0,
+      "rect": [
+        0,
+        768,
+        512,
+        384
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceBounds": [
+        30,
+        540,
+        197,
+        232
+      ],
+      "sourceFoot": [
+        130,
+        751
+      ],
+      "mirrored": false,
+      "scale": 0.82,
+      "contentBounds": [
+        174,
+        147,
+        162,
+        190
+      ]
+    },
+    {
+      "row": 2,
+      "column": 1,
+      "rect": [
+        512,
+        768,
+        512,
+        384
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceBounds": [
+        297,
+        494,
+        191,
+        261
+      ],
+      "sourceFoot": [
+        389,
+        753
+      ],
+      "mirrored": true,
+      "scale": 0.82,
+      "contentBounds": [
+        175,
+        108,
+        157,
+        214
+      ]
+    },
+    {
+      "row": 2,
+      "column": 2,
+      "rect": [
+        1024,
+        768,
+        512,
+        384
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceBounds": [
+        515,
+        487,
+        223,
+        264
+      ],
+      "sourceFoot": [
+        652,
+        749
+      ],
+      "mirrored": false,
+      "scale": 0.82,
+      "contentBounds": [
+        144,
+        105,
+        183,
+        216
+      ]
+    },
+    {
+      "row": 2,
+      "column": 3,
+      "rect": [
+        1536,
+        768,
+        512,
+        384
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceBounds": [
+        790,
+        605,
+        271,
+        182
+      ],
+      "sourceFoot": [
+        864,
+        751
+      ],
+      "mirrored": false,
+      "scale": 0.82,
+      "contentBounds": [
+        195,
+        200,
+        222,
+        149
+      ]
+    },
+    {
+      "row": 2,
+      "column": 4,
+      "rect": [
+        2048,
+        768,
+        512,
+        384
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceBounds": [
+        1069,
+        605,
+        255,
+        151
+      ],
+      "sourceFoot": [
+        1149,
+        752
+      ],
+      "mirrored": false,
+      "scale": 0.82,
+      "contentBounds": [
+        190,
+        199,
+        209,
+        124
+      ]
+    },
+    {
+      "row": 2,
+      "column": 5,
+      "rect": [
+        2560,
+        768,
+        512,
+        384
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceBounds": [
+        1332,
+        572,
+        197,
+        195
+      ],
+      "sourceFoot": [
+        1406,
+        747
+      ],
+      "mirrored": false,
+      "scale": 0.82,
+      "contentBounds": [
+        195,
+        176,
+        162,
+        160
+      ]
+    },
+    {
+      "row": 3,
+      "column": 0,
+      "rect": [
+        0,
+        1152,
+        512,
+        384
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceBounds": [
+        9,
+        853,
+        232,
+        151
+      ],
+      "sourceFoot": [
+        155,
+        1002
+      ],
+      "mirrored": false,
+      "scale": 0.82,
+      "contentBounds": [
+        136,
+        198,
+        190,
+        124
+      ]
+    },
+    {
+      "row": 3,
+      "column": 1,
+      "rect": [
+        512,
+        1152,
+        512,
+        384
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceBounds": [
+        289,
+        841,
+        212,
+        168
+      ],
+      "sourceFoot": [
+        420,
+        1007
+      ],
+      "mirrored": false,
+      "scale": 0.82,
+      "contentBounds": [
+        149,
+        184,
+        174,
+        138
+      ]
+    },
+    {
+      "row": 3,
+      "column": 2,
+      "rect": [
+        1024,
+        1152,
+        512,
+        384
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceBounds": [
+        554,
+        788,
+        231,
+        221
+      ],
+      "sourceFoot": [
+        627,
+        1007
+      ],
+      "mirrored": false,
+      "scale": 0.82,
+      "contentBounds": [
+        196,
+        140,
+        189,
+        181
+      ]
+    },
+    {
+      "row": 3,
+      "column": 3,
+      "rect": [
+        1536,
+        1152,
+        512,
+        384
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceBounds": [
+        775,
+        758,
+        223,
+        249
+      ],
+      "sourceFoot": [
+        865,
+        1005
+      ],
+      "mirrored": false,
+      "scale": 0.82,
+      "contentBounds": [
+        182,
+        117,
+        183,
+        204
+      ]
+    },
+    {
+      "row": 3,
+      "column": 4,
+      "rect": [
+        2048,
+        1152,
+        512,
+        384
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceBounds": [
+        1052,
+        751,
+        270,
+        254
+      ],
+      "sourceFoot": [
+        1144,
+        1003
+      ],
+      "mirrored": false,
+      "scale": 0.82,
+      "contentBounds": [
+        181,
+        113,
+        221,
+        208
+      ]
+    },
+    {
+      "row": 3,
+      "column": 5,
+      "rect": [
+        2560,
+        1152,
+        512,
+        384
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceBounds": [
+        1342,
+        788,
+        171,
+        216
+      ],
+      "sourceFoot": [
+        1426,
+        1002
+      ],
+      "mirrored": false,
+      "scale": 0.82,
+      "contentBounds": [
+        187,
+        145,
+        140,
+        177
+      ]
+    }
+  ]
+}

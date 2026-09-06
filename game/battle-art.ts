@@ -13,6 +13,8 @@ export interface BossArtManifest {
   props: Record<string, NamedFrame>; effects: Record<string, NamedFrame>;
 }
 export function preloadBattleArt(scene: Phaser.Scene) {
+  scene.load.image('v8-sword','/art-v8/zabuza-sword-atlas-v8.png');
+  scene.load.image('v8-glamour','/art-v8/glamour-decoy-atlas-v8.png');
   scene.load.image('v5-wave', '/art-v5/tidal-wave.png');
   scene.load.image('v5-moments', '/art-v5/manga-moments.png');
   scene.load.json('battle-manifest', '/art-v2/manifest.json');
@@ -28,6 +30,11 @@ export function artManifest(scene: Phaser.Scene) {return scene.cache.json.get('b
 export function registerBattleArt(scene: Phaser.Scene) {
   for (let i=0;i<4;i++) scene.textures.get('v5-wave').add(String(i),0,i*512,0,512,512);
   for (let i=0;i<6;i++) scene.textures.get('v5-moments').add(String(i),0,(i%2)*768,Math.floor(i/2)*432,768,432);
+  for(let i=0;i<24;i++)scene.textures.get('v8-sword').add(String(i),0,(i%6)*512,Math.floor(i/6)*384,512,384);
+  for(let i=0;i<4;i++)scene.textures.get('v8-glamour').add(String(i),0,(i%2)*512,Math.floor(i/2)*512,512,512);
+  // A narrow silver needle, never a spinning bundle. Procedural trail is drawn separately.
+  const needle=scene.add.graphics();needle.fillStyle(0x9eb7c8,1);needle.fillTriangle(0,4,112,1,128,4);needle.fillTriangle(0,4,128,4,112,7);
+  needle.lineStyle(1,0xf3fcff,1);needle.lineBetween(14,3,115,3);needle.generateTexture('v8-needle',128,8);needle.destroy();
   const manifest = artManifest(scene);
   const revision=scene.cache.json.get('combat-art-manifest') as {kakashi:{frames:AssetFrame[]};ultimates:{frames:Record<string,number[]>};water:{frames:AssetFrame[]}};
   revision.kakashi.frames.forEach((f,i)=>{const [x,y,w,h]=f.rect;scene.textures.get('v3-kakashi-melee').add(String(i),0,x,y,w,h);});
@@ -54,6 +61,7 @@ export function poseBattle(sprite: Phaser.GameObjects.Sprite, id: CharacterId, a
   const [anchorX, anchorY] = data.footAnchor || [width / 2, height * .8];
   sprite.setTexture(`${id}${unmasked ? '-unmasked' : ''}-${frame.sheet}`, String(frame.index)).setOrigin(facing < 0 ? 1 - anchorX / width : anchorX / width, anchorY / height).setFlipX(facing < 0);
   sprite.setScale(CHARACTER[id].height / (unmasked ? artManifest(sprite.scene).variants.unmasked.baseHeight : metadata.baseHeight));
+  if(id==='zabuza'&&frame.sheet==='melee'&&variant!=='final-stand'){const row=animation==='heavy'?2:animation==='light3'?3:animation==='light2'?1:0;poseZabuzaSword(sprite,row*6+frame.index%6,facing);}
   if(id==='kakashi'&&frame.sheet==='melee')sprite.setTexture('v3-kakashi-melee',String(frame.index)).setOrigin(.5,307/384).setScale(CHARACTER.kakashi.height/232);
   if (id === 'naruto' && variant === 'awakened' && animation === 'idle') {
     sprite.setTexture('v2-naruto-awakened', String(Math.floor(elapsed / 600) % 2)).setOrigin(.5, 307 / 384).setScale(CHARACTER.naruto.height / artManifest(sprite.scene).variants.awakened.baseHeight);
@@ -68,4 +76,8 @@ export function namedArt(scene: Phaser.Scene, category: 'props' | 'effects', nam
   if (!frame) throw new Error(`Missing generated ${category} frame: ${name}`);
   const [, , w, h] = frame.rect;
   return scene.add.image(x, y, `v2-${category}`, name).setDisplaySize(width, width * h / w);
+}
+
+export function poseZabuzaSword(sprite:Phaser.GameObjects.Sprite,frame:number,facing:number){
+  sprite.setTexture('v8-sword',String(frame)).setOrigin(.5,320/384).setFlipX(facing<0).setScale(CHARACTER.zabuza.height/150);
 }
