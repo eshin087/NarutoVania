@@ -5,5 +5,5 @@ export function flowFrame(age:number,life:number,travel=true){
   if(!travel||age>life-240)return 12+Math.min(3,Math.floor(Math.max(0,age-(life-240))/60));
   return 4+Math.floor((age-180)/65)%8;
 }
-export function mirrorFeet(y:number,floor:number){return Math.min(floor,y+73);}
+export function mirrorFeet(y:number,floor:number){return Math.min(y,floor-115)+84;}
 export const ULTIMATE_END=2000;

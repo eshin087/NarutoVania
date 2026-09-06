@@ -1,0 +1,784 @@
+{
+  "version": 15,
+  "sourcePath": "C:/Users/eshin/.codex/generated_images/01a078f0-8216-71d2-9244-46ac2ba46932/exec-3527171e-663a-425c-b2ad-19728b3b52cf.png",
+  "rawSize": [
+    1254,
+    1254
+  ],
+  "normalizedSize": [
+    1024,
+    1024
+  ],
+  "columns": 4,
+  "rows": 4,
+  "cellSize": [
+    256,
+    256
+  ],
+  "anchor": [
+    128,
+    224
+  ],
+  "direction": "right",
+  "method": "Manually inspected head-top to pelvis landmarks; Euclidean axis length excludes weapon, effects, and carried person. Target metric derived from visually measured reference standing head-plus-torso fraction. Whole frame uniformly resampled; feet/root anchored. Measurements are manual estimates, not segmentation-derived exact anatomical dimensions.",
+  "backgroundCleanup": "Boundary-connected near-neutral light checkerboard flood fill plus enclosed sword holes; foreground dark outlines and clothing interiors retained.",
+  "limitations": [
+    "Carry row uses an upright seated cradle; injured Zabuza is visually compact relative to standing Zabuza and is not independently rescaled.",
+    "Final carry frame sets Zabuza down seated, not fully supine.",
+    "Kakashi and carried Zabuza show slight three-quarter face rotation while action reads rightward."
+  ],
+  "frames": [
+    {
+      "index": 0,
+      "row": 0,
+      "column": 0,
+      "semantic": "planted_guard_a",
+      "character": "zabuza",
+      "logicalStandingHeight": 167,
+      "sourceCrop": [
+        0,
+        0,
+        330,
+        351
+      ],
+      "sourceRoot": [
+        154,
+        323
+      ],
+      "sourceHeadTorsoLandmarks": [
+        [
+          168,
+          49
+        ],
+        [
+          159,
+          165
+        ]
+      ],
+      "measuredSourceHeadTorsoPixels": 116.349,
+      "normalizedHeadTorsoPixels": 71,
+      "uniformScale": 0.610235,
+      "destinationRoot": [
+        128,
+        224
+      ],
+      "visibleBounds": [
+        98,
+        54,
+        213,
+        227
+      ],
+      "safePadding": {
+        "left": 98,
+        "top": 54,
+        "right": 43,
+        "bottom": 29
+      }
+    },
+    {
+      "index": 1,
+      "row": 0,
+      "column": 1,
+      "semantic": "planted_guard_b",
+      "character": "zabuza",
+      "logicalStandingHeight": 167,
+      "sourceCrop": [
+        330,
+        0,
+        645,
+        351
+      ],
+      "sourceRoot": [
+        474,
+        324
+      ],
+      "sourceHeadTorsoLandmarks": [
+        [
+          490,
+          50
+        ],
+        [
+          480,
+          165
+        ]
+      ],
+      "measuredSourceHeadTorsoPixels": 115.434,
+      "normalizedHeadTorsoPixels": 71,
+      "uniformScale": 0.61507,
+      "destinationRoot": [
+        128,
+        224
+      ],
+      "visibleBounds": [
+        97,
+        53,
+        211,
+        228
+      ],
+      "safePadding": {
+        "left": 97,
+        "top": 53,
+        "right": 45,
+        "bottom": 28
+      }
+    },
+    {
+      "index": 2,
+      "row": 0,
+      "column": 2,
+      "semantic": "planted_guard_c",
+      "character": "zabuza",
+      "logicalStandingHeight": 167,
+      "sourceCrop": [
+        645,
+        0,
+        930,
+        351
+      ],
+      "sourceRoot": [
+        765,
+        324
+      ],
+      "sourceHeadTorsoLandmarks": [
+        [
+          781,
+          51
+        ],
+        [
+          771,
+          164
+        ]
+      ],
+      "measuredSourceHeadTorsoPixels": 113.442,
+      "normalizedHeadTorsoPixels": 71,
+      "uniformScale": 0.625873,
+      "destinationRoot": [
+        128,
+        224
+      ],
+      "visibleBounds": [
+        94,
+        49,
+        204,
+        228
+      ],
+      "safePadding": {
+        "left": 94,
+        "top": 49,
+        "right": 52,
+        "bottom": 28
+      }
+    },
+    {
+      "index": 3,
+      "row": 0,
+      "column": 3,
+      "semantic": "planted_guard_d",
+      "character": "zabuza",
+      "logicalStandingHeight": 167,
+      "sourceCrop": [
+        930,
+        0,
+        1254,
+        351
+      ],
+      "sourceRoot": [
+        1023,
+        324
+      ],
+      "sourceHeadTorsoLandmarks": [
+        [
+          1033,
+          51
+        ],
+        [
+          1025,
+          164
+        ]
+      ],
+      "measuredSourceHeadTorsoPixels": 113.283,
+      "normalizedHeadTorsoPixels": 71,
+      "uniformScale": 0.62675,
+      "destinationRoot": [
+        128,
+        224
+      ],
+      "visibleBounds": [
+        95,
+        49,
+        200,
+        228
+      ],
+      "safePadding": {
+        "left": 95,
+        "top": 49,
+        "right": 56,
+        "bottom": 28
+      }
+    },
+    {
+      "index": 4,
+      "row": 1,
+      "column": 0,
+      "semantic": "forearm_shield",
+      "character": "sasuke",
+      "logicalStandingHeight": 135,
+      "sourceCrop": [
+        0,
+        351,
+        330,
+        651
+      ],
+      "sourceRoot": [
+        175,
+        601
+      ],
+      "sourceHeadTorsoLandmarks": [
+        [
+          160,
+          381
+        ],
+        [
+          170,
+          494
+        ]
+      ],
+      "measuredSourceHeadTorsoPixels": 113.442,
+      "normalizedHeadTorsoPixels": 69,
+      "uniformScale": 0.608242,
+      "destinationRoot": [
+        128,
+        224
+      ],
+      "visibleBounds": [
+        86,
+        86,
+        173,
+        227
+      ],
+      "safePadding": {
+        "left": 86,
+        "top": 86,
+        "right": 83,
+        "bottom": 29
+      }
+    },
+    {
+      "index": 5,
+      "row": 1,
+      "column": 1,
+      "semantic": "recoil",
+      "character": "sasuke",
+      "logicalStandingHeight": 135,
+      "sourceCrop": [
+        330,
+        351,
+        645,
+        651
+      ],
+      "sourceRoot": [
+        475,
+        601
+      ],
+      "sourceHeadTorsoLandmarks": [
+        [
+          408,
+          396
+        ],
+        [
+          454,
+          503
+        ]
+      ],
+      "measuredSourceHeadTorsoPixels": 116.469,
+      "normalizedHeadTorsoPixels": 69,
+      "uniformScale": 0.592433,
+      "destinationRoot": [
+        128,
+        224
+      ],
+      "visibleBounds": [
+        69,
+        98,
+        169,
+        228
+      ],
+      "safePadding": {
+        "left": 69,
+        "top": 98,
+        "right": 87,
+        "bottom": 28
+      }
+    },
+    {
+      "index": 6,
+      "row": 1,
+      "column": 2,
+      "semantic": "knee_collapse",
+      "character": "sasuke",
+      "logicalStandingHeight": 135,
+      "sourceCrop": [
+        645,
+        351,
+        930,
+        651
+      ],
+      "sourceRoot": [
+        765,
+        604
+      ],
+      "sourceHeadTorsoLandmarks": [
+        [
+          791,
+          456
+        ],
+        [
+          755,
+          560
+        ]
+      ],
+      "measuredSourceHeadTorsoPixels": 110.055,
+      "normalizedHeadTorsoPixels": 69,
+      "uniformScale": 0.626962,
+      "destinationRoot": [
+        128,
+        224
+      ],
+      "visibleBounds": [
+        76,
+        127,
+        181,
+        227
+      ],
+      "safePadding": {
+        "left": 76,
+        "top": 127,
+        "right": 75,
+        "bottom": 29
+      }
+    },
+    {
+      "index": 7,
+      "row": 1,
+      "column": 3,
+      "semantic": "supported_side_collapse",
+      "character": "sasuke",
+      "logicalStandingHeight": 135,
+      "sourceCrop": [
+        930,
+        351,
+        1254,
+        651
+      ],
+      "sourceRoot": [
+        1080,
+        607
+      ],
+      "sourceHeadTorsoLandmarks": [
+        [
+          1055,
+          490
+        ],
+        [
+          1082,
+          594
+        ]
+      ],
+      "measuredSourceHeadTorsoPixels": 107.448,
+      "normalizedHeadTorsoPixels": 69,
+      "uniformScale": 0.642173,
+      "destinationRoot": [
+        128,
+        224
+      ],
+      "visibleBounds": [
+        68,
+        146,
+        201,
+        228
+      ],
+      "safePadding": {
+        "left": 68,
+        "top": 146,
+        "right": 55,
+        "bottom": 28
+      }
+    },
+    {
+      "index": 8,
+      "row": 2,
+      "column": 0,
+      "semantic": "fury_lunge",
+      "character": "naruto",
+      "logicalStandingHeight": 132,
+      "sourceCrop": [
+        0,
+        651,
+        330,
+        886
+      ],
+      "sourceRoot": [
+        175,
+        855
+      ],
+      "sourceHeadTorsoLandmarks": [
+        [
+          225,
+          696
+        ],
+        [
+          156,
+          794
+        ]
+      ],
+      "measuredSourceHeadTorsoPixels": 119.854,
+      "normalizedHeadTorsoPixels": 72,
+      "uniformScale": 0.60073,
+      "destinationRoot": [
+        128,
+        224
+      ],
+      "visibleBounds": [
+        66,
+        122,
+        181,
+        227
+      ],
+      "safePadding": {
+        "left": 66,
+        "top": 122,
+        "right": 75,
+        "bottom": 29
+      }
+    },
+    {
+      "index": 9,
+      "row": 2,
+      "column": 1,
+      "semantic": "fury_strike",
+      "character": "naruto",
+      "logicalStandingHeight": 132,
+      "sourceCrop": [
+        330,
+        651,
+        645,
+        886
+      ],
+      "sourceRoot": [
+        500,
+        855
+      ],
+      "sourceHeadTorsoLandmarks": [
+        [
+          546,
+          699
+        ],
+        [
+          477,
+          788
+        ]
+      ],
+      "measuredSourceHeadTorsoPixels": 112.614,
+      "normalizedHeadTorsoPixels": 72,
+      "uniformScale": 0.63935,
+      "destinationRoot": [
+        128,
+        224
+      ],
+      "visibleBounds": [
+        55,
+        120,
+        213,
+        228
+      ],
+      "safePadding": {
+        "left": 55,
+        "top": 120,
+        "right": 43,
+        "bottom": 28
+      }
+    },
+    {
+      "index": 10,
+      "row": 2,
+      "column": 2,
+      "semantic": "fury_followthrough",
+      "character": "naruto",
+      "logicalStandingHeight": 132,
+      "sourceCrop": [
+        645,
+        651,
+        930,
+        886
+      ],
+      "sourceRoot": [
+        787,
+        855
+      ],
+      "sourceHeadTorsoLandmarks": [
+        [
+          842,
+          700
+        ],
+        [
+          753,
+          790
+        ]
+      ],
+      "measuredSourceHeadTorsoPixels": 126.574,
+      "normalizedHeadTorsoPixels": 72,
+      "uniformScale": 0.568837,
+      "destinationRoot": [
+        128,
+        224
+      ],
+      "visibleBounds": [
+        53,
+        132,
+        180,
+        227
+      ],
+      "safePadding": {
+        "left": 53,
+        "top": 132,
+        "right": 76,
+        "bottom": 29
+      }
+    },
+    {
+      "index": 11,
+      "row": 2,
+      "column": 3,
+      "semantic": "fury_recover",
+      "character": "naruto",
+      "logicalStandingHeight": 132,
+      "sourceCrop": [
+        930,
+        651,
+        1254,
+        886
+      ],
+      "sourceRoot": [
+        1080,
+        855
+      ],
+      "sourceHeadTorsoLandmarks": [
+        [
+          1126,
+          729
+        ],
+        [
+          1073,
+          814
+        ]
+      ],
+      "measuredSourceHeadTorsoPixels": 100.17,
+      "normalizedHeadTorsoPixels": 72,
+      "uniformScale": 0.718779,
+      "destinationRoot": [
+        128,
+        224
+      ],
+      "visibleBounds": [
+        68,
+        127,
+        186,
+        228
+      ],
+      "safePadding": {
+        "left": 68,
+        "top": 127,
+        "right": 70,
+        "bottom": 28
+      }
+    },
+    {
+      "index": 12,
+      "row": 3,
+      "column": 0,
+      "semantic": "supported_carry",
+      "character": "kakashi",
+      "logicalStandingHeight": 157,
+      "sourceCrop": [
+        0,
+        886,
+        330,
+        1254
+      ],
+      "sourceRoot": [
+        154,
+        1179
+      ],
+      "sourceHeadTorsoLandmarks": [
+        [
+          157,
+          919
+        ],
+        [
+          139,
+          1062
+        ]
+      ],
+      "measuredSourceHeadTorsoPixels": 144.128,
+      "normalizedHeadTorsoPixels": 87,
+      "uniformScale": 0.603628,
+      "destinationRoot": [
+        128,
+        224
+      ],
+      "visibleBounds": [
+        83,
+        62,
+        190,
+        226
+      ],
+      "safePadding": {
+        "left": 83,
+        "top": 62,
+        "right": 66,
+        "bottom": 30
+      }
+    },
+    {
+      "index": 13,
+      "row": 3,
+      "column": 1,
+      "semantic": "carry_step",
+      "character": "kakashi",
+      "logicalStandingHeight": 157,
+      "sourceCrop": [
+        330,
+        886,
+        645,
+        1254
+      ],
+      "sourceRoot": [
+        464,
+        1179
+      ],
+      "sourceHeadTorsoLandmarks": [
+        [
+          466,
+          918
+        ],
+        [
+          446,
+          1062
+        ]
+      ],
+      "measuredSourceHeadTorsoPixels": 145.382,
+      "normalizedHeadTorsoPixels": 87,
+      "uniformScale": 0.598422,
+      "destinationRoot": [
+        128,
+        224
+      ],
+      "visibleBounds": [
+        80,
+        64,
+        188,
+        227
+      ],
+      "safePadding": {
+        "left": 80,
+        "top": 64,
+        "right": 68,
+        "bottom": 29
+      }
+    },
+    {
+      "index": 14,
+      "row": 3,
+      "column": 2,
+      "semantic": "kneeling_lower",
+      "character": "kakashi",
+      "logicalStandingHeight": 157,
+      "sourceCrop": [
+        645,
+        886,
+        930,
+        1254
+      ],
+      "sourceRoot": [
+        757,
+        1181
+      ],
+      "sourceHeadTorsoLandmarks": [
+        [
+          785,
+          979
+        ],
+        [
+          743,
+          1105
+        ]
+      ],
+      "measuredSourceHeadTorsoPixels": 132.816,
+      "normalizedHeadTorsoPixels": 87,
+      "uniformScale": 0.655043,
+      "destinationRoot": [
+        128,
+        224
+      ],
+      "visibleBounds": [
+        79,
+        87,
+        200,
+        227
+      ],
+      "safePadding": {
+        "left": 79,
+        "top": 87,
+        "right": 56,
+        "bottom": 29
+      }
+    },
+    {
+      "index": 15,
+      "row": 3,
+      "column": 3,
+      "semantic": "seated_set_down",
+      "character": "kakashi",
+      "logicalStandingHeight": 157,
+      "sourceCrop": [
+        930,
+        886,
+        1254,
+        1254
+      ],
+      "sourceRoot": [
+        1040,
+        1180
+      ],
+      "sourceHeadTorsoLandmarks": [
+        [
+          1076,
+          1005
+        ],
+        [
+          1026,
+          1128
+        ]
+      ],
+      "measuredSourceHeadTorsoPixels": 132.774,
+      "normalizedHeadTorsoPixels": 87,
+      "uniformScale": 0.655248,
+      "destinationRoot": [
+        128,
+        224
+      ],
+      "visibleBounds": [
+        75,
+        104,
+        229,
+        228
+      ],
+      "safePadding": {
+        "left": 75,
+        "top": 104,
+        "right": 27,
+        "bottom": 28
+      }
+    }
+  ]
+}

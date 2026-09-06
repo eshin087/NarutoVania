@@ -1,3 +1,5 @@
+import {preloadV15,registerV15,poseRepair} from './art-v15';
+import {quietIdleFrame} from './presentation-v15';
 import {preloadCharacterArt,registerCharacterArt,poseCharacter,poseCharacterFrame} from './art-character-v14';
 import {preloadCinemaArt,registerCinemaArt} from './art-cinema-v14';
 import {preloadEffects,registerEffects} from './effects-v14';
@@ -20,7 +22,7 @@ export interface BossArtManifest {
   variants: {awakened: AtlasMetadata & {baseHeight: number}; ending: AtlasMetadata & {baseHeight: number}; unmasked: {baseHeight: number; sheets: Record<SpriteSheet, AtlasMetadata>}};
   props: Record<string, NamedFrame>; effects: Record<string, NamedFrame>;
 }
-export function preloadBattleArt(scene: Phaser.Scene) {preloadV10(scene);preloadV11(scene);preloadV13(scene);preloadEffects(scene);preloadCinemaArt(scene);preloadCharacterArt(scene);
+export function preloadBattleArt(scene: Phaser.Scene) {preloadV10(scene);preloadV11(scene);preloadV13(scene);preloadEffects(scene);preloadCinemaArt(scene);preloadCharacterArt(scene);preloadV15(scene);
   for(const id of CHARACTERS)scene.load.image(`v9-${id}-aerial`,`/art-v9/${id}-aerial.png`);
 
   scene.load.image('v8-glamour','/art-v8/glamour-decoy-atlas-v8.png');
@@ -34,7 +36,7 @@ export function preloadBattleArt(scene: Phaser.Scene) {preloadV10(scene);preload
   for (const name of ['lakeside-background', 'bridge-background', 'lakeside-ground', 'bridge-ground', 'props', 'effects', 'naruto-awakened', 'ending-zabuza', 'zabuza-sword']) scene.load.image(`v2-${name}`, `/art-v2/${name}.png`);
 }
 export function artManifest(scene: Phaser.Scene) {return scene.cache.json.get('battle-manifest') as BossArtManifest;}
-export function registerBattleArt(scene: Phaser.Scene) {registerV10(scene);registerV11(scene);registerV13(scene);registerEffects(scene);registerCinemaArt(scene);registerCharacterArt(scene);
+export function registerBattleArt(scene: Phaser.Scene) {registerV10(scene);registerV11(scene);registerV13(scene);registerEffects(scene);registerCinemaArt(scene);registerCharacterArt(scene);registerV15(scene);
   for(const id of CHARACTERS)for(let i=0;i<6;i++)scene.textures.get(`v9-${id}-aerial`).add(String(i),0,i*512,0,512,384);
   for (let i=0;i<4;i++) scene.textures.get('v5-wave').add(String(i),0,i*512,0,512,512);
 
@@ -65,9 +67,10 @@ export function registerBattleArt(scene: Phaser.Scene) {registerV10(scene);regis
 }
 export function poseBattle(sprite: Phaser.GameObjects.Sprite, id: CharacterId, animation: AnimationName, elapsed: number, facing: number, duration?: number, variant?: 'awakened' | 'unmasked' | 'final-stand') {
   if(id==='zabuza'&&variant==='final-stand'&&animation!=='defeat'){endingPose(sprite,id,animation,elapsed,facing);return;}
+  if(id==='zabuza'&&animation==='block'){poseRepair(sprite,elapsed<100?0:elapsed<200?1:elapsed<320?2:3,facing);return;}
   if(animation==='guardbreak'&&reactionPose(sprite,id,'guard-break',elapsed,facing))return;
   if(poseCharacter(sprite,id,animation,elapsed,facing,duration,variant))return;
-  const frame = animationFrame(animation, elapsed, duration), metadata = artManifest(sprite.scene).characters[id];
+  const frame = animation==='idle'?{sheet:'locomotion' as const,index:quietIdleFrame(elapsed,CHARACTERS.indexOf(id)*530)}:animationFrame(animation, elapsed, duration), metadata = artManifest(sprite.scene).characters[id];
   if(frame.sheet==='aerial'){sprite.setTexture(`v9-${id}-aerial`,String(frame.index)).setFlipX(facing<0);normalizeBody(sprite,id,facing);return;}
   const unmasked = id === 'haku' && variant === 'unmasked';
   const data = (unmasked ? artManifest(sprite.scene).variants.unmasked : metadata).sheets[frame.sheet].frames[frame.index], [, , width, height] = data.rect;
@@ -76,9 +79,6 @@ export function poseBattle(sprite: Phaser.GameObjects.Sprite, id: CharacterId, a
   sprite.setScale(CHARACTER[id].height / (unmasked ? artManifest(sprite.scene).variants.unmasked.baseHeight : metadata.baseHeight));
   if(id==='zabuza'&&frame.sheet==='melee'&&variant!=='final-stand'){const row=animation==='heavy'?2:animation==='light3'?3:animation==='light2'?1:0;poseZabuzaSword(sprite,row*6+frame.index%6,facing);}
   if(id==='kakashi'&&frame.sheet==='melee')sprite.setTexture('v3-kakashi-melee',String(frame.index));
-  if (id === 'naruto' && variant === 'awakened' && animation === 'idle') {
-    sprite.setTexture('v2-naruto-awakened', String(Math.floor(elapsed / 600) % 2)).setOrigin(.5, 307 / 384).setScale(CHARACTER.naruto.height / artManifest(sprite.scene).variants.awakened.baseHeight);
-  }
   if (id === 'zabuza' && variant === 'final-stand' && animation !== 'defeat') {
     const index = animation === 'run' || animation === 'dash' ? Math.floor(elapsed / 95) % 6 : animation === 'heavy' ? 6 + Math.min(5, Math.floor(elapsed / 130)) : 11;
     sprite.setTexture('v2-ending-zabuza', String(index)).setOrigin(.5, 307 / 384).setScale(CHARACTER.zabuza.height / artManifest(sprite.scene).variants.ending.baseHeight);

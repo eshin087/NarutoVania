@@ -7,7 +7,7 @@ import {poseHurt} from './art-v11';
 import {reactionPose} from './art-v10';
 import type {AnimationName} from './combat-core';
 import type {RecordedAudio} from './recorded-audio';
-export type CinemaMotion='rescue-shot'|'dragon-clash'|'counter-wave'|'hunter-throw'|'carry'|'teamwork'|'snow-carry'|'sasuke-fall'|'awakening'|'unmask'|'intercept';
+export type CinemaMotion='arrival-sword'|'shield-needles'|'rescue-shot'|'dragon-clash'|'counter-wave'|'hunter-throw'|'carry'|'teamwork'|'snow-carry'|'sasuke-fall'|'awakening'|'unmask'|'intercept';
 interface Actor{sprite:Phaser.GameObjects.Sprite|Phaser.GameObjects.Image;animation:AnimationName;animationAt:number;facing:-1|1;settleAt?:number;}
 interface Shot{motion:TargetedCinemaShot;image:Phaser.GameObjects.Image;target:Actor;dx:number;dy:number;kind:'rescue'|'senbon'|'counter';}
 /** Uses the story clock. Panel holds and pause therefore freeze every flight and carry step. */
@@ -17,7 +17,7 @@ export class CinematicMotionV13{
  constructor(private scene:Phaser.Scene,private actors:ReadonlyMap<string,Actor>,private floor:number,private sounds:RecordedAudio,private releasePrison:()=>void,private shake:()=>void){}
  start(kind:CinemaMotion,at:number){
   this.clock=at;const haku=this.actors.get('haku'),zabuza=this.actors.get('zabuza'),naruto=this.actors.get('naruto'),kakashi=this.actors.get('kakashi');
-  if(kind==='rescue-shot'&&naruto&&zabuza){this.shot(naruto.sprite.x-28,naruto.sprite.y-77,zabuza,27,-105,'rescue');}
+  if(kind==='rescue-shot'&&naruto&&zabuza){const y=zabuza.sprite.y-86;this.shot(naruto.sprite.x-28,y,zabuza,27,-86,'rescue');}
   if(kind==='dragon-clash'&&kakashi&&zabuza){this.clashAt=at;this.clashed=false;for(const actor of [kakashi,zabuza]){actor.animation='cast';actor.animationAt=at;actor.settleAt=at+3000;}
    this.dragons=[1,-1].map(dir=>makeEffect(this.scene,'water-dragon',0,0,650,300).setOrigin(dir>0?.89:.11,.5).setFlipX(dir<0).setDepth(5));
    this.clash=this.scene.add.image(780,this.floor-215,'v13-clash','0').setScale(.8).setDepth(6).setVisible(false);

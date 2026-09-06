@@ -1,0 +1,409 @@
+{
+  "sourcePath": "C:/Users/eshin/.codex/generated_images/01a078f0-8216-71d2-9244-46ac2ba46932/exec-091e4217-df21-4f5f-a82f-9656a062b444.png",
+  "rawSize": [
+    1774,
+    887
+  ],
+  "normalizedSize": [
+    1024,
+    512
+  ],
+  "grid": [
+    4,
+    2
+  ],
+  "cellSize": [
+    256,
+    256
+  ],
+  "localRoot": [
+    128,
+    224
+  ],
+  "method": "Manual anatomical head-top and pelvis points provide body-axis length independent of sword, impact effect, and carried victim. Fixed uniform scale per row prevents growth from projected torso compression. Guard scale0.41; carry scale0.373 calibrated to Kakashi full standing body about157 pixels. Common foot/ground-root anchoring. Original art-v2 standing references used; crouched bodies keep shorter apparent height. Measurements are manual estimates.",
+  "sourceClippingCheck": "No alpha above threshold10 touches top edge; first blade pixel is row4. All blade tips intact.",
+  "visualNotes": [
+    "Raised diagonal cross-body sword blocks replace the rejected lowered blade.",
+    "Full-size adult Zabuza carried horizontally; final frame supine.",
+    "Torso and face artwork retains a slight three-quarter turn toward viewer.",
+    "Small impact flash present on third guard frame."
+  ],
+  "frames": [
+    {
+      "index": 0,
+      "row": 0,
+      "column": 0,
+      "semantic": "cross_body_block_ready",
+      "character": "zabuza",
+      "logicalStandingHeight": 167,
+      "sourceCrop": [
+        0,
+        0,
+        444,
+        443
+      ],
+      "sourceRoot": [
+        222,
+        438
+      ],
+      "sourceHeadTorsoLandmarks": [
+        [
+          257,
+          72
+        ],
+        [
+          217,
+          254
+        ]
+      ],
+      "measuredSourceHeadTorsoPixels": 186.344,
+      "normalizedHeadTorsoPixels": 76.401,
+      "uniformScale": 0.41,
+      "destinationRoot": [
+        128,
+        224
+      ],
+      "visibleBounds": [
+        56,
+        44,
+        217,
+        226
+      ],
+      "safePadding": {
+        "left": 56,
+        "top": 44,
+        "right": 39,
+        "bottom": 30
+      }
+    },
+    {
+      "index": 1,
+      "row": 0,
+      "column": 1,
+      "semantic": "cross_body_brace",
+      "character": "zabuza",
+      "logicalStandingHeight": 167,
+      "sourceCrop": [
+        444,
+        0,
+        887,
+        443
+      ],
+      "sourceRoot": [
+        672,
+        438
+      ],
+      "sourceHeadTorsoLandmarks": [
+        [
+          702,
+          99
+        ],
+        [
+          671,
+          268
+        ]
+      ],
+      "measuredSourceHeadTorsoPixels": 171.82,
+      "normalizedHeadTorsoPixels": 70.446,
+      "uniformScale": 0.41,
+      "destinationRoot": [
+        128,
+        224
+      ],
+      "visibleBounds": [
+        35,
+        44,
+        211,
+        226
+      ],
+      "safePadding": {
+        "left": 35,
+        "top": 44,
+        "right": 45,
+        "bottom": 30
+      }
+    },
+    {
+      "index": 2,
+      "row": 0,
+      "column": 2,
+      "semantic": "block_impact_recoil",
+      "character": "zabuza",
+      "logicalStandingHeight": 167,
+      "sourceCrop": [
+        887,
+        0,
+        1330,
+        443
+      ],
+      "sourceRoot": [
+        1096,
+        438
+      ],
+      "sourceHeadTorsoLandmarks": [
+        [
+          1107,
+          133
+        ],
+        [
+          1100,
+          282
+        ]
+      ],
+      "measuredSourceHeadTorsoPixels": 149.164,
+      "normalizedHeadTorsoPixels": 61.157,
+      "uniformScale": 0.41,
+      "destinationRoot": [
+        128,
+        224
+      ],
+      "visibleBounds": [
+        61,
+        45,
+        224,
+        226
+      ],
+      "safePadding": {
+        "left": 61,
+        "top": 45,
+        "right": 32,
+        "bottom": 30
+      }
+    },
+    {
+      "index": 3,
+      "row": 0,
+      "column": 3,
+      "semantic": "block_recover",
+      "character": "zabuza",
+      "logicalStandingHeight": 167,
+      "sourceCrop": [
+        1330,
+        0,
+        1774,
+        443
+      ],
+      "sourceRoot": [
+        1545,
+        438
+      ],
+      "sourceHeadTorsoLandmarks": [
+        [
+          1568,
+          85
+        ],
+        [
+          1536,
+          259
+        ]
+      ],
+      "measuredSourceHeadTorsoPixels": 176.918,
+      "normalizedHeadTorsoPixels": 72.536,
+      "uniformScale": 0.41,
+      "destinationRoot": [
+        128,
+        224
+      ],
+      "visibleBounds": [
+        40,
+        44,
+        210,
+        226
+      ],
+      "safePadding": {
+        "left": 40,
+        "top": 44,
+        "right": 46,
+        "bottom": 30
+      }
+    },
+    {
+      "index": 4,
+      "row": 1,
+      "column": 0,
+      "semantic": "horizontal_adult_carry",
+      "character": "kakashi",
+      "logicalStandingHeight": 157,
+      "sourceCrop": [
+        0,
+        443,
+        446,
+        887
+      ],
+      "sourceRoot": [
+        212,
+        872
+      ],
+      "sourceHeadTorsoLandmarks": [
+        [
+          219,
+          446
+        ],
+        [
+          207,
+          656
+        ]
+      ],
+      "measuredSourceHeadTorsoPixels": 210.343,
+      "normalizedHeadTorsoPixels": 78.458,
+      "uniformScale": 0.373,
+      "destinationRoot": [
+        128,
+        224
+      ],
+      "visibleBounds": [
+        49,
+        64,
+        213,
+        226
+      ],
+      "safePadding": {
+        "left": 49,
+        "top": 64,
+        "right": 43,
+        "bottom": 30
+      }
+    },
+    {
+      "index": 5,
+      "row": 1,
+      "column": 1,
+      "semantic": "horizontal_carry_step",
+      "character": "kakashi",
+      "logicalStandingHeight": 157,
+      "sourceCrop": [
+        446,
+        443,
+        892,
+        887
+      ],
+      "sourceRoot": [
+        643,
+        860
+      ],
+      "sourceHeadTorsoLandmarks": [
+        [
+          667,
+          464
+        ],
+        [
+          649,
+          662
+        ]
+      ],
+      "measuredSourceHeadTorsoPixels": 198.816,
+      "normalizedHeadTorsoPixels": 74.159,
+      "uniformScale": 0.373,
+      "destinationRoot": [
+        128,
+        224
+      ],
+      "visibleBounds": [
+        58,
+        70,
+        202,
+        226
+      ],
+      "safePadding": {
+        "left": 58,
+        "top": 70,
+        "right": 54,
+        "bottom": 30
+      }
+    },
+    {
+      "index": 6,
+      "row": 1,
+      "column": 2,
+      "semantic": "kneeling_horizontal_lower",
+      "character": "kakashi",
+      "logicalStandingHeight": 157,
+      "sourceCrop": [
+        892,
+        443,
+        1305,
+        887
+      ],
+      "sourceRoot": [
+        1106,
+        835
+      ],
+      "sourceHeadTorsoLandmarks": [
+        [
+          1137,
+          576
+        ],
+        [
+          1103,
+          757
+        ]
+      ],
+      "measuredSourceHeadTorsoPixels": 184.166,
+      "normalizedHeadTorsoPixels": 68.694,
+      "uniformScale": 0.373,
+      "destinationRoot": [
+        128,
+        224
+      ],
+      "visibleBounds": [
+        52,
+        97,
+        202,
+        229
+      ],
+      "safePadding": {
+        "left": 52,
+        "top": 97,
+        "right": 54,
+        "bottom": 27
+      }
+    },
+    {
+      "index": 7,
+      "row": 1,
+      "column": 3,
+      "semantic": "supine_set_down",
+      "character": "kakashi",
+      "logicalStandingHeight": 157,
+      "sourceCrop": [
+        1305,
+        443,
+        1774,
+        887
+      ],
+      "sourceRoot": [
+        1589,
+        835
+      ],
+      "sourceHeadTorsoLandmarks": [
+        [
+          1674,
+          566
+        ],
+        [
+          1575,
+          727
+        ]
+      ],
+      "measuredSourceHeadTorsoPixels": 189.003,
+      "normalizedHeadTorsoPixels": 70.498,
+      "uniformScale": 0.373,
+      "destinationRoot": [
+        128,
+        224
+      ],
+      "visibleBounds": [
+        22,
+        103,
+        191,
+        229
+      ],
+      "safePadding": {
+        "left": 22,
+        "top": 103,
+        "right": 65,
+        "bottom": 27
+      }
+    }
+  ]
+}

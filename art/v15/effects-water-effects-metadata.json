@@ -1,0 +1,621 @@
+{
+  "generator": "built-in image_gen",
+  "sourcePath": "C:\\Users\\eshin\\.codex\\generated_images\\01a078f0-22ec-77c2-ad51-127214e9b8c3\\exec-61de77ae-f215-49e0-9996-69be0f2366c2.png",
+  "atlas": "water-effects-atlas.png",
+  "atlasWebp": "water-effects-atlas.webp",
+  "width": 1280,
+  "height": 1280,
+  "columns": 4,
+  "rows": 4,
+  "frameWidth": 320,
+  "frameHeight": 320,
+  "anchor": [
+    160,
+    282
+  ],
+  "sequences": {
+    "puddleGather": {
+      "start": 0,
+      "count": 8
+    },
+    "waterImpact": {
+      "start": 8,
+      "count": 8
+    }
+  },
+  "cleanup": "Removed disconnected alpha noise components below 24 pixels at alpha >=100, retained one-pixel edge alpha around kept components, common 0.78 scale and ground anchor.",
+  "frames": [
+    {
+      "index": 0,
+      "sequence": "puddleGather",
+      "sequenceIndex": 0,
+      "rect": [
+        0,
+        0,
+        320,
+        320
+      ],
+      "anchor": [
+        160,
+        282
+      ],
+      "anchorNormalized": [
+        0.5,
+        0.88125
+      ],
+      "sourceRect": [
+        0,
+        0,
+        314,
+        314
+      ],
+      "sourceContentBounds": [
+        89,
+        224,
+        219,
+        245
+      ],
+      "contentRect": [
+        110,
+        266,
+        101,
+        16
+      ]
+    },
+    {
+      "index": 1,
+      "sequence": "puddleGather",
+      "sequenceIndex": 1,
+      "rect": [
+        320,
+        0,
+        320,
+        320
+      ],
+      "anchor": [
+        160,
+        282
+      ],
+      "anchorNormalized": [
+        0.5,
+        0.88125
+      ],
+      "sourceRect": [
+        314,
+        0,
+        313,
+        314
+      ],
+      "sourceContentBounds": [
+        44,
+        180,
+        263,
+        250
+      ],
+      "contentRect": [
+        75,
+        227,
+        171,
+        55
+      ]
+    },
+    {
+      "index": 2,
+      "sequence": "puddleGather",
+      "sequenceIndex": 2,
+      "rect": [
+        640,
+        0,
+        320,
+        320
+      ],
+      "anchor": [
+        160,
+        282
+      ],
+      "anchorNormalized": [
+        0.5,
+        0.88125
+      ],
+      "sourceRect": [
+        627,
+        0,
+        313,
+        314
+      ],
+      "sourceContentBounds": [
+        23,
+        167,
+        283,
+        256
+      ],
+      "contentRect": [
+        59,
+        213,
+        203,
+        69
+      ]
+    },
+    {
+      "index": 3,
+      "sequence": "puddleGather",
+      "sequenceIndex": 3,
+      "rect": [
+        960,
+        0,
+        320,
+        320
+      ],
+      "anchor": [
+        160,
+        282
+      ],
+      "anchorNormalized": [
+        0.5,
+        0.88125
+      ],
+      "sourceRect": [
+        940,
+        0,
+        314,
+        285
+      ],
+      "sourceContentBounds": [
+        11,
+        150,
+        285,
+        264
+      ],
+      "contentRect": [
+        53,
+        193,
+        214,
+        89
+      ]
+    },
+    {
+      "index": 4,
+      "sequence": "puddleGather",
+      "sequenceIndex": 4,
+      "rect": [
+        0,
+        320,
+        320,
+        320
+      ],
+      "anchor": [
+        160,
+        282
+      ],
+      "anchorNormalized": [
+        0.5,
+        0.88125
+      ],
+      "sourceRect": [
+        0,
+        314,
+        314,
+        313
+      ],
+      "sourceContentBounds": [
+        29,
+        154,
+        284,
+        283
+      ],
+      "contentRect": [
+        61,
+        181,
+        199,
+        101
+      ]
+    },
+    {
+      "index": 5,
+      "sequence": "puddleGather",
+      "sequenceIndex": 5,
+      "rect": [
+        320,
+        320,
+        320,
+        320
+      ],
+      "anchor": [
+        160,
+        282
+      ],
+      "anchorNormalized": [
+        0.5,
+        0.88125
+      ],
+      "sourceRect": [
+        314,
+        314,
+        313,
+        313
+      ],
+      "sourceContentBounds": [
+        37,
+        131,
+        281,
+        284
+      ],
+      "contentRect": [
+        65,
+        163,
+        190,
+        119
+      ]
+    },
+    {
+      "index": 6,
+      "sequence": "puddleGather",
+      "sequenceIndex": 6,
+      "rect": [
+        640,
+        320,
+        320,
+        320
+      ],
+      "anchor": [
+        160,
+        282
+      ],
+      "anchorNormalized": [
+        0.5,
+        0.88125
+      ],
+      "sourceRect": [
+        627,
+        314,
+        313,
+        313
+      ],
+      "sourceContentBounds": [
+        33,
+        63,
+        279,
+        286
+      ],
+      "contentRect": [
+        64,
+        108,
+        192,
+        174
+      ]
+    },
+    {
+      "index": 7,
+      "sequence": "puddleGather",
+      "sequenceIndex": 7,
+      "rect": [
+        960,
+        320,
+        320,
+        320
+      ],
+      "anchor": [
+        160,
+        282
+      ],
+      "anchorNormalized": [
+        0.5,
+        0.88125
+      ],
+      "sourceRect": [
+        940,
+        290,
+        314,
+        337
+      ],
+      "sourceContentBounds": [
+        40,
+        20,
+        277,
+        313
+      ],
+      "contentRect": [
+        68,
+        53,
+        185,
+        229
+      ]
+    },
+    {
+      "index": 8,
+      "sequence": "waterImpact",
+      "sequenceIndex": 0,
+      "rect": [
+        0,
+        640,
+        320,
+        320
+      ],
+      "anchor": [
+        160,
+        282
+      ],
+      "anchorNormalized": [
+        0.5,
+        0.88125
+      ],
+      "sourceRect": [
+        0,
+        627,
+        314,
+        313
+      ],
+      "sourceContentBounds": [
+        89,
+        162,
+        232,
+        271
+      ],
+      "contentRect": [
+        104,
+        197,
+        112,
+        85
+      ]
+    },
+    {
+      "index": 9,
+      "sequence": "waterImpact",
+      "sequenceIndex": 1,
+      "rect": [
+        320,
+        640,
+        320,
+        320
+      ],
+      "anchor": [
+        160,
+        282
+      ],
+      "anchorNormalized": [
+        0.5,
+        0.88125
+      ],
+      "sourceRect": [
+        314,
+        627,
+        313,
+        313
+      ],
+      "sourceContentBounds": [
+        38,
+        106,
+        273,
+        274
+      ],
+      "contentRect": [
+        69,
+        151,
+        183,
+        131
+      ]
+    },
+    {
+      "index": 10,
+      "sequence": "waterImpact",
+      "sequenceIndex": 2,
+      "rect": [
+        640,
+        640,
+        320,
+        320
+      ],
+      "anchor": [
+        160,
+        282
+      ],
+      "anchorNormalized": [
+        0.5,
+        0.88125
+      ],
+      "sourceRect": [
+        627,
+        627,
+        313,
+        313
+      ],
+      "sourceContentBounds": [
+        21,
+        26,
+        291,
+        281
+      ],
+      "contentRect": [
+        55,
+        83,
+        211,
+        199
+      ]
+    },
+    {
+      "index": 11,
+      "sequence": "waterImpact",
+      "sequenceIndex": 3,
+      "rect": [
+        960,
+        640,
+        320,
+        320
+      ],
+      "anchor": [
+        160,
+        282
+      ],
+      "anchorNormalized": [
+        0.5,
+        0.88125
+      ],
+      "sourceRect": [
+        940,
+        627,
+        314,
+        313
+      ],
+      "sourceContentBounds": [
+        5,
+        87,
+        305,
+        281
+      ],
+      "contentRect": [
+        43,
+        131,
+        234,
+        151
+      ]
+    },
+    {
+      "index": 12,
+      "sequence": "waterImpact",
+      "sequenceIndex": 4,
+      "rect": [
+        0,
+        960,
+        320,
+        320
+      ],
+      "anchor": [
+        160,
+        282
+      ],
+      "anchorNormalized": [
+        0.5,
+        0.88125
+      ],
+      "sourceRect": [
+        0,
+        940,
+        314,
+        314
+      ],
+      "sourceContentBounds": [
+        34,
+        105,
+        290,
+        256
+      ],
+      "contentRect": [
+        60,
+        164,
+        200,
+        118
+      ]
+    },
+    {
+      "index": 13,
+      "sequence": "waterImpact",
+      "sequenceIndex": 5,
+      "rect": [
+        320,
+        960,
+        320,
+        320
+      ],
+      "anchor": [
+        160,
+        282
+      ],
+      "anchorNormalized": [
+        0.5,
+        0.88125
+      ],
+      "sourceRect": [
+        314,
+        940,
+        313,
+        314
+      ],
+      "sourceContentBounds": [
+        46,
+        104,
+        266,
+        253
+      ],
+      "contentRect": [
+        74,
+        166,
+        172,
+        116
+      ]
+    },
+    {
+      "index": 14,
+      "sequence": "waterImpact",
+      "sequenceIndex": 6,
+      "rect": [
+        640,
+        960,
+        320,
+        320
+      ],
+      "anchor": [
+        160,
+        282
+      ],
+      "anchorNormalized": [
+        0.5,
+        0.88125
+      ],
+      "sourceRect": [
+        627,
+        940,
+        313,
+        314
+      ],
+      "sourceContentBounds": [
+        39,
+        159,
+        273,
+        253
+      ],
+      "contentRect": [
+        69,
+        209,
+        183,
+        73
+      ]
+    },
+    {
+      "index": 15,
+      "sequence": "waterImpact",
+      "sequenceIndex": 7,
+      "rect": [
+        960,
+        960,
+        320,
+        320
+      ],
+      "anchor": [
+        160,
+        282
+      ],
+      "anchorNormalized": [
+        0.5,
+        0.88125
+      ],
+      "sourceRect": [
+        940,
+        940,
+        314,
+        314
+      ],
+      "sourceContentBounds": [
+        84,
+        210,
+        233,
+        249
+      ],
+      "contentRect": [
+        102,
+        252,
+        116,
+        30
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3619 @@
+{
+  "version": 15,
+  "reference": "pre-V14 locomotion frame6, natural per-character heights",
+  "status": "visual calibration, per-frame review required",
+  "characters": {
+    "kakashi-melee": [
+      {
+        "frame": 0,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 1,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 2,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          183.375,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 3,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          177.75,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 4,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 5,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.375,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 6,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 7,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 8,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          143.25,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 9,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 10,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 11,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.375,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 12,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 13,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.375,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 14,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.375,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 15,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 16,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 17,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 18,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 19,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 20,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          161.25,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 21,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 22,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 23,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 24,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          191.625,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 25,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 26,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          190.125,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 27,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 28,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 29,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 30,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 31,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 32,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 33,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 34,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 35,
+        "bodyScale": 0.88,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      }
+    ],
+    "naruto-melee": [
+      {
+        "frame": 0,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 1,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 2,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 3,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 4,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 5,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 6,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 7,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          191.625,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 8,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 9,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 10,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 11,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 12,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 13,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 14,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          191.625,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 15,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 16,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 17,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 18,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 19,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 20,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 21,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 22,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 23,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 24,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 25,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 26,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 27,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 28,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 29,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 30,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 31,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 32,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          191.625,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 33,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 34,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 35,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      }
+    ],
+    "sasuke-melee": [
+      {
+        "frame": 0,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 1,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 2,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          171.75,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 3,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          130.5,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 4,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 5,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 6,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 7,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          191.25,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 8,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 9,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 10,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 11,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 12,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 13,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 14,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.375,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 15,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 16,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 17,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          191.625,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 18,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 19,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 20,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 21,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 22,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 23,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 24,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 25,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 26,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          180.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 27,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          153.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 28,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 29,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 30,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 31,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          191.625,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 32,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 33,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 34,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 35,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      }
+    ],
+    "sakura-melee": [
+      {
+        "frame": 0,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 1,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 2,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 3,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          183.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 4,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 5,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 6,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 7,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 8,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          155.25,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 9,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          148.875,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 10,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 11,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 12,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 13,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 14,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 15,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 16,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 17,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 18,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 19,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          191.625,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 20,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          170.625,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 21,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 22,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 23,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 24,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 25,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 26,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 27,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 28,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 29,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 30,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 31,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 32,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 33,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 34,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          191.625,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 35,
+        "bodyScale": 0.92,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      }
+    ],
+    "zabuza-melee": [
+      {
+        "frame": 0,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 1,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 2,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 3,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          198.75,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 4,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          226.875,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 5,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 6,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 7,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 8,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          109.5,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 9,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          107.25,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 10,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 11,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 12,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          183.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 13,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          159.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 14,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          155.625,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 15,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          171.75,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 16,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          165.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 17,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 18,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 19,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          71.25,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 20,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          60.75,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 21,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          52.5,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 22,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 23,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 24,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 25,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          141.75,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 26,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          114.75,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 27,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          174.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 28,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 29,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          192.375,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 30,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 31,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 32,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 33,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          147.75,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 34,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          173.25,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 35,
+        "bodyScale": 0.95,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      }
+    ],
+    "haku-masked-melee": [
+      {
+        "frame": 0,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 1,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 2,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          186.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 3,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          169.5,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 4,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 5,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          191.625,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 6,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 7,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 8,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          156.75,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 9,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          141.75,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 10,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 11,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 12,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 13,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 14,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 15,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 16,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 17,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 18,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 19,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 20,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          191.625,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 21,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 22,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 23,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 24,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 25,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 26,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          189.75,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 27,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          163.5,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 28,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.375,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 29,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 30,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 31,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 32,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 33,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 34,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 35,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      }
+    ],
+    "naruto-awakened-melee": [
+      {
+        "frame": 0,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 1,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 2,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          175.875,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 3,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          126.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 4,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 5,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 6,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 7,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          161.25,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 8,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 9,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          142.5,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 10,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 11,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 12,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 13,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 14,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          189.75,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 15,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          178.5,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 16,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 17,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 18,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 19,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 20,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 21,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 22,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 23,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 24,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 25,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 26,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          181.5,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 27,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 28,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 29,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 30,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          191.625,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 31,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 32,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 33,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 34,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 35,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      }
+    ],
+    "haku-unmasked-melee": [
+      {
+        "frame": 0,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 1,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          191.625,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 2,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.375,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 3,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 4,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 5,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 6,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 7,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 8,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          190.5,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 9,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 10,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 11,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 12,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 13,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 14,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 15,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 16,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 17,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.375,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 18,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 19,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 20,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 21,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 22,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 23,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 24,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 25,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.375,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 26,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 27,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 28,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 29,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 30,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.375,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 31,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 32,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 33,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 34,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      },
+      {
+        "frame": 35,
+        "bodyScale": 0.94,
+        "footAnchor": [
+          192.0,
+          345.0
+        ],
+        "basis": "side-by-side head/torso reference calibration; no weapon/effect bounds"
+      }
+    ]
+  },
+  "cinema": {
+    "teamwork": [
+      {
+        "frame": 0,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          362
+        ]
+      },
+      {
+        "frame": 1,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          360
+        ]
+      },
+      {
+        "frame": 2,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          361
+        ]
+      },
+      {
+        "frame": 3,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          361
+        ]
+      },
+      {
+        "frame": 4,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          360
+        ]
+      },
+      {
+        "frame": 5,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          358
+        ]
+      },
+      {
+        "frame": 6,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          355
+        ]
+      },
+      {
+        "frame": 7,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          354
+        ]
+      },
+      {
+        "frame": 8,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          356
+        ]
+      },
+      {
+        "frame": 9,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          354
+        ]
+      },
+      {
+        "frame": 10,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          355
+        ]
+      },
+      {
+        "frame": 11,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          353
+        ]
+      },
+      {
+        "frame": 12,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          340
+        ]
+      },
+      {
+        "frame": 13,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          340
+        ]
+      },
+      {
+        "frame": 14,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          336
+        ]
+      },
+      {
+        "frame": 15,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          291
+        ]
+      },
+      {
+        "frame": 16,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          285
+        ]
+      },
+      {
+        "frame": 17,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          340
+        ]
+      },
+      {
+        "frame": 18,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          310
+        ]
+      },
+      {
+        "frame": 19,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          311
+        ]
+      },
+      {
+        "frame": 20,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          315
+        ]
+      },
+      {
+        "frame": 21,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          313
+        ]
+      },
+      {
+        "frame": 22,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          311
+        ]
+      },
+      {
+        "frame": 23,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          308
+        ]
+      }
+    ],
+    "carry": [
+      {
+        "frame": 0,
+        "bodyScale": 0.82,
+        "rootAnchor": [
+          300,
+          359
+        ]
+      },
+      {
+        "frame": 1,
+        "bodyScale": 0.82,
+        "rootAnchor": [
+          300,
+          357
+        ]
+      },
+      {
+        "frame": 2,
+        "bodyScale": 0.82,
+        "rootAnchor": [
+          300,
+          354
+        ]
+      },
+      {
+        "frame": 3,
+        "bodyScale": 0.82,
+        "rootAnchor": [
+          300,
+          349
+        ]
+      },
+      {
+        "frame": 4,
+        "bodyScale": 0.82,
+        "rootAnchor": [
+          300,
+          354
+        ]
+      },
+      {
+        "frame": 5,
+        "bodyScale": 0.82,
+        "rootAnchor": [
+          300,
+          352
+        ]
+      },
+      {
+        "frame": 6,
+        "bodyScale": 0.82,
+        "rootAnchor": [
+          300,
+          355
+        ]
+      },
+      {
+        "frame": 7,
+        "bodyScale": 0.82,
+        "rootAnchor": [
+          300,
+          354
+        ]
+      },
+      {
+        "frame": 8,
+        "bodyScale": 0.82,
+        "rootAnchor": [
+          300,
+          359
+        ]
+      },
+      {
+        "frame": 9,
+        "bodyScale": 0.82,
+        "rootAnchor": [
+          300,
+          359
+        ]
+      },
+      {
+        "frame": 10,
+        "bodyScale": 0.82,
+        "rootAnchor": [
+          300,
+          359
+        ]
+      },
+      {
+        "frame": 11,
+        "bodyScale": 0.82,
+        "rootAnchor": [
+          300,
+          366
+        ]
+      },
+      {
+        "frame": 12,
+        "bodyScale": 0.82,
+        "rootAnchor": [
+          300,
+          348
+        ]
+      },
+      {
+        "frame": 13,
+        "bodyScale": 0.82,
+        "rootAnchor": [
+          300,
+          352
+        ]
+      },
+      {
+        "frame": 14,
+        "bodyScale": 0.82,
+        "rootAnchor": [
+          300,
+          350
+        ]
+      },
+      {
+        "frame": 15,
+        "bodyScale": 0.82,
+        "rootAnchor": [
+          300,
+          354
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "frame": 0,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          345
+        ]
+      },
+      {
+        "frame": 1,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          347
+        ]
+      },
+      {
+        "frame": 2,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          346
+        ]
+      },
+      {
+        "frame": 3,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          340
+        ]
+      },
+      {
+        "frame": 4,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          346
+        ]
+      },
+      {
+        "frame": 5,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          343
+        ]
+      },
+      {
+        "frame": 6,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          331
+        ]
+      },
+      {
+        "frame": 7,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          331
+        ]
+      },
+      {
+        "frame": 8,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          333
+        ]
+      },
+      {
+        "frame": 9,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          337
+        ]
+      },
+      {
+        "frame": 10,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          343
+        ]
+      },
+      {
+        "frame": 11,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          345
+        ]
+      },
+      {
+        "frame": 12,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          315
+        ]
+      },
+      {
+        "frame": 13,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          316
+        ]
+      },
+      {
+        "frame": 14,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          317
+        ]
+      },
+      {
+        "frame": 15,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          315
+        ]
+      },
+      {
+        "frame": 16,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          320
+        ]
+      },
+      {
+        "frame": 17,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          311
+        ]
+      },
+      {
+        "frame": 18,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          323
+        ]
+      },
+      {
+        "frame": 19,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          312
+        ]
+      },
+      {
+        "frame": 20,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          336
+        ]
+      },
+      {
+        "frame": 21,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          320
+        ]
+      },
+      {
+        "frame": 22,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          324
+        ]
+      },
+      {
+        "frame": 23,
+        "bodyScale": 0.94,
+        "rootAnchor": [
+          192,
+          315
+        ]
+      }
+    ],
+    "ultimate-a": [
+      {
+        "frame": 0,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          369
+        ]
+      },
+      {
+        "frame": 1,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          368
+        ]
+      },
+      {
+        "frame": 2,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          368
+        ]
+      },
+      {
+        "frame": 3,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          368
+        ]
+      },
+      {
+        "frame": 4,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          369
+        ]
+      },
+      {
+        "frame": 5,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          371
+        ]
+      },
+      {
+        "frame": 6,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          363
+        ]
+      },
+      {
+        "frame": 7,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          368
+        ]
+      },
+      {
+        "frame": 8,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          365
+        ]
+      },
+      {
+        "frame": 9,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          365
+        ]
+      },
+      {
+        "frame": 10,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          365
+        ]
+      },
+      {
+        "frame": 11,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          366
+        ]
+      },
+      {
+        "frame": 12,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          364
+        ]
+      },
+      {
+        "frame": 13,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          365
+        ]
+      },
+      {
+        "frame": 14,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          361
+        ]
+      },
+      {
+        "frame": 15,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          353
+        ]
+      },
+      {
+        "frame": 16,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          356
+        ]
+      },
+      {
+        "frame": 17,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          365
+        ]
+      },
+      {
+        "frame": 18,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          364
+        ]
+      },
+      {
+        "frame": 19,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          365
+        ]
+      },
+      {
+        "frame": 20,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          359
+        ]
+      },
+      {
+        "frame": 21,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          359
+        ]
+      },
+      {
+        "frame": 22,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          359
+        ]
+      },
+      {
+        "frame": 23,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          365
+        ]
+      },
+      {
+        "frame": 24,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          351
+        ]
+      },
+      {
+        "frame": 25,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          352
+        ]
+      },
+      {
+        "frame": 26,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          347
+        ]
+      },
+      {
+        "frame": 27,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          349
+        ]
+      },
+      {
+        "frame": 28,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          350
+        ]
+      },
+      {
+        "frame": 29,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          353
+        ]
+      }
+    ],
+    "ultimate-b": [
+      {
+        "frame": 0,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          368
+        ]
+      },
+      {
+        "frame": 1,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          367
+        ]
+      },
+      {
+        "frame": 2,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          368
+        ]
+      },
+      {
+        "frame": 3,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          374
+        ]
+      },
+      {
+        "frame": 4,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          373
+        ]
+      },
+      {
+        "frame": 5,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          374
+        ]
+      },
+      {
+        "frame": 6,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          372
+        ]
+      },
+      {
+        "frame": 7,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          373
+        ]
+      },
+      {
+        "frame": 8,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          341
+        ]
+      },
+      {
+        "frame": 9,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          368
+        ]
+      },
+      {
+        "frame": 10,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          371
+        ]
+      },
+      {
+        "frame": 11,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          372
+        ]
+      },
+      {
+        "frame": 12,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          356
+        ]
+      },
+      {
+        "frame": 13,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          359
+        ]
+      },
+      {
+        "frame": 14,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          323
+        ]
+      },
+      {
+        "frame": 15,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          355
+        ]
+      },
+      {
+        "frame": 16,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          352
+        ]
+      },
+      {
+        "frame": 17,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          358
+        ]
+      },
+      {
+        "frame": 18,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          349
+        ]
+      },
+      {
+        "frame": 19,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          353
+        ]
+      },
+      {
+        "frame": 20,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          351
+        ]
+      },
+      {
+        "frame": 21,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          358
+        ]
+      },
+      {
+        "frame": 22,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          346
+        ]
+      },
+      {
+        "frame": 23,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          363
+        ]
+      },
+      {
+        "frame": 24,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          347
+        ]
+      },
+      {
+        "frame": 25,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          345
+        ]
+      },
+      {
+        "frame": 26,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          349
+        ]
+      },
+      {
+        "frame": 27,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          349
+        ]
+      },
+      {
+        "frame": 28,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          345
+        ]
+      },
+      {
+        "frame": 29,
+        "bodyScale": 0.9,
+        "rootAnchor": [
+          192,
+          352
+        ]
+      }
+    ]
+  }
+}

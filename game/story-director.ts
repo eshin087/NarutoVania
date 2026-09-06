@@ -42,7 +42,7 @@ export function introClip(phase: StoryPhaseId): CinemaClip {
 
       {at: 900, actor: 'naruto', x: 340, duration: 1700, animation: 'run'}, {at: 950, actor: 'sasuke', x: 245, duration: 1800, animation: 'run'},
 
-      {at: 2500, actor: 'zabuza', animation: 'heavy', effect: 'shuriken'}, {at: 3300, actor: 'kakashi', animation: 'block'},
+      {at:2500,motion:'arrival-sword'},
 
       {at: 3400, actor: 'naruto', animation: 'slide'}, {at: 3400, actor: 'sasuke', animation: 'slide'},
 
@@ -103,11 +103,11 @@ export function outroClip(phase: StoryPhaseId): CinemaClip {
 
         {at: 2400, actor: 'haku', animation: 'cast', effect: 'ice'}, {at: 4000, actor: 'sasuke', animation: 'parry', effect: 'parry'},
 
-        {at: 5300, actor: 'haku', facing: 1, x: 380, duration: 170, effect: 'ice'}, {at: 6500, actor: 'haku', animation: 'cast', effect: 'shuriken'},
+        {at: 5300, actor: 'haku', facing: 1, x: 380, duration: 170, effect: 'ice'}, {at:6500,motion:'shield-needles'},
 
-        {at: 7000, actor: 'sasuke', x: 510, duration: 230, animation: 'dash', facing: -1},
 
-        {at: 7500, actor: 'sasuke', animation: 'hurt', effect: 'impact',motion:'sasuke-fall'}, {at: 9000, actor: 'sasuke', animation: 'defeat'},
+
+
 
         {at: 10300, actor: 'naruto', facing: -1, x: 560, duration: 700, animation: 'guardbreak'}, {at: 12800, actor: 'naruto', animation: 'ultimate', effect: 'aura',motion:'awakening'},
 
@@ -338,7 +338,7 @@ function withDialogue(clip: CinemaClip): CinemaClip {
 
       {at: 18400, actor: 'zabuza', speech: 'Boy… lend me your kunai.', hold: 1400},
 
-      
+
 
       {at: 29700, actor: 'zabuza', speech: 'Let me stay beside you.', hold: 3200},
 
