@@ -9,13 +9,13 @@ export interface Snapshot {
   abilities: {id: string; label: string; description: string; icon: Ability['icon']; cooldown: number; cost: number; ready: boolean}[];
   subCooldown: number; cloneCount: number; elapsed: number; phaseElapsed: number; device: 'keyboard' | 'gamepad';
   boss: null | {name: string; health: number; max: number; stamina: number; guardBroken: boolean; phase: string; stunned: boolean; postureFlash: boolean; recovery: number};
-  stunned: boolean; recovery: number; ultimateCinematic: string;
+  reading: number; counter: boolean; stunned: boolean; recovery: number; ultimateCinematic: string;
   protection: number | null; retries: number; parries: number; error: string; fps: number; cinematic: string; seen: StoryPhaseId[];
 }
 const initial: Snapshot = {screen: 'loading', progress: 0, character: 'kakashi', health: 100, stamina: 100, chakra: 100, ultimate: 0,
   guardBroken: false, guarding: false, checkpoint: 'mist', stage: PHASES.mist.title, objective: '', phaseProgress: 0, abilities: [],
   subCooldown: 0, cloneCount: 0, elapsed: 0, phaseElapsed: 0, device: 'keyboard', boss: null, protection: null, retries: 0,
-  parries: 0, error: '', fps: 60, cinematic: '', seen: [], stunned:false,recovery:0,ultimateCinematic:''};
+  parries: 0, error: '', fps: 60, cinematic: '', seen: [], stunned:false,recovery:0,ultimateCinematic:'',reading:0,counter:false};
 const defaults: Settings = {muted: false, reducedShake: false, musicVolume: .55, effectsVolume: .8, voiceVolume: .7};
 let snapshot = {...initial}, settings = {...defaults};
 const listeners = new Set<() => void>(); let handler: (command: Command) => void = () => {};

@@ -13,6 +13,8 @@ export interface BossArtManifest {
   props: Record<string, NamedFrame>; effects: Record<string, NamedFrame>;
 }
 export function preloadBattleArt(scene: Phaser.Scene) {
+  scene.load.image('v5-wave', '/art-v5/tidal-wave.png');
+  scene.load.image('v5-moments', '/art-v5/manga-moments.png');
   scene.load.json('battle-manifest', '/art-v2/manifest.json');
   scene.load.json('combat-art-manifest','/art-v3/manifest.json');
   scene.load.image('v3-kakashi-melee','/art-v3/kakashi-melee.png');
@@ -24,6 +26,8 @@ export function preloadBattleArt(scene: Phaser.Scene) {
 }
 export function artManifest(scene: Phaser.Scene) {return scene.cache.json.get('battle-manifest') as BossArtManifest;}
 export function registerBattleArt(scene: Phaser.Scene) {
+  for (let i=0;i<4;i++) scene.textures.get('v5-wave').add(String(i),0,i*512,0,512,512);
+  for (let i=0;i<6;i++) scene.textures.get('v5-moments').add(String(i),0,(i%2)*768,Math.floor(i/2)*432,768,432);
   const manifest = artManifest(scene);
   const revision=scene.cache.json.get('combat-art-manifest') as {kakashi:{frames:AssetFrame[]};ultimates:{frames:Record<string,number[]>};water:{frames:AssetFrame[]}};
   revision.kakashi.frames.forEach((f,i)=>{const [x,y,w,h]=f.rect;scene.textures.get('v3-kakashi-melee').add(String(i),0,x,y,w,h);});

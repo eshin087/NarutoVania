@@ -1,6 +1,6 @@
 import {describe, expect, it} from 'vitest';
 import {COMBAT, Combatant, UNIVERSAL, hurtbox, overlaps, safeSubstitution} from './combat-core';
-import {PHASE_IDS, PHASES, kit, nextPhase, stateForPhase} from './chapter';
+import {PLAYABLE_PHASE_IDS, PHASES, kit, nextPhase, stateForPhase} from './chapter';
 const ordinary = {damage: 12, posture: 18, red: false, fromX: 200};
 const guard = (time = 1000) => {const f = new Combatant('kakashi'); f.stamina = 60; f.setGuard(true, true, time); return f;};
 describe('timed defense', () => {
@@ -32,8 +32,8 @@ describe('timed defense', () => {
   });
   it('boss exhaustion is a punish window, not health loss or phase completion', () => {
     const f = new Combatant('zabuza', 1500, true); f.stamina = 20; f.exhaust(24, 1000);
-    expect(f.health).toBe(1500); expect(f.guardBrokenUntil).toBe(3400);
-    f.update(3399, 0); expect(f.stamina).toBe(0); f.update(3400, 0); expect(f.stamina).toBe(100);
+    expect(f.health).toBe(1500); expect(f.guardBrokenUntil).toBe(2550);
+    f.update(2549, 0); expect(f.stamina).toBe(0); f.update(2550, 0); expect(f.stamina).toBe(100);
   });
 });
 describe('movement resources and hitboxes', () => {
@@ -96,8 +96,8 @@ describe('action scheduler', () => {
   });
 });
 describe('canonical checkpoint state', () => {
-  it('has the agreed seven controlled phases and no traversal waves', () => {
-    expect(PHASE_IDS.map(id => PHASES[id].character)).toEqual(['kakashi', 'naruto', 'kakashi', 'sakura', 'sasuke', 'naruto', 'kakashi']);
+  it('has five controlled phases and no traversal waves', () => {
+    expect(PLAYABLE_PHASE_IDS.map(id => PHASES[id].character)).toEqual(['kakashi', 'naruto', 'kakashi', 'sasuke', 'naruto']);
     expect(nextPhase('lightning')).toBeNull();
   });
   it('restores the complete handoff state from any checkpoint', () => {
@@ -114,25 +114,26 @@ describe('canonical checkpoint state', () => {
 });
 
 describe('close-combat rebalance',()=>{
-  it('every successful parry removes at least 32 boss stamina and interrupts an ordinary attack',()=>{
+  it('a perfect parry damages boss guard without cancelling the entire string',()=>{
     const defender=guard();defender.chakra=20;
     const boss=new Combatant('zabuza',1600,true);boss.start(UNIVERSAL.light1,1000);
     const result=defender.receive(ordinary,1070);boss.deflected(result.attackerPosture,1070);
-    expect(boss.stamina).toBe(63);expect(boss.action).toBeNull();expect(boss.hurtUntil).toBe(1370);
-    expect(defender.chakra).toBe(24);expect(defender.ultimate).toBe(12);
+    expect(boss.stamina).toBe(72);expect(boss.action).not.toBeNull();expect(boss.hurtUntil).toBe(0);
+    expect(defender.chakra).toBe(24);expect(defender.ultimate).toBe(6);
   });
-  it('broken boss guard takes 75% extra damage and hits never extend its punish window',()=>{
+  it('broken boss guard takes 60% extra damage and hits never extend its punish window',()=>{
     const boss=new Combatant('zabuza',1000,true);boss.exhaust(100,1000);
-    const hit=boss.receive({...ordinary,damage:100},1100);expect(hit.damage).toBe(175);expect(boss.health).toBe(825);
-    boss.exhaust(90,2000);expect(boss.guardBrokenUntil).toBe(3400);
+    const hit=boss.receive({...ordinary,damage:100},1100);expect(hit.damage).toBe(160);expect(boss.health).toBe(840);
+    boss.exhaust(90,2000);expect(boss.guardBrokenUntil).toBe(2550);
     boss.update(3400,0);expect(boss.receive({...ordinary,damage:100},3401).damage).toBe(100);
   });
   it('armor preserves a committed boss attack, but ordinary recoveries can flinch without a stun lock',()=>{
     const boss=new Combatant('haku',1000,true);boss.start({...UNIVERSAL.heavy,events:[{at:800,kind:'hit',damage:20,red:true}]},0);
     boss.receive(ordinary,200);expect(boss.hurtUntil).toBe(0);expect(boss.action).not.toBeNull();
-    boss.action=null;boss.receive(ordinary,900);expect(boss.hurtUntil).toBe(1160);
-    boss.receive(ordinary,1200);expect(boss.hurtUntil).toBe(1160);
-    boss.receive(ordinary,1600);expect(boss.hurtUntil).toBe(1860);
+    boss.action=null;boss.receive(ordinary,900);expect(boss.hurtUntil).toBe(1050);
+    boss.receive(ordinary,1200);expect(boss.hurtUntil).toBe(1050);
+    boss.receive(ordinary,1600);expect(boss.hurtUntil).toBe(1050);
+    boss.receive(ordinary,2100);expect(boss.hurtUntil).toBe(2250);
   });
   it('shurikens require four chakra, spending delays regen, and empty chakra leaves melee available',()=>{
     const player=new Combatant('naruto');player.chakra=4;expect(player.start(UNIVERSAL.tool,0)).toBe(true);expect(player.chakra).toBe(0);
@@ -145,5 +146,16 @@ describe('close-combat rebalance',()=>{
     const p=new Combatant('kakashi');p.bufferMelee(0);p.consumeMelee(0);
     p.bufferMelee(180);expect(p.consumeMelee(180)).toBe(false);p.update(390,0);expect(p.consumeMelee(390)).toBe(true);
     expect(p.action?.definition.animation).toBe('light2');p.bufferMelee(610);p.update(815,0);p.consumeMelee(815);expect(p.action?.definition.animation).toBe('light3');
+  });
+});
+
+
+describe('guard recovery resilience', () => {
+  it('recovery prevents repeated guard breaks without preventing health damage', () => {
+    const boss = new Combatant('zabuza', 1600, true); boss.exhaust(100, 0); boss.update(1550, 0);
+    boss.exhaust(60, 1600); expect(boss.stamina).toBe(79);
+    expect(boss.receive({damage: 40, posture: 10, red: false, fromX: 0}, 1610).damage).toBe(40);
+    expect(boss.hurtUntil).toBe(0); expect(boss.guardBrokenUntil).toBe(0);
+    boss.exhaust(80, 3400); expect(boss.guardBrokenUntil).toBeGreaterThan(3400);
   });
 });

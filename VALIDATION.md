@@ -1,50 +1,25 @@
-# Combat revision validation — September 6, 2026
+# Story and combat revision validation — September 6, 2026
 
-## Sakura early-defeat fix
+## Current checks
 
-Sakura's objective now completes on Zabuza's defeat or the 50-second protection timer. Previously it checked only the timer, leaving an early victory without an immediate transition. The objective text now describes both routes. Two additional regression tests cover defeat at 20 seconds, natural and skipped cinematics reaching Sasuke, the timer boundary, and unchanged boss-defeat requirements in other duels. All 72 tests, type checking, and lint pass. The chapter playthrough below records the preceding combat revision; this focused fix uses the shared runtime objective check and story-director regression tests.
+75 automated tests pass. Type checking and lint pass. Coverage includes defensive timing, stamina gates, boss guard recovery resilience, preserved multi-hit strings after deflection, five-phase progression, legacy cinematic checkpoint migration, natural/skip state parity, the new Sasuke objective, and normal-jump reachability of upper mirrors. Existing simulated-controller and input tests remain passing. Physical controller hardware was unavailable.
 
-## Combat and chapter
+## Browser evidence
 
-The revised seven-phase chapter was played through to victory in the desktop browser. Tests combined ordinary keyboard presses, manual input sequences, and a development-only input pilot. The pilot uses the real action scheduler and never edits health, positions, clocks, or story state. Its casual mode mistimes alternate guards, but it still attacks efficiently; it is not evidence of an average human player's completion time.
+The local browser was played through the first four playable phases using ordinary game actions and a development-only input pilot. No HP, position, phase, or outcome overrides were used. The opening combined deliberately early guards with accurate defense; later phases used more accurate defense. These are tuning observations, not average-human benchmarks.
 
-Observed phase completion times were approximately 31.5, 27.3, 40.2, 50.0, 36.2, 24.1, and 38.2 seconds. These are faster than the 45–75 second ordinary-play target. The tuning retains low boss HP and rewards strong counters instead of using the input pilot to justify longer health bars. Sakura's timed objective is 50 seconds. The copy duel and awakened Haku were both finished without an ultimate; the Haku clear retained a full ultimate meter.
+- Opening Kakashi: 55.97 seconds, 11 HP remaining after several missed defenses.
+- Naruto rescue: 55.53 seconds, 90 HP remaining; chakra became constrained during techniques. New launcher kit was exercised.
+- Copy duel: 47.27 seconds, 41 HP remaining; water/mist attacks and Chidori used. Efficient finish was below the 60–90 second target.
+- Sasuke: 60.00 seconds, two mirror guard breaks, 38 HP remaining; no ultimate. The 38-second mirror formation remained active through breaks, then expired normally. The objective transitioned to the protective-sacrifice cinematic.
+- Awakened Naruto: reached 32.71 seconds, 91 HP, six mirrors remaining, without ultimate. Final-phase completion was NOT verified in this revision.
 
-Verified outcomes:
+Checkpoint continuation and handoffs to Naruto, Kakashi, Sasuke, and awakened Naruto worked. The hunter-nin/Sakura cinematic chain entered Sasuke directly. Browser screenshots verified the water-prison manga panel, readable speech bubbles, Sharingan feedback, grounded characters, and enclosing mirrors. Haku facing after retreat and upper-mirror reach were refined afterward and covered by source review/tests.
 
-- Kakashi has Sharingan, Ninja Hounds, and Chidori in all three duels. His new melee strip uses palm/kunai, high kick, sweep, and heavy rising-kick sequences.
-- Perfect parries remove at least 32 boss stamina, interrupt the attack, and reward chakra and ultimate charge. The browser registered successful parries and visible guard breaks.
-- Guard break lasts 2.4 seconds and multiplies incoming boss damage by 1.75. Repeated hits cannot extend it. A committed boss windup retains armor; ordinary recovery can flinch without an infinite stun lock.
-- Browser screenshots show actual player hit-stun and boss guard break with distinct poses, overhead recovery rings/bars, and HUD status timers.
-- Shurikens cost 4 chakra, techniques have meaningful costs, and spending delays passive regeneration. Sasuke's repeated casting reached 6 chakra during combat. Melee stays available at empty chakra. Full costs and insufficient-resource rejection are covered by tests.
-- Chidori, Clone Barrage, Resolve Counter, Sharingan Focus, and Unsealed Fury all started through normal actions. Character cut-ins, names, charge effects, rushes, and impact beats were inspected. The 1.7-second presentation pauses incoming combat, applies its final damage once, and restores control. Pausing during a burst and returning to the title during a burst both worked.
-- Haku's mirrors, Naruto's arrival, Sharingan awakening, protective sacrifice, awakened handoff, final Kakashi duel, Haku interception, ending state, and victory remained reachable. Skipping applies the resulting story state.
-- An intentional HP-depletion test reached the defeat menu. Retry Phase restored full HP, chakra, and stamina at the final checkpoint, retained prior story outcomes, and cleared previous clones/effects. Returning to title and continuing a checkpoint also restored the phase correctly.
+Browser access then failed with a Windows sandbox ACL initialization error, including after reconnection. Consequently, a full final-phase/ending replay, new death/retry exercise, final visual pass, and deployed-browser smoke test could not be completed. Unit tests verify the five-phase ending and skip parity; the ending renderer reconstructs the same final tableau for skip/natural completion. This is not a substitute for final visual review.
 
-## Automated checks
+## Assets and remaining limits
 
-70 tests pass across five files, including 17 retained platformer regression checks. TypeScript checking and lint pass.
+Built-in imagegen produced the four-frame grounded tidal-wave strip, six story panels, and Naruto launcher icon. The asset agent inspected frame bounds, transparency, alignment, and scene content; user-authorized code cleanup/normalization retained the generated art. Prompts and QA are in public/art-v5. The wave has a 900 ms presentation, delayed impact at 360 ms, and a fixed foot anchor. No original anime voice/music recordings were added.
 
-Coverage includes parry boundaries/rearm, frontal/rear defense, red attacks, guard breaks, resource gates and recovery, dash invulnerability and air-dash limits, slide projectile clearance, safe substitution, event timing, duplicate-hit prevention, combo buffering, heavy charging, recovery cancels, boss selection/costs, mirror rules, story handoffs/skips, and legacy save migration.
-
-Controller mappings, triggers, press/release edges, prompt switching, disconnection, and focus-loss clearing/pause are checked with simulated input. Logical-key fallback was also tested after an ordinary browser key event exposed a missing physical key code. A physical controller was not available.
-
-## Artwork and interface
-
-The new asset verifier passes 16 icons, 24 Kakashi melee frames, 12 water frames, four ultimate cut-ins, and the active 67-recording audio manifest. No clipped frame edges or baked backgrounds remain. The retained 432-frame core animation verifier also passes.
-
-Generation prompts, frame rectangles, anchors, event timing, and inspection notes are retained in the project. New artwork was generated before gameplay integration. Zabuza's animated blue water jets were inspected in combat, including a projectile impact and the player's hit-stun cue. Water dragons and waves use their own four-frame strips. Haku retains narrow water needles.
-
-Technique cards show generated icons, names, costs, cooldowns, and ultimate readiness. Selecting a card pauses play and opens the readable kit description. Player/boss HP share a baseline. The game fits 1280×720 and 1024×768 browser sizes without document overflow; viewport overrides were reset afterward. Fullscreen entry/exit, volume adjustment, reduced-shake toggling, controls, pause/resume, and retry menus worked.
-
-## Audio and runtime
-
-27 combat effects were replaced with edited Taira Komori fighting, sword, water, and magic recordings. The active manifest retains source URLs, attribution, license terms, trim/filter/normalization notes, and measured peaks. Voices use lower gain and longer cooldowns; impacts rotate variants. No continuous oscillator is used.
-
-All 67 recordings decoded without missing buffers. Runtime loaded-buffer counts additionally include up to three cached loop buffers. The largest recorded sample peak is below −1.21 dBFS. Effects are capped at eight, voices at two, and music at one plus one temporary crossfade source. Pausing and defeat returned active music/effect/voice counts to zero. Retries did not accumulate prior sources. The available audio-preview tool did not expose audible playback to the agent; this is a decoding, peak, and lifecycle check, not a claim of listening verification on speakers.
-
-Foreground play generally reported around 164–165 fps on the available high-refresh browser. No console errors were recorded during the completed chapter or subsequent retry/layout checks. Ordinary encounters returned to two base fighters plus appropriate story allies; clones, projectiles, effects, and cinematic objects remained bounded. Development input tools are excluded from production by the build-time DEV guard.
-
-## Release
-
-The previous public game stays live until the replacement passes its production build. Publication uses the existing Sites URL, followed by a public loading/start/pause smoke test. This remains a single-player desktop browser game with no touch controls, accounts, multiplayer, or additional chapter.
+The browser reported high desktop frame rates during the observed fights and no asset-load error. Formal sustained performance, audio listening, physical-controller testing, and a completed final no-ultimate Haku clear remain unverified for this revision. Prior validation must not be read as verification of those updated behaviors.

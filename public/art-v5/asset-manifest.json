@@ -1,0 +1,233 @@
+{
+  "generatedWith": "built-in image_gen",
+  "assets": {
+    "tidalWave": {
+      "file": "tidal-wave.png",
+      "width": 2048,
+      "height": 512,
+      "mode": "RGBA",
+      "columns": 4,
+      "rows": 1,
+      "cell": [
+        512,
+        512
+      ],
+      "foot": [
+        256,
+        450
+      ],
+      "frames": [
+        {
+          "name": "rising_swell",
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            512
+          ]
+        },
+        {
+          "name": "curling_crest",
+          "index": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            512
+          ]
+        },
+        {
+          "name": "crashing_breaker",
+          "index": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            512
+          ]
+        },
+        {
+          "name": "receding_foam",
+          "index": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            512
+          ]
+        }
+      ],
+      "frameMap": "tidal-wave-frames.json",
+      "prompt": "tidal-wave-prompt.txt",
+      "correctionPrompt": "tidal-wave-correction-prompt.txt",
+      "qa": "tidal-wave-qa.png",
+      "sources": [
+        "tidal-wave-source.png",
+        "tidal-wave-chroma-source.png"
+      ]
+    },
+    "mangaMoments": {
+      "file": "manga-moments.png",
+      "width": 1536,
+      "height": 1296,
+      "mode": "RGB",
+      "columns": 2,
+      "rows": 3,
+      "cell": [
+        768,
+        432
+      ],
+      "frames": [
+        {
+          "name": "water_prison",
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            768,
+            432
+          ]
+        },
+        {
+          "name": "transformed_shuriken_teamwork",
+          "index": 1,
+          "rect": [
+            768,
+            0,
+            768,
+            432
+          ]
+        },
+        {
+          "name": "hunter_nin_departure",
+          "index": 2,
+          "rect": [
+            0,
+            432,
+            768,
+            432
+          ]
+        },
+        {
+          "name": "protect_tazuna",
+          "index": 3,
+          "rect": [
+            768,
+            432,
+            768,
+            432
+          ]
+        },
+        {
+          "name": "sasuke_shields_naruto",
+          "index": 4,
+          "rect": [
+            0,
+            864,
+            768,
+            432
+          ]
+        },
+        {
+          "name": "haku_intercepts_lightning_blade",
+          "index": 5,
+          "rect": [
+            768,
+            864,
+            768,
+            432
+          ]
+        }
+      ],
+      "frameMap": "manga-moments-frames.json",
+      "prompt": "manga-moments-prompt.txt",
+      "source": "manga-moments-source.png"
+    },
+    "narutoLauncher": {
+      "file": "naruto-launcher.png",
+      "width": 1024,
+      "height": 1024,
+      "mode": "RGB",
+      "rect": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "prompt": "naruto-launcher-prompt.txt",
+      "source": "naruto-launcher-source.png"
+    }
+  },
+  "qaReport": "qa-report.json",
+  "integration": {
+    "manga": {
+      "texture": "v5-moments",
+      "frames": [
+        {
+          "rect": [
+            0,
+            0,
+            768,
+            432
+          ]
+        },
+        {
+          "rect": [
+            768,
+            0,
+            768,
+            432
+          ]
+        },
+        {
+          "rect": [
+            0,
+            432,
+            768,
+            432
+          ]
+        },
+        {
+          "rect": [
+            768,
+            432,
+            768,
+            432
+          ]
+        },
+        {
+          "rect": [
+            0,
+            864,
+            768,
+            432
+          ]
+        },
+        {
+          "rect": [
+            768,
+            864,
+            768,
+            432
+          ]
+        }
+      ]
+    },
+    "tidal": {
+      "texture": "v5-wave",
+      "durationMs": 900,
+      "impactAtMs": 360,
+      "footAnchor": [
+        256,
+        450
+      ]
+    },
+    "launcher": {
+      "icon": "launcher.webp",
+      "damageEventMs": 420,
+      "animation": "light3",
+      "signature": "clone-assisted upward guard-pressure strike"
+    }
+  }
+}

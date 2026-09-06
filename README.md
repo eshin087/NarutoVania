@@ -1,6 +1,6 @@
 # Naruto: Land of Waves — Story Boss Rush
 
-A desktop browser fan game built with TypeScript, React, Phaser 3.90.0, and the Sites starter. Seven consecutive story encounters follow Team 7 from the lakeside confrontation with Zabuza to the bridge battle and snowy aftermath. There are no traversal levels or filler enemy waves.
+A desktop browser fan game built with TypeScript, React, Phaser 3.90.0, and the Sites starter. Five playable story encounters follow Team 7 from the lakeside confrontation with Zabuza to the bridge battle and snowy aftermath. There are no traversal levels or filler enemy waves.
 
 ## Play
 
@@ -8,11 +8,15 @@ Move with A/D or arrows; crouch with S/down. Space jumps, J attacks, and down + 
 
 Standard controller: stick/D-pad move, A jump, X melee, Y tool, B dash, LB parry/block, RB/RT techniques, LT substitution, right-stick click ultimate, and Start pause. The controls menu includes each active character's kit and separate music, effects, and voice levels. Fullscreen and reduced shake are supported.
 
-Control Kakashi, Naruto, Kakashi, Sakura, Sasuke, Naruto, and Kakashi in story order. Kakashi has Sharingan, Ninja Hounds, and a Chidori / Lightning Blade ultimate in every playable duel. This is an intentional gameplay expansion; the story cinematics preserve his copied-water exchanges. Sasuke has no Chidori, Naruto has no Rasengan, and Sakura has no later healing or super-strength. Sakura's short Tazuna protection encounter expands her protective role. Cinematic objectives handle canonical setbacks; players never have to lose deliberately. Every phase saves a checkpoint. Retries restore its starting resources and skip viewed introductions.
+Control Kakashi, Naruto, Kakashi, Sasuke, and Naruto in story order. Kakashi has Sharingan, Ninja Hounds, and a Chidori / Lightning Blade ultimate in every playable duel. This is an intentional gameplay expansion; the story cinematics preserve his copied-water exchanges. Sasuke has no Chidori, Naruto has no Rasengan, and Sakura has no later healing or super-strength. Sakura protects Tazuna in a cinematic; the final Kakashi/Zabuza confrontation is also cinematic. Cinematic objectives handle canonical setbacks; players never have to lose deliberately. Every phase saves a checkpoint. Retries restore its starting resources and skip viewed introductions.
 
-The revised tuning targets short, forgiving fights of roughly 45–75 seconds for ordinary play; efficient counters and ultimates can finish them faster. Sakura's protection objective ends after 50 seconds or immediately when Zabuza is defeated. The active-play timer excludes pauses and cinematics, includes retries, and resets when continuing a saved checkpoint in a new session. Only settings and the current chapter checkpoint persist locally; legacy saves begin at the boss-rush opening.
+The revised tuning targets 60–90 seconds per fight with quicker boss anticipation, meaningful defensive mistakes, and short punish windows. Sasuke must hold out for 60 seconds and break Haku's guard twice inside the mirrors; this triggers the protective sacrifice without a forced player death. Naruto finishes Haku. Legacy Sakura/finale checkpoints migrate through their cinematics. The active-play timer excludes pauses and cutscenes.
 
-Perfect parries remove at least 32 boss stamina (48 with Kakashi's Sharingan). A broken boss guard lasts 2.4 seconds and takes 1.75× damage. Hit-stun and guard break have distinct poses, overhead recovery indicators, and HUD timers. Shurikens cost 4 chakra; melee hits recover 2 and perfect parries recover 4. Passive chakra regeneration waits 1.4 seconds after spending and restores 1.8 per second. Ultimate sequences last 1.7 seconds, pause incoming combat, apply damage once, and return control immediately.
+Perfect parries drain 23 or more boss stamina without cancelling an entire attack string. Kakashi's Sharingan briefly slows time, highlights attacks, doubles parry guard damage, and empowers the next counter by 50%. Naruto's rescue kit replaces Transformation with Clone Launcher: a clone-assisted upward kick that pressures guard. Substitution remains the distinct decoy action.
+
+Boss guard break lasts 1.55 seconds, with 1.6× base damage. Recovery grants 1.7 seconds of reduced incoming posture damage and prevents repeated flinches. Allies deal reduced guard damage. Bosses retain armor during committed attacks; defensive timing is necessary. Shurikens cost 4 chakra. Ultimate charge grows more slowly. Dramatic 1.7-second ultimate presentations remain.
+
+The active mirror formation lasts up to 38 seconds, survives guard breaks, and has bounded interrupt openings. Naruto's ultimate breaks at most two mirrors. Ordinary attacks can break them, and upper mirrors are within normal jump-tool reach.
 
 ## Development
 
@@ -35,3 +39,5 @@ This is an unofficial fan game. Naruto and its characters belong to Masashi Kish
 When WebMCP is available, the game exposes status, start, pause/resume, retry, and cinematic-skip actions through the same commands as the interface. Development-only normal-input sequence and combat-pilot tools support repeatable browser playtests. They do not override resources, positions, time, or story outcomes and are excluded from production.
 
 See `VALIDATION.md` for verification results and scope limitations.
+
+`public/art-v5/` contains the natural four-frame tidal breaker, six manga moments, launcher icon, prompts, frame metadata, and QA. Cutscene speech is original concise paraphrase; directions, camera bounds, landings, and ground placement were revised.

@@ -1,0 +1,24 @@
+{
+  "inspectedWith": "view_image",
+  "generatedImagesInspected": [
+    "tidal-wave-source.png",
+    "tidal-wave-chroma-source.png",
+    "manga-moments-source.png",
+    "naruto-launcher.png"
+  ],
+  "finalImagesInspected": [
+    "tidal-wave-qa.png",
+    "manga-moments.png",
+    "naruto-launcher.png"
+  ],
+  "findings": {
+    "tidalWave": "Four distinct natural rightward wave stages, broad ground bases, uniform pixel scale, y=450 baseline, complete forms with at least 40 horizontal and 50 top pixels of cell padding. Refinement used imagegen, then code removed only magenta and normalized position/scale.",
+    "mangaMoments": "Six requested scenes in exact row-major order, recognizable original-series costumes, clear protective/carrying/interception staging, no text or bubbles, non-graphic Lightning Blade contact. Two-pixel source edge trims remove thin generated divider lines.",
+    "narutoLauncher": "Two distinct Narutos, helper below physically boosting the lead Naruto's bent support foot; clear upward kick, orange-and-blue original costume, vivid blue chakra and dark uncluttered background."
+  },
+  "normalizationScripts": [
+    "prepare_tidal.py",
+    "prepare_manga.py"
+  ],
+  "caveats": []
+}
