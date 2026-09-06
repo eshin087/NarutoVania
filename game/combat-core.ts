@@ -152,7 +152,7 @@ export class Combatant {
     if (!hit.red && frontal && this.guard && now >= this.guardBrokenUntil) {
       if (this.stamina > 0 && now >= this.parryAt && now - this.parryAt < COMBAT.parryWindow) {
         this.stamina = Math.min(100, this.stamina + COMBAT.parryRestore);
-        this.ultimate = Math.min(100, this.ultimate + 6); this.chakra = Math.min(100, this.chakra + COMBAT.parryChakra);
+        this.ultimate = Math.min(100, this.ultimate + 12); this.chakra = Math.min(100, this.chakra + COMBAT.parryChakra);
         // One press deflects one hit. A release and new deliberate press can deflect the next.
         this.parryAt = -Infinity; this.lastParryPress = now - COMBAT.parryRearm; this.deflectUntil = now + 240;
         return {result: 'parry', damage: 0, attackerPosture: Math.max(COMBAT.parryPosture, hit.posture)};

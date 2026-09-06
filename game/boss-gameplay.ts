@@ -370,7 +370,7 @@ export class BossGameScene extends Phaser.Scene {
       attacker.model.exhaust(outcome.attackerPosture, this.now); return;}
     if (outcome.result === 'guardbreak') this.guardBreakEffect(target);
     if (!attacker.hostile) {
-      if (attacker.model.action?.definition.action !== 'ultimate') attacker.model.ultimate = Math.min(100, attacker.model.ultimate + (outcome.damage * .045));
+      if (attacker.model.action?.definition.action !== 'ultimate') attacker.model.ultimate = Math.min(100, attacker.model.ultimate + (outcome.damage * .09));
       if (attacker === this.player && ['light1','light2','light3','heavy','aerial'].includes(attacker.model.action?.definition.action || '')) attacker.model.chakra = Math.min(100, attacker.model.chakra + COMBAT.meleeChakra);
       target.model.exhaust((event.posture || 12) * (attacker.ally ? .2 : 1), this.now); if (target.model.stamina <= 0 && target.model.isBoss) this.guardBreakEffect(target);
     }
@@ -464,7 +464,7 @@ export class BossGameScene extends Phaser.Scene {
     }
     if (outcome.result === 'block') {this.sounds.effect('guard', .7); this.burst('parry', target.model.x, target.model.y - 70, 50, 120); return false;}
     if (outcome.result === 'guardbreak') this.guardBreakEffect(target);
-    if (p.friendly) {target.model.exhaust(p.posture * (p.owner.ally ? .2 : 1), this.now); p.owner.model.ultimate = Math.min(100, p.owner.model.ultimate + outcome.damage * .04); if(target.model.isBoss && target.model.stamina <= 0)this.guardBreakEffect(target);}
+    if (p.friendly) {target.model.exhaust(p.posture * (p.owner.ally ? .2 : 1), this.now); p.owner.model.ultimate = Math.min(100, p.owner.model.ultimate + outcome.damage * .08); if(target.model.isBoss && target.model.stamina <= 0)this.guardBreakEffect(target);}
     this.sounds.effect(p.kind === 'water' ? 'water2' : 'impact', .65); this.sounds.voice(target.model.id, target.model.health <= 0 ? 'defeat' : 'hurt');
     this.burst(p.kind === 'water' ? 'waterfall' : 'ice-shards', target.model.x, target.model.y - 70, 75, 190); this.shake(.0015, 70);
     if (target.ally && !target.key.startsWith('clone')) target.model.health = Math.max(1, target.model.health);
@@ -509,7 +509,7 @@ export class BossGameScene extends Phaser.Scene {
       const projectile = this.projectiles.at(-1); if (projectile) {projectile.returnAt = this.now + 730; projectile.expires = this.now + 2100; projectile.image.setDisplaySize(84, 84); projectile.rx = 36; projectile.ry = 36;} return;
     }
     if (id === 'intercept') {
-      for (const projectile of this.projectiles) if (!projectile.friendly && Math.abs(projectile.x - p.x) < 380 && !projectile.red) {projectile.expires = 0; this.burst('parry', projectile.x, projectile.y, 45, 150); p.ultimate = Math.min(100, p.ultimate + 3);}
+      for (const projectile of this.projectiles) if (!projectile.friendly && Math.abs(projectile.x - p.x) < 380 && !projectile.red) {projectile.expires = 0; this.burst('parry', projectile.x, projectile.y, 45, 150); p.ultimate = Math.min(100, p.ultimate + 6);}
       for (const angle of [-.12, 0, .12]) this.launch(f, {at: 0, kind: 'projectile', damage: 18, posture: 12, speed: 690}, angle, key); return;
     }
     if (['red-rush', 'fury', 'lightning', 'barrage', 'focus', 'resolve'].includes(id)) {
@@ -572,12 +572,12 @@ export class BossGameScene extends Phaser.Scene {
     this.sounds.effect('ice', .65, result.broken ? .8 : 1.15);
     if (result.interrupt && this.now >= this.mirrorInterruptUntil) {
       this.boss.model.health = Math.max(0, this.boss.model.health - Math.max(18, damage * .85));
-      this.boss.model.exhaust(16, this.now); f.model.ultimate = Math.min(100, f.model.ultimate + 4);
+      this.boss.model.exhaust(16, this.now); f.model.ultimate = Math.min(100, f.model.ultimate + 8);
       this.mirrorInterruptUntil = this.now + 1050; this.boss.model.action = null;
       this.brain.readyAt = this.now + 1050; this.teleport(this.boss, clamp(mirror.x, 170, 1490), this.floor);
       this.boss.model.hurtUntil = this.now + 230; this.stopForImpact(35);
     }
-    if (result.broken) {this.boss.model.exhaust(18, this.now); f.model.ultimate = Math.min(100, f.model.ultimate + 4); this.shake(.002, 100);}
+    if (result.broken) {this.boss.model.exhaust(18, this.now); f.model.ultimate = Math.min(100, f.model.ultimate + 8); this.shake(.002, 100);}
     if (this.formation.count() <= 2) this.endMirrors();
   }
   private updateMirrors() {

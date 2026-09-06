@@ -14,7 +14,7 @@ The revised tuning targets shorter, more forgiving fights with quicker boss anti
 
 Perfect parries drain 23 or more boss stamina without cancelling an entire attack string. Kakashi's Sharingan briefly slows time, highlights attacks, doubles parry guard damage, and empowers the next counter by 50%. Naruto's rescue kit replaces Transformation with Clone Launcher: a clone-assisted upward kick that pressures guard. Substitution remains the distinct decoy action.
 
-Boss guard break lasts 1.55 seconds, with 1.6× base damage. Recovery grants 1.7 seconds of reduced incoming posture damage and prevents repeated flinches. Allies deal reduced guard damage. Bosses retain armor during committed attacks; defensive timing is necessary. Shurikens cost 4 chakra. Ultimate charge grows more slowly. Dramatic 1.7-second ultimate presentations remain.
+Boss guard break lasts 1.55 seconds, with 1.6× base damage. Recovery grants 1.7 seconds of reduced incoming posture damage and prevents repeated flinches. Allies deal reduced guard damage. Bosses retain armor during committed attacks; defensive timing is necessary. Shurikens cost 4 chakra. Ultimate charge gains are doubled: melee/technique damage grants 0.09 per damage, projectiles 0.08, perfect parries 12, and mirror interrupts/breaks 8. The meter remains capped at 100 and ultimate damage does not recharge itself. Dramatic 1.7-second ultimate presentations remain.
 
 The active mirror formation lasts up to 38 seconds, survives guard breaks, and has bounded interrupt openings. Naruto's ultimate breaks at most two mirrors. Ordinary attacks can break them, and upper mirrors are within normal jump-tool reach.
 
