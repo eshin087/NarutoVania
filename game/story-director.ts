@@ -1,3 +1,4 @@
+import type {CinemaMotion} from './cinematic-v13';
 import type {StorySceneId} from './scene-catalog';
 import {PHASES, stateForPhase, type StoryPhaseId, type StoryState} from './chapter';
 
@@ -9,7 +10,7 @@ export interface CinemaActor {id: ActorId; x: number; y: number; facing: -1 | 1;
 
 export interface CinemaCue {
 
-  at: number; actor?: ActorId; x?: number; y?: number; duration?: number; animation?: AnimationName;
+  at: number; motion?:CinemaMotion; actor?: ActorId; x?: number; y?: number; duration?: number; animation?: AnimationName;
 
   facing?: -1 | 1; alpha?: number; effect?: EffectName | 'prison' | 'shuriken' | 'mirrors' | 'aura' | 'snow' | 'mask';
 
@@ -82,31 +83,22 @@ export function outroClip(phase: StoryPhaseId): CinemaClip {
         {at:5700,actor:'zabuza',y:590,duration:400,animation:'land'},
         {at: 6500, actor: 'naruto', facing: -1, x: 1260, y: 525, alpha: 1, animation: 'cast', effect: 'smoke'},
 
-        {at: 7200, actor: 'naruto', effect: 'shuriken'}, {at: 7800, actor: 'zabuza', facing:1, x: 960, y: 590, duration: 300, animation: 'hurt'},
+        {at:7200,actor:'naruto',animation:'cast',motion:'rescue-shot'},
 
-        {at: 8300, actor: 'prisoner', y: 590, animation: 'land', effect: 'water', duration: 450},
+
 
         {at: 9500, actor: 'prisoner', x: 1020, duration: 450, animation: 'dash'}, {at: 10500, actor: 'zabuza', animation: 'block', effect: 'parry'},
 
         {at: 7450, actor: 'naruto', y: 592, duration: 400, animation: 'land', facing: -1}, {at: 12500, camera: 400, duration: 900}, {at: 13700, fade: 'out'}]};
 
-    case 'copy': return {id: 'hunter-nin-deception', arena: 'lakeside', duration: 22000, actors: [...common, actor('haku', 1420, -1)],
-
-      cues: [{at: 0, camera: 240}, {at: 600, actor: 'kakashi', animation: 'cast'}, {at: 600, actor: 'zabuza', animation: 'cast'},
-
-        {at: 2000, actor: 'zabuza', effect: 'water'}, {at: 2100, actor: 'kakashi', effect: 'water'},
-
-        {at: 4700, actor: 'kakashi', animation: 'ultimate', effect: 'water'}, {at: 6100, actor: 'zabuza', x: 1210, duration: 600, animation: 'hurt'},
-
-        {at: 8100, actor: 'haku', x: 1320, animation: 'cast', effect: 'ice', duration: 500}, {at: 9100, actor: 'zabuza', animation: 'defeat'},
-
-        {at: 10300, actor: 'haku', x: 1240, duration: 800, animation: 'run'}, {at: 12200, actor: 'kakashi', x: 990, duration: 1400, animation: 'run'},
-
-        {at: 14400, actor: 'haku', animation: 'cast', effect: 'smoke'}, {at: 15100, actor: 'zabuza', alpha: 0},
-
-        {at: 15200, actor: 'haku', x: 1610, duration: 1600, animation: 'run'}, {at: 17500, actor: 'kakashi', animation: 'guardbreak'},
-
-        {at: 18800, actor: 'naruto', x: 850, duration: 1200, animation: 'run'}, {at: 21000, fade: 'out'}]};
+    case 'copy': return {id:'hunter-nin-deception',arena:'lakeside',duration:17700,
+      actors:[actor('kakashi',370),actor('zabuza',1210,-1),actor('naruto',230),actor('sasuke',135),actor('sakura',75),actor('tazuna',25),actor('haku',1450,-1)],
+      cues:[{at:0,camera:0},{at:600,actor:'kakashi',animation:'cast'},{at:600,actor:'zabuza',animation:'cast'},
+       {at:900,motion:'dragon-clash'},{at:4200,actor:'kakashi',animation:'ultimate',motion:'counter-wave'},
+       {at:8000,actor:'haku',facing:-1,animation:'cast',motion:'hunter-throw'},
+       {at:10400,actor:'haku',x:1330,duration:700,animation:'run'},
+       {at:12000,actor:'kakashi',x:900,duration:1100,animation:'run'},
+       {at:14000,motion:'carry'},{at:16400,actor:'kakashi',animation:'idle'}]};
 
     case 'protect': return {id: 'simultaneous-bridge-battles', arena: 'bridge', duration: 9200,
 
@@ -214,7 +206,7 @@ export function outroClip(phase: StoryPhaseId): CinemaClip {
 export class StoryDirector {
  state:StoryState;mode:'fight'|'cinematic'|'complete'='fight';clip:CinemaClip|null=null;clock=0;
  emitted=new Set<number>();waiting=false;holdAge=0;private afterClip:(()=>void)|null=null;
- constructor(phase:StoryPhaseId,private callbacks:{enter:(state:StoryState)=>void;cinematic:(clip:CinemaClip)=>void;cue:(cue:CinemaCue)=>void;complete:()=>void;transition?:(next:()=>void)=>void}){this.state=stateForPhase(phase);}
+ constructor(phase:StoryPhaseId,private callbacks:{enter:(state:StoryState)=>void;cinematic:(clip:CinemaClip)=>void;cue:(cue:CinemaCue)=>void;complete:()=>void;ready?:()=>boolean;transition?:(next:()=>void)=>void}){this.state=stateForPhase(phase);}
  start(viewIntro:boolean){
   if(this.state.phase==='copy'){this.startScene('hunter');return;}
   if(this.state.phase==='protect'){this.startScene('bridge');return;}
@@ -226,6 +218,9 @@ export class StoryDirector {
    case 'arrival':this.state=stateForPhase('mist');this.play(introClip('mist'),()=>this.enter('mist'));break;
    case 'prison':this.state=stateForPhase('mist');this.play(outroClip('mist'),()=>this.enter('rescue'));break;
    case 'shuriken':this.state=stateForPhase('rescue');this.play(outroClip('rescue'),()=>this.startScene('hunter'));break;
+   case 'water-clash':this.state=stateForPhase('copy');this.play(outroClip('copy'),()=>this.startScene('bridge'));break;
+   case 'hunter-needles':this.state=stateForPhase('copy');this.play(hunterSegment(false),()=>this.startScene('bridge'));break;
+   case 'hunter-departure':this.state=stateForPhase('copy');this.play(hunterSegment(true),()=>this.startScene('bridge'));break;
    case 'hunter':this.state=stateForPhase('copy');this.play(outroClip('copy'),()=>this.startScene('bridge'));break;
    case 'bridge':this.state=stateForPhase('protect');this.play(outroClip('protect'),()=>this.enter('mirrors'));break;
    case 'sacrifice':this.state=stateForPhase('mirrors');this.play(outroClip('mirrors'),()=>this.enter('seal'));break;
@@ -251,7 +246,7 @@ export class StoryDirector {
    this.clock=cue.at;this.emitted.add(i);if(cue.awaitAdvance){this.waiting=true;this.holdAge=0;}this.callbacks.cue(cue);
    if(this.waiting)return;
   }
-  this.clock=target;if(this.clock>=clip.duration)this.finishClip();
+  this.clock=target;if(this.clock>=clip.duration&&this.callbacks.ready?.()!==false)this.finishClip();
  }
  get canAdvance(){return this.waiting&&this.holdAge>=350;}
  advance(){if(!this.canAdvance)return false;this.waiting=false;this.holdAge=0;return true;}
@@ -310,11 +305,11 @@ function withDialogue(clip: CinemaClip): CinemaClip {
 
       {at: 700, actor: 'kakashi', speech: 'I can read your hand signs.', hold: 2900},
 
-      {at: 10000, actor: 'haku', speech: 'I am a hunter-nin. I will take his body.', hold: 3500},
 
-      {at: 14300, actor: 'haku', speech: 'You will not need to pursue him.', moment: 2, hold: 3200},
 
-      {at: 17900, actor: 'kakashi', speech: 'Something about that does not fit…', hold: 2800}],
+
+
+      {at: 16300, actor: 'kakashi', speech: 'Something about that does not fit…', hold: 2800}],
 
     'simultaneous-bridge-battles': [
 
@@ -378,4 +373,12 @@ function withDialogue(clip: CinemaClip): CinemaClip {
  const cues=[...clip.cues,...(lines[clip.id]||[])].map(c=>{const copy={...c};if(clip.id!=='water-prison')delete copy.moment;return copy;});
  return {...clip,cues:[...cues,...(panels[clip.id]||[])].sort((a,b)=>a.at-b.at)};
 
+}
+
+/** Replay entries build their own actors; no seek through a running combat simulation. */
+function hunterSegment(departure:boolean):CinemaClip{
+ const full=withDialogue(outroClip('copy')),start=departure?13500:7800;
+ const actors=full.actors.map(a=>({...a}));
+ for(const a of actors){if(a.id==='zabuza'){a.x=1280;a.animation=departure?'defeat':'idle';}if(a.id==='haku'){a.x=departure?1330:1450;a.facing=-1;}if(a.id==='kakashi')a.x=departure?900:370;}
+ return{id:departure?'hunter-departure-replay':'hunter-needles-replay',arena:'lakeside',duration:17700-start,actors,cues:[{at:0,camera:0,zoom:.84},...full.cues.filter(c=>c.at>=start).map(c=>({...c,at:c.at-start}))]};
 }

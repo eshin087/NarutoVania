@@ -22,8 +22,8 @@ describe('boss pacing', () => {
   });
   it('gives every attack readable anticipation, recovery, explicit cost, and bounded event timing', () => {
     for (const move of [...ZABUZA_MOVES, ...HAKU_MOVES]) {
-      expect(move.stamina).toBeGreaterThan(0); expect(move.recovery).toBeGreaterThanOrEqual(360);
-      for (const event of move.events) {expect(event.at).toBeGreaterThanOrEqual(500); expect(event.at).toBeLessThan(move.duration);}
+      expect(move.stamina).toBeGreaterThan(0); expect(move.recovery).toBeGreaterThanOrEqual(300);
+      for (const event of move.events) {expect(event.at).toBeGreaterThanOrEqual(400); expect(event.at).toBeLessThan(move.duration);}
     }
   });
   it('does not summon mirror attacks outside a formation', () => {

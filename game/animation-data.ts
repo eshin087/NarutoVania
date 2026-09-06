@@ -20,7 +20,8 @@ export const ANIMATIONS: Record<AnimationName, AnimationSequence> = {
 };
 export function animationFrame(name: AnimationName, elapsed: number, duration?: number) {
   const definition = ANIMATIONS[name], period = duration || definition.duration;
-  const contact = {light1:170,light2:195,light3:245,aerial:145}[name as string as 'light1'];
+  const contacts:Partial<Record<AnimationName,number>>={light1:136,light2:156,light3:196,aerial:116,heavy:284};
+  const contact=contacts[name];
   if(contact && duration && duration < definition.duration){
     const activeIndex=name==='aerial'?2:3;
     const before=definition.frames.slice(0,activeIndex),after=definition.frames.slice(activeIndex);

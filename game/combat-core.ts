@@ -37,7 +37,7 @@ export const COMBAT = {
   stamina: 100, staminaRegen: 35, regenDelay: 650, parryWindow: 140, parryRearm: 300,
   parryRestore: 10, parryPosture: 23, guardBreak: 800, bossBreak: 1550, breakDamage: 1.6,
   chakraRegen: 1.8, chakraDelay: 1400, meleeChakra: 2, parryChakra: 4,
-  inputBuffer: 240, damageImmunity: 650, speed: 378, guardSpeed: 100,
+  inputBuffer: 240, damageImmunity: 650, speed: 416, guardSpeed: 100,
   jump: 840, gravity: 1800, coyote: 100, jumpBuffer: 130,
 } as const;
 export const clamp = (n: number, lo: number, hi: number) => Math.max(lo, Math.min(hi, n));
@@ -63,6 +63,7 @@ export const UNIVERSAL: Record<string, AttackDefinition> = {
   substitute: {id: 'substitute', action: 'substitute', animation: 'cast', duration: 340, cancelAt: 270, stamina: 10, chakra: 25, invulnerable: 390, cooldown: 4200,
     events: [{at: 0, kind: 'technique', effect: 'smoke'}]},
 };
+for(const id of ['light1','light2','light3','heavy','aerial','tool']){const a=UNIVERSAL[id];a.duration=Math.round(a.duration*.8);a.cancelAt=Math.round(a.cancelAt*.8);a.events=a.events.map(e=>({...e,at:Math.round(e.at*.8)}));}
 export interface ScheduledAction {definition: AttackDefinition; started: number; serial: number; emitted: Set<number>; charge: number; facing: Facing;}
 export interface IncomingHit {damage: number; posture: number; red: boolean; fromX: number; projectile?: boolean;}
 export type DefenseResult = 'immune' | 'parry' | 'block' | 'guardbreak' | 'damage';

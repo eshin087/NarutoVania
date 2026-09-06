@@ -1,0 +1,47 @@
+{
+  "textures": {
+    "v13-haku-senbon": {
+      "frames": 6,
+      "mode": "RGBA",
+      "size": [
+        1536,
+        1024
+      ],
+      "transparentPixels": 1502937,
+      "allFramesInsideCell": true
+    },
+    "v13-haku-mirror-knockdown": {
+      "frames": 8,
+      "mode": "RGBA",
+      "size": [
+        2048,
+        1024
+      ],
+      "transparentPixels": 2019207,
+      "allFramesInsideCell": true
+    },
+    "v13-haku-carry-zabuza": {
+      "frames": 12,
+      "mode": "RGBA",
+      "size": [
+        3072,
+        1024
+      ],
+      "transparentPixels": 2851952,
+      "allFramesInsideCell": true
+    }
+  },
+  "visualReview": "All26newframes reviewed against Haku idle at identical runtimebody conversion. Mask/torso used for scale, not crouched silhouette. Carry has two full supported subjects and visible secured cleaver, no frame clipping.",
+  "limitations": [
+    "Exact5percent anatomical tolerance not certified; generated carry perspective and head angles vary.",
+    "Carry source firstframe Zabuza feet lie close to source leftedge; extraction preserves all visible source pixels.",
+    "Sword partly occluded by bodies in pickup frames as physically expected."
+  ],
+  "bodyScale": {
+    "hakuLogicalHeight": 146,
+    "zabuzaLogicalHeight": 167,
+    "commonHakuSourceBase": 208,
+    "runtimeScale": 0.7019230769230769
+  },
+  "anchors": "Target[256,350]; airborneknockfirst4 elevated45sourcepixels aboveground; pickupfirst2 use midpointcombinedsupport, othergroundedframes footbottom."
+}

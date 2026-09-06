@@ -1,0 +1,662 @@
+{
+  "version": 13,
+  "logicalBodyHeights": {
+    "haku": 146,
+    "zabuza": 167
+  },
+  "scaleUsage": "scale=146*frame.pixelsToLogicalBody for all atlases including composite carry. Origin=anchorPixels/cellSize. No scale based on pose silhouette height.",
+  "measurementBasis": "Uniform atlas preprocessing chosen by comparison of Haku mask/head and robe torso to idle. Falling and kneeling remain smaller silhouettes. Composite preserves generated relative character scale.",
+  "textures": {
+    "v13-haku-senbon": {
+      "file": "v13-haku-senbon.png",
+      "character": "haku",
+      "cellSize": [
+        512,
+        512
+      ],
+      "columns": 3,
+      "rows": 2,
+      "baseHeight": 208,
+      "frames": [
+        {
+          "frame": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "anchorPixels": [
+            256,
+            350
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.53,
+          "contentBounds": [
+            213,
+            154,
+            296,
+            351
+          ]
+        },
+        {
+          "frame": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            512
+          ],
+          "anchorPixels": [
+            256,
+            350
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.53,
+          "contentBounds": [
+            208,
+            154,
+            299,
+            351
+          ]
+        },
+        {
+          "frame": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            512
+          ],
+          "anchorPixels": [
+            256,
+            350
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.53,
+          "contentBounds": [
+            245,
+            158,
+            397,
+            350
+          ]
+        },
+        {
+          "frame": 3,
+          "rect": [
+            0,
+            512,
+            512,
+            512
+          ],
+          "anchorPixels": [
+            256,
+            350
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.53,
+          "contentBounds": [
+            244,
+            158,
+            396,
+            350
+          ]
+        },
+        {
+          "frame": 4,
+          "rect": [
+            512,
+            512,
+            512,
+            512
+          ],
+          "anchorPixels": [
+            256,
+            350
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.53,
+          "contentBounds": [
+            245,
+            157,
+            371,
+            350
+          ]
+        },
+        {
+          "frame": 5,
+          "rect": [
+            1024,
+            512,
+            512,
+            512
+          ],
+          "anchorPixels": [
+            256,
+            350
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.53,
+          "contentBounds": [
+            214,
+            158,
+            295,
+            351
+          ]
+        }
+      ],
+      "animation": {
+        "frameDurationsMs": [
+          65,
+          75,
+          65,
+          75,
+          100,
+          120
+        ],
+        "releaseFrame": 3,
+        "releaseTimeMs": 205,
+        "event": {
+          "type": "emitSenbon",
+          "count": 3
+        },
+        "projectilesBakedIn": false,
+        "releaseAttachmentPixels": [
+          384,
+          197
+        ]
+      }
+    },
+    "v13-haku-mirror-knockdown": {
+      "file": "v13-haku-mirror-knockdown.png",
+      "character": "haku",
+      "cellSize": [
+        512,
+        512
+      ],
+      "columns": 4,
+      "rows": 2,
+      "baseHeight": 208,
+      "frames": [
+        {
+          "frame": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "anchorPixels": [
+            256,
+            350
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.44,
+          "contentBounds": [
+            128,
+            151,
+            288,
+            305
+          ]
+        },
+        {
+          "frame": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            512
+          ],
+          "anchorPixels": [
+            256,
+            350
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.44,
+          "contentBounds": [
+            144,
+            146,
+            272,
+            307
+          ]
+        },
+        {
+          "frame": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            512
+          ],
+          "anchorPixels": [
+            256,
+            350
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.44,
+          "contentBounds": [
+            159,
+            177,
+            340,
+            306
+          ]
+        },
+        {
+          "frame": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            512
+          ],
+          "anchorPixels": [
+            256,
+            350
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.44,
+          "contentBounds": [
+            177,
+            202,
+            306,
+            306
+          ]
+        },
+        {
+          "frame": 4,
+          "rect": [
+            0,
+            512,
+            512,
+            512
+          ],
+          "anchorPixels": [
+            256,
+            350
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.44,
+          "contentBounds": [
+            167,
+            237,
+            355,
+            351
+          ]
+        },
+        {
+          "frame": 5,
+          "rect": [
+            512,
+            512,
+            512,
+            512
+          ],
+          "anchorPixels": [
+            256,
+            350
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.44,
+          "contentBounds": [
+            203,
+            204,
+            313,
+            351
+          ]
+        },
+        {
+          "frame": 6,
+          "rect": [
+            1024,
+            512,
+            512,
+            512
+          ],
+          "anchorPixels": [
+            256,
+            350
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.44,
+          "contentBounds": [
+            235,
+            190,
+            361,
+            351
+          ]
+        },
+        {
+          "frame": 7,
+          "rect": [
+            1536,
+            512,
+            512,
+            512
+          ],
+          "anchorPixels": [
+            256,
+            350
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.44,
+          "contentBounds": [
+            235,
+            172,
+            314,
+            350
+          ]
+        }
+      ],
+      "animation": {
+        "frameDurationsMs": [
+          70,
+          90,
+          100,
+          120,
+          130,
+          180,
+          160,
+          160
+        ],
+        "exitFrame": 1,
+        "impactFrame": 4,
+        "impactTimeMs": 380,
+        "recoveryFrame": 7,
+        "runtime": "Recoil180ms, gravity1800px/s\u00b2 from the actual mirror; frames2-3 follow descent speed; frame4 occurs on floor contact; grounded recovery650ms. Natural expiry uses normal jump/landing."
+      }
+    },
+    "v13-haku-carry-zabuza": {
+      "file": "v13-haku-carry-zabuza.png",
+      "character": "haku",
+      "cellSize": [
+        512,
+        512
+      ],
+      "columns": 6,
+      "rows": 2,
+      "baseHeight": 208,
+      "frames": [
+        {
+          "frame": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "anchorPixels": [
+            256,
+            350
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.76,
+          "contentBounds": [
+            143,
+            176,
+            369,
+            351
+          ]
+        },
+        {
+          "frame": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            512
+          ],
+          "anchorPixels": [
+            256,
+            350
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.76,
+          "contentBounds": [
+            150,
+            175,
+            362,
+            351
+          ]
+        },
+        {
+          "frame": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            512
+          ],
+          "anchorPixels": [
+            256,
+            350
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.76,
+          "contentBounds": [
+            132,
+            150,
+            334,
+            351
+          ]
+        },
+        {
+          "frame": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            512
+          ],
+          "anchorPixels": [
+            256,
+            350
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.76,
+          "contentBounds": [
+            203,
+            108,
+            391,
+            351
+          ]
+        },
+        {
+          "frame": 4,
+          "rect": [
+            2048,
+            0,
+            512,
+            512
+          ],
+          "anchorPixels": [
+            256,
+            350
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.76,
+          "contentBounds": [
+            199,
+            84,
+            367,
+            351
+          ]
+        },
+        {
+          "frame": 5,
+          "rect": [
+            2560,
+            0,
+            512,
+            512
+          ],
+          "anchorPixels": [
+            256,
+            350
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.76,
+          "contentBounds": [
+            156,
+            79,
+            344,
+            350
+          ]
+        },
+        {
+          "frame": 6,
+          "rect": [
+            0,
+            512,
+            512,
+            512
+          ],
+          "anchorPixels": [
+            256,
+            350
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.76,
+          "contentBounds": [
+            137,
+            86,
+            322,
+            350
+          ]
+        },
+        {
+          "frame": 7,
+          "rect": [
+            512,
+            512,
+            512,
+            512
+          ],
+          "anchorPixels": [
+            256,
+            350
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.76,
+          "contentBounds": [
+            148,
+            85,
+            331,
+            351
+          ]
+        },
+        {
+          "frame": 8,
+          "rect": [
+            1024,
+            512,
+            512,
+            512
+          ],
+          "anchorPixels": [
+            256,
+            350
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.76,
+          "contentBounds": [
+            192,
+            83,
+            371,
+            351
+          ]
+        },
+        {
+          "frame": 9,
+          "rect": [
+            1536,
+            512,
+            512,
+            512
+          ],
+          "anchorPixels": [
+            256,
+            350
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.76,
+          "contentBounds": [
+            150,
+            86,
+            329,
+            350
+          ]
+        },
+        {
+          "frame": 10,
+          "rect": [
+            2048,
+            512,
+            512,
+            512
+          ],
+          "anchorPixels": [
+            256,
+            350
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.76,
+          "contentBounds": [
+            123,
+            84,
+            308,
+            352
+          ]
+        },
+        {
+          "frame": 11,
+          "rect": [
+            2560,
+            512,
+            512,
+            512
+          ],
+          "anchorPixels": [
+            256,
+            350
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.76,
+          "contentBounds": [
+            157,
+            87,
+            337,
+            351
+          ]
+        }
+      ],
+      "animation": {
+        "pickupFrames": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "pickupDurationsMs": [
+          280,
+          280,
+          280,
+          280,
+          280,
+          400
+        ],
+        "liftFrame": 2,
+        "carryLoopFrames": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "carryFrameDurationMs": 120
+      }
+    }
+  }
+}

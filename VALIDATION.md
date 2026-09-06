@@ -1,4 +1,20 @@
-# V11 validation � faster combat and signature barrages
+# V13 validation — faster battles, deceptive mirrors and cinematic clashes
+
+This section describes the V13 replacement; older results below are historical.
+
+- 156 tests pass across 13 files, plus TypeScript, lint and production build. New coverage includes exact-once cinematic contact, three senbon, clash lifecycle, blocked completion until carry exit, gravity/650ms recovery from all eight mirror positions, deterministic barrage preparation, unchanged defense windows and faster event/contact alignment.
+- Complete fresh browser chapter: all four fights, rescue, dragon counterattack/intervention, Sasuke sacrifice, awakened Naruto, interception, Gato and acknowledged snowy ending. The development input pilot used ordinary actions without health, position, clock or outcome overrides. No retries; final Naruto HP46; 144 active combat seconds. This measures an accurate automated player, not average-human difficulty. No browser errors; ending leaves no fighters, projectiles, effects, decoys or extra music sources.
+- All eight variants passed left/center/right ground-route trials (24 runs). Lowest remaining HP95; maximum observed live projectiles16; no lingering shots after recovery and no normal-save writes. The final crossing-fan presentation also passed three repeated route checks at100HP. Internal protection reserves224px, leaving180px after the player's44px width; residual conflicting shots are removed before a new volley. The48-hostile cap remains enforced.
+- New generated art:26 Haku frames and16 water-dragon/clash frames. Transparent backgrounds, source prompts, uniform body scales, per-frame anchors and contact metadata are retained in public/art-v13. All were inspected before integration, including mirrored orientation. Cinematic dragons render at650x300logical; character bodies are unchanged. Cast/throw/carry/clash and rescue contact screenshots were inspected. Haku's whole combined carrying bounds clear the held camera before scene completion.
+- Equal-brightness reflections are visible in every intact mirror; only the brief tell changes the attacking reflection. Foreground mirror layers sit below combatants so they cannot cover the player. Actual lower- and upper-mirror interruptions were exercised through ordinary inputs. The upper test recorded descent337→403→437→468→509→550→590, pause froze it, floor contact chose the landing frame, and replay removed the fall state. The first upper-mirror test reached the Sasuke scripted phase transition before its landing assertion; the isolated Naruto retest verified the complete descent.
+- Faster returning sword: actual outbound perfect parry, harmless return and moving-owner catch passed; maximum one sword. Full700ms windup and existing damage remain. Death at29.6s of idle exposure and immediate retry restored HP/stamina/chakra100, ultimate0, no projectile and13display objects.
+- Simulated-controller held confirms remain on the3500/10800ms rescue panels until release/fresh press. Pause, parry indication, four repeat resets, fullscreen and resizing passed. A400-sample desktop combat capture measured median144FPS/min141FPS. This is headless Edge on the available desktop; physical controller hardware was unavailable.
+- Actual45.24s browser audio capture covers ordinary combat, Sharingan and Haku mirror attacks. Peak−4.4dBFS, mean−25.7dBFS; no missing decoded audio or browser errors. V12 softened water audio and muted placeholder voices remain. Subjective listening is not claimed.
+- Production-format smoke coverage: eight barrage selector entries with replay/pause and seven sound previews; no test-pilot tools, missing requests or page errors. Existing fourteen story/fight entries, direct repair entries, panel/fade pause and public deployment checks are recorded separately in the local output logs. Debug keeps normal progress intact.
+
+---
+
+# V11 validation — faster combat and signature barrages
 
 The V11 checks below supersede older revision results retained later in this file.
 

@@ -39,9 +39,9 @@ export const CHARACTER = {
 export interface Ability {label: string; description: string; icon: 'eye' | 'water' | 'dog' | 'bolt' | 'clone' | 'feint' | 'rush' | 'fire' | 'shuriken' | 'kunai' | 'shield'; attack: AttackDefinition;}
 function technique(id: string, action: 'skill1' | 'skill2' | 'ultimate', chakra: number, cooldown: number, effect: 'water' | 'fire' | 'smoke' | 'lightning' | 'impact', damage = 0): AttackDefinition {
   const ultimate = action === 'ultimate';
-  return {id, action, animation: ultimate ? 'ultimate' : 'cast', duration: ultimate ? 1100 : 620, cancelAt: ultimate ? 950 : 490,
+  return {id, action, animation: ultimate ? 'ultimate' : 'cast', duration: ultimate ? 1100 : 496, cancelAt: ultimate ? 950 : 392,
     stamina: ultimate ? 12 : 9, chakra, cooldown, ultimate: ultimate ? 100 : 0,
-    events: [{at: ultimate ? 370 : 240, kind: 'technique', effect, damage, posture: ultimate ? 62 : 26}]};
+    events: [{at: ultimate ? 370 : 192, kind: 'technique', effect, damage, posture: ultimate ? 62 : 26}]};
 }
 const ABILITIES = {
   read: {label: 'Sharingan', icon: 'eye', description: 'Slow time for 3s. For 6s reveal attacks; perfect parries deal double guard damage and empower your next strike. 24 chakra.', attack: technique('reading', 'skill1', 24, 9000, 'smoke')},

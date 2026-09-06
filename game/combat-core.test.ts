@@ -71,8 +71,8 @@ describe('movement resources and hitboxes', () => {
 describe('action scheduler', () => {
   it('uses anticipation and emits an active event only once even across long frames', () => {
     const f = new Combatant('kakashi'); f.start(UNIVERSAL.light1, 1000);
-    expect(f.update(1169, 169).filter(e => e.event.kind === 'hit')).toHaveLength(0);
-    expect(f.update(1170, 1).filter(e => e.event.kind === 'hit')).toHaveLength(1);
+    expect(f.update(1135, 135).filter(e => e.event.kind === 'hit')).toHaveLength(0);
+    expect(f.update(1136, 1).filter(e => e.event.kind === 'hit')).toHaveLength(1);
     expect(f.update(1200, 40)).toHaveLength(0);
   });
   it('prevents tools and casts overwriting melee, and permits only recovery defense cancels', () => {

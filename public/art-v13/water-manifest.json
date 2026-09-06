@@ -1,0 +1,722 @@
+{
+  "dragon": {
+    "file": "dragon-v13.png",
+    "width": 10400,
+    "height": 600,
+    "columns": 8,
+    "rows": 1,
+    "cellWidth": 1300,
+    "cellHeight": 600,
+    "anchor": [
+      650,
+      300
+    ],
+    "logicalSize": [
+      650,
+      300
+    ],
+    "pixelsToLogical": 0.5,
+    "frames": [
+      {
+        "index": 0,
+        "rect": [
+          0,
+          0,
+          1300,
+          600
+        ],
+        "anchor": [
+          650,
+          300
+        ],
+        "headContact": [
+          560,
+          210
+        ],
+        "headContactLogical": [
+          280.0,
+          105.0
+        ],
+        "contentBounds": [
+          108,
+          146,
+          569,
+          549
+        ],
+        "sourceRegion": [
+          0,
+          0,
+          409,
+          444
+        ],
+        "sourceScale": 1.5,
+        "sourceContact": [
+          324.77846153846156,
+          181.49384615384616
+        ],
+        "durationMs": 120,
+        "phase": "formation"
+      },
+      {
+        "index": 1,
+        "rect": [
+          1300,
+          0,
+          1300,
+          600
+        ],
+        "anchor": [
+          650,
+          300
+        ],
+        "headContact": [
+          740,
+          230
+        ],
+        "headContactLogical": [
+          370.0,
+          115.0
+        ],
+        "contentBounds": [
+          228,
+          121,
+          747,
+          532
+        ],
+        "sourceRegion": [
+          409,
+          0,
+          832,
+          444
+        ],
+        "sourceScale": 1.5,
+        "sourceContact": [
+          398.8523076923077,
+          215.60923076923078
+        ],
+        "durationMs": 140,
+        "phase": "gather"
+      },
+      {
+        "index": 2,
+        "rect": [
+          2600,
+          0,
+          1300,
+          600
+        ],
+        "anchor": [
+          650,
+          300
+        ],
+        "headContact": [
+          900,
+          140
+        ],
+        "headContactLogical": [
+          450.0,
+          70.0
+        ],
+        "contentBounds": [
+          275,
+          64,
+          909,
+          538
+        ],
+        "sourceRegion": [
+          832,
+          0,
+          1279,
+          444
+        ],
+        "sourceScale": 1.5,
+        "sourceContact": [
+          423.44615384615395,
+          159.66
+        ],
+        "durationMs": 170,
+        "phase": "coil"
+      },
+      {
+        "index": 3,
+        "rect": [
+          3900,
+          0,
+          1300,
+          600
+        ],
+        "anchor": [
+          650,
+          300
+        ],
+        "headContact": [
+          1230,
+          190
+        ],
+        "headContactLogical": [
+          615.0,
+          95.0
+        ],
+        "contentBounds": [
+          221,
+          75,
+          1239,
+          561
+        ],
+        "sourceRegion": [
+          1279,
+          0,
+          1774,
+          444
+        ],
+        "sourceScale": 2.1,
+        "sourceContact": [
+          488.176923076923,
+          244.26615384615386
+        ],
+        "durationMs": 110,
+        "phase": "surge"
+      },
+      {
+        "index": 4,
+        "rect": [
+          5200,
+          0,
+          1300,
+          600
+        ],
+        "anchor": [
+          650,
+          300
+        ],
+        "headContact": [
+          1230,
+          260
+        ],
+        "headContactLogical": [
+          615.0,
+          130.0
+        ],
+        "contentBounds": [
+          76,
+          80,
+          1243,
+          508
+        ],
+        "sourceRegion": [
+          0,
+          444,
+          450,
+          887
+        ],
+        "sourceScale": 2.65,
+        "sourceContact": [
+          442.1353846153846,
+          194.64
+        ],
+        "durationMs": 95,
+        "phase": "sustain"
+      },
+      {
+        "index": 5,
+        "rect": [
+          6500,
+          0,
+          1300,
+          600
+        ],
+        "anchor": [
+          650,
+          300
+        ],
+        "headContact": [
+          1230,
+          260
+        ],
+        "headContactLogical": [
+          615.0,
+          130.0
+        ],
+        "contentBounds": [
+          149,
+          118,
+          1246,
+          518
+        ],
+        "sourceRegion": [
+          450,
+          444,
+          876,
+          887
+        ],
+        "sourceScale": 2.65,
+        "sourceContact": [
+          412.4369230769231,
+          191.91076923076923
+        ],
+        "durationMs": 95,
+        "phase": "sustain"
+      },
+      {
+        "index": 6,
+        "rect": [
+          7800,
+          0,
+          1300,
+          600
+        ],
+        "anchor": [
+          650,
+          300
+        ],
+        "headContact": [
+          1230,
+          260
+        ],
+        "headContactLogical": [
+          615.0,
+          130.0
+        ],
+        "contentBounds": [
+          109,
+          89,
+          1296,
+          521
+        ],
+        "sourceRegion": [
+          876,
+          444,
+          1324,
+          887
+        ],
+        "sourceScale": 2.65,
+        "sourceContact": [
+          423.1138461538462,
+          191.91076923076923
+        ],
+        "durationMs": 95,
+        "phase": "sustain"
+      },
+      {
+        "index": 7,
+        "rect": [
+          9100,
+          0,
+          1300,
+          600
+        ],
+        "anchor": [
+          650,
+          300
+        ],
+        "headContact": [
+          1230,
+          260
+        ],
+        "headContactLogical": [
+          615.0,
+          130.0
+        ],
+        "contentBounds": [
+          77,
+          117,
+          1243,
+          537
+        ],
+        "sourceRegion": [
+          1324,
+          444,
+          1774,
+          887
+        ],
+        "sourceScale": 2.65,
+        "sourceContact": [
+          434.98923076923074,
+          183.72307692307697
+        ],
+        "durationMs": 130,
+        "phase": "sustain"
+      }
+    ],
+    "mirrorRule": "For facing left, horizontal flip entire frame; mirror headContact.x as cellWidth-x.",
+    "animations": {
+      "full": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "sustain": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "headContact": [
+      1230,
+      260
+    ]
+  },
+  "clash": {
+    "file": "clash-v13.png",
+    "width": 10400,
+    "height": 600,
+    "columns": 8,
+    "rows": 1,
+    "cellWidth": 1300,
+    "cellHeight": 600,
+    "anchor": [
+      650,
+      300
+    ],
+    "logicalSize": [
+      650,
+      300
+    ],
+    "pixelsToLogical": 0.5,
+    "frames": [
+      {
+        "index": 0,
+        "rect": [
+          0,
+          0,
+          1300,
+          600
+        ],
+        "anchor": [
+          650,
+          300
+        ],
+        "headContact": [
+          650,
+          300
+        ],
+        "headContactLogical": [
+          325.0,
+          150.0
+        ],
+        "contentBounds": [
+          66,
+          123,
+          1241,
+          435
+        ],
+        "sourceRegion": [
+          0,
+          0,
+          464,
+          444
+        ],
+        "sourceScale": 0.6747404844290658,
+        "sourceContact": [
+          920.08,
+          457.92
+        ],
+        "durationMs": 95,
+        "phase": "contact"
+      },
+      {
+        "index": 1,
+        "rect": [
+          1300,
+          0,
+          1300,
+          600
+        ],
+        "anchor": [
+          650,
+          300
+        ],
+        "headContact": [
+          650,
+          300
+        ],
+        "headContactLogical": [
+          325.0,
+          150.0
+        ],
+        "contentBounds": [
+          100,
+          132,
+          1200,
+          467
+        ],
+        "sourceRegion": [
+          464,
+          0,
+          887,
+          444
+        ],
+        "sourceScale": 2.6,
+        "sourceContact": [
+          211.5,
+          281.0
+        ],
+        "durationMs": 90,
+        "phase": "compression"
+      },
+      {
+        "index": 2,
+        "rect": [
+          2600,
+          0,
+          1300,
+          600
+        ],
+        "anchor": [
+          650,
+          300
+        ],
+        "headContact": [
+          650,
+          300
+        ],
+        "headContactLogical": [
+          325.0,
+          150.0
+        ],
+        "contentBounds": [
+          269,
+          83,
+          1030,
+          554
+        ],
+        "sourceRegion": [
+          887,
+          0,
+          1310,
+          444
+        ],
+        "sourceScale": 1.8,
+        "sourceContact": [
+          211.5,
+          389
+        ],
+        "durationMs": 110,
+        "phase": "crest"
+      },
+      {
+        "index": 3,
+        "rect": [
+          3900,
+          0,
+          1300,
+          600
+        ],
+        "anchor": [
+          650,
+          300
+        ],
+        "headContact": [
+          650,
+          300
+        ],
+        "headContactLogical": [
+          325.0,
+          150.0
+        ],
+        "contentBounds": [
+          263,
+          114,
+          1041,
+          554
+        ],
+        "sourceRegion": [
+          1310,
+          0,
+          1774,
+          444
+        ],
+        "sourceScale": 1.8,
+        "sourceContact": [
+          215.0,
+          388
+        ],
+        "durationMs": 110,
+        "phase": "turbulence"
+      },
+      {
+        "index": 4,
+        "rect": [
+          5200,
+          0,
+          1300,
+          600
+        ],
+        "anchor": [
+          650,
+          300
+        ],
+        "headContact": [
+          650,
+          300
+        ],
+        "headContactLogical": [
+          325.0,
+          150.0
+        ],
+        "contentBounds": [
+          264,
+          36,
+          1035,
+          554
+        ],
+        "sourceRegion": [
+          0,
+          444,
+          454,
+          887
+        ],
+        "sourceScale": 1.8,
+        "sourceContact": [
+          240.0,
+          321
+        ],
+        "durationMs": 110,
+        "phase": "explosion"
+      },
+      {
+        "index": 5,
+        "rect": [
+          6500,
+          0,
+          1300,
+          600
+        ],
+        "anchor": [
+          650,
+          300
+        ],
+        "headContact": [
+          650,
+          300
+        ],
+        "headContactLogical": [
+          325.0,
+          150.0
+        ],
+        "contentBounds": [
+          264,
+          195,
+          1034,
+          554
+        ],
+        "sourceRegion": [
+          454,
+          444,
+          882,
+          887
+        ],
+        "sourceScale": 1.8,
+        "sourceContact": [
+          214.5,
+          320
+        ],
+        "durationMs": 110,
+        "phase": "collapse"
+      },
+      {
+        "index": 6,
+        "rect": [
+          7800,
+          0,
+          1300,
+          600
+        ],
+        "anchor": [
+          650,
+          300
+        ],
+        "headContact": [
+          650,
+          300
+        ],
+        "headContactLogical": [
+          325.0,
+          150.0
+        ],
+        "contentBounds": [
+          261,
+          304,
+          1039,
+          554
+        ],
+        "sourceRegion": [
+          882,
+          444,
+          1314,
+          887
+        ],
+        "sourceScale": 1.8,
+        "sourceContact": [
+          216.0,
+          320
+        ],
+        "durationMs": 140,
+        "phase": "foam"
+      },
+      {
+        "index": 7,
+        "rect": [
+          9100,
+          0,
+          1300,
+          600
+        ],
+        "anchor": [
+          650,
+          300
+        ],
+        "headContact": [
+          650,
+          300
+        ],
+        "headContactLogical": [
+          325.0,
+          150.0
+        ],
+        "contentBounds": [
+          267,
+          323,
+          1038,
+          554
+        ],
+        "sourceRegion": [
+          1314,
+          444,
+          1774,
+          887
+        ],
+        "sourceScale": 1.8,
+        "sourceContact": [
+          213.0,
+          318
+        ],
+        "durationMs": 190,
+        "phase": "dissipation"
+      }
+    ],
+    "mirrorRule": "For facing left, horizontal flip entire frame; mirror headContact.x as cellWidth-x.",
+    "animations": {
+      "full": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "headContact": [
+      650,
+      300
+    ]
+  }
+}

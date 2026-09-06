@@ -1,3 +1,4 @@
+import {preloadV13,registerV13} from './art-v13';
 import {preloadV11,registerV11,normalizeV11} from './art-v11';
 import {preloadV10,registerV10,reactionPose,endingPose} from './art-v10';
 import meleeRevision from '../public/art-v9/kakashi-melee-corrected-manifest.json';
@@ -16,7 +17,7 @@ export interface BossArtManifest {
   variants: {awakened: AtlasMetadata & {baseHeight: number}; ending: AtlasMetadata & {baseHeight: number}; unmasked: {baseHeight: number; sheets: Record<SpriteSheet, AtlasMetadata>}};
   props: Record<string, NamedFrame>; effects: Record<string, NamedFrame>;
 }
-export function preloadBattleArt(scene: Phaser.Scene) {preloadV10(scene);preloadV11(scene);
+export function preloadBattleArt(scene: Phaser.Scene) {preloadV10(scene);preloadV11(scene);preloadV13(scene);
   for(const id of CHARACTERS)scene.load.image(`v9-${id}-aerial`,`/art-v9/${id}-aerial.png`);
   for(let i=0;i<12;i++)scene.load.image(`manga-${i}`,`/art-v9/${String(i+1).padStart(2,'0')}.webp`);
 
@@ -33,7 +34,7 @@ export function preloadBattleArt(scene: Phaser.Scene) {preloadV10(scene);preload
   for (const name of ['lakeside-background', 'bridge-background', 'lakeside-ground', 'bridge-ground', 'props', 'effects', 'naruto-awakened', 'ending-zabuza', 'zabuza-sword']) scene.load.image(`v2-${name}`, `/art-v2/${name}.png`);
 }
 export function artManifest(scene: Phaser.Scene) {return scene.cache.json.get('battle-manifest') as BossArtManifest;}
-export function registerBattleArt(scene: Phaser.Scene) {registerV10(scene);registerV11(scene);
+export function registerBattleArt(scene: Phaser.Scene) {registerV10(scene);registerV11(scene);registerV13(scene);
   for(const id of CHARACTERS)for(let i=0;i<6;i++)scene.textures.get(`v9-${id}-aerial`).add(String(i),0,i*512,0,512,384);
   for (let i=0;i<4;i++) scene.textures.get('v5-wave').add(String(i),0,i*512,0,512,512);
   for (let i=0;i<6;i++) scene.textures.get('v5-moments').add(String(i),0,(i%2)*768,Math.floor(i/2)*432,768,432);

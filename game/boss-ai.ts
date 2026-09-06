@@ -82,6 +82,8 @@ export const HAKU_MOVES: BossMove[] = [
 ];
 
 for(const attack of HAKU_MOVES){attack.recovery=Math.max(360,Math.round(attack.recovery*.8));if(attack.events.some(e=>e.kind==='hit')){let last=0;attack.events=attack.events.map((e,i)=>{const at=Math.max(i?last+300:500,Math.round(e.at*.85));last=at;return{...e,at};});attack.duration=last+360;attack.cancelAt=attack.duration;}}
+for(const attack of [...ZABUZA_MOVES,...HAKU_MOVES]){let previous=0;attack.events=attack.events.map((e,i)=>{const floor=e.red?600:i?250:400;const at=attack.id==='sword-throw'?700:Math.max(Math.round(e.at*.8),i?previous+floor:floor);previous=at;return{...e,at};});attack.duration=Math.max(previous+240,Math.round(attack.duration*.8));attack.cancelAt=attack.duration;attack.recovery=Math.max(300,Math.round(attack.recovery*.85));}
+
 export class BossBrain {
 
   recent: string[] = []; readyAt = 1900; phase = 0; attacks = 0; lastParryAt=0;lastParryAttack=0;
@@ -148,7 +150,7 @@ export class MirrorFormation {
 
       [-465, -68, false], [-340, -255, false], [-120, -315, false], [120, -315, false], [340, -255, false], [465, -68, false],
 
-      [-365, 30, true], [365, 30, true],
+      [-365, -65, true], [365, -65, true],
 
     ].map(([x, y, foreground]) => ({x: center + Number(x), y: floor + Number(y), foreground: Boolean(foreground), hp: 130, max: 130, broken: false}));
 
@@ -158,7 +160,7 @@ export class MirrorFormation {
 
   transfer(now: number, random: () => number = Math.random) {
 
-    const candidates = this.mirrors.map((m, i) => ({m, i})).filter(({m, i}) => !m.broken && i !== this.occupied && !m.foreground);
+    const candidates = this.mirrors.map((m, i) => ({m, i})).filter(({m, i}) => !m.broken && i !== this.occupied);
 
     if (!candidates.length) return null;
 

@@ -1,0 +1,50 @@
+{
+  "cinematicProjectiles": {
+    "rescue": {
+      "speed": 1000,
+      "contact": "recoil + release water prison",
+      "attachMs": 480,
+      "targetOffset": [
+        27,
+        -105
+      ]
+    },
+    "hunter": {
+      "releaseAt": 205,
+      "count": 3,
+      "speed": 1150,
+      "contact": "collapse once",
+      "attachMs": 180,
+      "handAttachmentPixels": [
+        384,
+        197
+      ],
+      "targetOffset": [
+        8,
+        -141
+      ]
+    }
+  },
+  "waterClash": {
+    "logicalDragonSize": [
+      650,
+      300
+    ],
+    "formationMs": 700,
+    "surgeMs": 700,
+    "contactMs": 220,
+    "collapseMs": 730,
+    "sprayMs": 650,
+    "synchronizedHeadPoint": [
+      780,
+      377
+    ]
+  },
+  "carry": {
+    "pickupMs": 1800,
+    "loopFrameMs": 120,
+    "speed": 245,
+    "exit": "rendered bounds beyond held camera +20px"
+  },
+  "bodyNormalization": "Read per-frame anchors and uniform pixelsToLogicalBody; do not resize based on pose silhouette."
+}
