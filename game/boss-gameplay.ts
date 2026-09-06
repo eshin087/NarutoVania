@@ -84,7 +84,7 @@ export class BossGameScene extends Phaser.Scene {
     this.brain = new BossBrain(this.boss.model, this.phase); this.targetX = this.player.model.x; this.targetY = this.floor - 72;
     this.stageStoryActors(); this.cameras.main.scrollX = clamp((data.playerX + data.bossX) / 2 - 640, 0, ARENAS[data.arena].width - 1280);
     bridge.checkpoint(this.phase); this.inputs.clear(); bridge.patch({screen: 'playing', character: data.character, health: 100, stamina: 100, chakra: 100, ultimate: 0,
-      stage: data.title, objective: this.phase === 'mirrors' ? `Hold out ${Math.min(60,Math.floor(this.phaseElapsed))}/60s · Break Haku’s guard ${Math.min(2,this.mirrorGuardBreaks)}/2` : data.objective, phaseProgress: 0, phaseElapsed: 0, cinematic: '', ultimateCinematic:'', protection: this.phase === 'protect' ? 100 : null});
+      stage: data.title, objective: this.phase === 'mirrors' ? `Hold out ${Math.min(45,Math.floor(this.phaseElapsed))}/45s · Break Haku’s guard ${Math.min(1,this.mirrorGuardBreaks)}/1` : data.objective, phaseProgress: 0, phaseElapsed: 0, cinematic: '', ultimateCinematic:'', protection: this.phase === 'protect' ? 100 : null});
     this.sounds.setTrack(data.boss === 'haku' ? 'mirrors' : 'lakeside'); this.sounds.sync(true); this.emit();
     this.cameras.main.fadeIn(450, 4, 16, 24);
   }
@@ -712,8 +712,8 @@ export class BossGameScene extends Phaser.Scene {
       cloneCount: this.fighters.filter(f => f.key.startsWith('clone')).length, elapsed: this.elapsed, phaseElapsed: this.phaseElapsed,
       abilities: abilities.map((ability, i) => ({id:ability.attack.id, label: ability.label, description:ability.description, icon: ability.icon, cooldown: p.cooldown(ability.attack.id, this.now), cost: ability.attack.chakra || 0,
         ready: (i !== 2 || this.phase !== 'mirrors' || this.sharingan) && p.cooldown(ability.attack.id, this.now) === 0 && p.chakra >= (ability.attack.chakra || 0) && p.stamina >= ability.attack.stamina && p.ultimate >= (ability.attack.ultimate || 0)})),
-      phaseProgress: this.phase === 'mirrors' ? (Math.min(1,this.phaseElapsed/60)+Math.min(1,this.mirrorGuardBreaks/2))/2 : 1 - b.health / b.maxHealth,
-      objective: this.phase === 'mirrors' ? `Hold out ${Math.min(60,Math.floor(this.phaseElapsed))}/60s · Break Haku’s guard ${Math.min(2,this.mirrorGuardBreaks)}/2` : data.objective, protection: this.phase === 'protect' ? this.protection : null, retries: this.retries, parries: this.parries,
+      phaseProgress: this.phase === 'mirrors' ? (Math.min(1,this.phaseElapsed/45)+Math.min(1,this.mirrorGuardBreaks))/2 : 1 - b.health / b.maxHealth,
+      objective: this.phase === 'mirrors' ? `Hold out ${Math.min(45,Math.floor(this.phaseElapsed))}/45s · Break Haku’s guard ${Math.min(1,this.mirrorGuardBreaks)}/1` : data.objective, protection: this.phase === 'protect' ? this.protection : null, retries: this.retries, parries: this.parries,
       device: this.inputs.device, fps: Math.round(this.game.loop.actualFps),
       boss: {name: this.phase === 'rescue' ? 'Zabuza · Water Clone' : CHARACTER[b.id].name, health: b.health, max: b.maxHealth, stamina: b.stamina,
         guardBroken: this.now < b.guardBrokenUntil, stunned:this.now<b.hurtUntil, postureFlash:this.now-b.postureHitAt<250, recovery:Math.max(0,Math.max(b.hurtUntil,b.guardBrokenUntil)-this.now)/1000,

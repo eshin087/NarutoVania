@@ -84,11 +84,11 @@ describe('story director skip and replay', () => {
 
 
 describe('Sasuke mirror objective', () => {
-  it('requires both sustained defense and two mirror guard breaks, never a deliberate death', () => {
+  it('requires both sustained defense and one mirror guard break, never a deliberate death', () => {
     const d=new StoryDirector('mirrors',{enter:()=>{},cue:()=>{},cinematic:()=>{},complete:()=>{}});d.start(false);
-    expect(d.objectiveComplete(1000,59.99,2)).toBe(false);
-    expect(d.objectiveComplete(1000,90,1)).toBe(false);
-    expect(d.objectiveComplete(1000,60,2)).toBe(true);
+    expect(d.objectiveComplete(1000,44.99,1)).toBe(false);
+    expect(d.objectiveComplete(1000,90,0)).toBe(false);
+    expect(d.objectiveComplete(1000,45,1)).toBe(true);
     d.finishObjective();d.skip();expect(d.state.phase).toBe('seal');expect(d.state.sasukeFallen).toBe(true);
   });
 });

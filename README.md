@@ -10,7 +10,7 @@ Standard controller: stick/D-pad move, A jump, X melee, Y tool, B dash, LB parry
 
 Control Kakashi, Naruto, Kakashi, Sasuke, and Naruto in story order. Kakashi has Sharingan, Ninja Hounds, and a Chidori / Lightning Blade ultimate in every playable duel. This is an intentional gameplay expansion; the story cinematics preserve his copied-water exchanges. Sasuke has no Chidori, Naruto has no Rasengan, and Sakura has no later healing or super-strength. Sakura protects Tazuna in a cinematic; the final Kakashi/Zabuza confrontation is also cinematic. Cinematic objectives handle canonical setbacks; players never have to lose deliberately. Every phase saves a checkpoint. Retries restore its starting resources and skip viewed introductions.
 
-The revised tuning targets 60–90 seconds per fight with quicker boss anticipation, meaningful defensive mistakes, and short punish windows. Sasuke must hold out for 60 seconds and break Haku's guard twice inside the mirrors; this triggers the protective sacrifice without a forced player death. Naruto finishes Haku. Legacy Sakura/finale checkpoints migrate through their cinematics. The active-play timer excludes pauses and cutscenes.
+The revised tuning targets shorter, more forgiving fights with quicker boss anticipation, meaningful defensive mistakes, and short punish windows. Sasuke must hold out for 45 seconds and break Haku's guard once inside the mirrors; this triggers the protective sacrifice without a forced player death. Naruto finishes Haku. Legacy Sakura/finale checkpoints migrate through their cinematics. The active-play timer excludes pauses and cutscenes.
 
 Perfect parries drain 23 or more boss stamina without cancelling an entire attack string. Kakashi's Sharingan briefly slows time, highlights attacks, doubles parry guard damage, and empowers the next counter by 50%. Naruto's rescue kit replaces Transformation with Clone Launcher: a clone-assisted upward kick that pressures guard. Substitution remains the distinct decoy action.
 
@@ -41,3 +41,5 @@ When WebMCP is available, the game exposes status, start, pause/resume, retry, a
 See `VALIDATION.md` for verification results and scope limitations.
 
 `public/art-v5/` contains the natural four-frame tidal breaker, six manga moments, launcher icon, prompts, frame metadata, and QA. Cutscene speech is original concise paraphrase; directions, camera bounds, landings, and ground placement were revised.
+
+Difficulty adjustment: playable boss HP reduced about 35%; hostile damage multiplier reduced from 0.95 to 0.70 (about 26% less damage). Boss attack timing, armor, and anti-stun-lock rules are retained.

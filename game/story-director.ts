@@ -232,7 +232,7 @@ export class StoryDirector {
 
     if (this.mode !== 'fight') return false;
 
-    return bossHealth <= 0 || this.state.phase === 'mirrors' && elapsedSeconds >= 60 && mirrorGuardBreaks >= 2;
+    return bossHealth <= 0 || this.state.phase === 'mirrors' && elapsedSeconds >= 45 && mirrorGuardBreaks >= 1;
 
   }
 

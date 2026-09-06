@@ -11,18 +11,18 @@ export interface PhaseDefinition {
   playerX: number; bossX: number; targetSeconds: number; protectionSeconds?: number;
 }
 export const PHASES: Record<StoryPhaseId, PhaseDefinition> = {
-  mist: {id: 'mist', number: 1, title: 'Assassin of the Mist', character: 'kakashi', boss: 'zabuza', arena: 'lakeside', hp: 1900,
-    objective: 'Deflect the sword. Punish a broken guard.', intro: 'arrival', outro: 'prison', playerX: 400, bossX: 990, targetSeconds: 75},
-  rescue: {id: 'rescue', number: 2, title: 'Rescue Kakashi', character: 'naruto', boss: 'zabuza', arena: 'lakeside', hp: 1300,
+  mist: {id: 'mist', number: 1, title: 'Assassin of the Mist', character: 'kakashi', boss: 'zabuza', arena: 'lakeside', hp: 1250,
+    objective: 'Deflect the sword. Punish a broken guard.', intro: 'arrival', outro: 'prison', playerX: 400, bossX: 990, targetSeconds: 50},
+  rescue: {id: 'rescue', number: 2, title: 'Rescue Kakashi', character: 'naruto', boss: 'zabuza', arena: 'lakeside', hp: 850,
     objective: 'With Sasuke, overcome the water clone.', intro: 'prison', outro: 'shuriken', playerX: 430, bossX: 1000, targetSeconds: 50},
-  copy: {id: 'copy', number: 3, title: 'The Copy Ninja', character: 'kakashi', boss: 'zabuza', arena: 'lakeside', hp: 1800,
-    objective: 'Restrain Zabuza. Strike with Lightning Blade.', intro: 'shuriken', outro: 'hunter', playerX: 420, bossX: 1010, targetSeconds: 75},
+  copy: {id: 'copy', number: 3, title: 'The Copy Ninja', character: 'kakashi', boss: 'zabuza', arena: 'lakeside', hp: 1200,
+    objective: 'Restrain Zabuza. Strike with Lightning Blade.', intro: 'shuriken', outro: 'hunter', playerX: 420, bossX: 1010, targetSeconds: 50},
   protect: {id: 'protect', number: 4, title: 'Protect the Bridge Builder', character: 'sakura', boss: 'zabuza', arena: 'bridge', hp: 1400,
     objective: 'Protect Tazuna for 50s or defeat Zabuza.', intro: 'bridge', outro: 'bridge', playerX: 370, bossX: 1010, targetSeconds: 50, protectionSeconds: 50},
-  mirrors: {id: 'mirrors', number: 4, title: 'Crystal Ice Mirrors', character: 'sasuke', boss: 'haku', arena: 'bridge', hp: 1850,
-    objective: 'Hold out for 60 seconds. Break Haku’s guard twice inside the mirrors.', intro: 'bridge', outro: 'sacrifice', playerX: 480, bossX: 1080, targetSeconds: 75},
-  seal: {id: 'seal', number: 5, title: 'The Broken Seal', character: 'naruto', boss: 'haku', arena: 'bridge', hp: 1800,
-    objective: 'Break the mirrors. Reach Haku.', intro: 'sacrifice', outro: 'hesitation', playerX: 530, bossX: 1090, targetSeconds: 75},
+  mirrors: {id: 'mirrors', number: 4, title: 'Crystal Ice Mirrors', character: 'sasuke', boss: 'haku', arena: 'bridge', hp: 1200,
+    objective: 'Hold out for 45 seconds. Break Haku’s guard once inside the mirrors.', intro: 'bridge', outro: 'sacrifice', playerX: 480, bossX: 1080, targetSeconds: 50},
+  seal: {id: 'seal', number: 5, title: 'The Broken Seal', character: 'naruto', boss: 'haku', arena: 'bridge', hp: 1200,
+    objective: 'Break the mirrors. Reach Haku.', intro: 'sacrifice', outro: 'hesitation', playerX: 530, bossX: 1090, targetSeconds: 50},
   lightning: {id: 'lightning', number: 7, title: 'Lightning Blade', character: 'kakashi', boss: 'zabuza', arena: 'bridge', hp: 2000,
     objective: 'Counter silent killing. Restrain Zabuza.', intro: 'hesitation', outro: 'ending', playerX: 410, bossX: 1030, targetSeconds: 70},
 };

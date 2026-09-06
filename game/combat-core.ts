@@ -33,7 +33,7 @@ export interface AttackDefinition {
   events: AttackEvent[];
 }
 export const COMBAT = {
-  enemyDamage: .95,
+  enemyDamage: .7,
   stamina: 100, staminaRegen: 35, regenDelay: 650, parryWindow: 140, parryRearm: 300,
   parryRestore: 10, parryPosture: 23, guardBreak: 800, bossBreak: 1550, breakDamage: 1.6,
   chakraRegen: 1.8, chakraDelay: 1400, meleeChakra: 2, parryChakra: 4,

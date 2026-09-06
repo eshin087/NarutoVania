@@ -1,5 +1,9 @@
 # Story and combat revision validation — September 6, 2026
 
+## Latest difficulty adjustment
+
+Playable boss HP: 1250 / 850 / 1200 / 1200 / 1200. Hostile damage multiplier: 0.70, down from 0.95. Sasuke objective: 45 seconds and one mirror guard break. Automated boundary tests updated. The browser timing observations below describe the preceding harder release, not this easier tuning.
+
 ## Current checks
 
 75 automated tests pass. Type checking and lint pass. Coverage includes defensive timing, stamina gates, boss guard recovery resilience, preserved multi-hit strings after deflection, five-phase progression, legacy cinematic checkpoint migration, natural/skip state parity, the new Sasuke objective, and normal-jump reachability of upper mirrors. Existing simulated-controller and input tests remain passing. Physical controller hardware was unavailable.
