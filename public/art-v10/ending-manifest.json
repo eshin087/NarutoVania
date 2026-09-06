@@ -1,0 +1,1040 @@
+{
+  "zabuza": {
+    "file": "zabuza-ending-v10.png",
+    "cellWidth": 512,
+    "cellHeight": 384,
+    "columns": 6,
+    "rows": 3,
+    "anchorX": 256,
+    "anchorY": 320,
+    "uniformScale": 0.8925,
+    "sourceFacing": "right",
+    "flipForFacingLeft": true,
+    "frames": [
+      {
+        "index": 0,
+        "rect": [
+          0,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          85,
+          62,
+          234,
+          248
+        ],
+        "sourceGround": 249,
+        "sourceCenterX": 159.5,
+        "uniformScale": 0.8925,
+        "contentBounds": [
+          190,
+          153,
+          323,
+          319
+        ],
+        "airGapPixels": 1,
+        "durationMs": 85,
+        "holdLast": false
+      },
+      {
+        "index": 1,
+        "rect": [
+          512,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          392,
+          63,
+          523,
+          248
+        ],
+        "sourceGround": 249,
+        "sourceCenterX": 457.5,
+        "uniformScale": 0.8925,
+        "contentBounds": [
+          198,
+          154,
+          315,
+          319
+        ],
+        "airGapPixels": 1,
+        "durationMs": 85,
+        "holdLast": false
+      },
+      {
+        "index": 2,
+        "rect": [
+          1024,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          641,
+          53,
+          833,
+          214
+        ],
+        "sourceGround": 249,
+        "sourceCenterX": 737.0,
+        "uniformScale": 0.8925,
+        "contentBounds": [
+          170,
+          145,
+          341,
+          289
+        ],
+        "airGapPixels": 31,
+        "durationMs": 75,
+        "holdLast": false
+      },
+      {
+        "index": 3,
+        "rect": [
+          1536,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          974,
+          63,
+          1122,
+          249
+        ],
+        "sourceGround": 249,
+        "sourceCenterX": 1048.0,
+        "uniformScale": 0.8925,
+        "contentBounds": [
+          190,
+          154,
+          322,
+          320
+        ],
+        "airGapPixels": 0,
+        "durationMs": 85,
+        "holdLast": false
+      },
+      {
+        "index": 4,
+        "rect": [
+          2048,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          1225,
+          65,
+          1410,
+          249
+        ],
+        "sourceGround": 249,
+        "sourceCenterX": 1317.5,
+        "uniformScale": 0.8925,
+        "contentBounds": [
+          173,
+          156,
+          338,
+          320
+        ],
+        "airGapPixels": 0,
+        "durationMs": 85,
+        "holdLast": false
+      },
+      {
+        "index": 5,
+        "rect": [
+          2560,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          1511,
+          57,
+          1701,
+          225
+        ],
+        "sourceGround": 249,
+        "sourceCenterX": 1606.0,
+        "uniformScale": 0.8925,
+        "contentBounds": [
+          171,
+          149,
+          341,
+          299
+        ],
+        "airGapPixels": 21,
+        "durationMs": 75,
+        "holdLast": false
+      },
+      {
+        "index": 6,
+        "rect": [
+          0,
+          384,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          91,
+          381,
+          226,
+          519
+        ],
+        "sourceGround": 520,
+        "sourceCenterX": 158.5,
+        "uniformScale": 0.8925,
+        "contentBounds": [
+          196,
+          196,
+          316,
+          319
+        ],
+        "airGapPixels": 1,
+        "durationMs": 100,
+        "holdLast": false
+      },
+      {
+        "index": 7,
+        "rect": [
+          512,
+          384,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          373,
+          388,
+          538,
+          520
+        ],
+        "sourceGround": 520,
+        "sourceCenterX": 455.5,
+        "uniformScale": 0.8925,
+        "contentBounds": [
+          182,
+          202,
+          329,
+          320
+        ],
+        "airGapPixels": 0,
+        "durationMs": 110,
+        "holdLast": false
+      },
+      {
+        "index": 8,
+        "rect": [
+          1024,
+          384,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          645,
+          360,
+          833,
+          520
+        ],
+        "sourceGround": 520,
+        "sourceCenterX": 739.0,
+        "uniformScale": 0.8925,
+        "contentBounds": [
+          172,
+          177,
+          340,
+          320
+        ],
+        "airGapPixels": 0,
+        "durationMs": 110,
+        "holdLast": false
+      },
+      {
+        "index": 9,
+        "rect": [
+          1536,
+          384,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          934,
+          393,
+          1150,
+          516
+        ],
+        "sourceGround": 520,
+        "sourceCenterX": 1042.0,
+        "uniformScale": 0.8925,
+        "contentBounds": [
+          160,
+          207,
+          353,
+          317
+        ],
+        "airGapPixels": 4,
+        "durationMs": 100,
+        "holdLast": false
+      },
+      {
+        "index": 10,
+        "rect": [
+          2048,
+          384,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          1255,
+          348,
+          1409,
+          517
+        ],
+        "sourceGround": 520,
+        "sourceCenterX": 1332.0,
+        "uniformScale": 0.8925,
+        "contentBounds": [
+          187,
+          166,
+          324,
+          317
+        ],
+        "airGapPixels": 3,
+        "durationMs": 140,
+        "holdLast": false
+      },
+      {
+        "index": 11,
+        "rect": [
+          2560,
+          384,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          1564,
+          344,
+          1682,
+          520
+        ],
+        "sourceGround": 520,
+        "sourceCenterX": 1623.0,
+        "uniformScale": 0.8925,
+        "contentBounds": [
+          203,
+          163,
+          308,
+          320
+        ],
+        "airGapPixels": 0,
+        "durationMs": 240,
+        "holdLast": false
+      },
+      {
+        "index": 12,
+        "rect": [
+          0,
+          768,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          107,
+          607,
+          211,
+          802
+        ],
+        "sourceGround": 803,
+        "sourceCenterX": 159.0,
+        "uniformScale": 0.8925,
+        "contentBounds": [
+          210,
+          145,
+          303,
+          319
+        ],
+        "airGapPixels": 1,
+        "durationMs": 100,
+        "holdLast": false
+      },
+      {
+        "index": 13,
+        "rect": [
+          512,
+          768,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          363,
+          610,
+          494,
+          802
+        ],
+        "sourceGround": 803,
+        "sourceCenterX": 428.5,
+        "uniformScale": 0.8925,
+        "contentBounds": [
+          198,
+          148,
+          315,
+          319
+        ],
+        "airGapPixels": 1,
+        "durationMs": 110,
+        "holdLast": false
+      },
+      {
+        "index": 14,
+        "rect": [
+          1024,
+          768,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          657,
+          671,
+          809,
+          803
+        ],
+        "sourceGround": 803,
+        "sourceCenterX": 733.0,
+        "uniformScale": 0.8925,
+        "contentBounds": [
+          188,
+          202,
+          324,
+          320
+        ],
+        "airGapPixels": 0,
+        "durationMs": 110,
+        "holdLast": false
+      },
+      {
+        "index": 15,
+        "rect": [
+          1536,
+          768,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          990,
+          600,
+          1098,
+          803
+        ],
+        "sourceGround": 803,
+        "sourceCenterX": 1044.0,
+        "uniformScale": 0.8925,
+        "contentBounds": [
+          208,
+          139,
+          304,
+          320
+        ],
+        "airGapPixels": 0,
+        "durationMs": 100,
+        "holdLast": false
+      },
+      {
+        "index": 16,
+        "rect": [
+          2048,
+          768,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          1291,
+          612,
+          1388,
+          803
+        ],
+        "sourceGround": 803,
+        "sourceCenterX": 1339.5,
+        "uniformScale": 0.8925,
+        "contentBounds": [
+          213,
+          150,
+          300,
+          320
+        ],
+        "airGapPixels": 0,
+        "durationMs": 140,
+        "holdLast": false
+      },
+      {
+        "index": 17,
+        "rect": [
+          2560,
+          768,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          1571,
+          601,
+          1658,
+          803
+        ],
+        "sourceGround": 803,
+        "sourceCenterX": 1614.5,
+        "uniformScale": 0.8925,
+        "contentBounds": [
+          217,
+          140,
+          295,
+          320
+        ],
+        "airGapPixels": 0,
+        "durationMs": 240,
+        "holdLast": false
+      }
+    ],
+    "animations": {
+      "sprint": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "attack": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "recovery": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    "notes": "Same anatomical scale allframes; no per-pose height normalization. Ground baseline per source row retains airborne motion.",
+    "pixelsToLogicalBody": 0.004739336492890996,
+    "referenceBodyHeight": 211,
+    "scaleCalibration": "Head/chin, shoulder-waist and limb comparison against original art. Crouch/flight/fall height excluded; identical scale allframes."
+  },
+  "mercenary": {
+    "file": "mercenary-ending-v10.png",
+    "cellWidth": 512,
+    "cellHeight": 384,
+    "columns": 6,
+    "rows": 1,
+    "anchorX": 256,
+    "anchorY": 320,
+    "uniformScale": 0.72,
+    "sourceFacing": "right",
+    "flipForFacingLeft": true,
+    "frames": [
+      {
+        "index": 0,
+        "rect": [
+          0,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          138,
+          95,
+          398,
+          461
+        ],
+        "sourceGround": 461,
+        "sourceCenterX": 268.0,
+        "uniformScale": 0.72,
+        "contentBounds": [
+          162,
+          56,
+          349,
+          320
+        ],
+        "airGapPixels": 0,
+        "durationMs": 100,
+        "holdLast": false
+      },
+      {
+        "index": 1,
+        "rect": [
+          512,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          571,
+          140,
+          925,
+          461
+        ],
+        "sourceGround": 461,
+        "sourceCenterX": 748.0,
+        "uniformScale": 0.72,
+        "contentBounds": [
+          129,
+          89,
+          384,
+          320
+        ],
+        "airGapPixels": 0,
+        "durationMs": 110,
+        "holdLast": false
+      },
+      {
+        "index": 2,
+        "rect": [
+          1024,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          1072,
+          123,
+          1442,
+          408
+        ],
+        "sourceGround": 461,
+        "sourceCenterX": 1257.0,
+        "uniformScale": 0.72,
+        "contentBounds": [
+          123,
+          77,
+          389,
+          282
+        ],
+        "airGapPixels": 38,
+        "durationMs": 110,
+        "holdLast": false
+      },
+      {
+        "index": 3,
+        "rect": [
+          1536,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          55,
+          663,
+          434,
+          876
+        ],
+        "sourceGround": 884,
+        "sourceCenterX": 244.5,
+        "uniformScale": 0.72,
+        "contentBounds": [
+          120,
+          161,
+          393,
+          314
+        ],
+        "airGapPixels": 6,
+        "durationMs": 100,
+        "holdLast": false
+      },
+      {
+        "index": 4,
+        "rect": [
+          2048,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          531,
+          726,
+          956,
+          879
+        ],
+        "sourceGround": 884,
+        "sourceCenterX": 743.5,
+        "uniformScale": 0.72,
+        "contentBounds": [
+          103,
+          206,
+          409,
+          316
+        ],
+        "airGapPixels": 4,
+        "durationMs": 140,
+        "holdLast": false
+      },
+      {
+        "index": 5,
+        "rect": [
+          2560,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          1033,
+          759,
+          1478,
+          884
+        ],
+        "sourceGround": 884,
+        "sourceCenterX": 1255.5,
+        "uniformScale": 0.72,
+        "contentBounds": [
+          96,
+          230,
+          416,
+          320
+        ],
+        "airGapPixels": 0,
+        "durationMs": 240,
+        "holdLast": true
+      }
+    ],
+    "animations": {
+      "impact": [
+        0,
+        1
+      ],
+      "fall": [
+        2,
+        3,
+        4
+      ],
+      "settled": [
+        5
+      ]
+    },
+    "notes": "Same anatomical scale allframes; no per-pose height normalization. Ground baseline per source row retains airborne motion.",
+    "pixelsToLogicalBody": 0.003048780487804878,
+    "referenceBodyHeight": 328,
+    "scaleCalibration": "Head/chin, shoulder-waist and limb comparison against original art. Crouch/flight/fall height excluded; identical scale allframes."
+  },
+  "gato": {
+    "file": "gato-ending-v10.png",
+    "cellWidth": 512,
+    "cellHeight": 384,
+    "columns": 6,
+    "rows": 1,
+    "anchorX": 256,
+    "anchorY": 320,
+    "uniformScale": 0.68,
+    "sourceFacing": "right",
+    "flipForFacingLeft": true,
+    "frames": [
+      {
+        "index": 0,
+        "rect": [
+          0,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          235,
+          63,
+          437,
+          416
+        ],
+        "sourceGround": 417,
+        "sourceCenterX": 336.0,
+        "uniformScale": 0.68,
+        "contentBounds": [
+          187,
+          79,
+          324,
+          319
+        ],
+        "airGapPixels": 1,
+        "durationMs": 100,
+        "holdLast": false
+      },
+      {
+        "index": 1,
+        "rect": [
+          512,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          775,
+          74,
+          1090,
+          417
+        ],
+        "sourceGround": 417,
+        "sourceCenterX": 932.5,
+        "uniformScale": 0.68,
+        "contentBounds": [
+          149,
+          87,
+          363,
+          320
+        ],
+        "airGapPixels": 0,
+        "durationMs": 110,
+        "holdLast": false
+      },
+      {
+        "index": 2,
+        "rect": [
+          1024,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          1311,
+          140,
+          1666,
+          410
+        ],
+        "sourceGround": 417,
+        "sourceCenterX": 1488.5,
+        "uniformScale": 0.68,
+        "contentBounds": [
+          135,
+          132,
+          376,
+          316
+        ],
+        "airGapPixels": 5,
+        "durationMs": 110,
+        "holdLast": false
+      },
+      {
+        "index": 3,
+        "rect": [
+          1536,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          130,
+          542,
+          459,
+          784
+        ],
+        "sourceGround": 784,
+        "sourceCenterX": 294.5,
+        "uniformScale": 0.68,
+        "contentBounds": [
+          144,
+          155,
+          368,
+          320
+        ],
+        "airGapPixels": 0,
+        "durationMs": 100,
+        "holdLast": false
+      },
+      {
+        "index": 4,
+        "rect": [
+          2048,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          691,
+          592,
+          1072,
+          776
+        ],
+        "sourceGround": 784,
+        "sourceCenterX": 881.5,
+        "uniformScale": 0.68,
+        "contentBounds": [
+          126,
+          189,
+          385,
+          314
+        ],
+        "airGapPixels": 5,
+        "durationMs": 140,
+        "holdLast": false
+      },
+      {
+        "index": 5,
+        "rect": [
+          2560,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceBounds": [
+          1231,
+          640,
+          1677,
+          782
+        ],
+        "sourceGround": 784,
+        "sourceCenterX": 1454.0,
+        "uniformScale": 0.68,
+        "contentBounds": [
+          104,
+          222,
+          407,
+          319
+        ],
+        "airGapPixels": 1,
+        "durationMs": 240,
+        "holdLast": true
+      }
+    ],
+    "animations": {
+      "impact": [
+        0,
+        1
+      ],
+      "fall": [
+        2,
+        3,
+        4
+      ],
+      "settled": [
+        5
+      ]
+    },
+    "notes": "Same anatomical scale allframes; no per-pose height normalization. Ground baseline per source row retains airborne motion.",
+    "pixelsToLogicalBody": 0.004201680672268907,
+    "referenceBodyHeight": 238,
+    "scaleCalibration": "Head/chin, shoulder-waist and limb comparison against original art. Crouch/flight/fall height excluded; identical scale allframes."
+  }
+}

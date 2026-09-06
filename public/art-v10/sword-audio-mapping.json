@@ -1,0 +1,266 @@
+{
+  "release": {
+    "id": "sword-swish",
+    "file": "/audio-v9/sword-swish.mp3",
+    "trigger": "At approximately610ms of700ms windup to place measured~90ms sound onset at release; confirm in root playback.",
+    "record": {
+      "id": "sword-swish",
+      "file": "/audio-v9/sword-swish.mp3",
+      "wav": "sword-swish.wav",
+      "category": "effect",
+      "seconds": 0.44,
+      "peakDb": -10.163,
+      "rmsDb": -30.897,
+      "crestDb": 20.734,
+      "onsetSeconds": 0.08955,
+      "peakSeconds": 0.12991,
+      "targetPeakDb": -9.8,
+      "clippedSamples": 0,
+      "sha256": "150fcf2c66580cdf6dcc1e5a5b230fab236a63bb5669da0716f7e73da0b535db",
+      "sources": [
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\sword_attack1.mp3",
+          "sourcePage": "https://taira-komori.net/jidaigeki01en.html",
+          "startSeconds": 0.04964,
+          "sourceDurationSeconds": 0.3828,
+          "playbackRate": 0.87,
+          "highpassHz": 95,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.02,
+          "fadeOutSeconds": 0.1,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "taira",
+          "original": "audio-v3\\KungFu_swish1.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0,
+          "sourceDurationSeconds": 0.2214,
+          "playbackRate": 0.82,
+          "highpassHz": 80,
+          "lowpassHz": 2400,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.3,
+          "delaySeconds": 0.04
+        }
+      ],
+      "edits": "Weighty cleaver sweep built from two recorded air motions; three independent selections.",
+      "listened": false
+    }
+  },
+  "returnAir": {
+    "id": "sword-swish-2",
+    "file": "/audio-v9/sword-swish-2.mp3",
+    "trigger": "once during return approach, not every frame",
+    "record": {
+      "id": "sword-swish-2",
+      "file": "/audio-v9/sword-swish-2.mp3",
+      "wav": "sword-swish-2.wav",
+      "category": "effect",
+      "seconds": 0.44,
+      "peakDb": -10.206,
+      "rmsDb": -28.294,
+      "crestDb": 18.088,
+      "onsetSeconds": 0.04134,
+      "peakSeconds": 0.08907,
+      "targetPeakDb": -9.8,
+      "clippedSamples": 0,
+      "sha256": "d2d4b7827a6610c599c03f605c8aed42904b3026ad50a30d011200cc9f85e9f8",
+      "sources": [
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\sword_attack2.mp3",
+          "sourcePage": "https://taira-komori.net/jidaigeki01en.html",
+          "startSeconds": 0,
+          "sourceDurationSeconds": 0.4092,
+          "playbackRate": 0.93,
+          "highpassHz": 95,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.02,
+          "fadeOutSeconds": 0.1,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "taira",
+          "original": "audio-v3\\KungFu_swish2.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0.11449,
+          "sourceDurationSeconds": 0.2214,
+          "playbackRate": 0.82,
+          "highpassHz": 80,
+          "lowpassHz": 2400,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.3,
+          "delaySeconds": 0.04
+        }
+      ],
+      "edits": "Weighty cleaver sweep built from two recorded air motions; three independent selections.",
+      "listened": false
+    }
+  },
+  "catch": {
+    "id": "guard",
+    "file": "/audio-v9/guard.mp3",
+    "trigger": "Actual projectile arrival, immediately on contact frame14.",
+    "record": {
+      "id": "guard",
+      "file": "/audio-v9/guard.mp3",
+      "wav": "guard.wav",
+      "category": "effect",
+      "seconds": 0.16,
+      "peakDb": -8.346,
+      "rmsDb": -26.984,
+      "crestDb": 18.638,
+      "onsetSeconds": 0.00016,
+      "peakSeconds": 0.00841,
+      "targetPeakDb": -8,
+      "clippedSamples": 0,
+      "sha256": "84d5bb4be06c76fa34ea67c54990e4d64369e724d532591e8d82b17a66559098",
+      "sources": [
+        "impacts",
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\defense1.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0.0379,
+          "sourceDurationSeconds": 0.12229,
+          "playbackRate": 1,
+          "highpassHz": 65,
+          "lowpassHz": 12000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\impactWood_medium_002.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0,
+          "sourceDurationSeconds": 0.16,
+          "playbackRate": 1,
+          "highpassHz": 200,
+          "lowpassHz": 4500,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.32,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Short guarded thud differentiated from ringing parry.",
+      "listened": false
+    }
+  },
+  "optionalMetalCatchDetail": {
+    "id": "sword-hit",
+    "file": "/audio-v9/sword-hit.mp3",
+    "gainSuggestion": 0.28,
+    "trigger": "Same actual-arrival catch contact; optional restrained layer under guard.",
+    "record": {
+      "id": "sword-hit",
+      "file": "/audio-v9/sword-hit.mp3",
+      "wav": "sword-hit.wav",
+      "category": "effect",
+      "seconds": 0.28,
+      "peakDb": -5.697,
+      "rmsDb": -18.658,
+      "crestDb": 12.962,
+      "onsetSeconds": 0.00027,
+      "peakSeconds": 0.00753,
+      "targetPeakDb": -5.2,
+      "clippedSamples": 0,
+      "sha256": "84ec74c3100e423a91fa672ed4babd63fd7d37d8e25ebd40ef73900af3b54246",
+      "sources": [
+        "impacts",
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\heavy_punch2.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0.01295,
+          "sourceDurationSeconds": 0.28,
+          "playbackRate": 1,
+          "highpassHz": 65,
+          "lowpassHz": 12000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.8,
+          "delaySeconds": 0
+        },
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\impactMetal_medium_000.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0,
+          "sourceDurationSeconds": 0.26887,
+          "playbackRate": 1,
+          "highpassHz": 350,
+          "lowpassHz": 6500,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.38,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Cleaver contact: body thud plus restrained metallic edge.",
+      "listened": false
+    }
+  },
+  "sources": {
+    "taira": {
+      "title": "TK\u00e2\u20ac\u2122S Free Sound FX \u00e2\u20ac\u201d Fighting, Samurai / Ninja, Magic and Nature",
+      "author": "Taira Komori",
+      "url": "https://taira-komori.net/freesounden.html",
+      "license": "Royalty-free project use",
+      "licenseUrl": "https://taira-komori.net/freesounden.html",
+      "attribution": "Sound effects by Taira Komori. Used and edited within this game; individual sounds are not offered as a sound library."
+    },
+    "impacts": {
+      "title": "Impact Sounds",
+      "author": "Kenney",
+      "url": "https://kenney.nl/assets/impact-sounds",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "grunts": {
+      "title": "Male Grunt/Yelling sounds",
+      "author": "HaelDB",
+      "url": "https://opengameart.org/content/male-gruntyelling-sounds",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "female": {
+      "title": "Female Gruntwork - 1",
+      "author": "PlumpDev",
+      "url": "https://opengameart.org/content/female-gruntwork-1",
+      "license": "CC-BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "note": "Page metadata says CC-BY-SA 4.0; attribution text says CC-BY 4.0. These edited clips are offered under the stricter CC-BY-SA 4.0."
+    }
+  },
+  "status": "Existing licensed selections only; waveform timing checked in v9, no subjective listening available. No new audio generated or YouTube audio extracted."
+}

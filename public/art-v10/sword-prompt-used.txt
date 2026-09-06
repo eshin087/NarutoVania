@@ -1,0 +1,20 @@
+Use case: stylized-concept
+Asset: production side-view 2D cel-shaded anime animation atlas, exactly18 full-body sprites in6 columns by3 rows, one coherent sequence per row.
+Inspected approved character design: original-series adult muscular man, short dark spiky hair, metal forehead protector, white mouth bandages, bare muscular torso with dark diagonal straps, dark blue-gray loose trousers with long tied sash, bandaged shins and forearms, open-toe dark sandals. Avoid bulky armor or new costume. Weapon design: exactly match the giant broad executioner cleaver, long wrapped handle, large circular hole near rounded end and semicircular cutout near base.
+Create NEW artwork matching this approved design specification. Each sprite faces RIGHT. Full sword and both feet wholly inside the same cell, generous empty margins, consistent anatomical body size. Use detailed clean cel shading and sharp readable silhouettes. Canvas ideally3072x1152, six equal512x384 cells in each of3 rows. Body approx211px head-to-feet excluding sword; common grounded foot-center anchor[256,320].
+ROW1 TOP — THROW RELEASE, six consecutive poses:
+1) grounded ready holding huge cleaver low;
+2) pronounced backswing winding giant cleaver behind body;
+3) shoulder rotation forward, extended throwing hand still gripping long handle at final pre-release instant;
+4) weapon has LEFT his hand: right arm fully extended, fingers OPEN and EMPTY, no sword anywhere in this frame;
+5) empty-handed forward followthrough, NO sword;
+6) empty-handed return to balanced stance, NO sword.
+ROW2 MIDDLE — WEAPONLESS WAITING LOOP, six subtly varied consecutive breathing/guard poses, absolutely NO sword, blade, weapon, scabbard or handle anywhere in ANY of these six cells. Grounded feet, bare empty hands held ready, slight torso breathing, waiting for returning weapon from RIGHT. Consistent size.
+ROW3 BOTTOM — CATCH RETURNING CLEAVER, six consecutive poses:
+1) empty-handed reaching to RIGHT, no sword;
+2) empty-handed preparing grip with clear open right palm, no sword;
+3) unmistakable CATCH CONTACT: right fingers firmly closed around the cleaver handle, giant entire blade extends out toward RIGHT, grip meets handle exactly;
+4) both hands stabilize received huge sword, bent elbows absorb weight;
+5) lower sword to comfortable diagonal ready hold;
+6) grounded recovered idle with weapon held, matching reference body.
+No flying sword should be drawn separately: the gameplay projectile is a separate asset. Sword appears only while gripped as explicitly specified. No text, grid lines, numbers, labels, ground, shadows, background scenery, glow or special effects. Actual transparent alpha background. Every character head, hair, hands, fingers, feet and whole held sword must be visible and unclipped. No weapons in top-row cells4–6, entire middle row, and bottom-row cells1–2.

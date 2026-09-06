@@ -1,3 +1,5 @@
+import {reactionPose,swordPose,swordHand,endingPose} from './art-v10';
+import {ReturningSword} from './returning-sword';
 import {bossParryEligible} from './boss-ai';
 import {redOutline,outlineHits} from './attack-geometry';
 import type {StorySceneId} from './scene-catalog';
@@ -19,7 +21,7 @@ import {UltimateBurst} from './ultimate-burst';
 
 type BodyObject = Phaser.GameObjects.Rectangle & {body: Phaser.Physics.Arcade.Body};
 interface Fighter {key: string; model: Combatant; body: BodyObject; sprite: Phaser.GameObjects.Sprite; shadow: Phaser.GameObjects.Ellipse; animation: AnimationName; animationAt: number; lastStep: number; ally: boolean; hostile: boolean; expires: number; nextAttack: number; support?: SupportBrain; guardUntil?: number; supportCasts?: number; rush?: {x: number; until: number; serial: number};}
-interface Projectile {image: Phaser.GameObjects.Image; x: number; y: number; vx: number; vy: number; damage: number; posture: number; red: boolean; friendly: boolean; owner: Fighter; expires: number; rx: number; ry: number; kind: string; hit: Set<string>; returnAt?: number; waterRow?:number; born:number; trail:{x:number;y:number}[];}
+interface Projectile {image: Phaser.GameObjects.Image; x: number; y: number; vx: number; vy: number; damage: number; posture: number; red: boolean; friendly: boolean; owner: Fighter; expires: number; rx: number; ry: number; kind: string; hit: Set<string>; sword?:ReturningSword; returnAt?: number; waterRow?:number; born:number; trail:{x:number;y:number}[];}
 interface VisualEffect {image: Phaser.GameObjects.Image; born: number; duration: number; width: number; grow: number; spin: number; waterRow?:number; tidal?: {owner:Fighter;event:AttackEvent;key:string;x:number;hit:boolean};}
 interface MirrorVisual {image: Phaser.GameObjects.Image; reflection: Phaser.GameObjects.Sprite; halo: Phaser.GameObjects.Ellipse;}
 interface Decoy {image: Phaser.GameObjects.Image; x: number; y: number; expires: number;}
@@ -39,11 +41,15 @@ export class BossGameScene extends Phaser.Scene {
   cinemaActors = new Map<ActorId, CinemaVisual>(); cinemaClock = 0; presentationClock=0; entryScene:StorySceneId|undefined; cinemaPrison: Phaser.GameObjects.Graphics | null = null; prisonActor: CinemaVisual | null = null; glamour: {sprite:Phaser.GameObjects.Sprite;born:number} | null = null; parryFlashUntil=0; parryChain=0; lastParry=-9999;parrySignals:{x:number;y:number;born:number;text:Phaser.GameObjects.Text}[]=[];sharinganEchoes:Phaser.GameObjects.Sprite[]=[];lastEcho=0;
   followups: {at: number; fighter: Fighter; event: AttackEvent; key: string; serial: number}[] = [];
   sceneryActors: Phaser.GameObjects.GameObject[] = []; snow: {x: number; y: number; speed: number}[] = []; snowActive = false;
-  cinemaPresentation: CinemaPresentation | null = null;
-  readingSlow = 0; counterUntil = 0;
+  cinemaPresentation: CinemaPresentation | null = null; panelExiting=false;
+  readingSlow = 0; counterUntil = 0; swordCatchUntil=0;
   ultimateBurst: UltimateBurst | null = null;
+  transitionOverlay?:Phaser.GameObjects.Rectangle;transitionAge=0;transitionNext:(()=>void)|null=null;transitionActive=false;
+  private transition(next:()=>void){if(this.transitionActive)return;this.transitionNext=next;this.transitionAge=0;this.transitionActive=true;this.inputs.clear();this.physics.world.pause();this.tweens.pauseAll();this.transitionOverlay=this.add.rectangle(640,360,1280,720,0x040f16).setScrollFactor(0).setDepth(1000).setAlpha(0);}
+  private updateTransition(dt:number){this.transitionAge+=dt;if(this.transitionAge>=250&&this.transitionNext){const next=this.transitionNext;this.transitionNext=null;next();this.physics.world.pause();this.tweens.pauseAll();}this.transitionOverlay?.setAlpha(this.transitionAge<250?this.transitionAge/250:Math.max(0,1-(this.transitionAge-250)/350));if(this.transitionAge>=600){this.transitionActive=false;this.transitionOverlay?.destroy();this.transitionOverlay=undefined;this.inputs.clear();this.inputs.quarantineConfirm();this.tweens.resumeAll();}}
   constructor() {super('BossGameplay');}
   init(data: {checkpoint?: StoryPhaseId; elapsed?: number; retries?: number; parries?: number; inputs: BattleInput; soundscape: RecordedAudio; viewIntro?: boolean;sceneId?:StorySceneId}) {
+    this.transitionActive=false;this.transitionNext=null;this.transitionOverlay=undefined;this.panelExiting=false;
     this.entryScene=data.sceneId;this.phase = data.checkpoint || 'mist'; this.inputs = data.inputs; this.sounds = data.soundscape; this.elapsed = data.elapsed || 0;
     this.retries = data.retries || 0; this.parries = data.parries || 0; this.registry.set('view-boss-intro', data.viewIntro === true);
     this.fighters = []; this.projectiles = []; this.effects = []; this.decoys = []; this.mirrorVisuals = []; this.backgrounds = []; this.mist = [];
@@ -51,16 +57,16 @@ export class BossGameScene extends Phaser.Scene {
     this.phaseEnding = false; this.gameOver = false; this.snowActive = false; this.snow = []; this.formation = new MirrorFormation();
   }
   create() {
-    this.director = new StoryDirector(this.phase, {enter: state => this.enterPhase(state), cinematic: clip => this.startCinema(clip), cue: cue => this.cinemaCue(cue), complete: () => this.finishChapter()});
+    this.director = new StoryDirector(this.phase, {enter: state => this.enterPhase(state), cinematic: clip => this.startCinema(clip), cue: cue => this.cinemaCue(cue), complete: () => this.finishChapter(),transition:next=>this.transition(next)});
     if(this.entryScene)this.director.startScene(this.entryScene);else this.director.start(this.registry.get('view-boss-intro')); this.inputs.clear(); void this.sounds.unlock();
     // Phaser tears down physics before user shutdown listeners. Let its scene systems own disposal.
     this.events.once('shutdown', () => {this.inputs.clear(); this.sounds.stopEffects();});
   }
   private clearStage() {
-    this.ultimateBurst?.destroy(); this.ultimateBurst = null;
+    this.ultimateBurst?.destroy(); this.ultimateBurst = null; this.swordCatchUntil=0;
     this.physics.world.timeScale = 1; this.readingSlow = 0; this.counterUntil = 0; this.cinemaPresentation = null;
     this.physics.world.resume(); this.tweens.killAll(); this.physics.world.colliders.destroy(); if (this.floors?.scene) this.floors.destroy(true);
-    this.children.removeAll(true); this.fighters = []; this.projectiles = []; this.effects = []; this.decoys = []; this.mirrorVisuals = [];
+    if(this.transitionOverlay)this.children.remove(this.transitionOverlay);this.children.removeAll(true);if(this.transitionOverlay)this.children.add(this.transitionOverlay); this.fighters = []; this.projectiles = []; this.effects = []; this.decoys = []; this.mirrorVisuals = [];
     this.backgrounds = []; this.mist = []; this.sceneryActors = []; this.followups = []; this.cinemaActors.clear(); this.cinemaPrison = null; this.prisonActor=null; this.glamour=null; this.parryFlashUntil=0; this.parryChain=0;this.parrySignals=[];this.sharinganEchoes=[];
     this.formation = new MirrorFormation(); this.snowActive = false;
   }
@@ -108,7 +114,7 @@ export class BossGameScene extends Phaser.Scene {
     const prop = (name: string, x: number, width = 105) => {const p = namedArt(this, 'props', name, x, this.floor, width).setOrigin(.5, 1).setDepth(2); p.setScale(158 / p.height); this.sceneryActors.push(p); return p;};
     if (this.phase === 'rescue') {
       const captive=this.add.sprite(1160,this.floor-48,'kakashi-techniques','8').setDepth(4);
-      poseBattle(captive,'kakashi','guardbreak',0,-1); this.sceneryActors.push(captive);
+      reactionPose(captive,'kakashi','restrained',0,-1); this.sceneryActors.push(captive);
       this.drawPrison(this.add.graphics().setDepth(5),captive.x,captive.y-78,0);
       const original = this.add.sprite(1050, this.floor, 'zabuza-techniques', '12').setDepth(2); poseBattle(original, 'zabuza', 'cast', 250, 1); this.sceneryActors.push(original);
       this.boss.sprite.setTint(0x85c6da).setAlpha(.83); const support=this.fighter('sasuke-ally', 'sasuke', 300, this.floor, false, 100, true); support.support=new SupportBrain();
@@ -141,6 +147,11 @@ export class BossGameScene extends Phaser.Scene {
     if(model.id==='zabuza'&&animation!=='aerial'&&model.action?.definition.action==='boss'&&this.now>=model.hurtUntil&&this.now>=model.guardBrokenUntil){
       const sword=swordPresentation(model.action.definition,this.now-model.action.started);if(sword)poseZabuzaSword(f.sprite,sword.frame,model.facing);
     }
+    if(model.id==='zabuza'){const flying=this.projectiles.find(p=>p.owner===f&&p.sword);const age=model.action?.definition.id==='sword-throw'?this.now-model.action.started:-1;
+      if(flying)swordPose(f.sprite,flying.sword?.phase==='returning'?13:6+Math.floor((this.now-flying.born)/150)%6,model.facing);
+      else if(this.now<this.swordCatchUntil&&f===this.boss)swordPose(f.sprite,Math.min(17,14+Math.floor((500-this.swordCatchUntil+this.now)/125)),model.facing);
+      else if(age>=0&&age<700)swordPose(f.sprite,age<220?0:age<520?1:2,model.facing);
+    }
     f.shadow.setPosition(model.x, this.floor + 2).setScale(clamp(1 - (this.floor - model.y) / 550, .25, 1));
     const hidden = f === this.boss && this.formation.active && this.formation.occupied >= 0 && this.now >= this.mirrorInterruptUntil;
     f.sprite.setVisible(!hidden); f.shadow.setVisible(!hidden);
@@ -159,6 +170,7 @@ export class BossGameScene extends Phaser.Scene {
   update(_time: number, delta: number) {
     let dt = Math.min(delta, 50); const screen = bridge.get().screen;
     this.inputs.poll();
+    if(this.transitionActive&&screen!=='paused'){this.updateTransition(dt);this.inputs.endFrame();return;}
     if (screen === 'paused' || screen === 'dead' || screen === 'victory') {this.inputs.endFrame(); return;}
     if (this.director.mode === 'cinematic') {this.updateCinema(dt); this.inputs.endFrame(); return;}
     if (screen !== 'playing' || this.gameOver || !this.player || !this.boss) {this.inputs.endFrame(); return;}
@@ -275,6 +287,7 @@ export class BossGameScene extends Phaser.Scene {
     const f = this.boss, p = f.model, body = f.body.body;
     if (p.health <= 0 || this.now < p.guardBrokenUntil || this.now < p.hurtUntil || this.now < this.bossRestrainedUntil) {body.setVelocityX(0); return;}
     if(p.action?.definition.id==='parry-stance'){body.setVelocityX(0);return;}
+    if(this.projectiles.some(q=>q.sword&&q.owner===f)||this.now<this.swordCatchUntil){body.setVelocityX(0);p.guard=false;return;}
     const targets = [this.player, ...this.fighters.filter(a => a.ally && a.model.health > 0)];
     const nearest = targets.sort((a, b) => Math.abs(a.model.x - p.x) - Math.abs(b.model.x - p.x))[0];
     const decoy = this.decoys.find(d => Math.abs(d.x - p.x) < Math.abs(nearest.model.x - p.x) + 40);
@@ -375,7 +388,7 @@ export class BossGameScene extends Phaser.Scene {
   private teleport(f: Fighter, x: number, footY: number) {f.body.body.reset(x, footY - 52); f.model.x = x; f.model.y = footY;}
   private actionEvent(f: Fighter, event: AttackEvent, key: string, charge: number) {
     if (f.model.health <= 0 || this.phaseEnding) return;
-    if (event.effect && event.kind !== 'technique' && event.kind !== 'hit') this.sounds.effect(event.effect==='swing'&&f.model.id==='zabuza'?'swing2':event.effect, f.ally ? .22 : .65);
+    if (f.model.action?.definition.id!=='sword-throw' && event.effect && event.kind !== 'technique' && event.kind !== 'hit') this.sounds.effect(event.effect==='swing'&&f.model.id==='zabuza'?'swing2':event.effect, f.ally ? .22 : .65);
     if (event.kind === 'effect') {
       if (event.effect === 'dash') this.burst('smoke', f.model.x - f.model.facing * 30, f.model.y - 25, 90, 260);
       return;
@@ -448,7 +461,8 @@ export class BossGameScene extends Phaser.Scene {
   private launch(f: Fighter, event: AttackEvent, offset: number, key: string) {
     if (this.projectiles.length >= 48) return;
     const friendly = !f.hostile, mirror = !friendly && this.formation.active && this.now >= this.mirrorInterruptUntil ? this.formation.mirrors[this.formation.occupied] : null;
-    const x = mirror?.x ?? f.model.x + f.model.facing * (event.effect==='water'?68:36), y = mirror ? mirror.y - 35 : f.model.y - 73;
+    let x = mirror?.x ?? f.model.x + f.model.facing * (event.effect==='water'?68:36), y = mirror ? mirror.y - 35 : f.model.y - 73;
+    if(f.model.action?.definition.id==='sword-throw'){const hand=swordHand(f.model.x,f.model.y,3,f.model.facing);x=hand.x;y=hand.y;}
     const waterNeedle = event.effect === 'water' && f.model.id === 'haku';
     const name = event.effect === 'water' && !waterNeedle ? (event.red ? 'water-dragon' : 'waterfall') : event.effect === 'fire' ? 'fireball' : 'senbon';
     let image: Phaser.GameObjects.Image, rx = 15, ry = 6;const waterRow=event.effect==='water'&&!waterNeedle?(event.red?1:0):undefined;
@@ -468,11 +482,18 @@ export class BossGameScene extends Phaser.Scene {
     if (event.red && waterRow===undefined) image.setTint(0xff797b);
     this.projectiles.push({image, x, y, vx: velocity.vx, vy: velocity.vy, damage: event.damage || 8, posture: event.posture || 8,
       red: !!event.red, friendly, owner: f, expires: this.now + 3900, rx, ry, kind: !friendly&&f.model.id==='haku'?'needle':f.model.action?.definition.id === 'sword-throw' ? 'sword' : event.effect==='swing'?'tool':event.effect || 'tool', hit: new Set([key]),waterRow,born:this.now,trail:[]});
+    if(f.model.action?.definition.id==='sword-throw'){const p=this.projectiles.at(-1)!;const d=Math.hypot(velocity.vx,velocity.vy);const dx=velocity.vx/d,dy=velocity.vy/d;const edge=dx>0?this.arenaMax-40:this.arenaMin+40;const distance=Math.max(30,Math.min(Math.hypot(target.x-x,target.y-y)+150,Math.abs((edge-x)/dx)));p.sword=new ReturningSword(x,y,dx,dy,distance);p.expires=this.now+6000;this.sounds.swordRelease();}
   }
   private updateProjectiles(dt: number) {
     for (const p of this.projectiles) {
       if (p.expires <= this.now) continue;
-      const nx = p.x + p.vx * dt / 1000, ny = p.y + p.vy * dt / 1000, sweep = projectileSweep(p.x, p.y, nx, ny, p.rx, p.ry);
+      let nx=p.x+p.vx*dt/1000,ny=p.y+p.vy*dt/1000,damaging=true;
+      if(p.sword){
+        if(p.owner.model.health<=0){p.expires=0;continue;}
+        const step=p.sword.step(dt,swordHand(p.owner.model.x,p.owner.model.y,14,p.owner.model.facing));nx=step.to.x;ny=step.to.y;damaging=step.damaging;p.vx=(nx-p.x)*1000/Math.max(1,dt);p.vy=(ny-p.y)*1000/Math.max(1,dt);p.hit=p.sword.hit;
+        if(p.sword.phase==='caught'){p.expires=0;this.swordCatchUntil=this.now+500;this.brain.readyAt=Math.max(this.brain.readyAt,this.swordCatchUntil);this.sounds.swordCatch();continue;}
+      }
+      const sweep=projectileSweep(p.x,p.y,nx,ny,p.rx,p.ry);
       p.x = nx; p.y = ny; p.image.setPosition(nx, ny);
       if(p.waterRow!==undefined){
         p.image.setFrame(String(p.waterRow*4+Math.floor((this.now-p.born)/85)%4));
@@ -481,7 +502,8 @@ export class BossGameScene extends Phaser.Scene {
       }
       if(p.kind==='needle'){p.image.setRotation(Math.atan2(p.vy,p.vx));p.trail.push({x:nx,y:ny});if(p.trail.length>5)p.trail.shift();}
       if (p.kind === 'tool') p.image.rotation += dt * .023;
-      if (p.kind === 'sword') p.image.rotation += dt * .009;
+      if (p.kind === 'sword') p.image.rotation += dt * .018;
+      if(!damaging)continue;
       if (p.returnAt && this.now >= p.returnAt) {p.returnAt = undefined; p.vx *= -1; p.hit.clear();}
       if (p.friendly) {
         if (this.formation.active) {
@@ -498,13 +520,13 @@ export class BossGameScene extends Phaser.Scene {
         for (const target of this.fighters.filter(f => !f.hostile)) {
           if (overlaps(sweep, this.box(target)) && !p.hit.has(target.key)) {
             p.hit.add(target.key); const reflected = this.projectileHit(p, target);
-            if (reflected) break; p.expires = 0; break;
+            if (reflected) break; if(!p.sword)p.expires = 0; break;
           }
         }
-        if (!p.friendly) for (const decoy of this.decoys) if (overlaps(sweep, {x: decoy.x - 25, y: decoy.y - 64, width: 50, height: 60})) {decoy.expires = 0; p.expires = 0;}
+        if (!p.friendly) for (const decoy of this.decoys) if (overlaps(sweep, {x: decoy.x - 25, y: decoy.y - 64, width: 50, height: 60})) {decoy.expires = 0; if(!p.sword)p.expires = 0;}
         if (!p.friendly && p.expires && this.phase === 'protect' && overlaps(sweep, {x: 168, y: this.floor - 115, width: 44, height: 110})) {this.hurtTazuna(p.damage); p.expires = 0;}
       }
-      if (nx < -80 || nx > this.arenaMax + 120 || ny > this.floor + 30 || ny < -120) p.expires = 0;
+      if (!p.sword&&(nx < -80 || nx > this.arenaMax + 120 || ny > this.floor + 30 || ny < -120)) p.expires = 0;
     }
     this.projectiles = this.projectiles.filter(p => {if (p.expires <= this.now) {p.image.destroy(); return false;} return true;});
     this.decoys = this.decoys.filter(d => {if (d.expires <= this.now) {this.burst('smoke', d.x, d.y - 30, 90); d.image.destroy(); return false;} return true;});
@@ -515,7 +537,7 @@ export class BossGameScene extends Phaser.Scene {
     if (outcome.result === 'immune') return false;
     if (outcome.result === 'parry') {
       const source = p.owner;
-      p.friendly = true; p.owner = target; p.vx = -p.vx; p.vy = -p.vy; p.hit.clear(); p.expires = this.now + 2300;
+      if(p.sword)p.sword.parry();else{p.friendly = true; p.owner = target; p.vx = -p.vx; p.vy = -p.vy; p.hit.clear(); p.expires = this.now + 2300;}
       p.image.rotation += Math.PI;
       source.model.deflected(outcome.attackerPosture * (this.readingUntil > this.now ? 2 : 1), this.now); this.perfectParry(target);
       if (target === this.player) {this.parries++; if(this.readingUntil>this.now)this.counterUntil=this.now+1800;} this.stopForImpact(40); if (this.boss.model.stamina <= 0) this.guardBreakEffect(this.boss); return true;
@@ -754,7 +776,7 @@ export class BossGameScene extends Phaser.Scene {
         const x = mirror?.x ?? this.boss.model.x, y = mirror ? mirror.y - 120 : this.boss.model.y - CHARACTER[this.boss.model.id].height - 22;
         if (visible) {
           const color = next.red ? 0xff4e59 : 0xf3dda8; graphics.lineStyle(next.red ? 4 : 2, color, .8);
-          const radius = 12 + clamp(timeLeft / 75, 0, 12); graphics.strokeCircle(x, y, radius);
+          const radius = 12 + clamp(timeLeft / 75, 0, 12); if(next.red)graphics.strokeCircle(x, y, radius);
           if (next.red) {graphics.beginPath(); graphics.moveTo(x, y - 9); graphics.lineTo(x, y + 2); graphics.strokePath(); graphics.fillStyle(color, 1); graphics.fillCircle(x, y + 8, 2.5);}
           if(next.red&&next.kind!=='projectile'){
             const water=action.definition.id==='great-waterfall';const points=redOutline(action.definition.id,water?clamp(this.targetX,this.arenaMin+60,this.arenaMax-60):this.boss.model.x,this.floor,this.boss.model.facing,next);
@@ -814,12 +836,13 @@ export class BossGameScene extends Phaser.Scene {
   }
   private startCinema(clip: CinemaClip) {
     this.clearStage(); this.arena(clip.arena); this.physics.world.pause(); this.sounds.stopEffects(); this.sounds.sync(true); this.cinemaClock = 0;this.presentationClock=0;
-    this.cinemaPresentation = new CinemaPresentation(this);
+    this.panelExiting=false;this.cinemaPresentation = new CinemaPresentation(this);
     for (const a of clip.actors) {
       const character: CharacterId | undefined = ['kakashi', 'naruto', 'sasuke', 'sakura', 'zabuza', 'haku'].includes(a.id) ? a.id as CharacterId : a.id === 'prisoner' ? 'kakashi' : a.id === 'clone' ? 'naruto' : undefined;
       let sprite: Phaser.GameObjects.Sprite | Phaser.GameObjects.Image;
       if (character) {sprite = this.add.sprite(a.x, a.y, `${character}-locomotion`, '6').setDepth(a.animation === 'defeat' ? 1 : 4); poseBattle(sprite as Phaser.GameObjects.Sprite, character, a.animation, a.animation === 'defeat' ? 1400 : 0, a.facing);}
       else {const prop = a.id.startsWith('hound') ? a.id === 'hound1' ? 'hound' : `hound-${a.id.slice(-1)}` : a.id.startsWith('henchman') ? a.id === 'henchman1' ? 'henchman' : `henchman-${a.id.slice(-1)}` : a.id; sprite = namedArt(this, 'props', prop, a.x, a.y, 100).setOrigin(.5, 1).setDepth(3).setFlipX(a.facing < 0); sprite.setScale((a.id.startsWith('hound') ? 45 : a.id === 'gato' ? 124 : 158) / sprite.height);}
+      if(a.id==='gato'||a.id==='henchman1'||a.id==='henchman2')endingPose(sprite,a.id==='gato'?'gato':'mercenary','defeat',a.animation==='defeat'?1000:0,a.facing);
       sprite.setAlpha(a.alpha ?? 1);
       this.cinemaActors.set(a.id, {sprite, id: a.id, character, animation: a.animation, animationAt: 0, facing: a.facing});
     }
@@ -868,9 +891,10 @@ export class BossGameScene extends Phaser.Scene {
   }
   private updateCinema(dt: number) {
     this.now+=dt;this.presentationClock+=dt;
+    if(this.panelExiting&&this.cinemaPresentation?.exitFinished(this.presentationClock)){this.panelExiting=false;this.director.advance();this.inputs.clear();this.inputs.quarantineConfirm();}
     this.director.update(dt);if(this.director.mode!=='cinematic')return;this.cinemaClock=this.director.clock;
     if(this.director.waiting)this.tweens.pauseAll();else this.tweens.resumeAll();
-    bridge.patch({panelWaiting:this.director.waiting,canAdvance:this.director.canAdvance});
+    bridge.patch({panelWaiting:this.director.waiting,canAdvance:this.director.canAdvance&&!this.panelExiting});
     const storyClock=this.cinemaClock+(this.director.clip?.offset||0);
 
     for (const actor of this.cinemaActors.values()) {
@@ -878,9 +902,11 @@ export class BossGameScene extends Phaser.Scene {
       if (actor.character) {const clip = this.director.clip?.id;
         const variant = actor.character === 'zabuza' && ['a-demon-in-the-snow','gatos-betrayal','snowy-rest'].includes(clip||'') && storyClock >= 18700 ? 'final-stand' : actor.character === 'haku' && (['a-demon-in-the-snow','haku-interception','gatos-betrayal','snowy-rest'].includes(clip||'') || clip === 'narutos-hesitation' && this.cinemaClock >= 2200) ? 'unmasked' : actor.character === 'naruto' && (clip === 'narutos-hesitation' || clip === 'sasuke-protects-naruto' && this.cinemaClock >= 12800) ? 'awakened' : undefined;
         poseBattle(actor.sprite as Phaser.GameObjects.Sprite, actor.character, actor.animation, ['idle','block','guardbreak'].includes(actor.animation)?0:this.cinemaClock - actor.animationAt, actor.facing, undefined, variant);
+        if(actor.animation==='guardbreak'&&variant!=='final-stand'&&!(actor.character==='naruto'&&clip==='narutos-hesitation')){const kind=actor.character==='kakashi'?(['water-prison','transformed-shuriken'].includes(clip||'')?'restrained':'exhausted'):actor.character==='naruto'?'kneeling-grief':actor.character==='sakura'?'kneeling':actor.character==='haku'?(variant==='unmasked'?'unmasked-weary':'weary'):actor.character==='zabuza'?'injured':'guard-break';reactionPose(actor.sprite,actor.character,kind,this.cinemaClock-actor.animationAt,actor.facing);}
+        if(actor.character==='naruto'&&clip==='narutos-hesitation'&&actor.animation==='guardbreak')poseBattle(actor.sprite as Phaser.GameObjects.Sprite,'naruto','idle',0,actor.facing);
         if(actor.animation==='idle')actor.sprite.setScale(actor.sprite.scaleX,actor.sprite.scaleY*(1+Math.sin(this.cinemaClock/550)*.006));
         if (actor.animation === 'defeat') actor.sprite.setDepth(1);}
-      else {actor.sprite.setFlipX(actor.facing<0);if (actor.animation === 'defeat') actor.sprite.setRotation(actor.facing > 0 ? Math.PI / 2 : -Math.PI / 2).setOrigin(.5, .65);}
+      else {actor.sprite.setFlipX(actor.facing<0);if(actor.animation==='defeat'&&(actor.id==='gato'||actor.id.startsWith('henchman')))endingPose(actor.sprite,actor.id==='gato'?'gato':'mercenary','defeat',this.cinemaClock-actor.animationAt,actor.facing);}
     }
     if (this.director.clip?.id === 'hunter-nin-deception' && this.cinemaClock > 15100 && this.cinemaClock < 16600) {
       // Zabuza is carried in the hunter-nin's arms during the retreat.
@@ -908,7 +934,8 @@ export class BossGameScene extends Phaser.Scene {
   }
   command(command: Command) {
     if(typeof command!=='string')return;
-    if(command==='advance'&&bridge.get().screen==='intro'){if(this.director.advance()){this.cinemaPresentation?.dismissPanel();this.tweens.resumeAll();this.inputs.clear();this.inputs.quarantineConfirm();}return;}
+    if(this.transitionActive&&command!=='pause'&&command!=='resume')return;
+    if(command==='advance'&&bridge.get().screen==='intro'){if(this.director.canAdvance&&!this.panelExiting){this.panelExiting=true;this.cinemaPresentation?.dismissPanel(this.presentationClock);this.inputs.clear();this.inputs.quarantineConfirm();}return;}
     if (command === 'pause' && ['playing', 'intro'].includes(bridge.get().screen)) {
       this.emit();
       this.pausedFrom = bridge.get().screen as 'playing' | 'intro'; this.physics.world.pause(); this.tweens.pauseAll(); this.inputs.clear(); this.sounds.sync(false); bridge.patch({screen: 'paused'});
@@ -918,7 +945,7 @@ export class BossGameScene extends Phaser.Scene {
   }
   status() {
     if (!this.director) return {mode: 'inactive'};
-    return {cinema: this.director.clip ? {id:this.director.clip.id,clock:this.cinemaClock,waiting:this.director.waiting,canAdvance:this.director.canAdvance,actors:[...this.cinemaActors.values()].map(a=>({id:a.id,x:a.sprite.x,y:a.sprite.y,facing:a.facing,animation:a.animation}))} : null, mirrorGuardBreaks:this.mirrorGuardBreaks, phase: this.phase, story: this.director.state, mode: this.director.mode, time: Math.round(this.now), phaseElapsed: this.phaseElapsed,
+    return {sword:this.projectiles.filter(p=>p.sword).map(p=>({phase:p.sword!.phase,x:p.x,y:p.y,harmless:p.sword!.harmless,hit:[...p.hit]})),swordCatchUntil:this.swordCatchUntil,transitionActive:this.transitionActive,cinema: this.director.clip ? {id:this.director.clip.id,clock:this.cinemaClock,waiting:this.director.waiting,canAdvance:this.director.canAdvance&&!this.panelExiting,actors:[...this.cinemaActors.values()].map(a=>({id:a.id,x:a.sprite.x,y:a.sprite.y,facing:a.facing,animation:a.animation}))} : null, mirrorGuardBreaks:this.mirrorGuardBreaks, phase: this.phase, story: this.director.state, mode: this.director.mode, time: Math.round(this.now), phaseElapsed: this.phaseElapsed,
       player: this.player ? {x: Math.round(this.player.model.x), y: Math.round(this.player.model.y), health: this.player.model.health, stamina: Math.round(this.player.model.stamina),
         chakra: Math.round(this.player.model.chakra), ultimate: Math.round(this.player.model.ultimate), action: this.player.model.action?.definition.id, guarding: this.player.model.guard, facing: this.player.model.facing} : null,
       boss: this.boss ? {x: Math.round(this.boss.model.x), y: Math.round(this.boss.model.y), health: this.boss.model.health, stamina: Math.round(this.boss.model.stamina),

@@ -34,7 +34,7 @@ export const ZABUZA_MOVES: BossMove[] = [
 
   move('advancing-cut', 1440, 18, [hit(700, 13, 175)], {move: 330, maxRange: 570, minRange: 145, recovery: 850, cooldown: 4200}),
 
-  move('sword-throw', 1550, 20, [shot(730, 13, 'ice', 1, false, 490)], {animation: 'cast', minRange: 210, maxRange: 1500, recovery: 850, cooldown: 6200}),
+  move('sword-throw', 1550, 20, [shot(730, 13, 'ice', 1, false, 1100)], {animation: 'cast', minRange: 210, maxRange: 1500, recovery: 850, cooldown: 6200}),
 
   move('water-bullets', 1880, 22, [shot(610, 9, 'water', 1), shot(1030, 9, 'water', 1)], {animation: 'cast', minRange: 170, maxRange: 1500, recovery: 760, cooldown: 6500}),
 
@@ -52,7 +52,7 @@ export const ZABUZA_MOVES: BossMove[] = [
 
 // Sword anticipation is intentionally uncompressed: pose contact and hit events share these times.
 const swordTiming: Record<string, number[]> = {
-  'sword-string': [700,1360,2060], 'delayed-cleave':[1050], 'advancing-cut':[800],
+  'sword-throw':[700], 'sword-string': [700,1360,2060], 'delayed-cleave':[1050], 'advancing-cut':[800],
   'silent-killing':[950], 'demon-of-the-mist':[700,1350,1950,2850],
 };
 for (const attack of ZABUZA_MOVES) {

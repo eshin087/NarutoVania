@@ -110,6 +110,8 @@ export class RecordedAudio {
     const index=this.variant.get(`strike-${kind}`)||0;this.variant.set(`strike-${kind}`,index+1);
     this.playBuffer(pools[kind][index%pools[kind].length],'effects',volume,1);
   }
+  swordRelease(){this.playBuffer('sword-swish','effects',.75,1);}
+  swordCatch(){this.playBuffer('guard','effects',.65,1);}
   tool(){const index=this.variant.get('needle')||0;this.variant.set('needle',index+1);this.playBuffer(manifest.pools.needle[index%3],'effects',.55,1);}
   duck(active:boolean){this.ducked=active;this.volumes();}
   ultimate(character:'kakashi'|'naruto'|'sasuke'|'sakura',beat:'charge'|'finish'){

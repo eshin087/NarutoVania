@@ -1,0 +1,1558 @@
+{
+  "version": 10,
+  "generation": "builtin imagegen using approved idle reference collage",
+  "textures": {
+    "v10-naruto-guard-break": {
+      "file": "naruto-guard-break.png",
+      "character": "naruto",
+      "cellSize": [
+        512,
+        384
+      ],
+      "columns": 4,
+      "rows": 1,
+      "baseHeight": 208,
+      "frames": [
+        {
+          "frame": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.435,
+          "sourceFootPixels": [
+            26.5,
+            468
+          ],
+          "contentBounds": [
+            244,
+            103,
+            349,
+            307
+          ],
+          "pose": "guard disrupted"
+        },
+        {
+          "frame": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.435,
+          "sourceFootPixels": [
+            44.0,
+            456
+          ],
+          "contentBounds": [
+            237,
+            109,
+            350,
+            308
+          ],
+          "pose": "recoil"
+        },
+        {
+          "frame": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.435,
+          "sourceFootPixels": [
+            26.5,
+            424
+          ],
+          "contentBounds": [
+            244,
+            123,
+            344,
+            308
+          ],
+          "pose": "stagger"
+        },
+        {
+          "frame": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.435,
+          "sourceFootPixels": [
+            26.0,
+            451
+          ],
+          "contentBounds": [
+            245,
+            111,
+            351,
+            308
+          ],
+          "pose": "regroup"
+        }
+      ]
+    },
+    "v10-kakashi-guard-break": {
+      "file": "kakashi-guard-break.png",
+      "character": "kakashi",
+      "cellSize": [
+        512,
+        384
+      ],
+      "columns": 4,
+      "rows": 1,
+      "baseHeight": 222,
+      "frames": [
+        {
+          "frame": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "sourceUniformScale": 0.455,
+          "sourceFootPixels": [
+            27.0,
+            479
+          ],
+          "contentBounds": [
+            244,
+            89,
+            340,
+            307
+          ],
+          "pose": "guard disrupted"
+        },
+        {
+          "frame": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "sourceUniformScale": 0.455,
+          "sourceFootPixels": [
+            26.5,
+            476
+          ],
+          "contentBounds": [
+            244,
+            90,
+            363,
+            307
+          ],
+          "pose": "recoil"
+        },
+        {
+          "frame": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "sourceUniformScale": 0.455,
+          "sourceFootPixels": [
+            102.5,
+            452
+          ],
+          "contentBounds": [
+            209,
+            101,
+            306,
+            308
+          ],
+          "pose": "stagger"
+        },
+        {
+          "frame": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "sourceUniformScale": 0.455,
+          "sourceFootPixels": [
+            27.0,
+            478
+          ],
+          "contentBounds": [
+            244,
+            90,
+            340,
+            308
+          ],
+          "pose": "regroup"
+        }
+      ]
+    },
+    "v10-sasuke-guard-break": {
+      "file": "sasuke-guard-break.png",
+      "character": "sasuke",
+      "cellSize": [
+        512,
+        384
+      ],
+      "columns": 4,
+      "rows": 1,
+      "baseHeight": 192,
+      "frames": [
+        {
+          "frame": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "sourceUniformScale": 0.405,
+          "sourceFootPixels": [
+            30.0,
+            471
+          ],
+          "contentBounds": [
+            244,
+            116,
+            330,
+            307
+          ],
+          "pose": "guard disrupted"
+        },
+        {
+          "frame": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "sourceUniformScale": 0.405,
+          "sourceFootPixels": [
+            86.5,
+            469
+          ],
+          "contentBounds": [
+            221,
+            117,
+            326,
+            307
+          ],
+          "pose": "recoil"
+        },
+        {
+          "frame": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "sourceUniformScale": 0.405,
+          "sourceFootPixels": [
+            34.0,
+            424
+          ],
+          "contentBounds": [
+            242,
+            135,
+            334,
+            307
+          ],
+          "pose": "stagger"
+        },
+        {
+          "frame": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "sourceUniformScale": 0.405,
+          "sourceFootPixels": [
+            34.5,
+            465
+          ],
+          "contentBounds": [
+            242,
+            119,
+            325,
+            308
+          ],
+          "pose": "regroup"
+        }
+      ]
+    },
+    "v10-sakura-guard-break": {
+      "file": "sakura-guard-break.png",
+      "character": "sakura",
+      "cellSize": [
+        512,
+        384
+      ],
+      "columns": 4,
+      "rows": 1,
+      "baseHeight": 193,
+      "frames": [
+        {
+          "frame": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "sourceUniformScale": 0.44,
+          "sourceFootPixels": [
+            33.5,
+            419
+          ],
+          "contentBounds": [
+            241,
+            123,
+            336,
+            308
+          ],
+          "pose": "guard disrupted"
+        },
+        {
+          "frame": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "sourceUniformScale": 0.44,
+          "sourceFootPixels": [
+            76.5,
+            422
+          ],
+          "contentBounds": [
+            222,
+            121,
+            346,
+            307
+          ],
+          "pose": "recoil"
+        },
+        {
+          "frame": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "sourceUniformScale": 0.44,
+          "sourceFootPixels": [
+            28.0,
+            399
+          ],
+          "contentBounds": [
+            244,
+            131,
+            333,
+            307
+          ],
+          "pose": "stagger"
+        },
+        {
+          "frame": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "sourceUniformScale": 0.44,
+          "sourceFootPixels": [
+            23.5,
+            420
+          ],
+          "contentBounds": [
+            246,
+            122,
+            334,
+            307
+          ],
+          "pose": "regroup"
+        }
+      ]
+    },
+    "v10-zabuza-guard-break": {
+      "file": "zabuza-guard-break.png",
+      "character": "zabuza",
+      "cellSize": [
+        512,
+        384
+      ],
+      "columns": 4,
+      "rows": 1,
+      "baseHeight": 211,
+      "frames": [
+        {
+          "frame": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 0.465,
+          "sourceFootPixels": [
+            28.0,
+            463
+          ],
+          "contentBounds": [
+            243,
+            92,
+            350,
+            308
+          ],
+          "pose": "guard disrupted"
+        },
+        {
+          "frame": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 0.465,
+          "sourceFootPixels": [
+            18.5,
+            470
+          ],
+          "contentBounds": [
+            247,
+            88,
+            375,
+            307
+          ],
+          "pose": "recoil"
+        },
+        {
+          "frame": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 0.465,
+          "sourceFootPixels": [
+            64.5,
+            444
+          ],
+          "contentBounds": [
+            226,
+            101,
+            345,
+            308
+          ],
+          "pose": "stagger"
+        },
+        {
+          "frame": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 0.465,
+          "sourceFootPixels": [
+            21.0,
+            455
+          ],
+          "contentBounds": [
+            246,
+            95,
+            351,
+            307
+          ],
+          "pose": "regroup"
+        }
+      ]
+    },
+    "v10-haku-guard-break": {
+      "file": "haku-guard-break.png",
+      "character": "haku",
+      "cellSize": [
+        512,
+        384
+      ],
+      "columns": 4,
+      "rows": 1,
+      "baseHeight": 208,
+      "frames": [
+        {
+          "frame": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.455,
+          "sourceFootPixels": [
+            26.5,
+            465
+          ],
+          "contentBounds": [
+            244,
+            95,
+            340,
+            307
+          ],
+          "pose": "guard disrupted"
+        },
+        {
+          "frame": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.455,
+          "sourceFootPixels": [
+            106.0,
+            469
+          ],
+          "contentBounds": [
+            208,
+            94,
+            319,
+            308
+          ],
+          "pose": "recoil"
+        },
+        {
+          "frame": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.455,
+          "sourceFootPixels": [
+            30.5,
+            432
+          ],
+          "contentBounds": [
+            242,
+            110,
+            337,
+            307
+          ],
+          "pose": "stagger"
+        },
+        {
+          "frame": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.455,
+          "sourceFootPixels": [
+            26.5,
+            461
+          ],
+          "contentBounds": [
+            244,
+            97,
+            339,
+            307
+          ],
+          "pose": "regroup"
+        }
+      ]
+    },
+    "v10-kakashi-exhausted": {
+      "file": "kakashi-exhausted.png",
+      "character": "kakashi",
+      "cellSize": [
+        512,
+        384
+      ],
+      "columns": 4,
+      "rows": 1,
+      "baseHeight": 222,
+      "frames": [
+        {
+          "frame": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "sourceUniformScale": 0.69,
+          "sourceFootPixels": [
+            16.5,
+            310
+          ],
+          "contentBounds": [
+            245,
+            93,
+            321,
+            308
+          ],
+          "pose": "exhausted"
+        },
+        {
+          "frame": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "sourceUniformScale": 0.69,
+          "sourceFootPixels": [
+            17.0,
+            309
+          ],
+          "contentBounds": [
+            244,
+            94,
+            317,
+            308
+          ],
+          "pose": "exhausted"
+        },
+        {
+          "frame": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "sourceUniformScale": 0.69,
+          "sourceFootPixels": [
+            16.5,
+            312
+          ],
+          "contentBounds": [
+            245,
+            92,
+            309,
+            308
+          ],
+          "pose": "exhausted"
+        },
+        {
+          "frame": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "sourceUniformScale": 0.69,
+          "sourceFootPixels": [
+            16.0,
+            306
+          ],
+          "contentBounds": [
+            245,
+            96,
+            320,
+            309
+          ],
+          "pose": "exhausted"
+        }
+      ]
+    },
+    "v10-naruto-kneeling-grief": {
+      "file": "naruto-kneeling-grief.png",
+      "character": "naruto",
+      "cellSize": [
+        512,
+        384
+      ],
+      "columns": 4,
+      "rows": 1,
+      "baseHeight": 208,
+      "frames": [
+        {
+          "frame": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.72,
+          "sourceFootPixels": [
+            76.0,
+            218
+          ],
+          "contentBounds": [
+            201,
+            150,
+            293,
+            308
+          ],
+          "pose": "kneeling-grief"
+        },
+        {
+          "frame": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.72,
+          "sourceFootPixels": [
+            76.0,
+            218
+          ],
+          "contentBounds": [
+            201,
+            150,
+            292,
+            308
+          ],
+          "pose": "kneeling-grief"
+        },
+        {
+          "frame": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.72,
+          "sourceFootPixels": [
+            75.0,
+            225
+          ],
+          "contentBounds": [
+            202,
+            145,
+            294,
+            308
+          ],
+          "pose": "kneeling-grief"
+        },
+        {
+          "frame": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.72,
+          "sourceFootPixels": [
+            77.0,
+            226
+          ],
+          "contentBounds": [
+            201,
+            144,
+            293,
+            307
+          ],
+          "pose": "kneeling-grief"
+        }
+      ]
+    },
+    "v10-sakura-kneeling": {
+      "file": "sakura-kneeling.png",
+      "character": "sakura",
+      "cellSize": [
+        512,
+        384
+      ],
+      "columns": 4,
+      "rows": 1,
+      "baseHeight": 193,
+      "frames": [
+        {
+          "frame": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "sourceUniformScale": 0.64,
+          "sourceFootPixels": [
+            65.5,
+            207
+          ],
+          "contentBounds": [
+            214,
+            175,
+            297,
+            308
+          ],
+          "pose": "kneeling"
+        },
+        {
+          "frame": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "sourceUniformScale": 0.64,
+          "sourceFootPixels": [
+            67.0,
+            207
+          ],
+          "contentBounds": [
+            213,
+            175,
+            297,
+            308
+          ],
+          "pose": "kneeling"
+        },
+        {
+          "frame": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "sourceUniformScale": 0.64,
+          "sourceFootPixels": [
+            64.0,
+            214
+          ],
+          "contentBounds": [
+            215,
+            170,
+            296,
+            308
+          ],
+          "pose": "kneeling"
+        },
+        {
+          "frame": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "sourceUniformScale": 0.64,
+          "sourceFootPixels": [
+            63.0,
+            202
+          ],
+          "contentBounds": [
+            216,
+            178,
+            297,
+            308
+          ],
+          "pose": "kneeling"
+        }
+      ]
+    },
+    "v10-haku-weary": {
+      "file": "haku-weary.png",
+      "character": "haku",
+      "cellSize": [
+        512,
+        384
+      ],
+      "columns": 4,
+      "rows": 1,
+      "baseHeight": 208,
+      "frames": [
+        {
+          "frame": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.7,
+          "sourceFootPixels": [
+            60.5,
+            300
+          ],
+          "contentBounds": [
+            214,
+            97,
+            289,
+            308
+          ],
+          "pose": "weary"
+        },
+        {
+          "frame": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.7,
+          "sourceFootPixels": [
+            53.0,
+            290
+          ],
+          "contentBounds": [
+            219,
+            104,
+            293,
+            308
+          ],
+          "pose": "weary"
+        },
+        {
+          "frame": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.7,
+          "sourceFootPixels": [
+            54.0,
+            291
+          ],
+          "contentBounds": [
+            218,
+            103,
+            289,
+            307
+          ],
+          "pose": "weary"
+        },
+        {
+          "frame": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.7,
+          "sourceFootPixels": [
+            54.0,
+            297
+          ],
+          "contentBounds": [
+            218,
+            99,
+            287,
+            308
+          ],
+          "pose": "weary"
+        }
+      ]
+    },
+    "v10-zabuza-injured": {
+      "file": "zabuza-injured.png",
+      "character": "zabuza",
+      "cellSize": [
+        512,
+        384
+      ],
+      "columns": 4,
+      "rows": 1,
+      "baseHeight": 211,
+      "frames": [
+        {
+          "frame": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 0.67,
+          "sourceFootPixels": [
+            15.0,
+            305
+          ],
+          "contentBounds": [
+            246,
+            103,
+            328,
+            308
+          ],
+          "pose": "injured"
+        },
+        {
+          "frame": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 0.67,
+          "sourceFootPixels": [
+            21.5,
+            297
+          ],
+          "contentBounds": [
+            242,
+            108,
+            312,
+            308
+          ],
+          "pose": "injured"
+        },
+        {
+          "frame": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 0.67,
+          "sourceFootPixels": [
+            65.5,
+            296
+          ],
+          "contentBounds": [
+            212,
+            109,
+            295,
+            308
+          ],
+          "pose": "injured"
+        },
+        {
+          "frame": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 0.67,
+          "sourceFootPixels": [
+            17.5,
+            306
+          ],
+          "contentBounds": [
+            244,
+            102,
+            314,
+            308
+          ],
+          "pose": "injured"
+        }
+      ]
+    },
+    "v10-kakashi-restrained": {
+      "file": "kakashi-restrained.png",
+      "character": "kakashi",
+      "cellSize": [
+        512,
+        384
+      ],
+      "columns": 4,
+      "rows": 1,
+      "baseHeight": 222,
+      "frames": [
+        {
+          "frame": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "sourceUniformScale": 0.69,
+          "sourceFootPixels": [
+            16.5,
+            310
+          ],
+          "contentBounds": [
+            245,
+            93,
+            321,
+            308
+          ],
+          "pose": "restrained"
+        },
+        {
+          "frame": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "sourceUniformScale": 0.69,
+          "sourceFootPixels": [
+            17.0,
+            309
+          ],
+          "contentBounds": [
+            244,
+            94,
+            317,
+            308
+          ],
+          "pose": "restrained"
+        },
+        {
+          "frame": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "sourceUniformScale": 0.69,
+          "sourceFootPixels": [
+            16.5,
+            312
+          ],
+          "contentBounds": [
+            245,
+            92,
+            309,
+            308
+          ],
+          "pose": "restrained"
+        },
+        {
+          "frame": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "sourceUniformScale": 0.69,
+          "sourceFootPixels": [
+            16.0,
+            306
+          ],
+          "contentBounds": [
+            245,
+            96,
+            320,
+            309
+          ],
+          "pose": "restrained"
+        }
+      ],
+      "semantic": "Contained shoulders and arms; one hand holds opposite forearm, suitable for water-prison restraint.",
+      "aliasOf": "v10-kakashi-exhausted"
+    },
+    "v10-haku-unmasked-weary": {
+      "file": "haku-unmasked-weary.png",
+      "character": "haku",
+      "cellSize": [
+        512,
+        384
+      ],
+      "columns": 4,
+      "rows": 1,
+      "baseHeight": 208,
+      "frames": [
+        {
+          "frame": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.95,
+          "sourceFootPixels": [
+            45.5,
+            222
+          ],
+          "contentBounds": [
+            213,
+            96,
+            290,
+            309
+          ],
+          "pose": "unmasked-weary"
+        },
+        {
+          "frame": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.95,
+          "sourceFootPixels": [
+            40.0,
+            217
+          ],
+          "contentBounds": [
+            218,
+            101,
+            297,
+            308
+          ],
+          "pose": "unmasked-weary"
+        },
+        {
+          "frame": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.95,
+          "sourceFootPixels": [
+            40.5,
+            217
+          ],
+          "contentBounds": [
+            218,
+            101,
+            296,
+            308
+          ],
+          "pose": "unmasked-weary"
+        },
+        {
+          "frame": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.95,
+          "sourceFootPixels": [
+            40.5,
+            221
+          ],
+          "contentBounds": [
+            218,
+            97,
+            287,
+            309
+          ],
+          "pose": "unmasked-weary"
+        }
+      ],
+      "semantic": "Visible unmasked Haku face with long dark face-framing hair, mask removed completely, tired restrained posture.",
+      "continuity": "Use after mask removal; replaces masked-weary in unmasked cinematics."
+    }
+  },
+  "measurementBasis": "One uniform per-character source scale chosen from head/torso/limb comparison to idle, applied equally to all4poses. Kneeling/slumping never normalized by silhouette height.",
+  "guardBreak": {
+    "frameDurationsMs": [
+      80,
+      100,
+      160,
+      180
+    ],
+    "contactFrame": 0,
+    "contactTimeMs": 0,
+    "frames": [
+      "guard disrupted",
+      "recoil",
+      "stagger",
+      "regroup"
+    ]
+  },
+  "cinematic": {
+    "frameDurationsMs": [
+      600,
+      600,
+      600,
+      600
+    ],
+    "contactFrame": null,
+    "holdLast": true
+  }
+}

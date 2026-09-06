@@ -1,3 +1,20 @@
+# Returning sword, natural reactions, and cinematic polish - September 6, 2026
+
+## V10 validation
+
+-112 tests pass across9 files; TypeScript, lint, and production build pass.
+- Full fresh Edge browser run completed all four fights and the full story through manual-style panel confirmations to snowy victory. The development pilot uses normal input actions, never writes health, positions, clocks, or outcomes. Active combat152seconds; final health61. No browser errors. This is automated browser coverage, not a human difficulty judgment.
+- All14 public Scene Select entries initialized; normal save restored byte-for-byte. Panels held at3500/10800ms with held simulated controller A; release and new press were required. Pause/resume tested during both180ms panel exit and250/350ms scene fade.
+- Actual sword flight captured outbound,120ms turnaround, return, and catch. Timed keyboard parry caused harmless return and catch; maximum one sword. Pure rules cover moving-hand catch, speed, per-pass reset, harmless deflection,700ms windup and unchanged damage. Existing receive/hurtbox tests cover block, parry, damage immunity, dash, and swept projectile intersections.
+- Four replays each returned to2fighters,0projectiles,0effects,0decoys,13display objects. Sampled399 combat frames: median165fps, minimum160fps. Fullscreen and resize passed; no missing assets or console errors in the production smoke test. Production exposes six public WebMCP controls and excludes input pilots.
+- Generated art includes18 sword frames,24 combat guard-break frames,24 unique cinematic reaction frames (plus restrained Kakashi alias), and30 ending frames. Reviewed transparent atlases and idle comparisons; runtime uses manifest anchors and body scale. Haku retains an unmasked weary variant after mask removal. Mercenary/Gato falls use animation frames, not rotated standing images.
+- Actual rendered audio capture45.66seconds: peak-2.04dBFS, no clipping, NaNs, or infinities; missing audio list empty. Sword release/catch reuse licensed recordings, now triggered at their visual contacts with the duplicate ice cue removed. Source/license/reference limitations are retained in art-v10/sword-audio-mapping.json and audio-v9/manifest.json. No YouTube soundtrack extracted, timestamps invented, or subjective listening claimed.
+- Physical-controller and subjective listening verification remain unavailable. Exact per-landmark five-percent anatomy certification is not claimed for all legacy artwork.
+
+Evidence lives in ignored outputs/: chapter-v10-progress.log, visual-v10.log, sword-parry-v10.log, transition-pause-v10.log, lifecycle-final-v10.log, debug-final-v10.log, smoke-static-v10.log, build-final-v10.log, rendered-mix-v10.webm and mix-v10-analysis.txt. Earlier interrupted development runs were discarded after hot reload; the final run above used the frozen implementation.
+
+---
+
 # Animation, combat clarity, and manga transitions - September 6, 2026
 
 ## Current revision

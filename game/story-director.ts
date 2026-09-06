@@ -178,11 +178,19 @@ export function outroClip(phase: StoryPhaseId): CinemaClip {
 
         {at: 17900, actor: 'naruto', animation: 'cast'}, {at: 18700, actor: 'zabuza', facing:1, animation: 'heavy'},
 
-        {at: 19800, actor: 'zabuza', facing: 1, x: 1500, duration: 1400, animation: 'dash'}, {at: 20300, actor: 'henchman1', animation: 'defeat', effect: 'impact'},
-
-        {at: 20900, actor: 'henchman2', animation: 'defeat'}, {at: 21600, actor: 'gato', x: 1610, y: 730, duration: 650, animation: 'defeat'},
-
-        {at: 22900, actor: 'henchman3', x: 1770, duration: 900, animation: 'run'}, {at: 24200, actor: 'zabuza', animation: 'guardbreak'},
+        {at:19800,actor:'zabuza',facing:1,x:1270,duration:400,animation:'run'},
+        {at:19800,camera:460,duration:1900},
+        {at:20200,actor:'zabuza',animation:'heavy'},
+        {at:20500,actor:'henchman1',animation:'defeat',effect:'impact'},
+        {at:20600,actor:'zabuza',x:1350,duration:300,animation:'run'},
+        {at:20900,actor:'zabuza',animation:'heavy'},
+        {at:21200,actor:'henchman2',animation:'defeat',effect:'impact'},
+        {at:21400,actor:'zabuza',x:1450,duration:300,animation:'run'},
+        {at:21700,actor:'zabuza',animation:'heavy'},
+        {at:22000,actor:'gato',x:1590,y:625,duration:600,animation:'defeat',effect:'impact'},
+        {at:22400,actor:'henchman3',x:1770,duration:900,animation:'run'},
+        {at:22600,actor:'zabuza',animation:'guardbreak'},
+        {at:24200,actor:'zabuza',animation:'guardbreak'},
 
         {at: 25900, actor: 'kakashi', x: 1420, duration: 900, animation: 'run'}, {at: 27600, fade: 'out'},
 
@@ -206,7 +214,7 @@ export function outroClip(phase: StoryPhaseId): CinemaClip {
 export class StoryDirector {
  state:StoryState;mode:'fight'|'cinematic'|'complete'='fight';clip:CinemaClip|null=null;clock=0;
  emitted=new Set<number>();waiting=false;holdAge=0;private afterClip:(()=>void)|null=null;
- constructor(phase:StoryPhaseId,private callbacks:{enter:(state:StoryState)=>void;cinematic:(clip:CinemaClip)=>void;cue:(cue:CinemaCue)=>void;complete:()=>void}){this.state=stateForPhase(phase);}
+ constructor(phase:StoryPhaseId,private callbacks:{enter:(state:StoryState)=>void;cinematic:(clip:CinemaClip)=>void;cue:(cue:CinemaCue)=>void;complete:()=>void;transition?:(next:()=>void)=>void}){this.state=stateForPhase(phase);}
  start(viewIntro:boolean){
   if(this.state.phase==='copy'){this.startScene('hunter');return;}
   if(this.state.phase==='protect'){this.startScene('bridge');return;}
@@ -233,7 +241,7 @@ export class StoryDirector {
   this.mode='cinematic';this.afterClip=after;this.callbacks.cinematic(clip);this.update(0);
  }
  objectiveComplete(hp:number,elapsed:number,breaks=0){return this.mode==='fight'&&(hp<=0||this.state.phase==='mirrors'&&elapsed>=45&&breaks>=1);}
- finishObjective(){if(this.mode!=='fight')return;const routes:Record<StoryPhaseId,StorySceneId>={mist:'prison',rescue:'shuriken',copy:'hunter',protect:'bridge',mirrors:'sacrifice',seal:'hesitation',lightning:'interception'};this.startScene(routes[this.state.phase]);}
+ finishObjective(){if(this.mode!=='fight')return;const routes:Record<StoryPhaseId,StorySceneId>={mist:'prison',rescue:'shuriken',copy:'hunter',protect:'bridge',mirrors:'sacrifice',seal:'hesitation',lightning:'interception'};const next=()=>this.startScene(routes[this.state.phase]);if(this.callbacks.transition)this.callbacks.transition(next);else next();}
  update(dt:number){
   if(this.mode!=='cinematic'||!this.clip)return;
   if(this.waiting){this.holdAge+=dt;return;}
@@ -248,7 +256,7 @@ export class StoryDirector {
  get canAdvance(){return this.waiting&&this.holdAge>=350;}
  advance(){if(!this.canAdvance)return false;this.waiting=false;this.holdAge=0;return true;}
  skip(){if(this.mode==='cinematic')this.finishClip();}
- private finishClip(){if(this.mode!=='cinematic')return;const next=this.afterClip;this.afterClip=null;this.clip=null;this.waiting=false;next?.();}
+ private finishClip(){if(this.mode!=='cinematic')return;const next=this.afterClip;this.afterClip=null;this.clip=null;this.waiting=false;if(next){if(this.callbacks.transition)this.callbacks.transition(next);else next();}}
  private complete(){this.state={...this.state,hakuDefeated:true,hakuIntercepted:true,complete:true};this.mode='complete';this.clip=null;this.waiting=false;this.callbacks.complete();}
 }
 
@@ -348,7 +356,7 @@ function withDialogue(clip: CinemaClip): CinemaClip {
 
       {at: 15000, actor: 'naruto', speech: 'Haku gave everything for you!', hold: 3000},
 
-      {at: 18400, actor: 'zabuza', speech: 'Boy… lend me your kunai.', hold: 2600},
+      {at: 18400, actor: 'zabuza', speech: 'Boy… lend me your kunai.', hold: 1400},
 
       {at: 25000, actor: 'zabuza', speech: 'Kakashi… take me to Haku.', hold: 2500},
 
@@ -364,7 +372,7 @@ function withDialogue(clip: CinemaClip): CinemaClip {
  'simultaneous-bridge-battles':[{at:5200,manga:4,awaitAdvance:true,actor:'sakura',speech:'I will protect Tazuna. Sasuke, watch the mirrors!'}],
  'sasuke-protects-naruto':[{at:7600,manga:5,awaitAdvance:true,actor:'sasuke',speech:'My body moved before I could think.'},{at:10600,manga:6,awaitAdvance:true,actor:'naruto',speech:'Sasuke… You were supposed to keep chasing your dream.'},{at:13400,manga:7,awaitAdvance:true,actor:'naruto',speech:'I will not let you hurt anyone else!'}],
  'narutos-hesitation':[{at:4800,manga:8,awaitAdvance:true,actor:'haku',speech:'I fought to protect someone precious. Now he needs me.'}],
- 'a-demon-in-the-snow':[{at:7700,manga:9,awaitAdvance:true,actor:'haku',speech:'Zabuza… I will protect you.'},{at:22200,manga:10,awaitAdvance:true,actor:'zabuza',speech:'Gato. This is the end of our contract.'},{at:32200,manga:11,awaitAdvance:true,actor:'zabuza',speech:'Let me rest beside you, Haku.'}],
+ 'a-demon-in-the-snow':[{at:7700,manga:9,awaitAdvance:true,actor:'haku',speech:'Zabuza… I will protect you.'},{at:23300,manga:10,awaitAdvance:true,actor:'zabuza',speech:'Gato. This is the end of our contract.'},{at:32200,manga:11,awaitAdvance:true,actor:'zabuza',speech:'Let me rest beside you, Haku.'}],
  };
  if(!lines[clip.id]&&!panels[clip.id])return clip;
  const cues=[...clip.cues,...(lines[clip.id]||[])].map(c=>{const copy={...c};if(clip.id!=='water-prison')delete copy.moment;return copy;});

@@ -2,9 +2,13 @@
 
 A desktop browser fan game built with TypeScript, React, Phaser 3.90.0, and the Sites starter. Four playable story encounters follow Team 7 from the lakeside confrontation with Zabuza to the bridge battle and snowy aftermath. There are no traversal levels or filler enemy waves.
 
+## Current presentation
+
+Zabuza throws a returning sword that threatens both passes; perfect parries return it harmlessly. New release, empty-handed wait, catch, restrained reactions, and contact-aligned ending animations use generated transparent artwork. Dialogue bubbles fit their text. Scene fades survive stage cleanup and panels fade before advancing. Four fights, current balance, and fast ultimate charging remain unchanged.
+
 ## Play
 
-Move with A/D or arrows; crouch with S/down. Space jumps, J attacks, and down + hold J charges a heavy strike. K throws a ranged tool. Shift dashes, including one air dash per jump; down + direction + Shift slides. F parries on a fresh, timed press and blocks while held. Red attacks require evasion. Q/E use the active character's techniques, L substitutes a decoy, and R uses a charged ultimate. Escape pauses; Enter skips cinematics or retries after defeat.
+Move with A/D or arrows; crouch with S/down. Space jumps, J attacks, and down + hold J charges a heavy strike. K throws a ranged tool. Shift dashes, including one air dash per jump; down + direction + Shift slides. F parries on a fresh, timed press and blocks while held. Red attacks require evasion. Q/E use the active character's techniques, L substitutes a decoy, and R uses a charged ultimate. Escape pauses; Enter advances a held manga panel or retries after defeat. Skip scene skips only the current transition.
 
 Standard controller: stick/D-pad move, A jump, X melee, Y tool, B dash, LB parry/block, RB/RT techniques, LT substitution, right-stick click ultimate, and Start pause. The controls menu includes each active character's kit and separate music, effects, and voice levels. Fullscreen and reduced shake are supported.
 
