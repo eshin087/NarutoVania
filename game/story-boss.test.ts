@@ -55,7 +55,7 @@ describe('story director skip and replay', () => {
   }
   it.each(PHASE_IDS)('%s skip and natural ending produce identical story states', phase => {
     const a = make(phase), b = make(phase); a.director.start(false); b.director.start(false);
-    a.director.finishObjective(); b.director.finishObjective(); a.director.skip(); while (b.director.mode === 'cinematic') b.director.update(b.director.clip!.duration + 100);
+    a.director.finishObjective(); b.director.finishObjective(); while(a.director.mode==='cinematic')a.director.skip(); for(let i=0;b.director.mode==='cinematic'&&i<100;i++){b.director.update(b.director.clip!.duration+100);if(b.director.waiting){b.director.update(400);b.director.advance();}}
     expect(a.director.state).toEqual(b.director.state); expect(a.enter).toEqual(b.enter); expect(a.complete).toEqual(b.complete);
     a.director.skip(); expect(a.complete.length).toBeLessThanOrEqual(1);
   });
@@ -66,12 +66,12 @@ describe('story director skip and replay', () => {
   });
   it('migrates a final Kakashi checkpoint to the ending without a redundant duel', () => {
     const {director, enter, complete} = make('lightning'); director.start(false);
-    expect(director.mode).toBe('cinematic'); director.skip();
+    expect(director.mode).toBe('cinematic'); while(director.mode==='cinematic')director.skip();
     expect(enter).toEqual([]); expect(complete).toEqual(['done']);
   });
   it('completes the full four-phase chapter with canonical state and no forced deaths', () => {
     const {director, enter, complete} = make('mist'); director.start(true); director.skip();
-    for (const phase of PLAYABLE_PHASE_IDS) {expect(director.state.phase).toBe(phase); director.finishObjective(); director.skip();}
+    for (const phase of PLAYABLE_PHASE_IDS) {expect(director.state.phase).toBe(phase); director.finishObjective(); while(director.mode==='cinematic')director.skip();}
     expect(enter).toEqual(PLAYABLE_PHASE_IDS); expect(complete).toEqual(['done']);
     expect(director.state).toMatchObject({complete: true, hakuIntercepted: true, sasukeFallen: true});
   });

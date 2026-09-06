@@ -11,7 +11,7 @@ export async function driveCombat(scene: BossGameScene, inputs: BattleInput, mil
   let previous: Action[] = [], holdUntil = 0, held: Action[] = [], heavyRelease = 0, lastJump = -9999, lastAttack = -9999;
   const trace: {time: number; actions: Action[]}[] = [];
   while (performance.now() < end && ['playing', 'intro'].includes(bridge.get().screen)) {
-    if (bridge.get().screen === 'intro') {await new Promise(resolve => setTimeout(resolve, 24)); continue;}
+    if (bridge.get().screen === 'intro') {inputs.inject([]);previous=[];if(bridge.get().canAdvance)inputs.confirm();await new Promise(resolve => setTimeout(resolve, 24)); continue;}
     const now = scene.now, p = scene.player.model, b = scene.boss.model;
     let actions: Action[] = [];
     const occupied = scene.formation.active ? scene.formation.mirrors[scene.formation.occupied] : null;

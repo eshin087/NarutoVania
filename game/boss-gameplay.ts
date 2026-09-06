@@ -1,3 +1,6 @@
+import {bossParryEligible} from './boss-ai';
+import {redOutline,outlineHits} from './attack-geometry';
+import type {StorySceneId} from './scene-catalog';
 import * as Phaser from 'phaser';
 import {bossBridge as bridge, type Command} from './boss-bridge';
 import {ARENAS, CHARACTER, PHASES, kit, type StoryPhaseId, type StoryState} from './chapter';
@@ -33,15 +36,15 @@ export class BossGameScene extends Phaser.Scene {
   mirrorGuardBreaks = 0; bossBreakAnnounced = 0;
   clonesCreated = 0; parries = 0; retries = 0; protection = 100; protectionHits = 0; protectionUntil = 0;
   sharingan = false; narutoJoined = false; phaseEnding = false; gameOver = false; pausedFrom: 'playing' | 'intro' = 'playing';
-  cinemaActors = new Map<ActorId, CinemaVisual>(); cinemaClock = 0; cinemaPrison: Phaser.GameObjects.Graphics | null = null; prisonActor: CinemaVisual | null = null; glamour: {sprite:Phaser.GameObjects.Sprite;born:number} | null = null; parryFlashUntil=0; parryChain=0; lastParry=-9999;
+  cinemaActors = new Map<ActorId, CinemaVisual>(); cinemaClock = 0; presentationClock=0; entryScene:StorySceneId|undefined; cinemaPrison: Phaser.GameObjects.Graphics | null = null; prisonActor: CinemaVisual | null = null; glamour: {sprite:Phaser.GameObjects.Sprite;born:number} | null = null; parryFlashUntil=0; parryChain=0; lastParry=-9999;parrySignals:{x:number;y:number;born:number;text:Phaser.GameObjects.Text}[]=[];sharinganEchoes:Phaser.GameObjects.Sprite[]=[];lastEcho=0;
   followups: {at: number; fighter: Fighter; event: AttackEvent; key: string; serial: number}[] = [];
   sceneryActors: Phaser.GameObjects.GameObject[] = []; snow: {x: number; y: number; speed: number}[] = []; snowActive = false;
   cinemaPresentation: CinemaPresentation | null = null;
   readingSlow = 0; counterUntil = 0;
   ultimateBurst: UltimateBurst | null = null;
   constructor() {super('BossGameplay');}
-  init(data: {checkpoint?: StoryPhaseId; elapsed?: number; retries?: number; parries?: number; inputs: BattleInput; soundscape: RecordedAudio; viewIntro?: boolean}) {
-    this.phase = data.checkpoint || 'mist'; this.inputs = data.inputs; this.sounds = data.soundscape; this.elapsed = data.elapsed || 0;
+  init(data: {checkpoint?: StoryPhaseId; elapsed?: number; retries?: number; parries?: number; inputs: BattleInput; soundscape: RecordedAudio; viewIntro?: boolean;sceneId?:StorySceneId}) {
+    this.entryScene=data.sceneId;this.phase = data.checkpoint || 'mist'; this.inputs = data.inputs; this.sounds = data.soundscape; this.elapsed = data.elapsed || 0;
     this.retries = data.retries || 0; this.parries = data.parries || 0; this.registry.set('view-boss-intro', data.viewIntro === true);
     this.fighters = []; this.projectiles = []; this.effects = []; this.decoys = []; this.mirrorVisuals = []; this.backgrounds = []; this.mist = [];
     this.cinemaActors = new Map(); this.sceneryActors = []; this.followups = []; this.now = 0; this.hitStop = 0; this.lastHitStop = -9999; this.lastEmit = 0;
@@ -49,7 +52,7 @@ export class BossGameScene extends Phaser.Scene {
   }
   create() {
     this.director = new StoryDirector(this.phase, {enter: state => this.enterPhase(state), cinematic: clip => this.startCinema(clip), cue: cue => this.cinemaCue(cue), complete: () => this.finishChapter()});
-    this.director.start(this.registry.get('view-boss-intro')); this.inputs.clear(); void this.sounds.unlock();
+    if(this.entryScene)this.director.startScene(this.entryScene);else this.director.start(this.registry.get('view-boss-intro')); this.inputs.clear(); void this.sounds.unlock();
     // Phaser tears down physics before user shutdown listeners. Let its scene systems own disposal.
     this.events.once('shutdown', () => {this.inputs.clear(); this.sounds.stopEffects();});
   }
@@ -58,7 +61,7 @@ export class BossGameScene extends Phaser.Scene {
     this.physics.world.timeScale = 1; this.readingSlow = 0; this.counterUntil = 0; this.cinemaPresentation = null;
     this.physics.world.resume(); this.tweens.killAll(); this.physics.world.colliders.destroy(); if (this.floors?.scene) this.floors.destroy(true);
     this.children.removeAll(true); this.fighters = []; this.projectiles = []; this.effects = []; this.decoys = []; this.mirrorVisuals = [];
-    this.backgrounds = []; this.mist = []; this.sceneryActors = []; this.followups = []; this.cinemaActors.clear(); this.cinemaPrison = null; this.prisonActor=null; this.glamour=null; this.parryFlashUntil=0; this.parryChain=0;
+    this.backgrounds = []; this.mist = []; this.sceneryActors = []; this.followups = []; this.cinemaActors.clear(); this.cinemaPrison = null; this.prisonActor=null; this.glamour=null; this.parryFlashUntil=0; this.parryChain=0;this.parrySignals=[];this.sharinganEchoes=[];
     this.formation = new MirrorFormation(); this.snowActive = false;
   }
   private arena(name: 'lakeside' | 'bridge') {
@@ -132,8 +135,10 @@ export class BossGameScene extends Phaser.Scene {
       if (hits.length) {const age = this.now - model.action.started; let index = hits.findIndex(e => age < e.at + 250); if (index < 0) index = hits.length - 1;
         const h = hits[index]; animation = h.red ? 'heavy' : (`light${index % 3 + 1}` as AnimationName); duration = 620; elapsed = clamp(280 + age - h.at, 0, 619);}
     }
-    poseBattle(f.sprite, model.id, animation, elapsed, model.facing, duration, this.phase === 'seal' && model.id === 'naruto' ? 'awakened' : undefined); f.sprite.setPosition(model.x, model.y + 2);
-    if(model.id==='zabuza'&&model.action?.definition.action==='boss'&&this.now>=model.hurtUntil&&this.now>=model.guardBrokenUntil){
+    if(f===this.boss&&!model.grounded&&model.action?.definition.action==='boss'&&model.action.definition.events.some(e=>e.kind==='hit'))animation='aerial';
+    if(f===this.player&&animation==='aerial'&&model.grounded&&this.now-this.landedAt<145){animation='land';elapsed=this.now-this.landedAt;duration=145;}
+    poseBattle(f.sprite, model.id, animation, elapsed, model.facing, duration, this.phase === 'seal' && model.id === 'naruto' ? 'awakened' : undefined); f.sprite.setPosition(model.x+(this.now<model.hurtUntil?model.lastHitDirection*7*Math.exp(-(this.now-model.damagedAt)/110):0), model.y + 2);
+    if(model.id==='zabuza'&&animation!=='aerial'&&model.action?.definition.action==='boss'&&this.now>=model.hurtUntil&&this.now>=model.guardBrokenUntil){
       const sword=swordPresentation(model.action.definition,this.now-model.action.started);if(sword)poseZabuzaSword(f.sprite,sword.frame,model.facing);
     }
     f.shadow.setPosition(model.x, this.floor + 2).setScale(clamp(1 - (this.floor - model.y) / 550, .25, 1));
@@ -143,9 +148,10 @@ export class BossGameScene extends Phaser.Scene {
     else if (f.key.startsWith('clone')) f.sprite.setAlpha(.6).setTint(0xc1ddf5);
     else if (this.phase === 'rescue' && f === this.boss) f.sprite.setAlpha(.8).setTint(0x86c8dc);
     else {f.sprite.setAlpha(this.now < model.immuneUntil && !model.action?.definition.invulnerable && Math.floor(this.now / 70) % 2 ? .48 : 1);
-      if (this.now < model.guardBrokenUntil) f.sprite.setTint(0xffb35b);
+      if(this.now<model.hurtUntil&&this.now-model.damagedAt<65&&!bridge.settings().reducedShake)f.sprite.setTintFill(0xfff1d4);
+      else if (this.now < model.guardBrokenUntil) f.sprite.setTint(0xffb35b);
       else if (this.now < model.hurtUntil) f.sprite.setTint(0xffd18b);
-      else if (this.now - model.damagedAt < 90) f.sprite.setTintFill(0xfff0dc);
+      else if (this.now - model.damagedAt < 65) f.sprite.setTint(0xb4d6e3);
       else if (this.phase === 'seal' && f === this.player) f.sprite.setTint(0xffbc9a); else f.sprite.clearTint();}
     if (this.now < model.hurtUntil || this.now < model.guardBrokenUntil) f.sprite.setAlpha(1);
     if (animation === 'run' && this.now - f.lastStep >= 255 && model.grounded) {f.lastStep = this.now; this.sounds.effect('step', .2);}
@@ -268,6 +274,7 @@ export class BossGameScene extends Phaser.Scene {
   private controlBoss() {
     const f = this.boss, p = f.model, body = f.body.body;
     if (p.health <= 0 || this.now < p.guardBrokenUntil || this.now < p.hurtUntil || this.now < this.bossRestrainedUntil) {body.setVelocityX(0); return;}
+    if(p.action?.definition.id==='parry-stance'){body.setVelocityX(0);return;}
     const targets = [this.player, ...this.fighters.filter(a => a.ally && a.model.health > 0)];
     const nearest = targets.sort((a, b) => Math.abs(a.model.x - p.x) - Math.abs(b.model.x - p.x))[0];
     const decoy = this.decoys.find(d => Math.abs(d.x - p.x) < Math.abs(nearest.model.x - p.x) + 40);
@@ -286,7 +293,7 @@ export class BossGameScene extends Phaser.Scene {
           this.burst('smoke', p.x, this.floor - 70, 155); this.teleport(f, x, this.floor); p.facing = x > targetX ? -1 : 1; Object.assign(p.action || {}, {facing: p.facing});
         }
         if (this.formation.active && this.now >= this.mirrorInterruptUntil) this.transferMirror(move.id === 'mirror-feint');
-        this.sounds.voice(p.id, move.animation === 'cast' || move.animation === 'ultimate' ? 'cast' : 'attack');
+
       } else {
         const mirrored = this.formation.active && this.now >= this.mirrorInterruptUntil;
         const speed = !p.guard && this.now >= this.brain.readyAt - 250 && !mirrored ? (distance > 155 ? p.facing * (p.id === 'haku' ? 175 : 118) : distance < 70 ? -p.facing * 65 : 0) : 0;
@@ -299,6 +306,7 @@ export class BossGameScene extends Phaser.Scene {
       const first = move.events[0]?.at || 500;
       const speed = move.move && age > 250 && age < first - 100 && !this.formation.active ? move.move * p.action.facing : 0;
       body.setVelocityX(speed);
+      if(p.id==='zabuza')move.events.forEach((e,i)=>{const token=-100-i;if(e.kind==='hit'&&age>=e.at-130&&age<e.at&&!p.action!.emitted.has(token)){p.action!.emitted.add(token);this.sounds.effect('swing2',.65);}});
       const nextRed = move.events.find(event => event.red && age < event.at);
       if (nextRed && nextRed.at - age < 800 && this.redCueAt !== nextRed.at) {this.redCueAt = nextRed.at; this.sounds.effect('warning', .55, 1);}
       const rushWindup = (move.events.find(e => e.red)?.at || 3200) - 750;
@@ -383,7 +391,7 @@ export class BossGameScene extends Phaser.Scene {
       const p = f.model, range = event.range || 120, bounds = attackBounds(p.x, p.y, p.action?.facing || p.facing, range, event.height || 105);
       this.sounds.voice(p.id, 'attack');
       const targets = f.hostile ? this.fighters.filter(a => !a.hostile) : this.fighters.filter(a => a.hostile);
-      for (const target of targets) if (overlaps(bounds, this.box(target))) this.hit(f, target, {...event, damage: (event.damage || 10) * charge}, key);
+      for (const target of targets) if (event.red&&f.hostile?outlineHits(redOutline(p.action?.definition.id||'',p.x,p.y,p.action?.facing||p.facing,event),this.box(target)):overlaps(bounds, this.box(target))) this.hit(f, target, {...event, damage: (event.damage || 10) * charge}, key);
       if (!f.hostile) this.hitMirrors(f, bounds, (event.damage || 15) * charge, key);
       else {for (const decoy of this.decoys) if (overlaps(bounds, {x: decoy.x - 23, y: decoy.y - 62, width: 46, height: 60})) decoy.expires = 0;
         if (this.phase === 'protect' && overlaps(bounds, {x: 170, y: this.floor - 110, width: 40, height: 105})) this.hurtTazuna(event.damage || 10);}
@@ -394,13 +402,16 @@ export class BossGameScene extends Phaser.Scene {
     const token = `${key}:${target.key}`; if (attacker.model.hitTargets.has(token)) return;
     attacker.model.hitTargets.add(token);
     if (target === this.boss && this.formation.active && this.now >= this.mirrorInterruptUntil) return;
+    const stance=target.model.action,age=stance?this.now-stance.started:0;
+    if(target===this.boss&&stance?.definition.id==='parry-stance'&&bossParryEligible(age,attacker.model.action?.definition.action||'',!!event.red,attacker.model.x,target.model.x,target.model.facing,target.model.stamina,stance.emitted.has(-1))){
+      stance.emitted.add(-1);target.model.deflectUntil=this.now+240;attacker.model.exhaust(10,this.now);attacker.model.stagger(this.now,180);this.perfectParry(target);return;
+    }
     const multiplier = attacker.hostile ? COMBAT.enemyDamage : attacker === this.player && this.phase === 'seal' ? 1.28 : attacker.ally ? .33 : 1;
     const outcome = target.model.receive({damage: Math.round((event.damage || 10) * multiplier * (target.model.isBoss && this.now >= target.model.guardBrokenUntil ? .65 : 1) * (attacker === this.player && this.now < this.counterUntil ? 1.5 : 1)), posture: event.posture || 15, red: !!event.red, fromX: attacker.model.x}, this.now);
     if (outcome.result === 'immune') return;
     if (attacker === this.player && outcome.damage > 0) this.counterUntil = 0;
     if (outcome.result === 'parry') {
-      attacker.model.deflected(outcome.attackerPosture * (target === this.player && this.readingUntil > this.now ? 2 : 1), this.now); this.parryChain=this.now-this.lastParry<1500?this.parryChain+1:1;this.lastParry=this.now;this.parryFlashUntil=this.now+190;this.sounds.effect('parry', 1.1,1+Math.min(3,this.parryChain-1)*.08); this.burst('parry', target.model.x + target.model.facing * 35, target.model.y - 80, 150, 270);
-      this.stopForImpact(65); this.shake(.0018, 85); if (target === this.player) {this.parries++; if (this.readingUntil > this.now) this.counterUntil = this.now + 1800; if (this.readingUntil > this.now) target.model.stamina = Math.min(100, target.model.stamina + 5);}
+      attacker.model.deflected(outcome.attackerPosture * (target === this.player && this.readingUntil > this.now ? 2 : 1), this.now); this.perfectParry(target); if (target === this.player) {this.parries++; if (this.readingUntil > this.now) this.counterUntil = this.now + 1800; if (this.readingUntil > this.now) target.model.stamina = Math.min(100, target.model.stamina + 5);}
       if (attacker === this.boss && attacker.model.stamina <= 0) this.guardBreakEffect(attacker);
       return;
     }
@@ -415,11 +426,19 @@ export class BossGameScene extends Phaser.Scene {
     if(event.effect==='water')this.sounds.effect('water2',.8);
     else this.sounds.strike(attacker.model.id==='zabuza'?'sword':event.posture&&event.posture>=30?'heavy':attacker.model.action?.definition.action==='light2'?'kick':'palm',.85);
     this.sounds.voice(target.model.id, target.model.health <= 0 ? 'defeat' : 'hurt');
-    this.burst(event.effect === 'ice' ? 'ice-shards' : 'parry', target.model.x, target.model.y - 65, 90, 210);
+    const armored=target.model.isBoss&&this.now>=target.model.hurtUntil&&this.now>=target.model.guardBrokenUntil;
+    this.burst(event.effect === 'ice' ? 'ice-shards' : 'parry', target.model.x, target.model.y - 65, armored?42:90, armored?100:210).setTint(armored?0x93b9cc:0xfff0c7);
     if (target.ally && !target.key.startsWith('clone')) target.model.health = Math.max(1, target.model.health);
     if (!target.model.isBoss) target.body.body.setVelocityX((target.model.x >= attacker.model.x ? 1 : -1) * (event.red ? 245 : 135));
     else if (target.model.guardBrokenUntil > this.now) target.body.body.setVelocityX((target.model.x >= attacker.model.x ? 1 : -1) * 40);
     this.stopForImpact(event.red ? 40 : 25); this.shake(event.red ? .003 : .0015, 90);
+  }
+  private perfectParry(target:Fighter){
+    this.parryChain=this.now-this.lastParry<1500?this.parryChain+1:1;this.lastParry=this.now;
+    const x=target.model.x+target.model.facing*30,y=target.model.y-90;
+    if(this.parrySignals.length>=6)this.parrySignals.shift()!.text.destroy();
+    const text=this.add.text(x,target.model.y-CHARACTER[target.model.id].height-28,'PERFECT PARRY',{fontFamily:'Arial',fontSize:'18px',fontStyle:'bold',color:'#fff2b0',stroke:'#102635',strokeThickness:4}).setOrigin(.5).setDepth(14);
+    this.parrySignals.push({x,y,born:this.now,text});this.sounds.effect('parry',1);this.burst('parry',x,y,130,200);this.stopForImpact(60);this.shake(.0015,70);
   }
   private guardBreakEffect(f: Fighter) {
     if (Math.abs(f.model.guardBrokenUntil - this.now - (f.model.isBoss ? COMBAT.bossBreak : COMBAT.guardBreak)) > 60) return;
@@ -436,7 +455,7 @@ export class BossGameScene extends Phaser.Scene {
     if (friendly && event.effect !== 'water' && event.effect !== 'fire') image = namedArt(this, 'props', f.model.id === 'sasuke' ? 'windmill-shuriken' : 'shuriken', x, y, f.model.id === 'sasuke' ? 43 : 24);
     else if (name === 'senbon') {
       if (f.model.action?.definition.id === 'sword-throw') {image = this.add.image(x, y, 'v2-zabuza-sword').setDisplaySize(166, 28); rx = 65; ry = 13;}
-      else {image = this.add.image(x,y,'v8-needle').setDisplaySize(waterNeedle?60:48,waterNeedle?4:3); rx=18;ry=3;if(waterNeedle)image.setTint(0x98e8ff);}
+      else {image = this.add.image(x,y,'v8-needle').setDisplaySize(waterNeedle?60:48,waterNeedle?9:8); rx=18;ry=3;if(waterNeedle)image.setTint(0x98e8ff);}
     }
     else if(waterRow!==undefined){const width=event.red?310:170;image=this.add.image(x,y,'v3-water',String(waterRow*4)).setDisplaySize(width,width*.5);rx=event.red?48:25;ry=event.red?52:12;}
     else {image = namedArt(this, 'effects', name, x, y, 138); rx = 44; ry = 40;}
@@ -498,7 +517,7 @@ export class BossGameScene extends Phaser.Scene {
       const source = p.owner;
       p.friendly = true; p.owner = target; p.vx = -p.vx; p.vy = -p.vy; p.hit.clear(); p.expires = this.now + 2300;
       p.image.rotation += Math.PI;
-      source.model.deflected(outcome.attackerPosture * (this.readingUntil > this.now ? 2 : 1), this.now); this.sounds.effect('parry', 1); this.burst('parry', target.model.x, target.model.y - 70, 150, 270);
+      source.model.deflected(outcome.attackerPosture * (this.readingUntil > this.now ? 2 : 1), this.now); this.perfectParry(target);
       if (target === this.player) {this.parries++; if(this.readingUntil>this.now)this.counterUntil=this.now+1800;} this.stopForImpact(40); if (this.boss.model.stamina <= 0) this.guardBreakEffect(this.boss); return true;
     }
     if (outcome.result === 'block') {this.sounds.effect('guard', .7); this.burst('parry', target.model.x, target.model.y - 70, 50, 120); return false;}
@@ -656,8 +675,8 @@ export class BossGameScene extends Phaser.Scene {
       if (progress >= 1) {effect.image.destroy(); return false;}
       if(effect.waterRow!==undefined)effect.image.setFrame(String((effect.waterRow===2?0:effect.waterRow*4)+Math.min(3,Math.floor(progress*4))));
       if(effect.tidal){const t=effect.tidal;effect.image.x=t.x+(progress-.45)*95*t.owner.model.facing;
-        if(progress>=.4&&!t.hit){t.hit=true;const bounds={x:t.x-95,y:this.floor-230,width:190,height:230};
-          for(const target of this.fighters.filter(a=>!a.hostile))if(overlaps(bounds,this.box(target)))this.hit(t.owner,target,t.event,t.key);}
+        if(progress>=.4&&!t.hit){t.hit=true;const shape=redOutline('great-waterfall',t.x,this.floor,1,t.event);
+          for(const target of this.fighters.filter(a=>!a.hostile))if(outlineHits(shape,this.box(target)))this.hit(t.owner,target,t.event,t.key);}
       }
       const ratio = effect.image.height / effect.image.width;
       effect.image.setAlpha(effect.tidal ? Math.min(1,(1-progress)*3) : 1 - progress).setDisplaySize(effect.width * (1 + progress * effect.grow), effect.width * ratio * (1 + progress * effect.grow));
@@ -671,8 +690,8 @@ export class BossGameScene extends Phaser.Scene {
         for(let i=0;i<6;i++){const a=age/500+i*Math.PI/3;graphics.fillStyle(0xffbbdd,.8);graphics.fillCircle(v.x+Math.cos(a)*50,v.y-100+Math.sin(a)*38,3);}
         if(this.now<this.bossRestrainedUntil){const b=this.boss.model;graphics.lineStyle(2,0xff94c6,.9);graphics.strokeEllipse(b.x,b.y-180,52,15);}
       }}
-    if(this.now<this.parryFlashUntil){const a=(this.parryFlashUntil-this.now)/190,x=this.player.model.x+this.player.model.facing*40,y=this.player.model.y-85;
-      graphics.lineStyle(3,0xffefac,a);for(let i=0;i<9;i++){const angle=i*Math.PI*2/9;graphics.lineBetween(x+Math.cos(angle)*20,y+Math.sin(angle)*20,x+Math.cos(angle)*(95-a*40),y+Math.sin(angle)*(95-a*40));}}
+    this.parrySignals=this.parrySignals.filter(signal=>{const age=this.now-signal.born;if(age>=450){signal.text.destroy();return false;}signal.text.setAlpha(Math.min(1,(450-age)/160));
+      const alpha=1-age/220;if(alpha>0){graphics.lineStyle(bridge.settings().reducedShake?2:4,0xffefb0,alpha);for(let i=0;i<8;i++){const a=i*Math.PI/4;graphics.lineBetween(signal.x+Math.cos(a)*12,signal.y+Math.sin(a)*12,signal.x+Math.cos(a)*(35+age*.14),signal.y+Math.sin(a)*(35+age*.14));}}return true;});
     const attack=this.boss.model.action;
     if(this.boss.model.id==='zabuza'&&attack){const cue=swordPresentation(attack.definition,this.now-attack.started);
       if(cue&&cue.remaining>0&&cue.remaining<500){const b=this.boss.model,color=cue.red?0xff5365:0xffdfa0,alpha=cue.remaining<145?.95:.32;
@@ -680,12 +699,22 @@ export class BossGameScene extends Phaser.Scene {
         if(cue.remaining<145){graphics.fillStyle(color,.95);graphics.fillCircle(b.x+b.facing*60,b.y-130,7);}
       }}
 
-    if (this.player.model.id === 'kakashi' && this.readingUntil > this.now) {
-      const p=this.player.model,b=this.boss.model; graphics.lineStyle(5,0xf04b69,.3); graphics.strokeRect(this.cameras.main.scrollX+5,5,1270,710);
-      graphics.lineStyle(2,0xff5d71,.65); graphics.strokeCircle(p.x,p.y-130,26);
-      for(let i=0;i<3;i++){const a=this.now/250+i*Math.PI*2/3;graphics.fillStyle(0xff5165,1);graphics.fillCircle(p.x+Math.cos(a)*18,p.y-130+Math.sin(a)*18,4);}
-      graphics.lineStyle(2,0xff7d8b,.32);graphics.lineBetween(p.x,p.y-100,b.x,b.y-85);
+    const reading=this.player.model.id==='kakashi'&&this.readingUntil>this.now,reduced=bridge.settings().reducedShake;
+    for(const bg of this.backgrounds){if(reading)bg.setTint(0x677e8b);else bg.clearTint();}
+    this.sharinganEchoes=this.sharinganEchoes.filter(e=>{const age=this.now-Number(e.getData('born'));if(!reading||age>260){e.destroy();return false;}e.setAlpha((1-age/260)*.18);return true;});
+    if(reading){
+      const p=this.player.model;graphics.lineStyle(2,0xd63358,.4);graphics.strokeRect(this.cameras.main.scrollX+5,5,1270,710);
+      const eyeX=p.x+p.facing*8,eyeY=p.y-CHARACTER[p.id].height*(p.action?.definition.action==='aerial'?.67:.84);
+      graphics.fillStyle(0xff335b,1);graphics.fillEllipse(eyeX,eyeY,12,5);graphics.lineStyle(1,0xff6684,.7);graphics.strokeCircle(eyeX,eyeY,11);
+      if(!reduced&&this.now-this.lastEcho>65){this.lastEcho=this.now;for(const f of [this.player,this.boss]){if(!f.sprite.visible)continue;const v=f.sprite;const echo=this.add.sprite(v.x,v.y,v.texture.key,v.frame.name).setOrigin(v.originX,v.originY).setScale(v.scaleX,v.scaleY).setFlipX(v.flipX).setTint(0x81cfd9).setAlpha(.18).setDepth(3);echo.setData('born',this.now);this.sharinganEchoes.push(echo);}}
+      while(this.sharinganEchoes.length>8)this.sharinganEchoes.shift()!.destroy();
+      for(const q of this.projectiles.slice(0,28)){const speed=Math.hypot(q.vx,q.vy)||1,dx=q.vx/speed,dy=q.vy/speed;
+        graphics.lineStyle(1,0xbaf6ff,.22);graphics.lineBetween(q.x,q.y,q.x+dx*180,q.y+dy*180);
+        for(let i=1;i<=(reduced?1:3);i++){graphics.lineStyle(1,0xc8ffff,.5-i*.1);graphics.strokeEllipse(q.x-dx*i*20,q.y-dy*i*20,8+i*3,16+i*5);}
+      }
     }
+    for(const effect of this.effects)if(effect.tidal&&!effect.tidal.hit){const pts=redOutline('great-waterfall',effect.tidal.x,this.floor,1,effect.tidal.event);graphics.lineStyle(3,0xff4e59,.8);graphics.strokePoints(pts,true);}
+    if(this.boss.model.action?.definition.id==='parry-stance'){const b=this.boss.model,age=this.now-b.action!.started;graphics.lineStyle(age>=450?4:2,0xaaf4ff,.9);graphics.strokeCircle(b.x,b.y-120,age>=450?25:15+age/45);}
     for(const projectile of this.projectiles){
       if(projectile.kind==='needle'&&projectile.expires>this.now){
         const speed=Math.hypot(projectile.vx,projectile.vy),dx=projectile.vx/speed,dy=projectile.vy/speed;
@@ -727,8 +756,10 @@ export class BossGameScene extends Phaser.Scene {
           const color = next.red ? 0xff4e59 : 0xf3dda8; graphics.lineStyle(next.red ? 4 : 2, color, .8);
           const radius = 12 + clamp(timeLeft / 75, 0, 12); graphics.strokeCircle(x, y, radius);
           if (next.red) {graphics.beginPath(); graphics.moveTo(x, y - 9); graphics.lineTo(x, y + 2); graphics.strokePath(); graphics.fillStyle(color, 1); graphics.fillCircle(x, y + 8, 2.5);}
-          if (next.red && action.definition.id === 'great-waterfall') {graphics.fillStyle(0xff4e59, .12 + (1 - timeLeft / 1000) * .1); graphics.fillRect(this.targetX - 95, this.floor - 270, 190, 270); graphics.lineStyle(2, color, .55); graphics.lineBetween(this.targetX - 95, this.floor - 2, this.targetX + 95, this.floor - 2);}
-          else if (next.red) {graphics.lineStyle(5, color, .45); graphics.lineBetween(this.boss.model.x, this.boss.model.y - 80, this.boss.model.x + this.boss.model.facing * 110, this.boss.model.y - 55);}
+          if(next.red&&next.kind!=='projectile'){
+            const water=action.definition.id==='great-waterfall';const points=redOutline(action.definition.id,water?clamp(this.targetX,this.arenaMin+60,this.arenaMax-60):this.boss.model.x,this.floor,this.boss.model.facing,next);
+            graphics.lineStyle(3,color,.85);graphics.fillStyle(color,.055);graphics.fillPoints(points,true);graphics.strokePoints(points,true);
+          }
           if (mirror && visible) {graphics.lineStyle(1, color, .16); graphics.lineBetween(mirror.x, mirror.y, this.targetX, this.targetY);}
         }
       }
@@ -782,7 +813,7 @@ export class BossGameScene extends Phaser.Scene {
     for(let i=0;i<8;i++){const a=i*.78+time*.0002;g.fillStyle(0xe3ffff,.55);g.fillCircle(x+Math.cos(a)*95,y+Math.sin(a)*95,2);}
   }
   private startCinema(clip: CinemaClip) {
-    this.clearStage(); this.arena(clip.arena); this.physics.world.pause(); this.sounds.stopEffects(); this.sounds.sync(true); this.cinemaClock = 0;
+    this.clearStage(); this.arena(clip.arena); this.physics.world.pause(); this.sounds.stopEffects(); this.sounds.sync(true); this.cinemaClock = 0;this.presentationClock=0;
     this.cinemaPresentation = new CinemaPresentation(this);
     for (const a of clip.actors) {
       const character: CharacterId | undefined = ['kakashi', 'naruto', 'sasuke', 'sakura', 'zabuza', 'haku'].includes(a.id) ? a.id as CharacterId : a.id === 'prisoner' ? 'kakashi' : a.id === 'clone' ? 'naruto' : undefined;
@@ -792,11 +823,11 @@ export class BossGameScene extends Phaser.Scene {
       sprite.setAlpha(a.alpha ?? 1);
       this.cinemaActors.set(a.id, {sprite, id: a.id, character, animation: a.animation, animationAt: 0, facing: a.facing});
     }
-    if (clip.id === 'a-demon-in-the-snow') {for (const id of ['hound1', 'hound2', 'hound3','gato','henchman1','henchman2','henchman3'] as ActorId[]) this.cinemaActors.get(id)?.sprite.setAlpha(0);}
-    this.inputs.clear(); bridge.patch({screen: 'intro', boss: null, cinematic: clip.id, elapsed: this.elapsed});
+    if (clip.id === 'a-demon-in-the-snow'||clip.id==='haku-interception') {for (const id of ['hound1', 'hound2', 'hound3','gato','henchman1','henchman2','henchman3'] as ActorId[]) this.cinemaActors.get(id)?.sprite.setAlpha(0);}
+    this.inputs.clear();this.inputs.quarantineConfirm(); bridge.patch({panelWaiting:false,canAdvance:false,screen: 'intro', boss: null, cinematic: clip.id, elapsed: this.elapsed});
   }
   private cinemaCue(cue: CinemaCue) {
-    this.cinemaPresentation?.cue(cue, this.cinemaClock);
+    this.cinemaPresentation?.cue(cue, this.presentationClock);
     const actor = cue.actor ? this.cinemaActors.get(cue.actor) : undefined;
     if (actor) {
       if (cue.animation) {actor.animation = cue.animation; actor.animationAt = this.cinemaClock; actor.settleAt=['idle','guardbreak','defeat','block'].includes(cue.animation)?undefined:this.cinemaClock+(cue.duration||(['ultimate'].includes(cue.animation)?1100:650));}
@@ -836,12 +867,16 @@ export class BossGameScene extends Phaser.Scene {
     }
   }
   private updateCinema(dt: number) {
-    this.now += dt; this.cinemaClock += dt;
-    this.director.update(dt); if (this.director.mode !== 'cinematic') return;
+    this.now+=dt;this.presentationClock+=dt;
+    this.director.update(dt);if(this.director.mode!=='cinematic')return;this.cinemaClock=this.director.clock;
+    if(this.director.waiting)this.tweens.pauseAll();else this.tweens.resumeAll();
+    bridge.patch({panelWaiting:this.director.waiting,canAdvance:this.director.canAdvance});
+    const storyClock=this.cinemaClock+(this.director.clip?.offset||0);
+
     for (const actor of this.cinemaActors.values()) {
       if(actor.settleAt&&this.cinemaClock>=actor.settleAt){actor.animation='idle';actor.animationAt=this.cinemaClock;actor.settleAt=undefined;}
       if (actor.character) {const clip = this.director.clip?.id;
-        const variant = actor.character === 'zabuza' && clip === 'a-demon-in-the-snow' && this.cinemaClock >= 18700 ? 'final-stand' : actor.character === 'haku' && (clip === 'a-demon-in-the-snow' || clip === 'narutos-hesitation' && this.cinemaClock >= 2200) ? 'unmasked' : actor.character === 'naruto' && (clip === 'narutos-hesitation' || clip === 'sasuke-protects-naruto' && this.cinemaClock >= 12800) ? 'awakened' : undefined;
+        const variant = actor.character === 'zabuza' && ['a-demon-in-the-snow','gatos-betrayal','snowy-rest'].includes(clip||'') && storyClock >= 18700 ? 'final-stand' : actor.character === 'haku' && (['a-demon-in-the-snow','haku-interception','gatos-betrayal','snowy-rest'].includes(clip||'') || clip === 'narutos-hesitation' && this.cinemaClock >= 2200) ? 'unmasked' : actor.character === 'naruto' && (clip === 'narutos-hesitation' || clip === 'sasuke-protects-naruto' && this.cinemaClock >= 12800) ? 'awakened' : undefined;
         poseBattle(actor.sprite as Phaser.GameObjects.Sprite, actor.character, actor.animation, ['idle','block','guardbreak'].includes(actor.animation)?0:this.cinemaClock - actor.animationAt, actor.facing, undefined, variant);
         if(actor.animation==='idle')actor.sprite.setScale(actor.sprite.scaleX,actor.sprite.scaleY*(1+Math.sin(this.cinemaClock/550)*.006));
         if (actor.animation === 'defeat') actor.sprite.setDepth(1);}
@@ -854,7 +889,7 @@ export class BossGameScene extends Phaser.Scene {
     }
     if(this.cinemaPrison&&this.prisonActor)this.drawPrison(this.cinemaPrison,this.prisonActor.sprite.x,this.prisonActor.sprite.y-78,this.cinemaClock);
     this.updateEffects(dt); this.cueGraphics.clear();
-    this.cinemaPresentation?.update(this.cinemaClock, id => id ? this.cinemaActors.get(id)?.sprite : undefined);
+    this.cinemaPresentation?.update(this.presentationClock, id => id ? this.cinemaActors.get(id)?.sprite : undefined);
     if (this.snowActive) for (const flake of this.snow) {
       flake.y += flake.speed * dt / 1000; flake.x += Math.sin(flake.y / 80) * dt * .004; if (flake.y > 730) flake.y = -10;
       this.cueGraphics.fillStyle(0xf0faff, .7); this.cueGraphics.fillCircle(flake.x, flake.y, 1.1 + flake.speed / 24);
@@ -872,22 +907,25 @@ export class BossGameScene extends Phaser.Scene {
     bridge.patch({screen: 'victory', elapsed: this.elapsed, boss: null, phaseProgress: 1, parries: this.parries, retries: this.retries});
   }
   command(command: Command) {
+    if(typeof command!=='string')return;
+    if(command==='advance'&&bridge.get().screen==='intro'){if(this.director.advance()){this.cinemaPresentation?.dismissPanel();this.tweens.resumeAll();this.inputs.clear();this.inputs.quarantineConfirm();}return;}
     if (command === 'pause' && ['playing', 'intro'].includes(bridge.get().screen)) {
       this.emit();
       this.pausedFrom = bridge.get().screen as 'playing' | 'intro'; this.physics.world.pause(); this.tweens.pauseAll(); this.inputs.clear(); this.sounds.sync(false); bridge.patch({screen: 'paused'});
     } else if (command === 'resume' && bridge.get().screen === 'paused') {
       this.inputs.clear(); this.tweens.resumeAll(); if (this.pausedFrom === 'playing') this.physics.world.resume(); this.sounds.sync(true); void this.sounds.unlock(); bridge.patch({screen: this.pausedFrom});
-    } else if (command === 'skip' && this.director.mode === 'cinematic' && bridge.get().screen === 'intro') {this.inputs.clear(); this.director.skip();}
+    } else if (command === 'skip' && this.director.mode === 'cinematic' && bridge.get().screen === 'intro') {this.inputs.clear();this.inputs.quarantineConfirm(); this.director.skip();}
   }
   status() {
     if (!this.director) return {mode: 'inactive'};
-    return {cinema: this.director.clip ? {id:this.director.clip.id,clock:this.cinemaClock,actors:[...this.cinemaActors.values()].map(a=>({id:a.id,x:a.sprite.x,y:a.sprite.y,facing:a.facing,animation:a.animation}))} : null, mirrorGuardBreaks:this.mirrorGuardBreaks, phase: this.phase, story: this.director.state, mode: this.director.mode, time: Math.round(this.now), phaseElapsed: this.phaseElapsed,
+    return {cinema: this.director.clip ? {id:this.director.clip.id,clock:this.cinemaClock,waiting:this.director.waiting,canAdvance:this.director.canAdvance,actors:[...this.cinemaActors.values()].map(a=>({id:a.id,x:a.sprite.x,y:a.sprite.y,facing:a.facing,animation:a.animation}))} : null, mirrorGuardBreaks:this.mirrorGuardBreaks, phase: this.phase, story: this.director.state, mode: this.director.mode, time: Math.round(this.now), phaseElapsed: this.phaseElapsed,
       player: this.player ? {x: Math.round(this.player.model.x), y: Math.round(this.player.model.y), health: this.player.model.health, stamina: Math.round(this.player.model.stamina),
         chakra: Math.round(this.player.model.chakra), ultimate: Math.round(this.player.model.ultimate), action: this.player.model.action?.definition.id, guarding: this.player.model.guard, facing: this.player.model.facing} : null,
       boss: this.boss ? {x: Math.round(this.boss.model.x), y: Math.round(this.boss.model.y), health: this.boss.model.health, stamina: Math.round(this.boss.model.stamina),
         move: this.boss.model.action?.definition.id, started: this.boss.model.action?.started, readyAt: Math.round(this.brain?.readyAt), recovery: !this.boss.model.action,
         hitAt: this.boss.model.action?.definition.events.map(e => ({at: e.at, red: !!e.red, kind: e.kind})), guardBrokenUntil: this.boss.model.guardBrokenUntil} : null,
       mirrors: {active: this.formation.active, occupied: this.formation.occupied, exposedUntil: this.formation.exposedUntil, count: this.formation.count(), mirrors: this.formation.mirrors},
+      parryFeedback:this.parrySignals.map(p=>({x:p.x,y:p.y,age:this.now-p.born})),fps:Math.round(this.game.loop.actualFps),
       allies:this.fighters.filter(f=>f.support).map(f=>({id:f.key,action:f.model.action?.definition.id,casts:f.supportCasts||0,stamina:f.model.stamina,guarding:f.model.guard,x:f.model.x})), counts: {fighters: this.fighters.length, projectiles: this.projectiles.length, effects: this.effects.length, decoys: this.decoys.length, displayObjects: this.children.length}, audio: this.sounds.status()};
   }
 }

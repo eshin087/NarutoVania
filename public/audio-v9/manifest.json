@@ -1,0 +1,3706 @@
+{
+  "version": 9,
+  "sources": {
+    "taira": {
+      "title": "TKS Free Sound FX - Fighting, Samurai / Ninja, Magic and Nature",
+      "author": "Taira Komori",
+      "url": "https://taira-komori.net/freesounden.html",
+      "license": "Royalty-free project use",
+      "licenseUrl": "https://taira-komori.net/freesounden.html",
+      "attribution": "Sound effects by Taira Komori. Used and edited within this game; individual sounds are not offered as a sound library."
+    },
+    "impacts": {
+      "title": "Impact Sounds",
+      "author": "Kenney",
+      "url": "https://kenney.nl/assets/impact-sounds",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "grunts": {
+      "title": "Male Grunt/Yelling sounds",
+      "author": "HaelDB",
+      "url": "https://opengameart.org/content/male-gruntyelling-sounds",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "female": {
+      "title": "Female Gruntwork - 1",
+      "author": "PlumpDev",
+      "url": "https://opengameart.org/content/female-gruntwork-1",
+      "license": "CC-BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "note": "Page metadata says CC-BY-SA 4.0; attribution text says CC-BY 4.0. These edited clips are offered under the stricter CC-BY-SA 4.0."
+    },
+    "isao": {
+      "title": "Japanese Samurai Ninja Battle Trailer",
+      "author": "SOUND AIRYLUVS by ISAo",
+      "url": "https://opengameart.org/content/japanese-samurai-ninja-battle-trailer",
+      "attribution": "SOUND AIRYLUVS by ISAo https://airyluvs.com/",
+      "license": "OGA-BY 3.0",
+      "licenseUrl": "https://opengameart.org/content/oga-by-30-faq"
+    },
+    "samurai": {
+      "title": "Samurai Nights",
+      "author": "Majadroid / Maik Hoffmann",
+      "url": "https://opengameart.org/content/samurai-nights",
+      "license": "CC-BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+    }
+  },
+  "records": [
+    {
+      "id": "hit-palm-1",
+      "file": "/audio-v9/hit-palm-1.mp3",
+      "wav": "hit-palm-1.wav",
+      "category": "effect",
+      "seconds": 0.22,
+      "peakDb": -6.254,
+      "rmsDb": -23.856,
+      "crestDb": 17.603,
+      "onsetSeconds": 0.00045,
+      "peakSeconds": 0.00478,
+      "targetPeakDb": -5.8,
+      "clippedSamples": 0,
+      "sha256": "ebe160fd79cafcd6873919ac17d948cb3adade15243c2cfa56883331f0313aee",
+      "sources": [
+        "impacts",
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\punch2a.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0.07781,
+          "sourceDurationSeconds": 0.22,
+          "playbackRate": 1,
+          "highpassHz": 65,
+          "lowpassHz": 12000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\impactPunch_medium_000.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0.01295,
+          "sourceDurationSeconds": 0.17,
+          "playbackRate": 1,
+          "highpassHz": 70,
+          "lowpassHz": 1900,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.52,
+          "delaySeconds": 0
+        },
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\impactWood_light_000.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0,
+          "sourceDurationSeconds": 0.07499,
+          "playbackRate": 1,
+          "highpassHz": 1800,
+          "lowpassHz": 8000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.15,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Transient-selected contact; distinct organic punch body and short woody snap; no long tail.",
+      "listened": false
+    },
+    {
+      "id": "hit-palm-2",
+      "file": "/audio-v9/hit-palm-2.mp3",
+      "wav": "hit-palm-2.wav",
+      "category": "effect",
+      "seconds": 0.22,
+      "peakDb": -6.253,
+      "rmsDb": -25.216,
+      "crestDb": 18.964,
+      "onsetSeconds": 0.00059,
+      "peakSeconds": 0.00526,
+      "targetPeakDb": -5.8,
+      "clippedSamples": 0,
+      "sha256": "bb86954a15ca4d2cffe4598c80bbd38c551bf1713235cc88b26caad5bb1ab8ef",
+      "sources": [
+        "impacts",
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\punch2b.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0.3023,
+          "sourceDurationSeconds": 0.22,
+          "playbackRate": 1,
+          "highpassHz": 65,
+          "lowpassHz": 12000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\impactPunch_medium_001.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0.01295,
+          "sourceDurationSeconds": 0.17,
+          "playbackRate": 1,
+          "highpassHz": 70,
+          "lowpassHz": 1900,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.52,
+          "delaySeconds": 0
+        },
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\impactWood_light_001.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0,
+          "sourceDurationSeconds": 0.07499,
+          "playbackRate": 1,
+          "highpassHz": 1800,
+          "lowpassHz": 8000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.15,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Transient-selected contact; distinct organic punch body and short woody snap; no long tail.",
+      "listened": false
+    },
+    {
+      "id": "hit-palm-3",
+      "file": "/audio-v9/hit-palm-3.mp3",
+      "wav": "hit-palm-3.wav",
+      "category": "effect",
+      "seconds": 0.22,
+      "peakDb": -6.264,
+      "rmsDb": -23.297,
+      "crestDb": 17.033,
+      "onsetSeconds": 0.00057,
+      "peakSeconds": 0.00379,
+      "targetPeakDb": -5.8,
+      "clippedSamples": 0,
+      "sha256": "f50a25e11b3d70aa0440c6ec61856eb0da49fcbd0607aa9a1a2708fc2d6ef30f",
+      "sources": [
+        "impacts",
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\punch2c.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0.02792,
+          "sourceDurationSeconds": 0.22,
+          "playbackRate": 1,
+          "highpassHz": 65,
+          "lowpassHz": 12000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\impactPunch_medium_002.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0.01794,
+          "sourceDurationSeconds": 0.17,
+          "playbackRate": 1,
+          "highpassHz": 70,
+          "lowpassHz": 1900,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.52,
+          "delaySeconds": 0
+        },
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\impactWood_light_002.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0,
+          "sourceDurationSeconds": 0.07499,
+          "playbackRate": 1,
+          "highpassHz": 1800,
+          "lowpassHz": 8000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.15,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Transient-selected contact; distinct organic punch body and short woody snap; no long tail.",
+      "listened": false
+    },
+    {
+      "id": "hit-kick-1",
+      "file": "/audio-v9/hit-kick-1.mp3",
+      "wav": "hit-kick-1.wav",
+      "category": "effect",
+      "seconds": 0.2624,
+      "peakDb": -5.295,
+      "rmsDb": -19.476,
+      "crestDb": 14.181,
+      "onsetSeconds": 0.00238,
+      "peakSeconds": 0.01215,
+      "targetPeakDb": -4.8,
+      "clippedSamples": 0,
+      "sha256": "7198cd0090abb6e4c23e0382853e52b13f64db93780541ea6dc96332a5ad412a",
+      "sources": [
+        "impacts",
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\kick1.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0.01295,
+          "sourceDurationSeconds": 0.2624,
+          "playbackRate": 1,
+          "highpassHz": 65,
+          "lowpassHz": 12000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\impactPunch_heavy_000.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0.01295,
+          "sourceDurationSeconds": 0.22752,
+          "playbackRate": 0.91,
+          "highpassHz": 45,
+          "lowpassHz": 1800,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.72,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Low punch layer reinforces the contact; preserved sharp first transient and controlled release.",
+      "listened": false
+    },
+    {
+      "id": "hit-kick-2",
+      "file": "/audio-v9/hit-kick-2.mp3",
+      "wav": "hit-kick-2.wav",
+      "category": "effect",
+      "seconds": 0.25002,
+      "peakDb": -5.213,
+      "rmsDb": -17.801,
+      "crestDb": 12.588,
+      "onsetSeconds": 0.00098,
+      "peakSeconds": 0.00841,
+      "targetPeakDb": -4.8,
+      "clippedSamples": 0,
+      "sha256": "8e4fe478e86b7917efb19c0a6166852813a531db7135cf52ddac5e61608790af",
+      "sources": [
+        "impacts",
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\heavy_punch1.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0.01295,
+          "sourceDurationSeconds": 0.22569,
+          "playbackRate": 1,
+          "highpassHz": 65,
+          "lowpassHz": 12000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\impactPunch_heavy_001.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0.01295,
+          "sourceDurationSeconds": 0.22752,
+          "playbackRate": 0.91,
+          "highpassHz": 45,
+          "lowpassHz": 1800,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.72,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Low punch layer reinforces the contact; preserved sharp first transient and controlled release.",
+      "listened": false
+    },
+    {
+      "id": "hit-kick-3",
+      "file": "/audio-v9/hit-kick-3.mp3",
+      "wav": "hit-kick-3.wav",
+      "category": "effect",
+      "seconds": 0.25832,
+      "peakDb": -5.261,
+      "rmsDb": -18.502,
+      "crestDb": 13.241,
+      "onsetSeconds": 0.00057,
+      "peakSeconds": 0.00875,
+      "targetPeakDb": -4.8,
+      "clippedSamples": 0,
+      "sha256": "7bc89a1b9e1035a38770f699073e677253da8f7367d99e589046a612446126e7",
+      "sources": [
+        "impacts",
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\turning_kick.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0.19255,
+          "sourceDurationSeconds": 0.25832,
+          "playbackRate": 1,
+          "highpassHz": 65,
+          "lowpassHz": 12000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\impactPunch_heavy_002.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0.01295,
+          "sourceDurationSeconds": 0.22752,
+          "playbackRate": 0.91,
+          "highpassHz": 45,
+          "lowpassHz": 1800,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.72,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Low punch layer reinforces the contact; preserved sharp first transient and controlled release.",
+      "listened": false
+    },
+    {
+      "id": "hit-heavy",
+      "file": "/audio-v9/hit-heavy.mp3",
+      "wav": "hit-heavy.wav",
+      "category": "effect",
+      "seconds": 0.39,
+      "peakDb": -4.555,
+      "rmsDb": -15.858,
+      "crestDb": 11.303,
+      "onsetSeconds": 0.00156,
+      "peakSeconds": 0.00649,
+      "targetPeakDb": -4.1,
+      "clippedSamples": 0,
+      "sha256": "0991f3211edd0fcc48844e6091a2c02abeb995970c0d36fffb0fa0ea9266678c",
+      "sources": [
+        "impacts",
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\heavy_punch2.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0.01295,
+          "sourceDurationSeconds": 0.39,
+          "playbackRate": 1,
+          "highpassHz": 65,
+          "lowpassHz": 12000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\impactPunch_heavy_002.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0.01295,
+          "sourceDurationSeconds": 0.2905,
+          "playbackRate": 0.83,
+          "highpassHz": 38,
+          "lowpassHz": 1300,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.9,
+          "delaySeconds": 0
+        },
+        {
+          "source": "taira",
+          "original": "audio-v3\\breaking_branchs1.mp3",
+          "sourcePage": "https://taira-komori.net/nature01en.html",
+          "startSeconds": 0.08778,
+          "sourceDurationSeconds": 0.16,
+          "playbackRate": 1,
+          "highpassHz": 1000,
+          "lowpassHz": 6500,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.15,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Heavy contact with low recorded body and restrained crack detail; distinct source take.",
+      "listened": false
+    },
+    {
+      "id": "hit-heavy-2",
+      "file": "/audio-v9/hit-heavy-2.mp3",
+      "wav": "hit-heavy-2.wav",
+      "category": "effect",
+      "seconds": 0.35,
+      "peakDb": -4.566,
+      "rmsDb": -21.637,
+      "crestDb": 17.072,
+      "onsetSeconds": 0.00073,
+      "peakSeconds": 0.01188,
+      "targetPeakDb": -4.1,
+      "clippedSamples": 0,
+      "sha256": "1d39ab530f12d061ab3610c1106741eee07c0e5a17caa414cef0ecbe89004e20",
+      "sources": [
+        "impacts",
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\damaged2.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0.04788,
+          "sourceDurationSeconds": 0.26821,
+          "playbackRate": 1,
+          "highpassHz": 65,
+          "lowpassHz": 12000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\impactPunch_heavy_003.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0.00797,
+          "sourceDurationSeconds": 0.2905,
+          "playbackRate": 0.83,
+          "highpassHz": 38,
+          "lowpassHz": 1300,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.9,
+          "delaySeconds": 0
+        },
+        {
+          "source": "taira",
+          "original": "audio-v3\\breaking_branchs1.mp3",
+          "sourcePage": "https://taira-komori.net/nature01en.html",
+          "startSeconds": 0.08778,
+          "sourceDurationSeconds": 0.16,
+          "playbackRate": 1,
+          "highpassHz": 1000,
+          "lowpassHz": 6500,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.15,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Heavy contact with low recorded body and restrained crack detail; distinct source take.",
+      "listened": false
+    },
+    {
+      "id": "hit-heavy-3",
+      "file": "/audio-v9/hit-heavy-3.mp3",
+      "wav": "hit-heavy-3.wav",
+      "category": "effect",
+      "seconds": 0.35,
+      "peakDb": -4.547,
+      "rmsDb": -22.481,
+      "crestDb": 17.934,
+      "onsetSeconds": 0.00045,
+      "peakSeconds": 0.02333,
+      "targetPeakDb": -4.1,
+      "clippedSamples": 0,
+      "sha256": "eb8a78a3f54941ca572624a2fc5fff42656c3b40930d01f55092f51a4eb9db9d",
+      "sources": [
+        "impacts",
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\straight_punch.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0.44198,
+          "sourceDurationSeconds": 0.20578,
+          "playbackRate": 1,
+          "highpassHz": 65,
+          "lowpassHz": 12000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\impactPunch_heavy_004.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0.01295,
+          "sourceDurationSeconds": 0.2905,
+          "playbackRate": 0.83,
+          "highpassHz": 38,
+          "lowpassHz": 1300,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.9,
+          "delaySeconds": 0
+        },
+        {
+          "source": "taira",
+          "original": "audio-v3\\breaking_branchs1.mp3",
+          "sourcePage": "https://taira-komori.net/nature01en.html",
+          "startSeconds": 0.08778,
+          "sourceDurationSeconds": 0.16,
+          "playbackRate": 1,
+          "highpassHz": 1000,
+          "lowpassHz": 6500,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.15,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Heavy contact with low recorded body and restrained crack detail; distinct source take.",
+      "listened": false
+    },
+    {
+      "id": "whoosh-1",
+      "file": "/audio-v9/whoosh-1.mp3",
+      "wav": "whoosh-1.wav",
+      "category": "effect",
+      "seconds": 0.24,
+      "peakDb": -12.248,
+      "rmsDb": -29.726,
+      "crestDb": 17.478,
+      "onsetSeconds": 0.04088,
+      "peakSeconds": 0.07333,
+      "targetPeakDb": -11.8,
+      "clippedSamples": 0,
+      "sha256": "25bfd59d5754a6d8970079e886f183b83a254d7efc2a2379234e0a6777339b76",
+      "sources": [
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\KungFu_swish1.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0,
+          "sourceDurationSeconds": 0.24,
+          "playbackRate": 1,
+          "highpassHz": 220,
+          "lowpassHz": 9000,
+          "reverse": false,
+          "fadeInSeconds": 0.012,
+          "fadeOutSeconds": 0.07,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Crest-centered short swing; air layer deliberately below contact level.",
+      "listened": false
+    },
+    {
+      "id": "whoosh-2",
+      "file": "/audio-v9/whoosh-2.mp3",
+      "wav": "whoosh-2.wav",
+      "category": "effect",
+      "seconds": 0.29,
+      "peakDb": -12.245,
+      "rmsDb": -30.416,
+      "crestDb": 18.171,
+      "onsetSeconds": 0.00229,
+      "peakSeconds": 0.10837,
+      "targetPeakDb": -11.8,
+      "clippedSamples": 0,
+      "sha256": "ec0b8817f0ad9319a23223ab5e39aff6a581d7fccba06900be8bec4ff0d7e5c8",
+      "sources": [
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\KungFu_swish2.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0.11449,
+          "sourceDurationSeconds": 0.29,
+          "playbackRate": 1,
+          "highpassHz": 220,
+          "lowpassHz": 9000,
+          "reverse": false,
+          "fadeInSeconds": 0.012,
+          "fadeOutSeconds": 0.07,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Crest-centered short swing; air layer deliberately below contact level.",
+      "listened": false
+    },
+    {
+      "id": "whoosh-3",
+      "file": "/audio-v9/whoosh-3.mp3",
+      "wav": "whoosh-3.wav",
+      "category": "effect",
+      "seconds": 0.32998,
+      "peakDb": -12.248,
+      "rmsDb": -30.443,
+      "crestDb": 18.195,
+      "onsetSeconds": 0.00111,
+      "peakSeconds": 0.10535,
+      "targetPeakDb": -11.8,
+      "clippedSamples": 0,
+      "sha256": "b0ddf8618e7b2c4d63af3a30bfeee3c81209fcf316bfc81170656c655bdd8c81",
+      "sources": [
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\KungFu_swish3.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0.25417,
+          "sourceDurationSeconds": 0.32998,
+          "playbackRate": 1,
+          "highpassHz": 220,
+          "lowpassHz": 9000,
+          "reverse": false,
+          "fadeInSeconds": 0.012,
+          "fadeOutSeconds": 0.07,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Crest-centered short swing; air layer deliberately below contact level.",
+      "listened": false
+    },
+    {
+      "id": "sword-swish",
+      "file": "/audio-v9/sword-swish.mp3",
+      "wav": "sword-swish.wav",
+      "category": "effect",
+      "seconds": 0.44,
+      "peakDb": -10.163,
+      "rmsDb": -30.897,
+      "crestDb": 20.734,
+      "onsetSeconds": 0.08955,
+      "peakSeconds": 0.12991,
+      "targetPeakDb": -9.8,
+      "clippedSamples": 0,
+      "sha256": "150fcf2c66580cdf6dcc1e5a5b230fab236a63bb5669da0716f7e73da0b535db",
+      "sources": [
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\sword_attack1.mp3",
+          "sourcePage": "https://taira-komori.net/jidaigeki01en.html",
+          "startSeconds": 0.04964,
+          "sourceDurationSeconds": 0.3828,
+          "playbackRate": 0.87,
+          "highpassHz": 95,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.02,
+          "fadeOutSeconds": 0.1,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "taira",
+          "original": "audio-v3\\KungFu_swish1.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0,
+          "sourceDurationSeconds": 0.2214,
+          "playbackRate": 0.82,
+          "highpassHz": 80,
+          "lowpassHz": 2400,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.3,
+          "delaySeconds": 0.04
+        }
+      ],
+      "edits": "Weighty cleaver sweep built from two recorded air motions; three independent selections.",
+      "listened": false
+    },
+    {
+      "id": "sword-swish-2",
+      "file": "/audio-v9/sword-swish-2.mp3",
+      "wav": "sword-swish-2.wav",
+      "category": "effect",
+      "seconds": 0.44,
+      "peakDb": -10.206,
+      "rmsDb": -28.294,
+      "crestDb": 18.088,
+      "onsetSeconds": 0.04134,
+      "peakSeconds": 0.08907,
+      "targetPeakDb": -9.8,
+      "clippedSamples": 0,
+      "sha256": "d2d4b7827a6610c599c03f605c8aed42904b3026ad50a30d011200cc9f85e9f8",
+      "sources": [
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\sword_attack2.mp3",
+          "sourcePage": "https://taira-komori.net/jidaigeki01en.html",
+          "startSeconds": 0,
+          "sourceDurationSeconds": 0.4092,
+          "playbackRate": 0.93,
+          "highpassHz": 95,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.02,
+          "fadeOutSeconds": 0.1,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "taira",
+          "original": "audio-v3\\KungFu_swish2.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0.11449,
+          "sourceDurationSeconds": 0.2214,
+          "playbackRate": 0.82,
+          "highpassHz": 80,
+          "lowpassHz": 2400,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.3,
+          "delaySeconds": 0.04
+        }
+      ],
+      "edits": "Weighty cleaver sweep built from two recorded air motions; three independent selections.",
+      "listened": false
+    },
+    {
+      "id": "sword-swish-3",
+      "file": "/audio-v9/sword-swish-3.mp3",
+      "wav": "sword-swish-3.wav",
+      "category": "effect",
+      "seconds": 0.44,
+      "peakDb": -10.287,
+      "rmsDb": -28.314,
+      "crestDb": 18.027,
+      "onsetSeconds": 0.01184,
+      "peakSeconds": 0.03082,
+      "targetPeakDb": -9.8,
+      "clippedSamples": 0,
+      "sha256": "04850141c794e74936d947f5ec0af3788f7395b618b548058db03b3948d2c864",
+      "sources": [
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\swish2_3.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0,
+          "sourceDurationSeconds": 0.3432,
+          "playbackRate": 0.78,
+          "highpassHz": 95,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.02,
+          "fadeOutSeconds": 0.1,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "taira",
+          "original": "audio-v3\\KungFu_swish3.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0.25417,
+          "sourceDurationSeconds": 0.2214,
+          "playbackRate": 0.82,
+          "highpassHz": 80,
+          "lowpassHz": 2400,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.3,
+          "delaySeconds": 0.04
+        }
+      ],
+      "edits": "Weighty cleaver sweep built from two recorded air motions; three independent selections.",
+      "listened": false
+    },
+    {
+      "id": "sword-hit",
+      "file": "/audio-v9/sword-hit.mp3",
+      "wav": "sword-hit.wav",
+      "category": "effect",
+      "seconds": 0.28,
+      "peakDb": -5.697,
+      "rmsDb": -18.658,
+      "crestDb": 12.962,
+      "onsetSeconds": 0.00027,
+      "peakSeconds": 0.00753,
+      "targetPeakDb": -5.2,
+      "clippedSamples": 0,
+      "sha256": "84ec74c3100e423a91fa672ed4babd63fd7d37d8e25ebd40ef73900af3b54246",
+      "sources": [
+        "impacts",
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\heavy_punch2.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0.01295,
+          "sourceDurationSeconds": 0.28,
+          "playbackRate": 1,
+          "highpassHz": 65,
+          "lowpassHz": 12000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.8,
+          "delaySeconds": 0
+        },
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\impactMetal_medium_000.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0,
+          "sourceDurationSeconds": 0.26887,
+          "playbackRate": 1,
+          "highpassHz": 350,
+          "lowpassHz": 6500,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.38,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Cleaver contact: body thud plus restrained metallic edge.",
+      "listened": false
+    },
+    {
+      "id": "guard",
+      "file": "/audio-v9/guard.mp3",
+      "wav": "guard.wav",
+      "category": "effect",
+      "seconds": 0.16,
+      "peakDb": -8.346,
+      "rmsDb": -26.984,
+      "crestDb": 18.638,
+      "onsetSeconds": 0.00016,
+      "peakSeconds": 0.00841,
+      "targetPeakDb": -8,
+      "clippedSamples": 0,
+      "sha256": "84d5bb4be06c76fa34ea67c54990e4d64369e724d532591e8d82b17a66559098",
+      "sources": [
+        "impacts",
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\defense1.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0.0379,
+          "sourceDurationSeconds": 0.12229,
+          "playbackRate": 1,
+          "highpassHz": 65,
+          "lowpassHz": 12000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\impactWood_medium_002.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0,
+          "sourceDurationSeconds": 0.16,
+          "playbackRate": 1,
+          "highpassHz": 200,
+          "lowpassHz": 4500,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.32,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Short guarded thud differentiated from ringing parry.",
+      "listened": false
+    },
+    {
+      "id": "parry",
+      "file": "/audio-v9/parry.mp3",
+      "wav": "parry.wav",
+      "category": "effect",
+      "seconds": 0.5,
+      "peakDb": -6.83,
+      "rmsDb": -21.363,
+      "crestDb": 14.532,
+      "onsetSeconds": 0.00034,
+      "peakSeconds": 0.01624,
+      "targetPeakDb": -6.4,
+      "clippedSamples": 0,
+      "sha256": "334b22fce1cfa587edae0495cfbb36b0f5ae00177f42cfd0f2385511fd6e35b4",
+      "sources": [
+        "impacts",
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\wow_katana1.mp3",
+          "sourcePage": "https://taira-komori.net/jidaigeki01en.html",
+          "startSeconds": 0.12769,
+          "sourceDurationSeconds": 0.475,
+          "playbackRate": 0.95,
+          "highpassHz": 700,
+          "lowpassHz": 13000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.62,
+          "delaySeconds": 0
+        },
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\impactMetal_light_000.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0,
+          "sourceDurationSeconds": 0.37297,
+          "playbackRate": 1,
+          "highpassHz": 900,
+          "lowpassHz": 14000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.75,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Fast metal collision and ringing tail; lower low-frequency content than guard.",
+      "listened": false
+    },
+    {
+      "id": "parry-2",
+      "file": "/audio-v9/parry-2.mp3",
+      "wav": "parry-2.wav",
+      "category": "effect",
+      "seconds": 0.5,
+      "peakDb": -6.829,
+      "rmsDb": -23.624,
+      "crestDb": 16.796,
+      "onsetSeconds": 0.00039,
+      "peakSeconds": 0.00766,
+      "targetPeakDb": -6.4,
+      "clippedSamples": 0,
+      "sha256": "f77d38d53a345c5cba1d7cbf445554d5b23ff603e6c4dcfa08a1b79751583fe8",
+      "sources": [
+        "impacts",
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\wow_katana1.mp3",
+          "sourcePage": "https://taira-komori.net/jidaigeki01en.html",
+          "startSeconds": 0.12769,
+          "sourceDurationSeconds": 0.5,
+          "playbackRate": 1.0,
+          "highpassHz": 700,
+          "lowpassHz": 13000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.62,
+          "delaySeconds": 0
+        },
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\impactMetal_light_001.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0,
+          "sourceDurationSeconds": 0.24893,
+          "playbackRate": 1,
+          "highpassHz": 900,
+          "lowpassHz": 14000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.75,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Fast metal collision and ringing tail; lower low-frequency content than guard.",
+      "listened": false
+    },
+    {
+      "id": "parry-3",
+      "file": "/audio-v9/parry-3.mp3",
+      "wav": "parry-3.wav",
+      "category": "effect",
+      "seconds": 0.5,
+      "peakDb": -6.838,
+      "rmsDb": -23.712,
+      "crestDb": 16.874,
+      "onsetSeconds": 0.00045,
+      "peakSeconds": 0.00735,
+      "targetPeakDb": -6.4,
+      "clippedSamples": 0,
+      "sha256": "f0c0e57320f478bf24ac67f8c8c64daaa371b0103f2d7209aa700c64e950f3ee",
+      "sources": [
+        "impacts",
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\wow_katana1.mp3",
+          "sourcePage": "https://taira-komori.net/jidaigeki01en.html",
+          "startSeconds": 0.12769,
+          "sourceDurationSeconds": 0.525,
+          "playbackRate": 1.05,
+          "highpassHz": 700,
+          "lowpassHz": 13000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.62,
+          "delaySeconds": 0
+        },
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\impactMetal_light_002.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0,
+          "sourceDurationSeconds": 0.23288,
+          "playbackRate": 1,
+          "highpassHz": 900,
+          "lowpassHz": 14000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.75,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Fast metal collision and ringing tail; lower low-frequency content than guard.",
+      "listened": false
+    },
+    {
+      "id": "break",
+      "file": "/audio-v9/break.mp3",
+      "wav": "break.wav",
+      "category": "effect",
+      "seconds": 0.37,
+      "peakDb": -5.713,
+      "rmsDb": -18.393,
+      "crestDb": 12.68,
+      "onsetSeconds": 0.00045,
+      "peakSeconds": 0.01186,
+      "targetPeakDb": -5.3,
+      "clippedSamples": 0,
+      "sha256": "de5d6005ae7799f48c1ead3f93d2d24c9a75a6f1e27c6e6be0e7c58ed20a8c71",
+      "sources": [
+        "impacts",
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\damaged2.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0.04788,
+          "sourceDurationSeconds": 0.26821,
+          "playbackRate": 1,
+          "highpassHz": 65,
+          "lowpassHz": 12000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "taira",
+          "original": "audio-v3\\breaking_branchs1.mp3",
+          "sourcePage": "https://taira-komori.net/nature01en.html",
+          "startSeconds": 0.08778,
+          "sourceDurationSeconds": 0.37,
+          "playbackRate": 1,
+          "highpassHz": 65,
+          "lowpassHz": 12000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.45,
+          "delaySeconds": 0
+        },
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\impactWood_heavy_000.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0,
+          "sourceDurationSeconds": 0.204,
+          "playbackRate": 0.85,
+          "highpassHz": 65,
+          "lowpassHz": 12000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.5,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Guard break: dry fracture over contact body.",
+      "listened": false
+    },
+    {
+      "id": "dash",
+      "file": "/audio-v9/dash.mp3",
+      "wav": "dash.wav",
+      "category": "effect",
+      "seconds": 0.28,
+      "peakDb": -12.954,
+      "rmsDb": -30.129,
+      "crestDb": 17.175,
+      "onsetSeconds": 0.00916,
+      "peakSeconds": 0.16689,
+      "targetPeakDb": -12.5,
+      "clippedSamples": 0,
+      "sha256": "11afa356e1ebff3f6e56ee097d2cbbb9394f7870cd674c68f920192f1ee19dfa",
+      "sources": [
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\swish2_3.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0,
+          "sourceDurationSeconds": 0.28,
+          "playbackRate": 1,
+          "highpassHz": 180,
+          "lowpassHz": 6500,
+          "reverse": false,
+          "fadeInSeconds": 0.01,
+          "fadeOutSeconds": 0.045,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Short movement air sound with quick tail.",
+      "listened": false
+    },
+    {
+      "id": "tool",
+      "file": "/audio-v9/tool.mp3",
+      "wav": "tool.wav",
+      "category": "effect",
+      "seconds": 0.16,
+      "peakDb": -13.639,
+      "rmsDb": -31.979,
+      "crestDb": 18.34,
+      "onsetSeconds": 0.00086,
+      "peakSeconds": 0.08367,
+      "targetPeakDb": -13.2,
+      "clippedSamples": 0,
+      "sha256": "6c680e9e46419609918643f6f8045860691277391c2cc6ba984b0ccb7a7bb332",
+      "sources": [
+        "impacts",
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\shuriken_ninja_knifes1.mp3",
+          "sourcePage": "https://taira-komori.net/jidaigeki01en.html",
+          "startSeconds": 0.1544,
+          "sourceDurationSeconds": 0.168,
+          "playbackRate": 1.05,
+          "highpassHz": 1500,
+          "lowpassHz": 12500,
+          "reverse": false,
+          "fadeInSeconds": 0.001,
+          "fadeOutSeconds": 0.04,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\impactMetal_light_000.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0,
+          "sourceDurationSeconds": 0.07,
+          "playbackRate": 1,
+          "highpassHz": 2500,
+          "lowpassHz": 13500,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.12,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Narrow high-frequency needle flick; low bass removed to distinguish from blade and palm.",
+      "listened": false
+    },
+    {
+      "id": "needle-2",
+      "file": "/audio-v9/needle-2.mp3",
+      "wav": "needle-2.wav",
+      "category": "effect",
+      "seconds": 0.16,
+      "peakDb": -13.556,
+      "rmsDb": -32.768,
+      "crestDb": 19.212,
+      "onsetSeconds": 0.00086,
+      "peakSeconds": 0.07776,
+      "targetPeakDb": -13.2,
+      "clippedSamples": 0,
+      "sha256": "69554d649c9a887e1cd5ac0a2858cb9326e97a66f2ba57ea630994b2576ffb84",
+      "sources": [
+        "impacts",
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\shuriken_ninja_knifes1.mp3",
+          "sourcePage": "https://taira-komori.net/jidaigeki01en.html",
+          "startSeconds": 0.1544,
+          "sourceDurationSeconds": 0.1808,
+          "playbackRate": 1.1300000000000001,
+          "highpassHz": 1500,
+          "lowpassHz": 12500,
+          "reverse": false,
+          "fadeInSeconds": 0.001,
+          "fadeOutSeconds": 0.04,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\impactMetal_light_001.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0,
+          "sourceDurationSeconds": 0.07,
+          "playbackRate": 1,
+          "highpassHz": 2500,
+          "lowpassHz": 13500,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.12,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Narrow high-frequency needle flick; low bass removed to distinguish from blade and palm.",
+      "listened": false
+    },
+    {
+      "id": "needle-3",
+      "file": "/audio-v9/needle-3.mp3",
+      "wav": "needle-3.wav",
+      "category": "effect",
+      "seconds": 0.16,
+      "peakDb": -13.648,
+      "rmsDb": -32.636,
+      "crestDb": 18.988,
+      "onsetSeconds": 0.00077,
+      "peakSeconds": 0.0766,
+      "targetPeakDb": -13.2,
+      "clippedSamples": 0,
+      "sha256": "8bf94b2c87e0998d9d7e95a3a934f1c813e82641cc139e42a21ffb79f831b307",
+      "sources": [
+        "impacts",
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\shuriken_ninja_knifes1.mp3",
+          "sourcePage": "https://taira-komori.net/jidaigeki01en.html",
+          "startSeconds": 0.1544,
+          "sourceDurationSeconds": 0.1936,
+          "playbackRate": 1.21,
+          "highpassHz": 1500,
+          "lowpassHz": 12500,
+          "reverse": false,
+          "fadeInSeconds": 0.001,
+          "fadeOutSeconds": 0.04,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\impactMetal_light_002.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0,
+          "sourceDurationSeconds": 0.07,
+          "playbackRate": 1,
+          "highpassHz": 2500,
+          "lowpassHz": 13500,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.12,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Narrow high-frequency needle flick; low bass removed to distinguish from blade and palm.",
+      "listened": false
+    },
+    {
+      "id": "warning",
+      "file": "/audio-v9/warning.mp3",
+      "wav": "warning.wav",
+      "category": "effect",
+      "seconds": 0.42,
+      "peakDb": -12.419,
+      "rmsDb": -26.456,
+      "crestDb": 14.037,
+      "onsetSeconds": 0.00098,
+      "peakSeconds": 0.09383,
+      "targetPeakDb": -12,
+      "clippedSamples": 0,
+      "sha256": "7fdf0c26fb375db515352217f0d185fde7d271a7fe38d666c9ea472512b1a1c4",
+      "sources": [
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\extracting_a_sword1.mp3",
+          "sourcePage": "https://taira-komori.net/jidaigeki01en.html",
+          "startSeconds": 0.04289,
+          "sourceDurationSeconds": 0.42,
+          "playbackRate": 1,
+          "highpassHz": 450,
+          "lowpassHz": 10500,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.1,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Telegraph scrape; separate from attack sound.",
+      "listened": false
+    },
+    {
+      "id": "water",
+      "file": "/audio-v9/water.mp3",
+      "wav": "water.wav",
+      "category": "effect",
+      "seconds": 0.65,
+      "peakDb": -8.842,
+      "rmsDb": -25.967,
+      "crestDb": 17.125,
+      "onsetSeconds": 0.00073,
+      "peakSeconds": 0.00909,
+      "targetPeakDb": -8.4,
+      "clippedSamples": 0,
+      "sha256": "82c625cd54cc424794d8b745944c60357cfb01d8ea6ad1396368b071557242d1",
+      "sources": [
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\water_land.mp3",
+          "sourcePage": "https://taira-komori.net/magic01en.html",
+          "startSeconds": 0.86602,
+          "sourceDurationSeconds": 0.65,
+          "playbackRate": 1,
+          "highpassHz": 85,
+          "lowpassHz": 10500,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.18,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "taira",
+          "original": "audio-v3\\waterfall1.mp3",
+          "sourcePage": "https://taira-komori.net/nature01en.html",
+          "startSeconds": 1.6,
+          "sourceDurationSeconds": 0.56,
+          "playbackRate": 1,
+          "highpassHz": 140,
+          "lowpassHz": 6000,
+          "reverse": false,
+          "fadeInSeconds": 0.035,
+          "fadeOutSeconds": 0.2,
+          "gain": 0.25,
+          "delaySeconds": 0.035
+        }
+      ],
+      "edits": "Selected splash transient with continuous recorded water texture underneath.",
+      "listened": false
+    },
+    {
+      "id": "water2",
+      "file": "/audio-v9/water2.mp3",
+      "wav": "water2.wav",
+      "category": "effect",
+      "seconds": 0.65,
+      "peakDb": -8.846,
+      "rmsDb": -30.587,
+      "crestDb": 21.741,
+      "onsetSeconds": 0.00186,
+      "peakSeconds": 0.00803,
+      "targetPeakDb": -8.4,
+      "clippedSamples": 0,
+      "sha256": "83182bf125d84c91dd870aeb818b492f59e47ca984be43d67c9bbefecfd4b198",
+      "sources": [
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\fall_in_water.mp3",
+          "sourcePage": "https://taira-komori.net/magic01en.html",
+          "startSeconds": 0.26738,
+          "sourceDurationSeconds": 0.65,
+          "playbackRate": 1,
+          "highpassHz": 85,
+          "lowpassHz": 10500,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.18,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "taira",
+          "original": "audio-v3\\waterfall1.mp3",
+          "sourcePage": "https://taira-komori.net/nature01en.html",
+          "startSeconds": 2.0,
+          "sourceDurationSeconds": 0.56,
+          "playbackRate": 1,
+          "highpassHz": 140,
+          "lowpassHz": 6000,
+          "reverse": false,
+          "fadeInSeconds": 0.035,
+          "fadeOutSeconds": 0.2,
+          "gain": 0.25,
+          "delaySeconds": 0.035
+        }
+      ],
+      "edits": "Selected splash transient with continuous recorded water texture underneath.",
+      "listened": false
+    },
+    {
+      "id": "water-3",
+      "file": "/audio-v9/water-3.mp3",
+      "wav": "water-3.wav",
+      "category": "effect",
+      "seconds": 0.65,
+      "peakDb": -8.85,
+      "rmsDb": -24.739,
+      "crestDb": 15.889,
+      "onsetSeconds": 0.00365,
+      "peakSeconds": 0.00998,
+      "targetPeakDb": -8.4,
+      "clippedSamples": 0,
+      "sha256": "af647c0b294af464fde077476670032d9bc81e380d027f4c1b183687c3034b40",
+      "sources": [
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\bubble_attack1.mp3",
+          "sourcePage": "https://taira-komori.net/magic01en.html",
+          "startSeconds": 0.00797,
+          "sourceDurationSeconds": 0.65,
+          "playbackRate": 1,
+          "highpassHz": 85,
+          "lowpassHz": 10500,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.18,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "taira",
+          "original": "audio-v3\\waterfall1.mp3",
+          "sourcePage": "https://taira-komori.net/nature01en.html",
+          "startSeconds": 2.4,
+          "sourceDurationSeconds": 0.56,
+          "playbackRate": 1,
+          "highpassHz": 140,
+          "lowpassHz": 6000,
+          "reverse": false,
+          "fadeInSeconds": 0.035,
+          "fadeOutSeconds": 0.2,
+          "gain": 0.25,
+          "delaySeconds": 0.035
+        }
+      ],
+      "edits": "Selected splash transient with continuous recorded water texture underneath.",
+      "listened": false
+    },
+    {
+      "id": "water-surge",
+      "file": "/audio-v9/water-surge.mp3",
+      "wav": "water-surge.wav",
+      "category": "effect",
+      "seconds": 1.35,
+      "peakDb": -8.613,
+      "rmsDb": -24.392,
+      "crestDb": 15.778,
+      "onsetSeconds": 0.00703,
+      "peakSeconds": 0.23603,
+      "targetPeakDb": -8.2,
+      "clippedSamples": 0,
+      "sha256": "fef601d878842b59ee48e5c23ca392602f42a0d550f8ca678cc2fd1dd204fa9e",
+      "sources": [
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\waterfall1.mp3",
+          "sourcePage": "https://taira-komori.net/nature01en.html",
+          "startSeconds": 1.0,
+          "sourceDurationSeconds": 1.35,
+          "playbackRate": 1,
+          "highpassHz": 55,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.09,
+          "fadeOutSeconds": 0.35,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "taira",
+          "original": "audio-v3\\water_land.mp3",
+          "sourcePage": "https://taira-komori.net/magic01en.html",
+          "startSeconds": 0.86602,
+          "sourceDurationSeconds": 0.72,
+          "playbackRate": 1,
+          "highpassHz": 65,
+          "lowpassHz": 12000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.22,
+          "gain": 0.65,
+          "delaySeconds": 0.12
+        }
+      ],
+      "edits": "Long water attack: swelling flow then a delayed splash, smooth tail.",
+      "listened": false
+    },
+    {
+      "id": "ice",
+      "file": "/audio-v9/ice.mp3",
+      "wav": "ice.wav",
+      "category": "effect",
+      "seconds": 0.42,
+      "peakDb": -9.81,
+      "rmsDb": -31.217,
+      "crestDb": 21.407,
+      "onsetSeconds": 0.00172,
+      "peakSeconds": 0.10195,
+      "targetPeakDb": -9.3,
+      "clippedSamples": 0,
+      "sha256": "bce98fed116a7c2ad35ca6b88b08caf77be8423772a59768ea92a45e32863ece",
+      "sources": [
+        "impacts",
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\small_ice1.mp3",
+          "sourcePage": "https://taira-komori.net/nature01en.html",
+          "startSeconds": 0.12769,
+          "sourceDurationSeconds": 0.3864,
+          "playbackRate": 0.92,
+          "highpassHz": 350,
+          "lowpassHz": 13500,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\impactGlass_light_000.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0,
+          "sourceDurationSeconds": 0.23075,
+          "playbackRate": 1,
+          "highpassHz": 1300,
+          "lowpassHz": 14500,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.44,
+          "delaySeconds": 0.013
+        }
+      ],
+      "edits": "Ice crunch plus staggered glass detail; three distinct crack textures.",
+      "listened": false
+    },
+    {
+      "id": "ice-2",
+      "file": "/audio-v9/ice-2.mp3",
+      "wav": "ice-2.wav",
+      "category": "effect",
+      "seconds": 0.42,
+      "peakDb": -9.959,
+      "rmsDb": -31.561,
+      "crestDb": 21.601,
+      "onsetSeconds": 0.00125,
+      "peakSeconds": 0.02853,
+      "targetPeakDb": -9.3,
+      "clippedSamples": 0,
+      "sha256": "c897b3c1157235ed3e6073fe28cf238b23504ff1ecbbb67a94ad38f1579febd2",
+      "sources": [
+        "impacts",
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\small_ice2.mp3",
+          "sourcePage": "https://taira-komori.net/nature01en.html",
+          "startSeconds": 0.12769,
+          "sourceDurationSeconds": 0.42,
+          "playbackRate": 1.0,
+          "highpassHz": 350,
+          "lowpassHz": 13500,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\impactGlass_light_001.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0,
+          "sourceDurationSeconds": 0.20669,
+          "playbackRate": 1,
+          "highpassHz": 1300,
+          "lowpassHz": 14500,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.44,
+          "delaySeconds": 0.013
+        }
+      ],
+      "edits": "Ice crunch plus staggered glass detail; three distinct crack textures.",
+      "listened": false
+    },
+    {
+      "id": "ice-3",
+      "file": "/audio-v9/ice-3.mp3",
+      "wav": "ice-3.wav",
+      "category": "effect",
+      "seconds": 0.42002,
+      "peakDb": -9.839,
+      "rmsDb": -30.555,
+      "crestDb": 20.716,
+      "onsetSeconds": 0.00147,
+      "peakSeconds": 0.08685,
+      "targetPeakDb": -9.3,
+      "clippedSamples": 0,
+      "sha256": "faf61668095a868881a60875b5cfa2195c07d0d14b290607a7ea57a20720099c",
+      "sources": [
+        "impacts",
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\small_ice1.mp3",
+          "sourcePage": "https://taira-komori.net/nature01en.html",
+          "startSeconds": 0.12769,
+          "sourceDurationSeconds": 0.45362,
+          "playbackRate": 1.08,
+          "highpassHz": 350,
+          "lowpassHz": 13500,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\impactGlass_light_002.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0,
+          "sourceDurationSeconds": 0.20669,
+          "playbackRate": 1,
+          "highpassHz": 1300,
+          "lowpassHz": 14500,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.44,
+          "delaySeconds": 0.013
+        }
+      ],
+      "edits": "Ice crunch plus staggered glass detail; three distinct crack textures.",
+      "listened": false
+    },
+    {
+      "id": "ice-break",
+      "file": "/audio-v9/ice-break.mp3",
+      "wav": "ice-break.wav",
+      "category": "effect",
+      "seconds": 0.50361,
+      "peakDb": -7.731,
+      "rmsDb": -30.458,
+      "crestDb": 22.727,
+      "onsetSeconds": 0.00125,
+      "peakSeconds": 0.0295,
+      "targetPeakDb": -7.2,
+      "clippedSamples": 0,
+      "sha256": "0cbac9cbd458a9bcd8be2fd4b0e2e38f4397dd410df3d21279319bf68b0a7b0c",
+      "sources": [
+        "impacts",
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\small_ice2.mp3",
+          "sourcePage": "https://taira-komori.net/nature01en.html",
+          "startSeconds": 0.12769,
+          "sourceDurationSeconds": 0.50361,
+          "playbackRate": 1,
+          "highpassHz": 65,
+          "lowpassHz": 12000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\impactGlass_heavy_000.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0,
+          "sourceDurationSeconds": 0.23832,
+          "playbackRate": 1,
+          "highpassHz": 500,
+          "lowpassHz": 14500,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.57,
+          "delaySeconds": 0.025
+        },
+        {
+          "source": "taira",
+          "original": "audio-v3\\breaking_branchs1.mp3",
+          "sourcePage": "https://taira-komori.net/nature01en.html",
+          "startSeconds": 0.08778,
+          "sourceDurationSeconds": 0.15,
+          "playbackRate": 1,
+          "highpassHz": 65,
+          "lowpassHz": 12000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.16,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Ice mirror breakup: crack, delayed shard texture, and restrained low fracture.",
+      "listened": false
+    },
+    {
+      "id": "fire",
+      "file": "/audio-v9/fire.mp3",
+      "wav": "fire.wav",
+      "category": "effect",
+      "seconds": 0.86,
+      "peakDb": -8.609,
+      "rmsDb": -17.551,
+      "crestDb": 8.942,
+      "onsetSeconds": 0.001,
+      "peakSeconds": 0.35007,
+      "targetPeakDb": -8.1,
+      "clippedSamples": 0,
+      "sha256": "5d01f18ebc84cc1fce29f483daea32bfd1d7f11bbf17c0dfc49a08f9a88d1832",
+      "sources": [
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\fire2.mp3",
+          "sourcePage": "https://taira-komori.net/magic01en.html",
+          "startSeconds": 0.67146,
+          "sourceDurationSeconds": 0.86,
+          "playbackRate": 1,
+          "highpassHz": 75,
+          "lowpassHz": 11000,
+          "reverse": false,
+          "fadeInSeconds": 0.008,
+          "fadeOutSeconds": 0.2,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "taira",
+          "original": "audio-v3\\fire1.mp3",
+          "sourcePage": "https://taira-komori.net/magic01en.html",
+          "startSeconds": 1.72407,
+          "sourceDurationSeconds": 0.62,
+          "playbackRate": 1,
+          "highpassHz": 55,
+          "lowpassHz": 4000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.4,
+          "delaySeconds": 0.06
+        }
+      ],
+      "edits": "Two recorded flame textures with distinct onset and tail.",
+      "listened": false
+    },
+    {
+      "id": "smoke",
+      "file": "/audio-v9/smoke.mp3",
+      "wav": "smoke.wav",
+      "category": "effect",
+      "seconds": 0.38,
+      "peakDb": -11.649,
+      "rmsDb": -24.149,
+      "crestDb": 12.5,
+      "onsetSeconds": 0.00027,
+      "peakSeconds": 0.2039,
+      "targetPeakDb": -11.2,
+      "clippedSamples": 0,
+      "sha256": "f0efd143a5595f1091ba31d0b4cc7e018b183c0e6f14de7696656ac7d873c08f",
+      "sources": [
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\disappearance1.mp3",
+          "sourcePage": "https://taira-komori.net/magic01en.html",
+          "startSeconds": 0.83608,
+          "sourceDurationSeconds": 0.38,
+          "playbackRate": 1,
+          "highpassHz": 160,
+          "lowpassHz": 9000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.1,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "taira",
+          "original": "audio-v3\\KungFu_swish2.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0.11449,
+          "sourceDurationSeconds": 0.17998,
+          "playbackRate": 1,
+          "highpassHz": 65,
+          "lowpassHz": 12000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.15,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Compact substitution puff with faint moving air.",
+      "listened": false
+    },
+    {
+      "id": "lightning",
+      "file": "/audio-v9/lightning.mp3",
+      "wav": "lightning.wav",
+      "category": "effect",
+      "seconds": 0.94,
+      "peakDb": -8.821,
+      "rmsDb": -20.548,
+      "crestDb": 11.727,
+      "onsetSeconds": 0.00057,
+      "peakSeconds": 0.09381,
+      "targetPeakDb": -8.4,
+      "clippedSamples": 0,
+      "sha256": "5be4ec882989c2694d9fae04fdf1e819f504d7464d59c87789e6d27fd170bbc8",
+      "sources": [
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\lightning.mp3",
+          "sourcePage": "https://taira-komori.net/magic01en.html",
+          "startSeconds": 2.35264,
+          "sourceDurationSeconds": 0.94,
+          "playbackRate": 1,
+          "highpassHz": 160,
+          "lowpassHz": 12000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.18,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "taira",
+          "original": "audio-v3\\small_ice1.mp3",
+          "sourcePage": "https://taira-komori.net/nature01en.html",
+          "startSeconds": 0.12769,
+          "sourceDurationSeconds": 0.27,
+          "playbackRate": 1,
+          "highpassHz": 1500,
+          "lowpassHz": 13000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.25,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Selected electrical transient with brief crackle accent.",
+      "listened": false
+    },
+    {
+      "id": "focus",
+      "file": "/audio-v9/focus.mp3",
+      "wav": "focus.wav",
+      "category": "effect",
+      "seconds": 0.56,
+      "peakDb": -12.85,
+      "rmsDb": -26.107,
+      "crestDb": 13.257,
+      "onsetSeconds": 0.00218,
+      "peakSeconds": 0.0688,
+      "targetPeakDb": -12.4,
+      "clippedSamples": 0,
+      "sha256": "3dfe3d3e3b4ef7cec6809ec66a3a382e2d3847e749467ee1fb84c7b69f55f4c6",
+      "sources": [
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\reflection.mp3",
+          "sourcePage": "https://taira-komori.net/magic01en.html",
+          "startSeconds": 0.02293,
+          "sourceDurationSeconds": 0.56,
+          "playbackRate": 1,
+          "highpassHz": 220,
+          "lowpassHz": 9000,
+          "reverse": false,
+          "fadeInSeconds": 0.03,
+          "fadeOutSeconds": 0.15,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Short chakra focus shimmer, below action contacts.",
+      "listened": false
+    },
+    {
+      "id": "chakra-charge",
+      "file": "/audio-v9/chakra-charge.mp3",
+      "wav": "chakra-charge.wav",
+      "category": "effect",
+      "seconds": 0.76,
+      "peakDb": -12.449,
+      "rmsDb": -24.031,
+      "crestDb": 11.582,
+      "onsetSeconds": 0.01297,
+      "peakSeconds": 0.62465,
+      "targetPeakDb": -12,
+      "clippedSamples": 0,
+      "sha256": "c74d587e5369116ac7503d805e170349143e81dc1e8158b0c74e906853de0875",
+      "sources": [
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\reflection.mp3",
+          "sourcePage": "https://taira-komori.net/magic01en.html",
+          "startSeconds": 0.02293,
+          "sourceDurationSeconds": 0.76,
+          "playbackRate": 1,
+          "highpassHz": 150,
+          "lowpassHz": 9000,
+          "reverse": true,
+          "fadeInSeconds": 0.13,
+          "fadeOutSeconds": 0.1,
+          "gain": 0.7,
+          "delaySeconds": 0
+        },
+        {
+          "source": "taira",
+          "original": "audio-v3\\waterfall1.mp3",
+          "sourcePage": "https://taira-komori.net/nature01en.html",
+          "startSeconds": 2.3,
+          "sourceDurationSeconds": 0.68002,
+          "playbackRate": 1,
+          "highpassHz": 80,
+          "lowpassHz": 1300,
+          "reverse": false,
+          "fadeInSeconds": 0.18,
+          "fadeOutSeconds": 0.14,
+          "gain": 0.24,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Reversed recorded shimmer over low natural flow; chakra buildup without oscillator tones.",
+      "listened": false
+    },
+    {
+      "id": "ultimate-charge",
+      "file": "/audio-v9/ultimate-charge.mp3",
+      "wav": "ultimate-charge.wav",
+      "category": "effect",
+      "seconds": 0.78,
+      "peakDb": -11.086,
+      "rmsDb": -19.914,
+      "crestDb": 8.828,
+      "onsetSeconds": 0.00274,
+      "peakSeconds": 0.53397,
+      "targetPeakDb": -10.6,
+      "clippedSamples": 0,
+      "sha256": "98a88ca4aaca1a7550495cc20c7d4753955321d4c0bee8b81e09870d0788c333",
+      "sources": [
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\scifi_attack5.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0,
+          "sourceDurationSeconds": 0.78,
+          "playbackRate": 1,
+          "highpassHz": 90,
+          "lowpassHz": 9000,
+          "reverse": false,
+          "fadeInSeconds": 0.035,
+          "fadeOutSeconds": 0.14,
+          "gain": 0.6,
+          "delaySeconds": 0
+        },
+        {
+          "source": "taira",
+          "original": "audio-v3\\reflection.mp3",
+          "sourcePage": "https://taira-komori.net/magic01en.html",
+          "startSeconds": 0.02293,
+          "sourceDurationSeconds": 0.68,
+          "playbackRate": 1,
+          "highpassHz": 200,
+          "lowpassHz": 8000,
+          "reverse": true,
+          "fadeInSeconds": 0.14,
+          "fadeOutSeconds": 0.1,
+          "gain": 0.42,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Layered rising chakra cue with preserved distinct transient.",
+      "listened": false
+    },
+    {
+      "id": "ultimate-finish",
+      "file": "/audio-v9/ultimate-finish.mp3",
+      "wav": "ultimate-finish.wav",
+      "category": "effect",
+      "seconds": 0.49,
+      "peakDb": -4.979,
+      "rmsDb": -17.482,
+      "crestDb": 12.503,
+      "onsetSeconds": 0.00093,
+      "peakSeconds": 0.00848,
+      "targetPeakDb": -4.5,
+      "clippedSamples": 0,
+      "sha256": "18756ea5c70f730c1cd2d56552907b6d66665ee4a700d9006a2dcfde29b9948c",
+      "sources": [
+        "taira"
+      ],
+      "layers": [
+        {
+          "source": "taira",
+          "original": "audio-v3\\turning_kick.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0.19255,
+          "sourceDurationSeconds": 0.25832,
+          "playbackRate": 1,
+          "highpassHz": 65,
+          "lowpassHz": 12000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 1,
+          "delaySeconds": 0
+        },
+        {
+          "source": "taira",
+          "original": "audio-v3\\heavy_punch2.mp3",
+          "sourcePage": "https://taira-komori.net/attack01.html",
+          "startSeconds": 0.01295,
+          "sourceDurationSeconds": 0.36342,
+          "playbackRate": 0.79,
+          "highpassHz": 40,
+          "lowpassHz": 2200,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.9,
+          "delaySeconds": 0
+        },
+        {
+          "source": "taira",
+          "original": "audio-v3\\small_ice2.mp3",
+          "sourcePage": "https://taira-komori.net/nature01en.html",
+          "startSeconds": 0.12769,
+          "sourceDurationSeconds": 0.45,
+          "playbackRate": 1,
+          "highpassHz": 65,
+          "lowpassHz": 12000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 0.18,
+          "delaySeconds": 0.04
+        }
+      ],
+      "edits": "Finisher contact with deep recorded impact body and short fracture tail.",
+      "listened": false
+    },
+    {
+      "id": "step",
+      "file": "/audio-v9/step.mp3",
+      "wav": "step.wav",
+      "category": "effect",
+      "seconds": 0.10556,
+      "peakDb": -18.434,
+      "rmsDb": -37.801,
+      "crestDb": 19.366,
+      "onsetSeconds": 0.00048,
+      "peakSeconds": 0.00113,
+      "targetPeakDb": -18,
+      "clippedSamples": 0,
+      "sha256": "a5fbc646867bbd62b4273203c704eed0ba4a4f391f8291651b3ca947f666c1de",
+      "sources": [
+        "impacts"
+      ],
+      "layers": [
+        {
+          "source": "impacts",
+          "original": "audio\\impacts\\Audio\\footstep_concrete_001.ogg",
+          "sourcePage": "https://kenney.nl/assets/impact-sounds",
+          "startSeconds": 0,
+          "sourceDurationSeconds": 0.10474,
+          "playbackRate": 1,
+          "highpassHz": 100,
+          "lowpassHz": 6000,
+          "reverse": false,
+          "fadeInSeconds": 0.002,
+          "fadeOutSeconds": 0.045,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Quiet dry footstep, kept below combat sounds.",
+      "listened": false
+    },
+    {
+      "id": "voice-kakashi-0",
+      "file": "/audio-v9/voice-kakashi-0.mp3",
+      "wav": "voice-kakashi-0.wav",
+      "category": "voice",
+      "seconds": 0.32002,
+      "peakDb": -10.941,
+      "rmsDb": -19.631,
+      "crestDb": 8.69,
+      "onsetSeconds": 0.01043,
+      "peakSeconds": 0.11653,
+      "targetPeakDb": -10.5,
+      "clippedSamples": 0,
+      "sha256": "a18a80b1aab31b0650829bbf059c8e15d2438e2e327e7faef7adcfba9b787cba",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\3grunt1.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.52478,
+          "sourceDurationSeconds": 0.31042,
+          "playbackRate": 0.97,
+          "highpassHz": 85,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-kakashi-1",
+      "file": "/audio-v9/voice-kakashi-1.mp3",
+      "wav": "voice-kakashi-1.wav",
+      "category": "voice",
+      "seconds": 0.37002,
+      "peakDb": -10.967,
+      "rmsDb": -27.981,
+      "crestDb": 17.013,
+      "onsetSeconds": 0.00163,
+      "peakSeconds": 0.26159,
+      "targetPeakDb": -10.5,
+      "clippedSamples": 0,
+      "sha256": "b5aec14c4b7814f9ecbe1108ea9b9a67c3121ac240ec3d32e0fc08ba0497a5d8",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\3grunt2.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.41004,
+          "sourceDurationSeconds": 0.35892,
+          "playbackRate": 0.97,
+          "highpassHz": 85,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-kakashi-2",
+      "file": "/audio-v9/voice-kakashi-2.mp3",
+      "wav": "voice-kakashi-2.wav",
+      "category": "voice",
+      "seconds": 0.40002,
+      "peakDb": -10.947,
+      "rmsDb": -24.205,
+      "crestDb": 13.259,
+      "onsetSeconds": 0.00215,
+      "peakSeconds": 0.31585,
+      "targetPeakDb": -10.5,
+      "clippedSamples": 0,
+      "sha256": "3daf4be70fe04221f5b79336c93457dc282c641850ddbca65eb667c83bf8a8ee",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\3grunt3.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.00595,
+          "sourceDurationSeconds": 0.38802,
+          "playbackRate": 0.97,
+          "highpassHz": 85,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-kakashi-3",
+      "file": "/audio-v9/voice-kakashi-3.mp3",
+      "wav": "voice-kakashi-3.wav",
+      "category": "voice",
+      "seconds": 0.24193,
+      "peakDb": -10.933,
+      "rmsDb": -24.022,
+      "crestDb": 13.089,
+      "onsetSeconds": 0.0039,
+      "peakSeconds": 0.06372,
+      "targetPeakDb": -10.5,
+      "clippedSamples": 0,
+      "sha256": "07309e24e2a7b86f578b9cfd1f3203703d4ce4564c480a653784dee02b0bb32c",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\3grunt4.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.26537,
+          "sourceDurationSeconds": 0.23467,
+          "playbackRate": 0.97,
+          "highpassHz": 85,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-kakashi-4",
+      "file": "/audio-v9/voice-kakashi-4.mp3",
+      "wav": "voice-kakashi-4.wav",
+      "category": "voice",
+      "seconds": 0.36535,
+      "peakDb": -10.933,
+      "rmsDb": -26.076,
+      "crestDb": 15.143,
+      "onsetSeconds": 0.00422,
+      "peakSeconds": 0.12546,
+      "targetPeakDb": -10.5,
+      "clippedSamples": 0,
+      "sha256": "b7a271c6ae78f9e44166dffd5ca4953073ab5045c7f93c61edde8c2e3a8f1a7d",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\3grunt5.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.14564,
+          "sourceDurationSeconds": 0.35439,
+          "playbackRate": 0.97,
+          "highpassHz": 85,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-kakashi-5",
+      "file": "/audio-v9/voice-kakashi-5.mp3",
+      "wav": "voice-kakashi-5.wav",
+      "category": "voice",
+      "seconds": 1.0,
+      "peakDb": -10.942,
+      "rmsDb": -29.263,
+      "crestDb": 18.321,
+      "onsetSeconds": 0.00209,
+      "peakSeconds": 0.17506,
+      "targetPeakDb": -10.5,
+      "clippedSamples": 0,
+      "sha256": "7208843de0379065b0a0d682ec0549b63c0cfd03e2d5abcf6f16f2b918260f9f",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\3grunt6.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.43498,
+          "sourceDurationSeconds": 0.97,
+          "playbackRate": 0.97,
+          "highpassHz": 85,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-naruto-0",
+      "file": "/audio-v9/voice-naruto-0.mp3",
+      "wav": "voice-naruto-0.wav",
+      "category": "voice",
+      "seconds": 0.32002,
+      "peakDb": -10.949,
+      "rmsDb": -26.434,
+      "crestDb": 15.484,
+      "onsetSeconds": 0.0154,
+      "peakSeconds": 0.11943,
+      "targetPeakDb": -10.5,
+      "clippedSamples": 0,
+      "sha256": "bbc25ea7e5b8ebecce341edb5d089c797d86829f5c98a98d10b8deb5e1119cf5",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\1yell1.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.31026,
+          "sourceDurationSeconds": 0.32802,
+          "playbackRate": 1.025,
+          "highpassHz": 85,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-naruto-1",
+      "file": "/audio-v9/voice-naruto-1.mp3",
+      "wav": "voice-naruto-1.wav",
+      "category": "voice",
+      "seconds": 0.37002,
+      "peakDb": -10.938,
+      "rmsDb": -22.274,
+      "crestDb": 11.336,
+      "onsetSeconds": 0.00762,
+      "peakSeconds": 0.24914,
+      "targetPeakDb": -10.5,
+      "clippedSamples": 0,
+      "sha256": "074b2ca3aab10f100545bcefae53fbbb8360e51524ee8f85ddc9ec84d88ffd85",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\1yell4.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.12069,
+          "sourceDurationSeconds": 0.37927,
+          "playbackRate": 1.025,
+          "highpassHz": 85,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-naruto-2",
+      "file": "/audio-v9/voice-naruto-2.mp3",
+      "wav": "voice-naruto-2.wav",
+      "category": "voice",
+      "seconds": 0.4,
+      "peakDb": -10.947,
+      "rmsDb": -23.706,
+      "crestDb": 12.759,
+      "onsetSeconds": 0.00317,
+      "peakSeconds": 0.09367,
+      "targetPeakDb": -10.5,
+      "clippedSamples": 0,
+      "sha256": "3bdd2fc2de8114eb19e4e5e228c855f01679cb1c7dc2c88c4f655a90d87550e6",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\1yell6.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.49484,
+          "sourceDurationSeconds": 0.41,
+          "playbackRate": 1.025,
+          "highpassHz": 85,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-naruto-3",
+      "file": "/audio-v9/voice-naruto-3.mp3",
+      "wav": "voice-naruto-3.wav",
+      "category": "voice",
+      "seconds": 0.48,
+      "peakDb": -10.956,
+      "rmsDb": -24.461,
+      "crestDb": 13.505,
+      "onsetSeconds": 0.00424,
+      "peakSeconds": 0.06834,
+      "targetPeakDb": -10.5,
+      "clippedSamples": 0,
+      "sha256": "3a175bbf43bca1d952d83e9336718a89f2077c880cc00af1bec1f4324f91bfe5",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\1yell8.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.23543,
+          "sourceDurationSeconds": 0.492,
+          "playbackRate": 1.025,
+          "highpassHz": 85,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-naruto-4",
+      "file": "/audio-v9/voice-naruto-4.mp3",
+      "wav": "voice-naruto-4.wav",
+      "category": "voice",
+      "seconds": 0.54,
+      "peakDb": -10.949,
+      "rmsDb": -25.165,
+      "crestDb": 14.217,
+      "onsetSeconds": 0.00673,
+      "peakSeconds": 0.08272,
+      "targetPeakDb": -10.5,
+      "clippedSamples": 0,
+      "sha256": "d4acbe4d017e6f82c69e4f0443f706a8fd70501ffb8e489d70fc2881f8a8b414",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\1yell9.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.25539,
+          "sourceDurationSeconds": 0.5535,
+          "playbackRate": 1.025,
+          "highpassHz": 85,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-naruto-5",
+      "file": "/audio-v9/voice-naruto-5.mp3",
+      "wav": "voice-naruto-5.wav",
+      "category": "voice",
+      "seconds": 0.89195,
+      "peakDb": -10.937,
+      "rmsDb": -27.526,
+      "crestDb": 16.589,
+      "onsetSeconds": 0.00256,
+      "peakSeconds": 0.15299,
+      "targetPeakDb": -10.5,
+      "clippedSamples": 0,
+      "sha256": "0a009f7c971ac355d14289a8c6f24cf075350f179e1c3e225527b6bbb12c551a",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\1yell14.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.08577,
+          "sourceDurationSeconds": 0.91425,
+          "playbackRate": 1.025,
+          "highpassHz": 85,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-sasuke-0",
+      "file": "/audio-v9/voice-sasuke-0.mp3",
+      "wav": "voice-sasuke-0.wav",
+      "category": "voice",
+      "seconds": 0.32,
+      "peakDb": -10.938,
+      "rmsDb": -21.562,
+      "crestDb": 10.624,
+      "onsetSeconds": 0.00694,
+      "peakSeconds": 0.16186,
+      "targetPeakDb": -10.5,
+      "clippedSamples": 0,
+      "sha256": "c3d74543d960e7b7b2131ed82ce47cd0b8a3bd4ae77effee699f4a608d509423",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\2yell1.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.41004,
+          "sourceDurationSeconds": 0.32,
+          "playbackRate": 1,
+          "highpassHz": 85,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-sasuke-1",
+      "file": "/audio-v9/voice-sasuke-1.mp3",
+      "wav": "voice-sasuke-1.wav",
+      "category": "voice",
+      "seconds": 0.37,
+      "peakDb": -10.986,
+      "rmsDb": -27.579,
+      "crestDb": 16.593,
+      "onsetSeconds": 0.01136,
+      "peakSeconds": 0.17678,
+      "targetPeakDb": -10.5,
+      "clippedSamples": 0,
+      "sha256": "725e1da2a31a5e5ea5a8adca8931993fee61f23b64b45bbc41a1d6ffd559554f",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\2yell4.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.64949,
+          "sourceDurationSeconds": 0.37,
+          "playbackRate": 1,
+          "highpassHz": 85,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-sasuke-2",
+      "file": "/audio-v9/voice-sasuke-2.mp3",
+      "wav": "voice-sasuke-2.wav",
+      "category": "voice",
+      "seconds": 0.4,
+      "peakDb": -10.939,
+      "rmsDb": -22.428,
+      "crestDb": 11.489,
+      "onsetSeconds": 0.00186,
+      "peakSeconds": 0.16927,
+      "targetPeakDb": -10.5,
+      "clippedSamples": 0,
+      "sha256": "a568a8233309c737f756597d14ba7fe4c0ec28fe0220d8373c82459769cffc20",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\2yell5.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.32024,
+          "sourceDurationSeconds": 0.4,
+          "playbackRate": 1,
+          "highpassHz": 85,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-sasuke-3",
+      "file": "/audio-v9/voice-sasuke-3.mp3",
+      "wav": "voice-sasuke-3.wav",
+      "category": "voice",
+      "seconds": 0.48,
+      "peakDb": -10.943,
+      "rmsDb": -22.485,
+      "crestDb": 11.542,
+      "onsetSeconds": 0.00342,
+      "peakSeconds": 0.27603,
+      "targetPeakDb": -10.5,
+      "clippedSamples": 0,
+      "sha256": "ab769d36b54617b23e0a032705c40a4daae8c2a30b7f8e980473b1bee748d69f",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\2yell7.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.61956,
+          "sourceDurationSeconds": 0.48,
+          "playbackRate": 1,
+          "highpassHz": 85,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-sasuke-4",
+      "file": "/audio-v9/voice-sasuke-4.mp3",
+      "wav": "voice-sasuke-4.wav",
+      "category": "voice",
+      "seconds": 0.54,
+      "peakDb": -10.962,
+      "rmsDb": -22.173,
+      "crestDb": 11.211,
+      "onsetSeconds": 0.00297,
+      "peakSeconds": 0.21937,
+      "targetPeakDb": -10.5,
+      "clippedSamples": 0,
+      "sha256": "c98a977135d2b21d4a96dbc07603dc256366504d3f02dc005868bc13aaa5a8c0",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\2yell9.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.35516,
+          "sourceDurationSeconds": 0.54,
+          "playbackRate": 1,
+          "highpassHz": 85,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-sasuke-5",
+      "file": "/audio-v9/voice-sasuke-5.mp3",
+      "wav": "voice-sasuke-5.wav",
+      "category": "voice",
+      "seconds": 1.0,
+      "peakDb": -10.949,
+      "rmsDb": -23.307,
+      "crestDb": 12.359,
+      "onsetSeconds": 0.00764,
+      "peakSeconds": 0.18188,
+      "targetPeakDb": -10.5,
+      "clippedSamples": 0,
+      "sha256": "4bfce369fb7c4b8e86408a7ce0683b5b0db7a107be96656698ddeb39b960abb7",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\2yell11.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.32523,
+          "sourceDurationSeconds": 1.0,
+          "playbackRate": 1,
+          "highpassHz": 85,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-zabuza-0",
+      "file": "/audio-v9/voice-zabuza-0.mp3",
+      "wav": "voice-zabuza-0.wav",
+      "category": "voice",
+      "seconds": 0.32,
+      "peakDb": -10.947,
+      "rmsDb": -21.967,
+      "crestDb": 11.021,
+      "onsetSeconds": 0.01494,
+      "peakSeconds": 0.21061,
+      "targetPeakDb": -10.5,
+      "clippedSamples": 0,
+      "sha256": "206e233a3d1b162aceb46e0935d372e06d13b73c7c83e8b9f6b5d50a5fc480cd",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\yell2.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.33521,
+          "sourceDurationSeconds": 0.3008,
+          "playbackRate": 0.94,
+          "highpassHz": 85,
+          "lowpassHz": 7000,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-zabuza-1",
+      "file": "/audio-v9/voice-zabuza-1.mp3",
+      "wav": "voice-zabuza-1.wav",
+      "category": "voice",
+      "seconds": 0.37002,
+      "peakDb": -10.952,
+      "rmsDb": -20.137,
+      "crestDb": 9.185,
+      "onsetSeconds": 0.00921,
+      "peakSeconds": 0.19488,
+      "targetPeakDb": -10.5,
+      "clippedSamples": 0,
+      "sha256": "d4f54efc26a54bace5f8cdaabf13baeef339ee11b6fccb83301208ff35ec9537",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\yell5.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.43997,
+          "sourceDurationSeconds": 0.34782,
+          "playbackRate": 0.94,
+          "highpassHz": 85,
+          "lowpassHz": 7000,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-zabuza-2",
+      "file": "/audio-v9/voice-zabuza-2.mp3",
+      "wav": "voice-zabuza-2.wav",
+      "category": "voice",
+      "seconds": 0.40002,
+      "peakDb": -10.952,
+      "rmsDb": -24.583,
+      "crestDb": 13.631,
+      "onsetSeconds": 0.00145,
+      "peakSeconds": 0.26299,
+      "targetPeakDb": -10.5,
+      "clippedSamples": 0,
+      "sha256": "1b877ef6cbd82764b1bcd312fbc28b90f249b549f8ebd037cc338442745f5d39",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\yell6.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.35017,
+          "sourceDurationSeconds": 0.37602,
+          "playbackRate": 0.94,
+          "highpassHz": 85,
+          "lowpassHz": 7000,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-zabuza-3",
+      "file": "/audio-v9/voice-zabuza-3.mp3",
+      "wav": "voice-zabuza-3.wav",
+      "category": "voice",
+      "seconds": 0.48002,
+      "peakDb": -10.922,
+      "rmsDb": -24.674,
+      "crestDb": 13.752,
+      "onsetSeconds": 0.01342,
+      "peakSeconds": 0.24429,
+      "targetPeakDb": -10.5,
+      "clippedSamples": 0,
+      "sha256": "8964384a6a8c443e1b367a404d347fb05fc7b9f4d9ef0277dbe9cc2963593f74",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\yell8.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.3801,
+          "sourceDurationSeconds": 0.45122,
+          "playbackRate": 0.94,
+          "highpassHz": 85,
+          "lowpassHz": 7000,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-zabuza-4",
+      "file": "/audio-v9/voice-zabuza-4.mp3",
+      "wav": "voice-zabuza-4.wav",
+      "category": "voice",
+      "seconds": 0.54,
+      "peakDb": -10.932,
+      "rmsDb": -21.174,
+      "crestDb": 10.243,
+      "onsetSeconds": 0.00145,
+      "peakSeconds": 0.4559,
+      "targetPeakDb": -10.5,
+      "clippedSamples": 0,
+      "sha256": "e032165d63540c998d86276a39f95ccb8110ee85b48da2e4c4bc7f66ca4f7c1a",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\yell10.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.31026,
+          "sourceDurationSeconds": 0.5076,
+          "playbackRate": 0.94,
+          "highpassHz": 85,
+          "lowpassHz": 7000,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-zabuza-5",
+      "file": "/audio-v9/voice-zabuza-5.mp3",
+      "wav": "voice-zabuza-5.wav",
+      "category": "voice",
+      "seconds": 0.71787,
+      "peakDb": -10.942,
+      "rmsDb": -24.99,
+      "crestDb": 14.048,
+      "onsetSeconds": 0.00551,
+      "peakSeconds": 0.25023,
+      "targetPeakDb": -10.5,
+      "clippedSamples": 0,
+      "sha256": "93ca90d44a1cc25e27622fe0133c24b8eef5512bb06cbdce5572a8674d8710b5",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\yell13.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.32523,
+          "sourceDurationSeconds": 0.6748,
+          "playbackRate": 0.94,
+          "highpassHz": 85,
+          "lowpassHz": 7000,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-haku-0",
+      "file": "/audio-v9/voice-haku-0.mp3",
+      "wav": "voice-haku-0.wav",
+      "category": "voice",
+      "seconds": 0.32,
+      "peakDb": -11.948,
+      "rmsDb": -21.397,
+      "crestDb": 9.449,
+      "onsetSeconds": 0.01068,
+      "peakSeconds": 0.09288,
+      "targetPeakDb": -11.5,
+      "clippedSamples": 0,
+      "sha256": "da9103c487ad772206e19e3e2b49c88223334fdf0cd71434a2363b27c2880261",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\3yell1.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.3801,
+          "sourceDurationSeconds": 0.3488,
+          "playbackRate": 1.09,
+          "highpassHz": 115,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-haku-1",
+      "file": "/audio-v9/voice-haku-1.mp3",
+      "wav": "voice-haku-1.wav",
+      "category": "voice",
+      "seconds": 0.37002,
+      "peakDb": -11.949,
+      "rmsDb": -22.822,
+      "crestDb": 10.872,
+      "onsetSeconds": 0.01029,
+      "peakSeconds": 0.19274,
+      "targetPeakDb": -11.5,
+      "clippedSamples": 0,
+      "sha256": "ac64268ec5587824cc54b42590711bb01ee307b7590d9066067079904b6fa70f",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\3yell2.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.24541,
+          "sourceDurationSeconds": 0.40332,
+          "playbackRate": 1.09,
+          "highpassHz": 115,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-haku-2",
+      "file": "/audio-v9/voice-haku-2.mp3",
+      "wav": "voice-haku-2.wav",
+      "category": "voice",
+      "seconds": 0.40002,
+      "peakDb": -11.929,
+      "rmsDb": -23.908,
+      "crestDb": 11.979,
+      "onsetSeconds": 0.00252,
+      "peakSeconds": 0.1054,
+      "targetPeakDb": -11.5,
+      "clippedSamples": 0,
+      "sha256": "1406a2d66cb58832241e23896aa62f86ae1b92bc26bc1cabaa3cd220b562e09c",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\3yell4.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.2504,
+          "sourceDurationSeconds": 0.43602,
+          "playbackRate": 1.09,
+          "highpassHz": 115,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-haku-3",
+      "file": "/audio-v9/voice-haku-3.mp3",
+      "wav": "voice-haku-3.wav",
+      "category": "voice",
+      "seconds": 0.48,
+      "peakDb": -11.934,
+      "rmsDb": -23.189,
+      "crestDb": 11.254,
+      "onsetSeconds": 0.00408,
+      "peakSeconds": 0.18451,
+      "targetPeakDb": -11.5,
+      "clippedSamples": 0,
+      "sha256": "4bec06bc50b51a38be8531747f2da42c2051e390b12559df91f77bc47f79e9f4",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\3yell6.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.40006,
+          "sourceDurationSeconds": 0.5232,
+          "playbackRate": 1.09,
+          "highpassHz": 115,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-haku-4",
+      "file": "/audio-v9/voice-haku-4.mp3",
+      "wav": "voice-haku-4.wav",
+      "category": "voice",
+      "seconds": 0.54,
+      "peakDb": -11.935,
+      "rmsDb": -26.493,
+      "crestDb": 14.558,
+      "onsetSeconds": 0.00789,
+      "peakSeconds": 0.15671,
+      "targetPeakDb": -11.5,
+      "clippedSamples": 0,
+      "sha256": "64032b45b7f27dd02e3ccb6b19747b95a079943a7fcbaae6629f65e225d54513",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\3yell8.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.18056,
+          "sourceDurationSeconds": 0.5886,
+          "playbackRate": 1.09,
+          "highpassHz": 115,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-haku-5",
+      "file": "/audio-v9/voice-haku-5.mp3",
+      "wav": "voice-haku-5.wav",
+      "category": "voice",
+      "seconds": 0.82961,
+      "peakDb": -11.937,
+      "rmsDb": -23.304,
+      "crestDb": 11.367,
+      "onsetSeconds": 0.00202,
+      "peakSeconds": 0.15519,
+      "targetPeakDb": -11.5,
+      "clippedSamples": 0,
+      "sha256": "66bc3663b2f62c4317a41e09fb43f1a5bcacb0efc8340480491105baa66c3ffd",
+      "sources": [
+        "grunts"
+      ],
+      "layers": [
+        {
+          "source": "grunts",
+          "original": "audio\\grunts\\yelling sounds\\3yell15.wav",
+          "sourcePage": "https://opengameart.org/content/male-gruntyelling-sounds",
+          "startSeconds": 0.09575,
+          "sourceDurationSeconds": 0.90428,
+          "playbackRate": 1.09,
+          "highpassHz": 115,
+          "lowpassHz": 9500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.08,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Distinct recorded take; onset trimmed; brief effort envelope; modest rate offset; no cloning or actor imitation.",
+      "listened": false
+    },
+    {
+      "id": "voice-sakura-0",
+      "file": "/audio-v9/voice-sakura-0.mp3",
+      "wav": "voice-sakura-0.wav",
+      "category": "voice",
+      "seconds": 0.44,
+      "peakDb": -11.244,
+      "rmsDb": -27.639,
+      "crestDb": 16.394,
+      "onsetSeconds": 0.03374,
+      "peakSeconds": 0.13805,
+      "targetPeakDb": -10.8,
+      "clippedSamples": 0,
+      "sha256": "feb16023ca59ab7e3787d8d9bb49b2e0313bd3fa428a53b91df0fdea5b10b0c4",
+      "sources": [
+        "female"
+      ],
+      "layers": [
+        {
+          "source": "female",
+          "original": "audio\\female.mp3",
+          "sourcePage": "https://opengameart.org/content/female-gruntwork-1",
+          "startSeconds": 0.19,
+          "sourceDurationSeconds": 0.44,
+          "playbackRate": 1,
+          "highpassHz": 105,
+          "lowpassHz": 10500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.065,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Existing performer recording, exact source segment, shortened release. Adapted clip under CC-BY-SA4.0.",
+      "listened": false
+    },
+    {
+      "id": "voice-sakura-1",
+      "file": "/audio-v9/voice-sakura-1.mp3",
+      "wav": "voice-sakura-1.wav",
+      "category": "voice",
+      "seconds": 0.61,
+      "peakDb": -11.248,
+      "rmsDb": -24.182,
+      "crestDb": 12.934,
+      "onsetSeconds": 0.04771,
+      "peakSeconds": 0.24388,
+      "targetPeakDb": -10.8,
+      "clippedSamples": 0,
+      "sha256": "03bae1d452b903dda590c5cbd960a7da689d7671b5baae3fc53e1c91e6cc3a09",
+      "sources": [
+        "female"
+      ],
+      "layers": [
+        {
+          "source": "female",
+          "original": "audio\\female.mp3",
+          "sourcePage": "https://opengameart.org/content/female-gruntwork-1",
+          "startSeconds": 1.04,
+          "sourceDurationSeconds": 0.61,
+          "playbackRate": 1,
+          "highpassHz": 105,
+          "lowpassHz": 10500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.065,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Existing performer recording, exact source segment, shortened release. Adapted clip under CC-BY-SA4.0.",
+      "listened": false
+    },
+    {
+      "id": "voice-sakura-2",
+      "file": "/audio-v9/voice-sakura-2.mp3",
+      "wav": "voice-sakura-2.wav",
+      "category": "voice",
+      "seconds": 0.54002,
+      "peakDb": -11.271,
+      "rmsDb": -26.34,
+      "crestDb": 15.069,
+      "onsetSeconds": 0.04385,
+      "peakSeconds": 0.059,
+      "targetPeakDb": -10.8,
+      "clippedSamples": 0,
+      "sha256": "b46211efa09facadf9c208e410714f537eff080e106bbab241fecfe69eb6b943",
+      "sources": [
+        "female"
+      ],
+      "layers": [
+        {
+          "source": "female",
+          "original": "audio\\female.mp3",
+          "sourcePage": "https://opengameart.org/content/female-gruntwork-1",
+          "startSeconds": 2.3,
+          "sourceDurationSeconds": 0.54002,
+          "playbackRate": 1,
+          "highpassHz": 105,
+          "lowpassHz": 10500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.065,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Existing performer recording, exact source segment, shortened release. Adapted clip under CC-BY-SA4.0.",
+      "listened": false
+    },
+    {
+      "id": "voice-sakura-3",
+      "file": "/audio-v9/voice-sakura-3.mp3",
+      "wav": "voice-sakura-3.wav",
+      "category": "voice",
+      "seconds": 0.64,
+      "peakDb": -11.24,
+      "rmsDb": -26.264,
+      "crestDb": 15.024,
+      "onsetSeconds": 0.1783,
+      "peakSeconds": 0.32277,
+      "targetPeakDb": -10.8,
+      "clippedSamples": 0,
+      "sha256": "7041421d0c1e71f7fc85d6ccca2f6552f31de22d28ae45bd25124416ec240589",
+      "sources": [
+        "female"
+      ],
+      "layers": [
+        {
+          "source": "female",
+          "original": "audio\\female.mp3",
+          "sourcePage": "https://opengameart.org/content/female-gruntwork-1",
+          "startSeconds": 9.4,
+          "sourceDurationSeconds": 0.64,
+          "playbackRate": 1,
+          "highpassHz": 105,
+          "lowpassHz": 10500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.065,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Existing performer recording, exact source segment, shortened release. Adapted clip under CC-BY-SA4.0.",
+      "listened": false
+    },
+    {
+      "id": "voice-sakura-4",
+      "file": "/audio-v9/voice-sakura-4.mp3",
+      "wav": "voice-sakura-4.wav",
+      "category": "voice",
+      "seconds": 0.7,
+      "peakDb": -11.243,
+      "rmsDb": -26.134,
+      "crestDb": 14.891,
+      "onsetSeconds": 0.04211,
+      "peakSeconds": 0.24519,
+      "targetPeakDb": -10.8,
+      "clippedSamples": 0,
+      "sha256": "69b5a8294f917546588dc6030e6715720bd696dac7712ff573b18bdefe076d5e",
+      "sources": [
+        "female"
+      ],
+      "layers": [
+        {
+          "source": "female",
+          "original": "audio\\female.mp3",
+          "sourcePage": "https://opengameart.org/content/female-gruntwork-1",
+          "startSeconds": 11.8,
+          "sourceDurationSeconds": 0.7,
+          "playbackRate": 1,
+          "highpassHz": 105,
+          "lowpassHz": 10500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.065,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Existing performer recording, exact source segment, shortened release. Adapted clip under CC-BY-SA4.0.",
+      "listened": false
+    },
+    {
+      "id": "voice-sakura-5",
+      "file": "/audio-v9/voice-sakura-5.mp3",
+      "wav": "voice-sakura-5.wav",
+      "category": "voice",
+      "seconds": 1.05002,
+      "peakDb": -11.243,
+      "rmsDb": -21.846,
+      "crestDb": 10.603,
+      "onsetSeconds": 0.04163,
+      "peakSeconds": 0.13163,
+      "targetPeakDb": -10.8,
+      "clippedSamples": 0,
+      "sha256": "6ff59212c78400724068e0ccbaba9c2725fc88ba6f4269a4b59491b36781f334",
+      "sources": [
+        "female"
+      ],
+      "layers": [
+        {
+          "source": "female",
+          "original": "audio\\female.mp3",
+          "sourcePage": "https://opengameart.org/content/female-gruntwork-1",
+          "startSeconds": 18.24,
+          "sourceDurationSeconds": 1.05002,
+          "playbackRate": 1,
+          "highpassHz": 105,
+          "lowpassHz": 10500,
+          "reverse": false,
+          "fadeInSeconds": 0.004,
+          "fadeOutSeconds": 0.065,
+          "gain": 1,
+          "delaySeconds": 0
+        }
+      ],
+      "edits": "Existing performer recording, exact source segment, shortened release. Adapted clip under CC-BY-SA4.0.",
+      "listened": false
+    },
+    {
+      "id": "music-lakeside",
+      "file": "/audio/music-lakeside.mp3",
+      "source": "isao",
+      "original": "lakeside.mp3",
+      "seconds": 108.72,
+      "peakDb": -6.030087,
+      "edits": "Selected from 0s, max 300s; loudnorm=I=-20:TP=-3:LRA=9; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "music-mirrors",
+      "file": "/audio/music-mirrors.mp3",
+      "source": "samurai",
+      "original": "samurai/Samurai-Nights-Demo.mp3",
+      "seconds": 68.65,
+      "peakDb": -6.015347,
+      "edits": "Selected from 0s, max 300s; loudnorm=I=-20:TP=-3:LRA=9; final limiter 0.65, gain 0.8; encoded MP3"
+    },
+    {
+      "id": "music-snow",
+      "file": "/audio/music-snow.mp3",
+      "source": "samurai",
+      "original": "samurai/SingleLoops/Base-L1-Qin.mp3",
+      "seconds": 13.79,
+      "peakDb": -10.703725,
+      "edits": "Selected from 0s, max 300s; loudnorm=I=-20:TP=-3:LRA=9; final limiter 0.65, gain 0.8; encoded MP3"
+    }
+  ],
+  "pools": {
+    "palm": [
+      "hit-palm-1",
+      "hit-palm-2",
+      "hit-palm-3"
+    ],
+    "kick": [
+      "hit-kick-1",
+      "hit-kick-2",
+      "hit-kick-3"
+    ],
+    "heavy": [
+      "hit-heavy",
+      "hit-heavy-2",
+      "hit-heavy-3"
+    ],
+    "swing": [
+      "whoosh-1",
+      "whoosh-2",
+      "whoosh-3"
+    ],
+    "sword": [
+      "sword-swish",
+      "sword-swish-2",
+      "sword-swish-3"
+    ],
+    "parry": [
+      "parry",
+      "parry-2",
+      "parry-3"
+    ],
+    "needle": [
+      "tool",
+      "needle-2",
+      "needle-3"
+    ],
+    "water": [
+      "water",
+      "water2",
+      "water-3"
+    ],
+    "ice": [
+      "ice",
+      "ice-2",
+      "ice-3"
+    ]
+  },
+  "listeningQA": {
+    "status": "not-listened",
+    "reason": "No audio listening/transcription tool is available in the active tool inventory. Signal QA is complete; subjective quality and official clip timing remain unverified."
+  },
+  "integrationNotes": [
+    "Preserves every existing effect and voice ID, including step. Music remains in the existing music manifest.",
+    "Contact peaks exceed swing peaks by6dB or more; preserve this mix hierarchy.",
+    "Choose pool variants without immediately repeating the previous index.",
+    "Effort pool0-2 light attacks,3-4 damage/heavy effort,5 special; avoid triggering effort on every contact and cap to one current effort per actor.",
+    "Taira-derived sounds are for game integration only, not a publicly downloadable sound library.",
+    "Sakura derivatives retain CC-BY-SA4.0 terms and attribution."
+  ]
+}

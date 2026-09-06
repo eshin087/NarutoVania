@@ -1,5 +1,5 @@
 import type {AnimationName} from './combat-core';
-export type SpriteSheet = 'locomotion' | 'melee' | 'techniques';
+export type SpriteSheet = 'locomotion' | 'melee' | 'techniques' | 'aerial';
 export interface AnimationFrame {sheet: SpriteSheet; index: number; weight: number;}
 export interface AnimationSequence {frames: AnimationFrame[]; duration: number; loop: boolean; events?: {at: number; event: string; attachment: [number, number]}[];}
 const frames = (sheet: SpriteSheet, indices: number[], weights?: number[]) => indices.map((index, i) => ({sheet, index, weight: weights?.[i] || 1}));
@@ -15,6 +15,7 @@ export const ANIMATIONS: Record<AnimationName, AnimationSequence> = {
   light2: sequence('melee', [6, 7, 8, 9, 10, 11], 425, false, [1, 1, .7, 1, 1, 1.3]),
   light3: sequence('melee', [12, 13, 14, 15, 16, 17], 520, false, [1, 1, .8, 1, 1, 1.2]),
   heavy: sequence('melee', [18, 19, 20, 21, 22, 23], 770, false, [1.1, 1.2, .6, 1.2, 1, 1.3]),
+  aerial: sequence('aerial',[0,1,2,3,4,5],430,false,[70,75,75,80,70,60]),
   cast: sequence('techniques', [12, 13, 14, 15, 16, 17], 620), ultimate: sequence('techniques', [18, 19, 20, 21], 1100),
 };
 export function animationFrame(name: AnimationName, elapsed: number, duration?: number) {

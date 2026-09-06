@@ -7,7 +7,7 @@ export function registerBossTools(inputs: BattleInput, scene: () => BossGameScen
   const modelContext = (document as unknown as {modelContext?: ModelContext}).modelContext || (navigator as unknown as {modelContext?: ModelContext}).modelContext;
   if (!modelContext?.registerTool) return () => {};
   const registered: string[] = []; const lifecycle = new AbortController(); let alive = true; let busy = false;
-  const status = () => {const s = bridge.get(); return {screen: s.screen, character: s.character, phase: s.checkpoint, objective: s.objective, health: Math.round(s.health), stamina: Math.round(s.stamina), chakra: Math.round(s.chakra), ultimate: Math.round(s.ultimate), boss: s.boss, checkpoint: s.checkpoint, phaseProgress: s.phaseProgress, elapsedSeconds: Math.round(s.elapsed), ...(import.meta.env.DEV ? {details: scene()?.status()} : {})};};
+  const status = () => {const s = bridge.get(); return {screen: s.screen,debugEntry:s.debugEntry,panelWaiting:s.panelWaiting,canAdvance:s.canAdvance,cinematic:s.cinematic, character: s.character, phase: s.checkpoint, objective: s.objective, health: Math.round(s.health), stamina: Math.round(s.stamina), chakra: Math.round(s.chakra), ultimate: Math.round(s.ultimate), boss: s.boss, checkpoint: s.checkpoint, phaseProgress: s.phaseProgress, elapsedSeconds: Math.round(s.elapsed), ...(import.meta.env.DEV ? {details: scene()?.status()} : {})};};
   const result = (value: unknown) => value;
   const add = (tool: Tool) => {try {void Promise.resolve(modelContext.registerTool({...tool, annotations: {readOnlyHint: tool.name === 'read_game_status'}}, {signal: lifecycle.signal})).catch(() => {}); registered.push(tool.name);} catch {}};
   const empty = {type: 'object', properties: {}, additionalProperties: false};
@@ -20,7 +20,8 @@ export function registerBossTools(inputs: BattleInput, scene: () => BossGameScen
   add({name: 'retry_checkpoint', description: 'After defeat, retry the current story phase with starting resources and skip the viewed introduction.', inputSchema: empty, execute: () => {
     if (bridge.get().screen !== 'dead') return result({error: 'Retry is available after defeat.'}); bridge.command('retry'); return result(status());
   }});
-  add({name: 'skip_cinematic', description: 'Skip the current cinematic and apply its complete resulting story state, exactly like the skip button.', inputSchema: empty, execute: () => {
+  add({name:'advance_cinematic',description:'Continue the current held manga panel through the same Continue action as the menu.',inputSchema:empty,execute:()=>{bridge.command('advance');return result(status());}});
+  add({name: 'skip_cinematic', description: 'Skip only the current scene and enter its next story beat, exactly like Skip scene.', inputSchema: empty, execute: () => {
     if (bridge.get().screen !== 'intro') return result({error: 'There is no active cinematic.'}); bridge.command('skip'); return result(status());
   }});
   if (import.meta.env.DEV) {

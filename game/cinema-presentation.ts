@@ -31,12 +31,14 @@ export class CinemaPresentation {
       this.line.setText(cue.speech); this.bubble.setVisible(true);
     }
     if (cue.caption) {this.caption.setText(cue.caption).setVisible(true); this.captionUntil = now + (cue.hold || 3000);}
-    if (cue.moment !== undefined) {this.panel.setFrame(String(cue.moment)).setVisible(true); this.panelMat.setVisible(true); this.panelBorn = now; this.panelUntil = now + (cue.hold || 3000);}
+    if(cue.manga!==undefined){this.panel.setTexture(`manga-${cue.manga}`).setDisplaySize(960,540).setVisible(true);this.panelMat.setVisible(true);this.panelBorn=now;this.panelUntil=Infinity;this.until=Infinity;}
+    if (cue.moment !== undefined) {this.panel.setTexture('v5-moments',String(cue.moment)).setVisible(true); this.panelMat.setVisible(true); this.panelBorn = now; this.panelUntil = now + (cue.hold || 3000);}
   }
+  dismissPanel(){this.panelUntil=0;this.until=0;this.panel.setVisible(false);this.panelMat.setVisible(false);this.bubble.setVisible(false);}
   update(now: number, position: (id: CinemaCue['actor']) => {x: number; y: number} | undefined) {
     const panelActive = now < this.panelUntil;
     this.panel.setVisible(panelActive); this.panelMat.setVisible(panelActive);
-    if (panelActive) {const alpha = Math.min(1, (now - this.panelBorn) / 180, (this.panelUntil - now) / 200); this.panel.setAlpha(alpha); this.panelMat.setAlpha(alpha);}
+    if (panelActive) {const alpha = Math.min(1, (now - this.panelBorn) / 180, (this.panelUntil - now) / 200); this.panel.setAlpha(alpha);this.panel.setScale(960/this.panel.width*(1+Math.min(.012,(now-this.panelBorn)/400000))); this.panelMat.setAlpha(alpha);}
     this.caption.setVisible(now < this.captionUntil);
     this.bubble.setVisible(now < this.until);
     if (now >= this.until) return;

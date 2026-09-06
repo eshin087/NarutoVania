@@ -1,0 +1,6375 @@
+{
+  "version": 9,
+  "status": "visual calibration; residual anatomy drift must be reviewed",
+  "format": "sprite scale = CHARACTER[id].height * pixelsToLogicalBody; origin = anchorPixels / cellSize. scaleCorrection also multiplies existing scale. Uniform scale only.",
+  "measurementBasis": "Compare forehead-to-chin, shoulder-to-belt and straight limb segments to locomotion frame6 at equal runtime height, excluding hair, sword, effects. Values are visual estimates from saved contact sheets, not landmark-certified 5-percent accuracy.",
+  "textures": {
+    "kakashi-locomotion": {
+      "character": "kakashi",
+      "cellSize": [
+        256,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 6,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 7,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 8,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 9,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 10,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 11,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 12,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 13,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 14,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 15,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 16,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 17,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 18,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 19,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 20,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 21,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 22,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 23,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        }
+      ]
+    },
+    "kakashi-melee": {
+      "character": "kakashi",
+      "cellSize": [
+        256,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004054054054054054,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004054054054054054,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004054054054054054,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004054054054054054,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004054054054054054,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004054054054054054,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 6,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004054054054054054,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 7,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004054054054054054,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 8,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004054054054054054,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 9,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004054054054054054,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 10,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004054054054054054,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 11,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004054054054054054,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 12,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004054054054054054,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 13,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004054054054054054,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 14,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004054054054054054,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 15,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004054054054054054,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 16,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004054054054054054,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 17,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004054054054054054,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 18,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004054054054054054,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 19,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004054054054054054,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 20,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004054054054054054,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 21,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004054054054054054,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 22,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004054054054054054,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 23,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004054054054054054,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        }
+      ]
+    },
+    "kakashi-techniques": {
+      "character": "kakashi",
+      "cellSize": [
+        256,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 0.98,
+          "pixelsToLogicalBody": 0.004414414414414414,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 0.98,
+          "pixelsToLogicalBody": 0.004414414414414414,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 0.98,
+          "pixelsToLogicalBody": 0.004414414414414414,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 0.98,
+          "pixelsToLogicalBody": 0.004414414414414414,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 0.98,
+          "pixelsToLogicalBody": 0.004414414414414414,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 0.98,
+          "pixelsToLogicalBody": 0.004414414414414414,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 6,
+          "scaleCorrection": 0.98,
+          "pixelsToLogicalBody": 0.004414414414414414,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 7,
+          "scaleCorrection": 0.98,
+          "pixelsToLogicalBody": 0.004414414414414414,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 8,
+          "scaleCorrection": 0.98,
+          "pixelsToLogicalBody": 0.004414414414414414,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 9,
+          "scaleCorrection": 0.98,
+          "pixelsToLogicalBody": 0.004414414414414414,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 10,
+          "scaleCorrection": 0.98,
+          "pixelsToLogicalBody": 0.004414414414414414,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 11,
+          "scaleCorrection": 0.98,
+          "pixelsToLogicalBody": 0.004414414414414414,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 12,
+          "scaleCorrection": 0.98,
+          "pixelsToLogicalBody": 0.004414414414414414,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 13,
+          "scaleCorrection": 0.98,
+          "pixelsToLogicalBody": 0.004414414414414414,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 14,
+          "scaleCorrection": 0.98,
+          "pixelsToLogicalBody": 0.004414414414414414,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 15,
+          "scaleCorrection": 0.98,
+          "pixelsToLogicalBody": 0.004414414414414414,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 16,
+          "scaleCorrection": 0.98,
+          "pixelsToLogicalBody": 0.004414414414414414,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 17,
+          "scaleCorrection": 0.98,
+          "pixelsToLogicalBody": 0.004414414414414414,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 18,
+          "scaleCorrection": 0.98,
+          "pixelsToLogicalBody": 0.004414414414414414,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 19,
+          "scaleCorrection": 0.98,
+          "pixelsToLogicalBody": 0.004414414414414414,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 20,
+          "scaleCorrection": 0.98,
+          "pixelsToLogicalBody": 0.004414414414414414,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 21,
+          "scaleCorrection": 0.98,
+          "pixelsToLogicalBody": 0.004414414414414414,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 22,
+          "scaleCorrection": 0.98,
+          "pixelsToLogicalBody": 0.004414414414414414,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 23,
+          "scaleCorrection": 0.98,
+          "pixelsToLogicalBody": 0.004414414414414414,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        }
+      ]
+    },
+    "naruto-locomotion": {
+      "character": "naruto",
+      "cellSize": [
+        256,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 6,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 7,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 8,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 9,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 10,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 11,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 12,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 13,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 14,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 15,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 16,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 17,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 18,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 19,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 20,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 21,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 22,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 23,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        }
+      ]
+    },
+    "naruto-melee": {
+      "character": "naruto",
+      "cellSize": [
+        256,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 6,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 7,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 8,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 9,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 10,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 11,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 12,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 13,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 14,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 15,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 16,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 17,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 18,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 19,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 20,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 21,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 22,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 23,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        }
+      ]
+    },
+    "naruto-techniques": {
+      "character": "naruto",
+      "cellSize": [
+        256,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.004423076923076924,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.004423076923076924,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.004423076923076924,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.004423076923076924,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.004423076923076924,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.004423076923076924,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 6,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.004423076923076924,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 7,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.004423076923076924,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 8,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.004423076923076924,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 9,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.004423076923076924,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 10,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.004423076923076924,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 11,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.004423076923076924,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 12,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.004423076923076924,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 13,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.004423076923076924,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 14,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.004423076923076924,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 15,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.004423076923076924,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 16,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.004423076923076924,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 17,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.004423076923076924,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 18,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.004423076923076924,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 19,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.004423076923076924,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 20,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.004423076923076924,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 21,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.004423076923076924,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 22,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.004423076923076924,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 23,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.004423076923076924,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        }
+      ]
+    },
+    "sasuke-locomotion": {
+      "character": "sasuke",
+      "cellSize": [
+        256,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 6,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 7,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 8,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 9,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 10,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 11,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 12,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 13,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 14,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 15,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 16,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 17,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 18,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 19,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 20,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 21,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 22,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 23,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        }
+      ]
+    },
+    "sasuke-melee": {
+      "character": "sasuke",
+      "cellSize": [
+        256,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.00484375,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.00484375,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.00484375,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.00484375,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.00484375,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.00484375,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 6,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.00484375,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 7,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.00484375,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 8,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.00484375,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 9,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.00484375,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 10,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.00484375,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 11,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.00484375,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 12,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.00484375,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 13,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.00484375,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 14,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.00484375,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 15,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.00484375,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 16,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.00484375,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 17,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.00484375,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 18,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.00484375,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 19,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.00484375,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 20,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.00484375,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 21,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.00484375,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 22,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.00484375,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 23,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.00484375,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        }
+      ]
+    },
+    "sasuke-techniques": {
+      "character": "sasuke",
+      "cellSize": [
+        256,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004895833333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004895833333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004895833333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004895833333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004895833333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004895833333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 6,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004895833333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 7,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004895833333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 8,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004895833333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 9,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004895833333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 10,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004895833333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 11,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004895833333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 12,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004895833333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 13,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004895833333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 14,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004895833333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 15,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004895833333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 16,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004895833333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 17,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004895833333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 18,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004895833333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 19,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004895833333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 20,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004895833333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 21,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004895833333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 22,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004895833333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 23,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004895833333333333,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        }
+      ]
+    },
+    "sakura-locomotion": {
+      "character": "sakura",
+      "cellSize": [
+        256,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 6,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 7,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 8,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 9,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 10,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 11,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 12,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 13,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 14,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 15,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 16,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 17,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 18,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 19,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 20,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 21,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 22,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 23,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        }
+      ]
+    },
+    "sakura-melee": {
+      "character": "sakura",
+      "cellSize": [
+        256,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.004818652849740933,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.004818652849740933,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.004818652849740933,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.004818652849740933,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.004818652849740933,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.004818652849740933,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 6,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.004818652849740933,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 7,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.004818652849740933,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 8,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.004818652849740933,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 9,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.004818652849740933,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 10,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.004818652849740933,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 11,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.004818652849740933,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 12,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.004818652849740933,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 13,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.004818652849740933,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 14,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.004818652849740933,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 15,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.004818652849740933,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 16,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.004818652849740933,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 17,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.004818652849740933,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 18,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.004818652849740933,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 19,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.004818652849740933,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 20,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.004818652849740933,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 21,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.004818652849740933,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 22,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.004818652849740933,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 23,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.004818652849740933,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        }
+      ]
+    },
+    "sakura-techniques": {
+      "character": "sakura",
+      "cellSize": [
+        256,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 0.88,
+          "pixelsToLogicalBody": 0.004559585492227979,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 0.88,
+          "pixelsToLogicalBody": 0.004559585492227979,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 0.88,
+          "pixelsToLogicalBody": 0.004559585492227979,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 0.88,
+          "pixelsToLogicalBody": 0.004559585492227979,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 0.88,
+          "pixelsToLogicalBody": 0.004559585492227979,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 0.88,
+          "pixelsToLogicalBody": 0.004559585492227979,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 6,
+          "scaleCorrection": 0.88,
+          "pixelsToLogicalBody": 0.004559585492227979,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 7,
+          "scaleCorrection": 0.88,
+          "pixelsToLogicalBody": 0.004559585492227979,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 8,
+          "scaleCorrection": 0.88,
+          "pixelsToLogicalBody": 0.004559585492227979,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 9,
+          "scaleCorrection": 0.88,
+          "pixelsToLogicalBody": 0.004559585492227979,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 10,
+          "scaleCorrection": 0.88,
+          "pixelsToLogicalBody": 0.004559585492227979,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 11,
+          "scaleCorrection": 0.88,
+          "pixelsToLogicalBody": 0.004559585492227979,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 12,
+          "scaleCorrection": 0.88,
+          "pixelsToLogicalBody": 0.004559585492227979,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 13,
+          "scaleCorrection": 0.88,
+          "pixelsToLogicalBody": 0.004559585492227979,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 14,
+          "scaleCorrection": 0.88,
+          "pixelsToLogicalBody": 0.004559585492227979,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 15,
+          "scaleCorrection": 0.88,
+          "pixelsToLogicalBody": 0.004559585492227979,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 16,
+          "scaleCorrection": 0.88,
+          "pixelsToLogicalBody": 0.004559585492227979,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 17,
+          "scaleCorrection": 0.88,
+          "pixelsToLogicalBody": 0.004559585492227979,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 18,
+          "scaleCorrection": 0.88,
+          "pixelsToLogicalBody": 0.004559585492227979,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 19,
+          "scaleCorrection": 0.88,
+          "pixelsToLogicalBody": 0.004559585492227979,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 20,
+          "scaleCorrection": 0.88,
+          "pixelsToLogicalBody": 0.004559585492227979,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 21,
+          "scaleCorrection": 0.88,
+          "pixelsToLogicalBody": 0.004559585492227979,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 22,
+          "scaleCorrection": 0.88,
+          "pixelsToLogicalBody": 0.004559585492227979,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 23,
+          "scaleCorrection": 0.88,
+          "pixelsToLogicalBody": 0.004559585492227979,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        }
+      ]
+    },
+    "zabuza-locomotion": {
+      "character": "zabuza",
+      "cellSize": [
+        384,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 6,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 7,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 8,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 9,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 10,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 11,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 12,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 13,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 14,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 15,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 16,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 17,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 18,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 19,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 20,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 21,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 22,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 23,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        }
+      ]
+    },
+    "zabuza-melee": {
+      "character": "zabuza",
+      "cellSize": [
+        384,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 0.96,
+          "pixelsToLogicalBody": 0.004549763033175355,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 0.96,
+          "pixelsToLogicalBody": 0.004549763033175355,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 0.96,
+          "pixelsToLogicalBody": 0.004549763033175355,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 0.96,
+          "pixelsToLogicalBody": 0.004549763033175355,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 0.96,
+          "pixelsToLogicalBody": 0.004549763033175355,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 0.96,
+          "pixelsToLogicalBody": 0.004549763033175355,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 6,
+          "scaleCorrection": 0.96,
+          "pixelsToLogicalBody": 0.004549763033175355,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 7,
+          "scaleCorrection": 0.96,
+          "pixelsToLogicalBody": 0.004549763033175355,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 8,
+          "scaleCorrection": 0.96,
+          "pixelsToLogicalBody": 0.004549763033175355,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 9,
+          "scaleCorrection": 0.96,
+          "pixelsToLogicalBody": 0.004549763033175355,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 10,
+          "scaleCorrection": 0.96,
+          "pixelsToLogicalBody": 0.004549763033175355,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 11,
+          "scaleCorrection": 0.96,
+          "pixelsToLogicalBody": 0.004549763033175355,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 12,
+          "scaleCorrection": 0.96,
+          "pixelsToLogicalBody": 0.004549763033175355,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 13,
+          "scaleCorrection": 0.96,
+          "pixelsToLogicalBody": 0.004549763033175355,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 14,
+          "scaleCorrection": 0.96,
+          "pixelsToLogicalBody": 0.004549763033175355,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 15,
+          "scaleCorrection": 0.96,
+          "pixelsToLogicalBody": 0.004549763033175355,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 16,
+          "scaleCorrection": 0.96,
+          "pixelsToLogicalBody": 0.004549763033175355,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 17,
+          "scaleCorrection": 0.96,
+          "pixelsToLogicalBody": 0.004549763033175355,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 18,
+          "scaleCorrection": 0.96,
+          "pixelsToLogicalBody": 0.004549763033175355,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 19,
+          "scaleCorrection": 0.96,
+          "pixelsToLogicalBody": 0.004549763033175355,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 20,
+          "scaleCorrection": 0.96,
+          "pixelsToLogicalBody": 0.004549763033175355,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 21,
+          "scaleCorrection": 0.96,
+          "pixelsToLogicalBody": 0.004549763033175355,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 22,
+          "scaleCorrection": 0.96,
+          "pixelsToLogicalBody": 0.004549763033175355,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 23,
+          "scaleCorrection": 0.96,
+          "pixelsToLogicalBody": 0.004549763033175355,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        }
+      ]
+    },
+    "zabuza-techniques": {
+      "character": "zabuza",
+      "cellSize": [
+        384,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004454976303317535,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004454976303317535,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004454976303317535,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004454976303317535,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004454976303317535,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004454976303317535,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 6,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004454976303317535,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 7,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004454976303317535,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 8,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004454976303317535,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 9,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004454976303317535,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 10,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004454976303317535,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 11,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004454976303317535,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 12,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004454976303317535,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 13,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004454976303317535,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 14,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004454976303317535,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 15,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004454976303317535,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 16,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004454976303317535,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 17,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004454976303317535,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 18,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004454976303317535,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 19,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004454976303317535,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 20,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004454976303317535,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 21,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004454976303317535,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 22,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004454976303317535,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 23,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004454976303317535,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        }
+      ]
+    },
+    "haku-locomotion": {
+      "character": "haku",
+      "cellSize": [
+        256,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 6,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 7,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 8,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 9,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 10,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 11,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 12,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 13,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 14,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 15,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 16,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 17,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 18,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 19,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 20,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 21,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 22,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 23,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        }
+      ]
+    },
+    "haku-melee": {
+      "character": "haku",
+      "cellSize": [
+        256,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004519230769230769,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004519230769230769,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004519230769230769,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004519230769230769,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004519230769230769,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004519230769230769,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 6,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004519230769230769,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 7,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004519230769230769,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 8,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004519230769230769,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 9,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004519230769230769,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 10,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004519230769230769,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 11,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004519230769230769,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 12,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004519230769230769,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 13,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004519230769230769,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 14,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004519230769230769,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 15,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004519230769230769,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 16,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004519230769230769,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 17,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004519230769230769,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 18,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004519230769230769,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 19,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004519230769230769,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 20,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004519230769230769,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 21,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004519230769230769,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 22,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004519230769230769,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 23,
+          "scaleCorrection": 0.94,
+          "pixelsToLogicalBody": 0.004519230769230769,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        }
+      ]
+    },
+    "haku-techniques": {
+      "character": "haku",
+      "cellSize": [
+        256,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 6,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 7,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 8,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 9,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 10,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 11,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 12,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 13,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 14,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 15,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 16,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 17,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 18,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 19,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 20,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 21,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 22,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 23,
+          "scaleCorrection": 0.9,
+          "pixelsToLogicalBody": 0.004326923076923077,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        }
+      ]
+    },
+    "v3-kakashi-melee": {
+      "character": "kakashi",
+      "cellSize": [
+        512,
+        384
+      ],
+      "requiresAssetReplacement": "kakashi-melee-corrected.png and kakashi-melee-corrected-manifest.json",
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 1.045045045045045,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Regenerated using actual idle sprite reference; identical uniform source scale1.08 in every frame. Slender torso and head match checked on grounded QA contact. Ground sole at307."
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 1.045045045045045,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Regenerated using actual idle sprite reference; identical uniform source scale1.08 in every frame. Slender torso and head match checked on grounded QA contact. Ground sole at307."
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 1.045045045045045,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Regenerated using actual idle sprite reference; identical uniform source scale1.08 in every frame. Slender torso and head match checked on grounded QA contact. Ground sole at307."
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 1.045045045045045,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Regenerated using actual idle sprite reference; identical uniform source scale1.08 in every frame. Slender torso and head match checked on grounded QA contact. Ground sole at307."
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 1.045045045045045,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Regenerated using actual idle sprite reference; identical uniform source scale1.08 in every frame. Slender torso and head match checked on grounded QA contact. Ground sole at307."
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 1.045045045045045,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Regenerated using actual idle sprite reference; identical uniform source scale1.08 in every frame. Slender torso and head match checked on grounded QA contact. Ground sole at307."
+        },
+        {
+          "frame": 6,
+          "scaleCorrection": 1.045045045045045,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Regenerated using actual idle sprite reference; identical uniform source scale1.08 in every frame. Slender torso and head match checked on grounded QA contact. Ground sole at307."
+        },
+        {
+          "frame": 7,
+          "scaleCorrection": 1.045045045045045,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Regenerated using actual idle sprite reference; identical uniform source scale1.08 in every frame. Slender torso and head match checked on grounded QA contact. Ground sole at307."
+        },
+        {
+          "frame": 8,
+          "scaleCorrection": 1.045045045045045,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Regenerated using actual idle sprite reference; identical uniform source scale1.08 in every frame. Slender torso and head match checked on grounded QA contact. Ground sole at307."
+        },
+        {
+          "frame": 9,
+          "scaleCorrection": 1.045045045045045,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Regenerated using actual idle sprite reference; identical uniform source scale1.08 in every frame. Slender torso and head match checked on grounded QA contact. Ground sole at307."
+        },
+        {
+          "frame": 10,
+          "scaleCorrection": 1.045045045045045,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Regenerated using actual idle sprite reference; identical uniform source scale1.08 in every frame. Slender torso and head match checked on grounded QA contact. Ground sole at307."
+        },
+        {
+          "frame": 11,
+          "scaleCorrection": 1.045045045045045,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Regenerated using actual idle sprite reference; identical uniform source scale1.08 in every frame. Slender torso and head match checked on grounded QA contact. Ground sole at307."
+        },
+        {
+          "frame": 12,
+          "scaleCorrection": 1.045045045045045,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Regenerated using actual idle sprite reference; identical uniform source scale1.08 in every frame. Slender torso and head match checked on grounded QA contact. Ground sole at307."
+        },
+        {
+          "frame": 13,
+          "scaleCorrection": 1.045045045045045,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Regenerated using actual idle sprite reference; identical uniform source scale1.08 in every frame. Slender torso and head match checked on grounded QA contact. Ground sole at307."
+        },
+        {
+          "frame": 14,
+          "scaleCorrection": 1.045045045045045,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Regenerated using actual idle sprite reference; identical uniform source scale1.08 in every frame. Slender torso and head match checked on grounded QA contact. Ground sole at307."
+        },
+        {
+          "frame": 15,
+          "scaleCorrection": 1.045045045045045,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Regenerated using actual idle sprite reference; identical uniform source scale1.08 in every frame. Slender torso and head match checked on grounded QA contact. Ground sole at307."
+        },
+        {
+          "frame": 16,
+          "scaleCorrection": 1.045045045045045,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Regenerated using actual idle sprite reference; identical uniform source scale1.08 in every frame. Slender torso and head match checked on grounded QA contact. Ground sole at307."
+        },
+        {
+          "frame": 17,
+          "scaleCorrection": 1.045045045045045,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Regenerated using actual idle sprite reference; identical uniform source scale1.08 in every frame. Slender torso and head match checked on grounded QA contact. Ground sole at307."
+        },
+        {
+          "frame": 18,
+          "scaleCorrection": 1.045045045045045,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Regenerated using actual idle sprite reference; identical uniform source scale1.08 in every frame. Slender torso and head match checked on grounded QA contact. Ground sole at307."
+        },
+        {
+          "frame": 19,
+          "scaleCorrection": 1.045045045045045,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Regenerated using actual idle sprite reference; identical uniform source scale1.08 in every frame. Slender torso and head match checked on grounded QA contact. Ground sole at307."
+        },
+        {
+          "frame": 20,
+          "scaleCorrection": 1.045045045045045,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Regenerated using actual idle sprite reference; identical uniform source scale1.08 in every frame. Slender torso and head match checked on grounded QA contact. Ground sole at307."
+        },
+        {
+          "frame": 21,
+          "scaleCorrection": 1.045045045045045,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Regenerated using actual idle sprite reference; identical uniform source scale1.08 in every frame. Slender torso and head match checked on grounded QA contact. Ground sole at307."
+        },
+        {
+          "frame": 22,
+          "scaleCorrection": 1.045045045045045,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Regenerated using actual idle sprite reference; identical uniform source scale1.08 in every frame. Slender torso and head match checked on grounded QA contact. Ground sole at307."
+        },
+        {
+          "frame": 23,
+          "scaleCorrection": 1.045045045045045,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Regenerated using actual idle sprite reference; identical uniform source scale1.08 in every frame. Slender torso and head match checked on grounded QA contact. Ground sole at307."
+        }
+      ]
+    },
+    "v8-sword": {
+      "character": "zabuza",
+      "cellSize": [
+        512,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "pixelsToLogicalBody": 0.003909952606635071,
+          "scaleCorrection": 0.825,
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "measurement": "Regenerated with idle reference, then .825 body-landmark correction using masked head/chin, torso and limb segments; excludes sword and crouched pose height."
+        },
+        {
+          "frame": 1,
+          "pixelsToLogicalBody": 0.003909952606635071,
+          "scaleCorrection": 0.825,
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "measurement": "Regenerated with idle reference, then .825 body-landmark correction using masked head/chin, torso and limb segments; excludes sword and crouched pose height."
+        },
+        {
+          "frame": 2,
+          "pixelsToLogicalBody": 0.003909952606635071,
+          "scaleCorrection": 0.825,
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "measurement": "Regenerated with idle reference, then .825 body-landmark correction using masked head/chin, torso and limb segments; excludes sword and crouched pose height."
+        },
+        {
+          "frame": 3,
+          "pixelsToLogicalBody": 0.003909952606635071,
+          "scaleCorrection": 0.825,
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "measurement": "Regenerated with idle reference, then .825 body-landmark correction using masked head/chin, torso and limb segments; excludes sword and crouched pose height."
+        },
+        {
+          "frame": 4,
+          "pixelsToLogicalBody": 0.003909952606635071,
+          "scaleCorrection": 0.825,
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "measurement": "Regenerated with idle reference, then .825 body-landmark correction using masked head/chin, torso and limb segments; excludes sword and crouched pose height."
+        },
+        {
+          "frame": 5,
+          "pixelsToLogicalBody": 0.003909952606635071,
+          "scaleCorrection": 0.825,
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "measurement": "Regenerated with idle reference, then .825 body-landmark correction using masked head/chin, torso and limb segments; excludes sword and crouched pose height."
+        },
+        {
+          "frame": 6,
+          "pixelsToLogicalBody": 0.003909952606635071,
+          "scaleCorrection": 0.825,
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "measurement": "Regenerated with idle reference, then .825 body-landmark correction using masked head/chin, torso and limb segments; excludes sword and crouched pose height."
+        },
+        {
+          "frame": 7,
+          "pixelsToLogicalBody": 0.003909952606635071,
+          "scaleCorrection": 0.825,
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "measurement": "Regenerated with idle reference, then .825 body-landmark correction using masked head/chin, torso and limb segments; excludes sword and crouched pose height."
+        },
+        {
+          "frame": 8,
+          "pixelsToLogicalBody": 0.003909952606635071,
+          "scaleCorrection": 0.825,
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "measurement": "Regenerated with idle reference, then .825 body-landmark correction using masked head/chin, torso and limb segments; excludes sword and crouched pose height."
+        },
+        {
+          "frame": 9,
+          "pixelsToLogicalBody": 0.003909952606635071,
+          "scaleCorrection": 0.825,
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "measurement": "Regenerated with idle reference, then .825 body-landmark correction using masked head/chin, torso and limb segments; excludes sword and crouched pose height."
+        },
+        {
+          "frame": 10,
+          "pixelsToLogicalBody": 0.003909952606635071,
+          "scaleCorrection": 0.825,
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "measurement": "Regenerated with idle reference, then .825 body-landmark correction using masked head/chin, torso and limb segments; excludes sword and crouched pose height."
+        },
+        {
+          "frame": 11,
+          "pixelsToLogicalBody": 0.003909952606635071,
+          "scaleCorrection": 0.825,
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "measurement": "Regenerated with idle reference, then .825 body-landmark correction using masked head/chin, torso and limb segments; excludes sword and crouched pose height."
+        },
+        {
+          "frame": 12,
+          "pixelsToLogicalBody": 0.003909952606635071,
+          "scaleCorrection": 0.825,
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "measurement": "Regenerated with idle reference, then .825 body-landmark correction using masked head/chin, torso and limb segments; excludes sword and crouched pose height."
+        },
+        {
+          "frame": 13,
+          "pixelsToLogicalBody": 0.003909952606635071,
+          "scaleCorrection": 0.825,
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "measurement": "Regenerated with idle reference, then .825 body-landmark correction using masked head/chin, torso and limb segments; excludes sword and crouched pose height."
+        },
+        {
+          "frame": 14,
+          "pixelsToLogicalBody": 0.003909952606635071,
+          "scaleCorrection": 0.825,
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "measurement": "Regenerated with idle reference, then .825 body-landmark correction using masked head/chin, torso and limb segments; excludes sword and crouched pose height."
+        },
+        {
+          "frame": 15,
+          "pixelsToLogicalBody": 0.003909952606635071,
+          "scaleCorrection": 0.825,
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "measurement": "Regenerated with idle reference, then .825 body-landmark correction using masked head/chin, torso and limb segments; excludes sword and crouched pose height."
+        },
+        {
+          "frame": 16,
+          "pixelsToLogicalBody": 0.003909952606635071,
+          "scaleCorrection": 0.825,
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "measurement": "Regenerated with idle reference, then .825 body-landmark correction using masked head/chin, torso and limb segments; excludes sword and crouched pose height."
+        },
+        {
+          "frame": 17,
+          "pixelsToLogicalBody": 0.003909952606635071,
+          "scaleCorrection": 0.825,
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "measurement": "Regenerated with idle reference, then .825 body-landmark correction using masked head/chin, torso and limb segments; excludes sword and crouched pose height."
+        },
+        {
+          "frame": 18,
+          "pixelsToLogicalBody": 0.003909952606635071,
+          "scaleCorrection": 0.825,
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "measurement": "Regenerated with idle reference, then .825 body-landmark correction using masked head/chin, torso and limb segments; excludes sword and crouched pose height."
+        },
+        {
+          "frame": 19,
+          "pixelsToLogicalBody": 0.003909952606635071,
+          "scaleCorrection": 0.825,
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "measurement": "Regenerated with idle reference, then .825 body-landmark correction using masked head/chin, torso and limb segments; excludes sword and crouched pose height."
+        },
+        {
+          "frame": 20,
+          "pixelsToLogicalBody": 0.003909952606635071,
+          "scaleCorrection": 0.825,
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "measurement": "Regenerated with idle reference, then .825 body-landmark correction using masked head/chin, torso and limb segments; excludes sword and crouched pose height."
+        },
+        {
+          "frame": 21,
+          "pixelsToLogicalBody": 0.003909952606635071,
+          "scaleCorrection": 0.825,
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "measurement": "Regenerated with idle reference, then .825 body-landmark correction using masked head/chin, torso and limb segments; excludes sword and crouched pose height."
+        },
+        {
+          "frame": 22,
+          "pixelsToLogicalBody": 0.003909952606635071,
+          "scaleCorrection": 0.825,
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "measurement": "Regenerated with idle reference, then .825 body-landmark correction using masked head/chin, torso and limb segments; excludes sword and crouched pose height."
+        },
+        {
+          "frame": 23,
+          "pixelsToLogicalBody": 0.003909952606635071,
+          "scaleCorrection": 0.825,
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "measurement": "Regenerated with idle reference, then .825 body-landmark correction using masked head/chin, torso and limb segments; excludes sword and crouched pose height."
+        }
+      ]
+    },
+    "v2-naruto-awakened": {
+      "character": "naruto",
+      "cellSize": [
+        256,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.003787878787878788,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.003787878787878788,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.003787878787878788,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.003787878787878788,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.003787878787878788,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.003787878787878788,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 6,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.003787878787878788,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 7,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.003787878787878788,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        }
+      ]
+    },
+    "v2-ending-zabuza": {
+      "character": "zabuza",
+      "cellSize": [
+        384,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004347826086956522,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004347826086956522,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004347826086956522,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004347826086956522,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004347826086956522,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004347826086956522,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 6,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004347826086956522,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 7,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004347826086956522,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 8,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004347826086956522,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 9,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004347826086956522,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 10,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004347826086956522,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 11,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004347826086956522,
+          "anchorPixels": [
+            192,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        }
+      ]
+    },
+    "haku-unmasked-locomotion": {
+      "character": "haku",
+      "cellSize": [
+        256,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.00558659217877095,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.00558659217877095,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.00558659217877095,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.00558659217877095,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.00558659217877095,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.00558659217877095,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 6,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.00558659217877095,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 7,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.00558659217877095,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 8,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.00558659217877095,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 9,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.00558659217877095,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 10,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.00558659217877095,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 11,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.00558659217877095,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 12,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.00558659217877095,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 13,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.00558659217877095,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 14,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.00558659217877095,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 15,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.00558659217877095,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 16,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.00558659217877095,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 17,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.00558659217877095,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 18,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.00558659217877095,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 19,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.00558659217877095,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 20,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.00558659217877095,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 21,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.00558659217877095,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 22,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.00558659217877095,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 23,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.00558659217877095,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        }
+      ]
+    },
+    "haku-unmasked-melee": {
+      "character": "haku",
+      "cellSize": [
+        256,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.005195530726256984,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.005195530726256984,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.005195530726256984,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.005195530726256984,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.005195530726256984,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.005195530726256984,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 6,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.005195530726256984,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 7,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.005195530726256984,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 8,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.005195530726256984,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 9,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.005195530726256984,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 10,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.005195530726256984,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 11,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.005195530726256984,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 12,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.005195530726256984,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 13,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.005195530726256984,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 14,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.005195530726256984,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 15,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.005195530726256984,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 16,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.005195530726256984,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 17,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.005195530726256984,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 18,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.005195530726256984,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 19,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.005195530726256984,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 20,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.005195530726256984,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 21,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.005195530726256984,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 22,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.005195530726256984,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 23,
+          "scaleCorrection": 0.93,
+          "pixelsToLogicalBody": 0.005195530726256984,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        }
+      ]
+    },
+    "haku-unmasked-techniques": {
+      "character": "haku",
+      "cellSize": [
+        256,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.005139664804469274,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.005139664804469274,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.005139664804469274,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.005139664804469274,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.005139664804469274,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.005139664804469274,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 6,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.005139664804469274,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 7,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.005139664804469274,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 8,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.005139664804469274,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 9,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.005139664804469274,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 10,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.005139664804469274,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 11,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.005139664804469274,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 12,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.005139664804469274,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 13,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.005139664804469274,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 14,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.005139664804469274,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 15,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.005139664804469274,
+          "anchorPixels": [
+            128,
+            230
+          ],
+          "measurement": "Visible sandals at source y230; ice effect extends below feet. Anchor corrects floating source frame, excludes ice."
+        },
+        {
+          "frame": 16,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.005139664804469274,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 17,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.005139664804469274,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 18,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.005139664804469274,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 19,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.005139664804469274,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 20,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.005139664804469274,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 21,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.005139664804469274,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 22,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.005139664804469274,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        },
+        {
+          "frame": 23,
+          "scaleCorrection": 0.92,
+          "pixelsToLogicalBody": 0.005139664804469274,
+          "anchorPixels": [
+            128,
+            307
+          ],
+          "measurement": "visual head/torso/limb comparison; estimated"
+        }
+      ]
+    },
+    "v9-naruto-aerial": {
+      "character": "naruto",
+      "cellSize": [
+        512,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.39 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.4 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.39 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.41 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.4 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.39 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        }
+      ]
+    },
+    "v9-kakashi-aerial": {
+      "character": "kakashi",
+      "cellSize": [
+        512,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.3948 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.3948 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.40419999999999995 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.41359999999999997 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.40419999999999995 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.3948 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        }
+      ]
+    },
+    "v9-sasuke-aerial": {
+      "character": "sasuke",
+      "cellSize": [
+        512,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.391 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.391 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.391 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.39949999999999997 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.391 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.391 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        }
+      ]
+    },
+    "v9-sakura-aerial": {
+      "character": "sakura",
+      "cellSize": [
+        512,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.323 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.323 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.323 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.3315 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.323 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.323 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        }
+      ]
+    },
+    "v9-zabuza-aerial": {
+      "character": "zabuza",
+      "cellSize": [
+        512,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.522 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.522 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.522 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.522 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.522 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.522 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        }
+      ]
+    },
+    "v9-haku-aerial": {
+      "character": "haku",
+      "cellSize": [
+        512,
+        384
+      ],
+      "frames": [
+        {
+          "frame": 0,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.41800000000000004 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 1,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.42900000000000005 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 2,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.44000000000000006 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 3,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.44000000000000006 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 4,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.44000000000000006 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        },
+        {
+          "frame": 5,
+          "scaleCorrection": 1,
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "measurement": "Pixels already normalized with sourceUniformScale 0.42900000000000005 by forehead/chin plus torso/limb comparison against idle; hip fixed256,230. Six airborne poses."
+        }
+      ]
+    }
+  },
+  "outliers": [
+    "v2 upright melee bodies often have lengthened legs relative to idle; uniform scale is compromise.",
+    "Unmasked Haku techniques15 had floating feet; visual sole anchor changed307 to230. Exact2px verification pending runtime review."
+  ],
+  "replacementNotes": {
+    "kakashi": "Replaced materially bulkier original24-frame v3 source with new reference-guided24-frame anatomy. Cell width512 instead256. Use replacement manifest rects."
+  }
+}

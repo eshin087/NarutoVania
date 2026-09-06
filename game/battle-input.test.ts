@@ -25,8 +25,14 @@ describe('controller parity and lifecycle', () => {
     expect(mapGamepad(pad(['skill2', 'substitute']))).toEqual(new Set(['skill2', 'substitute']));
   });
   it('focus loss pauses fights and cutscenes and clears all held actions', () => {
-    const commands: string[] = []; bossBridge.handle(c => commands.push(c)); bossBridge.patch({screen: 'intro'});
+    const commands: string[] = []; bossBridge.handle(c => commands.push(typeof c==='string'?c:c.type)); bossBridge.patch({screen: 'intro'});
     input.inject(['right', 'melee', 'parry']); input.blur(); expect(input.held('melee')).toBe(false); expect(commands).toEqual(['pause']);
+  });
+  it('held Enter and controller confirmation cannot dismiss a newly entered panel',()=>{
+    const commands:unknown[]=[];bossBridge.handle(c=>commands.push(c));bossBridge.patch({screen:'intro'});
+    const e={code:'Enter',key:'Enter',target:null,preventDefault:vi.fn(),repeat:false} as unknown as KeyboardEvent;
+    input.down(e);expect(commands).toEqual(['advance']);input.clear();input.down(e);expect(commands).toHaveLength(1);input.up(e);input.down(e);expect(commands).toHaveLength(2);
+    pads=[pad(['jump'])];input.poll();expect(commands).toHaveLength(3);input.clear();input.poll();expect(commands).toHaveLength(3);pads=[pad([])];input.poll();pads=[pad(['jump'])];input.poll();expect(commands).toHaveLength(4);
   });
   it('virtual ordinary inputs have deliberate press/release edges', () => {
     input.inject(['parry']); expect(input.pressed('parry')).toBe(true); input.endFrame(); input.inject(['parry']); expect(input.pressed('parry')).toBe(false);

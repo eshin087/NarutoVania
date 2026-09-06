@@ -55,11 +55,11 @@ describe('Sasuke rescue support',()=>{
 describe('removed post-rescue duel',()=>{
  it('routes rescue through the hunter and bridge scenes directly to Sasuke',()=>{
   const entries:string[]=[],clips:string[]=[];const d=new StoryDirector('rescue',{enter:s=>entries.push(s.phase),cinematic:c=>clips.push(c.id),cue:()=>{},complete:()=>{}});
-  d.start(false);d.finishObjective();while(d.mode==='cinematic')d.update(d.clip!.duration+1);
+  d.start(false);d.finishObjective();for(let i=0;d.mode==='cinematic'&&i<100;i++){d.update(d.clip!.duration+1);if(d.waiting){d.update(400);d.advance();}}
   expect(entries).toEqual(['rescue','mirrors']);expect(clips).toEqual(['transformed-shuriken','hunter-nin-deception','simultaneous-bridge-battles']);
  });
  it('migrates old copy-duel saves to the same next playable phase',()=>{
   const entries:string[]=[];const d=new StoryDirector('copy',{enter:s=>entries.push(s.phase),cinematic:()=>{},cue:()=>{},complete:()=>{}});
-  d.start(false);expect(entries).toEqual([]);d.skip();expect(entries).toEqual(['mirrors']);expect(d.state.kakashiCaptured).toBe(false);
+  d.start(false);expect(entries).toEqual([]);d.skip();expect(d.clip?.id).toBe('simultaneous-bridge-battles');d.skip();expect(entries).toEqual(['mirrors']);expect(d.state.kakashiCaptured).toBe(false);
  });
 });

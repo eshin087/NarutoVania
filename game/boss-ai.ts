@@ -82,7 +82,7 @@ export const HAKU_MOVES: BossMove[] = [
 
 export class BossBrain {
 
-  recent: string[] = []; readyAt = 1900; phase = 0; attacks = 0;
+  recent: string[] = []; readyAt = 1900; phase = 0; attacks = 0; lastParryAt=0;lastParryAttack=0;
 
   constructor(public boss: Combatant, public story: StoryPhaseId, private random: () => number = Math.random) {}
 
@@ -90,6 +90,10 @@ export class BossBrain {
 
     if (now < this.readyAt || !this.boss.canAct(now) || this.boss.guardBrokenUntil > now) return null;
 
+    if(!mirrors&&distance<220&&this.boss.stamina>=30&&now-this.lastParryAt>=10000&&this.attacks-this.lastParryAttack>=2){
+      const stance:BossMove={id:'parry-stance',action:'boss',animation:'block',duration:590,cancelAt:590,stamina:8,events:[],minRange:0,maxRange:220,weight:1,recovery:500};
+      if(this.boss.start(stance,now)){this.lastParryAt=now;this.lastParryAttack=this.attacks;this.readyAt=now+1090;return stance;}
+    }
     const health = this.boss.health / this.boss.maxHealth;
 
     this.phase = health < .36 ? 2 : mirrors || health < .73 || ['copy', 'lightning', 'seal'].includes(this.story) ? 1 : 0;
@@ -178,4 +182,9 @@ export class MirrorFormation {
 
   count() {return this.mirrors.filter(m => !m.broken).length;}
 
+}
+
+/** Boss deflection is a committed stance, never an input-reactive counter. */
+export function bossParryEligible(age:number,action:string,red:boolean,fromX:number,bossX:number,facing:number,stamina:number,used:boolean){
+  return age>=450&&age<590&&stamina>0&&!used&&!red&&['light1','light2','light3','aerial'].includes(action)&&(fromX-bossX)*facing>=-3;
 }

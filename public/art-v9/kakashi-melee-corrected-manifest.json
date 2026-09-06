@@ -1,0 +1,564 @@
+{
+  "file": "kakashi-melee-corrected.png",
+  "baseHeight": 222,
+  "frames": [
+    {
+      "rect": [
+        0,
+        0,
+        512,
+        384
+      ],
+      "footAnchor": [
+        256,
+        307
+      ],
+      "sourceFoot": [
+        13.5,
+        189
+      ],
+      "sourceUniformScale": 1.08,
+      "contentBounds": [
+        242,
+        104,
+        343,
+        310
+      ]
+    },
+    {
+      "rect": [
+        512,
+        0,
+        512,
+        384
+      ],
+      "footAnchor": [
+        256,
+        307
+      ],
+      "sourceFoot": [
+        12.0,
+        189
+      ],
+      "sourceUniformScale": 1.08,
+      "contentBounds": [
+        243,
+        104,
+        344,
+        310
+      ]
+    },
+    {
+      "rect": [
+        1024,
+        0,
+        512,
+        384
+      ],
+      "footAnchor": [
+        256,
+        307
+      ],
+      "sourceFoot": [
+        14.0,
+        188
+      ],
+      "sourceUniformScale": 1.08,
+      "contentBounds": [
+        242,
+        105,
+        384,
+        310
+      ]
+    },
+    {
+      "rect": [
+        1536,
+        0,
+        512,
+        384
+      ],
+      "footAnchor": [
+        256,
+        307
+      ],
+      "sourceFoot": [
+        13.5,
+        189
+      ],
+      "sourceUniformScale": 1.08,
+      "contentBounds": [
+        242,
+        104,
+        370,
+        310
+      ]
+    },
+    {
+      "rect": [
+        2048,
+        0,
+        512,
+        384
+      ],
+      "footAnchor": [
+        256,
+        307
+      ],
+      "sourceFoot": [
+        14.0,
+        189
+      ],
+      "sourceUniformScale": 1.08,
+      "contentBounds": [
+        242,
+        104,
+        346,
+        310
+      ]
+    },
+    {
+      "rect": [
+        2560,
+        0,
+        512,
+        384
+      ],
+      "footAnchor": [
+        256,
+        307
+      ],
+      "sourceFoot": [
+        14.5,
+        189
+      ],
+      "sourceUniformScale": 1.08,
+      "contentBounds": [
+        241,
+        104,
+        376,
+        310
+      ]
+    },
+    {
+      "rect": [
+        0,
+        384,
+        512,
+        384
+      ],
+      "footAnchor": [
+        256,
+        307
+      ],
+      "sourceFoot": [
+        12.5,
+        192
+      ],
+      "sourceUniformScale": 1.08,
+      "contentBounds": [
+        243,
+        101,
+        337,
+        312
+      ]
+    },
+    {
+      "rect": [
+        512,
+        384,
+        512,
+        384
+      ],
+      "footAnchor": [
+        256,
+        307
+      ],
+      "sourceFoot": [
+        12.5,
+        194
+      ],
+      "sourceUniformScale": 1.08,
+      "contentBounds": [
+        243,
+        98,
+        340,
+        310
+      ]
+    },
+    {
+      "rect": [
+        1024,
+        384,
+        512,
+        384
+      ],
+      "footAnchor": [
+        256,
+        307
+      ],
+      "sourceFoot": [
+        28.5,
+        191
+      ],
+      "sourceUniformScale": 1.08,
+      "contentBounds": [
+        226,
+        102,
+        399,
+        311
+      ]
+    },
+    {
+      "rect": [
+        1536,
+        384,
+        512,
+        384
+      ],
+      "footAnchor": [
+        256,
+        307
+      ],
+      "sourceFoot": [
+        25.5,
+        189
+      ],
+      "sourceUniformScale": 1.08,
+      "contentBounds": [
+        229,
+        104,
+        385,
+        310
+      ]
+    },
+    {
+      "rect": [
+        2048,
+        384,
+        512,
+        384
+      ],
+      "footAnchor": [
+        256,
+        307
+      ],
+      "sourceFoot": [
+        12.5,
+        192
+      ],
+      "sourceUniformScale": 1.08,
+      "contentBounds": [
+        243,
+        101,
+        337,
+        311
+      ]
+    },
+    {
+      "rect": [
+        2560,
+        384,
+        512,
+        384
+      ],
+      "footAnchor": [
+        256,
+        307
+      ],
+      "sourceFoot": [
+        13.0,
+        192
+      ],
+      "sourceUniformScale": 1.08,
+      "contentBounds": [
+        243,
+        101,
+        339,
+        311
+      ]
+    },
+    {
+      "rect": [
+        0,
+        768,
+        512,
+        384
+      ],
+      "footAnchor": [
+        256,
+        307
+      ],
+      "sourceFoot": [
+        11.0,
+        129
+      ],
+      "sourceUniformScale": 1.08,
+      "contentBounds": [
+        245,
+        169,
+        339,
+        311
+      ]
+    },
+    {
+      "rect": [
+        512,
+        768,
+        512,
+        384
+      ],
+      "footAnchor": [
+        256,
+        307
+      ],
+      "sourceFoot": [
+        11.5,
+        120
+      ],
+      "sourceUniformScale": 1.08,
+      "contentBounds": [
+        245,
+        178,
+        374,
+        310
+      ]
+    },
+    {
+      "rect": [
+        1024,
+        768,
+        512,
+        384
+      ],
+      "footAnchor": [
+        256,
+        307
+      ],
+      "sourceFoot": [
+        104.5,
+        111
+      ],
+      "sourceUniformScale": 1.08,
+      "contentBounds": [
+        144,
+        188,
+        371,
+        310
+      ]
+    },
+    {
+      "rect": [
+        1536,
+        768,
+        512,
+        384
+      ],
+      "footAnchor": [
+        256,
+        307
+      ],
+      "sourceFoot": [
+        12.5,
+        109
+      ],
+      "sourceUniformScale": 1.08,
+      "contentBounds": [
+        243,
+        190,
+        461,
+        310
+      ]
+    },
+    {
+      "rect": [
+        2048,
+        768,
+        512,
+        384
+      ],
+      "footAnchor": [
+        256,
+        307
+      ],
+      "sourceFoot": [
+        10.5,
+        119
+      ],
+      "sourceUniformScale": 1.08,
+      "contentBounds": [
+        246,
+        179,
+        341,
+        310
+      ]
+    },
+    {
+      "rect": [
+        2560,
+        768,
+        512,
+        384
+      ],
+      "footAnchor": [
+        256,
+        307
+      ],
+      "sourceFoot": [
+        10.5,
+        125
+      ],
+      "sourceUniformScale": 1.08,
+      "contentBounds": [
+        246,
+        173,
+        339,
+        310
+      ]
+    },
+    {
+      "rect": [
+        0,
+        1152,
+        512,
+        384
+      ],
+      "footAnchor": [
+        256,
+        307
+      ],
+      "sourceFoot": [
+        15.5,
+        176
+      ],
+      "sourceUniformScale": 1.08,
+      "contentBounds": [
+        240,
+        118,
+        346,
+        310
+      ]
+    },
+    {
+      "rect": [
+        512,
+        1152,
+        512,
+        384
+      ],
+      "footAnchor": [
+        256,
+        307
+      ],
+      "sourceFoot": [
+        31.0,
+        203
+      ],
+      "sourceUniformScale": 1.08,
+      "contentBounds": [
+        224,
+        89,
+        302,
+        311
+      ]
+    },
+    {
+      "rect": [
+        1024,
+        1152,
+        512,
+        384
+      ],
+      "footAnchor": [
+        256,
+        307
+      ],
+      "sourceFoot": [
+        27.0,
+        202
+      ],
+      "sourceUniformScale": 1.08,
+      "contentBounds": [
+        228,
+        90,
+        370,
+        310
+      ]
+    },
+    {
+      "rect": [
+        1536,
+        1152,
+        512,
+        384
+      ],
+      "footAnchor": [
+        256,
+        307
+      ],
+      "sourceFoot": [
+        21.5,
+        205
+      ],
+      "sourceUniformScale": 1.08,
+      "contentBounds": [
+        234,
+        87,
+        364,
+        311
+      ]
+    },
+    {
+      "rect": [
+        2048,
+        1152,
+        512,
+        384
+      ],
+      "footAnchor": [
+        256,
+        307
+      ],
+      "sourceFoot": [
+        14.5,
+        181
+      ],
+      "sourceUniformScale": 1.08,
+      "contentBounds": [
+        241,
+        113,
+        346,
+        311
+      ]
+    },
+    {
+      "rect": [
+        2560,
+        1152,
+        512,
+        384
+      ],
+      "footAnchor": [
+        256,
+        307
+      ],
+      "sourceFoot": [
+        48.0,
+        177
+      ],
+      "sourceUniformScale": 1.08,
+      "contentBounds": [
+        205,
+        117,
+        307,
+        310
+      ]
+    }
+  ],
+  "source": "kakashi-melee-corrected-raw.png",
+  "anatomy": "Regenerated using actual idle sprite reference. Uniform1.08 source-to-atlas scale chosen comparing head/torso/long limb dimensions, applied unchanged to all24 frames. No perpose totalheight scaling.",
+  "cellSize": [
+    512,
+    384
+  ]
+}

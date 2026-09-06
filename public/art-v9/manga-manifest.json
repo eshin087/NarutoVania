@@ -1,0 +1,194 @@
+[
+  {
+    "panel": "01",
+    "file": "01.webp",
+    "raw": "raw/01.png",
+    "raw_dimensions": [
+      1672,
+      941
+    ],
+    "dimensions": [
+      1536,
+      864
+    ],
+    "sha256": "ceb51480bc590858462789ff1796f10eebee4303738bd1d85d8137f12fd1d895",
+    "method": "Built-in imagegen; Pillow LANCZOS fit and WebP quality94",
+    "visual_qa": "Reviewed for story composition, primary character identities, no lettering, non-graphic staging."
+  },
+  {
+    "panel": "02",
+    "file": "02.webp",
+    "raw": "raw/02.png",
+    "raw_dimensions": [
+      1672,
+      941
+    ],
+    "dimensions": [
+      1536,
+      864
+    ],
+    "sha256": "b7bbbe6d9f36d19966c2839c88d298d9981fa877cdfe7e2632981aeff5ab1e32",
+    "method": "Built-in imagegen; Pillow LANCZOS fit and WebP quality94",
+    "visual_qa": "Reviewed for story composition, primary character identities, no lettering, non-graphic staging."
+  },
+  {
+    "panel": "03",
+    "file": "03.webp",
+    "raw": "raw/03.png",
+    "raw_dimensions": [
+      1672,
+      941
+    ],
+    "dimensions": [
+      1536,
+      864
+    ],
+    "sha256": "b7a11cac585d946ea0d449beeb9545f187a1bf0b14a0f17fffe920986165f3ca",
+    "method": "Built-in imagegen; Pillow LANCZOS fit and WebP quality94",
+    "visual_qa": "Reviewed for story composition, primary character identities, no lettering, non-graphic staging."
+  },
+  {
+    "panel": "04",
+    "file": "04.webp",
+    "raw": "raw/04.png",
+    "raw_dimensions": [
+      1536,
+      1024
+    ],
+    "dimensions": [
+      1536,
+      864
+    ],
+    "sha256": "d838f815ca2f71c15b3f1032fc2ebe0a155f589d42902915ed18531ca90b7721",
+    "method": "Built-in imagegen; Pillow LANCZOS fit and WebP quality94",
+    "visual_qa": "Reviewed for story composition, primary character identities, no lettering, non-graphic staging."
+  },
+  {
+    "panel": "05",
+    "file": "05.webp",
+    "raw": "raw/05-revised.png",
+    "raw_dimensions": [
+      1672,
+      941
+    ],
+    "dimensions": [
+      1536,
+      864
+    ],
+    "sha256": "a79f7c6d0d88fca1e8ed82ba68db00491acdda7e562f74439049e04704aee858",
+    "method": "Built-in imagegen; Pillow LANCZOS fit and WebP quality94",
+    "visual_qa": "Reviewed for story composition, primary character identities, no lettering, non-graphic staging."
+  },
+  {
+    "panel": "06",
+    "file": "06.webp",
+    "raw": "raw/06.png",
+    "raw_dimensions": [
+      1536,
+      1024
+    ],
+    "dimensions": [
+      1536,
+      864
+    ],
+    "sha256": "ba85302da91693d473c7f0f9c83e93fbaefc0ba15db70e14b1bbdf0cba98dc35",
+    "method": "Built-in imagegen; Pillow LANCZOS fit and WebP quality94",
+    "visual_qa": "Reviewed for story composition, primary character identities, no lettering, non-graphic staging."
+  },
+  {
+    "panel": "07",
+    "file": "07.webp",
+    "raw": "raw/07.png",
+    "raw_dimensions": [
+      1536,
+      1024
+    ],
+    "dimensions": [
+      1536,
+      864
+    ],
+    "sha256": "8152d0b5894a2512f6840c73732a750709c395e376d7d062d6b7580320887591",
+    "method": "Built-in imagegen; Pillow LANCZOS fit and WebP quality94",
+    "visual_qa": "Reviewed for story composition, primary character identities, no lettering, non-graphic staging."
+  },
+  {
+    "panel": "08",
+    "file": "08.webp",
+    "raw": "raw/08-revised.png",
+    "raw_dimensions": [
+      1672,
+      941
+    ],
+    "dimensions": [
+      1536,
+      864
+    ],
+    "sha256": "becc6011acf1188892a4578b2aba0a7866a5a0dcff606999f67267de3621f904",
+    "method": "Built-in imagegen; Pillow LANCZOS fit and WebP quality94",
+    "visual_qa": "Reviewed for story composition, primary character identities, no lettering, non-graphic staging."
+  },
+  {
+    "panel": "09",
+    "file": "09.webp",
+    "raw": "raw/09.png",
+    "raw_dimensions": [
+      1536,
+      1024
+    ],
+    "dimensions": [
+      1536,
+      864
+    ],
+    "sha256": "3077232441ee5d016637337f225c3291776f411660b003d917f0545d74dc92b2",
+    "method": "Built-in imagegen; Pillow LANCZOS fit and WebP quality94",
+    "visual_qa": "Reviewed for story composition, primary character identities, no lettering, non-graphic staging."
+  },
+  {
+    "panel": "10",
+    "file": "10.webp",
+    "raw": "raw/10-revised.png",
+    "raw_dimensions": [
+      1672,
+      941
+    ],
+    "dimensions": [
+      1536,
+      864
+    ],
+    "sha256": "e17a7156a1142a65f2ec6060a46039e5864187337a5ec9fb14957c2ec6cfd190",
+    "method": "Built-in imagegen; Pillow LANCZOS fit and WebP quality94",
+    "visual_qa": "Reviewed for story composition, primary character identities, no lettering, non-graphic staging."
+  },
+  {
+    "panel": "11",
+    "file": "11.webp",
+    "raw": "raw/11-revised.png",
+    "raw_dimensions": [
+      1672,
+      941
+    ],
+    "dimensions": [
+      1536,
+      864
+    ],
+    "sha256": "0ea650dfc268fe3907f958737c3b5c622a6ebb7da81c460dfbf189fa43c56777",
+    "method": "Built-in imagegen; Pillow LANCZOS fit and WebP quality94",
+    "visual_qa": "Reviewed for story composition, primary character identities, no lettering, non-graphic staging."
+  },
+  {
+    "panel": "12",
+    "file": "12.webp",
+    "raw": "raw/12-revised.png",
+    "raw_dimensions": [
+      1672,
+      941
+    ],
+    "dimensions": [
+      1536,
+      864
+    ],
+    "sha256": "ad554ad41a00ff4d0f3f2634c4253b05943725f50ba137f331abfab1fa7677ac",
+    "method": "Built-in imagegen; Pillow LANCZOS fit and WebP quality94",
+    "visual_qa": "Reviewed for story composition, primary character identities, no lettering, non-graphic staging."
+  }
+]

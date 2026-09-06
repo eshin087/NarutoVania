@@ -1,4 +1,5 @@
-import {PHASES, nextPhase, stateForPhase, type StoryPhaseId, type StoryState} from './chapter';
+import type {StorySceneId} from './scene-catalog';
+import {PHASES, stateForPhase, type StoryPhaseId, type StoryState} from './chapter';
 
 import type {AnimationName, CharacterId, EffectName} from './combat-core';
 
@@ -14,11 +15,11 @@ export interface CinemaCue {
 
   camera?: number; zoom?: number; fade?: 'in' | 'out';
 
-  speech?: string; hold?: number; moment?: number; caption?: string;
+  speech?: string; hold?: number; moment?: number; manga?:number; awaitAdvance?:boolean; caption?: string;
 
 }
 
-export interface CinemaClip {id: string; duration: number; arena: 'lakeside' | 'bridge'; actors: CinemaActor[]; cues: CinemaCue[];}
+export interface CinemaClip {id: string; duration: number; arena: 'lakeside' | 'bridge'; offset?:number; actors: CinemaActor[]; cues: CinemaCue[];}
 
 const actor = (id: ActorId, x: number, facing: -1 | 1 = 1, animation: AnimationName = 'idle', y = 590): CinemaActor => ({id, x, y, facing, animation});
 
@@ -203,108 +204,65 @@ export function outroClip(phase: StoryPhaseId): CinemaClip {
 /** Both skipping and natural completion go through the same atomic state transition. */
 
 export class StoryDirector {
-
-  state: StoryState;
-
-  mode: 'fight' | 'cinematic' | 'complete' = 'fight';
-
-  clip: CinemaClip | null = null; clock = 0; emitted = new Set<number>();
-
-  private afterClip: (() => void) | null = null;
-
-  constructor(phase: StoryPhaseId, private callbacks: {enter: (state: StoryState) => void; cue: (cue: CinemaCue) => void; cinematic: (clip: CinemaClip) => void; complete: () => void}) {this.state = stateForPhase(phase);}
-
-  start(viewIntro: boolean) {
-
-    if (this.state.phase === 'copy') {this.play(outroClip('copy'), () => this.play(outroClip('protect'), () => this.enter('mirrors'))); return;}
-    if (this.state.phase === 'protect') {this.play(outroClip('protect'), () => this.enter('mirrors')); return;}
-
-    if (this.state.phase === 'lightning') {this.play(outroClip('lightning'), () => this.complete()); return;}
-
-    if (viewIntro) this.play(introClip(this.state.phase), () => this.enter(this.state.phase)); else this.enter(this.state.phase);
-
+ state:StoryState;mode:'fight'|'cinematic'|'complete'='fight';clip:CinemaClip|null=null;clock=0;
+ emitted=new Set<number>();waiting=false;holdAge=0;private afterClip:(()=>void)|null=null;
+ constructor(phase:StoryPhaseId,private callbacks:{enter:(state:StoryState)=>void;cinematic:(clip:CinemaClip)=>void;cue:(cue:CinemaCue)=>void;complete:()=>void}){this.state=stateForPhase(phase);}
+ start(viewIntro:boolean){
+  if(this.state.phase==='copy'){this.startScene('hunter');return;}
+  if(this.state.phase==='protect'){this.startScene('bridge');return;}
+  if(this.state.phase==='lightning'){this.startScene('interception');return;}
+  if(viewIntro)this.play(introClip(this.state.phase),()=>this.enter(this.state.phase));else this.enter(this.state.phase);
+ }
+ startScene(id:StorySceneId){
+  switch(id){
+   case 'arrival':this.state=stateForPhase('mist');this.play(introClip('mist'),()=>this.enter('mist'));break;
+   case 'prison':this.state=stateForPhase('mist');this.play(outroClip('mist'),()=>this.enter('rescue'));break;
+   case 'shuriken':this.state=stateForPhase('rescue');this.play(outroClip('rescue'),()=>this.startScene('hunter'));break;
+   case 'hunter':this.state=stateForPhase('copy');this.play(outroClip('copy'),()=>this.startScene('bridge'));break;
+   case 'bridge':this.state=stateForPhase('protect');this.play(outroClip('protect'),()=>this.enter('mirrors'));break;
+   case 'sacrifice':this.state=stateForPhase('mirrors');this.play(outroClip('mirrors'),()=>this.enter('seal'));break;
+   case 'hesitation':this.state=stateForPhase('seal');this.play(outroClip('seal'),()=>this.startScene('interception'));break;
+   case 'interception':this.state=stateForPhase('lightning');this.play(endingSegment(0),()=>this.startScene('gato'));break;
+   case 'gato':this.state={...stateForPhase('lightning'),hakuIntercepted:true};this.play(endingSegment(1),()=>this.startScene('snow'));break;
+   case 'snow':this.state={...stateForPhase('lightning'),hakuIntercepted:true};this.play(endingSegment(2),()=>this.complete());break;
   }
-
-  private enter(phase: StoryPhaseId) {this.state = stateForPhase(phase); this.mode = 'fight'; this.clip = null; this.callbacks.enter(this.state);}
-
-  play(clip: CinemaClip, after: () => void) {
-
-    clip = withDialogue(clip); clip.cues.sort((a,b)=>a.at-b.at);
-
-    this.clip = clip; this.clock = 0; this.emitted.clear(); this.mode = 'cinematic'; this.afterClip = after; this.callbacks.cinematic(clip); this.update(0);
-
+ }
+ private enter(phase:StoryPhaseId){this.state=stateForPhase(phase);this.mode='fight';this.clip=null;this.waiting=false;this.callbacks.enter(this.state);}
+ play(clip:CinemaClip,after:()=>void){
+  clip=withDialogue(clip);clip.cues.sort((a,b)=>a.at-b.at);this.clip=clip;this.clock=0;this.emitted.clear();this.waiting=false;this.holdAge=0;
+  this.mode='cinematic';this.afterClip=after;this.callbacks.cinematic(clip);this.update(0);
+ }
+ objectiveComplete(hp:number,elapsed:number,breaks=0){return this.mode==='fight'&&(hp<=0||this.state.phase==='mirrors'&&elapsed>=45&&breaks>=1);}
+ finishObjective(){if(this.mode!=='fight')return;const routes:Record<StoryPhaseId,StorySceneId>={mist:'prison',rescue:'shuriken',copy:'hunter',protect:'bridge',mirrors:'sacrifice',seal:'hesitation',lightning:'interception'};this.startScene(routes[this.state.phase]);}
+ update(dt:number){
+  if(this.mode!=='cinematic'||!this.clip)return;
+  if(this.waiting){this.holdAge+=dt;return;}
+  const target=this.clock+dt,clip=this.clip;
+  for(let i=0;i<clip.cues.length;i++){
+   const cue=clip.cues[i];if(this.emitted.has(i)||cue.at>target)continue;
+   this.clock=cue.at;this.emitted.add(i);if(cue.awaitAdvance){this.waiting=true;this.holdAge=0;}this.callbacks.cue(cue);
+   if(this.waiting)return;
   }
-
-  objectiveComplete(bossHealth: number, elapsedSeconds: number, mirrorGuardBreaks = 0) {
-
-    if (this.mode !== 'fight') return false;
-
-    return bossHealth <= 0 || this.state.phase === 'mirrors' && elapsedSeconds >= 45 && mirrorGuardBreaks >= 1;
-
-  }
-
-  finishObjective() {
-
-    if (this.mode !== 'fight') return;
-
-    const phase = this.state.phase;
-
-    this.play(outroClip(phase), () => {
-
-      if (phase === 'rescue') {this.play(outroClip('copy'), () => this.play(outroClip('protect'), () => this.enter('mirrors'))); return;}
-      if (phase === 'copy') {this.play(outroClip('protect'), () => this.enter('mirrors')); return;}
-
-      if (phase === 'seal') {this.play(outroClip('lightning'), () => this.complete()); return;}
-
-      const next = nextPhase(phase);
-
-      if (next) this.enter(next);
-
-      else this.complete();
-
-    });
-
-  }
-
-  private complete() {this.state = {...this.state, hakuDefeated: true, hakuIntercepted: true, complete: true}; this.mode = 'complete'; this.clip = null; this.callbacks.complete();}
-
-  update(dt: number) {
-
-    if (this.mode !== 'cinematic' || !this.clip) return;
-
-    this.clock += dt;
-
-    this.clip.cues.forEach((cue, i) => {if (this.clock >= cue.at && !this.emitted.has(i)) {this.emitted.add(i); this.callbacks.cue(cue);}});
-
-    if (this.clock >= this.clip.duration) this.finishClip();
-
-  }
-
-  skip() {
-
-    // Skip all cinematic beats in this transition, including the two removed fights.
-
-    for (let i = 0; i < 8 && this.mode === 'cinematic'; i++) this.finishClip();
-
-  }
-
-  private finishClip() {
-
-    if (this.mode !== 'cinematic') return;
-
-    const after = this.afterClip; this.afterClip = null;
-
-    // The entering phase reconstructs every actor, resource, camera and checkpoint.
-
-    this.clip = null; after?.();
-
-  }
-
+  this.clock=target;if(this.clock>=clip.duration)this.finishClip();
+ }
+ get canAdvance(){return this.waiting&&this.holdAge>=350;}
+ advance(){if(!this.canAdvance)return false;this.waiting=false;this.holdAge=0;return true;}
+ skip(){if(this.mode==='cinematic')this.finishClip();}
+ private finishClip(){if(this.mode!=='cinematic')return;const next=this.afterClip;this.afterClip=null;this.clip=null;this.waiting=false;next?.();}
+ private complete(){this.state={...this.state,hakuDefeated:true,hakuIntercepted:true,complete:true};this.mode='complete';this.clip=null;this.waiting=false;this.callbacks.complete();}
 }
 
-
-
-
+/** Each ending entry reconstructs the actors at its own canonical starting point. */
+function endingSegment(index:number):CinemaClip {
+ const full=withDialogue(outroClip('lightning')),starts=[0,11000,27600],ends=[11000,27600,36000],ids=['haku-interception','gatos-betrayal','snowy-rest'];
+ const start=starts[index],end=ends[index];
+ const actors=full.actors.map(a=>({...a,alpha:a.id.startsWith('hound')||a.id.startsWith('henchman')||a.id==='gato'?0:a.alpha}));
+ for(const c of full.cues.filter(c=>c.at<start)){const a=actors.find(a=>a.id===c.actor);if(!a)continue;
+  if(c.x!==undefined)a.x=c.x;if(c.y!==undefined)a.y=c.y;if(c.facing)a.facing=c.facing;if(c.alpha!==undefined)a.alpha=c.alpha;
+  if(c.animation)a.animation=['run','dash','airdash','cast','hurt','light1','heavy'].includes(c.animation)?'idle':c.animation;
+ }
+ return{id:ids[index],arena:'bridge',offset:start,duration:end-start,actors,cues:[{at:0,camera:350,fade:'in'},...full.cues.filter(c=>c.at>=start&&c.at<end).map(c=>({...c,at:c.at-start}))]};
+}
 
 /** Original, concise dialogue paraphrases the scene; these are not anime transcript extracts. */
 
@@ -400,6 +358,16 @@ function withDialogue(clip: CinemaClip): CinemaClip {
 
   };
 
-  return {...clip, cues: [...clip.cues, ...(lines[clip.id] || [])].sort((a, b) => a.at - b.at)};
+  const panels:Record<string,CinemaCue[]>={
+ 'transformed-shuriken':[{at:3500,manga:0,awaitAdvance:true,actor:'sasuke',speech:'Two shuriken. One hidden in the other. Naruto knows what comes next.'},{at:10800,manga:1,awaitAdvance:true,actor:'prisoner',speech:'You made him release the prison. Now it is my turn.'}],
+ 'hunter-nin-deception':[{at:9300,manga:2,awaitAdvance:true,actor:'haku',speech:'I am a hunter-nin. Leave his body to me.'},{at:15300,manga:3,awaitAdvance:true,actor:'kakashi',speech:'Those needles… Was he truly killed?'}],
+ 'simultaneous-bridge-battles':[{at:5200,manga:4,awaitAdvance:true,actor:'sakura',speech:'I will protect Tazuna. Sasuke, watch the mirrors!'}],
+ 'sasuke-protects-naruto':[{at:7600,manga:5,awaitAdvance:true,actor:'sasuke',speech:'My body moved before I could think.'},{at:10600,manga:6,awaitAdvance:true,actor:'naruto',speech:'Sasuke… You were supposed to keep chasing your dream.'},{at:13400,manga:7,awaitAdvance:true,actor:'naruto',speech:'I will not let you hurt anyone else!'}],
+ 'narutos-hesitation':[{at:4800,manga:8,awaitAdvance:true,actor:'haku',speech:'I fought to protect someone precious. Now he needs me.'}],
+ 'a-demon-in-the-snow':[{at:7700,manga:9,awaitAdvance:true,actor:'haku',speech:'Zabuza… I will protect you.'},{at:22200,manga:10,awaitAdvance:true,actor:'zabuza',speech:'Gato. This is the end of our contract.'},{at:32200,manga:11,awaitAdvance:true,actor:'zabuza',speech:'Let me rest beside you, Haku.'}],
+ };
+ if(!lines[clip.id]&&!panels[clip.id])return clip;
+ const cues=[...clip.cues,...(lines[clip.id]||[])].map(c=>{const copy={...c};if(clip.id!=='water-prison')delete copy.moment;return copy;});
+ return {...clip,cues:[...cues,...(panels[clip.id]||[])].sort((a,b)=>a.at-b.at)};
 
 }

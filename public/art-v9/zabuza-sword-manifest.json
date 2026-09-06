@@ -1,0 +1,731 @@
+{
+  "atlas": "zabuza-sword-atlas-v9.png",
+  "size": [
+    3072,
+    1536
+  ],
+  "cell": [
+    512,
+    384
+  ],
+  "columns": 6,
+  "rows": 4,
+  "anchor": [
+    256,
+    320
+  ],
+  "referenceIdleBodyHeight": 211,
+  "sourceNeutralBodyHeights": [
+    160,
+    163,
+    161,
+    161,
+    156
+  ],
+  "sourceMedianBodyHeight": 161.0,
+  "uniformAnatomicalScale": 1.31055900621118,
+  "scaleMethod": "Median height of ready/recovery body silhouettes (frames0,6,11,17,23), where sword falls strictly between head and soles. Same scale for all24frames; no weapon-based scale adjustment.",
+  "anchorMethod": "Reviewed horizontal midpoint of the stance; lowest visible foot to y320.",
+  "extractionMethod": "24connected components, not blind grid cuts; preserves blade extending beyond nominal cell boundary. Magenta key and despill.",
+  "frames": [
+    {
+      "index": 0,
+      "row": 0,
+      "column": 0,
+      "move": "forehand",
+      "phase": "ready",
+      "sourceComponentBounds": [
+        66,
+        58,
+        236,
+        218
+      ],
+      "sourceFootAnchor": [
+        118.26666666666667,
+        218
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "scale": 1.31055900621118,
+      "contentBounds": [
+        188,
+        110,
+        411,
+        320
+      ],
+      "feetGrounded": true
+    },
+    {
+      "index": 1,
+      "row": 0,
+      "column": 1,
+      "move": "forehand",
+      "phase": "windup",
+      "sourceComponentBounds": [
+        384,
+        53,
+        572,
+        217
+      ],
+      "sourceFootAnchor": [
+        433.0284722222222,
+        217
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "scale": 1.31055900621118,
+      "contentBounds": [
+        192,
+        105,
+        438,
+        320
+      ],
+      "feetGrounded": true
+    },
+    {
+      "index": 2,
+      "row": 0,
+      "column": 2,
+      "move": "forehand",
+      "phase": "anticipation",
+      "sourceComponentBounds": [
+        680,
+        58,
+        910,
+        218
+      ],
+      "sourceFootAnchor": [
+        734.8548611111111,
+        218
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "scale": 1.31055900621118,
+      "contentBounds": [
+        184,
+        110,
+        485,
+        320
+      ],
+      "feetGrounded": true
+    },
+    {
+      "index": 3,
+      "row": 0,
+      "column": 3,
+      "move": "forehand",
+      "phase": "impact",
+      "sourceComponentBounds": [
+        932,
+        62,
+        1152,
+        217
+      ],
+      "sourceFootAnchor": [
+        994.7951388888889,
+        217
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "scale": 1.31055900621118,
+      "contentBounds": [
+        174,
+        117,
+        462,
+        320
+      ],
+      "feetGrounded": true
+    },
+    {
+      "index": 4,
+      "row": 0,
+      "column": 4,
+      "move": "forehand",
+      "phase": "followThrough",
+      "sourceComponentBounds": [
+        1243,
+        56,
+        1416,
+        218
+      ],
+      "sourceFootAnchor": [
+        1304.6291666666666,
+        218
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "scale": 1.31055900621118,
+      "contentBounds": [
+        175,
+        108,
+        402,
+        320
+      ],
+      "feetGrounded": true
+    },
+    {
+      "index": 5,
+      "row": 0,
+      "column": 5,
+      "move": "forehand",
+      "phase": "recovery",
+      "sourceComponentBounds": [
+        1537,
+        60,
+        1683,
+        224
+      ],
+      "sourceFootAnchor": [
+        1597.2159722222223,
+        224
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "scale": 1.31055900621118,
+      "contentBounds": [
+        177,
+        105,
+        368,
+        320
+      ],
+      "feetGrounded": true
+    },
+    {
+      "index": 6,
+      "row": 1,
+      "column": 0,
+      "move": "backhand",
+      "phase": "ready",
+      "sourceComponentBounds": [
+        69,
+        273,
+        212,
+        436
+      ],
+      "sourceFootAnchor": [
+        119.49861111111112,
+        436
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "scale": 1.31055900621118,
+      "contentBounds": [
+        190,
+        106,
+        377,
+        320
+      ],
+      "feetGrounded": true
+    },
+    {
+      "index": 7,
+      "row": 1,
+      "column": 1,
+      "move": "backhand",
+      "phase": "windup",
+      "sourceComponentBounds": [
+        303,
+        283,
+        502,
+        433
+      ],
+      "sourceFootAnchor": [
+        428.71666666666664,
+        433
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "scale": 1.31055900621118,
+      "contentBounds": [
+        91,
+        123,
+        352,
+        320
+      ],
+      "feetGrounded": true
+    },
+    {
+      "index": 8,
+      "row": 1,
+      "column": 2,
+      "move": "backhand",
+      "phase": "anticipation",
+      "sourceComponentBounds": [
+        641,
+        284,
+        804,
+        433
+      ],
+      "sourceFootAnchor": [
+        728.0791666666667,
+        433
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "scale": 1.31055900621118,
+      "contentBounds": [
+        142,
+        125,
+        356,
+        320
+      ],
+      "feetGrounded": true
+    },
+    {
+      "index": 9,
+      "row": 1,
+      "column": 3,
+      "move": "backhand",
+      "phase": "impact",
+      "sourceComponentBounds": [
+        944,
+        282,
+        1173,
+        433
+      ],
+      "sourceFootAnchor": [
+        1006.4986111111111,
+        433
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "scale": 1.31055900621118,
+      "contentBounds": [
+        174,
+        122,
+        474,
+        320
+      ],
+      "feetGrounded": true
+    },
+    {
+      "index": 10,
+      "row": 1,
+      "column": 4,
+      "move": "backhand",
+      "phase": "followThrough",
+      "sourceComponentBounds": [
+        1270,
+        275,
+        1466,
+        433
+      ],
+      "sourceFootAnchor": [
+        1335.4277777777777,
+        433
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "scale": 1.31055900621118,
+      "contentBounds": [
+        170,
+        113,
+        427,
+        320
+      ],
+      "feetGrounded": true
+    },
+    {
+      "index": 11,
+      "row": 1,
+      "column": 5,
+      "move": "backhand",
+      "phase": "recovery",
+      "sourceComponentBounds": [
+        1564,
+        275,
+        1710,
+        436
+      ],
+      "sourceFootAnchor": [
+        1614.4631944444445,
+        436
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "scale": 1.31055900621118,
+      "contentBounds": [
+        190,
+        109,
+        381,
+        320
+      ],
+      "feetGrounded": true
+    },
+    {
+      "index": 12,
+      "row": 2,
+      "column": 0,
+      "move": "overhead",
+      "phase": "ready",
+      "sourceComponentBounds": [
+        27,
+        462,
+        184,
+        654
+      ],
+      "sourceFootAnchor": [
+        126.89027777777778,
+        654
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "scale": 1.31055900621118,
+      "contentBounds": [
+        125,
+        68,
+        331,
+        320
+      ],
+      "feetGrounded": true
+    },
+    {
+      "index": 13,
+      "row": 2,
+      "column": 1,
+      "move": "overhead",
+      "phase": "windup",
+      "sourceComponentBounds": [
+        365,
+        453,
+        497,
+        654
+      ],
+      "sourceFootAnchor": [
+        439.8041666666667,
+        654
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "scale": 1.31055900621118,
+      "contentBounds": [
+        158,
+        57,
+        331,
+        320
+      ],
+      "feetGrounded": true
+    },
+    {
+      "index": 14,
+      "row": 2,
+      "column": 2,
+      "move": "overhead",
+      "phase": "anticipation",
+      "sourceComponentBounds": [
+        657,
+        466,
+        807,
+        654
+      ],
+      "sourceFootAnchor": [
+        746.5583333333333,
+        654
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "scale": 1.31055900621118,
+      "contentBounds": [
+        139,
+        74,
+        336,
+        320
+      ],
+      "feetGrounded": true
+    },
+    {
+      "index": 15,
+      "row": 2,
+      "column": 3,
+      "move": "overhead",
+      "phase": "impact",
+      "sourceComponentBounds": [
+        946,
+        517,
+        1179,
+        652
+      ],
+      "sourceFootAnchor": [
+        1008.9625,
+        652
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "scale": 1.31055900621118,
+      "contentBounds": [
+        173,
+        143,
+        478,
+        320
+      ],
+      "feetGrounded": true
+    },
+    {
+      "index": 16,
+      "row": 2,
+      "column": 4,
+      "move": "overhead",
+      "phase": "followThrough",
+      "sourceComponentBounds": [
+        1276,
+        500,
+        1479,
+        653
+      ],
+      "sourceFootAnchor": [
+        1339.1236111111111,
+        653
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "scale": 1.31055900621118,
+      "contentBounds": [
+        173,
+        119,
+        439,
+        320
+      ],
+      "feetGrounded": true
+    },
+    {
+      "index": 17,
+      "row": 2,
+      "column": 5,
+      "move": "overhead",
+      "phase": "recovery",
+      "sourceComponentBounds": [
+        1580,
+        495,
+        1720,
+        656
+      ],
+      "sourceFootAnchor": [
+        1626.7826388888889,
+        656
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "scale": 1.31055900621118,
+      "contentBounds": [
+        195,
+        109,
+        378,
+        320
+      ],
+      "feetGrounded": true
+    },
+    {
+      "index": 18,
+      "row": 3,
+      "column": 0,
+      "move": "risingCut",
+      "phase": "ready",
+      "sourceComponentBounds": [
+        52,
+        720,
+        196,
+        869
+      ],
+      "sourceFootAnchor": [
+        130.5861111111111,
+        869
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "scale": 1.31055900621118,
+      "contentBounds": [
+        153,
+        125,
+        342,
+        320
+      ],
+      "feetGrounded": true
+    },
+    {
+      "index": 19,
+      "row": 3,
+      "column": 1,
+      "move": "risingCut",
+      "phase": "windup",
+      "sourceComponentBounds": [
+        375,
+        708,
+        496,
+        867
+      ],
+      "sourceFootAnchor": [
+        441.65208333333334,
+        867
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "scale": 1.31055900621118,
+      "contentBounds": [
+        169,
+        112,
+        328,
+        320
+      ],
+      "feetGrounded": true
+    },
+    {
+      "index": 20,
+      "row": 3,
+      "column": 2,
+      "move": "risingCut",
+      "phase": "anticipation",
+      "sourceComponentBounds": [
+        655,
+        677,
+        788,
+        868
+      ],
+      "sourceFootAnchor": [
+        728.6951388888889,
+        868
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "scale": 1.31055900621118,
+      "contentBounds": [
+        159,
+        70,
+        333,
+        320
+      ],
+      "feetGrounded": true
+    },
+    {
+      "index": 21,
+      "row": 3,
+      "column": 3,
+      "move": "risingCut",
+      "phase": "impact",
+      "sourceComponentBounds": [
+        959,
+        676,
+        1120,
+        866
+      ],
+      "sourceFootAnchor": [
+        1023.7458333333333,
+        866
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "scale": 1.31055900621118,
+      "contentBounds": [
+        171,
+        71,
+        382,
+        320
+      ],
+      "feetGrounded": true
+    },
+    {
+      "index": 22,
+      "row": 3,
+      "column": 4,
+      "move": "risingCut",
+      "phase": "followThrough",
+      "sourceComponentBounds": [
+        1266,
+        698,
+        1431,
+        867
+      ],
+      "sourceFootAnchor": [
+        1333.579861111111,
+        867
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "scale": 1.31055900621118,
+      "contentBounds": [
+        167,
+        99,
+        383,
+        320
+      ],
+      "feetGrounded": true
+    },
+    {
+      "index": 23,
+      "row": 3,
+      "column": 5,
+      "move": "risingCut",
+      "phase": "recovery",
+      "sourceComponentBounds": [
+        1569,
+        714,
+        1721,
+        870
+      ],
+      "sourceFootAnchor": [
+        1625.5506944444444,
+        870
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "scale": 1.31055900621118,
+      "contentBounds": [
+        182,
+        116,
+        381,
+        320
+      ],
+      "feetGrounded": true
+    }
+  ],
+  "runtimeBodyCorrection": 0.825,
+  "pixelsToLogicalBody": 0.003909952606635071,
+  "runtimeScaleNotes": "Final correction compares head/chin, torso and straight limb segments; neutral crouched silhouette height is not treated as upright reference height."
+}

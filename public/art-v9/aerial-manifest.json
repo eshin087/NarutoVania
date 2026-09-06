@@ -1,0 +1,1237 @@
+{
+  "version": 9,
+  "generator": "builtin imagegen",
+  "frameOrder": [
+    "anticipation",
+    "windup",
+    "contact",
+    "followthrough",
+    "retract",
+    "landing-ready"
+  ],
+  "contactFrame": 2,
+  "contactTimeMs": 145,
+  "frameDurationsMs": [
+    70,
+    75,
+    75,
+    80,
+    70,
+    60
+  ],
+  "characters": {
+    "naruto": {
+      "file": "naruto-aerial.png",
+      "cellSize": [
+        512,
+        384
+      ],
+      "columns": 6,
+      "rows": 1,
+      "baseHeight": 208,
+      "anchor": [
+        256,
+        307
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            126.80000000000001,
+            258.2
+          ],
+          "sourceUniformScale": 0.39,
+          "contentBounds": [
+            207,
+            129,
+            322,
+            283
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            197.08000000000004,
+            240.44
+          ],
+          "sourceUniformScale": 0.4,
+          "contentBounds": [
+            177,
+            134,
+            321,
+            322
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            248.0,
+            264.8
+          ],
+          "sourceUniformScale": 0.39,
+          "contentBounds": [
+            159,
+            127,
+            373,
+            290
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            195.28,
+            236.24
+          ],
+          "sourceUniformScale": 0.41,
+          "contentBounds": [
+            176,
+            133,
+            391,
+            327
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 4,
+          "rect": [
+            2048,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            141.20000000000005,
+            280.6
+          ],
+          "sourceUniformScale": 0.4,
+          "contentBounds": [
+            200,
+            118,
+            316,
+            308
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 5,
+          "rect": [
+            2560,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            205.07999999999993,
+            249.72000000000003
+          ],
+          "sourceUniformScale": 0.39,
+          "contentBounds": [
+            176,
+            133,
+            332,
+            281
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        }
+      ]
+    },
+    "kakashi": {
+      "file": "kakashi-aerial.png",
+      "cellSize": [
+        512,
+        384
+      ],
+      "columns": 6,
+      "rows": 1,
+      "baseHeight": 222,
+      "anchor": [
+        256,
+        307
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            221.04,
+            221.44
+          ],
+          "sourceUniformScale": 0.3948,
+          "contentBounds": [
+            169,
+            143,
+            316,
+            289
+          ],
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            212.72000000000003,
+            224.56
+          ],
+          "sourceUniformScale": 0.3948,
+          "contentBounds": [
+            172,
+            141,
+            348,
+            316
+          ],
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            196.48000000000002,
+            234.60000000000002
+          ],
+          "sourceUniformScale": 0.40419999999999995,
+          "contentBounds": [
+            177,
+            135,
+            374,
+            276
+          ],
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            190.36,
+            227.79999999999995
+          ],
+          "sourceUniformScale": 0.41359999999999997,
+          "contentBounds": [
+            177,
+            136,
+            402,
+            299
+          ],
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 4,
+          "rect": [
+            2048,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            138.24,
+            277.76
+          ],
+          "sourceUniformScale": 0.40419999999999995,
+          "contentBounds": [
+            200,
+            118,
+            329,
+            304
+          ],
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 5,
+          "rect": [
+            2560,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            248.5999999999999,
+            254.20000000000005
+          ],
+          "sourceUniformScale": 0.3948,
+          "contentBounds": [
+            158,
+            130,
+            326,
+            274
+          ],
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        }
+      ]
+    },
+    "sasuke": {
+      "file": "sasuke-aerial.png",
+      "cellSize": [
+        512,
+        384
+      ],
+      "columns": 6,
+      "rows": 1,
+      "baseHeight": 192,
+      "anchor": [
+        256,
+        307
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            184.16,
+            209.72
+          ],
+          "sourceUniformScale": 0.391,
+          "contentBounds": [
+            184,
+            148,
+            322,
+            293
+          ],
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            224.79999999999995,
+            262.88
+          ],
+          "sourceUniformScale": 0.391,
+          "contentBounds": [
+            168,
+            127,
+            319,
+            313
+          ],
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            229.4000000000001,
+            233.32
+          ],
+          "sourceUniformScale": 0.391,
+          "contentBounds": [
+            166,
+            139,
+            377,
+            290
+          ],
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            202.4,
+            252.48000000000002
+          ],
+          "sourceUniformScale": 0.39949999999999997,
+          "contentBounds": [
+            175,
+            129,
+            368,
+            323
+          ],
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 4,
+          "rect": [
+            2048,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            231.03999999999996,
+            258.1600000000001
+          ],
+          "sourceUniformScale": 0.391,
+          "contentBounds": [
+            166,
+            129,
+            314,
+            274
+          ],
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 5,
+          "rect": [
+            2560,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            260.20000000000005,
+            271.52
+          ],
+          "sourceUniformScale": 0.391,
+          "contentBounds": [
+            154,
+            124,
+            317,
+            276
+          ],
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        }
+      ]
+    },
+    "sakura": {
+      "file": "sakura-aerial.png",
+      "cellSize": [
+        512,
+        384
+      ],
+      "columns": 6,
+      "rows": 1,
+      "baseHeight": 193,
+      "anchor": [
+        256,
+        307
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            107.6,
+            231.88
+          ],
+          "sourceUniformScale": 0.323,
+          "contentBounds": [
+            221,
+            155,
+            320,
+            282
+          ],
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            159.0,
+            284.8
+          ],
+          "sourceUniformScale": 0.323,
+          "contentBounds": [
+            205,
+            138,
+            326,
+            282
+          ],
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            125.40000000000009,
+            302.0
+          ],
+          "sourceUniformScale": 0.323,
+          "contentBounds": [
+            215,
+            132,
+            342,
+            287
+          ],
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            160.04,
+            279.8399999999999
+          ],
+          "sourceUniformScale": 0.3315,
+          "contentBounds": [
+            203,
+            137,
+            359,
+            272
+          ],
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 4,
+          "rect": [
+            2048,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            140.36,
+            305.96000000000004
+          ],
+          "sourceUniformScale": 0.323,
+          "contentBounds": [
+            211,
+            131,
+            323,
+            272
+          ],
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 5,
+          "rect": [
+            2560,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            269.0799999999999,
+            292.6
+          ],
+          "sourceUniformScale": 0.323,
+          "contentBounds": [
+            169,
+            135,
+            321,
+            268
+          ],
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        }
+      ]
+    },
+    "zabuza": {
+      "file": "zabuza-aerial.png",
+      "cellSize": [
+        512,
+        384
+      ],
+      "columns": 6,
+      "rows": 1,
+      "baseHeight": 211,
+      "anchor": [
+        256,
+        307
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            246,
+            139
+          ],
+          "sourceUniformScale": 0.522,
+          "contentBounds": [
+            128,
+            157,
+            299,
+            292
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            142,
+            269
+          ],
+          "sourceUniformScale": 0.522,
+          "contentBounds": [
+            182,
+            90,
+            327,
+            287
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            140,
+            108
+          ],
+          "sourceUniformScale": 0.522,
+          "contentBounds": [
+            183,
+            174,
+            462,
+            311
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            136,
+            147
+          ],
+          "sourceUniformScale": 0.522,
+          "contentBounds": [
+            185,
+            153,
+            449,
+            291
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 4,
+          "rect": [
+            2048,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            201,
+            209
+          ],
+          "sourceUniformScale": 0.522,
+          "contentBounds": [
+            151,
+            121,
+            295,
+            274
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 5,
+          "rect": [
+            2560,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            102,
+            137
+          ],
+          "sourceUniformScale": 0.522,
+          "contentBounds": [
+            203,
+            158,
+            376,
+            295
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        }
+      ]
+    },
+    "haku": {
+      "file": "haku-aerial.png",
+      "cellSize": [
+        512,
+        384
+      ],
+      "columns": 6,
+      "rows": 1,
+      "baseHeight": 208,
+      "anchor": [
+        256,
+        307
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            174.24,
+            305.16
+          ],
+          "sourceUniformScale": 0.41800000000000004,
+          "contentBounds": [
+            183,
+            102,
+            308,
+            271
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            243.20000000000005,
+            327.6
+          ],
+          "sourceUniformScale": 0.42900000000000005,
+          "contentBounds": [
+            152,
+            89,
+            333,
+            290
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            318.20000000000005,
+            332.28
+          ],
+          "sourceUniformScale": 0.44000000000000006,
+          "contentBounds": [
+            116,
+            84,
+            373,
+            299
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            204.39999999999998,
+            354.76
+          ],
+          "sourceUniformScale": 0.44000000000000006,
+          "contentBounds": [
+            166,
+            74,
+            393,
+            296
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 4,
+          "rect": [
+            2048,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            201.44000000000005,
+            366.76
+          ],
+          "sourceUniformScale": 0.44000000000000006,
+          "contentBounds": [
+            167,
+            69,
+            314,
+            276
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        },
+        {
+          "index": 5,
+          "rect": [
+            2560,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "hipPixels": [
+            256,
+            230
+          ],
+          "sourceHipPixels": [
+            247.03999999999996,
+            315.0
+          ],
+          "sourceUniformScale": 0.42900000000000005,
+          "contentBounds": [
+            150,
+            95,
+            317,
+            267
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "scaleCorrection": 1,
+          "measurement": "Forehead-to-chin matched visually to idle; pelvis alignment fixed; no total-height scaling."
+        }
+      ]
+    }
+  },
+  "runtimeNotes": "Retained original 430ms aerial action, unchanged145ms hit event. Six frame timing follows animation-data.ts."
+}

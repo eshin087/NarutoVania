@@ -1,3 +1,4 @@
+import {DEBUG_ENTRIES,type StorySceneId} from './scene-catalog';
 import * as Phaser from 'phaser';
 import {bossBridge as bridge, type Command} from './boss-bridge';
 import {preloadBattleArt, registerBattleArt, poseBattle} from './battle-art';
@@ -23,7 +24,7 @@ class TitleScene extends Phaser.Scene {
     this.add.image(640, 622, 'v2-lakeside-ground').setDisplaySize(1320, 180);
     const team = [{id: 'kakashi' as const, x: 920, y: 632, scale: 1.67}, {id: 'sasuke' as const, x: 1080, y: 650, scale: 1.62}, {id: 'sakura' as const, x: 1180, y: 650, scale: 1.59}, {id: 'naruto' as const, x: 810, y: 667, scale: 1.8}];
     for (const a of team) {const sprite = this.add.sprite(a.x, a.y, `${a.id}-locomotion`, '6'); poseBattle(sprite, a.id, 'idle', 0, -1); sprite.setScale(sprite.scaleX * a.scale); this.tweens.add({targets: sprite, y: a.y - 3, duration: 1700 + Math.random() * 400, yoyo: true, repeat: -1, ease: 'Sine.easeInOut'});}
-    bridge.patch({screen: 'title', boss: null});
+    bridge.patch({screen: 'title', boss: null,cinematic:'',panelWaiting:false,canAdvance:false,objective:'',phaseProgress:0});
   }
 }
 class HudScene extends Phaser.Scene {
@@ -42,17 +43,23 @@ export function mountBossGame(parent: HTMLElement) {
     physics: {default: 'arcade', arcade: {gravity: {x: 0, y: 1800}, debug: false}},
     scene: [new LoadingScene(), new TitleScene(), new BossGameScene(), new HudScene(inputs, sounds), new ResultsScene()],
     audio: {noAudio: true}, callbacks: {postBoot: g => {g.canvas.tabIndex = 0; g.canvas.setAttribute('aria-label', 'Naruto story boss rush game canvas');}}});
-  const play = (phase: StoryPhaseId, retry = false) => {
-    void sounds.unlock(); sounds.reset(); const snapshot = bridge.get(); inputs.clear();
+  const play = (phase: StoryPhaseId, retry = false, sceneId?:StorySceneId) => {
+    void sounds.unlock(); sounds.reset(); if(bridge.get().debugEntry)bridge.checkpoint(phase);const snapshot = bridge.get(); inputs.clear();
     game.scene.stop('Title'); game.scene.stop('BossGameplay'); game.scene.stop('Results');
-    game.scene.start('BossGameplay', {checkpoint: phase, inputs, soundscape: sounds, elapsed: retry ? snapshot.elapsed : 0,
-      retries: retry ? snapshot.retries + 1 : 0, parries: retry ? snapshot.parries : 0, viewIntro: !snapshot.seen.includes(phase)});
+    game.scene.start('BossGameplay', {checkpoint: phase,sceneId, inputs, soundscape: sounds, elapsed: retry ? snapshot.elapsed : 0,
+      retries: retry ? snapshot.retries + 1 : 0, parries: retry ? snapshot.parries : 0, viewIntro: !snapshot.debugEntry&&!snapshot.seen.includes(phase)});
   };
   bridge.handle((command: Command) => {
+    if(typeof command==='object'){
+      if(command.type==='audition'){void sounds.audition(command.id);return;}
+      const entry=DEBUG_ENTRIES.find(e=>e.id===command.entry);if(!entry)return;bridge.beginDebug(entry.id);play(entry.phase,false,entry.scene);return;
+    }
+    if(command==='debug-replay'){const entry=DEBUG_ENTRIES.find(e=>e.id===bridge.get().debugEntry);if(entry)play(entry.phase,false,entry.scene);return;}
+    if(command==='debug-exit'){bridge.endDebug();inputs.clear();sounds.stopEffects();game.scene.stop('BossGameplay');game.scene.start('Title');return;}
     if (command === 'start') {bridge.newRun(); play('mist');}
     else if (command === 'continue') play(bridge.get().checkpoint);
     else if (command === 'retry') play(bridge.get().checkpoint, true);
-    else if (command === 'title') {inputs.clear(); sounds.sync(false); game.scene.stop('BossGameplay'); game.scene.stop('Results'); game.scene.start('Title');}
+    else if (command === 'title') {bridge.endDebug();inputs.clear(); sounds.sync(false); game.scene.stop('BossGameplay'); game.scene.stop('Results'); game.scene.start('Title');}
     else (game.scene.getScene('BossGameplay') as BossGameScene)?.command(command);
   });
   const unregister = registerBossTools(inputs, () => game.scene.getScene('BossGameplay') as BossGameScene | undefined);

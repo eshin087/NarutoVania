@@ -1,0 +1,308 @@
+{
+  "naruto": {
+    "size": [
+      3072,
+      384
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "contentBounds": [
+      [
+        207,
+        129,
+        322,
+        283
+      ],
+      [
+        177,
+        134,
+        321,
+        322
+      ],
+      [
+        159,
+        127,
+        373,
+        290
+      ],
+      [
+        176,
+        133,
+        391,
+        327
+      ],
+      [
+        200,
+        118,
+        316,
+        308
+      ],
+      [
+        176,
+        133,
+        332,
+        281
+      ]
+    ],
+    "allFramesInsideCells": true,
+    "review": "All6 face right;6 airborne poses;contact2;body visual match reviewed"
+  },
+  "kakashi": {
+    "size": [
+      3072,
+      384
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "contentBounds": [
+      [
+        169,
+        143,
+        316,
+        289
+      ],
+      [
+        172,
+        141,
+        348,
+        316
+      ],
+      [
+        177,
+        135,
+        374,
+        276
+      ],
+      [
+        177,
+        136,
+        402,
+        299
+      ],
+      [
+        200,
+        118,
+        329,
+        304
+      ],
+      [
+        158,
+        130,
+        326,
+        274
+      ]
+    ],
+    "allFramesInsideCells": true,
+    "review": "All6 face right;6 airborne poses;contact2;body visual match reviewed"
+  },
+  "sasuke": {
+    "size": [
+      3072,
+      384
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "contentBounds": [
+      [
+        184,
+        148,
+        322,
+        293
+      ],
+      [
+        168,
+        127,
+        319,
+        313
+      ],
+      [
+        166,
+        139,
+        377,
+        290
+      ],
+      [
+        175,
+        129,
+        368,
+        323
+      ],
+      [
+        166,
+        129,
+        314,
+        274
+      ],
+      [
+        154,
+        124,
+        317,
+        276
+      ]
+    ],
+    "allFramesInsideCells": true,
+    "review": "All6 face right;6 airborne poses;contact2;body visual match reviewed"
+  },
+  "sakura": {
+    "size": [
+      3072,
+      384
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "contentBounds": [
+      [
+        221,
+        155,
+        320,
+        282
+      ],
+      [
+        205,
+        138,
+        326,
+        282
+      ],
+      [
+        215,
+        132,
+        342,
+        287
+      ],
+      [
+        203,
+        137,
+        359,
+        272
+      ],
+      [
+        211,
+        131,
+        323,
+        272
+      ],
+      [
+        169,
+        135,
+        321,
+        268
+      ]
+    ],
+    "allFramesInsideCells": true,
+    "review": "All6 face right;6 airborne poses;contact2;body visual match reviewed"
+  },
+  "zabuza": {
+    "size": [
+      3072,
+      384
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "contentBounds": [
+      [
+        128,
+        157,
+        299,
+        292
+      ],
+      [
+        182,
+        90,
+        327,
+        287
+      ],
+      [
+        183,
+        174,
+        462,
+        311
+      ],
+      [
+        185,
+        153,
+        449,
+        291
+      ],
+      [
+        151,
+        121,
+        295,
+        274
+      ],
+      [
+        203,
+        158,
+        376,
+        295
+      ]
+    ],
+    "allFramesInsideCells": true,
+    "review": "All6 face right;6 airborne poses;contact2;body visual match reviewed"
+  },
+  "haku": {
+    "size": [
+      3072,
+      384
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "contentBounds": [
+      [
+        183,
+        102,
+        308,
+        271
+      ],
+      [
+        152,
+        89,
+        333,
+        290
+      ],
+      [
+        116,
+        84,
+        373,
+        299
+      ],
+      [
+        166,
+        74,
+        393,
+        296
+      ],
+      [
+        167,
+        69,
+        314,
+        276
+      ],
+      [
+        150,
+        95,
+        317,
+        267
+      ]
+    ],
+    "allFramesInsideCells": true,
+    "review": "All6 face right;6 airborne poses;contact2;body visual match reviewed"
+  }
+}

@@ -1,3 +1,23 @@
+# Animation, combat clarity, and manga transitions - September 6, 2026
+
+## Current revision
+
+108 automated tests, TypeScript checking, and lint pass. New coverage includes panel waiting/entrance gates, single-scene skipping, all fourteen scene-selector entries, final snowy acknowledgment, debug save/history/stat isolation, held keyboard/controller confirmations, boss stance timing and eligibility, shared attack polygons, aerial contact timing, audio pool completeness, and cancellation of pending auditions.
+
+A fresh headless Edge browser completed all four fights and the full story chain to acknowledged snowy victory. The development-only pilot uses normal input actions and never overrides resources, positions, clocks, or outcomes. Active combat time was166 seconds; final Naruto health69, chakra9. This precise automated defense is not a human difficulty benchmark. No page/console errors or missing audio appeared. Victory cleared fighters/projectiles/effects/decoys; one music source remained. HP, hostile damage, ultimate charge, and four-fight scope are unchanged.
+
+Public-menu local validation opened all four fights and ten transitions, including separately initialized interception, Gato, and snowy-rest scenes. Normal save remained byte-for-byte unchanged. Snow held across pause/resume until fresh Enter. Simulated gamepad A held through the first shuriken panel did not advance it; release/repress advanced exactly one panel, and held A did not dismiss the second. Replays restored identical initial entity counts four times (two fighters, zero projectiles/effects/decoys,13 display objects). Fullscreen and resize were exercised. A normal-input idle defeat reached0HP; retry restored100 health/chakra/stamina and the opening phase. Physical-controller hardware was unavailable.
+
+A separate20-second combat observation captured real PERFECT PARRY feedback at the defender, with400 performance samples (median165FPS, minimum162FPS on this desktop). These measurements are specific to available hardware. Sharingan and aerial screenshots were inspected. Reduced-motion settings suppress afterimages and reduce flashes.
+
+The actual browser audio output was captured for45.42 seconds across Kakashi combat, Sharingan, parries, and Haku mirror volleys. Decoded rendered-mix peak was-3.50dBFS, with no NaN/infinite samples or clipped peaks; RMS-25.12dBFS. The78 replacement clips use documented reusable recordings and nine three-variant pools. Audio sources are bounded and priority-aware; important cues duck music. Existing licensed music remains. Subjective listening and official-reference timestamps could not be verified with the available tools; no original Naruto audio was extracted, and no unverified timestamps are asserted. Public menu auditions provide direct sound checks.
+
+All12 generated manga panels,36 aerial frames, and48 regenerated Kakashi/Zabuza grounded-melee frames were visually inspected before integration. Sprite normalization now uses texture/frame body scale and anchors, excluding weapons and effects. Grounded metadata was visually calibrated; exact per-limb5% tolerance across every legacy frame is not certified. Generation prompts, frame metadata, and source licenses are retained in public/art-v9 and public/audio-v9.
+
+The final static production build was smoke-tested locally after the replacement melee sheets and final Zabuza body correction. Six public WebMCP actions registered; development input-pilot tools were absent. Normal keyboard melee/aerial input, hunter panel advancement, and single-scene skip worked, with no missing assets or browser errors.
+
+## Historical validation below
+
 # Sword, support, and story revision — September 6, 2026
 
 ## Current revision

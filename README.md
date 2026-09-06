@@ -45,3 +45,12 @@ See `VALIDATION.md` for verification results and scope limitations.
 Difficulty adjustment: playable boss HP reduced about 35%; hostile damage multiplier reduced from 0.95 to 0.70 (about 26% less damage). Boss attack timing, armor, and anti-stun-lock rules are retained.
 
 The post-rescue copy duel is now cinematic only. Zabuza uses 24 new broad sword frames with explicit forehand/backhand/rising/overhead contact timing and gold/red anticipation arcs. Consecutive perfect parries have rising-pitch feedback and brief sparks. Sasuke support alternates Fireball/Windmill casts, times defenses, and preserves spacing. Haku's senbon are thin, straight, velocity-aligned needles with short trails. Prison scenes use a normal-sized Kakashi inside a translucent sphere; cutscene movement tweens no longer overlap, settled actors use a stable idle, and the final crowd is staged by story beat. New generated art and prompts are in public/art-v8.
+
+
+## Manga transitions and presentation revision
+
+The four-fight boss rush now has12 held manga panels, six dedicated aerial attack strips, body-normalized sprite rendering, defender-specific PERFECT PARRY feedback, rare committed boss parry stances, outlined senbon, shared red-warning collision outlines, and Sharingan projectile wakes/afterimages. Combat tuning and faster ultimate charging remain unchanged.
+
+Enter/controller A/Continue advances a held panel after its entrance; Skip scene skips only the current transition. Debug / Scene Select is public in the footer and pause menu, with all four fights, ten transitions, Replay/Exit, and sound auditions. Debug play preserves normal checkpoints, viewed phases, and run statistics. Held confirmation cannot dismiss the next panel. Final snow must be acknowledged or explicitly skipped.
+
+Audio v9 provides78 edited reusable effects/efforts with variant pools, cue priority, music ducking, and menu-cancellation cleanup. Credits and source/edit notes are in public/audio-v9. These are substitute recordings, not the original anime soundtrack or actor performances. Physical-controller and subjective listening verification remain unavailable; see VALIDATION.md for measured/browser coverage.

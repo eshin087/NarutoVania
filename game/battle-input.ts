@@ -12,23 +12,25 @@ export function mapGamepad(pad: Pick<Gamepad, 'axes' | 'buttons'>): Set<Action> 
 }
 export class BattleInput {
   keyboard = new Set<Action>(); pad = new Set<Action>(); virtual = new Set<Action>();
-  edges = new Set<Action>(); releases = new Set<Action>(); device: 'keyboard' | 'gamepad' = 'keyboard'; padStart = false; padConfirm = false;
+  edges = new Set<Action>(); releases = new Set<Action>(); device: 'keyboard' | 'gamepad' = 'keyboard'; padStart = false; padConfirm = false; enterHeld=false; confirmAfter=0;
   down = (event: KeyboardEvent) => {
     if ((event.target as HTMLElement)?.closest('[role="dialog"],input,select,textarea')) return;
     const screen = bridge.get().screen;
     if (event.code === 'Escape'||event.key==='Escape') {event.preventDefault(); if (!event.repeat) bridge.command(screen === 'paused' ? 'resume' : 'pause'); return;}
-    if (event.code === 'Enter'||event.key==='Enter') {event.preventDefault(); if (!event.repeat) this.confirm(); return;}
+    if (event.code === 'Enter'||event.key==='Enter') {event.preventDefault(); const fresh=!this.enterHeld;this.enterHeld=true;if (!event.repeat&&fresh) this.confirm(); return;}
     const action = keyboardAction(event); if (!action) return;
     if (['playing', 'intro', 'dead', 'paused'].includes(screen)) event.preventDefault();
     this.device = 'keyboard'; if (!this.keyboard.has(action)) this.edges.add(action); this.keyboard.add(action);
   };
-  up = (event: KeyboardEvent) => {const action = keyboardAction(event); if (action) {this.keyboard.delete(action); this.releases.add(action);}};
-  blur = () => {this.clear(); if (['playing', 'intro'].includes(bridge.get().screen)) bridge.command('pause');};
+  up = (event: KeyboardEvent) => {if(event.code==='Enter'||event.key==='Enter')this.enterHeld=false;const action = keyboardAction(event); if (action) {this.keyboard.delete(action); this.releases.add(action);}};
+  blur = () => {this.enterHeld=false;this.clear(); if (['playing', 'intro'].includes(bridge.get().screen)) bridge.command('pause');};
   visibility = () => {if (document.hidden) this.blur();};
   disconnect = () => {for (const action of this.pad) this.releases.add(action); this.pad.clear(); this.padStart = false; this.padConfirm = false; this.device = 'keyboard';};
   constructor() {window.addEventListener('keydown', this.down); window.addEventListener('keyup', this.up); window.addEventListener('blur', this.blur); window.addEventListener('gamepaddisconnected', this.disconnect); document.addEventListener('visibilitychange', this.visibility);}
+  quarantineConfirm(){this.confirmAfter=performance.now()+350;}
   confirm() {
-    switch (bridge.get().screen) {case 'title': bridge.command(bridge.get().seen.length ? 'continue' : 'start'); break; case 'intro': bridge.command('skip'); break; case 'dead': bridge.command('retry'); break; case 'paused': bridge.command('resume'); break; case 'victory': bridge.command('start'); break;}
+    if(performance.now()<this.confirmAfter)return;
+    switch (bridge.get().screen) {case 'title': bridge.command(bridge.get().seen.length ? 'continue' : 'start'); break; case 'intro': bridge.command('advance'); break; case 'dead': bridge.command('retry'); break; case 'paused': bridge.command('resume'); break; case 'victory': bridge.command(bridge.get().debugEntry?'debug-replay':'start'); break;}
   }
   poll() {
     let pads: (Gamepad | null)[] = []; try {pads = Array.from(navigator.getGamepads?.() || []);} catch {}
