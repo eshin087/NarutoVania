@@ -301,7 +301,7 @@ export class BossGameScene extends Phaser.Scene {
     this.projectiles.forEach(p=>{if(!p.friendly)p.expires=0;});
     this.barrage={timeline:new BarrageTimeline(id,this.arenaMin,this.arenaMax,this.player.model.x<(this.arenaMin+this.arenaMax)/2?-1:1),originX:b.x,originY:this.floor,airX:this.player.model.x<(this.arenaMin+this.arenaMax)/2?this.arenaMax-170:this.arenaMin+170,serial:b.action!.serial};
     this.boss.body.body.setVelocity(0).setAllowGravity(false);this.mirrorInterruptUntil=Infinity;
-    this.mirrorVisuals.forEach(m=>m.image.setAlpha(.2));this.sounds.effect(d.boss==='zabuza'?'water':'ice',.6);
+    this.mirrorVisuals.forEach(m=>m.image.setAlpha(.2));if(d.boss==='zabuza')this.sounds.softWater();else this.sounds.effect('ice',.6);
   }
   private endBarrage(interrupted=false){
     const active=this.barrage;if(!active)return;
@@ -339,7 +339,7 @@ export class BossGameScene extends Phaser.Scene {
   private eruptionLanes(v:PreparedVolley){return v.lanes.filter((_,i)=>i%3===0);}
   private emitBarrageVolley(v:PreparedVolley){
     const t=this.barrage!.timeline,id=t.id,b=this.boss.model;
-    this.sounds.effect(id.startsWith('water')?'water':'ice',.6);
+    if(id.startsWith('water'))this.sounds.softWater();else this.sounds.effect('ice',.6);
     if(id==='water-spirits'){const target=spiritTarget(v,b.x,this.floor),away=b.x>target.x?1:-1;for(const offset of [0,65])this.barrageShot(b.x,b.y-55,target.x+away*offset,target.y,true);return;}
     if(id==='water-encirclement'){for(const x of this.eruptionLanes(v)){const image=this.add.image(x,this.floor,'v11-eruption','0').setOrigin(.5,480/512).setDisplaySize(170,227).setDepth(9);this.barrageHazards.push({x,born:this.now,hit:new Set(),image});}return;}
     if(id==='needle-curtain'||id==='mirror-crossfire'){const image=this.add.image(b.x,b.y-80,'v11-ice','4').setDisplaySize(120,90).setDepth(10);this.effects.push({image,born:this.now,duration:320,width:120,grow:0,spin:0,iceBarrage:true});}
@@ -470,7 +470,7 @@ export class BossGameScene extends Phaser.Scene {
   private actionEvent(f: Fighter, event: AttackEvent, key: string, charge: number) {
     if (f.model.health <= 0 || this.phaseEnding) return;
     if(f.model.action?.definition.id.startsWith('barrage-'))return;
-    if (f.model.action?.definition.id!=='sword-throw' && event.effect && event.kind !== 'technique' && event.kind !== 'hit') this.sounds.effect(event.effect==='swing'&&f.model.id==='zabuza'?'swing2':event.effect, f.ally ? .22 : .65);
+    if (f.model.action?.definition.id!=='sword-throw' && event.effect && event.kind !== 'technique' && event.kind !== 'hit') {if(f.model.id==='zabuza'&&event.effect==='water')this.sounds.softWater();else this.sounds.effect(event.effect==='swing'&&f.model.id==='zabuza'?'swing2':event.effect, f.ally ? .22 : .65);}
     if (event.kind === 'effect') {
       if (event.effect === 'dash') this.burst('smoke', f.model.x - f.model.facing * 30, f.model.y - 25, 90, 260);
       return;
@@ -518,7 +518,7 @@ export class BossGameScene extends Phaser.Scene {
       if (attacker === this.player && ['light1','light2','light3','heavy','aerial'].includes(attacker.model.action?.definition.action || '')) attacker.model.chakra = Math.min(100, attacker.model.chakra + COMBAT.meleeChakra);
       target.model.exhaust((event.posture || 12) * (attacker.ally ? .2 : 1), this.now); if (target.model.stamina <= 0 && target.model.isBoss) this.guardBreakEffect(target);
     }
-    if(event.effect==='water')this.sounds.effect('water2',.8);
+    if(event.effect==='water'){if(attacker.model.id==='zabuza')this.sounds.softWater();else this.sounds.effect('water2',.8);}
     else this.sounds.strike(attacker.model.id==='zabuza'?'sword':event.posture&&event.posture>=30?'heavy':attacker.model.action?.definition.action==='light2'?'kick':'palm',.85);
     this.sounds.voice(target.model.id, target.model.health <= 0 ? 'defeat' : 'hurt');
     const armored=target.model.isBoss&&this.now>=target.model.hurtUntil&&this.now>=target.model.guardBrokenUntil;
@@ -628,7 +628,7 @@ export class BossGameScene extends Phaser.Scene {
     if (outcome.result === 'block') {this.sounds.effect('guard', .7); this.burst('parry', target.model.x, target.model.y - 70, 50, 120); return false;}
     if (outcome.result === 'guardbreak') this.guardBreakEffect(target);
     if (p.friendly) {target.model.exhaust(p.posture * (p.owner.ally ? .2 : 1), this.now); p.owner.model.ultimate = Math.min(100, p.owner.model.ultimate + outcome.damage * .08); if(target.model.isBoss && target.model.stamina <= 0)this.guardBreakEffect(target);}
-    this.sounds.effect(p.kind === 'water' ? 'water2' : 'impact', .65); this.sounds.voice(target.model.id, target.model.health <= 0 ? 'defeat' : 'hurt');
+    if(p.kind==='spirit'||p.kind==='water'&&p.owner.model.id==='zabuza')this.sounds.softWater();else this.sounds.effect(p.kind === 'water' ? 'water2' : 'impact', .65); this.sounds.voice(target.model.id, target.model.health <= 0 ? 'defeat' : 'hurt');
     this.burst(p.kind === 'water' ? 'waterfall' : 'ice-shards', target.model.x, target.model.y - 70, 75, 190); this.shake(.0015, 70);
     if (target.ally && !target.key.startsWith('clone')) target.model.health = Math.max(1, target.model.health);
     return false;
@@ -695,7 +695,7 @@ export class BossGameScene extends Phaser.Scene {
       clone.expires = this.now + 5200; clone.model.facing = f.model.facing; return;
     }
     const x = clamp(this.targetX, this.arenaMin + 60, this.arenaMax - 60);
-    this.waterBurst(x-70*f.model.facing,this.floor,416,1000,2); this.sounds.effect('water', .9);
+    this.waterBurst(x-70*f.model.facing,this.floor,416,1000,2); this.sounds.softWater();
     this.effects.at(-1)!.tidal = {owner:f,event,key,x,hit:false};
     if (this.phase === 'protect' && x < 280) this.hurtTazuna(event.damage || 10);
   }
