@@ -60,6 +60,7 @@ for (const attack of ZABUZA_MOVES) {
   attack.events=attack.events.map((e,i)=>({...e,at:times[i]}));
   attack.duration=times[times.length-1]+420;attack.cancelAt=attack.duration;
 }
+for(const attack of ZABUZA_MOVES){attack.recovery=Math.max(360,Math.round(attack.recovery*.8));if(attack.id!=='sword-throw'&&attack.events.some(e=>e.kind==='hit')){let last=0;attack.events=attack.events.map((e,i)=>{const at=Math.max(i?last+300:500,Math.round(e.at*.85));last=at;return{...e,at};});attack.duration=last+360;attack.cancelAt=attack.duration;}}
 export const HAKU_MOVES: BossMove[] = [
 
   move('senbon-fan', 1560, 17, [shot(620, 8, 'ice', 3, false, 440)], {animation: 'cast', maxRange: 1500, minRange: 155, recovery: 660, cooldown: 4200}),
@@ -80,6 +81,7 @@ export const HAKU_MOVES: BossMove[] = [
 
 ];
 
+for(const attack of HAKU_MOVES){attack.recovery=Math.max(360,Math.round(attack.recovery*.8));if(attack.events.some(e=>e.kind==='hit')){let last=0;attack.events=attack.events.map((e,i)=>{const at=Math.max(i?last+300:500,Math.round(e.at*.85));last=at;return{...e,at};});attack.duration=last+360;attack.cancelAt=attack.duration;}}
 export class BossBrain {
 
   recent: string[] = []; readyAt = 1900; phase = 0; attacks = 0; lastParryAt=0;lastParryAttack=0;

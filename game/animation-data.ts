@@ -20,6 +20,15 @@ export const ANIMATIONS: Record<AnimationName, AnimationSequence> = {
 };
 export function animationFrame(name: AnimationName, elapsed: number, duration?: number) {
   const definition = ANIMATIONS[name], period = duration || definition.duration;
+  const contact = {light1:170,light2:195,light3:245,aerial:145}[name as string as 'light1'];
+  if(contact && duration && duration < definition.duration){
+    const activeIndex=name==='aerial'?2:3;
+    const before=definition.frames.slice(0,activeIndex),after=definition.frames.slice(activeIndex);
+    const group=elapsed<contact?before:after;
+    const progress=elapsed<contact?Math.max(0,elapsed)/contact:Math.min(.99999,(elapsed-contact)/(duration-contact));
+    let weight=progress*group.reduce((n,f)=>n+f.weight,0);
+    return group.find(f=>(weight-=f.weight)<0)||group.at(-1)!;
+  }
   const progress = definition.loop ? (Math.max(0, elapsed) % period) / period : Math.min(.99999, Math.max(0, elapsed) / period);
   const total = definition.frames.reduce((sum, frame) => sum + frame.weight, 0); let weight = progress * total;
   return definition.frames.find(frame => (weight -= frame.weight) < 0) || definition.frames.at(-1)!;

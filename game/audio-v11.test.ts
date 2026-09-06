@@ -1,0 +1,3 @@
+import {it,expect,vi} from 'vitest';
+import {bossBridge} from './boss-bridge';
+it('mutes old placeholder voices once and preserves later user changes and music',()=>{const items=new Map<string,string>();vi.stubGlobal('localStorage',{getItem:(k:string)=>items.get(k)||null,setItem:(k:string,v:string)=>items.set(k,v)});items.set('narutovania.settings.v2',JSON.stringify({voiceVolume:.8,musicVolume:.3,effectsVolume:.6,muted:true,reducedShake:true}));bossBridge.load();expect(bossBridge.settings()).toEqual({voiceVolume:0,musicVolume:.3,effectsVolume:.6,muted:true,reducedShake:true});bossBridge.setSettings({voiceVolume:.4});bossBridge.load();expect(bossBridge.settings().voiceVolume).toBe(.4);vi.unstubAllGlobals();});

@@ -1,0 +1,1447 @@
+{
+  "version": 11,
+  "measurementBasis": "Single uniform scale per source atlas calibrated visually to idle head, torso, limb dimensions; same scale for all poses. No bounding-height pose normalization. Not certified to exact 5 percent anatomy tolerance.",
+  "hurt": {
+    "frameDurationsMs": [
+      75,
+      100,
+      125,
+      160
+    ],
+    "contactFrame": 0,
+    "contactTimeMs": 0,
+    "facing": "right",
+    "incomingHitFrom": "right",
+    "recoilToward": "left",
+    "poses": [
+      "contact recoil arms low",
+      "strong recoil",
+      "stagger slump",
+      "sore recovery"
+    ]
+  },
+  "sword": {
+    "frameDurationsMs": [
+      65,
+      65,
+      65,
+      85,
+      85,
+      95
+    ],
+    "contactFrame": 3,
+    "contactTimeMs": 195,
+    "rows": [
+      "horizontal cut",
+      "diagonal cut",
+      "overhead cleave",
+      "rising heavy"
+    ]
+  },
+  "textures": {
+    "v11-naruto-hurt": {
+      "file": "naruto-hurt.png",
+      "character": "naruto",
+      "cellSize": [
+        512,
+        384
+      ],
+      "columns": 4,
+      "rows": 1,
+      "baseHeight": 208,
+      "frames": [
+        {
+          "frame": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.4,
+          "sourceFootPixels": [
+            91.5,
+            493
+          ],
+          "contentBounds": [
+            219,
+            110,
+            350,
+            308
+          ]
+        },
+        {
+          "frame": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.4,
+          "sourceFootPixels": [
+            278.0,
+            499
+          ],
+          "contentBounds": [
+            145,
+            107,
+            265,
+            307
+          ]
+        },
+        {
+          "frame": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.4,
+          "sourceFootPixels": [
+            28.5,
+            440
+          ],
+          "contentBounds": [
+            245,
+            131,
+            353,
+            307
+          ]
+        },
+        {
+          "frame": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.4,
+          "sourceFootPixels": [
+            28.5,
+            499
+          ],
+          "contentBounds": [
+            245,
+            107,
+            349,
+            307
+          ]
+        }
+      ]
+    },
+    "v11-kakashi-hurt": {
+      "file": "kakashi-hurt.png",
+      "character": "kakashi",
+      "cellSize": [
+        512,
+        384
+      ],
+      "columns": 4,
+      "rows": 1,
+      "baseHeight": 222,
+      "frames": [
+        {
+          "frame": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "sourceUniformScale": 0.365,
+          "sourceFootPixels": [
+            102.0,
+            609
+          ],
+          "contentBounds": [
+            219,
+            85,
+            307,
+            308
+          ]
+        },
+        {
+          "frame": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "sourceUniformScale": 0.365,
+          "sourceFootPixels": [
+            102.5,
+            577
+          ],
+          "contentBounds": [
+            219,
+            96,
+            318,
+            307
+          ]
+        },
+        {
+          "frame": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "sourceUniformScale": 0.365,
+          "sourceFootPixels": [
+            32.5,
+            476
+          ],
+          "contentBounds": [
+            244,
+            133,
+            359,
+            307
+          ]
+        },
+        {
+          "frame": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0045045045045045045,
+          "sourceUniformScale": 0.365,
+          "sourceFootPixels": [
+            44.5,
+            555
+          ],
+          "contentBounds": [
+            240,
+            104,
+            331,
+            307
+          ]
+        }
+      ]
+    },
+    "v11-sasuke-hurt": {
+      "file": "sasuke-hurt.png",
+      "character": "sasuke",
+      "cellSize": [
+        512,
+        384
+      ],
+      "columns": 4,
+      "rows": 1,
+      "baseHeight": 192,
+      "frames": [
+        {
+          "frame": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "sourceUniformScale": 0.4,
+          "sourceFootPixels": [
+            138.5,
+            471
+          ],
+          "contentBounds": [
+            201,
+            119,
+            311,
+            308
+          ]
+        },
+        {
+          "frame": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "sourceUniformScale": 0.4,
+          "sourceFootPixels": [
+            155.0,
+            479
+          ],
+          "contentBounds": [
+            194,
+            115,
+            312,
+            307
+          ]
+        },
+        {
+          "frame": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "sourceUniformScale": 0.4,
+          "sourceFootPixels": [
+            33.0,
+            442
+          ],
+          "contentBounds": [
+            243,
+            130,
+            340,
+            307
+          ]
+        },
+        {
+          "frame": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.005208333333333333,
+          "sourceUniformScale": 0.4,
+          "sourceFootPixels": [
+            32.5,
+            488
+          ],
+          "contentBounds": [
+            243,
+            112,
+            322,
+            308
+          ]
+        }
+      ]
+    },
+    "v11-sakura-hurt": {
+      "file": "sakura-hurt.png",
+      "character": "sakura",
+      "cellSize": [
+        512,
+        384
+      ],
+      "columns": 4,
+      "rows": 1,
+      "baseHeight": 193,
+      "frames": [
+        {
+          "frame": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "sourceUniformScale": 0.38,
+          "sourceFootPixels": [
+            58.5,
+            504
+          ],
+          "contentBounds": [
+            234,
+            115,
+            330,
+            307
+          ]
+        },
+        {
+          "frame": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "sourceUniformScale": 0.38,
+          "sourceFootPixels": [
+            112.0,
+            489
+          ],
+          "contentBounds": [
+            213,
+            121,
+            320,
+            307
+          ]
+        },
+        {
+          "frame": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "sourceUniformScale": 0.38,
+          "sourceFootPixels": [
+            23.5,
+            436
+          ],
+          "contentBounds": [
+            247,
+            141,
+            338,
+            307
+          ]
+        },
+        {
+          "frame": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.0051813471502590676,
+          "sourceUniformScale": 0.38,
+          "sourceFootPixels": [
+            23.5,
+            481
+          ],
+          "contentBounds": [
+            247,
+            124,
+            326,
+            307
+          ]
+        }
+      ]
+    },
+    "v11-zabuza-hurt": {
+      "file": "zabuza-hurt.png",
+      "character": "zabuza",
+      "cellSize": [
+        512,
+        384
+      ],
+      "columns": 4,
+      "rows": 1,
+      "baseHeight": 211,
+      "frames": [
+        {
+          "frame": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 0.45,
+          "sourceFootPixels": [
+            120.0,
+            461
+          ],
+          "contentBounds": [
+            202,
+            100,
+            327,
+            308
+          ]
+        },
+        {
+          "frame": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 0.45,
+          "sourceFootPixels": [
+            87.0,
+            455
+          ],
+          "contentBounds": [
+            217,
+            102,
+            324,
+            307
+          ]
+        },
+        {
+          "frame": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 0.45,
+          "sourceFootPixels": [
+            138.5,
+            386
+          ],
+          "contentBounds": [
+            194,
+            133,
+            344,
+            307
+          ]
+        },
+        {
+          "frame": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 0.45,
+          "sourceFootPixels": [
+            99.5,
+            458
+          ],
+          "contentBounds": [
+            211,
+            101,
+            329,
+            308
+          ]
+        }
+      ]
+    },
+    "v11-haku-hurt": {
+      "file": "haku-hurt.png",
+      "character": "haku",
+      "cellSize": [
+        512,
+        384
+      ],
+      "columns": 4,
+      "rows": 1,
+      "baseHeight": 208,
+      "frames": [
+        {
+          "frame": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.41,
+          "sourceFootPixels": [
+            152.0,
+            493
+          ],
+          "contentBounds": [
+            194,
+            105,
+            295,
+            308
+          ]
+        },
+        {
+          "frame": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.41,
+          "sourceFootPixels": [
+            186.0,
+            489
+          ],
+          "contentBounds": [
+            180,
+            107,
+            302,
+            308
+          ]
+        },
+        {
+          "frame": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.41,
+          "sourceFootPixels": [
+            110.0,
+            422
+          ],
+          "contentBounds": [
+            211,
+            134,
+            319,
+            307
+          ]
+        },
+        {
+          "frame": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004807692307692308,
+          "sourceUniformScale": 0.41,
+          "sourceFootPixels": [
+            91.5,
+            479
+          ],
+          "contentBounds": [
+            218,
+            111,
+            302,
+            308
+          ]
+        }
+      ]
+    },
+    "v11-zabuza-weaponless-hurt": {
+      "file": "zabuza-weaponless-hurt.png",
+      "character": "zabuza",
+      "cellSize": [
+        512,
+        384
+      ],
+      "columns": 4,
+      "rows": 1,
+      "baseHeight": 211,
+      "frames": [
+        {
+          "frame": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 0.41,
+          "sourceFootPixels": [
+            50.5,
+            517
+          ],
+          "contentBounds": [
+            235,
+            95,
+            371,
+            307
+          ]
+        },
+        {
+          "frame": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 0.41,
+          "sourceFootPixels": [
+            72.0,
+            515
+          ],
+          "contentBounds": [
+            226,
+            96,
+            354,
+            308
+          ]
+        },
+        {
+          "frame": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 0.41,
+          "sourceFootPixels": [
+            22.5,
+            456
+          ],
+          "contentBounds": [
+            247,
+            120,
+            375,
+            307
+          ]
+        },
+        {
+          "frame": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            307
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 0.41,
+          "sourceFootPixels": [
+            23.5,
+            517
+          ],
+          "contentBounds": [
+            246,
+            95,
+            364,
+            307
+          ]
+        }
+      ]
+    },
+    "v8-sword": {
+      "file": "zabuza-sword.png",
+      "character": "zabuza",
+      "cellSize": [
+        512,
+        384
+      ],
+      "columns": 6,
+      "rows": 4,
+      "baseHeight": 211,
+      "frames": [
+        {
+          "frame": 0,
+          "rect": [
+            0,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 1.02,
+          "sourceFootPixels": [
+            71.0,
+            160
+          ],
+          "contentBounds": [
+            184,
+            157,
+            371,
+            321
+          ]
+        },
+        {
+          "frame": 1,
+          "rect": [
+            512,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 1.02,
+          "sourceFootPixels": [
+            57.5,
+            161
+          ],
+          "contentBounds": [
+            197,
+            156,
+            399,
+            321
+          ]
+        },
+        {
+          "frame": 2,
+          "rect": [
+            1024,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 1.02,
+          "sourceFootPixels": [
+            130.5,
+            150
+          ],
+          "contentBounds": [
+            123,
+            167,
+            326,
+            321
+          ]
+        },
+        {
+          "frame": 3,
+          "rect": [
+            1536,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 1.02,
+          "sourceFootPixels": [
+            63.0,
+            151
+          ],
+          "contentBounds": [
+            192,
+            166,
+            456,
+            321
+          ]
+        },
+        {
+          "frame": 4,
+          "rect": [
+            2048,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 1.02,
+          "sourceFootPixels": [
+            63.0,
+            153
+          ],
+          "contentBounds": [
+            192,
+            164,
+            393,
+            321
+          ]
+        },
+        {
+          "frame": 5,
+          "rect": [
+            2560,
+            0,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 1.02,
+          "sourceFootPixels": [
+            66.5,
+            158
+          ],
+          "contentBounds": [
+            188,
+            159,
+            366,
+            321
+          ]
+        },
+        {
+          "frame": 6,
+          "rect": [
+            0,
+            384,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 1.02,
+          "sourceFootPixels": [
+            52.5,
+            159
+          ],
+          "contentBounds": [
+            202,
+            158,
+            358,
+            322
+          ]
+        },
+        {
+          "frame": 7,
+          "rect": [
+            512,
+            384,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 1.02,
+          "sourceFootPixels": [
+            76.5,
+            160
+          ],
+          "contentBounds": [
+            178,
+            157,
+            333,
+            322
+          ]
+        },
+        {
+          "frame": 8,
+          "rect": [
+            1024,
+            384,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 1.02,
+          "sourceFootPixels": [
+            150.5,
+            158
+          ],
+          "contentBounds": [
+            102,
+            159,
+            325,
+            322
+          ]
+        },
+        {
+          "frame": 9,
+          "rect": [
+            1536,
+            384,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 1.02,
+          "sourceFootPixels": [
+            69.0,
+            157
+          ],
+          "contentBounds": [
+            186,
+            160,
+            440,
+            322
+          ]
+        },
+        {
+          "frame": 10,
+          "rect": [
+            2048,
+            384,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 1.02,
+          "sourceFootPixels": [
+            68.0,
+            156
+          ],
+          "contentBounds": [
+            187,
+            161,
+            411,
+            322
+          ]
+        },
+        {
+          "frame": 11,
+          "rect": [
+            2560,
+            384,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 1.02,
+          "sourceFootPixels": [
+            60.5,
+            159
+          ],
+          "contentBounds": [
+            194,
+            158,
+            356,
+            322
+          ]
+        },
+        {
+          "frame": 12,
+          "rect": [
+            0,
+            768,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 1.02,
+          "sourceFootPixels": [
+            79.5,
+            153
+          ],
+          "contentBounds": [
+            175,
+            164,
+            320,
+            321
+          ]
+        },
+        {
+          "frame": 13,
+          "rect": [
+            512,
+            768,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 1.02,
+          "sourceFootPixels": [
+            90.0,
+            179
+          ],
+          "contentBounds": [
+            164,
+            137,
+            314,
+            322
+          ]
+        },
+        {
+          "frame": 14,
+          "rect": [
+            1024,
+            768,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 1.02,
+          "sourceFootPixels": [
+            84.5,
+            193
+          ],
+          "contentBounds": [
+            170,
+            123,
+            318,
+            321
+          ]
+        },
+        {
+          "frame": 15,
+          "rect": [
+            1536,
+            768,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 1.02,
+          "sourceFootPixels": [
+            64.0,
+            124
+          ],
+          "contentBounds": [
+            191,
+            194,
+            438,
+            336
+          ]
+        },
+        {
+          "frame": 16,
+          "rect": [
+            2048,
+            768,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 1.02,
+          "sourceFootPixels": [
+            66.0,
+            123
+          ],
+          "contentBounds": [
+            189,
+            195,
+            449,
+            326
+          ]
+        },
+        {
+          "frame": 17,
+          "rect": [
+            2560,
+            768,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 1.02,
+          "sourceFootPixels": [
+            81.0,
+            153
+          ],
+          "contentBounds": [
+            173,
+            164,
+            317,
+            321
+          ]
+        },
+        {
+          "frame": 18,
+          "rect": [
+            0,
+            1152,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 1.02,
+          "sourceFootPixels": [
+            90.0,
+            151
+          ],
+          "contentBounds": [
+            164,
+            166,
+            322,
+            321
+          ]
+        },
+        {
+          "frame": 19,
+          "rect": [
+            512,
+            1152,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 1.02,
+          "sourceFootPixels": [
+            114.0,
+            116
+          ],
+          "contentBounds": [
+            140,
+            202,
+            322,
+            321
+          ]
+        },
+        {
+          "frame": 20,
+          "rect": [
+            1024,
+            1152,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 1.02,
+          "sourceFootPixels": [
+            113.5,
+            126
+          ],
+          "contentBounds": [
+            140,
+            191,
+            321,
+            322
+          ]
+        },
+        {
+          "frame": 21,
+          "rect": [
+            1536,
+            1152,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 1.02,
+          "sourceFootPixels": [
+            65.5,
+            162
+          ],
+          "contentBounds": [
+            189,
+            155,
+            423,
+            321
+          ]
+        },
+        {
+          "frame": 22,
+          "rect": [
+            2048,
+            1152,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 1.02,
+          "sourceFootPixels": [
+            71.0,
+            177
+          ],
+          "contentBounds": [
+            184,
+            139,
+            381,
+            321
+          ]
+        },
+        {
+          "frame": 23,
+          "rect": [
+            2560,
+            1152,
+            512,
+            384
+          ],
+          "anchorPixels": [
+            256,
+            320
+          ],
+          "pixelsToLogicalBody": 0.004739336492890996,
+          "sourceUniformScale": 1.02,
+          "sourceFootPixels": [
+            53.0,
+            154
+          ],
+          "contentBounds": [
+            202,
+            163,
+            367,
+            323
+          ]
+        }
+      ]
+    }
+  }
+}

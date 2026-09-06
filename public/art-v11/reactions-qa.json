@@ -1,0 +1,84 @@
+{
+  "frameCount": 52,
+  "atlases": {
+    "v11-naruto-hurt": {
+      "size": [
+        2048,
+        384
+      ],
+      "mode": "RGBA",
+      "transparentPixels": 742337,
+      "framesInBounds": true
+    },
+    "v11-kakashi-hurt": {
+      "size": [
+        2048,
+        384
+      ],
+      "mode": "RGBA",
+      "transparentPixels": 745469,
+      "framesInBounds": true
+    },
+    "v11-sasuke-hurt": {
+      "size": [
+        2048,
+        384
+      ],
+      "mode": "RGBA",
+      "transparentPixels": 748199,
+      "framesInBounds": true
+    },
+    "v11-sakura-hurt": {
+      "size": [
+        2048,
+        384
+      ],
+      "mode": "RGBA",
+      "transparentPixels": 750004,
+      "framesInBounds": true
+    },
+    "v11-zabuza-hurt": {
+      "size": [
+        2048,
+        384
+      ],
+      "mode": "RGBA",
+      "transparentPixels": 734316,
+      "framesInBounds": true
+    },
+    "v11-haku-hurt": {
+      "size": [
+        2048,
+        384
+      ],
+      "mode": "RGBA",
+      "transparentPixels": 743146,
+      "framesInBounds": true
+    },
+    "v11-zabuza-weaponless-hurt": {
+      "size": [
+        2048,
+        384
+      ],
+      "mode": "RGBA",
+      "transparentPixels": 738946,
+      "framesInBounds": true
+    },
+    "v8-sword": {
+      "size": [
+        3072,
+        1536
+      ],
+      "mode": "RGBA",
+      "transparentPixels": 4437776,
+      "framesInBounds": true
+    }
+  },
+  "visualReview": "All hurt frames show low-arm backward recoil, slump, recovery. Sword rows expose backswing and fully extended contact, distinct from block. Uniform source scaling used for all frames within each atlas.",
+  "remainingOutliers": [
+    "Weaponless Zabuza source has darker waist cloth and broader torso than idle; no sword present.",
+    "Sword source omits pale waist sash. Shoulder width varies with perspective. Exact 5 percent anatomical tolerance not certified."
+  ],
+  "swordScaleBasis": "Rejected1.31 from poseheight because head/torso enlarged.1.02 chosen from visible face-height and torso-length comparison to idle; lower silhouette is expected from wide bent-knee stance.",
+  "anchors": "Hurt foot-bottom midpoints; sword uses lower-body skin at exposed sandal toes, excluding blade. Fixed target anchor per atlas."
+}

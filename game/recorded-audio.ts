@@ -1,4 +1,4 @@
-import manifest from '../public/audio-v9/manifest.json';
+import manifest from '../public/audio-v11/manifest.json';
 import type {CharacterId, EffectName} from './combat-core';
 export interface AudioSettings {muted: boolean; musicVolume: number; effectsVolume: number; voiceVolume: number;}
 type Track = 'lakeside' | 'mirrors' | 'snow';
@@ -138,7 +138,7 @@ export class RecordedAudio {
     if(priority===3){this.cueDuckUntil=c.currentTime+.45;this.volumes();}
     const groupNodes = [...this.nodes].filter(n => n.group === group), limit = group === 'effects' ? 8 : 2;
     if (groupNodes.length >= limit){const victim=groupNodes.sort((a,b)=>a.priority-b.priority)[0];if(victim.priority>priority)return;this.stopNode(victim);}
-    const source = c.createBufferSource(), gain = c.createGain(); source.buffer = buffer; source.playbackRate.value = rate;
+    const source = c.createBufferSource(), gain = c.createGain(); source.buffer = buffer; source.playbackRate.value = manifest.records.some(r=>r.id===id&&r.file.startsWith('/audio-v11/'))?1:rate;
     gain.gain.value = volume; source.connect(gain); gain.connect(bus);
     const node: VoiceNode = {source, gain, group,priority}; this.nodes.add(node);
     source.onended = () => {this.nodes.delete(node); source.disconnect(); gain.disconnect();}; source.start();

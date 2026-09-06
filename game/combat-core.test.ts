@@ -77,8 +77,8 @@ describe('action scheduler', () => {
   });
   it('prevents tools and casts overwriting melee, and permits only recovery defense cancels', () => {
     const f = new Combatant('sasuke'); f.start(UNIVERSAL.light1, 0);
-    expect(f.start(UNIVERSAL.tool, 200)).toBe(false); expect(f.start(UNIVERSAL.dash, 279)).toBe(false);
-    expect(f.start(UNIVERSAL.dash, 280)).toBe(true);
+    expect(f.start(UNIVERSAL.tool, 200)).toBe(false); expect(f.start(UNIVERSAL.dash, UNIVERSAL.light1.cancelAt! - 1)).toBe(false);
+    expect(f.start(UNIVERSAL.dash, UNIVERSAL.light1.cancelAt!)).toBe(true);
   });
   it('buffers the next strike for 240 ms and does not turn holding melee into infinite combos', () => {
     const f = new Combatant('naruto'); f.bufferMelee(0); expect(f.consumeMelee(0)).toBe(true);

@@ -1,3 +1,21 @@
+# V11 validation — faster combat and signature barrages
+
+The V11 checks below supersede older revision results retained later in this file.
+
+- TypeScript, lint, production build and 126 automated tests cover defense timing, contact frames, movement, single-hit behavior, returning sword ownership, story progression, saved preferences, barrage schedules and transparent-asset metadata.
+- The full browser chapter completed all four fights through acknowledgment of the snowy ending using the development pilot's ordinary input actions, without resource overrides. The first complete pass finished with 30 HP and no retries, with 153 active combat seconds. A second confirmation run finished with 53 HP, no retries and 145 active combat seconds. The final movement-gap build also completed the acknowledged snowy ending: 38 HP, no retries, 148 active combat seconds, and no console errors.
+- Every original Scene Select entry initializes; debug use leaves the normal checkpoint unchanged. All four new barrage auditions ran. Auditions isolate the selected pattern between repeats.
+- Three repetitions of each pattern exercised left, right and central starting areas with ground movement only. Final spirit runs ended at 100 HP; floor eruptions and needle curtains at 100 HP; crossfire at 86 HP with a needle and red-lunge hit. The route harness used movement only; normal combat also provides ground dash and parry/block for the needles. Physical collision with the boss can limit movement to the far edge in the lakeside arena.
+- Hostile projectiles are capped at 48 and pooled for barrages. Completed auditions leave zero live projectiles. Emission cancellation, scene changes, retry and guard-break paths restore camera/gravity and dispose hazards. Repeated ordinary retries kept two fighters and 13 display objects.
+- Simulated controller confirmation, held-input quarantine, pause, fullscreen and resize pass. One desktop sample measured median 165 FPS, minimum 159 across 399 samples. Hardware controller testing remains unavailable.
+- Generated sword and hurt strips were compared with idle references. The art manifest contains 52 normalized reaction/sword frames, plus 34 barrage/casting frames. Body scaling is calibrated visually; exact 5% anatomical similarity is not certified. The weaponless Zabuza torso remains somewhat broader than the idle drawing.
+- 29 fresh primary effects use single recordings, including three punch, kick, swing, sword-swish and parry variants. Source/license/edit records are in `/audio-v11/manifest.json`. Decoded replacement peaks remain below -3 dBFS, with zero clipped samples. An actual 45.6-second browser mix capture across combat, Sharingan and mirror volleys peaked at -1.55 dBFS, RMS -24.69 dBFS, with no invalid samples. Subjective listening is not claimed; placeholder voices are muted by default.
+- The initial spirit ground-route test exposed crossing trajectories; trajectories were corrected to pass below ground before entering the reserved corridor and the three-run test then finished without damage. An earlier route harness died while ignoring ordinary attacks; isolated auditions were added so pattern practice is useful and repeatable.
+
+The production-format local smoke test passed all six public tools, four barrage auditions with replay/pause, seven sound previews, and original scene transitions, with no missing requests or console errors. Public deployment is checked after publication. Local raw test captures are excluded from the deployment.
+
+---
+
 # Returning sword, natural reactions, and cinematic polish - September 6, 2026
 
 ## V10 validation

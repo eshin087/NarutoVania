@@ -37,14 +37,14 @@ export const COMBAT = {
   stamina: 100, staminaRegen: 35, regenDelay: 650, parryWindow: 140, parryRearm: 300,
   parryRestore: 10, parryPosture: 23, guardBreak: 800, bossBreak: 1550, breakDamage: 1.6,
   chakraRegen: 1.8, chakraDelay: 1400, meleeChakra: 2, parryChakra: 4,
-  inputBuffer: 240, damageImmunity: 650, speed: 315, guardSpeed: 100,
+  inputBuffer: 240, damageImmunity: 650, speed: 378, guardSpeed: 100,
   jump: 840, gravity: 1800, coyote: 100, jumpBuffer: 130,
 } as const;
 export const clamp = (n: number, lo: number, hi: number) => Math.max(lo, Math.min(hi, n));
 export const defensive = (action: CombatAction) => ['dash', 'airdash', 'slide', 'substitute'].includes(action);
 const strike = (index: number): AttackDefinition => ({
   id: `light${index}`, action: `light${index}` as CombatAction, animation: `light${index}` as AnimationName,
-  duration: [0, 390, 425, 520][index], cancelAt: [0, 280, 310, 390][index],
+  duration: [0, 357, 391, 479][index], cancelAt: [0, 247, 276, 349][index],
   stamina: [0, 5, 6, 8][index], move: [0, 100, 125, 150][index],
   events: [{at: [0, 130, 150, 205][index], kind: 'effect', effect: 'swing'},
     {at: [0, 170, 195, 245][index], kind: 'hit', damage: [0, 24, 30, 42][index], posture: [0, 6, 8, 12][index], range: [0, 100, 122, 140][index], height: 100}],
@@ -53,7 +53,7 @@ export const UNIVERSAL: Record<string, AttackDefinition> = {
   light1: strike(1), light2: strike(2), light3: strike(3),
   heavy: {id: 'heavy', action: 'heavy', animation: 'heavy', duration: 770, cancelAt: 570, stamina: 18, move: 95,
     events: [{at: 270, kind: 'effect', effect: 'swing'}, {at: 355, kind: 'hit', damage: 62, posture: 25, range: 150, height: 115}]},
-  aerial: {id: 'aerial', action: 'aerial', animation: 'aerial', duration: 430, cancelAt: 300, stamina: 7, move: 55,
+  aerial: {id: 'aerial', action: 'aerial', animation: 'aerial', duration: 387, cancelAt: 257, stamina: 7, move: 55,
     events: [{at: 145, kind: 'hit', damage: 32, posture: 14, range: 125, height: 135}]},
   tool: {id: 'tool', action: 'tool', animation: 'cast', duration: 350, cancelAt: 255, stamina: 3, chakra: 4, cooldown: 390,
     events: [{at: 125, kind: 'projectile', damage: 16, posture: 4, speed: 770, effect: 'swing'}]},

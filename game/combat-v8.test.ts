@@ -17,9 +17,9 @@ describe('sword anticipation and parry rhythm',()=>{
  it('varies the three-hit string and distinguishes red overheads',()=>{
   const attack=ZABUZA_MOVES.find(m=>m.id==='sword-string')!;
   expect(attack.events.map(e=>swordPresentation(attack,e.at)?.row)).toEqual([0,1,3]);
-  expect(attack.events[0].at).toBeGreaterThanOrEqual(650);
+  expect(attack.events[0].at).toBeGreaterThanOrEqual(500);
   const red=ZABUZA_MOVES.find(m=>m.id==='delayed-cleave')!;
-  expect(swordPresentation(red,1000)).toMatchObject({row:2,red:true,frame:14});
+  expect(swordPresentation(red,red.events[0].at-1)).toMatchObject({row:2,red:true,frame:14});
  });
  it('rewards successive deliberate parries without prematurely cancelling the string',()=>{
   const boss=new Combatant('zabuza',1250,true),p=new Combatant('kakashi');boss.x=100;p.x=0;

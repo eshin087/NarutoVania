@@ -4,7 +4,11 @@ A desktop browser fan game built with TypeScript, React, Phaser 3.90.0, and the 
 
 ## Current presentation
 
-Zabuza throws a returning sword that threatens both passes; perfect parries return it harmlessly. New release, empty-handed wait, catch, restrained reactions, and contact-aligned ending animations use generated transparent artwork. Dialogue bubbles fit their text. Scene fades survive stage cleanup and panels fade before advancing. Four fights, current balance, and fast ultimate charging remain unchanged.
+Combat runs 20% faster, with shorter player recovery and boss downtime while preserving HP, damage, parry windows and ultimate charging. Zabuza alternates ten water-dragon spirits and floor eruptions; Haku uses needle curtains and mirror crossfire. Ground escape corridors are marked before volleys. Each barrage has a punish window and can be interrupted by a guard break.
+
+New sword windups/cuts, directional hurt strips and an eight-frame foaming water surge improve combat feedback. Zabuza's returning sword retains both damaging passes and a harmless parry return. The public Scene Select includes four isolated barrage auditions. Placeholder voices are muted once by default; later voice-volume choices persist. Frequent impacts and swings now use clean single-source recordings rather than processed layers.
+
+Four fights, manga panels, transitions, checkpoints and the snowy ending remain intact.
 
 ## Play
 

@@ -1,0 +1,1411 @@
+{
+  "wave": {
+    "file": "wave-v11.png",
+    "columns": 8,
+    "rows": 1,
+    "cellWidth": 640,
+    "cellHeight": 256,
+    "anchorX": 320,
+    "anchorY": 224,
+    "sourceToAtlasScale": 1.25,
+    "frames": [
+      {
+        "index": 0,
+        "rect": [
+          0,
+          0,
+          640,
+          256
+        ],
+        "anchor": [
+          320,
+          224
+        ],
+        "sourceCell": [
+          0,
+          0,
+          444,
+          444
+        ],
+        "sourceContentBounds": [
+          27,
+          342,
+          424,
+          376
+        ],
+        "contentBounds": [
+          69,
+          179,
+          571,
+          227
+        ],
+        "sourceAnchor": [
+          225.5,
+          376
+        ],
+        "scale": 1.25,
+        "durationMs": 70
+      },
+      {
+        "index": 1,
+        "rect": [
+          640,
+          0,
+          640,
+          256
+        ],
+        "anchor": [
+          320,
+          224
+        ],
+        "sourceCell": [
+          444,
+          0,
+          887,
+          444
+        ],
+        "sourceContentBounds": [
+          21,
+          297,
+          418,
+          376
+        ],
+        "contentBounds": [
+          69,
+          122,
+          572,
+          227
+        ],
+        "sourceAnchor": [
+          219.5,
+          376
+        ],
+        "scale": 1.25,
+        "durationMs": 80
+      },
+      {
+        "index": 2,
+        "rect": [
+          1280,
+          0,
+          640,
+          256
+        ],
+        "anchor": [
+          320,
+          224
+        ],
+        "sourceCell": [
+          887,
+          0,
+          1330,
+          444
+        ],
+        "sourceContentBounds": [
+          16,
+          285,
+          413,
+          376
+        ],
+        "contentBounds": [
+          69,
+          107,
+          571,
+          227
+        ],
+        "sourceAnchor": [
+          214.5,
+          376
+        ],
+        "scale": 1.25,
+        "durationMs": 90
+      },
+      {
+        "index": 3,
+        "rect": [
+          1920,
+          0,
+          640,
+          256
+        ],
+        "anchor": [
+          320,
+          224
+        ],
+        "sourceCell": [
+          1330,
+          0,
+          1774,
+          444
+        ],
+        "sourceContentBounds": [
+          10,
+          297,
+          408,
+          376
+        ],
+        "contentBounds": [
+          69,
+          122,
+          572,
+          227
+        ],
+        "sourceAnchor": [
+          209.0,
+          376
+        ],
+        "scale": 1.25,
+        "durationMs": 90
+      },
+      {
+        "index": 4,
+        "rect": [
+          2560,
+          0,
+          640,
+          256
+        ],
+        "anchor": [
+          320,
+          224
+        ],
+        "sourceCell": [
+          0,
+          444,
+          444,
+          887
+        ],
+        "sourceContentBounds": [
+          26,
+          225,
+          424,
+          302
+        ],
+        "contentBounds": [
+          69,
+          124,
+          572,
+          227
+        ],
+        "sourceAnchor": [
+          225.0,
+          302
+        ],
+        "scale": 1.25,
+        "durationMs": 90
+      },
+      {
+        "index": 5,
+        "rect": [
+          3200,
+          0,
+          640,
+          256
+        ],
+        "anchor": [
+          320,
+          224
+        ],
+        "sourceCell": [
+          444,
+          444,
+          887,
+          887
+        ],
+        "sourceContentBounds": [
+          21,
+          253,
+          418,
+          302
+        ],
+        "contentBounds": [
+          69,
+          159,
+          572,
+          227
+        ],
+        "sourceAnchor": [
+          219.5,
+          302
+        ],
+        "scale": 1.25,
+        "durationMs": 85
+      },
+      {
+        "index": 6,
+        "rect": [
+          3840,
+          0,
+          640,
+          256
+        ],
+        "anchor": [
+          320,
+          224
+        ],
+        "sourceCell": [
+          887,
+          444,
+          1330,
+          887
+        ],
+        "sourceContentBounds": [
+          16,
+          267,
+          413,
+          302
+        ],
+        "contentBounds": [
+          69,
+          177,
+          571,
+          227
+        ],
+        "sourceAnchor": [
+          214.5,
+          302
+        ],
+        "scale": 1.25,
+        "durationMs": 80
+      },
+      {
+        "index": 7,
+        "rect": [
+          4480,
+          0,
+          640,
+          256
+        ],
+        "anchor": [
+          320,
+          224
+        ],
+        "sourceCell": [
+          1330,
+          444,
+          1774,
+          887
+        ],
+        "sourceContentBounds": [
+          10,
+          276,
+          407,
+          302
+        ],
+        "contentBounds": [
+          69,
+          188,
+          571,
+          227
+        ],
+        "sourceAnchor": [
+          208.5,
+          302
+        ],
+        "scale": 1.25,
+        "durationMs": 110
+      }
+    ],
+    "facing": "right",
+    "loop": false,
+    "animation": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "widthHeightRatios": [
+      10.458333333333334,
+      4.79047619047619,
+      4.183333333333334,
+      4.79047619047619,
+      4.883495145631068,
+      7.397058823529412,
+      10.04,
+      12.871794871794872
+    ],
+    "suggestedRuntimeScale": 0.65,
+    "notes": "Wide low ground surge. Draw uniformly; do not stretch full padded frame height."
+  },
+  "dragon": {
+    "file": "dragon-v11.png",
+    "columns": 6,
+    "rows": 1,
+    "cellWidth": 640,
+    "cellHeight": 256,
+    "anchorX": 320,
+    "anchorY": 128,
+    "sourceToAtlasScale": 0.95,
+    "frames": [
+      {
+        "index": 0,
+        "rect": [
+          0,
+          0,
+          640,
+          256
+        ],
+        "anchor": [
+          320,
+          128
+        ],
+        "sourceCell": [
+          0,
+          0,
+          591,
+          444
+        ],
+        "sourceContentBounds": [
+          30,
+          150,
+          570,
+          290
+        ],
+        "contentBounds": [
+          61,
+          59,
+          578,
+          197
+        ],
+        "sourceAnchor": [
+          300.0,
+          220.0
+        ],
+        "scale": 0.95,
+        "durationMs": 85
+      },
+      {
+        "index": 1,
+        "rect": [
+          640,
+          0,
+          640,
+          256
+        ],
+        "anchor": [
+          320,
+          128
+        ],
+        "sourceCell": [
+          591,
+          0,
+          1183,
+          444
+        ],
+        "sourceContentBounds": [
+          32,
+          151,
+          568,
+          291
+        ],
+        "contentBounds": [
+          63,
+          59,
+          577,
+          197
+        ],
+        "sourceAnchor": [
+          300.0,
+          221.0
+        ],
+        "scale": 0.95,
+        "durationMs": 85
+      },
+      {
+        "index": 2,
+        "rect": [
+          1280,
+          0,
+          640,
+          256
+        ],
+        "anchor": [
+          320,
+          128
+        ],
+        "sourceCell": [
+          1183,
+          0,
+          1774,
+          444
+        ],
+        "sourceContentBounds": [
+          25,
+          161,
+          550,
+          295
+        ],
+        "contentBounds": [
+          68,
+          64,
+          571,
+          194
+        ],
+        "sourceAnchor": [
+          287.5,
+          228.0
+        ],
+        "scale": 0.95,
+        "durationMs": 85
+      },
+      {
+        "index": 3,
+        "rect": [
+          1920,
+          0,
+          640,
+          256
+        ],
+        "anchor": [
+          320,
+          128
+        ],
+        "sourceCell": [
+          0,
+          444,
+          591,
+          887
+        ],
+        "sourceContentBounds": [
+          30,
+          136,
+          570,
+          278
+        ],
+        "contentBounds": [
+          61,
+          58,
+          578,
+          198
+        ],
+        "sourceAnchor": [
+          300.0,
+          207.0
+        ],
+        "scale": 0.95,
+        "durationMs": 85
+      },
+      {
+        "index": 4,
+        "rect": [
+          2560,
+          0,
+          640,
+          256
+        ],
+        "anchor": [
+          320,
+          128
+        ],
+        "sourceCell": [
+          591,
+          444,
+          1183,
+          887
+        ],
+        "sourceContentBounds": [
+          32,
+          143,
+          567,
+          281
+        ],
+        "contentBounds": [
+          63,
+          61,
+          576,
+          195
+        ],
+        "sourceAnchor": [
+          299.5,
+          212.0
+        ],
+        "scale": 0.95,
+        "durationMs": 85
+      },
+      {
+        "index": 5,
+        "rect": [
+          3200,
+          0,
+          640,
+          256
+        ],
+        "anchor": [
+          320,
+          128
+        ],
+        "sourceCell": [
+          1183,
+          444,
+          1774,
+          887
+        ],
+        "sourceContentBounds": [
+          25,
+          144,
+          558,
+          281
+        ],
+        "contentBounds": [
+          64,
+          60,
+          575,
+          194
+        ],
+        "sourceAnchor": [
+          291.5,
+          212.5
+        ],
+        "scale": 0.95,
+        "durationMs": 85
+      }
+    ],
+    "facing": "right",
+    "loop": true,
+    "animation": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "eruption": {
+    "file": "eruption-v11.png",
+    "columns": 6,
+    "rows": 1,
+    "cellWidth": 384,
+    "cellHeight": 512,
+    "anchorX": 192,
+    "anchorY": 480,
+    "sourceToAtlasScale": 0.78,
+    "frames": [
+      {
+        "index": 0,
+        "rect": [
+          0,
+          0,
+          384,
+          512
+        ],
+        "anchor": [
+          192,
+          480
+        ],
+        "sourceCell": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "sourceContentBounds": [
+          84,
+          363,
+          438,
+          474
+        ],
+        "contentBounds": [
+          51,
+          390,
+          332,
+          482
+        ],
+        "sourceAnchor": [
+          261.0,
+          474
+        ],
+        "scale": 0.78,
+        "durationMs": 85
+      },
+      {
+        "index": 1,
+        "rect": [
+          384,
+          0,
+          384,
+          512
+        ],
+        "anchor": [
+          192,
+          480
+        ],
+        "sourceCell": [
+          512,
+          0,
+          1024,
+          512
+        ],
+        "sourceContentBounds": [
+          84,
+          173,
+          413,
+          473
+        ],
+        "contentBounds": [
+          61,
+          242,
+          322,
+          481
+        ],
+        "sourceAnchor": [
+          248.5,
+          474
+        ],
+        "scale": 0.78,
+        "durationMs": 85
+      },
+      {
+        "index": 2,
+        "rect": [
+          768,
+          0,
+          384,
+          512
+        ],
+        "anchor": [
+          192,
+          480
+        ],
+        "sourceCell": [
+          1024,
+          0,
+          1536,
+          512
+        ],
+        "sourceContentBounds": [
+          61,
+          79,
+          392,
+          473
+        ],
+        "contentBounds": [
+          60,
+          169,
+          323,
+          481
+        ],
+        "sourceAnchor": [
+          226.5,
+          474
+        ],
+        "scale": 0.78,
+        "durationMs": 85
+      },
+      {
+        "index": 3,
+        "rect": [
+          1152,
+          0,
+          384,
+          512
+        ],
+        "anchor": [
+          192,
+          480
+        ],
+        "sourceCell": [
+          0,
+          512,
+          512,
+          1024
+        ],
+        "sourceContentBounds": [
+          94,
+          40,
+          452,
+          460
+        ],
+        "contentBounds": [
+          50,
+          149,
+          334,
+          481
+        ],
+        "sourceAnchor": [
+          273.0,
+          462
+        ],
+        "scale": 0.78,
+        "durationMs": 85
+      },
+      {
+        "index": 4,
+        "rect": [
+          1536,
+          0,
+          384,
+          512
+        ],
+        "anchor": [
+          192,
+          480
+        ],
+        "sourceCell": [
+          512,
+          512,
+          1024,
+          1024
+        ],
+        "sourceContentBounds": [
+          72,
+          29,
+          415,
+          462
+        ],
+        "contentBounds": [
+          56,
+          140,
+          328,
+          482
+        ],
+        "sourceAnchor": [
+          243.5,
+          462
+        ],
+        "scale": 0.78,
+        "durationMs": 85
+      },
+      {
+        "index": 5,
+        "rect": [
+          1920,
+          0,
+          384,
+          512
+        ],
+        "anchor": [
+          192,
+          480
+        ],
+        "sourceCell": [
+          1024,
+          512,
+          1536,
+          1024
+        ],
+        "sourceContentBounds": [
+          47,
+          323,
+          405,
+          462
+        ],
+        "contentBounds": [
+          50,
+          369,
+          334,
+          482
+        ],
+        "sourceAnchor": [
+          226.0,
+          462
+        ],
+        "scale": 0.78,
+        "durationMs": 85
+      }
+    ],
+    "facing": "right",
+    "loop": false,
+    "animation": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "ice": {
+    "file": "ice-v11.png",
+    "columns": 8,
+    "rows": 1,
+    "cellWidth": 512,
+    "cellHeight": 384,
+    "anchorX": 256,
+    "anchorY": 192,
+    "sourceToAtlasScale": 1.1,
+    "frames": [
+      {
+        "index": 0,
+        "rect": [
+          0,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          192
+        ],
+        "sourceCell": [
+          0,
+          0,
+          362,
+          543
+        ],
+        "sourceContentBounds": [
+          81,
+          204,
+          284,
+          365
+        ],
+        "contentBounds": [
+          141,
+          101,
+          370,
+          283
+        ],
+        "sourceAnchor": [
+          182.5,
+          284.5
+        ],
+        "scale": 1.1,
+        "durationMs": 85
+      },
+      {
+        "index": 1,
+        "rect": [
+          512,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          192
+        ],
+        "sourceCell": [
+          362,
+          0,
+          724,
+          543
+        ],
+        "sourceContentBounds": [
+          27,
+          211,
+          299,
+          385
+        ],
+        "contentBounds": [
+          104,
+          93,
+          408,
+          290
+        ],
+        "sourceAnchor": [
+          163.0,
+          298.0
+        ],
+        "scale": 1.1,
+        "durationMs": 85
+      },
+      {
+        "index": 2,
+        "rect": [
+          1024,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          192
+        ],
+        "sourceCell": [
+          724,
+          0,
+          1086,
+          543
+        ],
+        "sourceContentBounds": [
+          29,
+          195,
+          315,
+          402
+        ],
+        "contentBounds": [
+          96,
+          76,
+          416,
+          309
+        ],
+        "sourceAnchor": [
+          172.0,
+          298.5
+        ],
+        "scale": 1.1,
+        "durationMs": 85
+      },
+      {
+        "index": 3,
+        "rect": [
+          1536,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          192
+        ],
+        "sourceCell": [
+          1086,
+          0,
+          1448,
+          543
+        ],
+        "sourceContentBounds": [
+          28,
+          205,
+          311,
+          398
+        ],
+        "contentBounds": [
+          98,
+          83,
+          415,
+          300
+        ],
+        "sourceAnchor": [
+          169.5,
+          301.5
+        ],
+        "scale": 1.1,
+        "durationMs": 85
+      },
+      {
+        "index": 4,
+        "rect": [
+          2048,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          192
+        ],
+        "sourceCell": [
+          0,
+          543,
+          362,
+          1086
+        ],
+        "sourceContentBounds": [
+          74,
+          161,
+          222,
+          295
+        ],
+        "contentBounds": [
+          172,
+          115,
+          340,
+          268
+        ],
+        "sourceAnchor": [
+          148.0,
+          228.0
+        ],
+        "scale": 1.1,
+        "durationMs": 85
+      },
+      {
+        "index": 5,
+        "rect": [
+          2560,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          192
+        ],
+        "sourceCell": [
+          362,
+          543,
+          724,
+          1086
+        ],
+        "sourceContentBounds": [
+          20,
+          121,
+          268,
+          340
+        ],
+        "contentBounds": [
+          117,
+          68,
+          395,
+          314
+        ],
+        "sourceAnchor": [
+          144.0,
+          230.5
+        ],
+        "scale": 1.1,
+        "durationMs": 85
+      },
+      {
+        "index": 6,
+        "rect": [
+          3072,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          192
+        ],
+        "sourceCell": [
+          724,
+          543,
+          1086,
+          1086
+        ],
+        "sourceContentBounds": [
+          7,
+          112,
+          300,
+          349
+        ],
+        "contentBounds": [
+          92,
+          60,
+          419,
+          324
+        ],
+        "sourceAnchor": [
+          153.5,
+          230.5
+        ],
+        "scale": 1.1,
+        "durationMs": 85
+      },
+      {
+        "index": 7,
+        "rect": [
+          3584,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          192
+        ],
+        "sourceCell": [
+          1086,
+          543,
+          1448,
+          1086
+        ],
+        "sourceContentBounds": [
+          70,
+          128,
+          286,
+          336
+        ],
+        "contentBounds": [
+          134,
+          75,
+          377,
+          309
+        ],
+        "sourceAnchor": [
+          178.0,
+          232.0
+        ],
+        "scale": 1.1,
+        "durationMs": 85
+      }
+    ],
+    "facing": "right",
+    "loop": false,
+    "animation": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "animations": {
+      "barrage": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "impact": [
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  },
+  "zabuza": {
+    "file": "zabuza-v11.png",
+    "columns": 6,
+    "rows": 1,
+    "cellWidth": 512,
+    "cellHeight": 384,
+    "anchorX": 256,
+    "anchorY": 320,
+    "sourceToAtlasScale": 0.6,
+    "frames": [
+      {
+        "index": 0,
+        "rect": [
+          0,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceCell": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "sourceContentBounds": [
+          89,
+          220,
+          350,
+          459
+        ],
+        "contentBounds": [
+          137,
+          174,
+          298,
+          323
+        ],
+        "sourceAnchor": [
+          284,
+          459
+        ],
+        "scale": 0.6,
+        "durationMs": 95
+      },
+      {
+        "index": 1,
+        "rect": [
+          512,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceCell": [
+          512,
+          0,
+          1024,
+          512
+        ],
+        "sourceContentBounds": [
+          92,
+          60,
+          307,
+          367
+        ],
+        "contentBounds": [
+          137,
+          79,
+          271,
+          268
+        ],
+        "sourceAnchor": [
+          286,
+          459
+        ],
+        "scale": 0.6,
+        "durationMs": 90
+      },
+      {
+        "index": 2,
+        "rect": [
+          1024,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceCell": [
+          1024,
+          0,
+          1536,
+          512
+        ],
+        "sourceContentBounds": [
+          27,
+          146,
+          466,
+          421
+        ],
+        "contentBounds": [
+          111,
+          130,
+          379,
+          300
+        ],
+        "sourceAnchor": [
+          265,
+          459
+        ],
+        "scale": 0.6,
+        "durationMs": 110
+      },
+      {
+        "index": 3,
+        "rect": [
+          1536,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceCell": [
+          0,
+          512,
+          512,
+          1024
+        ],
+        "sourceContentBounds": [
+          97,
+          104,
+          449,
+          385
+        ],
+        "contentBounds": [
+          150,
+          114,
+          366,
+          287
+        ],
+        "sourceAnchor": [
+          270,
+          444
+        ],
+        "scale": 0.6,
+        "durationMs": 95
+      },
+      {
+        "index": 4,
+        "rect": [
+          2048,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceCell": [
+          512,
+          512,
+          1024,
+          1024
+        ],
+        "sourceContentBounds": [
+          80,
+          236,
+          374,
+          439
+        ],
+        "contentBounds": [
+          129,
+          193,
+          311,
+          320
+        ],
+        "sourceAnchor": [
+          286,
+          444
+        ],
+        "scale": 0.6,
+        "durationMs": 100
+      },
+      {
+        "index": 5,
+        "rect": [
+          2560,
+          0,
+          512,
+          384
+        ],
+        "anchor": [
+          256,
+          320
+        ],
+        "sourceCell": [
+          1024,
+          512,
+          1536,
+          1024
+        ],
+        "sourceContentBounds": [
+          70,
+          105,
+          267,
+          444
+        ],
+        "contentBounds": [
+          137,
+          114,
+          260,
+          323
+        ],
+        "sourceAnchor": [
+          265,
+          444
+        ],
+        "scale": 0.6,
+        "durationMs": 180
+      }
+    ],
+    "facing": "right",
+    "loop": false,
+    "animation": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "pixelsToLogicalBody": 0.004739336492890996,
+    "referenceBodyHeight": 211,
+    "scaleBasis": "Head/chin, shoulder-waist and limb matching. Pose height and sword excluded.",
+    "phases": [
+      "prepare",
+      "jump",
+      "cast",
+      "descend",
+      "land",
+      "recover"
+    ]
+  }
+}

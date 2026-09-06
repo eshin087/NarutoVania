@@ -16,7 +16,7 @@ const initial: Snapshot = {debugEntry:null,panelWaiting:false,canAdvance:false,s
   guardBroken: false, guarding: false, checkpoint: 'mist', stage: PHASES.mist.title, objective: '', phaseProgress: 0, abilities: [],
   subCooldown: 0, cloneCount: 0, elapsed: 0, phaseElapsed: 0, device: 'keyboard', boss: null, protection: null, retries: 0,
   parries: 0, error: '', fps: 60, cinematic: '', seen: [], stunned:false,recovery:0,ultimateCinematic:'',reading:0,counter:false};
-const defaults: Settings = {muted: false, reducedShake: false, musicVolume: .55, effectsVolume: .8, voiceVolume: .7};
+const defaults: Settings = {muted: false, reducedShake: false, musicVolume: .55, effectsVolume: .8, voiceVolume: 0};
 let snapshot = {...initial}, settings = {...defaults};
 let normalCheckpoint:Pick<Snapshot,'checkpoint'|'seen'|'elapsed'|'parries'|'retries'>|null=null;
 const listeners = new Set<() => void>(); let handler: (command: Command) => void = () => {};
@@ -40,6 +40,7 @@ export const bossBridge = {
   setSettings: (patch: Partial<Settings>) => {settings = readSettings({...settings, ...patch}); try {localStorage.setItem('narutovania.settings.v2', JSON.stringify(settings));} catch {} emit();},
   load: () => {
     try {settings = readSettings(JSON.parse(localStorage.getItem('narutovania.settings.v2') || localStorage.getItem('narutovania.settings.v1') || '{}'));} catch {settings = {...defaults};}
+    try {if(localStorage.getItem('narutovania.audio.v11')!=='1'){settings={...settings,voiceVolume:0};localStorage.setItem('narutovania.settings.v2',JSON.stringify(settings));localStorage.setItem('narutovania.audio.v11','1');}}catch{}
     try {const cp = readCheckpoint(JSON.parse(localStorage.getItem('narutovania.checkpoint.v2') || '{}')); snapshot = {...snapshot, checkpoint: cp.phase, seen: cp.seen};} catch {}
   },
   beginDebug:(entry:string)=>{if(!snapshot.debugEntry)normalCheckpoint={checkpoint:snapshot.checkpoint,seen:[...snapshot.seen],elapsed:snapshot.elapsed,parries:snapshot.parries,retries:snapshot.retries};bossBridge.patch({debugEntry:entry});},

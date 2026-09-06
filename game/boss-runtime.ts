@@ -1,3 +1,4 @@
+import type {BarrageId} from './barrages';
 import {DEBUG_ENTRIES,type StorySceneId} from './scene-catalog';
 import * as Phaser from 'phaser';
 import {bossBridge as bridge, type Command} from './boss-bridge';
@@ -43,22 +44,22 @@ export function mountBossGame(parent: HTMLElement) {
     physics: {default: 'arcade', arcade: {gravity: {x: 0, y: 1800}, debug: false}},
     scene: [new LoadingScene(), new TitleScene(), new BossGameScene(), new HudScene(inputs, sounds), new ResultsScene()],
     audio: {noAudio: true}, callbacks: {postBoot: g => {g.canvas.tabIndex = 0; g.canvas.setAttribute('aria-label', 'Naruto story boss rush game canvas');}}});
-  const play = (phase: StoryPhaseId, retry = false, sceneId?:StorySceneId) => {
+  const play = (phase: StoryPhaseId, retry = false, sceneId?:StorySceneId,barrageId?:BarrageId) => {
     void sounds.unlock(); sounds.reset(); if(bridge.get().debugEntry)bridge.checkpoint(phase);const snapshot = bridge.get(); inputs.clear();
     game.scene.stop('Title'); game.scene.stop('BossGameplay'); game.scene.stop('Results');
-    game.scene.start('BossGameplay', {checkpoint: phase,sceneId, inputs, soundscape: sounds, elapsed: retry ? snapshot.elapsed : 0,
+    game.scene.start('BossGameplay', {checkpoint: phase,sceneId,barrageId, inputs, soundscape: sounds, elapsed: retry ? snapshot.elapsed : 0,
       retries: retry ? snapshot.retries + 1 : 0, parries: retry ? snapshot.parries : 0, viewIntro: !snapshot.debugEntry&&!snapshot.seen.includes(phase)});
   };
   bridge.handle((command: Command) => {
     if(typeof command==='object'){
       if(command.type==='audition'){void sounds.audition(command.id);return;}
-      const entry=DEBUG_ENTRIES.find(e=>e.id===command.entry);if(!entry)return;bridge.beginDebug(entry.id);play(entry.phase,false,entry.scene);return;
+      const entry=DEBUG_ENTRIES.find(e=>e.id===command.entry);if(!entry)return;bridge.beginDebug(entry.id);play(entry.phase,false,entry.scene,entry.barrage);return;
     }
-    if(command==='debug-replay'){const entry=DEBUG_ENTRIES.find(e=>e.id===bridge.get().debugEntry);if(entry)play(entry.phase,false,entry.scene);return;}
+    if(command==='debug-replay'){const entry=DEBUG_ENTRIES.find(e=>e.id===bridge.get().debugEntry);if(entry)play(entry.phase,false,entry.scene,entry.barrage);return;}
     if(command==='debug-exit'){bridge.endDebug();inputs.clear();sounds.stopEffects();game.scene.stop('BossGameplay');game.scene.start('Title');return;}
     if (command === 'start') {bridge.newRun(); play('mist');}
     else if (command === 'continue') play(bridge.get().checkpoint);
-    else if (command === 'retry') play(bridge.get().checkpoint, true);
+    else if (command === 'retry') {const entry=DEBUG_ENTRIES.find(e=>e.id===bridge.get().debugEntry);play(bridge.get().checkpoint,true,entry?.scene,entry?.barrage);}
     else if (command === 'title') {bridge.endDebug();inputs.clear(); sounds.sync(false); game.scene.stop('BossGameplay'); game.scene.stop('Results'); game.scene.start('Title');}
     else (game.scene.getScene('BossGameplay') as BossGameScene)?.command(command);
   });

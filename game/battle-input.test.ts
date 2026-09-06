@@ -47,8 +47,8 @@ describe('controller parity and lifecycle', () => {
 });
 describe('save migration', () => {
   it('preserves old sound/shake preferences and gives the three buses valid defaults', () => {
-    expect(readSettings({muted: true, reducedShake: true})).toMatchObject({muted: true, reducedShake: true, musicVolume: .55, effectsVolume: .8, voiceVolume: .7});
-    expect(readSettings({musicVolume: -5, effectsVolume: 20, voiceVolume: NaN})).toMatchObject({musicVolume: 0, effectsVolume: 1, voiceVolume: .7});
+    expect(readSettings({muted: true, reducedShake: true})).toMatchObject({muted: true, reducedShake: true, musicVolume: .55, effectsVolume: .8, voiceVolume: 0});
+    expect(readSettings({musicVolume: -5, effectsVolume: 20, voiceVolume: NaN})).toMatchObject({musicVolume: 0, effectsVolume: 1, voiceVolume: 0});
   });
   it('starts legacy platformer saves at the chapter opening', () => {
     expect(readCheckpoint('haku')).toEqual({phase: 'mist', seen: []}); expect(readCheckpoint({phase: 'haku', version: 1})).toEqual({phase: 'mist', seen: []});
