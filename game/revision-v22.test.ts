@@ -1,0 +1,11 @@
+import {describe,it,expect} from 'vitest';
+import {MirrorDeflections,OwnedEffects} from './presentation-lifecycle';
+import {TargetedCinemaShot} from './cinematic-motion';
+import manifest from '../public/art-v22/manifest.json';
+
+describe('V22 mirror returns and generated presentation',()=>{
+ it('counts a simultaneous three-origin volley once, then knocks down on a second volley',()=>{const c=new MirrorDeflections(),g=c.generation;const first=Array.from({length:6},()=>c.contact(g,'special:1'));expect(first.filter(r=>r.credited)).toHaveLength(1);expect(first.every(r=>!r.knockdown)).toBe(true);expect(c.contact(g,'special:2')).toEqual({credited:true,knockdown:true});c.reset();expect(c.contact(g,'special:3').credited).toBe(false);});
+ it('holds a straight cinematic shuriken at contact without another hit or continued rotation',()=>{const shot=new TargetedCinemaShot(1240,510,1030,510,940,false);let hits=0;for(let i=0;i<90;i++){if(shot.tick(16))hits++;expect(shot.y).toBe(510);expect(shot.x).toBeGreaterThanOrEqual(1030);}expect(hits).toBe(1);expect(shot.x).toBe(1030);expect(shot.done).toBe(true);const angle=shot.rotation;shot.tick(500);expect(shot.rotation).toBe(angle);});
+ it('releases every owned effect after repeated water-hit updates and scene cleanup',()=>{const disposed=new Set<number>();let next=0;const pool=new OwnedEffects<{id:number;end:number}>(38,e=>{expect(disposed.has(e.id)).toBe(false);disposed.add(e.id);});for(let time=0;time<100;time++){pool.add({id:next++,end:time+3});pool.update(e=>{if(e.end===time+1)pool.add({id:next++,end:time+4});return time<e.end;});expect(pool.items.length).toBeLessThanOrEqual(38);}pool.clear();expect(pool.items).toHaveLength(0);expect(disposed.size).toBe(next);});
+ it('keeps whole bodies padded, with a fixed scale through each pose sequence',()=>{for(const asset of Object.values(manifest.assets)){for(const f of asset.frames){const[l,t,r,b]=f.contentBounds;expect(l).toBeGreaterThan(2);expect(t).toBeGreaterThan(2);expect(r).toBeLessThan(f.rect[2]-2);expect(b).toBeLessThan(f.rect[3]-2);expect(f.root[1]).toBeLessThan(f.rect[3]);}for(let row=0;row<asset.rows;row++)expect(new Set(asset.frames.filter(f=>f.row===row).map(f=>f.scale)).size).toBe(1);}expect(manifest.bodyReferences.zabuza).toBe(167);expect(manifest.bodyReferences.kakashi).toBe(157);});
+});

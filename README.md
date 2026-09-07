@@ -30,7 +30,9 @@ The client-only production site is exported to `dist/client`. It needs no databa
 
 A/D or arrows move; Space jumps; J performs a stationary three-hit melee combo; down + hold J charges a heavy attack. K throws a tool, Shift dashes, F parries/blocks, Q/E use techniques, L substitutes, and R uses the ultimate. Escape pauses. Controller controls and character techniques are listed in the in-game menu.
 
-The public Scene Select provides fight and cutscene previews without replacing normal saved progress. Settings and checkpoints are browser-local. Developer input-pilot controls are excluded from production.
+Perfect-parried mirror needles return to the real Haku. Two distinct returned volleys force him out; melee, guard breaks, and ultimates remain alternatives.
+
+The public Scene Select provides fight, cutscene, mirror-deflection, Sharingan, hound, Fireball, and chakra previews without replacing normal saved progress. Settings and checkpoints are browser-local. Developer input-pilot controls are excluded from production.
 
 ## Assets and licenses
 

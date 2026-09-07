@@ -1,0 +1,348 @@
+{
+  "mode": "built-in image_gen",
+  "selected": "C:/Users/eshin/.codex/generated_images/01a07d80-3837-74f1-9aa6-c56196968519/exec-c45294a4-2b30-4492-b8aa-4a99af077fef.png",
+  "discardedFirst": "C:/Users/eshin/.codex/generated_images/01a07d80-3837-74f1-9aa6-c56196968519/exec-411e39da-c5f1-4835-83b5-b98de04c669b.png",
+  "prompts": {
+    "selected": "Eight SMALL red-orange Naruto Nine-Tails CHAKRA CLOAK animation sprites on a genuine transparent PNG. EXACT4columns x2rows,1024x512canvas. Eachcell256x256. MASSIVE EMPTY TRANSPARENT SPACE around each sprite: each entire effect ONLY120pixels wide and140pixels tall, centered horizontally with its bottom at localy208. Leave at least60pixels completely blank between the artwork and eachcell's side. All8sprites are deliberately small, never filling their cells.\nShape/style: hand-inked original Naruto anime fire, dark crimson outlines, flat red/orange/gold cel planes. UPRIGHT flowing chakra cloak with2–3 distinct long pointed fox-tail silhouettes rising from LOW ROOTS at the bottom. Like two flaring tongues of a bonfire behind a standing ninja, with additional slender tail tongue, asymmetrical upward fan. The center is a clean EMPTY VERTICAL SLOT OPEN ALL THE WAY TO THE TOP, where a separate Naruto sprite stands. ONLY flame aura and tails, no person, animal body, head, eyes or face.\nMANDATORY: no circle, ring, pinwheel, vortex, rotating wheel, circular swirl, closed top arch, enclosing halo or radial symmetry. Nothing rotates around the central slot. The whole effect rises UPWARD from a steady low base. Each of the2or3tails is a separate pointed sinuous flame-tail shape attached to a low root, full uncut silhouette.\n8frames in readingorder:\n0 two small LOW wisps form near ground.\n1 upward tails grow.\n2 full upright flame cloak with2–3tails, poseA.\n3 same size full upright cloak, tails flowing slightly, poseB.\n4 same size full upright cloak, tails flowing slightly, poseC.\n5 same size full upright cloak, tails flowing slightly, poseD.\n6 tails flare outward in a SMALL CONTAINED upward burst, same lowrootanchor, no radial starburst.\n7 low wisps fade.\nAll frames share exact same bottomanchor. Fixed size for full flowframes2–5. Central body slot empty in EVERY frame. Show distinct gentle tail-flow changes, retain silhouette continuity.\nNo detached particles: integrate all flame tips into the complete main silhouettes so cropping is clean. Huge blank gutters. No silhouette crossing a cell boundary. No backdrop color, haze, floor, shadow, text, numbers, checkerboard, grid or border. TRUE alpha-zero transparency outside the flame silhouettes and inside the central body slot. EXACT8small isolated sprites in4x2layout.",
+    "first": "Use case: stylized-concept.\nCreate an anime action game SPECIAL-EFFECT SPRITE ATLAS only: 8 animation frames in EXACTLY4columns x2rows,1024x512px PNG with genuine transparent alpha. Conceptual cells256x256; frameorder left-to-right across top row then left-to-right across bottom row.\nSUBJECT: original-series Naruto fiery red-orange Nine-Tails chakra CLOAK AURA with TWO OR THREE DISTINCT FOX TAILS, to be layered BEHIND a separate125px tall Naruto sprite. No person or fox body is drawn. The effect is an UPRIGHT GROUNDED SILHOUETTE: broad flame tongues flare upward from a low base and 2–3 long sinuous pointed fox-tail shapes rise or flow to the sides from the SAME LOW ROOT. The tails read clearly as elongated fox tails, with broad tapering silhouettes, dark crimson outline, red-orange inner cel planes, a few golden inner accents. Hand-inked sharp anime flame design matching original Naruto cel animation, limited flat cel shading, no photoreal gradients.\nCRITICAL SHAPE: Think rising bonfire cloak with elegant fox tails anchored at its feet, a spread fan silhouette. NOT a ring. NOT a circle. NOT a pinwheel. NOT a spiral wheel. NOT a vortex. No radial symmetry. No round portal. No enclosing top arch. Nothing rotates around a center. All flames have upward motion from below, and all tails have roots at the bottom. Keep the central vertical BODY SLOT transparent and visibly OPEN TO THE TOP: at least65px wide by150px tall where the separate character will stand. The flame tongues/tails appear behind and to the sides of this open body slot, rising140–180px tall. The widest effect is180px, entire silhouette inside central200x200safearea. The bottom root/ground anchor of every frame stays at exactly localcell(x128,y218).\nANIMATION:\nFrame0(top left): two small crimson chakra wisps ignite low on either side of the transparent standing-body slot, rooted at bottomcenter.\nFrame1: upright cloak-flames grow on both sides; two long recognizable tapered fox tails begin rising from bottom.\nFrame2: full cloak aura with THREE broad distinct flowing tails, one sweeps highLEFT, one risesLEFT near the body, one sweeps highRIGHT; irregular flame tongues flick upward. Clear open vertical body slot.\nFrame3: same full-size aura, same anchoredbase, tails gently undulate and change their curved tips while retaining overall proportions. No rotation.\nFrame4: another full aura flowframe, tails flex slightly and upright flame tongues flicker. Fixed base, open body slot.\nFrame5: fourth full aura flowframe, distinct slight tail movement with the same scale and fixed lower roots.\nFrame6: grounded outward chakra burst, longtails flare outward and upward with sharp tapered flame tips, every tail complete and still connected to low root, body slot remains empty.\nFrame7: dissipating low red wisps and two thin fading upward tail remnants; bottom anchor unchanged.\nKeep every flame tip, tail and particle at least24px INSIDE eachcell boundary, ample transparent separation between frames. Do not crop any silhouette. All8effects share the SAME groundanchor. Preserve the changing growth/intensity fromform throughflow andfade; don't make8identical effects.\nTransparent alpha-zero space everywhere outside flames and throughout the open body slot. No colored backdrop, checkerboard, shadow, ground, text, numbering, grid, borders, characters, face, eyes, foxhead, foxbody, circles, ring, pinwheel or swirl-wheel. EXACT4x2grid,8isolated chakra-only animationframes."
+  },
+  "actualDimensions": [
+    1774,
+    887
+  ],
+  "intendedLayout": "4 columns by 2 rows;8frames in readingorder",
+  "safeSourceCropRows": {
+    "row0": {
+      "y": [
+        0,
+        444
+      ],
+      "xEdges": [
+        0,
+        444,
+        887,
+        1330,
+        1774
+      ]
+    },
+    "row1": {
+      "y": [
+        444,
+        887
+      ],
+      "xEdges": [
+        0,
+        444,
+        850,
+        1330,
+        1774
+      ]
+    }
+  },
+  "sourceAnchors": {
+    "globalXByColumn": [
+      221.75,
+      665.25,
+      1108.75,
+      1552.25
+    ],
+    "globalBottomYByRow": [
+      394,
+      838
+    ]
+  },
+  "suggestedImport": {
+    "targetCell": [
+      256,
+      256
+    ],
+    "targetAnchor": [
+      128,
+      218
+    ],
+    "uniformSourceScale": 0.45,
+    "preserveSameScaleAcrossAll8Frames": true
+  },
+  "sequence": [
+    "low wisps form",
+    "tails grow",
+    "full upward cloak flowA",
+    "full upward cloak flowB",
+    "full upward cloak flowC",
+    "full upward cloak flowD",
+    "outward and upward contained burst",
+    "low wisps fade"
+  ],
+  "alpha": {
+    "mode": "RGBA",
+    "zeroFraction": 0.7671756258825653,
+    "below16Fraction": 0.8374866066151564
+  },
+  "safeFrameInspection": [
+    {
+      "frame": 0,
+      "crop": [
+        0,
+        0,
+        444,
+        444
+      ],
+      "bbox_a32_local": [
+        107,
+        280,
+        340,
+        394
+      ],
+      "bbox_a32_global": [
+        107,
+        280,
+        340,
+        394
+      ],
+      "margins": [
+        107,
+        280,
+        104,
+        50
+      ],
+      "source_anchor_global": [
+        221.75,
+        394
+      ]
+    },
+    {
+      "frame": 1,
+      "crop": [
+        444,
+        0,
+        887,
+        444
+      ],
+      "bbox_a32_local": [
+        87,
+        147,
+        336,
+        395
+      ],
+      "bbox_a32_global": [
+        531,
+        147,
+        780,
+        395
+      ],
+      "margins": [
+        87,
+        147,
+        107,
+        49
+      ],
+      "source_anchor_global": [
+        665.25,
+        394
+      ]
+    },
+    {
+      "frame": 2,
+      "crop": [
+        887,
+        0,
+        1330,
+        444
+      ],
+      "bbox_a32_local": [
+        61,
+        26,
+        366,
+        394
+      ],
+      "bbox_a32_global": [
+        948,
+        26,
+        1253,
+        394
+      ],
+      "margins": [
+        61,
+        26,
+        77,
+        50
+      ],
+      "source_anchor_global": [
+        1108.75,
+        394
+      ]
+    },
+    {
+      "frame": 3,
+      "crop": [
+        1330,
+        0,
+        1774,
+        444
+      ],
+      "bbox_a32_local": [
+        69,
+        45,
+        370,
+        394
+      ],
+      "bbox_a32_global": [
+        1399,
+        45,
+        1700,
+        394
+      ],
+      "margins": [
+        69,
+        45,
+        74,
+        50
+      ],
+      "source_anchor_global": [
+        1552.25,
+        394
+      ]
+    },
+    {
+      "frame": 4,
+      "crop": [
+        0,
+        444,
+        444,
+        887
+      ],
+      "bbox_a32_local": [
+        65,
+        38,
+        373,
+        394
+      ],
+      "bbox_a32_global": [
+        65,
+        482,
+        373,
+        838
+      ],
+      "margins": [
+        65,
+        38,
+        71,
+        49
+      ],
+      "source_anchor_global": [
+        221.75,
+        838
+      ]
+    },
+    {
+      "frame": 5,
+      "crop": [
+        444,
+        444,
+        850,
+        887
+      ],
+      "bbox_a32_local": [
+        68,
+        19,
+        366,
+        394
+      ],
+      "bbox_a32_global": [
+        512,
+        463,
+        810,
+        838
+      ],
+      "margins": [
+        68,
+        19,
+        40,
+        49
+      ],
+      "source_anchor_global": [
+        665.25,
+        838
+      ]
+    },
+    {
+      "frame": 6,
+      "crop": [
+        850,
+        444,
+        1330,
+        887
+      ],
+      "bbox_a32_local": [
+        30,
+        86,
+        448,
+        394
+      ],
+      "bbox_a32_global": [
+        880,
+        530,
+        1298,
+        838
+      ],
+      "margins": [
+        30,
+        86,
+        32,
+        49
+      ],
+      "source_anchor_global": [
+        1108.75,
+        838
+      ]
+    },
+    {
+      "frame": 7,
+      "crop": [
+        1330,
+        444,
+        1774,
+        887
+      ],
+      "bbox_a32_local": [
+        115,
+        284,
+        338,
+        394
+      ],
+      "bbox_a32_global": [
+        1445,
+        728,
+        1668,
+        838
+      ],
+      "margins": [
+        115,
+        284,
+        106,
+        49
+      ],
+      "source_anchor_global": [
+        1552.25,
+        838
+      ]
+    }
+  ],
+  "safeSeparatorEvidence": {
+    "frame5To6BlankColumnsAtAlpha32": [
+      810,
+      879
+    ],
+    "selectedCutX": 850
+  },
+  "notes": [
+    "Selected source visually checked over neutral gray. Real alpha is present, no opaque colored backdrop.",
+    "The aura is upright from low roots, with2–3 flame/fox-tail silhouettes and central vertical opening to top. No circle, ring, pinwheel, swirl-wheel, portal, radial symmetry or rotating center.",
+    "Source art aligns root bottoms at394/838; frame1growth extends one extra pixel to395. Use shared anchor, do not perframe bbox normalize.",
+    "Full flow frames2–5 have alpha32 silhouette heights368,349,356,375; maintain variation and fixedscale. Burst is shorter andwider.",
+    "Source frame6burst tail beginsx880,9px left of nominal887 boundary. Cut at850 in verified empty70pxgap to preserve tip and prevent it entering previousframe.",
+    "With safe crops all visible alpha32 silhouettes fit with at least19px margin. Extra transparent padding at import recommended.",
+    "Central vertical slot is visibly open fromtop. A narrow6%-width vertical sample over15–77%cellheight has93.1–100%pixels alpha<16; irregular flame tongue edges/root areas can approach center. Intended for behind-character layer.",
+    "No changes to fireball orSharingan sources, checkout orgamecode."
+  ]
+}

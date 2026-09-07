@@ -1,0 +1,7 @@
+import {describe,it,expect} from 'vitest';
+import {OwnedEffects,MirrorDeflections} from './presentation-lifecycle';
+describe('owned presentation lifetimes',()=>{
+ it('owns a spark born from a water hit during an update until it expires',()=>{const gone:string[]=[];const pool=new OwnedEffects<{id:string;life:number}>(38,e=>gone.push(e.id));pool.add({id:'wave',life:2});pool.update(e=>{e.life--;pool.add({id:'spark',life:1});return e.life>0;});expect(pool.items.map(e=>e.id)).toEqual(['wave','spark']);pool.update(e=>--e.life>0);expect(pool.items).toHaveLength(0);expect(gone.sort()).toEqual(['spark','wave']);});
+ it('caps additions after iteration without skipping or double-destroying effects',()=>{const gone:number[]=[];const pool=new OwnedEffects<number>(2,e=>gone.push(e));pool.add(1);pool.add(2);pool.update(e=>{if(e===1){pool.add(3);pool.add(4);}return true;});expect(pool.items).toEqual([3,4]);pool.clear();expect(gone).toEqual([1,2,3,4]);pool.clear();expect(gone).toHaveLength(4);});
+ it('counts two distinct volleys and rejects stale formation returns',()=>{const counter=new MirrorDeflections();counter.reset();const generation=counter.generation;expect(counter.contact(generation,'volley1')).toEqual({credited:true,knockdown:false});expect(counter.contact(generation,'volley1').credited).toBe(false);expect(counter.contact(generation,'volley2').knockdown).toBe(true);counter.reset();expect(counter.count).toBe(0);expect(counter.contact(generation,'volley3').credited).toBe(false);});
+});

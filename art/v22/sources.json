@@ -1,0 +1,122 @@
+{
+  "effects": {
+    "path": "C:/Users/eshin/.codex/generated_images/01a07d80-3837-74f1-9aa6-c56196968519/exec-e22e914a-9593-4678-8c98-2544b8f6d8f6.png",
+    "grid": [
+      8,
+      3
+    ]
+  },
+  "hounds": {
+    "path": "C:/Users/eshin/.codex/generated_images/01a07d80-3837-74f1-9aa6-c56196968519/exec-70cc2c27-caac-4517-b8df-9baee15d7c91.png",
+    "grid": [
+      8,
+      3
+    ],
+    "scales": [
+      0.45,
+      0.48,
+      0.5
+    ]
+  },
+  "characters-a": {
+    "path": "C:/Users/eshin/.codex/generated_images/01a07d80-8559-7311-a0fe-9e28d1de82a1/exec-e6bc086a-dffd-435a-a3b1-0add188e5dcf.png",
+    "grid": [
+      6,
+      4
+    ],
+    "scales": [
+      0.595,
+      0.72,
+      0.77,
+      0.676
+    ]
+  },
+  "characters-b": {
+    "path": "C:/Users/eshin/.codex/generated_images/01a07d80-8559-7311-a0fe-9e28d1de82a1/exec-ab3d4d38-818d-4f82-9980-b2fbf66e2197.png",
+    "grid": [
+      6,
+      4
+    ],
+    "scales": [
+      0.637,
+      0.625,
+      0.7,
+      0.57
+    ]
+  },
+  "haku-kneel": {
+    "path": "C:/Users/eshin/.codex/generated_images/01a07d80-8559-7311-a0fe-9e28d1de82a1/exec-774fc7aa-f443-491b-a9cc-3fb0d76694d7.png",
+    "grid": [
+      6,
+      1
+    ],
+    "cell": [
+      512,
+      768
+    ],
+    "scales": [
+      0.323
+    ]
+  },
+  "hound-hold": {
+    "path": "C:/Users/eshin/.codex/generated_images/01a07d80-3837-74f1-9aa6-c56196968519/exec-2d5e4d62-dd51-415f-8dac-8e31100b3f09.png",
+    "grid": [
+      4,
+      3
+    ],
+    "rowEdges": [
+      0,
+      340,
+      680,
+      1086
+    ],
+    "scales": [
+      0.27,
+      0.25,
+      0.26
+    ]
+  },
+  "chakra": {
+    "path": "C:/Users/eshin/.codex/generated_images/01a07d80-3837-74f1-9aa6-c56196968519/exec-c45294a4-2b30-4492-b8aa-4a99af077fef.png",
+    "grid": [
+      4,
+      2
+    ],
+    "scale": 0.45,
+    "rowEdges": [
+      0,
+      444,
+      887
+    ],
+    "columnEdges": [
+      [
+        0,
+        444,
+        887,
+        1330,
+        1774
+      ],
+      [
+        0,
+        444,
+        850,
+        1330,
+        1774
+      ]
+    ],
+    "sourceAnchorX": [
+      221.75,
+      665.25,
+      1108.75,
+      1552.25
+    ],
+    "sourceGroundY": [
+      394,
+      838
+    ],
+    "atlasRoot": [
+      192,
+      253
+    ]
+  }
+}

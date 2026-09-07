@@ -1,4 +1,4 @@
-import {effect21} from './art-v21';
+import {fx22,chakraFrame} from './art-v22';
 import {poseUltimate} from './art-cinema-v14';
 import * as Phaser from 'phaser';
 import type {PlayerId} from './combat-core';
@@ -48,7 +48,7 @@ export class UltimateBurst{
    impact.setPosition(this.toX+this.facing*(i-1)*18,this.floor-85).setDisplaySize(i===2?320:170,i===2?260:150).setAlpha(since>=0&&since<400?1:0);
   }
   const trail=this.effects[4];animateEffect(trail,this.fury?'chakra-aura':this.character==='kakashi'?'lightning':'smoke',a%500,500);trail.setPosition(x-this.facing*80,this.floor-65).setDisplaySize(200,90).setFlipX(this.facing<0).setAlpha(a>350&&a<1200?.55:0);
-  if(this.fury){effect21(charge,0,a<820?1:a<1330?2:5,230,185);charge.setFlipX(this.facing<0);for(let i=0;i<3;i++){const since=a-[880,1100,1330][i];effect21(this.effects[i+1],0,Math.min(7,4+Math.floor(Math.max(0,since)/100)),i===2?320:180,i===2?260:145);}effect21(trail,0,2+Math.floor(a/85)%2,235,110);trail.setFlipX(this.facing<0);}
+  if(this.fury){fx22(charge,1,chakraFrame(a,2000),350);charge.setFlipX(this.facing<0);for(let i=0;i<3;i++){const since=a-[880,1100,1330][i];fx22(this.effects[i+1],1,Math.min(7,5+Math.floor(Math.max(0,since)/140)),i===2?380:220);}fx22(trail,1,5,340);trail.setFlipX(this.facing<0);}
   const beats=[880,1100,1330];while(this.beat<beats.length&&a>=beats[this.beat]){this.sound(this.beat===2?'finish':'strike');this.beat++;}
   const final=a-1330;this.flash.setAlpha(!this.reduced&&final>=0&&final<90?.18*(1-final/90):0);
   return{x,impact:a>=1330&&!this.impacted,complete:a>=ULTIMATE_END};

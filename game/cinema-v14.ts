@@ -24,9 +24,11 @@ export class CinemaPresentation{
   const origin=camera.getWorldPoint(0,0);anchor.set(((actor?.x??640)-origin.x)*camera.zoom,((actor?.y??590)-origin.y)*camera.zoom);
   const nameHeight=this.name.text?this.name.height+4:0;this.name.setVisible(!!this.name.text);this.line.setY(10+nameHeight);
   const width=Math.min(414,Math.max(this.name.text?this.name.width:0,...this.line.getWrappedText().map(line=>this.line.context.measureText(line).width))+24),height=this.line.height+nameHeight+20;
-  const x=Phaser.Math.Clamp(anchor.x-width/2,22,1258-width),y=Phaser.Math.Clamp(anchor.y-18-height,120,570-height);
+  const x=Phaser.Math.Clamp(anchor.x-width/2,22,1258-width);let top=anchor.y;
+  for(const id of ['naruto','sasuke','sakura','kakashi','zabuza','haku'] as const){const other=position(id);if(!other||other===sprite||other.alpha<.1||!other.visible)continue;const head=actorHead(other),hx=(head.x-origin.x)*camera.zoom,hy=(head.y-origin.y)*camera.zoom;if(hx>x-24&&hx<x+width+24)top=Math.min(top,hy);}
+  const y=Phaser.Math.Clamp(top-18-height,120,570-height);
   this.bubble.setPosition(x,y);this.ink.clear().fillStyle(0xfaf7ed,.98).lineStyle(2,0x153c4a,1);this.ink.fillRoundedRect(0,0,width,height,12);this.ink.strokeRoundedRect(0,0,width,height,12);
-  const tail=Phaser.Math.Clamp(anchor.x-x,18,width-18);this.ink.fillTriangle(tail-9,height-2,tail+9,height-2,tail,height+13);
+  const tail=Phaser.Math.Clamp(anchor.x-x,18,width-18);this.ink.fillTriangle(tail-9,height-2,tail+9,height-2,tail,Math.min(height+55,Math.max(height+13,anchor.y-y-6)));
  }
  destroy(){this.bubble.destroy(true);this.caption.destroy();}
 }

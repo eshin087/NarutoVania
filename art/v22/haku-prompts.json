@@ -1,0 +1,23 @@
+{
+  "path": "C:/Users/eshin/.codex/generated_images/01a07d80-8559-7311-a0fe-9e28d1de82a1/exec-774fc7aa-f443-491b-a9cc-3fb0d76694d7.png",
+  "prompt": "Use case: illustration-story.\nCreate a clean production sprite strip of Haku from the original Naruto series, EXACTLY SIX poses arranged LEFT TO RIGHT in ONE horizontal row. Canvas 1536 x 512, six equal 256x512 cells, no other rows. PURE FLAT WHITE (#FFFFFF) background for compositing. No checkerboard, gradients, ground shadow, effects, text, labels or visible grid.\nThe most recent reference image is the original established Haku STANDING IDLE sprite. It is a COSTUME, ANATOMY, BODY PROPORTION and SCALE reference. Match its slim graceful anatomy, small head relative to torso, long legs, original teal robe with pale cream trim, tan-brown sash, pleated gray-brown pants, shin wraps, navy open-toe sandals, white red-marked hunter mask, tied-up black hair with side locks. Anime cel-shaded clean linework. Same narrow shoulders and slim torso in EVERY pose. Everyone faces RIGHT.\nCRITICAL construction: Draw the EXACT SAME Haku model 6 times with rigidly consistent anatomical segment lengths and widths. In all six frames the hair-to-chin head height is 32px, shoulder width~42px, neck-to-waist torso length~57px, upper arms~40px, thighs~52px. Standing total height~220px. A kneeling pose is only about145–155px tall due to the lower legs folding, NOT from any body enlargement. Keep head exactly32px high AND neck-to-waist torso exactly57px long in the kneeling frames too. Do not enlarge torso, shoulders, robe, head or any limb to make kneeling figures fill the cell. Kneeling shoulder widths and waist widths must equal standing widths. Their longer below-waist robe simply folds. This uniform anatomy is the most important requirement.\nAll sprites aligned on the same floor baseline at y=415, centered horizontally in their cell, generous whitespace around every sprite, minimum50px side gutters. The standing frame will have hair at y~195; kneeling frames hair at y~260. Keep feet, toes, hands, mask and hair fully visible with no edge clipping, no extra limbs.\nSix exact chronological frames:\n1. MASKED stagger after a hit, still nearly standing, slight RIGHT forward lean, one arm balancing, soft nonviolent weariness.\n2. MASKED kneeling on the left knee with right foot planted, torso upright but weary, head facing RIGHT. Both arms hang naturally.\n3. Same kneeling posture and SAME head/torso/limb dimensions as2; right hand reaches up to touch the mask.\n4. Same kneeling posture; right hand has lifted the mask completely away to the RIGHT of his face, now revealing Haku's soft youthful male face and dark eyes. The hand naturally owns the mask. Mask is ONE separate held object.\n5. UNMASKED same kneeling posture with weary calm face pointing RIGHT, mask held low in the right hand beside knee, left hand resting on thigh.\n6. UNMASKED weary kneeling rest, shoulders droop just slightly and head lowers, mask still in hand low by knee. Preserve anatomical dimensions as2–5, no shrinking or enlarging.\nNo other characters. No floating disconnected mask fragments. No injuries, no weapons, no particles. Six clean, entirely separated sprites on flat pure white.",
+  "tool": "built-in imagegen",
+  "grid": [
+    6,
+    1
+  ],
+  "size": [
+    2172,
+    724
+  ],
+  "rows": [
+    "Haku masked stagger",
+    "Haku masked kneel",
+    "Haku hand to mask",
+    "Haku removing mask",
+    "Haku unmasked kneel",
+    "Haku weary kneel"
+  ],
+  "background": "Flat white RGB for user-authorized programmatic cleanup by root",
+  "qa": "Visually verified six complete separate poses, no clipping or overlap. Head and neck-to-sash torso dimensions remain approximately equal across stagger and kneels, correcting source atlas B torso growth. Slender costume proportions match original Haku idle. Both legs fold under robe on kneel; toes visible; one held mask as intended. Use this strip to replace atlas B Haku row. No uniform0.84 scaling correction required."
+}

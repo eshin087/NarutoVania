@@ -4,6 +4,7 @@ export const STORY_SCENES = ['arrival','prison','shuriken','water-clash','hunter
 export type StorySceneId = typeof STORY_SCENES[number];
 export interface DebugEntry {id:string;label:string;kind:'fight'|'scene';barrage?:BarrageId;variant?:0|1;phase:StoryPhaseId;scene?:StorySceneId;}
 export const DEBUG_ENTRIES:DebugEntry[] = [
+ {id:'mirror-deflections',label:'Mirror deflections · Two-volley knockdown',kind:'fight',phase:'mirrors'},
  ...Object.values(BARRAGES).flatMap(b=>([0,1] as const).map(variant=>({id:variant===0?b.id:`${b.id}-b`,label:`${b.name} · ${VARIANT_NAMES[b.id][variant]}`,kind:'fight' as const,phase:b.boss==='zabuza'?'mist' as const:'mirrors' as const,barrage:b.id,variant}))),
  {id:'fight-mist',label:'Kakashi · Assassin of the Mist',kind:'fight',phase:'mist'},
  {id:'fight-rescue',label:'Naruto + Sasuke · Rescue Kakashi',kind:'fight',phase:'rescue'},

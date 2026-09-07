@@ -1,3 +1,4 @@
+import {pose22,attachment22} from './art-v22';
 import {makeEffect,animateEffect} from './effects-v14';
 import type * as Phaser from 'phaser';
 import manifest from '../public/art-v21/manifest.json';
@@ -11,11 +12,18 @@ export function effect21(image:Phaser.GameObjects.Image,row:number,frame:number,
 export class HoundPack{
  readonly dogs:Phaser.GameObjects.Image[];contact=false;done=false;
  constructor(private scene:Phaser.Scene,readonly started:number,readonly fromX:number,private floor:number,private holdMs=1000){this.dogs=[0,1,2].map(()=>scene.add.image(fromX,floor,'v21-hounds','0').setDepth(6));}
- update(now:number,target:{x:number;y:number},release=false){const age=now-this.started,travel=440,holdEnd=travel+this.holdMs;
- for(const [i,dog]of this.dogs.entries()){const a=Math.max(0,age-i*45),facing=i===1?-1:1,frame=a<travel?(a<230?Math.floor(a/95)%2:2):release?6:a<holdEnd?(Math.floor((a-travel)/125)%3===0?3:4+Math.floor(a/170)%2):a<holdEnd+160?6:7;
- const mouth=houndPose(dog,i,frame,facing),bite={x:target.x+[-25,30,-14][i],y:target.y-[30,48,62][i]},u=Math.min(1,a/travel),endX=bite.x-mouth.x,endY=bite.y-mouth.y;
- dog.setPosition(this.fromX+(endX-this.fromX)*u,this.floor+(endY-this.floor)*u-Math.sin(u*Math.PI)*[30,40,50][i]);dog.setAlpha(release?0:a<holdEnd?1:Math.max(0,1-(a-holdEnd)/300));}
- if(age>=travel)this.contact=true;if(release||age>=holdEnd+400){this.done=true;this.dogs.forEach(d=>dismissHound(this.scene,d.x,d.y-20));this.destroy();}return this.contact;}
+ update(now:number,target:{x:number;y:number},release=false){if(this.done)return this.contact;const age=now-this.started,contactAt=440,holdEnd=contactAt+this.holdMs;
+ for(const [i,dog]of this.dogs.entries()){
+  const arrive=contactAt+[0,360,520][i],facing=i===1?-1:1;
+  if(age<arrive){const t=Math.min(1,age/arrive),orbit=i===0?0:Math.sin(t*Math.PI*2)*[0,66,90][i],x=this.fromX+(target.x+[-32,38,-15][i]-this.fromX)*t+orbit;
+   const running=t<.66,dir=running?(target.x>this.fromX?1:-1):facing;pose22(dog,'hounds',i,running?Math.floor(age/90)%2:3,dir);
+   dog.setPosition(x,this.floor-Math.sin(Math.max(0,(t-.66)/.34)*Math.PI)*[25,40,55][i]).setDepth(orbit<0?3:6).setAlpha(1);
+  }else{pose22(dog,'hound-hold',i,Math.floor((age-arrive)/115)%4,facing);const mouth=attachment22(dog,'mouth'),dx=mouth.x-dog.x,dy=mouth.y-dog.y;
+   dog.setPosition(target.x+[-27,31,-12][i]-dx,target.y-[26,40,56][i]-dy).setDepth(6).setAlpha(age<holdEnd?1:Math.max(0,1-(age-holdEnd)/300));}
+  if(age>=holdEnd){pose22(dog,'hounds',i,6,facing);dog.setPosition(target.x+[-32,38,-15][i]-facing*Math.min(26,(age-holdEnd)*.09),this.floor);}
+ }
+ if(age>=contactAt)this.contact=true;if(release||age>=holdEnd+400){this.done=true;this.dogs.forEach(d=>dismissHound(this.scene,d.x,d.y-20));this.destroy();}return this.contact;}
+
  destroy(){this.dogs.forEach(d=>d.destroy());}
 }
 

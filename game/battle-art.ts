@@ -1,3 +1,4 @@
+import {preloadV22,registerV22} from './art-v22';
 import {preloadV21,registerV21} from './art-v21';
 import {presentBody} from './presentation-v16';
 import {preloadV15,registerV15} from './art-v15';
@@ -24,7 +25,7 @@ export interface BossArtManifest {
   variants: {awakened: AtlasMetadata & {baseHeight: number}; ending: AtlasMetadata & {baseHeight: number}; unmasked: {baseHeight: number; sheets: Record<SpriteSheet, AtlasMetadata>}};
   props: Record<string, NamedFrame>; effects: Record<string, NamedFrame>;
 }
-export function preloadBattleArt(scene: Phaser.Scene) {preloadV21(scene);preloadV10(scene);preloadV11(scene);preloadV13(scene);preloadEffects(scene);preloadCinemaArt(scene);preloadCharacterArt(scene);preloadV15(scene);
+export function preloadBattleArt(scene: Phaser.Scene) {preloadV21(scene);preloadV22(scene);preloadV10(scene);preloadV11(scene);preloadV13(scene);preloadEffects(scene);preloadCinemaArt(scene);preloadCharacterArt(scene);preloadV15(scene);
   for(const id of CHARACTERS)scene.load.image(`v9-${id}-aerial`,`/art-v9/${id}-aerial.png`);
 
   scene.load.image('v8-glamour','/art-v8/glamour-decoy-atlas-v8.png');
@@ -38,7 +39,7 @@ export function preloadBattleArt(scene: Phaser.Scene) {preloadV21(scene);preload
   for (const name of ['lakeside-background', 'bridge-background', 'lakeside-ground', 'bridge-ground', 'props', 'effects', 'naruto-awakened', 'ending-zabuza', 'zabuza-sword']) scene.load.image(`v2-${name}`, `/art-v2/${name}.png`);
 }
 export function artManifest(scene: Phaser.Scene) {return scene.cache.json.get('battle-manifest') as BossArtManifest;}
-export function registerBattleArt(scene: Phaser.Scene) {registerV21(scene);registerV10(scene);registerV11(scene);registerV13(scene);registerEffects(scene);registerCinemaArt(scene);registerCharacterArt(scene);registerV15(scene);
+export function registerBattleArt(scene: Phaser.Scene) {registerV21(scene);registerV22(scene);registerV10(scene);registerV11(scene);registerV13(scene);registerEffects(scene);registerCinemaArt(scene);registerCharacterArt(scene);registerV15(scene);
   for(const id of CHARACTERS)for(let i=0;i<6;i++)scene.textures.get(`v9-${id}-aerial`).add(String(i),0,i*512,0,512,384);
   for (let i=0;i<4;i++) scene.textures.get('v5-wave').add(String(i),0,i*512,0,512,512);
 

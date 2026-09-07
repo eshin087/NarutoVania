@@ -1,0 +1,109 @@
+{
+  "mode": "built-in image_gen",
+  "selected": "C:/Users/eshin/.codex/generated_images/01a07d80-3837-74f1-9aa6-c56196968519/exec-2d5e4d62-dd51-415f-8dac-8e31100b3f09.png",
+  "prompt": "Use case: stylized-concept.\nCreate a production 2D game animation sprite sheet: exactly FOUR columns and THREE rows, 12 full-body ninja dog sprites total, transparent PNG 1024x768, equal invisible256x256 cells. Every sprite stays inside its cell with large empty gutters. This is a BRACED BITE-HOLD LOOP, so ALL FOUR PAWS remain firmly planted on the ground at IDENTICAL locations across all four frames of a row. Body silhouette, body size, back line, leg angles, tail position and equipment must be almost identical across the row. No running or leaping.\nStyle: original Naruto TV anime, clean dark ink contours, crisp flat cel-shaded planes, natural canine colors, navy-blue Leaf ninja vests with a small red spiral patch on side, silver Leaf-symbol forehead protectors on navy bands.\nROW0: SAME small squat beige pug with broad black muzzle, folded ears, short thick legs, tightly curled beige tail, navy vest in all four frames. Full-body side profile facingRIGHT, modest braced stance. Approximate silhouette height90px inside256px cell, width130px.\nROW1: SAME medium lean warm-tan tracking dog with black muzzle, pointed upright ears, straight tapered tan tail, navy vest in all four frames. Full-body side profile facingRIGHT, modest braced stance. Approximate silhouette height120px, width175px.\nROW2: SAME large muscular charcoal-gray mastiff with broad dark square muzzle, folded ears, thick long upward-curved tail, navy vest in all four frames. Full-body side profile facingRIGHT, modest braced stance. Approximate silhouette height150px,width190px.\nEVERY ROW has these FOUR tiny loop changes from LEFT to RIGHT, only jaw and a small neck/head movement:\nCOLUMN0 OPEN: paws planted, braced low body, head projectingRIGHT, jaws moderately open showing small canine teeth.\nCOLUMN1 CONTACT: same exact body/paws/tail, jaws partly closing around EMPTY SPACE, head shifts right by only2to4pixels.\nCOLUMN2 TUG: same exact body/paws/tail, jaws nearly closed, head shifts left by only2to4pixels, neck tensed. No whole-body movement.\nCOLUMN3 CLOSED: same exact body/paws/tail, jaws gently closed on EMPTY SPACE, head returns to original position.\nAll12 dogs faceRIGHT. Show all four whole paws, complete tail and ears. Maintain precisely consistent scale and proportions within each row. Keep the body pose identical and grounded in every frame; horizontal back, bent braced legs, muzzle about shoulderheight. Strong open-mouth readability in frame0 and frame1; muzzle unobscured.\nGenuinely transparent alpha-zero background. No floor, ground shadow, background color, haze, drawn checkerboard, grid lines, text, labels, numbers, panels, borders, target, prey, held objects, blood, saliva, sparks, smoke, bite effects, human figures or scenery. Only the12 separate canine sprites in exact4x3 grid. Large empty transparent gaps. No cropped paws or tails.",
+  "actualDimensions": [
+    1448,
+    1086
+  ],
+  "grid": {
+    "columns": 4,
+    "rows": 3,
+    "columnWidth": 362,
+    "columnEdges": [
+      0,
+      362,
+      724,
+      1086,
+      1448
+    ],
+    "safeRowEdges": [
+      0,
+      340,
+      680,
+      1086
+    ]
+  },
+  "sequence": [
+    "open jaw, planted stance",
+    "contact/partly closed jaw, planted stance",
+    "tug/nearly closed jaw, planted stance",
+    "closed jaw, planted stance"
+  ],
+  "dogs": [
+    "pug",
+    "tan tracker",
+    "charcoal mastiff"
+  ],
+  "alpha": {
+    "mode": "RGBA",
+    "zeroFraction": 0.6914891181587863,
+    "below16Fraction": 0.7424611835210565
+  },
+  "inspection": {
+    "silhouetteHeightsByRow": [
+      [
+        149,
+        148,
+        147,
+        148
+      ],
+      [
+        223,
+        224,
+        221,
+        222
+      ],
+      [
+        286,
+        286,
+        286,
+        286
+      ]
+    ],
+    "silhouetteWidthsByRow": [
+      [
+        236,
+        246,
+        225,
+        227
+      ],
+      [
+        307,
+        310,
+        289,
+        289
+      ],
+      [
+        323,
+        331,
+        317,
+        310
+      ]
+    ],
+    "groundBaselineGlobalY": [
+      283,
+      622,
+      1003
+    ],
+    "groundBaselineStableAcrossAllFrames": true,
+    "leftBoundPerCellByRow": [
+      76,
+      46,
+      30
+    ],
+    "smallestVisibleMarginPx": 1,
+    "allBodiesPawsAndTailsComplete": true,
+    "noBakedMouthEffects": true,
+    "allFramesFacingRight": true
+  },
+  "importNotes": [
+    "Use column edges [0,362,724,1086,1448] and custom SAFE row edges [0,340,680,1086], then pad to desired regular cells.",
+    "Do NOT use equal-height source row boundaries at362 and724: mastiff tail tips begin at717 and would be cut.",
+    "Keep uniform scaling and a fixed per-row registration anchor across all four frames. Do not separately normalize opaque bboxes.",
+    "To roughly match selected travel sheet original silhouette sizes, optional fixed row scales about0.60pug,0.54tracker,0.53mastiff before other game's world scale.",
+    "Whole sprites are fully drawn. Muzzles in tracker/mastiff contact frames nearly approach the column edge; add transparent padding during import.",
+    "All paws planted. Back line, leg and tail pose are nearly identical across each row. Main change is open/contact/tug/closed jaws and small head motion.",
+    "No source or checkout modifications. Generated original remains outside checkout."
+  ]
+}

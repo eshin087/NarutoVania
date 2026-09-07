@@ -1,0 +1,66 @@
+{
+  "generator": "built-in image_gen__imagegen",
+  "referenceSources": [
+    "public/art-v21/characters.webp",
+    "public/art-v14/teamwork.webp",
+    "public/art-v14/kakashi-locomotion.webp",
+    "public/art-v14/zabuza-locomotion.webp",
+    "public/art-v14/haku-masked-locomotion.webp",
+    "public/art-v14/sasuke-locomotion.webp",
+    "public/art-v10/haku-unmasked-weary.png",
+    "public/art-v10/naruto-kneeling-grief.png"
+  ],
+  "referenceDelivery": "Local reference path reads rejected by sandbox deny-read ACL. Inspected references with escalated in-memory Pillow thumbnails and supplied last5 conversation thumbnail images to imagegen.",
+  "selected": [
+    {
+      "atlas": "character-story-a",
+      "path": "C:/Users/eshin/.codex/generated_images/01a07d80-8559-7311-a0fe-9e28d1de82a1/exec-e6bc086a-dffd-435a-a3b1-0add188e5dcf.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "grid": [
+        6,
+        4
+      ],
+      "rows": [
+        "Naruto empty-hand throw",
+        "Kakashi advance and capture",
+        "Zabuza water-prison reach with sword on back",
+        "Haku masked arrival and kneel"
+      ],
+      "prompt": "Use case: illustration-story.\nAsset type: production 2D anime game transparent sprite animation atlas, exactly 6 columns by 4 rows, 24 separate sprites. Canvas landscape 3072 x 2048 (each cell 512 x 512), all cells equally sized, no visible grid, no text. True transparent alpha background, not black/white/checkerboard paint.\nInput images are STYLE AND CHARACTER COSTUME REFERENCES ONLY, not edit targets. Reference 1 teamwork.webp establishes young Naruto orange-blue costume and original-series proportions. Reference 2 kakashi-locomotion.webp establishes Kakashi. Reference 3 zabuza-locomotion.webp establishes bare-torso Zabuza with giant sword. Reference 4 haku-masked-locomotion.webp establishes canonical teal/cream Haku costume. Preserve those identities/costumes with cleaner anime cel-shaded linework.\nAll figures in RIGHT-facing profile or three-quarter RIGHT. Entire character including both hands, both feet, hair, weapon fully contained in its cell with at least 40 transparent pixels gutter on all sides. No body or loose fragment crosses a cell boundary. Each cell has exactly ONE character. All poses share foot/knee/floor baseline y=470 within the cell; airborne Haku may lift feet slightly. Constant HUMAN BODY SCALE across each character's six poses: standing height ~360px Naruto, ~390px Kakashi, ~400px Zabuza excluding sword, ~375px Haku. Kneeling/crouching figures are naturally shorter in total occupied height; never enlarge head/torso/limbs to fill cell. Keep fixed head size and limb lengths within each row. Crisp clear side-view anatomy, two normal arms/two legs, readable toes and fingers, no clipping or flattened torso.\n\nROW 1 (top): Young Naruto Uzumaki, blond spiky hair, leaf forehead protector, orange jumpsuit with BLUE shoulders and pale collar, original-series child proportions and blue open-toe sandals. A SINGLE shuriken-throw body action sequence to the RIGHT, but NO SHURIKEN OR PROJECTILE IS DRAWN ANYWHERE; game supplies projectile independently. Six chronological poses: c1 ready with empty hand lifted behind right shoulder and weight back; c2 empty-hand throw anticipation, elbow back and torso coil; c3 single throwing RELEASE with right forearm extending to RIGHT and clearly OPEN EMPTY throwing hand; c4 full follow-through with clearly empty fingers and torso rotated toward RIGHT; c5 recovery, throwing arm lowering empty; c6 balanced right-facing empty-handed ready stance. Absolutely no projectile, kunai, star, needle, motion slash, smoke or effects.\n\nROW 2: Kakashi Hatake in canonical green flak vest, dark blue clothing, mask covering lower face, silver spiky hair and diagonal forehead protector over one eye. Six poses: c1 cautious RIGHT advancing step gripping one small kunai in RIGHT hand; c2 advancing thrust with same single kunai; c3 interrupted thrust, surprise as he realizes the opponent was a clone, eye alert; c4 recoiling backward at the waist with knees braced, kunai still in hand; c5 captured restrained posture, shoulders contracted and forearms held close to chest, empty hands, body leaning against implied pressure; c6 stable restrained full-body braced stance, tense and unable to advance, EMPTY hands near chest. Character only; no clone, water, prison, rope, effects, extra person. Never cartoonishly tiny body.\n\nROW 3: Zabuza Momochi, tall muscular BARE TORSO exactly like reference; black hair, forehead protector, white bandage lower-face mask, patterned gray-black forearm sleeves, baggy dark navy trousers and wrapped shins, blue open-toe sandals. His giant flat broad cleaver sword with round hole belongs visibly to him; keep sword safely strapped diagonally on his BACK throughout all six poses, never floating or turning into a shield. Right hand stays free for water prison. Six poses: c1 approaching RIGHT with controlled step; c2 slight forward lean, right shoulder reaching; c3 right arm extending toward RIGHT, palm open; c4 right palm makes implied contact at chest height, feet braced; c5 holding the same extended right-hand contact pose with left arm relaxed near hip; c6 subtle settled hold with right palm extended and stable torso. No blocking attack posture, no projectile or water, no second character.\n\nROW 4 (bottom): Haku masked, slender soft youthful appearance, long black hair tied in bun with long side locks, white hunter-nin mask with red markings, canonical dark TEAL robe with CREAM edge/short sleeve trims, tan wide sash, gray-brown pleated trousers, white shin wraps, blue open-toe sandals. Six poses: c1 gentle airborne arrival, downward drifting upright with robe movement and feet visible; c2 landing with one leg down and knees flexing; c3 one-knee landing, one hand nearing floor; c4 kneeling preparation with calm right-facing mask and hands near thigh, same small head/torso size; c5 rising from kneel; c6 standing calm idle facing RIGHT. No mist or weapon effects.\nAvoid all background, baked shadows, platform, labels, borders, panel lines, extra limbs, disembodied fragments, duplicated weapons, needle/star projectiles, aura, smoke, blur. Transparent cutouts only.\nThe five in-memory reference images in order are 1 teamwork, 2 Kakashi, 3 Zabuza, 4 masked Haku, 5 Sasuke. Use the first four as described."
+    },
+    {
+      "atlas": "character-story-b",
+      "path": "C:/Users/eshin/.codex/generated_images/01a07d80-8559-7311-a0fe-9e28d1de82a1/exec-ab3d4d38-818d-4f82-9980-b2fbf66e2197.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "grid": [
+        6,
+        4
+      ],
+      "rows": [
+        "Sasuke Sharingan evasion",
+        "Sasuke shield and collapse",
+        "Haku mask removal",
+        "Naruto grief and rage"
+      ],
+      "prompt": "Use case: illustration-story.\nAsset type: production 2D anime game transparent sprite animation atlas, exactly 6 equal columns by 4 equal rows, 24 individual character sprites. Landscape canvas 3072 x 2048, cells 512 x 512. True transparent alpha background; no painted black, white, or checkerboard. No visible grid or text.\nInput images are identity/style references only. Sasuke reference establishes original-series blue shirt/white shorts; Haku reference establishes teal/cream costume, Naruto teamwork reference establishes child proportions and orange-blue original outfit. Render polished crisp anime cel-shaded sprite cutouts compatible with references.\nAll figures face RIGHT in side or three-quarter RIGHT profile. Every cell has ONE character alone. Keep all hair/hands/feet/body/robe wholly inside its cell, at least 40px empty transparent gutters. Foot/knee/floor baseline y=470 within each cell. Maintain CONSTANT head, torso and limb dimensions for the same character across poses and rows: Sasuke standing height about 340px, Naruto 335px, Haku370px. These are absolute body scales, not bounding-box fit sizes. Deeply crouched, kneeling, sideways and prone poses must occupy LESS vertical height than standing figures; do not enlarge them. A prone Sasuke fits horizontally inside the cell with same head/torso/limb length as standing Sasuke. Exactly two anatomically correct arms and legs.\n\nROW 1 (top), Sasuke Uchiha original-series young boy, spiky dark blue-black hair, high-collar dark BLUE short-sleeve shirt, WHITE shorts, white forearm wraps, blue shin pieces and blue open-toe sandals, leaf forehead protector. Sharingan focused expression, tiny red eyes. Six chronological evasions of needles that are NOT drawn: c1 leaning backward to evade; c2 low duck with both knees bent and right-facing head, same head size; c3 agile sidestep to RIGHT; c4 torso twist to evade while head faces RIGHT; c5 low dash to RIGHT, two arms posed naturally; c6 recover to balanced right-facing ready stance. Absolutely no needles, spark effects or motion lines.\n\nROW 2, SAME Sasuke at EXACT SAME head/torso/limb scale and SAME outfit as row1, shielding someone to his left while looking RIGHT at threat. No other character. Six chronological collapse frames: c1 fully upright, both arms stretched protectively outward at shoulder height, right-facing face; c2 hit recoil, arms beginning to droop and torso recoiling, visible face but no wounds; c3 knees buckling naturally, shoulders sinking; c4 tipping onto his RIGHT side toward the RIGHT, right forearm breaking the fall, feet and head intact; c5 landed on RIGHT side, head at cell RIGHT and legs toward LEFT, full body horizontal and small vertical height; c6 settled PRONE on right side, head at RIGHT and bent legs extending LEFT, one arm beside chest and other resting on ground. All six remain ONE Sasuke only; no Naruto, no needles embedded, no blood or gore, no effects. Do not enlarge prone figure.\n\nROW 3, Haku, soft slender youthful male appearance; long black tied-up hair with side locks, original-series dark TEAL robe with CREAM edge/short-sleeve trim, tan wide sash, gray-brown pleated trousers, white shin wraps, blue open-toe sandals. Same absolute head/body scale in all six poses; standing height about370px but kneeling total height about240px. Six chronological frames: c1 masked stagger while facing RIGHT, one arm balancing; c2 kneeling on one knee facing RIGHT, mask on; c3 same stable kneeling pose, right hand touches white red-marked hunter mask; c4 same kneeling scale, lifting mask away from face with one hand, revealed soft young face; c5 unmasked kneeling, mask held low beside knee, weary but calm face toward RIGHT; c6 unmasked weary kneeling, shoulders sinking slightly, mask held naturally at side. No additional person, detached head, extra face or disembodied mask elsewhere.\n\nROW 4 (bottom), Young Naruto, blond spiky hair, leaf forehead protector, original orange jumpsuit with BLUE shoulders and pale collar, blue open-toe sandals. SAME original-series child anatomy in each frame, standing~335px, kneeling shorter without enlarged head or torso. Six chronological emotional poses: c1 sad slow approach to RIGHT, shoulders lowered; c2 lowering to a kneel reaching one open hand toward RIGHT/downward; c3 grief while kneeling, head down and shoulders slumped, no extra person; c4 kneeling fist-clench, face becoming determined and angry; c5 rising to stand with fists clenched; c6 tense rage-ready stance facing RIGHT, fists at sides and fierce expression. Natural blond hair, NO flame, aura, smoke or other effect.\nAvoid: background, floor shadow, text, grid lines, panel borders, labels, silhouettes in empty space, projectiles, needles, blood, flames, oversized kneeling heads, clipped feet, distorted extra limbs, cell bleeding. Clear separated transparent sprites only.\nThe five in-memory reference images in order are 1 teamwork (Naruto), 2 Kakashi, 3 Zabuza, 4 masked Haku, 5 Sasuke. Use image1 for Naruto, image4 for Haku, image5 for Sasuke."
+    }
+  ],
+  "qa": {
+    "alpha": "Both selected images have baked checkerboards and no alpha. Two targeted built-in extraction attempts failed; root has user-authorized programmatic cleanup.",
+    "anatomy": "No actual sprite overlaps, clipped outer anatomy, extra people, embedded projectile/needles, or baked flame effects observed. Zabuza sword remains on back; Naruto throwing hand empty; Haku is masked then unmasked as ordered.",
+    "grid": "Silhouettes are intact and separated, but not safe for rigid256px square cropping. A Naruto release hand extends ~27px past nominal col boundary; A Haku hair/bun begins ~22px before nominal row3 boundary. Use adaptive segmentation/gutter crops then repack.",
+    "bodyScale": "Heads broadly constant. B Haku kneeling torso appears20–25% larger than stagger torso; recommend ~0.84 relative source scale for kneeling c2–c6, not bbox-height normalization. Naruto kneeling torso slightly larger, ~10%. Sasuke low/prone poses keep same head scale with compact vertical extent."
+  },
+  "discarded": [
+    "C:/Users/eshin/.codex/generated_images/01a07d80-8559-7311-a0fe-9e28d1de82a1/exec-a2092235-5406-452f-a187-0fc527519569.png",
+    "C:/Users/eshin/.codex/generated_images/01a07d80-8559-7311-a0fe-9e28d1de82a1/exec-7cc07156-db41-4e31-9ede-842b8c4c5347.png"
+  ]
+}

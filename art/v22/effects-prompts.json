@@ -1,0 +1,851 @@
+{
+  "mode": "built-in image_gen",
+  "selected": {
+    "effects": "C:/Users/eshin/.codex/generated_images/01a07d80-3837-74f1-9aa6-c56196968519/exec-e22e914a-9593-4678-8c98-2544b8f6d8f6.png",
+    "hounds": "C:/Users/eshin/.codex/generated_images/01a07d80-3837-74f1-9aa6-c56196968519/exec-70cc2c27-caac-4517-b8df-9baee15d7c91.png"
+  },
+  "firstAttempts": {
+    "effects": "C:/Users/eshin/.codex/generated_images/01a07d80-3837-74f1-9aa6-c56196968519/exec-8e9967d1-18dc-4fa3-9c72-056603825085.png",
+    "hounds": "C:/Users/eshin/.codex/generated_images/01a07d80-3837-74f1-9aa6-c56196968519/exec-13219d52-6a4d-4f8e-b8ed-db3a9f266829.png"
+  },
+  "grid": {
+    "width": 2048,
+    "height": 768,
+    "columns": 8,
+    "rows": 3,
+    "cellWidth": 256,
+    "cellHeight": 256
+  },
+  "sequences": {
+    "effects": [
+      "Sharingan activation",
+      "empty-center fox chakra tails",
+      "rightward Great Fireball"
+    ],
+    "hounds": [
+      "pug",
+      "tan tracking dog",
+      "dark mastiff"
+    ],
+    "houndFrames": [
+      "trot left legs forward",
+      "trot opposite cycle",
+      "circle three-quarter turn",
+      "leap",
+      "bite",
+      "braced bite tug",
+      "release",
+      "settle"
+    ]
+  },
+  "prompts": {
+    "effectsFirst": "Use case: stylized-concept.\nAsset type: production 2D anime action game animation sprite atlas.\nCreate one high-resolution 3072 by 1152 PNG with a GENUINELY TRANSPARENT alpha background, arranged as EXACTLY 8 columns by 3 rows of invisible equal 384 by 384 square cells (24 independent frames total). Do not draw a grid. This sheet will be mechanically sliced into equal cells.\nArt style: original Naruto television anime inspired cel animation, clean dark ink contours, expressive hand-drawn flame shapes, crisp saturated color, limited cel shading. No pixel art.\nCRITICAL COMPOSITION: every isolated object centered in its cell, at least 65 pixels of completely empty transparent safety margin on ALL FOUR sides of EVERY cell. Every tongue of flame, tiny particle, claw-like tail tip and eye flourish must be fully inside its own cell. No frame touches another frame. No cropped silhouettes, no effects crossing cell boundaries. Keep each row on a consistent centerline, keep complete subjects modestly sized to preserve generous gaps. Truly transparent pixels outside artwork, never checkerboard texture, white or gray backdrop.\nROW 0, EIGHT FRAMES LEFT TO RIGHT: iconic Sharingan activation eye effect, a single front-facing disembodied stylized anime eye: sharp dark upper/lower eyelid strokes, pale white sclera, vivid red circular iris, black pupil and precisely three black tomoe. Frame 0 a tiny dark red activation glint; 1 narrow eyelid forming around small red iris; 2 fully opening recognizable red three-tomoe Sharingan eye; 3 the strongest fully open eye; 4 same full eye with small contained red arc accents; 5 eye shrinking inward; 6 small red curved dissipating wisps; 7 a few tiny red motes. No face, eyebrow, skin or character.\nROW 1: Naruto fox-shaped red-orange chakra tails swirling around a clearly EMPTY TRANSPARENT CENTER sized for a separately rendered character. There is NO fox body, fox head or person: ONLY distinct sinuous tapering flame-tail shapes wrapping around an empty oval. Eight progression frames LEFT TO RIGHT: 0 two small curling tail wisps form; 1 three tails grow; 2 several long tails swirl; 3 full flowing broad tail halo; 4 alternate full flowing halo pose; 5 tails sweep toward the RIGHT in a rush, still an empty central opening; 6 outward contained impact of separate tails; 7 sparse fading tail-shaped wisps. Crimson contours, hot red/orange inner planes, subtle gold accents. Complete graceful long tapered tails, no chopped flame ends; all within the safe box.\nROW 2: giant orange Great Fireball Jutsu facing and traveling to the RIGHT, eight flowing animation frames LEFT TO RIGHT: 0 compact orange ignition sphere; 1 growing round core and short tail; 2 large luminous orange-yellow compact round leading core on RIGHT with long decorative flame plume trailing LEFT; 3 same travel fireball with alternate curved plume; 4 another distinct flowing travel plume; 5 contained round starburst impact; 6 collapsing orange fire bloom with a few dark smoke curls; 7 small dying flame embers. Dark anime ink contours and rich orange cel layers, no blue flame, no photoreal bloom.\nDo not include text, labels, numbers, borders, panels, watermarks, characters, scenery, ground shadows, backdrop, checkerboard or any drawn grid. Exactly 24 clearly separated frames in an exact 8 by 3 layout.",
+    "houndsFirst": "Use case: stylized-concept.\nAsset type: production 2D anime action game animation sprite atlas.\nCreate one high-resolution 3072 by 1152 PNG with GENUINELY TRANSPARENT alpha background, EXACTLY 8 columns by 3 rows of invisible equal 384 by 384 square cells. 24 individual full-body ninja dog frames, eight per dog. This sheet will be mechanically sliced into equal square cells; exact rows and columns matter.\nStyle: original Naruto TV anime hand-drawn cel shading, clean dark ink contours, restrained natural canine colors, blue-black and muted Leaf-green ninja equipment. Readable expressive animal anatomy, not photorealistic and not pixel art.\nROW 0: the SAME small squat beige pug with dark muzzle, rounded ears, tight curled tail, stocky short legs, navy Leaf ninja vest and tiny forehead protector in all eight frames.\nROW 1: the SAME medium slender tan tracking dog with black muzzle, pointed ears, long straight tail, navy/Leaf-green ninja vest and Leaf forehead protector in all eight frames.\nROW 2: the SAME large muscular charcoal-black mastiff with broad square muzzle, folded ears, thick long tail, sturdy legs, blue-black ninja vest and Leaf forehead protector in all eight frames.\nIn every row the sequence is: COLUMN 0 circling/trotting, right-facing profile, near foreleg forward; COLUMN 1 right-facing trot with opposite leg cycle; COLUMN 2 right-facing trot with a subtle three-quarter turn toward viewer and legs gathering; COLUMN 3 airborne leap toward RIGHT with all four paws visible and tail trailing; COLUMN 4 airborne forward bite toward RIGHT with open jaw and clear teeth, body extended; COLUMN 5 grounded braced bite-and-tug toward RIGHT, jaws closed on empty space, front paws planted, rear paws pushing and tense neck; COLUMN 6 release toward RIGHT, mouth reopening slightly, body recoils back; COLUMN 7 settling on all four paws facing RIGHT, mouth closed.\nEvery frame has visibly distinct limb and torso action appropriate to the sequence. Maintain identical character identity, body proportions, equipment and scale across that row. Dogs face RIGHT except natural three-quarter turn in frame 2. Each dog is entirely inside its cell, never crosses any cell boundary. Keep all paws, ears, snouts and tails complete and uncropped. At least 60 pixels of entirely empty transparent safety margin on every side of every cell; even outstretched leap/bite frames fit in the safe center area. The big mastiff stays large relative to the pug but has safe margins.\nEmpty transparent background: no floor, ground shadow, frame, checkerboard, text, labels, numbering, panel lines, grid, human figures, enemies, props in jaws, bite spark, mouth glow, smoke, slash effects, saliva strings or other effects baked over mouths. Exactly 24 clean isolated canine sprites arranged in the exact 8 by 3 grid.",
+    "effectsSpacingEditFailed": "Use case: precise-object-edit.\nEdit this existing 8-column, 3-row Naruto effects atlas. Keep exactly the SAME 24 sprites, animation sequence, Sharingan design, transparent hollow chakra centers, vivid color, details and cel-ink style. The ONLY required change is atlas spacing: shrink EVERY sprite to 65 PERCENT of its current size, keep each one centered independently in its same cell, and place them on an EXACT 2048 by 768 TRANSPARENT PNG, eight columns by three rows of equal 256px square cells. At least 40 pixels of EMPTY alpha transparency must surround every sprite on ALL sides of its cell. Every tail tip and flame plume must fit fully inside its cell. Do not scale the sheet as a whole: scale down each of the 24 individual effects within its own cell. Keep all 24 positions and rows, but make every effect obviously much smaller with MUCH WIDER blank gaps than the reference. No clip, overlaps, cropped flames, backdrop or grid. Preserve genuine transparent alpha; all space between frames and all hollow chakra centers must be alpha zero. No background color, glow haze, shadow, checkerboard, labels or text. Preserve exact frame count and original artwork.",
+    "effectsSelected": "Create a GENUINELY TRANSPARENT PNG game sprite atlas, EXACT 2048x768 pixels, EIGHT columns and THREE rows, with 24 SMALL isolated anime special-effect sprites. Each invisible cell is 256x256. EVERY EFFECT MUST FIT IN THE CENTRAL 160x160 PIXELS OF ITS CELL. Huge fully transparent gutters, at least48px around each complete sprite. Tiny flame tips and particles also stay inside the safe area. No frame can touch a cell edge. Original Naruto anime cel animation: strong clean dark ink contours, expressive fluid shapes, crisp saturated color and cel shading.\nROW 1,8 frames from LEFT to RIGHT: isolated Sharingan eye activation sequence. Sharp black almond-shaped eyelids and pale sclera around a RED circular iris with BLACK pupil and exactly THREE black tomoe. 1 a small dark red glint;2 eyelid opening slightly;3 eye half open;4 strongest full-open Sharingan eye;5 full-open eye with small contained red arc accents;6 eye shrinking;7 curled fading red arcs;8 tiny red motes. No face, skin or character.\nROW 2,8 frames LEFT to RIGHT: Naruto red-orange fox chakra TAILS only, curving around a large EMPTY TRANSPARENT OVAL CENTER reserved for a separate character. No fox head or body, no character. Each frame consists of separate long sinuous tapering tail-shaped flames. 1 two small curved tails forming;2 three growing tails;3 full circular swirl;4 full flowering swirling tails;5 alternate flowing full halo;6 tails sweeping and rushing RIGHT with empty center;7 tails bursting outward;8 a few fading curved tail wisps. Deep crimson contours, bright red orange planes. All tails must be complete, never cropped.\nROW 3,8 frames LEFT to RIGHT: orange Great Fireball. 1 small ignition sphere;2 growing sphere with small plume;3 luminous large compact orange-yellow round core leading on RIGHT and a long elegant flame plume trailing LEFT;4 same fireball with distinctly changed curving plume;5 another different flowing plume frame;6 contained fiery starburst impact;7 collapsing orange fire bloom with dark smoke curls;8 dying flame sparks. Cel-ink contours.\nAll 24 sprites must stay small with enormous blank space between every frame. Exact8x3 equal grid, no background, no haze behind sprites, no scenery, text, numbers, borders, panels, characters, checkerboard or drawn grid. All blank space and all holes within the tail halos have alpha ZERO. Preserve full tails and flame plumes inside each central160x160 safe area.",
+    "houndsSelected": "Create a transparent PNG GAME SPRITE SHEET with exactly 24 SMALL FULL-BODY NINJA DOG drawings, arranged in 8 evenly spaced columns and 3 evenly spaced rows. Extremely wide empty transparent gaps between sprites. 2048x768 canvas divided conceptually into 256x256 cells; draw each dog ONLY inside the central 150x150 pixels of its cell. ALL TAILS AND PAWS FULLY VISIBLE. Huge blank outer border and blank gutters. No sprite can touch a cell edge.\nOriginal Naruto anime cel animation style, crisp dark ink outlines, two-tone cel shading, navy Leaf ninja vests, Leaf-symbol forehead protectors. Consistent proportions/size within a row.\nTop row is the same small beige pug with dark muzzle, short legs and tightly curled tail repeated 8 times.\nMiddle row is the same medium lean tan tracking dog with black muzzle, pointed ears and straight tail repeated 8 times.\nBottom row is the same large charcoal mastiff with broad square muzzle, floppy ears and long thick curved tail repeated 8 times.\nEach row has 8 poses LEFT TO RIGHT: 1 trot right with left legs forward; 2 trot right opposite leg cycle; 3 trot/circle a natural three-quarter view toward viewer; 4 leap RIGHT with paws raised and full tail; 5 airborne bite RIGHT with open jaws and teeth; 6 brace on all paws facing RIGHT with tense body tugging and jaws closed on empty air; 7 release bite RIGHT with slightly open mouth and recoiling body; 8 settle standing RIGHT with mouth closed.\nThe three breeds are distinct. The pug is small, the tracking dog medium, mastiff large; consistent scale for each dog through all 8 frames. These are isolated canine sprites only, NO humans, effects, props, prey, scenery, floor, shadow, text, labels, grid, numbering or borders. Genuinely transparent alpha-zero backdrop. No drawn checkerboard.\nMANDATORY: make all drawings small enough that every complete dog, INCLUDING THE WHOLE TAIL, occupies less than 60% of cell width and height. The rest of each cell must be transparent empty safety space. 24 full-body dog sprites total. Exact 8x3 grid."
+  },
+  "inspection": [
+    {
+      "path": "C:/Users/eshin/.codex/generated_images/01a07d80-3837-74f1-9aa6-c56196968519/exec-70cc2c27-caac-4517-b8df-9baee15d7c91.png",
+      "size": [
+        2048,
+        768
+      ],
+      "mode": "RGBA",
+      "alpha_zero_fraction": 0.8069864908854166,
+      "alpha_lt16_fraction": 0.8659661610921224,
+      "cells": [
+        {
+          "r": 0,
+          "c": 0,
+          "bbox_a32": [
+            84,
+            114,
+            204,
+            202
+          ],
+          "margins": [
+            84,
+            114,
+            52,
+            54
+          ]
+        },
+        {
+          "r": 0,
+          "c": 1,
+          "bbox_a32": [
+            57,
+            116,
+            188,
+            206
+          ],
+          "margins": [
+            57,
+            116,
+            68,
+            50
+          ]
+        },
+        {
+          "r": 0,
+          "c": 2,
+          "bbox_a32": [
+            89,
+            113,
+            183,
+            205
+          ],
+          "margins": [
+            89,
+            113,
+            73,
+            51
+          ]
+        },
+        {
+          "r": 0,
+          "c": 3,
+          "bbox_a32": [
+            65,
+            97,
+            195,
+            185
+          ],
+          "margins": [
+            65,
+            97,
+            61,
+            71
+          ]
+        },
+        {
+          "r": 0,
+          "c": 4,
+          "bbox_a32": [
+            60,
+            96,
+            195,
+            192
+          ],
+          "margins": [
+            60,
+            96,
+            61,
+            64
+          ]
+        },
+        {
+          "r": 0,
+          "c": 5,
+          "bbox_a32": [
+            61,
+            129,
+            196,
+            210
+          ],
+          "margins": [
+            61,
+            129,
+            60,
+            46
+          ]
+        },
+        {
+          "r": 0,
+          "c": 6,
+          "bbox_a32": [
+            85,
+            108,
+            194,
+            210
+          ],
+          "margins": [
+            85,
+            108,
+            62,
+            46
+          ]
+        },
+        {
+          "r": 0,
+          "c": 7,
+          "bbox_a32": [
+            65,
+            120,
+            181,
+            210
+          ],
+          "margins": [
+            65,
+            120,
+            75,
+            46
+          ]
+        },
+        {
+          "r": 1,
+          "c": 0,
+          "bbox_a32": [
+            54,
+            75,
+            220,
+            192
+          ],
+          "margins": [
+            54,
+            75,
+            36,
+            64
+          ]
+        },
+        {
+          "r": 1,
+          "c": 1,
+          "bbox_a32": [
+            45,
+            76,
+            222,
+            194
+          ],
+          "margins": [
+            45,
+            76,
+            34,
+            62
+          ]
+        },
+        {
+          "r": 1,
+          "c": 2,
+          "bbox_a32": [
+            76,
+            71,
+            182,
+            194
+          ],
+          "margins": [
+            76,
+            71,
+            74,
+            62
+          ]
+        },
+        {
+          "r": 1,
+          "c": 3,
+          "bbox_a32": [
+            57,
+            50,
+            220,
+            166
+          ],
+          "margins": [
+            57,
+            50,
+            36,
+            90
+          ]
+        },
+        {
+          "r": 1,
+          "c": 4,
+          "bbox_a32": [
+            58,
+            56,
+            216,
+            173
+          ],
+          "margins": [
+            58,
+            56,
+            40,
+            83
+          ]
+        },
+        {
+          "r": 1,
+          "c": 5,
+          "bbox_a32": [
+            49,
+            83,
+            213,
+            199
+          ],
+          "margins": [
+            49,
+            83,
+            43,
+            57
+          ]
+        },
+        {
+          "r": 1,
+          "c": 6,
+          "bbox_a32": [
+            57,
+            75,
+            196,
+            197
+          ],
+          "margins": [
+            57,
+            75,
+            60,
+            59
+          ]
+        },
+        {
+          "r": 1,
+          "c": 7,
+          "bbox_a32": [
+            26,
+            68,
+            202,
+            201
+          ],
+          "margins": [
+            26,
+            68,
+            54,
+            55
+          ]
+        },
+        {
+          "r": 2,
+          "c": 0,
+          "bbox_a32": [
+            55,
+            43,
+            230,
+            192
+          ],
+          "margins": [
+            55,
+            43,
+            26,
+            64
+          ]
+        },
+        {
+          "r": 2,
+          "c": 1,
+          "bbox_a32": [
+            50,
+            51,
+            230,
+            195
+          ],
+          "margins": [
+            50,
+            51,
+            26,
+            61
+          ]
+        },
+        {
+          "r": 2,
+          "c": 2,
+          "bbox_a32": [
+            76,
+            38,
+            193,
+            197
+          ],
+          "margins": [
+            76,
+            38,
+            63,
+            59
+          ]
+        },
+        {
+          "r": 2,
+          "c": 3,
+          "bbox_a32": [
+            38,
+            20,
+            218,
+            169
+          ],
+          "margins": [
+            38,
+            20,
+            38,
+            87
+          ]
+        },
+        {
+          "r": 2,
+          "c": 4,
+          "bbox_a32": [
+            30,
+            16,
+            207,
+            158
+          ],
+          "margins": [
+            30,
+            16,
+            49,
+            98
+          ]
+        },
+        {
+          "r": 2,
+          "c": 5,
+          "bbox_a32": [
+            35,
+            48,
+            224,
+            201
+          ],
+          "margins": [
+            35,
+            48,
+            32,
+            55
+          ]
+        },
+        {
+          "r": 2,
+          "c": 6,
+          "bbox_a32": [
+            55,
+            52,
+            210,
+            198
+          ],
+          "margins": [
+            55,
+            52,
+            46,
+            58
+          ]
+        },
+        {
+          "r": 2,
+          "c": 7,
+          "bbox_a32": [
+            18,
+            47,
+            201,
+            203
+          ],
+          "margins": [
+            18,
+            47,
+            55,
+            53
+          ]
+        }
+      ]
+    },
+    {
+      "path": "C:/Users/eshin/.codex/generated_images/01a07d80-3837-74f1-9aa6-c56196968519/exec-e22e914a-9593-4678-8c98-2544b8f6d8f6.png",
+      "size": [
+        2048,
+        768
+      ],
+      "mode": "RGBA",
+      "alpha_zero_fraction": 0.6817099253336588,
+      "alpha_lt16_fraction": 0.8093484242757162,
+      "cells": [
+        {
+          "r": 0,
+          "c": 0,
+          "bbox_a32": [
+            66,
+            115,
+            193,
+            140
+          ],
+          "margins": [
+            66,
+            115,
+            63,
+            116
+          ]
+        },
+        {
+          "r": 0,
+          "c": 1,
+          "bbox_a32": [
+            51,
+            98,
+            207,
+            151
+          ],
+          "margins": [
+            51,
+            98,
+            49,
+            105
+          ]
+        },
+        {
+          "r": 0,
+          "c": 2,
+          "bbox_a32": [
+            52,
+            81,
+            218,
+            160
+          ],
+          "margins": [
+            52,
+            81,
+            38,
+            96
+          ]
+        },
+        {
+          "r": 0,
+          "c": 3,
+          "bbox_a32": [
+            37,
+            66,
+            231,
+            173
+          ],
+          "margins": [
+            37,
+            66,
+            25,
+            83
+          ]
+        },
+        {
+          "r": 0,
+          "c": 4,
+          "bbox_a32": [
+            31,
+            41,
+            231,
+            211
+          ],
+          "margins": [
+            31,
+            41,
+            25,
+            45
+          ]
+        },
+        {
+          "r": 0,
+          "c": 5,
+          "bbox_a32": [
+            62,
+            98,
+            211,
+            151
+          ],
+          "margins": [
+            62,
+            98,
+            45,
+            105
+          ]
+        },
+        {
+          "r": 0,
+          "c": 6,
+          "bbox_a32": [
+            66,
+            64,
+            206,
+            189
+          ],
+          "margins": [
+            66,
+            64,
+            50,
+            67
+          ]
+        },
+        {
+          "r": 0,
+          "c": 7,
+          "bbox_a32": [
+            68,
+            70,
+            190,
+            178
+          ],
+          "margins": [
+            68,
+            70,
+            66,
+            78
+          ]
+        },
+        {
+          "r": 1,
+          "c": 0,
+          "bbox_a32": [
+            54,
+            39,
+            213,
+            203
+          ],
+          "margins": [
+            54,
+            39,
+            43,
+            53
+          ]
+        },
+        {
+          "r": 1,
+          "c": 1,
+          "bbox_a32": [
+            34,
+            31,
+            212,
+            203
+          ],
+          "margins": [
+            34,
+            31,
+            44,
+            53
+          ]
+        },
+        {
+          "r": 1,
+          "c": 2,
+          "bbox_a32": [
+            29,
+            27,
+            218,
+            218
+          ],
+          "margins": [
+            29,
+            27,
+            38,
+            38
+          ]
+        },
+        {
+          "r": 1,
+          "c": 3,
+          "bbox_a32": [
+            33,
+            13,
+            240,
+            222
+          ],
+          "margins": [
+            33,
+            13,
+            16,
+            34
+          ]
+        },
+        {
+          "r": 1,
+          "c": 4,
+          "bbox_a32": [
+            23,
+            18,
+            229,
+            233
+          ],
+          "margins": [
+            23,
+            18,
+            27,
+            23
+          ]
+        },
+        {
+          "r": 1,
+          "c": 5,
+          "bbox_a32": [
+            28,
+            31,
+            250,
+            207
+          ],
+          "margins": [
+            28,
+            31,
+            6,
+            49
+          ]
+        },
+        {
+          "r": 1,
+          "c": 6,
+          "bbox_a32": [
+            23,
+            4,
+            237,
+            231
+          ],
+          "margins": [
+            23,
+            4,
+            19,
+            25
+          ]
+        },
+        {
+          "r": 1,
+          "c": 7,
+          "bbox_a32": [
+            49,
+            39,
+            209,
+            201
+          ],
+          "margins": [
+            49,
+            39,
+            47,
+            55
+          ]
+        },
+        {
+          "r": 2,
+          "c": 0,
+          "bbox_a32": [
+            94,
+            86,
+            158,
+            146
+          ],
+          "margins": [
+            94,
+            86,
+            98,
+            110
+          ]
+        },
+        {
+          "r": 2,
+          "c": 1,
+          "bbox_a32": [
+            33,
+            59,
+            187,
+            166
+          ],
+          "margins": [
+            33,
+            59,
+            69,
+            90
+          ]
+        },
+        {
+          "r": 2,
+          "c": 2,
+          "bbox_a32": [
+            2,
+            30,
+            244,
+            194
+          ],
+          "margins": [
+            2,
+            30,
+            12,
+            62
+          ]
+        },
+        {
+          "r": 2,
+          "c": 3,
+          "bbox_a32": [
+            17,
+            21,
+            244,
+            187
+          ],
+          "margins": [
+            17,
+            21,
+            12,
+            69
+          ]
+        },
+        {
+          "r": 2,
+          "c": 4,
+          "bbox_a32": [
+            29,
+            41,
+            247,
+            196
+          ],
+          "margins": [
+            29,
+            41,
+            9,
+            60
+          ]
+        },
+        {
+          "r": 2,
+          "c": 5,
+          "bbox_a32": [
+            32,
+            17,
+            232,
+            222
+          ],
+          "margins": [
+            32,
+            17,
+            24,
+            34
+          ]
+        },
+        {
+          "r": 2,
+          "c": 6,
+          "bbox_a32": [
+            34,
+            17,
+            238,
+            211
+          ],
+          "margins": [
+            34,
+            17,
+            18,
+            45
+          ]
+        },
+        {
+          "r": 2,
+          "c": 7,
+          "bbox_a32": [
+            51,
+            37,
+            204,
+            199
+          ],
+          "margins": [
+            51,
+            37,
+            52,
+            57
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Both selected sources have real RGBA alpha, confirmed by composite over neutral gray. Colored backdrop visible in tool preview is behind transparent pixels, not opaque paint.",
+    "No source art or checkout edits were made; root owns integration.",
+    "All selected alpha>32 silhouette bboxes lie inside equal256px cells, no clipped tails or paws visually found. Low alpha glow exists. Effects min cell margin2px, hounds16px at alpha>32.",
+    "Import with fixed uniform scaling per entire sequence; do not normalize each opaque bbox. Suggested same 75-80% shrink plus transparent padding to increase gutters without animation scale pumping.",
+    "Keep chakra row as separate effects behind/around character, center empty. Fireball heads lead right.",
+    "First attempts not selected: hounds2039x771 first tracking dog tail touches/crops at far left; initial effects crowds slice boundaries.",
+    "One imagegen referenced_image_paths edit failed immediately because Windows sandbox could not read its generated input path (apply deny-read ACLs); regenerated brand-new selected source with stronger spacing prompt instead."
+  ]
+}

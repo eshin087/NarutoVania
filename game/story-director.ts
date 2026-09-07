@@ -1,3 +1,4 @@
+import {repairedClip} from './story-v22';
 import {rescueScene,snowScene} from './story-scenes-v14';
 import {dialogueDuration} from './presentation-v14';
 import type {CinemaMotion} from './cinematic-v13';
@@ -53,6 +54,7 @@ export function introClip(phase: StoryPhaseId): CinemaClip {
 }
 
 export function outroClip(phase: StoryPhaseId): CinemaClip {
+  const replacement=repairedClip(phase);if(replacement)return replacement;
 
   const common = [actor('kakashi', 560), actor('zabuza', 950, -1), actor('naruto', 260), actor('sasuke', 180), actor('sakura', 90), actor('tazuna', 40)];
 
@@ -66,14 +68,11 @@ export function outroClip(phase: StoryPhaseId): CinemaClip {
 
     case 'rescue': return rescueScene();
 
-    case 'copy': return {id:'hunter-nin-deception',arena:'lakeside',duration:17700,
-      actors:[actor('kakashi',370),actor('zabuza',1210,-1),actor('naruto',230),actor('sasuke',135),actor('sakura',75),actor('tazuna',25),actor('haku',1450,-1)],
-      cues:[{at:0,camera:0},{at:600,actor:'kakashi',animation:'cast'},{at:600,actor:'zabuza',animation:'cast'},
-       {at:900,motion:'dragon-clash'},{at:4200,actor:'kakashi',animation:'ultimate',motion:'counter-wave'},
-       {at:8000,actor:'haku',facing:-1,animation:'cast',motion:'hunter-throw'},
-       {at:10400,actor:'haku',x:1330,duration:700,animation:'run'},
-       {at:12000,actor:'kakashi',x:900,duration:1100,animation:'run'},
-       {at:14000,motion:'carry'},{at:16400,actor:'kakashi',animation:'idle'}]};
+    case 'copy': return {id:'hunter-nin-deception',authored:true,arena:'lakeside',duration:18500,
+      actors:[actor('kakashi',430),actor('zabuza',1130,-1),actor('naruto',260),actor('sasuke',180),actor('sakura',90),actor('tazuna',40),{...actor('haku',1450,-1),alpha:0}],
+      cues:[{at:2300,motion:'dragon-clash'},{at:5900,actor:'kakashi',animation:'cast',motion:'counter-wave'},
+       {at:9500,motion:'hunter-throw'},{at:13900,actor:'kakashi',x:880,duration:1100,animation:'run'},
+       {at:15100,motion:'carry'},{at:16000,actor:'kakashi',speech:'Those needles… Was he truly killed?'}]};
 
     case 'protect': return {id: 'simultaneous-bridge-battles', arena: 'bridge', duration: 9200,
 
@@ -358,8 +357,8 @@ function withDialogue(clip: CinemaClip): CinemaClip {
 
 /** Replay entries build their own actors; no seek through a running combat simulation. */
 function hunterSegment(departure:boolean):CinemaClip{
- const full=withDialogue(outroClip('copy')),start=departure?13500:7800;
+ const full=withDialogue(outroClip('copy')),start=departure?14800:9300;
  const actors=full.actors.map(a=>({...a}));
- for(const a of actors){if(a.id==='zabuza'){a.x=1280;a.animation=departure?'defeat':'idle';}if(a.id==='haku'){a.x=departure?1330:1450;a.facing=-1;}if(a.id==='kakashi')a.x=departure?900:370;}
- return{id:departure?'hunter-departure-replay':'hunter-needles-replay',arena:'lakeside',duration:17700-start,actors,cues:[{at:0,camera:0,zoom:.84},...full.cues.filter(c=>c.at>=start).map(c=>({...c,at:c.at-start}))]};
+ for(const a of actors){if(a.id==='zabuza'){a.x=1280;a.animation=departure?'defeat':'idle';}if(a.id==='haku'){a.x=departure?1395:1450;a.facing=-1;a.alpha=departure?1:0;}if(a.id==='kakashi')a.x=departure?900:370;}
+ return{id:departure?'hunter-departure-replay':'hunter-needles-replay',arena:'lakeside',authored:true,duration:18500-start,actors,cues:[{at:0,camera:0,zoom:.84},...full.cues.filter(c=>c.at>=start).map(c=>({...c,at:c.at-start}))]};
 }

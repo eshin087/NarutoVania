@@ -1,7 +1,8 @@
+import {pose22,attachment22} from './art-v22';
 import {makeEffect,animateEffect} from './effects-v14';
 import type * as Phaser from 'phaser';
 import {TargetedCinemaShot,clashStage} from './cinematic-motion';
-import {poseHakuV13,hakuThrowHand} from './art-v13';
+import {poseHakuV13} from './art-v13';
 import {namedArt,poseBattle} from './battle-art';
 import {poseHurt} from './art-v11';
 import {reactionPose} from './art-v10';
@@ -13,18 +14,18 @@ interface Shot{motion:TargetedCinemaShot;image:Phaser.GameObjects.Image;target:A
 /** Uses the story clock. Panel holds and pause therefore freeze every flight and carry step. */
 export class CinematicMotionV13{
  shots:Shot[]=[];clock=0;counterAt:number|null=null;counterHitAt:number|null=null;throwAt:number|null=null;thrown=false;collapseAt:number|null=null;clashAt:number|null=null;clashed=false;
- dragons:Phaser.GameObjects.Image[]=[];clash?:Phaser.GameObjects.Image;carryAt:number|null=null;carryX=0;carryDone=false;pair?:Phaser.GameObjects.Sprite;
- constructor(private scene:Phaser.Scene,private actors:ReadonlyMap<string,Actor>,private floor:number,private sounds:RecordedAudio,private releasePrison:()=>void,private shake:()=>void){}
+ dragons:Phaser.GameObjects.Image[]=[];clash?:Phaser.GameObjects.Image;carryAt:number|null=null;carryX=0;carryDone=false;revealed=false;rescueShots=0;pair?:Phaser.GameObjects.Sprite;
+ constructor(private scene:Phaser.Scene,private actors:ReadonlyMap<string,Actor>,private floor:number,private sounds:RecordedAudio,private releasePrison:()=>void,private shake:()=>void,private speak?:(id:string,text:string)=>void){}
  start(kind:CinemaMotion,at:number){
   this.clock=at;const haku=this.actors.get('haku'),zabuza=this.actors.get('zabuza'),naruto=this.actors.get('naruto'),kakashi=this.actors.get('kakashi');
-  if(kind==='rescue-shot'&&naruto&&zabuza){const y=zabuza.sprite.y-86;this.shot(naruto.sprite.x-28,y,zabuza,27,-86,'rescue');}
+  if(kind==='rescue-shot'&&naruto&&zabuza){const y=zabuza.sprite.y-86,hand=attachment22(naruto.sprite,'hand');this.shot(hand.x,y,zabuza,27,-86,'rescue');this.rescueShots++;}
   if(kind==='dragon-clash'&&kakashi&&zabuza){this.clashAt=at;this.clashed=false;for(const actor of [kakashi,zabuza]){actor.animation='cast';actor.animationAt=at;actor.settleAt=at+3000;}
    this.dragons=[1,-1].map(dir=>makeEffect(this.scene,'water-dragon',0,0,650,300).setOrigin(dir>0?.89:.11,.5).setFlipX(dir<0).setDepth(5));
    this.clash=this.scene.add.image(780,this.floor-215,'v13-clash','0').setScale(.8).setDepth(6).setVisible(false);
    this.scene.tweens.add({targets:this.scene.cameras.main,zoom:.84,scrollX:0,scrollY:0,duration:650,ease:'Sine.easeInOut'});this.sounds.softWater();
   }
   if(kind==='counter-wave'&&kakashi&&zabuza){this.counterAt=at;kakashi.animation='cast';kakashi.settleAt=at+1800;}
-  if(kind==='hunter-throw'&&haku){this.throwAt=at;this.thrown=false;haku.animation='cast';haku.animationAt=at;haku.settleAt=undefined;}
+  if(kind==='hunter-throw'&&haku){this.throwAt=at;this.thrown=false;haku.sprite.setAlpha(0);haku.animation='cast';haku.animationAt=at;haku.settleAt=undefined;}
   if(kind==='carry'&&haku&&zabuza){this.carryAt=at;this.carryX=haku.sprite.x;this.scene.tweens.killTweensOf(haku.sprite);this.scene.tweens.killTweensOf(zabuza.sprite);
    haku.sprite.setAlpha(0);zabuza.sprite.setAlpha(0);this.pair=this.scene.add.sprite(this.carryX,this.floor,'v13-haku-carry-zabuza','0').setDepth(5);this.sounds.effect('step',.3);
   }
@@ -38,7 +39,7 @@ export class CinematicMotionV13{
   const dt=Math.max(0,clock-this.clock);this.clock=clock;const zabuza=this.actors.get('zabuza'),haku=this.actors.get('haku');
   if(this.counterAt!==null&&clock-this.counterAt>=700&&zabuza){const k=this.actors.get('kakashi')!;this.shot(k.sprite.x+65,this.floor-85,zabuza,-35,-85,'counter');this.counterAt=null;this.sounds.softWater();}
   if(this.throwAt!==null&&haku){const age=clock-this.throwAt;poseHakuV13(haku.sprite,'senbon',age<85?0:age<145?1:age<205?2:age<300?3:age<430?4:5,haku.facing);
-   if(age>=205&&!this.thrown&&zabuza){this.thrown=true;const hand=hakuThrowHand(haku.sprite.x,haku.sprite.y,haku.facing);for(const offset of [-6,0,6])this.shot(hand.x,hand.y+offset,zabuza,8,-141+offset,'senbon');this.sounds.effect('swing',.5);}
+   if(age>=205&&!this.thrown&&zabuza){this.thrown=true;const camera=this.scene.cameras.main,x=camera.getWorldPoint(1280,0).x+95;for(const offset of [-6,0,6])this.shot(x,zabuza.sprite.y-141+offset,zabuza,8,-141+offset,'senbon');this.sounds.effect('swing',.5);}
    if(age>650)this.throwAt=null;
   }
   this.shots=this.shots.filter(s=>{
@@ -53,6 +54,7 @@ export class CinematicMotionV13{
    if(s.kind==='senbon'&&s.motion.contact){s.image.setAlpha(Math.max(0,1-s.motion.contactAge/180));if(s.motion.contactAge>=180){s.image.destroy();return false;}}
    if(s.motion.done){s.image.destroy();return false;}return true;
   });
+  if(this.collapseAt!==null&&haku&&this.carryAt===null){const age=clock-this.collapseAt-650;if(age>=0){haku.facing=-1;haku.sprite.setPosition(zabuza!.sprite.x+115,this.floor).setAlpha(Math.min(1,age/200));pose22(haku.sprite,'characters-a',3,Math.min(5,Math.floor(age/130)),-1);if(age>=650&&!this.revealed){this.revealed=true;this.speak?.('haku','I am a hunter-nin. Leave his body to me.');}}}
   if(this.counterHitAt!==null&&this.collapseAt===null&&zabuza&&clock-this.counterHitAt>250)reactionPose(zabuza.sprite,'zabuza','injured',clock-this.counterHitAt,zabuza.facing);
   if(this.collapseAt!==null&&zabuza&&this.carryAt===null){const age=clock-this.collapseAt;
    if(age<180)poseHurt(zabuza.sprite as Phaser.GameObjects.Sprite,'zabuza',age,-1);
@@ -74,5 +76,5 @@ export class CinematicMotionV13{
   }
  }
  get ready(){return this.carryAt===null||this.carryDone;}
- status(){return{shots:this.shots.map(s=>({kind:s.kind,x:s.image.x,y:s.image.y,contact:s.motion.contact,rotation:s.image.rotation})),clash:this.clashAt!==null?clashStage(this.clock-this.clashAt):null,needlesReleased:this.thrown,carrying:this.carryAt!==null,carryDone:this.carryDone};}
+ status(){return{rescueShots:this.rescueShots,hakuRevealed:this.revealed,shots:this.shots.map(s=>({kind:s.kind,x:s.image.x,y:s.image.y,contact:s.motion.contact,rotation:s.image.rotation})),clash:this.clashAt!==null?clashStage(this.clock-this.clashAt):null,needlesReleased:this.thrown,carrying:this.carryAt!==null,carryDone:this.carryDone};}
 }
