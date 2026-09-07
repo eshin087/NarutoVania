@@ -1,0 +1,743 @@
+{
+  "atlas": "zabuza-sword.webp",
+  "size": [
+    3072,
+    1152
+  ],
+  "columns": 6,
+  "rows": 3,
+  "cell": [
+    512,
+    384
+  ],
+  "anchor": [
+    256,
+    320
+  ],
+  "baseHeight": 211,
+  "referenceIdleBodyHeight": 211,
+  "sourceNeutralBodyHeight": 296,
+  "uniformAnatomicalScale": 0.7128378378378378,
+  "scaleMethod": "Uniform anatomy scale211/296 from upright neutral head-to-foot height; never normalized to weapon extent. Crouched poses remain naturally shorter.",
+  "handPointMethod": "Visually reviewed center of gripping hand or open palm in each generated pose, transformed with body scale.",
+  "frames": [
+    {
+      "index": 0,
+      "rect": [
+        0,
+        0,
+        512,
+        384
+      ],
+      "handRelativeToFeet": [
+        14.701,
+        -102.041
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceRect": [
+        0,
+        0,
+        256,
+        340
+      ],
+      "sourceFoot": [
+        108.0,
+        309
+      ],
+      "sourceScale": 0.8647540983606558,
+      "weaponHeld": true
+    },
+    {
+      "index": 1,
+      "rect": [
+        512,
+        0,
+        512,
+        384
+      ],
+      "handRelativeToFeet": [
+        13.836,
+        -84.746
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceRect": [
+        256,
+        0,
+        512,
+        340
+      ],
+      "sourceFoot": [
+        109.0,
+        309
+      ],
+      "sourceScale": 0.8647540983606558,
+      "weaponHeld": true
+    },
+    {
+      "index": 2,
+      "rect": [
+        1024,
+        0,
+        512,
+        384
+      ],
+      "handRelativeToFeet": [
+        105.932,
+        -156.52
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceRect": [
+        512,
+        0,
+        854,
+        340
+      ],
+      "sourceFoot": [
+        84.5,
+        309
+      ],
+      "sourceScale": 0.8647540983606558,
+      "weaponHeld": true
+    },
+    {
+      "index": 3,
+      "rect": [
+        1536,
+        0,
+        512,
+        384
+      ],
+      "handRelativeToFeet": [
+        86.475,
+        -130.578
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceRect": [
+        806,
+        0,
+        1024,
+        340
+      ],
+      "sourceFoot": [
+        97.0,
+        309
+      ],
+      "sourceScale": 0.8647540983606558,
+      "weaponHeld": false
+    },
+    {
+      "index": 4,
+      "rect": [
+        2048,
+        0,
+        512,
+        384
+      ],
+      "handRelativeToFeet": [
+        55.777,
+        -115.877
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceRect": [
+        1024,
+        0,
+        1280,
+        340
+      ],
+      "sourceFoot": [
+        129.5,
+        309
+      ],
+      "sourceScale": 0.8647540983606558,
+      "weaponHeld": false
+    },
+    {
+      "index": 5,
+      "rect": [
+        2560,
+        0,
+        512,
+        384
+      ],
+      "handRelativeToFeet": [
+        29.834,
+        -99.447
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceRect": [
+        1280,
+        0,
+        1536,
+        340
+      ],
+      "sourceFoot": [
+        112.5,
+        309
+      ],
+      "sourceScale": 0.8647540983606558,
+      "weaponHeld": false
+    },
+    {
+      "index": 6,
+      "rect": [
+        0,
+        384,
+        512,
+        384
+      ],
+      "handRelativeToFeet": [
+        21.619,
+        -98.582
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceRect": [
+        0,
+        340,
+        256,
+        682
+      ],
+      "sourceFoot": [
+        98.0,
+        290
+      ],
+      "sourceScale": 0.8647540983606558,
+      "weaponHeld": false
+    },
+    {
+      "index": 7,
+      "rect": [
+        512,
+        384,
+        512,
+        384
+      ],
+      "handRelativeToFeet": [
+        5.621,
+        -101.176
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceRect": [
+        256,
+        340,
+        512,
+        682
+      ],
+      "sourceFoot": [
+        119.5,
+        290
+      ],
+      "sourceScale": 0.8647540983606558,
+      "weaponHeld": false
+    },
+    {
+      "index": 8,
+      "rect": [
+        1024,
+        384,
+        512,
+        384
+      ],
+      "handRelativeToFeet": [
+        17.295,
+        -99.447
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceRect": [
+        512,
+        340,
+        768,
+        682
+      ],
+      "sourceFoot": [
+        119.0,
+        290
+      ],
+      "sourceScale": 0.8647540983606558,
+      "weaponHeld": false
+    },
+    {
+      "index": 9,
+      "rect": [
+        1536,
+        384,
+        512,
+        384
+      ],
+      "handRelativeToFeet": [
+        21.186,
+        -102.041
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceRect": [
+        768,
+        340,
+        1024,
+        682
+      ],
+      "sourceFoot": [
+        124.5,
+        290
+      ],
+      "sourceScale": 0.8647540983606558,
+      "weaponHeld": false
+    },
+    {
+      "index": 10,
+      "rect": [
+        2048,
+        384,
+        512,
+        384
+      ],
+      "handRelativeToFeet": [
+        31.131,
+        -98.582
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceRect": [
+        1024,
+        340,
+        1280,
+        682
+      ],
+      "sourceFoot": [
+        113.0,
+        290
+      ],
+      "sourceScale": 0.8647540983606558,
+      "weaponHeld": false
+    },
+    {
+      "index": 11,
+      "rect": [
+        2560,
+        384,
+        512,
+        384
+      ],
+      "handRelativeToFeet": [
+        35.023,
+        -98.582
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceRect": [
+        1280,
+        340,
+        1536,
+        682
+      ],
+      "sourceFoot": [
+        112.5,
+        290
+      ],
+      "sourceScale": 0.8647540983606558,
+      "weaponHeld": false
+    },
+    {
+      "index": 12,
+      "rect": [
+        0,
+        768,
+        512,
+        384
+      ],
+      "handRelativeToFeet": [
+        110.689,
+        -119.336
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceRect": [
+        0,
+        682,
+        256,
+        1024
+      ],
+      "sourceFoot": [
+        90.0,
+        264
+      ],
+      "sourceScale": 0.8647540983606558,
+      "weaponHeld": false
+    },
+    {
+      "index": 13,
+      "rect": [
+        512,
+        768,
+        512,
+        384
+      ],
+      "handRelativeToFeet": [
+        79.557,
+        -150.467
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceRect": [
+        256,
+        682,
+        512,
+        1024
+      ],
+      "sourceFoot": [
+        92.0,
+        266
+      ],
+      "sourceScale": 0.8647540983606558,
+      "weaponHeld": false
+    },
+    {
+      "index": 14,
+      "rect": [
+        1024,
+        768,
+        512,
+        384
+      ],
+      "handRelativeToFeet": [
+        -0.432,
+        -141.82
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceRect": [
+        512,
+        682,
+        802,
+        1024
+      ],
+      "sourceFoot": [
+        153.5,
+        266
+      ],
+      "sourceScale": 0.8647540983606558,
+      "weaponHeld": true
+    },
+    {
+      "index": 15,
+      "rect": [
+        1536,
+        768,
+        512,
+        384
+      ],
+      "handRelativeToFeet": [
+        42.373,
+        -107.23
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceRect": [
+        1024,
+        682,
+        1280,
+        1024
+      ],
+      "sourceFoot": [
+        72.0,
+        266
+      ],
+      "sourceScale": 0.8647540983606558,
+      "weaponHeld": true
+    },
+    {
+      "index": 16,
+      "rect": [
+        2048,
+        768,
+        512,
+        384
+      ],
+      "handRelativeToFeet": [
+        42.373,
+        -107.23
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceRect": [
+        1024,
+        682,
+        1280,
+        1024
+      ],
+      "sourceFoot": [
+        72.0,
+        266
+      ],
+      "sourceScale": 0.8647540983606558,
+      "weaponHeld": true
+    },
+    {
+      "index": 17,
+      "rect": [
+        2560,
+        768,
+        512,
+        384
+      ],
+      "handRelativeToFeet": [
+        25.51,
+        -97.717
+      ],
+      "anchor": [
+        256,
+        320
+      ],
+      "sourceRect": [
+        1280,
+        682,
+        1536,
+        1024
+      ],
+      "sourceFoot": [
+        95.5,
+        266
+      ],
+      "sourceScale": 0.8647540983606558,
+      "weaponHeld": true
+    }
+  ],
+  "animations": {
+    "release": {
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "durationMs": 940,
+      "loop": false,
+      "releaseAtMs": 700,
+      "releaseFrame": 3,
+      "heldSwordVisibleUntilFrame": 2,
+      "projectileSpawnPoint": [
+        369.34,
+        168.88
+      ],
+      "note": "Frames0-2 occupy the700ms windup. At700ms enter frame3 (empty hand), spawn projectile. Top-row3-5 can finish empty-hand followthrough before switching to wait.",
+      "heldFramesDurationMs": 700
+    },
+    "waiting": {
+      "frames": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "durationMs": 720,
+      "loop": true,
+      "heldSwordVisible": false,
+      "note": "Weaponless throughout outward/return travel1100ms or1250ms; six-frame loop repeats as needed."
+    },
+    "catch": {
+      "frames": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "durationMs": 500,
+      "loop": false,
+      "catchAtMs": 0,
+      "catchFrame": 14,
+      "catchHandPoint": [
+        356.51,
+        148.21
+      ],
+      "note": "Frames12-13 are anticipatory open-hand poses before arrival, not a delay after arrival. At actual projectile arrival enter contact frame14 immediately and hide separate projectile. Then frames15-17 recover over500ms. Contact is an event frame; root may hold one render tick.",
+      "preArrivalFrames": [
+        12,
+        13
+      ],
+      "contactFrame": 14,
+      "recoveryFrames": [
+        15,
+        16,
+        17
+      ],
+      "recoveryDurationMs": 500
+    },
+    "wait": {
+      "frames": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "durationMs": 720,
+      "loop": true,
+      "heldSwordVisible": false,
+      "note": "Weaponless throughout outward/return travel1100ms or1250ms; six-frame loop repeats as needed."
+    }
+  },
+  "timingProvenance": "Root-authored mechanics:700ms windup,1100/1250ms returning travel, catch contact on actual arrival,500ms recovery. Not derived from YouTube.",
+  "references": [
+    {
+      "file": "public/art-v2/zabuza-locomotion.png",
+      "role": "inspected body/costume reference"
+    },
+    {
+      "file": "public/art-v2/zabuza-sword.png",
+      "role": "inspected giant sword shape"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=RQJZeK1fAkU",
+      "role": "user-linked motion/audio reference only",
+      "listened": false,
+      "timestamps": null,
+      "audioExtracted": false
+    }
+  ],
+  "generation": "imagegen matched to pre-V14 idle. Baked background removed, uniform anatomical scale; source cell15 rejected for missing held sword.",
+  "qa": {
+    "componentCount": 18,
+    "allFacingRight": true,
+    "weaponlessWaiting": true,
+    "clearCatchContact": true,
+    "allFrameBoundsInsideCell": true,
+    "listenedToReference": false,
+    "visibleEdgePixelsPerFrame": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "allFramesUnclipped": true
+  },
+  "sequences": {
+    "release": {
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "durationMs": 940,
+      "loop": false,
+      "releaseAtMs": 700,
+      "releaseFrame": 3,
+      "heldSwordVisibleUntilFrame": 2,
+      "projectileSpawnPoint": [
+        369.34,
+        168.88
+      ],
+      "note": "Frames0-2 occupy the700ms windup. At700ms enter frame3 (empty hand), spawn projectile. Top-row3-5 can finish empty-hand followthrough before switching to wait.",
+      "heldFramesDurationMs": 700
+    },
+    "wait": {
+      "frames": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "durationMs": 720,
+      "loop": true,
+      "heldSwordVisible": false,
+      "note": "Weaponless throughout outward/return travel1100ms or1250ms; six-frame loop repeats as needed."
+    },
+    "catch": {
+      "frames": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "durationMs": 500,
+      "loop": false,
+      "catchAtMs": 0,
+      "catchFrame": 14,
+      "catchHandPoint": [
+        356.51,
+        148.21
+      ],
+      "note": "Frames12-13 are anticipatory open-hand poses before arrival, not a delay after arrival. At actual projectile arrival enter contact frame14 immediately and hide separate projectile. Then frames15-17 recover over500ms. Contact is an event frame; root may hold one render tick.",
+      "preArrivalFrames": [
+        12,
+        13
+      ],
+      "contactFrame": 14,
+      "recoveryFrames": [
+        15,
+        16,
+        17
+      ],
+      "recoveryDurationMs": 500
+    }
+  }
+}

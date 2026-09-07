@@ -1,7 +1,7 @@
 import {presentBody} from './presentation-v16';
-import {preloadV15,registerV15,poseRepair} from './art-v15';
+import {preloadV15,registerV15} from './art-v15';
 import {quietIdleFrame} from './presentation-v15';
-import {preloadCharacterArt,registerCharacterArt,poseCharacter,poseCharacterFrame} from './art-character-v14';
+import {preloadCharacterArt,registerCharacterArt,poseCharacter} from './art-character-v14';
 import {preloadCinemaArt,registerCinemaArt} from './art-cinema-v14';
 import {preloadEffects,registerEffects} from './effects-v14';
 import {preloadV13,registerV13} from './art-v13';
@@ -68,7 +68,6 @@ export function registerBattleArt(scene: Phaser.Scene) {registerV10(scene);regis
 }
 function poseBattleBase(sprite: Phaser.GameObjects.Sprite, id: CharacterId, animation: AnimationName, elapsed: number, facing: number, duration?: number, variant?: 'awakened' | 'unmasked' | 'final-stand') {
   if(id==='zabuza'&&variant==='final-stand'&&animation!=='defeat'){endingPose(sprite,id,animation,elapsed,facing);return;}
-  if(id==='zabuza'&&animation==='block'){poseRepair(sprite,elapsed<100?0:elapsed<200?1:elapsed<320?2:3,facing);return;}
   if(animation==='guardbreak'&&reactionPose(sprite,id,'guard-break',elapsed,facing))return;
   if(poseCharacter(sprite,id,animation,elapsed,facing,duration,variant))return;
   const frame = animation==='idle'?{sheet:'locomotion' as const,index:quietIdleFrame(elapsed,CHARACTERS.indexOf(id)*530)}:animationFrame(animation, elapsed, duration), metadata = artManifest(sprite.scene).characters[id];
@@ -94,8 +93,7 @@ export function namedArt(scene: Phaser.Scene, category: 'props' | 'effects', nam
 }
 
 export function poseZabuzaSword(sprite:Phaser.GameObjects.Sprite,frame:number,facing:number){
-  const row=Math.floor(frame/6)%3,set=Number(sprite.getData('choreography')||0)%2;
-  poseCharacterFrame(sprite,'zabuza','melee',set*18+row*6+frame%6,facing);
+  sprite.setTexture('v8-sword',String(frame%24)).setFlipX(facing<0);normalizeV11(sprite,'zabuza',facing);
 }
 
 function normalizeBody(sprite:Phaser.GameObjects.Sprite,id:CharacterId,facing:number){

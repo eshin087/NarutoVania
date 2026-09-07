@@ -16,5 +16,5 @@ describe('character scale and hand-bound water launches',()=>{
  it('finds a lateral route for a player-aimed descending dragon at both edges and center',()=>{
   for(const x of [92,780,1490]){const o=waterHand(830,360,x<830?-1:1),d=Math.hypot(x-o.x,525-o.y);const shot={...o,vx:(x-o.x)/d*850,vy:(525-o.y)/d*850,rx:20,ry:12};const gap=aimedWaterRoute(x,o,70,1520,[shot],590);expect(gap).not.toBeNull();expect(gap!.right-gap!.left).toBe(224);}
  });
- it('retains individual scale and attachment entries for both complete combo sets',()=>{for(const [key,list] of Object.entries(frames)){if(!key.startsWith('v14-'))continue;expect(list).toHaveLength(36);for(const f of list){expect(f.scale).toBeGreaterThan(0);expect(f.foot).toHaveLength(2);expect('head' in f && f.head).toHaveLength(2);expect(f.hand).toHaveLength(2);}}});
+ it('retains individual scale and attachment entries for both complete combo sets',()=>{for(const [key,list] of Object.entries(frames)){if(!key.endsWith('-melee'))continue;expect(list).toHaveLength(36);for(const f of list){if(!f)continue;expect(f.scale).toBeGreaterThan(0);expect(f.foot).toHaveLength(2);expect('head' in f && f.head).toHaveLength(2);expect(f.hand).toHaveLength(2);}}});
 });

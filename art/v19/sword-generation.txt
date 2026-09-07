@@ -1,0 +1,2 @@
+Source: C:\Users\eshin\.codex\generated_images\01a0700e-9aab-7040-b123-d472c87e3925\exec-14911cc3-1568-4683-a46d-b7733298fa76.png
+Prompt: replace Zabuza throw/catch atlas using repeated idle reference; tan bare chest, no harness, striped forearm/calf wraps, navy cloth, consistent body; 6x3 cells. Row1 throw/release, row2 weaponless, row3 catch/recovery. Generated 2026-09-06. Cell15 missing blade rejected; reuse correct held-blade recovery cell16. Alpha background cleanup and uniform atlas normalization authorized.
