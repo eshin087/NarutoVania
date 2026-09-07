@@ -24,7 +24,7 @@ class TitleScene extends Phaser.Scene {
   create() {
     this.add.image(640, 350, 'v2-lakeside-background').setDisplaySize(1320, 755).setTint(0x95b4bd);
     this.add.image(640, 622, 'v2-lakeside-ground').setDisplaySize(1320, 180);
-    const team = [{id: 'kakashi' as const, x: 920, y: 632, scale: 1.67}, {id: 'sasuke' as const, x: 1080, y: 650, scale: 1.62}, {id: 'sakura' as const, x: 1180, y: 650, scale: 1.59}, {id: 'naruto' as const, x: 810, y: 667, scale: 1.8}];
+    const team = [{id: 'kakashi' as const, x: 920, y: 575, scale: 1.67}, {id: 'sasuke' as const, x: 1080, y: 586, scale: 1.62}, {id: 'sakura' as const, x: 1180, y: 586, scale: 1.59}, {id: 'naruto' as const, x: 810, y: 590, scale: 1.8}];
     for (const a of team) {const sprite = this.add.sprite(a.x, a.y, `${a.id}-locomotion`, '6'); poseBattle(sprite, a.id, 'idle', 0, -1); sprite.setScale(sprite.scaleX * a.scale); this.time.addEvent({delay:200,loop:true,callback:()=>{poseBattle(sprite,a.id,'idle',this.time.now,-1);sprite.setScale(sprite.scaleX*a.scale);}});}
     bridge.patch({screen: 'title', boss: null,cinematic:'',panelWaiting:false,canAdvance:false,objective:'',phaseProgress:0});
   }

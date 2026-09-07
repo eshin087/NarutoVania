@@ -1,0 +1,8 @@
+outputs
+work
+.git
+.openai
+dist
+node_modules
+art
+*.tsbuildinfo

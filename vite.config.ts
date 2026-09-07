@@ -5,6 +5,6 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   css: { postcss: { plugins: [tailwindcss()] } },
-  plugins: [vinext(), sites()],
+  plugins: [vinext(), ...(process.env.VERCEL ? [] : [sites()])],
   server: { host: '127.0.0.1' },
 });
