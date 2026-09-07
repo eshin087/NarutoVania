@@ -5,7 +5,7 @@ import frames from '../public/art-v16/body-frames.json';
 import {COMBAT,type CharacterId} from './combat-core';
 export const VISUAL_RATIO:Record<CharacterId,number>={naruto:.95,sasuke:.95,kakashi:1,zabuza:1,haku:1,sakura:1};
 export function presentBody(sprite:Phaser.GameObjects.Sprite|Phaser.GameObjects.Image,id:CharacterId){
- const key=sprite.texture.key,index=Number(sprite.frame.name),record=(frames as Record<string,{scale:number;foot:number[];head:number[];hand:number[]}[]>)[key]?.[index];
+ const key=sprite.texture.key,index=Number(sprite.frame.name),record=(frames as Record<string,{scale:number;foot:number[];head?:number[];hand:number[]}[]>)[key]?.[index];
  const signature=`${key}:${index}:${sprite.scaleX}:${sprite.scaleY}`;
  if(sprite.getData('presentation16')===signature)return;
  if(record){sprite.setScale(record.scale*VISUAL_RATIO[id]);const [x,y]=record.foot;sprite.setOrigin(sprite.flipX?1-x/sprite.frame.width:x/sprite.frame.width,y/sprite.frame.height);}
@@ -13,8 +13,8 @@ export function presentBody(sprite:Phaser.GameObjects.Sprite|Phaser.GameObjects.
  sprite.setData('presentation16',`${key}:${index}:${sprite.scaleX}:${sprite.scaleY}`);
 }
 export function actorHead(sprite:Phaser.GameObjects.Sprite|Phaser.GameObjects.Image){
- const record=(frames as Record<string,{head:number[]}[]>)[sprite.texture.key]?.[Number(sprite.frame.name)];
- if(record){const [x,y]=record.head;return{x:sprite.x+(sprite.flipX?-1:1)*(x-sprite.frame.width*(sprite.flipX?1-sprite.originX:sprite.originX))*sprite.scaleX,y:sprite.y+(y-sprite.frame.height*sprite.originY)*sprite.scaleY};}
+ const record=(frames as Record<string,{head?:number[]}[]>)[sprite.texture.key]?.[Number(sprite.frame.name)];
+ if(record?.head){const [x,y]=record.head;return{x:sprite.x+(sprite.flipX?-1:1)*(x-sprite.frame.width*(sprite.flipX?1-sprite.originX:sprite.originX))*sprite.scaleX,y:sprite.y+(y-sprite.frame.height*sprite.originY)*sprite.scaleY};}
  const bounds=visibleBodyBounds(sprite);return{x:bounds.centerX,y:bounds.top+8};
 }
 export const CAST_HANDS=[[254,200],[290,143],[327,177],[295,195],[271,246],[252,244]];
@@ -37,3 +37,4 @@ export function visibleBodyBounds(sprite:Phaser.GameObjects.Sprite|Phaser.GameOb
  const x=sprite.x+((sprite.flipX?w-b[2]:b[0])-sprite.originX*w)*sprite.scaleX,y=sprite.y+(b[1]-sprite.originY*h)*sprite.scaleY,width=(b[2]-b[0])*sprite.scaleX,height=(b[3]-b[1])*sprite.scaleY;
  return{x,y,width,height,left:x,right:x+width,top:y,bottom:y+height,centerX:x+width/2,centerY:y+height/2};
 }
+

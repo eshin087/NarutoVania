@@ -17,9 +17,10 @@ for a in manifest['assets']:
  id=a['key'][:-6];rows=[]
  for f in a['frames']:
   i=f['index'];head=heads.get(id,heads.get('naruto') if id=='naruto-awakened' else None)
-  target=27.0 if id=='zabuza' else 21.6
+  target=20.5 if id=='zabuza' else 21.6
   scale=target/head[i] if head else heights[id]/240*old['characters'][a['key']][i]['bodyScale']
   ax,ay=f['footAnchor'];rows.append({'scale':scale,'foot':[ax,ay],'head':[ax+20,ay-210],'hand':[ax+65,ay-135], 'headDiameter':head[i] if head else None,'referenceHeadDiameter':target if head else None,'measurement':'approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor'})
  out['v14-'+a['key']]=rows
-(dst/'body-frames.json').write_text(json.dumps(out,indent=2))
+# Preserve subsequent reviewed profiles when reimporting the mirror.
+if not (dst/'body-frames.json').exists(): (dst/'body-frames.json').write_text(json.dumps(out,indent=2))
 (archive/'mirror-prompt.txt').write_text('Built-in imagegen: complete upright cel-shaded cyan ice mirror, broad quiet interior, transparent background, no character, no text; full top and bottom borders. Generated 2026-09-06. Source '+str(src))

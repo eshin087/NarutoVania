@@ -2601,10 +2601,10 @@
   ],
   "v14-zabuza-melee": [
     {
-      "scale": 0.9642857142857143,
+      "scale": 0.7321428571428571,
       "foot": [
         192.0,
-        345.0
+        345
       ],
       "head": [
         212.0,
@@ -2615,14 +2615,14 @@
         210.0
       ],
       "headDiameter": 28,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9642857142857143,
+      "scale": 0.7321428571428571,
       "foot": [
         192.0,
-        345.0
+        345
       ],
       "head": [
         212.0,
@@ -2633,14 +2633,14 @@
         210.0
       ],
       "headDiameter": 28,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9310344827586207,
+      "scale": 0.7068965517241379,
       "foot": [
         192.0,
-        345.0
+        345
       ],
       "head": [
         212.0,
@@ -2651,14 +2651,14 @@
         210.0
       ],
       "headDiameter": 29,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9642857142857143,
+      "scale": 0.7321428571428571,
       "foot": [
         198.75,
-        345.0
+        342
       ],
       "head": [
         218.75,
@@ -2669,14 +2669,14 @@
         210.0
       ],
       "headDiameter": 28,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 1.0,
+      "scale": 0.7592592592592593,
       "foot": [
         226.875,
-        345.0
+        340
       ],
       "head": [
         246.875,
@@ -2687,14 +2687,14 @@
         210.0
       ],
       "headDiameter": 27,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9642857142857143,
+      "scale": 0.7321428571428571,
       "foot": [
         192.0,
-        345.0
+        330
       ],
       "head": [
         212.0,
@@ -2705,14 +2705,14 @@
         210.0
       ],
       "headDiameter": 28,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9642857142857143,
+      "scale": 0.7321428571428571,
       "foot": [
         192.0,
-        345.0
+        345
       ],
       "head": [
         212.0,
@@ -2723,14 +2723,14 @@
         210.0
       ],
       "headDiameter": 28,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9310344827586207,
+      "scale": 0.7068965517241379,
       "foot": [
         192.0,
-        345.0
+        345
       ],
       "head": [
         212.0,
@@ -2741,14 +2741,14 @@
         210.0
       ],
       "headDiameter": 29,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9642857142857143,
+      "scale": 0.7321428571428571,
       "foot": [
         109.5,
-        345.0
+        345
       ],
       "head": [
         129.5,
@@ -2759,14 +2759,14 @@
         210.0
       ],
       "headDiameter": 28,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9642857142857143,
+      "scale": 0.7321428571428571,
       "foot": [
         107.25,
-        345.0
+        345
       ],
       "head": [
         127.25,
@@ -2777,14 +2777,14 @@
         210.0
       ],
       "headDiameter": 28,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 1.0,
+      "scale": 0.7592592592592593,
       "foot": [
         192.0,
-        345.0
+        345
       ],
       "head": [
         212.0,
@@ -2795,14 +2795,14 @@
         210.0
       ],
       "headDiameter": 27,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9642857142857143,
+      "scale": 0.7321428571428571,
       "foot": [
         192.0,
-        345.0
+        340
       ],
       "head": [
         212.0,
@@ -2813,14 +2813,14 @@
         210.0
       ],
       "headDiameter": 28,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9642857142857143,
+      "scale": 0.7321428571428571,
       "foot": [
         183.0,
-        345.0
+        345
       ],
       "head": [
         203.0,
@@ -2831,14 +2831,14 @@
         210.0
       ],
       "headDiameter": 28,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9642857142857143,
+      "scale": 0.7321428571428571,
       "foot": [
         159.0,
-        345.0
+        345
       ],
       "head": [
         179.0,
@@ -2849,14 +2849,14 @@
         210.0
       ],
       "headDiameter": 28,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9310344827586207,
+      "scale": 0.7068965517241379,
       "foot": [
         155.625,
-        345.0
+        345
       ],
       "head": [
         175.625,
@@ -2867,14 +2867,14 @@
         210.0
       ],
       "headDiameter": 29,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9642857142857143,
+      "scale": 0.7321428571428571,
       "foot": [
         171.75,
-        345.0
+        345
       ],
       "head": [
         191.75,
@@ -2885,14 +2885,14 @@
         210.0
       ],
       "headDiameter": 28,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 1.0,
+      "scale": 0.7592592592592593,
       "foot": [
         165.0,
-        345.0
+        345
       ],
       "head": [
         185.0,
@@ -2903,14 +2903,14 @@
         210.0
       ],
       "headDiameter": 27,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9642857142857143,
+      "scale": 0.7321428571428571,
       "foot": [
         192.0,
-        345.0
+        345
       ],
       "head": [
         212.0,
@@ -2921,14 +2921,14 @@
         210.0
       ],
       "headDiameter": 28,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9642857142857143,
+      "scale": 0.7321428571428571,
       "foot": [
         192.0,
-        345.0
+        345
       ],
       "head": [
         212.0,
@@ -2939,14 +2939,14 @@
         210.0
       ],
       "headDiameter": 28,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9310344827586207,
+      "scale": 0.7068965517241379,
       "foot": [
         71.25,
-        345.0
+        345
       ],
       "head": [
         91.25,
@@ -2957,14 +2957,14 @@
         210.0
       ],
       "headDiameter": 29,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9642857142857143,
+      "scale": 0.7321428571428571,
       "foot": [
         60.75,
-        345.0
+        345
       ],
       "head": [
         80.75,
@@ -2975,14 +2975,14 @@
         210.0
       ],
       "headDiameter": 28,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9642857142857143,
+      "scale": 0.7321428571428571,
       "foot": [
         52.5,
-        345.0
+        345
       ],
       "head": [
         72.5,
@@ -2993,14 +2993,14 @@
         210.0
       ],
       "headDiameter": 28,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 1.0,
+      "scale": 0.7592592592592593,
       "foot": [
         192.0,
-        345.0
+        345
       ],
       "head": [
         212.0,
@@ -3011,14 +3011,14 @@
         210.0
       ],
       "headDiameter": 27,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9642857142857143,
+      "scale": 0.7321428571428571,
       "foot": [
         192.0,
-        345.0
+        345
       ],
       "head": [
         212.0,
@@ -3029,14 +3029,14 @@
         210.0
       ],
       "headDiameter": 28,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9642857142857143,
+      "scale": 0.7321428571428571,
       "foot": [
         192.0,
-        345.0
+        345
       ],
       "head": [
         212.0,
@@ -3047,14 +3047,14 @@
         210.0
       ],
       "headDiameter": 28,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9642857142857143,
+      "scale": 0.7321428571428571,
       "foot": [
         141.75,
-        345.0
+        345
       ],
       "head": [
         161.75,
@@ -3065,14 +3065,14 @@
         210.0
       ],
       "headDiameter": 28,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9310344827586207,
+      "scale": 0.7068965517241379,
       "foot": [
         114.75,
-        345.0
+        345
       ],
       "head": [
         134.75,
@@ -3083,14 +3083,14 @@
         210.0
       ],
       "headDiameter": 29,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9642857142857143,
+      "scale": 0.7321428571428571,
       "foot": [
         174.0,
-        345.0
+        345
       ],
       "head": [
         194.0,
@@ -3101,14 +3101,14 @@
         210.0
       ],
       "headDiameter": 28,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9642857142857143,
+      "scale": 0.7321428571428571,
       "foot": [
         192.0,
-        345.0
+        345
       ],
       "head": [
         212.0,
@@ -3119,14 +3119,14 @@
         210.0
       ],
       "headDiameter": 28,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9642857142857143,
+      "scale": 0.7321428571428571,
       "foot": [
         192.375,
-        345.0
+        345
       ],
       "head": [
         212.375,
@@ -3137,14 +3137,14 @@
         210.0
       ],
       "headDiameter": 28,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9642857142857143,
+      "scale": 0.7321428571428571,
       "foot": [
         192.0,
-        345.0
+        345
       ],
       "head": [
         212.0,
@@ -3155,14 +3155,14 @@
         210.0
       ],
       "headDiameter": 28,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9310344827586207,
+      "scale": 0.7068965517241379,
       "foot": [
         192.0,
-        345.0
+        345
       ],
       "head": [
         212.0,
@@ -3173,14 +3173,14 @@
         210.0
       ],
       "headDiameter": 29,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9642857142857143,
+      "scale": 0.7321428571428571,
       "foot": [
         192.0,
-        345.0
+        345
       ],
       "head": [
         212.0,
@@ -3191,14 +3191,14 @@
         210.0
       ],
       "headDiameter": 28,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9642857142857143,
+      "scale": 0.7321428571428571,
       "foot": [
         147.75,
-        345.0
+        345
       ],
       "head": [
         167.75,
@@ -3209,14 +3209,14 @@
         210.0
       ],
       "headDiameter": 28,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 1.0,
+      "scale": 0.7592592592592593,
       "foot": [
         173.25,
-        345.0
+        345
       ],
       "head": [
         193.25,
@@ -3227,14 +3227,14 @@
         210.0
       ],
       "headDiameter": 27,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     },
     {
-      "scale": 0.9642857142857143,
+      "scale": 0.7321428571428571,
       "foot": [
         192.0,
-        345.0
+        345
       ],
       "head": [
         212.0,
@@ -3245,8 +3245,8 @@
         210.0
       ],
       "headDiameter": 28,
-      "referenceHeadDiameter": 27.0,
-      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+      "referenceHeadDiameter": 20.5,
+      "measurement": "V17 visual comparison against locomotion frame 6: matched head width and shoulder-to-belt length, excluding sword and crouched pose height."
     }
   ],
   "v14-haku-masked-melee": [
@@ -5197,6 +5197,1104 @@
       "headDiameter": null,
       "referenceHeadDiameter": null,
       "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    }
+  ],
+  "zabuza-locomotion": [
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    }
+  ],
+  "zabuza-techniques": [
+    {
+      "scale": 0.7439810426540284,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7439810426540284,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7439810426540284,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7439810426540284,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7439810426540284,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7439810426540284,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7439810426540284,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7439810426540284,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7439810426540284,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7439810426540284,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7439810426540284,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7439810426540284,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7439810426540284,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7439810426540284,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7439810426540284,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7439810426540284,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7439810426540284,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7439810426540284,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7439810426540284,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7439810426540284,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7439810426540284,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7439810426540284,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7439810426540284,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    },
+    {
+      "scale": 0.7439810426540284,
+      "foot": [
+        192,
+        307
+      ],
+      "hand": [
+        252,
+        187
+      ]
+    }
+  ],
+  "v9-zabuza-aerial": [
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        307
+      ],
+      "hand": [
+        316,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        307
+      ],
+      "hand": [
+        316,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        307
+      ],
+      "hand": [
+        316,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        307
+      ],
+      "hand": [
+        316,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        307
+      ],
+      "hand": [
+        316,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        307
+      ],
+      "hand": [
+        316,
+        187
+      ]
+    }
+  ],
+  "v10-zabuza-guard-break": [
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        307
+      ],
+      "hand": [
+        316,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        307
+      ],
+      "hand": [
+        316,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        307
+      ],
+      "hand": [
+        316,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        307
+      ],
+      "hand": [
+        316,
+        187
+      ]
+    }
+  ],
+  "v10-zabuza-injured": [
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        307
+      ],
+      "hand": [
+        316,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        307
+      ],
+      "hand": [
+        316,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        307
+      ],
+      "hand": [
+        316,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        307
+      ],
+      "hand": [
+        316,
+        187
+      ]
+    }
+  ],
+  "v11-zabuza-hurt": [
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        307
+      ],
+      "hand": [
+        316,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        307
+      ],
+      "hand": [
+        316,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        307
+      ],
+      "hand": [
+        316,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        307
+      ],
+      "hand": [
+        316,
+        187
+      ]
+    }
+  ],
+  "v11-zabuza-weaponless-hurt": [
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        307
+      ],
+      "hand": [
+        316,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        307
+      ],
+      "hand": [
+        316,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        307
+      ],
+      "hand": [
+        316,
+        187
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        307
+      ],
+      "hand": [
+        316,
+        187
+      ]
+    }
+  ],
+  "v10-sword": [
+    {
+      "scale": 0.7281516587677725,
+      "foot": [
+        256,
+        320
+      ],
+      "hand": [
+        242.46,
+        218.78
+      ]
+    },
+    {
+      "scale": 0.7281516587677725,
+      "foot": [
+        256,
+        320
+      ],
+      "hand": [
+        235.32999999999998,
+        155.33
+      ]
+    },
+    {
+      "scale": 0.7281516587677725,
+      "foot": [
+        256,
+        320
+      ],
+      "hand": [
+        356.51,
+        169.59
+      ]
+    },
+    {
+      "scale": 0.7281516587677725,
+      "foot": [
+        256,
+        320
+      ],
+      "hand": [
+        369.34000000000003,
+        168.88
+      ]
+    },
+    {
+      "scale": 0.7281516587677725,
+      "foot": [
+        256,
+        320
+      ],
+      "hand": [
+        347.24,
+        251.57
+      ]
+    },
+    {
+      "scale": 0.7281516587677725,
+      "foot": [
+        256,
+        320
+      ],
+      "hand": [
+        315.88,
+        210.94
+      ]
+    },
+    {
+      "scale": 0.7281516587677725,
+      "foot": [
+        256,
+        320
+      ],
+      "hand": [
+        323.01,
+        195.97
+      ]
+    },
+    {
+      "scale": 0.7281516587677725,
+      "foot": [
+        256,
+        320
+      ],
+      "hand": [
+        326.57,
+        173.87
+      ]
+    },
+    {
+      "scale": 0.7281516587677725,
+      "foot": [
+        256,
+        320
+      ],
+      "hand": [
+        319.44,
+        171.73
+      ]
+    },
+    {
+      "scale": 0.7281516587677725,
+      "foot": [
+        256,
+        320
+      ],
+      "hand": [
+        335.84000000000003,
+        178.15
+      ]
+    },
+    {
+      "scale": 0.7281516587677725,
+      "foot": [
+        256,
+        320
+      ],
+      "hand": [
+        328.71,
+        216.64
+      ]
+    },
+    {
+      "scale": 0.7281516587677725,
+      "foot": [
+        256,
+        320
+      ],
+      "hand": [
+        314.45,
+        169.59
+      ]
+    },
+    {
+      "scale": 0.7281516587677725,
+      "foot": [
+        256,
+        320
+      ],
+      "hand": [
+        363.64,
+        144.64
+      ]
+    },
+    {
+      "scale": 0.7281516587677725,
+      "foot": [
+        256,
+        320
+      ],
+      "hand": [
+        349.38,
+        158.9
+      ]
+    },
+    {
+      "scale": 0.7281516587677725,
+      "foot": [
+        256,
+        320
+      ],
+      "hand": [
+        356.51,
+        148.21
+      ]
+    },
+    {
+      "scale": 0.7281516587677725,
+      "foot": [
+        256,
+        320
+      ],
+      "hand": [
+        305.19,
+        196.68
+      ]
+    },
+    {
+      "scale": 0.7281516587677725,
+      "foot": [
+        256,
+        320
+      ],
+      "hand": [
+        249.58,
+        220.92000000000002
+      ]
+    },
+    {
+      "scale": 0.7281516587677725,
+      "foot": [
+        256,
+        320
+      ],
+      "hand": [
+        260.28,
+        223.76999999999998
+      ]
+    }
+  ],
+  "v11-zabuza-cast": [
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        320
+      ],
+      "hand": [
+        254,
+        200
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        320
+      ],
+      "hand": [
+        290,
+        143
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        320
+      ],
+      "hand": [
+        327,
+        177
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        320
+      ],
+      "hand": [
+        295,
+        195
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        320
+      ],
+      "hand": [
+        271,
+        246
+      ]
+    },
+    {
+      "scale": 0.7914691943127963,
+      "foot": [
+        256,
+        320
+      ],
+      "hand": [
+        252,
+        244
+      ]
+    }
+  ],
+  "v15-reactions": [
+    {
+      "scale": 0.92,
+      "foot": [
+        128,
+        224
+      ],
+      "hand": [
+        170,
+        135
+      ]
+    },
+    {
+      "scale": 0.92,
+      "foot": [
+        128,
+        224
+      ],
+      "hand": [
+        170,
+        135
+      ]
+    },
+    {
+      "scale": 0.92,
+      "foot": [
+        128,
+        224
+      ],
+      "hand": [
+        170,
+        135
+      ]
+    },
+    {
+      "scale": 0.92,
+      "foot": [
+        128,
+        224
+      ],
+      "hand": [
+        170,
+        135
+      ]
     }
   ]
 }
