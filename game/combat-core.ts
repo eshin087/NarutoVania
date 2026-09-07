@@ -45,7 +45,7 @@ export const defensive = (action: CombatAction) => ['dash', 'airdash', 'slide', 
 const strike = (index: number): AttackDefinition => ({
   id: `light${index}`, action: `light${index}` as CombatAction, animation: `light${index}` as AnimationName,
   duration: [0, 357, 391, 479][index], cancelAt: [0, 247, 276, 349][index],
-  stamina: [0, 5, 6, 8][index], move: [0, 100, 125, 150][index],
+  stamina: [0, 5, 6, 8][index], move: 0,
   events: [{at: [0, 130, 150, 205][index], kind: 'effect', effect: 'swing'},
     {at: [0, 170, 195, 245][index], kind: 'hit', damage: [0, 24, 30, 42][index], posture: [0, 6, 8, 12][index], range: [0, 100, 122, 140][index], height: 100}],
 });
@@ -215,3 +215,4 @@ export function hurtbox(x: number, footY: number, sliding: boolean) {return {x: 
 export function overlaps(a: {x: number; y: number; width: number; height: number}, b: {x: number; y: number; width: number; height: number}) {
   return a.x < b.x + b.width && a.x + a.width > b.x && a.y < b.y + b.height && a.y + a.height > b.y;
 }
+
