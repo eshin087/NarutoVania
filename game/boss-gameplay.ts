@@ -1,5 +1,6 @@
+import {waterHand,launchFromHand,aimedWaterRoute,visibleBodyBounds} from './presentation-v16';
 import {waterImpact,waveGroundAnchor} from './art-v15';
-import {mirrorVisual} from './mirror-v15';
+import {mirrorVisual,poseReflection,fitAllMirrors} from './mirror-v15';
 import {animateEffect,makeEffect} from './effects-v14';
 import {chooseCorridor,entersCorridor,sweptContact,groundContact,waterFrame,type WaterPresentation,type WaterEndReason} from './presentation-v15';
 import {mirrorFeet} from './presentation-v14';
@@ -7,7 +8,7 @@ import {CinematicMotionV14} from './cinematic-v14';
 import {poseHakuV13} from './art-v13';
 import {MirrorExit} from './cinematic-motion';
 import {poseWaterCast,poseHurt,waveOutline} from './art-v11';
-import {BARRAGES,BarrageTimeline,spiritTarget,chooseVariant,type BarrageId,type PreparedVolley} from './barrages';
+import {BARRAGES,BarrageTimeline,chooseVariant,type BarrageId,type PreparedVolley} from './barrages';
 import {reactionPose,swordPose,swordHand,endingPose} from './art-v10';
 import {ReturningSword} from './returning-sword';
 import {bossParryEligible} from './boss-ai';
@@ -31,7 +32,7 @@ import {UltimateBurst} from './ultimate-burst';
 
 type BodyObject = Phaser.GameObjects.Rectangle & {body: Phaser.Physics.Arcade.Body};
 interface Fighter {key: string; model: Combatant; body: BodyObject; sprite: Phaser.GameObjects.Sprite; shadow: Phaser.GameObjects.Ellipse; animation: AnimationName; animationAt: number; lastStep: number; ally: boolean; hostile: boolean; expires: number; nextAttack: number; support?: SupportBrain; guardUntil?: number; supportCasts?: number; rush?: {x: number; until: number; serial: number};}
-interface Projectile {water?:WaterPresentation;groundWave?:boolean;groundEndX?:number;image: Phaser.GameObjects.Image; x: number; y: number; vx: number; vy: number; damage: number; posture: number; red: boolean; friendly: boolean; owner: Fighter; expires: number; rx: number; ry: number; kind: string; hit: Set<string>; pooled?:boolean;barrage?:boolean;safeGap?:{left:number;right:number};sword?:ReturningSword; returnAt?: number; waterRow?:number;iceBarrage?:boolean; born:number; trail:{x:number;y:number}[];}
+interface Projectile {handLaunch?:boolean;water?:WaterPresentation;groundWave?:boolean;groundEndX?:number;image: Phaser.GameObjects.Image; x: number; y: number; vx: number; vy: number; damage: number; posture: number; red: boolean; friendly: boolean; owner: Fighter; expires: number; rx: number; ry: number; kind: string; hit: Set<string>; pooled?:boolean;barrage?:boolean;safeGap?:{left:number;right:number};sword?:ReturningSword; returnAt?: number; waterRow?:number;iceBarrage?:boolean; born:number; trail:{x:number;y:number}[];}
 interface VisualEffect {image: Phaser.GameObjects.Image; born: number; duration: number; width: number; grow: number; spin: number; effectName?:string; waterRow?:number;iceBarrage?:boolean; tidal?: {owner:Fighter;event:AttackEvent;key:string;x:number;hit:boolean};}
 interface MirrorVisual {image: Phaser.GameObjects.Image; reflection: Phaser.GameObjects.Sprite; halo: Phaser.GameObjects.Ellipse;}
 interface Decoy {image: Phaser.GameObjects.Image; x: number; y: number; expires: number;}
@@ -73,12 +74,12 @@ export class BossGameScene extends Phaser.Scene {
     this.director = new StoryDirector(this.phase, {enter: state => this.enterPhase(state), cinematic: clip => this.startCinema(clip), cue: cue => this.cinemaCue(cue), complete: () => this.finishChapter(),ready:()=>this.cinemaMotion?.ready!==false,transition:next=>this.transition(next)});
     if(this.entryScene)this.director.startScene(this.entryScene);else this.director.start(this.registry.get('view-boss-intro')); this.inputs.clear(); void this.sounds.unlock();
     // Phaser tears down physics before user shutdown listeners. Let its scene systems own disposal.
-    this.events.once('shutdown', () => {this.inputs.clear(); this.sounds.stopEffects();});
+    this.events.once('shutdown', () => {this.cinemaPresentation?.destroy();this.cinemaPresentation=null;this.inputs.clear(); this.sounds.stopEffects();});
   }
   private clearStage() {
-    this.mirrorExit=null;this.variantHistory={};this.barrage=null;this.projectilePool=[];this.barrageHazards=[];this.barrageMirrors=[];this.barrageBuilds=new Map();this.barrageLast=-12000;this.barrageAttack=0;this.barrageIndex=0;
+    this.pendingWater=[];this.mirrorExit=null;this.variantHistory={};this.barrage=null;this.projectilePool=[];this.barrageHazards=[];this.barrageMirrors=[];this.barrageBuilds=new Map();this.barrageLast=-12000;this.barrageAttack=0;this.barrageIndex=0;
     this.ultimateBurst?.destroy(); this.ultimateBurst = null; this.swordCatchUntil=0;
-    this.physics.world.timeScale = 1; this.readingSlow = 0; this.counterUntil = 0; this.cinemaPresentation = null;this.cinemaMotion=null;
+    this.physics.world.timeScale = 1; this.readingSlow = 0; this.counterUntil = 0; this.cinemaPresentation?.destroy();this.cinemaPresentation = null;this.cinemaMotion=null;
     this.physics.world.resume(); this.tweens.killAll(); this.physics.world.colliders.destroy(); if (this.floors?.scene) this.floors.destroy(true);
     if(this.transitionOverlay)this.children.remove(this.transitionOverlay);this.children.removeAll(true);if(this.transitionOverlay)this.children.add(this.transitionOverlay); this.fighters = []; this.projectiles = []; this.effects = []; this.decoys = []; this.mirrorVisuals = [];
     this.backgrounds = []; this.mist = []; this.sceneryActors = []; this.followups = []; this.cinemaActors.clear(); this.cinemaPrison = null; this.prisonActor=null; this.glamour=null; this.parryFlashUntil=0; this.parryChain=0;this.parrySignals=[];this.sharinganEchoes=[];
@@ -330,13 +331,14 @@ export class BossGameScene extends Phaser.Scene {
   }
   private endBarrage(interrupted=false){
     const active=this.barrage;if(!active)return;
-    const b=this.boss.model;this.barrage=null;
+    const b=this.boss.model;this.barrage=null;this.pendingWater=[];
     this.projectiles.forEach(p=>{if(p.barrage){if(p.water){if(interrupted)this.endWater(p,'cancel');}else{p.expires=0;p.image.setVisible(false);}}});this.barrageHazards.forEach(h=>h.image.destroy());this.barrageHazards=[];this.barrageMirrors.forEach(m=>m.destroy());this.barrageMirrors=[];for(const images of this.barrageBuilds.values())images.forEach(i=>i.destroy());this.barrageBuilds.clear();
     this.boss.body.body.setAllowGravity(true).setVelocity(0);this.teleport(this.boss,clamp(b.x,this.arenaMin+45,this.arenaMax-45),this.floor);
     this.mirrorInterruptUntil=this.now+800;this.mirrorVisuals.forEach(m=>m.image.setAlpha(.65));
     if(b.action?.definition.id.startsWith('barrage-'))b.action=null;
     this.brain.readyAt=Math.max(this.brain.readyAt,this.now+(interrupted?800:100));
   }
+  private pendingWater:{volley:PreparedVolley;at:number;tries:number}[]=[];
   private updateBarrage(){
     const active=this.barrage;if(!active)return;const b=this.boss.model,t=active.timeline;
     if(b.health<=0||b.action?.serial!==active.serial||this.now<b.guardBrokenUntil||this.now<b.hurtUntil||this.now<this.bossRestrainedUntil){this.endBarrage(true);return;}
@@ -348,8 +350,9 @@ export class BossGameScene extends Phaser.Scene {
       const rise=Math.min(1,age/700),land=age>5100?Math.max(0,1-(age-5100)/650):1;
       this.teleport(this.boss,Phaser.Math.Linear(active.originX,active.airX,rise),this.floor-Math.sin(rise*Math.PI/2)*230*land);
     }
-    for(const v of t.warnings){if(!v.secured){const gap=chooseCorridor(this.player.model.x,v.gap,this.arenaMin,this.arenaMax,this.projectiles.filter(p=>!p.friendly&&p.expires>this.now&&(!p.water||p.water.phase==='travel')),this.floor);v.secured=true;v.omit=!gap;if(gap){v.gap=gap;v.lanes=[];for(let x=this.arenaMin+38;x<this.arenaMax-38;x+=76)if(x<gap.left-52||x>gap.right+52)v.lanes.push(x);}}}
-    for(const v of volleys)if(!v.omit)this.emitBarrageVolley(v);
+    for(const v of t.warnings){if(v.style==='pairs'||v.style==='streams')continue;if(!v.secured){const gap=chooseCorridor(this.player.model.x,v.gap,this.arenaMin,this.arenaMax,this.projectiles.filter(p=>!p.friendly&&p.expires>this.now&&(!p.water||p.water.phase==='travel')),this.floor);v.secured=true;v.omit=!gap;if(gap){v.gap=gap;v.lanes=[];for(let x=this.arenaMin+38;x<this.arenaMax-38;x+=76)if(x<gap.left-52||x>gap.right+52)v.lanes.push(x);}}}
+    for(const v of volleys)if(v.style==='pairs'||v.style==='streams')this.pendingWater.push({volley:v,at:this.now,tries:0});else if(!v.omit)this.emitBarrageVolley(v);
+    const pending=this.pendingWater;this.pendingWater=[];for(const p of pending){if(this.now<p.at){this.pendingWater.push(p);continue;}if(!this.aimedWater(p.volley)&&p.tries<3){p.tries++;p.at=this.now+100;this.pendingWater.push(p);}}
     if(t.warnings.some(v=>v.style==='lunge'))this.projectiles.forEach(p=>{if(p.barrage){p.expires=0;p.image.setVisible(false);}});
     for(const h of this.barrageHazards){const a=this.now-h.born;animateEffect(h.image,'water-dragon',a,650);h.image.setAlpha(Math.min(1,(650-a)/180));if(a>=70&&a<500)for(const f of this.fighters.filter(f=>!f.hostile))if(!h.hit.has(f.key)&&overlaps(this.box(f),{x:h.x-42,y:this.floor-165,width:84,height:165})){h.hit.add(f.key);this.hit(this.boss,f,{at:0,kind:'hit',damage:12,posture:20,red:true,effect:'water'},`barrage-${active.serial}-${h.born}-${h.x}`);}}
     this.barrageHazards=this.barrageHazards.filter(h=>{if(this.now-h.born>650){h.image.destroy();return false;}return true;});
@@ -359,8 +362,18 @@ export class BossGameScene extends Phaser.Scene {
     if(this.projectiles.filter(p=>!p.friendly&&p.expires>this.now).length>=48)return;
     const image=this.projectilePool.pop()||this.add.image(x,y,water?'v11-spirit':'v8-needle');
     const aim=fixedAim({x,y},{x:tx,y:ty},water?850:787.5,0);
-    image.setTexture(water?'v14-dragon':'v14-ice',water?'4':'0').setActive(true).setVisible(true).clearTint().setAlpha(1).setOrigin(water?.5:.85,.5).setDisplaySize(water?200:74,water?88:17).setPosition(x,y).setRotation(aim.angle).setFlipX(false).setDepth(10);
+    image.setTexture(water?'v14-dragon':'v14-ice',water?'4':'0').setActive(true).setVisible(true).clearTint().setAlpha(1).setOrigin(water?.85:.85,.5).setDisplaySize(water?200:74,water?88:17).setPosition(x,y).setRotation(aim.angle).setFlipX(false).setDepth(10);
     this.projectiles.push({image,x,y,vx:aim.vx,vy:aim.vy,damage:7,posture:6,red:false,friendly:false,owner:this.boss,expires:water?Infinity:this.now+2600,water:water?{phase:'travel',at:this.now}:undefined,rx:water?20:18,ry:water?12:3,kind:water?'spirit':'needle',hit:new Set(),born:this.now,trail:[],pooled:true,barrage:true});
+  }
+  private aimedWater(v:PreparedVolley){
+    const b=this.boss.model,target={x:this.player.model.x,y:this.player.model.y-65},hand=waterHand(b.x,b.y,b.facing),origins=[-9,9].map(d=>launchFromHand(hand,target,d));
+    const proposed=origins.map(o=>({...o,...fixedAim(o,target,850,0),rx:20,ry:12}));
+    const existing=this.projectiles.filter(p=>!p.friendly&&p.expires>this.now&&(!p.water||p.water.phase==='travel'));
+    const gap=aimedWaterRoute(this.player.model.x,hand,this.arenaMin,this.arenaMax,[...existing,...proposed],this.floor,this.player.model.stamina>=22);
+    if(!gap)return false;
+    v.releaseTarget=target;v.handOrigin=hand;v.gap=gap;this.clearBarrageCorridor(v);this.sounds.softWater();
+    for(const o of origins){const before=this.projectiles.length;this.barrageShot(o.x,o.y,target.x,target.y,true);if(this.projectiles.length>before){const p=this.projectiles.at(-1)!;p.handLaunch=true;p.image.setDisplaySize(24,11);}}
+    return true;
   }
   private eruptionLanes(v:PreparedVolley){
     if(v.style==='central')return v.lanes.filter(x=>Math.abs(x-(this.arenaMin+this.arenaMax)/2)<220).filter((_,i)=>i%2===0);
@@ -377,10 +390,6 @@ export class BossGameScene extends Phaser.Scene {
     const t=this.barrage!.timeline,id=t.id,b=this.boss.model;this.clearBarrageCorridor(v);
     if(id.startsWith('water'))this.sounds.softWater();else this.sounds.effect('ice',.6);
     const shot=(x:number,y:number,tx:number,ty:number,water=false)=>{const aim=fixedAim({x,y},{x:tx,y:ty},water?850:787.5,0);if(v.style!=='surge'&&entersCorridor({x,y,...aim,rx:water?20:18,ry:water?12:3},v.gap,this.floor))return null;const count=this.projectiles.length;this.barrageShot(x,y,tx,ty,water);const p=this.projectiles.length>count?this.projectiles.at(-1)!:null;if(p){p.safeGap=v.gap;if(id==='needle-curtain')p.image.setDisplaySize(148,25);}return p;};
-    if(v.style==='pairs'||v.style==='streams'){
-      const target=spiritTarget(v,b.x,this.floor),origin=v.style==='streams'?(v.index%2?this.arenaMin+80:this.arenaMax-80):b.x,away=origin>target.x?1:-1;
-      for(const offset of [0,80])shot(origin,b.y-55,target.x+away*offset,target.y,true);return;
-    }
     if(['eruption','inward','central'].includes(v.style)){
       for(const x of this.eruptionLanes(v)){const image=makeEffect(this,'water-dragon',x,this.floor-(v.style==='central'?135:117.5),v.style==='central'?270:235,v.style==='central'?155:135).setRotation(-Math.PI/2).setDepth(9);this.barrageHazards.push({x,born:this.now,hit:new Set(),image});}return;
     }
@@ -402,9 +411,10 @@ export class BossGameScene extends Phaser.Scene {
     const both=['opposed','crossing','fan'].includes(v.style),sides=both?[v.leftFirst,!v.leftFirst]:[v.index%2===0? v.leftFirst:!v.leftFirst];
     for(const left of sides){const lanes=v.lanes.filter(x=>left?x<v.gap.left:x>v.gap.right);if(!lanes.length)continue;
       const origin=left?Math.min(...lanes):Math.max(...lanes),water=v.style==='crossing';
-      if(!water){const mirror=mirrorVisual(this,origin,this.floor-355,this.floor,'crossfire',3);this.barrageMirrors.push(mirror.image,mirror.reflection as unknown as Phaser.GameObjects.Image);}
+      let originY=this.floor-355;
+      if(!water){const mirror=mirrorVisual(this,origin,this.floor-355,this.floor,'crossfire',3);originY=mirror.image.y;this.barrageMirrors.push(mirror.image,mirror.reflection as unknown as Phaser.GameObjects.Image);}
       const count=water?4:v.style==='opposed'?5:7;
-      for(let i=0;i<count;i++){const tx=lanes[Math.round(i*(lanes.length-1)/(count-1))];shot(water?(left?this.arenaMax-50:this.arenaMin+50):origin,this.floor-(water?520:355),tx,this.floor+110,water);}
+      for(let i=0;i<count;i++){const tx=lanes[Math.round(i*(lanes.length-1)/(count-1))];shot(water?(left?this.arenaMax-50:this.arenaMin+50):origin,water?this.floor-520:originY,tx,this.floor+110,water);}
     }
   }
   private redWarning(x:number,y:number){const g=this.cueGraphics;g.lineStyle(4,0xff4e59,1);g.lineBetween(x,y-11,x,y+1);g.fillStyle(0xff4e59,1);g.fillCircle(x,y+9,3);}
@@ -416,11 +426,12 @@ export class BossGameScene extends Phaser.Scene {
       const floorHazard=['eruption','inward','central'].includes(v.style),red=floorHazard||v.style==='lunge'||v.style==='surge';
       if(red)this.redWarning(b.x,b.y-CHARACTER[b.id].height-24);
       if(!this.barrageBuilds.has(v.index)){
-        const origins=floorHazard?this.eruptionLanes(v):v.style==='surge'?[this.arenaMin+45,this.arenaMax-45]:v.style==='pairs'||v.style==='streams'?[b.x]:v.lanes;
-        const images=origins.map(x=>this.add.image(x,floorHazard||v.style==='surge'?this.floor:this.floor-360,floorHazard||v.style==='surge'?'v11-eruption':t.id.startsWith('water')?'v11-spirit':'v11-ice','0').setOrigin(.5,floorHazard?480/512:.5).setDisplaySize(floorHazard?140:t.id.startsWith('water')?115:50,floorHazard?90:t.id.startsWith('water')?60:48).setDepth(8));
+        const palm=waterHand(b.x,b.y,b.facing);
+        const origins=floorHazard?this.eruptionLanes(v):v.style==='surge'?[this.arenaMin+45,this.arenaMax-45]:v.style==='pairs'||v.style==='streams'?[palm.x]:v.lanes;
+        const images=origins.map(x=>this.add.image(x,floorHazard||v.style==='surge'?this.floor:v.style==='pairs'||v.style==='streams'?palm.y:this.floor-360,floorHazard||v.style==='surge'?'v11-eruption':t.id.startsWith('water')?'v11-spirit':'v11-ice','0').setOrigin(.5,floorHazard?480/512:.5).setDisplaySize(floorHazard?140:t.id.startsWith('water')?115:50,floorHazard?90:t.id.startsWith('water')?60:48).setDepth(8));
         this.barrageBuilds.set(v.index,images);
       }
-      for(const image of this.barrageBuilds.get(v.index)||[]){if(floorHazard||v.style==='surge')image.setTexture('v15-water',String(Math.min(7,Math.floor(progress*8)))).setOrigin(.5,282/320).setPosition(image.x,this.floor).setDisplaySize(195,170);else animateEffect(image,t.id.startsWith('water')?'water-dragon':'ice-shards',progress*280,650);image.setAlpha(.25+progress*.65);}
+      for(const image of this.barrageBuilds.get(v.index)||[]){if(floorHazard||v.style==='surge')image.setTexture('v15-water',String(Math.min(7,Math.floor(progress*8)))).setOrigin(.5,282/320).setPosition(image.x,this.floor).setDisplaySize(195,170);else if(v.style==='pairs'||v.style==='streams'){const hand=waterHand(b.x,b.y,b.facing);image.setPosition(hand.x,hand.y);animateEffect(image,'waterfall',progress*280,650);image.setDisplaySize(40+progress*18,36+progress*14);}else animateEffect(image,t.id.startsWith('water')?'water-dragon':'ice-shards',progress*280,650);image.setAlpha(.25+progress*.65);}
     }
   }
 
@@ -653,6 +664,7 @@ export class BossGameScene extends Phaser.Scene {
         p.trail.push({x:nx,y:ny});if(p.trail.length>8)p.trail.shift();
       }
       if(p.groundWave){p.image.setPosition(nx,this.floor).setOrigin(p.vx<0?.2:.8,waveGroundAnchor(waterFrame(this.now-p.born))).setRotation(0);}
+      if(p.handLaunch){const size=Math.min(200,24+(this.now-p.born)*.85);p.image.setDisplaySize(size,size*.44);}
       if(p.kind==='spirit'&&!p.groundWave){p.image.setFrame(String(waterFrame(this.now-p.born)));p.trail.push({x:nx,y:ny});if(p.trail.length>5)p.trail.shift();}
       if(p.kind==='fire')animateEffect(p.image,'fireball',this.now-p.born,3900);
       if(p.kind==='needle'){p.image.setOrigin(.85,.5);animateEffect(p.image,'needle',this.now-p.born,3900);p.image.setRotation(Math.atan2(p.vy,p.vx));p.trail.push({x:nx,y:ny});if(p.trail.length>5)p.trail.shift();}
@@ -828,9 +840,9 @@ export class BossGameScene extends Phaser.Scene {
       const next=action?.definition.events.find(e=>e.at>age&&(e.kind==='projectile'||e.kind==='hit'));
       const tell=occupied&&!!next&&next.at-age<=400;
       visual.reflection.setAlpha(.82);
-      poseBattle(visual.reflection,'haku',tell?'cast':'idle',tell?400-(next!.at-age):this.now,mirror.x>830?-1:1,tell?400:undefined);
+      poseReflection(visual.reflection,visual.image,'prison',tell,this.now,mirror.x>830?-1:1);
 
-      visual.halo.setFillStyle(0xabefff,tell?.08:0).setStrokeStyle(tell?3:1,0xc9ffff,tell?.8:0).setVisible(!mirror.broken);
+      visual.halo.setPosition(visual.image.x,visual.image.y);visual.halo.setFillStyle(0xabefff,tell?.08:0).setStrokeStyle(tell?3:1,0xc9ffff,tell?.8:0).setVisible(!mirror.broken);
       if(tell)this.formation.exposedUntil=this.now+120;
 
     });
@@ -884,7 +896,7 @@ export class BossGameScene extends Phaser.Scene {
     });
   }
   private updateCues(dt: number) {
-    const graphics = this.cueGraphics; graphics.clear();this.drawBarrageCues();
+    const graphics = this.cueGraphics; graphics.clear();this.drawBarrageCues();fitAllMirrors(this);
     if(this.glamour){const age=this.now-this.glamour.born;if(age>1250){this.burst('smoke',this.glamour.sprite.x,this.floor-70,110,240);this.glamour.sprite.destroy();this.glamour=null;}
       else{const v=this.glamour.sprite;v.setFrame(String(Math.min(3,Math.floor(age/300))));v.setAlpha(Math.min(1,(1250-age)/200));
         for(let i=0;i<6;i++){const a=age/500+i*Math.PI/3;graphics.fillStyle(0xffbbdd,.8);graphics.fillCircle(v.x+Math.cos(a)*50,v.y-100+Math.sin(a)*38,3);}
@@ -899,13 +911,6 @@ export class BossGameScene extends Phaser.Scene {
       for(let i=0;i<(bridge.settings().reducedShake?3:7);i++){const phase=(age/260+i/7)%1,x=p.x+p.facing*(18+phase*50),y=p.y-84+Math.sin(i*2+age/95)*14;graphics.fillStyle(hue,age<contact?.7:.45);graphics.fillEllipse(x,y,3+phase*3,10+phase*14);}
       if(age>=contact&&age<contact+120){graphics.lineStyle(3,hue,(contact+120-age)/120);graphics.beginPath();graphics.arc(p.x+p.facing*35,p.y-82,25+(age-contact)*.25,-1.3,1.3);graphics.strokePath();}
     }
-    const attack=this.boss.model.action;
-    if(this.boss.model.id==='zabuza'&&attack){const cue=swordPresentation(attack.definition,this.now-attack.started);
-      if(cue&&!cue.red&&cue.remaining>0&&cue.remaining<500){const b=this.boss.model,color=cue.red?0xff5365:0xffdfa0,alpha=cue.remaining<145?.95:.32;
-        graphics.lineStyle(cue.remaining<145?4:2,color,alpha);graphics.beginPath();graphics.arc(b.x,b.y-78,155,b.facing>0?-1.15:Math.PI-1.15,b.facing>0?1.15:Math.PI+1.15);graphics.strokePath();
-        if(cue.remaining<145){graphics.fillStyle(color,.95);graphics.fillCircle(b.x+b.facing*60,b.y-130,7);}
-      }}
-
     const reading=this.player.model.id==='kakashi'&&this.readingUntil>this.now,reduced=bridge.settings().reducedShake;
     for(const bg of this.backgrounds){if(reading)bg.setTint(0x677e8b);else bg.clearTint();}
     this.sharinganEchoes=this.sharinganEchoes.filter(e=>{const age=this.now-Number(e.getData('born'));if(!reading||age>260){e.destroy();return false;}e.setAlpha((1-age/260)*.18);return true;});
@@ -1091,7 +1096,7 @@ export class BossGameScene extends Phaser.Scene {
         if (actor.animation === 'defeat') actor.sprite.setDepth(1);}
       else {actor.sprite.setFlipX(actor.facing<0);if(actor.animation==='defeat'&&(actor.id==='gato'||actor.id.startsWith('henchman')))endingPose(actor.sprite,actor.id==='gato'?'gato':'mercenary','defeat',this.cinemaClock-actor.animationAt,actor.facing);}
     }
-    this.cinemaMotion?.update(this.cinemaClock);
+    this.cinemaMotion?.update(this.cinemaClock);fitAllMirrors(this);
     if(this.cinemaPrison&&this.prisonActor)this.drawPrison(this.cinemaPrison,this.prisonActor.sprite.x,this.prisonActor.sprite.y-78,this.cinemaClock);
     this.updateEffects(dt); this.cueGraphics.clear();
     this.cinemaPresentation?.update(this.presentationClock, id => id ? this.cinemaActors.get(id)?.sprite : undefined);
@@ -1124,7 +1129,7 @@ export class BossGameScene extends Phaser.Scene {
   }
   status() {
     if (!this.director) return {mode: 'inactive'};
-    return {waterProjectiles:this.projectiles.filter(p=>p.water).map(p=>({x:p.x,y:p.y,phase:p.water!.phase,reason:p.water!.reason,groundWave:p.groundWave,frame:p.image.frame.name})),barrage:this.barrage?{id:this.barrage.timeline.id,variant:this.barrage.timeline.variant,seed:this.barrage.timeline.seed,age:this.barrage.timeline.age,recovering:this.barrage.timeline.recovering,warnings:this.barrage.timeline.warnings}:null,pool:this.projectilePool.length,sword:this.projectiles.filter(p=>p.sword).map(p=>({phase:p.sword!.phase,x:p.x,y:p.y,harmless:p.sword!.harmless,hit:[...p.hit]})),swordCatchUntil:this.swordCatchUntil,transitionActive:this.transitionActive,cinemaMotion:this.cinemaMotion?.status(),cinema: this.director.clip ? {id:this.director.clip.id,clock:this.cinemaClock,waiting:this.director.waiting,canAdvance:this.director.canAdvance&&!this.panelExiting,actors:[...this.cinemaActors.values()].map(a=>({id:a.id,x:a.sprite.x,y:a.sprite.y,facing:a.facing,animation:a.animation}))} : null, mirrorGuardBreaks:this.mirrorGuardBreaks, phase: this.phase, story: this.director.state, mode: this.director.mode, time: Math.round(this.now), phaseElapsed: this.phaseElapsed,
+    return {mirrorPresentation:this.children.list.filter(c=>c.getData?.('mirrorReflection')).map(c=>{const image=c as Phaser.GameObjects.Image,reflection=image.getData('mirrorReflection') as Phaser.GameObjects.Sprite;return{mirror:image.getBounds(),reflection:visibleBodyBounds(reflection),zoom:this.cameras.main.zoom,scrollY:this.cameras.main.scrollY};}),waterProjectiles:this.projectiles.filter(p=>p.water).map(p=>({x:p.x,y:p.y,vx:p.vx,vy:p.vy,born:p.born,phase:p.water!.phase,reason:p.water!.reason,groundWave:p.groundWave,frame:p.image.frame.name})),barrage:this.barrage?{id:this.barrage.timeline.id,variant:this.barrage.timeline.variant,seed:this.barrage.timeline.seed,age:this.barrage.timeline.age,recovering:this.barrage.timeline.recovering,warnings:this.barrage.timeline.warnings,releases:[...this.barrage.timeline.prepared.values()].filter(v=>v.releaseTarget)}:null,pool:this.projectilePool.length,sword:this.projectiles.filter(p=>p.sword).map(p=>({phase:p.sword!.phase,x:p.x,y:p.y,harmless:p.sword!.harmless,hit:[...p.hit]})),swordCatchUntil:this.swordCatchUntil,transitionActive:this.transitionActive,cinemaMotion:this.cinemaMotion?.status(),cinema: this.director.clip ? {id:this.director.clip.id,clock:this.cinemaClock,waiting:this.director.waiting,canAdvance:this.director.canAdvance&&!this.panelExiting,actors:[...this.cinemaActors.values()].map(a=>({id:a.id,x:a.sprite.x,y:a.sprite.y,facing:a.facing,animation:a.animation}))} : null, mirrorGuardBreaks:this.mirrorGuardBreaks, phase: this.phase, story: this.director.state, mode: this.director.mode, time: Math.round(this.now), phaseElapsed: this.phaseElapsed,
       player: this.player ? {x: Math.round(this.player.model.x), y: Math.round(this.player.model.y), health: this.player.model.health, stamina: Math.round(this.player.model.stamina),
         chakra: Math.round(this.player.model.chakra), ultimate: Math.round(this.player.model.ultimate), action: this.player.model.action?.definition.id, guarding: this.player.model.guard, facing: this.player.model.facing} : null,
       boss: this.boss ? {x: Math.round(this.boss.model.x), y: Math.round(this.boss.model.y), health: this.boss.model.health, stamina: Math.round(this.boss.model.stamina),

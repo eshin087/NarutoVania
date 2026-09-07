@@ -1,0 +1,5202 @@
+{
+  "v14-kakashi-melee": [
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        183.375,
+        345.0
+      ],
+      "head": [
+        203.375,
+        135.0
+      ],
+      "hand": [
+        248.375,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        177.75,
+        345.0
+      ],
+      "head": [
+        197.75,
+        135.0
+      ],
+      "hand": [
+        242.75,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.375,
+        345.0
+      ],
+      "head": [
+        212.375,
+        135.0
+      ],
+      "hand": [
+        257.375,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        143.25,
+        345.0
+      ],
+      "head": [
+        163.25,
+        135.0
+      ],
+      "hand": [
+        208.25,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.375,
+        345.0
+      ],
+      "head": [
+        212.375,
+        135.0
+      ],
+      "hand": [
+        257.375,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.375,
+        345.0
+      ],
+      "head": [
+        212.375,
+        135.0
+      ],
+      "hand": [
+        257.375,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.375,
+        345.0
+      ],
+      "head": [
+        212.375,
+        135.0
+      ],
+      "hand": [
+        257.375,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        161.25,
+        345.0
+      ],
+      "head": [
+        181.25,
+        135.0
+      ],
+      "hand": [
+        226.25,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        191.625,
+        345.0
+      ],
+      "head": [
+        211.625,
+        135.0
+      ],
+      "hand": [
+        256.625,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        190.125,
+        345.0
+      ],
+      "head": [
+        210.125,
+        135.0
+      ],
+      "hand": [
+        255.125,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5756666666666667,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    }
+  ],
+  "v14-naruto-melee": [
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6171428571428572,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 35,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6171428571428572,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 35,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        191.625,
+        345.0
+      ],
+      "head": [
+        211.625,
+        135.0
+      ],
+      "hand": [
+        256.625,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6171428571428572,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 35,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6171428571428572,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 35,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        191.625,
+        345.0
+      ],
+      "head": [
+        211.625,
+        135.0
+      ],
+      "hand": [
+        256.625,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6171428571428572,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 35,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6171428571428572,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 35,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6171428571428572,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 35,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6171428571428572,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 35,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6171428571428572,
+      "foot": [
+        191.625,
+        345.0
+      ],
+      "head": [
+        211.625,
+        135.0
+      ],
+      "hand": [
+        256.625,
+        210.0
+      ],
+      "headDiameter": 35,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    }
+  ],
+  "v14-sasuke-melee": [
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        171.75,
+        345.0
+      ],
+      "head": [
+        191.75,
+        135.0
+      ],
+      "hand": [
+        236.75,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        130.5,
+        345.0
+      ],
+      "head": [
+        150.5,
+        135.0
+      ],
+      "hand": [
+        195.5,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        191.25,
+        345.0
+      ],
+      "head": [
+        211.25,
+        135.0
+      ],
+      "hand": [
+        256.25,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.375,
+        345.0
+      ],
+      "head": [
+        212.375,
+        135.0
+      ],
+      "hand": [
+        257.375,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        191.625,
+        345.0
+      ],
+      "head": [
+        211.625,
+        135.0
+      ],
+      "hand": [
+        256.625,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        180.0,
+        345.0
+      ],
+      "head": [
+        200.0,
+        135.0
+      ],
+      "hand": [
+        245.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        153.0,
+        345.0
+      ],
+      "head": [
+        173.0,
+        135.0
+      ],
+      "hand": [
+        218.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        191.625,
+        345.0
+      ],
+      "head": [
+        211.625,
+        135.0
+      ],
+      "hand": [
+        256.625,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5287499999999999,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    }
+  ],
+  "v14-sakura-melee": [
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        183.0,
+        345.0
+      ],
+      "head": [
+        203.0,
+        135.0
+      ],
+      "hand": [
+        248.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        155.25,
+        345.0
+      ],
+      "head": [
+        175.25,
+        135.0
+      ],
+      "hand": [
+        220.25,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        148.875,
+        345.0
+      ],
+      "head": [
+        168.875,
+        135.0
+      ],
+      "hand": [
+        213.875,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        191.625,
+        345.0
+      ],
+      "head": [
+        211.625,
+        135.0
+      ],
+      "hand": [
+        256.625,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        170.625,
+        345.0
+      ],
+      "head": [
+        190.625,
+        135.0
+      ],
+      "hand": [
+        235.625,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        191.625,
+        345.0
+      ],
+      "head": [
+        211.625,
+        135.0
+      ],
+      "hand": [
+        256.625,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5175000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    }
+  ],
+  "v14-zabuza-melee": [
+    {
+      "scale": 0.9642857142857143,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 28,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9642857142857143,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 28,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9310344827586207,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 29,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9642857142857143,
+      "foot": [
+        198.75,
+        345.0
+      ],
+      "head": [
+        218.75,
+        135.0
+      ],
+      "hand": [
+        263.75,
+        210.0
+      ],
+      "headDiameter": 28,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 1.0,
+      "foot": [
+        226.875,
+        345.0
+      ],
+      "head": [
+        246.875,
+        135.0
+      ],
+      "hand": [
+        291.875,
+        210.0
+      ],
+      "headDiameter": 27,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9642857142857143,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 28,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9642857142857143,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 28,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9310344827586207,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 29,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9642857142857143,
+      "foot": [
+        109.5,
+        345.0
+      ],
+      "head": [
+        129.5,
+        135.0
+      ],
+      "hand": [
+        174.5,
+        210.0
+      ],
+      "headDiameter": 28,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9642857142857143,
+      "foot": [
+        107.25,
+        345.0
+      ],
+      "head": [
+        127.25,
+        135.0
+      ],
+      "hand": [
+        172.25,
+        210.0
+      ],
+      "headDiameter": 28,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 1.0,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 27,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9642857142857143,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 28,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9642857142857143,
+      "foot": [
+        183.0,
+        345.0
+      ],
+      "head": [
+        203.0,
+        135.0
+      ],
+      "hand": [
+        248.0,
+        210.0
+      ],
+      "headDiameter": 28,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9642857142857143,
+      "foot": [
+        159.0,
+        345.0
+      ],
+      "head": [
+        179.0,
+        135.0
+      ],
+      "hand": [
+        224.0,
+        210.0
+      ],
+      "headDiameter": 28,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9310344827586207,
+      "foot": [
+        155.625,
+        345.0
+      ],
+      "head": [
+        175.625,
+        135.0
+      ],
+      "hand": [
+        220.625,
+        210.0
+      ],
+      "headDiameter": 29,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9642857142857143,
+      "foot": [
+        171.75,
+        345.0
+      ],
+      "head": [
+        191.75,
+        135.0
+      ],
+      "hand": [
+        236.75,
+        210.0
+      ],
+      "headDiameter": 28,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 1.0,
+      "foot": [
+        165.0,
+        345.0
+      ],
+      "head": [
+        185.0,
+        135.0
+      ],
+      "hand": [
+        230.0,
+        210.0
+      ],
+      "headDiameter": 27,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9642857142857143,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 28,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9642857142857143,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 28,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9310344827586207,
+      "foot": [
+        71.25,
+        345.0
+      ],
+      "head": [
+        91.25,
+        135.0
+      ],
+      "hand": [
+        136.25,
+        210.0
+      ],
+      "headDiameter": 29,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9642857142857143,
+      "foot": [
+        60.75,
+        345.0
+      ],
+      "head": [
+        80.75,
+        135.0
+      ],
+      "hand": [
+        125.75,
+        210.0
+      ],
+      "headDiameter": 28,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9642857142857143,
+      "foot": [
+        52.5,
+        345.0
+      ],
+      "head": [
+        72.5,
+        135.0
+      ],
+      "hand": [
+        117.5,
+        210.0
+      ],
+      "headDiameter": 28,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 1.0,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 27,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9642857142857143,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 28,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9642857142857143,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 28,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9642857142857143,
+      "foot": [
+        141.75,
+        345.0
+      ],
+      "head": [
+        161.75,
+        135.0
+      ],
+      "hand": [
+        206.75,
+        210.0
+      ],
+      "headDiameter": 28,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9310344827586207,
+      "foot": [
+        114.75,
+        345.0
+      ],
+      "head": [
+        134.75,
+        135.0
+      ],
+      "hand": [
+        179.75,
+        210.0
+      ],
+      "headDiameter": 29,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9642857142857143,
+      "foot": [
+        174.0,
+        345.0
+      ],
+      "head": [
+        194.0,
+        135.0
+      ],
+      "hand": [
+        239.0,
+        210.0
+      ],
+      "headDiameter": 28,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9642857142857143,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 28,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9642857142857143,
+      "foot": [
+        192.375,
+        345.0
+      ],
+      "head": [
+        212.375,
+        135.0
+      ],
+      "hand": [
+        257.375,
+        210.0
+      ],
+      "headDiameter": 28,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9642857142857143,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 28,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9310344827586207,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 29,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9642857142857143,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 28,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9642857142857143,
+      "foot": [
+        147.75,
+        345.0
+      ],
+      "head": [
+        167.75,
+        135.0
+      ],
+      "hand": [
+        212.75,
+        210.0
+      ],
+      "headDiameter": 28,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 1.0,
+      "foot": [
+        173.25,
+        345.0
+      ],
+      "head": [
+        193.25,
+        135.0
+      ],
+      "hand": [
+        238.25,
+        210.0
+      ],
+      "headDiameter": 27,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.9642857142857143,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 28,
+      "referenceHeadDiameter": 27.0,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    }
+  ],
+  "v14-haku-masked-melee": [
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        186.0,
+        345.0
+      ],
+      "head": [
+        206.0,
+        135.0
+      ],
+      "hand": [
+        251.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        169.5,
+        345.0
+      ],
+      "head": [
+        189.5,
+        135.0
+      ],
+      "hand": [
+        234.5,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        191.625,
+        345.0
+      ],
+      "head": [
+        211.625,
+        135.0
+      ],
+      "hand": [
+        256.625,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        156.75,
+        345.0
+      ],
+      "head": [
+        176.75,
+        135.0
+      ],
+      "hand": [
+        221.75,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        141.75,
+        345.0
+      ],
+      "head": [
+        161.75,
+        135.0
+      ],
+      "hand": [
+        206.75,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        191.625,
+        345.0
+      ],
+      "head": [
+        211.625,
+        135.0
+      ],
+      "hand": [
+        256.625,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        189.75,
+        345.0
+      ],
+      "head": [
+        209.75,
+        135.0
+      ],
+      "hand": [
+        254.75,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        163.5,
+        345.0
+      ],
+      "head": [
+        183.5,
+        135.0
+      ],
+      "hand": [
+        228.5,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.375,
+        345.0
+      ],
+      "head": [
+        212.375,
+        135.0
+      ],
+      "hand": [
+        257.375,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    }
+  ],
+  "v14-naruto-awakened-melee": [
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6171428571428572,
+      "foot": [
+        175.875,
+        345.0
+      ],
+      "head": [
+        195.875,
+        135.0
+      ],
+      "hand": [
+        240.875,
+        210.0
+      ],
+      "headDiameter": 35,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        126.0,
+        345.0
+      ],
+      "head": [
+        146.0,
+        135.0
+      ],
+      "hand": [
+        191.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6171428571428572,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 35,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        161.25,
+        345.0
+      ],
+      "head": [
+        181.25,
+        135.0
+      ],
+      "hand": [
+        226.25,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6171428571428572,
+      "foot": [
+        142.5,
+        345.0
+      ],
+      "head": [
+        162.5,
+        135.0
+      ],
+      "hand": [
+        207.5,
+        210.0
+      ],
+      "headDiameter": 35,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6171428571428572,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 35,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        189.75,
+        345.0
+      ],
+      "head": [
+        209.75,
+        135.0
+      ],
+      "hand": [
+        254.75,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        178.5,
+        345.0
+      ],
+      "head": [
+        198.5,
+        135.0
+      ],
+      "hand": [
+        243.5,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6171428571428572,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 35,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6171428571428572,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 35,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6171428571428572,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 35,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        181.5,
+        345.0
+      ],
+      "head": [
+        201.5,
+        135.0
+      ],
+      "hand": [
+        246.5,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6171428571428572,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 35,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        191.625,
+        345.0
+      ],
+      "head": [
+        211.625,
+        135.0
+      ],
+      "hand": [
+        256.625,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6171428571428572,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 35,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.6000000000000001,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": 36,
+      "referenceHeadDiameter": 21.6,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    }
+  ],
+  "v14-haku-unmasked-melee": [
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        191.625,
+        345.0
+      ],
+      "head": [
+        211.625,
+        135.0
+      ],
+      "hand": [
+        256.625,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.375,
+        345.0
+      ],
+      "head": [
+        212.375,
+        135.0
+      ],
+      "hand": [
+        257.375,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        190.5,
+        345.0
+      ],
+      "head": [
+        210.5,
+        135.0
+      ],
+      "hand": [
+        255.5,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.375,
+        345.0
+      ],
+      "head": [
+        212.375,
+        135.0
+      ],
+      "hand": [
+        257.375,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.375,
+        345.0
+      ],
+      "head": [
+        212.375,
+        135.0
+      ],
+      "hand": [
+        257.375,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.375,
+        345.0
+      ],
+      "head": [
+        212.375,
+        135.0
+      ],
+      "hand": [
+        257.375,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    },
+    {
+      "scale": 0.5718333333333333,
+      "foot": [
+        192.0,
+        345.0
+      ],
+      "head": [
+        212.0,
+        135.0
+      ],
+      "hand": [
+        257.0,
+        210.0
+      ],
+      "headDiameter": null,
+      "referenceHeadDiameter": null,
+      "measurement": "approximate head diameter sampled from enlarged contact sheets; root from authored foot anchor"
+    }
+  ]
+}

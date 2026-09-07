@@ -1,4 +1,4 @@
-import calibration from '../public/art-v15/body-calibration.json';
+import {presentBody} from './presentation-v16';
 import type * as Phaser from 'phaser';
 import manifest from '../public/art-v14/character-manifest.json';
 import {CHARACTER} from './chapter';
@@ -10,7 +10,7 @@ export function poseCharacterFrame(sprite:Phaser.GameObjects.Sprite,id:Character
  const appearance=id==='haku'?variant==='unmasked'?'haku-unmasked':'haku-masked':id==='naruto'&&variant==='awakened'?'naruto-awakened':id;
  const a=manifest.assets.find(a=>a.key===`${appearance}-${sheet}`);if(!a)return false;const f=a.frames[index];if(!f)return false;
  const[, ,w,h]=f.rect,[x,y]=f.footAnchor;
- sprite.setTexture(`v14-${a.key}`,String(index)).setOrigin(facing<0?1-x/w:x/w,y/h).setFlipX(facing<0).setScale(CHARACTER[id].height/a.standingBodyHeight*((calibration.characters as Record<string,{bodyScale:number}[]>)[a.key]?.[index]?.bodyScale||1));return true;
+ sprite.setTexture(`v14-${a.key}`,String(index)).setOrigin(facing<0?1-x/w:x/w,y/h).setFlipX(facing<0).setScale(CHARACTER[id].height/a.standingBodyHeight);presentBody(sprite,id);return true;
 }
 export function poseCharacter(sprite:Phaser.GameObjects.Sprite,id:CharacterId,animation:AnimationName,age:number,facing:number,duration?:number,variant?:string){
  let sheet='locomotion',index=-1;

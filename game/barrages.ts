@@ -17,7 +17,7 @@ export const VARIANT_NAMES:Record<BarrageId,[string,string]>={
 };
 export function seededRandom(seed:number){let state=seed>>>0;return()=>{state=(Math.imul(state,1664525)+1013904223)>>>0;return state/4294967296;};}
 export function chooseVariant(seed:number,previous?:number):0|1{return previous===undefined?(seededRandom(seed)()<.5?0:1):previous===0?1:0;}
-export interface PreparedVolley{secured?:boolean;omit?:boolean;index:number;at:number;targetX:number;gap:{left:number;right:number};lanes:number[];style:BarrageStyle;leftFirst:boolean;spread:number;seed:number;}
+export interface PreparedVolley{releaseTarget?:{x:number;y:number};handOrigin?:{x:number;y:number};secured?:boolean;omit?:boolean;index:number;at:number;targetX:number;gap:{left:number;right:number};lanes:number[];style:BarrageStyle;leftFirst:boolean;spread:number;seed:number;}
 /** A224px corridor leaves a180px route after the player's44px body is considered.
  * Its center moves at most170px during a650ms buildup (416px/s running).
  * Emission discards old shots that could enter the new corridor before releasing it. */
@@ -44,7 +44,6 @@ export class BarrageTimeline{
  get recovering(){return this.age>=this.definition.recovery;}
  get done(){return this.age>=this.definition.duration;}
 }
-export function spiritTarget(v:PreparedVolley,_originX:number,floor:number){return{x:_originX<(v.gap.left+v.gap.right)/2?v.gap.left-95:v.gap.right+95,y:floor+125};}
 /** Cull a residual shot only if its remaining descent would occupy the next ground route. */
 export function conflictsWithCorridor(p:{x:number;y:number;vx:number;vy:number;rx:number;ry:number},gap:{left:number;right:number},floor:number){
  const top=floor-150,bottom=floor+20;

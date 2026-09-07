@@ -1,3 +1,4 @@
+import {presentBody} from './presentation-v16';
 import {preloadV15,registerV15,poseRepair} from './art-v15';
 import {quietIdleFrame} from './presentation-v15';
 import {preloadCharacterArt,registerCharacterArt,poseCharacter,poseCharacterFrame} from './art-character-v14';
@@ -65,7 +66,7 @@ export function registerBattleArt(scene: Phaser.Scene) {registerV10(scene);regis
   manifest.variants.awakened.frames.forEach((frame, i) => {const [x, y, w, h] = frame.rect; scene.textures.get('v2-naruto-awakened').add(String(i), 0, x, y, w, h);});
   manifest.variants.ending.frames.forEach((frame, i) => {const [x, y, w, h] = frame.rect; scene.textures.get('v2-ending-zabuza').add(String(i), 0, x, y, w, h);});
 }
-export function poseBattle(sprite: Phaser.GameObjects.Sprite, id: CharacterId, animation: AnimationName, elapsed: number, facing: number, duration?: number, variant?: 'awakened' | 'unmasked' | 'final-stand') {
+function poseBattleBase(sprite: Phaser.GameObjects.Sprite, id: CharacterId, animation: AnimationName, elapsed: number, facing: number, duration?: number, variant?: 'awakened' | 'unmasked' | 'final-stand') {
   if(id==='zabuza'&&variant==='final-stand'&&animation!=='defeat'){endingPose(sprite,id,animation,elapsed,facing);return;}
   if(id==='zabuza'&&animation==='block'){poseRepair(sprite,elapsed<100?0:elapsed<200?1:elapsed<320?2:3,facing);return;}
   if(animation==='guardbreak'&&reactionPose(sprite,id,'guard-break',elapsed,facing))return;
@@ -103,4 +104,7 @@ function normalizeBody(sprite:Phaser.GameObjects.Sprite,id:CharacterId,facing:nu
   const texture=table[sprite.texture.key],frame=texture?.frames.find(f=>String(f.frame)===sprite.frame.name);if(!frame)return;
   const [w,h]=texture.cellSize,[x,y]=frame.anchorPixels;
   sprite.setScale(CHARACTER[id].height*frame.pixelsToLogicalBody).setOrigin(facing<0?1-x/w:x/w,y/h);
+}
+export function poseBattle(sprite:Phaser.GameObjects.Sprite,id:CharacterId,animation:AnimationName,elapsed:number,facing:number,duration?:number,variant?:'awakened'|'unmasked'|'final-stand'){
+ poseBattleBase(sprite,id,animation,elapsed,facing,duration,variant);presentBody(sprite,id);
 }

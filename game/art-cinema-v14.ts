@@ -1,3 +1,4 @@
+import {presentBody} from './presentation-v16';
 import {poseRepair} from './art-v15';
 import calibration from '../public/art-v15/body-calibration.json';
 import type * as Phaser from 'phaser';
@@ -10,6 +11,7 @@ export function poseCinema(sprite:Phaser.GameObjects.Sprite|Phaser.GameObjects.I
  const source=atlas.standingReference?.sourceBodyHeightPx||atlas.bodyReferences?.[frame.row]||220;
  const flip=facing!==authoredFacing,[, ,w,h]=frame.rect,[ax,ay]=frame.rootAnchor;
  sprite.setTexture(`v14-${name}`,String(index)).setOrigin(flip?1-ax/w:ax/w,ay/h).setScale(height/source*((calibration.cinema as Record<string,{bodyScale:number}[]>)[name]?.[index]?.bodyScale||1)).setFlipX(flip);
+ const row=frame.row,id=name==='teamwork'?(['naruto','sasuke','zabuza','naruto'] as const)[row]:name==='reactions'?(['sasuke','naruto','haku','zabuza'] as const)[row]:name.startsWith('ultimate')?(['kakashi','naruto','naruto','sasuke','sakura'] as const)[row]:'kakashi';if(id)presentBody(sprite,id);
 }
 export function poseUltimate(sprite:Phaser.GameObjects.Sprite,character:string,fury:boolean,age:number,facing:number){
  if(character==='naruto'&&fury&&age>=300){poseRepair(sprite,age<820?8:age<1450?9:age<1700?10:11,facing);return;}
