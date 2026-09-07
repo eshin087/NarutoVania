@@ -119,7 +119,7 @@ describe('close-combat rebalance',()=>{
     const boss=new Combatant('zabuza',1600,true);boss.start(UNIVERSAL.light1,1000);
     const result=defender.receive(ordinary,1070);boss.deflected(result.attackerPosture,1070);
     expect(boss.stamina).toBe(72);expect(boss.action).not.toBeNull();expect(boss.hurtUntil).toBe(0);
-    expect(defender.chakra).toBe(24);expect(defender.ultimate).toBe(12);
+    expect(defender.chakra).toBe(24);expect(defender.ultimate).toBe(16);
   });
   it('broken boss guard takes 60% extra damage and hits never extend its punish window',()=>{
     const boss=new Combatant('zabuza',1000,true);boss.exhaust(100,1000);

@@ -28,7 +28,7 @@ describe('sword anticipation and parry rhythm',()=>{
    const out=p.receive({damage:hit.damage!,posture:hit.posture!,red:false,fromX:100},hit.at);
    expect(out.result).toBe('parry');boss.deflected(out.attackerPosture,hit.at);
   }
-  expect(boss.stamina).toBeLessThan(before-60);expect(p.health).toBe(100);expect(p.ultimate).toBe(36);
+  expect(boss.stamina).toBeLessThan(before-60);expect(p.health).toBe(100);expect(p.ultimate).toBe(48);
  });
 });
 describe('Sasuke rescue support',()=>{

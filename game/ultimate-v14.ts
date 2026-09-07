@@ -1,3 +1,4 @@
+import {effect21} from './art-v21';
 import {poseUltimate} from './art-cinema-v14';
 import * as Phaser from 'phaser';
 import type {PlayerId} from './combat-core';
@@ -12,13 +13,13 @@ export class UltimateBurst{
  private objects:Phaser.GameObjects.GameObject[]=[];private actors:Phaser.GameObjects.Sprite[]=[];
  private shatters:{image:Phaser.GameObjects.Image;born:number}[]=[];
  private effects:Phaser.GameObjects.Image[]=[];private dim:Phaser.GameObjects.Rectangle;
- private flash:Phaser.GameObjects.Rectangle;private label:Phaser.GameObjects.Text;
+ private bars:Phaser.GameObjects.Rectangle[]=[];private flash:Phaser.GameObjects.Rectangle;private label:Phaser.GameObjects.Text;
  readonly cloneBarrage:boolean;readonly fury:boolean;
  constructor(private scene:Phaser.Scene,readonly character:PlayerId,readonly name:string,readonly fromX:number,readonly toX:number,readonly floor:number,readonly facing:-1|1,private sound:(beat:'charge'|'strike'|'finish')=>void,private reduced=false){
   this.cloneBarrage=character==='naruto'&&name==='Clone Barrage';this.fury=character==='naruto'&&!this.cloneBarrage;this.color=this.cloneBarrage?0xb4eeff:palette[character];
   const keep=<T extends Phaser.GameObjects.GameObject>(v:T)=>{this.objects.push(v);return v;};
   this.dim=keep(scene.add.rectangle(640,360,1280,720,0x02121c,.18).setScrollFactor(0).setDepth(0));
-  for(const y of [18,702])keep(scene.add.rectangle(640,y,1280,36,0x021018).setScrollFactor(0).setDepth(29));
+  for(const y of [18,702])this.bars.push(keep(scene.add.rectangle(640,y,1280,36,0x021018).setScrollFactor(0).setDepth(29)));
   this.label=keep(scene.add.text(640,80,name.toUpperCase(),{fontFamily:'Arial',fontStyle:'bold',fontSize:'25px',color:'#effaff',stroke:'#092033',strokeThickness:5,letterSpacing:4}).setOrigin(.5).setScrollFactor(0).setDepth(29));
   this.flash=keep(scene.add.rectangle(640,360,1280,720,0xc9edff,0).setScrollFactor(0).setDepth(25));
   for(let i=0;i<3;i++)this.actors.push(keep(scene.add.sprite(fromX,floor,`${character}-melee`,'0').setDepth(6+i*.05).setAlpha(0)));
@@ -32,6 +33,7 @@ export class UltimateBurst{
   sprite.setPosition(this.x,this.floor+(this.character==='sasuke'&&age>450&&age<950?-Math.sin((age-450)/500*Math.PI)*32:0)).clearTint().setAlpha(1);
  }
  update(dt:number){
+  const zoom=this.scene.cameras.main.zoom;this.bars.forEach((bar,i)=>bar.setPosition(640,360+([18,702][i]-360)/zoom).setDisplaySize(1280/zoom,36/zoom));this.dim.setDisplaySize(1280/zoom,720/zoom);this.flash.setDisplaySize(1280/zoom,720/zoom);
   this.age+=dt;for(const shard of this.shatters){const age=this.age-shard.born;animateEffect(shard.image,'ice-shards',age,600);shard.image.setAlpha(Math.max(0,1-age/600));}
   const a=this.age,x=this.x;this.label.setAlpha(Math.max(0,1-(a-500)/350));this.dim.setAlpha(a<1650?.18:.18*(2000-a)/350);
   const kind=this.character==='kakashi'?'lightning':this.fury?'chakra-aura':this.cloneBarrage?'smoke':'parry';
@@ -46,6 +48,7 @@ export class UltimateBurst{
    impact.setPosition(this.toX+this.facing*(i-1)*18,this.floor-85).setDisplaySize(i===2?320:170,i===2?260:150).setAlpha(since>=0&&since<400?1:0);
   }
   const trail=this.effects[4];animateEffect(trail,this.fury?'chakra-aura':this.character==='kakashi'?'lightning':'smoke',a%500,500);trail.setPosition(x-this.facing*80,this.floor-65).setDisplaySize(200,90).setFlipX(this.facing<0).setAlpha(a>350&&a<1200?.55:0);
+  if(this.fury){effect21(charge,0,a<820?1:a<1330?2:5,230,185);charge.setFlipX(this.facing<0);for(let i=0;i<3;i++){const since=a-[880,1100,1330][i];effect21(this.effects[i+1],0,Math.min(7,4+Math.floor(Math.max(0,since)/100)),i===2?320:180,i===2?260:145);}effect21(trail,0,2+Math.floor(a/85)%2,235,110);trail.setFlipX(this.facing<0);}
   const beats=[880,1100,1330];while(this.beat<beats.length&&a>=beats[this.beat]){this.sound(this.beat===2?'finish':'strike');this.beat++;}
   const final=a-1330;this.flash.setAlpha(!this.reduced&&final>=0&&final<90?.18*(1-final/90):0);
   return{x,impact:a>=1330&&!this.impacted,complete:a>=ULTIMATE_END};

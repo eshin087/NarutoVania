@@ -50,10 +50,10 @@ export async function driveCombat(scene: BossGameScene, inputs: BattleInput, mil
       actions = [p.x < 170 ? 'right' : p.x > scene.arenaMax - 170 ? 'left' : away];
     } else if (scene.phase === 'protect' && Math.abs(p.x - 260) > 100) actions = [p.x > 260 ? 'left' : 'right'];
     else if (delay < 520 && Math.abs(p.x - b.x) < 290) actions = [direction];
-    else if (!noUltimate && p.ultimate>=100 && delay>780 && (scene.phase!=='mirrors'||scene.sharingan)) {actions=[direction,'ultimate'];lastAttack=now;}
+    else if (!noUltimate && p.ultimate>=100 && delay>780) {actions=[direction,'ultimate'];lastAttack=now;}
     else if (p.chakra >= 30 && delay > 780 && now - lastAttack > 400 && !previous.some(a => a.startsWith('skill'))) {
       const abilities = kit(scene.phase);
-      let choice = noUltimate ? -1 : p.ultimate >= 100 && delay > 1200 && (scene.phase !== 'mirrors' || scene.sharingan) ? 2 : -1;
+      let choice = noUltimate ? -1 : p.ultimate >= 100 && delay > 1200 ? 2 : -1;
       if (choice < 0) {
         const order = scene.phase === 'rescue' || scene.phase === 'seal' ? [0, 1] : scene.phase === 'mirrors' || scene.phase === 'protect' ? [0, 1] : [1, 0];
         choice = order.find(i => p.cooldown(abilities[i].attack.id, now) === 0 && (i === 1 || scene.phase !== 'mist' && scene.phase !== 'copy' && scene.phase !== 'lightning') && p.stamina >= abilities[i].attack.stamina) ?? -1;

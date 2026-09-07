@@ -60,17 +60,9 @@ export function outroClip(phase: StoryPhaseId): CinemaClip {
 
     case 'mist': return {id: 'water-prison', arena: 'lakeside', duration: 11200, actors: common,
 
-      cues: [{at: 0, camera: 190}, {at: 500, actor: 'kakashi', x: 840, animation: 'dash', duration: 400},
-
-        {at: 1000, actor: 'zabuza', effect: 'water', alpha: .5}, {at: 1800, actor: 'zabuza', facing: 1, x: 600, duration: 1, alpha: 1, effect: 'smoke'},
-
-        {at: 2900, actor: 'kakashi', x: 730, y: 540, duration: 450, animation: 'guardbreak', effect: 'prison'},
-
-        {at: 3900, actor: 'zabuza', x: 650, duration: 400, animation: 'cast'}, {at: 4700, actor: 'naruto', x: 420, duration: 1500, animation: 'run'},
-
-        {at: 5000, actor: 'sasuke', x: 340, duration: 1200, animation: 'run'}, {at: 6500, camera: 80, duration: 1600},
-
-        {at: 8200, actor: 'naruto', animation: 'cast', effect: 'smoke'}, {at: 10400, fade: 'out'}]};
+      cues: [{at:0,camera:190},{at:4700,actor:'naruto',x:420,duration:1500,animation:'run'},
+        {at:5000,actor:'sasuke',x:340,duration:1200,animation:'run'},{at:6500,camera:80,duration:1600},
+        {at:8200,actor:'naruto',animation:'cast',effect:'smoke'}]};
 
     case 'rescue': return rescueScene();
 
@@ -143,7 +135,7 @@ export function outroClip(phase: StoryPhaseId): CinemaClip {
 
         {at: 6800, actor: 'haku', x: 1050, duration: 320, animation: 'airdash'}, {at:7300,actor:'kakashi',animation:'light1',effect:'lightning'}, {at: 7400, actor: 'haku', animation: 'hurt', effect: 'lightning',motion:'intercept'}, {at:7950,actor:'kakashi',animation:'block'},
 
-        {at: 8900, actor: 'haku', animation: 'defeat'}, {at: 10200, actor: 'hound1', alpha: 0, effect: 'smoke'}, {at: 10200, actor: 'hound2', alpha: 0}, {at: 10200, actor: 'hound3', alpha: 0},
+        {at: 8900, actor: 'haku', animation: 'defeat'}, {at: 7400, actor: 'hound1', alpha: 0, effect: 'smoke'}, {at: 7400, actor: 'hound2', alpha: 0}, {at: 7400, actor: 'hound3', alpha: 0},
 
         {at: 11000, actor:'gato',alpha:1},
         {at:11000,actor:'henchman1',alpha:1,x:1330}, {at:11000,actor:'henchman2',alpha:1,x:1410}, {at:11000,actor:'henchman3',alpha:1,x:1550},
@@ -153,6 +145,7 @@ export function outroClip(phase: StoryPhaseId): CinemaClip {
 
         {at: 17900, actor: 'naruto', animation: 'cast'}, {at: 18700, actor: 'zabuza', facing:1, animation: 'heavy'},
 
+        {at:19800,actor:'henchman1',animation:'hurt'}, {at:20000,actor:'henchman2',animation:'hurt'}, {at:20200,actor:'henchman3',animation:'hurt'},
         {at:19800,actor:'zabuza',facing:1,x:1270,duration:400,animation:'run'},
         {at:19800,camera:460,duration:1900},
         {at:20200,actor:'zabuza',animation:'heavy'},

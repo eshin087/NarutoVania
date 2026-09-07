@@ -22,8 +22,8 @@ export function waterCastFrame(age:number){return age<350?0:age<700?1:age<3200?2
 export function waterHand(x:number,y:number,facing:number,frame=2){const p=CAST_HANDS[frame],scale=167/211;return{x:x+(p[0]-256)*scale*facing,y:y+(p[1]-320)*scale};}
 export function launchFromHand(hand:{x:number;y:number},target:{x:number;y:number},separation=0){const d=Math.max(1,Math.hypot(target.x-hand.x,target.y-hand.y)),dx=(target.x-hand.x)/d,dy=(target.y-hand.y)/d;return{x:hand.x+dx*24-dy*separation,y:hand.y+dy*24+dx*separation};}
 
-export function aimedWaterRoute(playerX:number,hand:{x:number;y:number},min:number,max:number,shots:MovingCore[],floor:number,canDash=true){
- const reach=Math.min(510,Math.hypot(playerX-hand.x,floor-65-hand.y)/850*COMBAT.speed+(canDash?75:0));
+export function aimedWaterRoute(playerX:number,hand:{x:number;y:number},min:number,max:number,shots:MovingCore[],floor:number,canDash=true,speed=850){
+ const reach=Math.min(510,Math.hypot(playerX-hand.x,floor-65-hand.y)/speed*COMBAT.speed+(canDash?75:0));
  for(const offset of [170,-170,255,-255,340,-340,425,-425,510,-510]){
   const center=Math.max(min+112,Math.min(max-112,playerX+offset)),gap={left:center-112,right:center+112};
   if(Math.abs(center-playerX)<=reach&&!shots.some(p=>entersCorridor(p,gap,floor,0)))return gap;

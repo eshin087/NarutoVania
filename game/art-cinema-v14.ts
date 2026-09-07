@@ -1,5 +1,5 @@
+import {pose21} from './art-v21';
 import {presentBody} from './presentation-v16';
-import {poseRepair} from './art-v15';
 import calibration from '../public/art-v15/body-calibration.json';
 import type * as Phaser from 'phaser';
 interface Frame{rect:number[];rootAnchor:number[];row:number;}
@@ -14,7 +14,7 @@ export function poseCinema(sprite:Phaser.GameObjects.Sprite|Phaser.GameObjects.I
  const row=frame.row,id=name==='teamwork'?(['naruto','sasuke','zabuza','naruto'] as const)[row]:name==='reactions'?(row===3&&index<21?'kakashi':(['sasuke','naruto','haku','zabuza'] as const)[row]):name.startsWith('ultimate')?(['kakashi','naruto','naruto','sasuke','sakura'] as const)[row]:'kakashi';if(id)presentBody(sprite,id);
 }
 export function poseUltimate(sprite:Phaser.GameObjects.Sprite,character:string,fury:boolean,age:number,facing:number){
- if(character==='naruto'&&fury&&age>=300){poseRepair(sprite,age<820?8:age<1450?9:age<1700?10:11,facing);return;}
+ if(character==='naruto'&&fury&&age>=300){pose21(sprite,3,age<650?0:age<950?1:age<1160?2:age<1450?3:age<1700?4:5,facing);return;}
  const row=character==='kakashi'?0:character==='naruto'?fury?2:1:character==='sasuke'?3:4;
  const frame=age<820?Math.min(5,Math.floor(age/820*6)):age<1050?6:age<1160?7:age<1330?8:age<1650?9:age<1850?10:11;
  poseCinema(sprite,frame<6?'ultimate-a':'ultimate-b',row*6+frame%6,character==='kakashi'?157:character==='naruto'?132:135,facing);

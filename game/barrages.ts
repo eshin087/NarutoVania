@@ -1,15 +1,17 @@
 import {clamp} from './combat-core';
-export const BARRAGE_IDS=['water-spirits','water-encirclement','needle-curtain','mirror-crossfire'] as const;
+export const BARRAGE_IDS=['water-spirits','water-encirclement','needle-curtain','mirror-crossfire','diving-dragon'] as const;
 export type BarrageId=typeof BARRAGE_IDS[number];
-export type BarrageStyle='pairs'|'streams'|'crossing'|'surge'|'eruption'|'inward'|'central'|'curtain'|'diagonal'|'fan'|'mirror-fan'|'opposed'|'lunge';
+export type BarrageStyle='pairs'|'streams'|'crossing'|'surge'|'eruption'|'inward'|'central'|'curtain'|'diagonal'|'fan'|'mirror-fan'|'opposed'|'lunge'|'dive';
 export interface BarrageDefinition{id:BarrageId;name:string;boss:'zabuza'|'haku';times:number[];duration:number;recovery:number;}
 export const BARRAGES:Record<BarrageId,BarrageDefinition>={
+ 'diving-dragon':{id:'diving-dragon',name:'Skyfall Water Dragon',boss:'zabuza',times:[2450],duration:3950,recovery:3150},
  'water-spirits':{id:'water-spirits',name:'Ten Water Spirits',boss:'zabuza',times:[900,1560,2220,2880,3540,4700],duration:6600,recovery:5800},
  'water-encirclement':{id:'water-encirclement',name:'Water Dragon Encirclement',boss:'zabuza',times:[900,2100,3300,4700],duration:6600,recovery:5800},
  'needle-curtain':{id:'needle-curtain',name:'Crystal Needle Curtain',boss:'haku',times:[900,2100,3300,4700],duration:6600,recovery:5800},
  'mirror-crossfire':{id:'mirror-crossfire',name:'Mirror Crossfire',boss:'haku',times:[900,1900,2900,3900,5000],duration:6600,recovery:5800},
 };
 export const VARIANT_NAMES:Record<BarrageId,[string,string]>={
+ 'diving-dragon':['Ascending dragon · left arc','Ascending dragon · right arc'],
  'water-spirits':['Dragon pairs + crossing fan','Alternating streams + surge'],
  'water-encirclement':['Rising dragons + wave','Closing jaws + central dragon'],
  'needle-curtain':['Shifting curtains + diagonals','Diagonal curtains + falling fan'],
@@ -27,7 +29,7 @@ export function prepareVolley(index:number,at:number,playerX:number,min:number,m
  return{index,at,targetX:playerX,gap,lanes,style:'curtain',leftFirst:random()<.5,spread:.85+random()*.3,seed};
 }
 function styles(id:BarrageId,variant:number):BarrageStyle[]{
- switch(id){case'water-spirits':return variant?['streams','streams','streams','streams','streams','surge']:['pairs','pairs','pairs','pairs','pairs','crossing'];
+ switch(id){case'diving-dragon':return ['dive'];case'water-spirits':return variant?['streams','streams','streams','streams','streams','surge']:['pairs','pairs','pairs','pairs','pairs','crossing'];
  case'water-encirclement':return variant?['inward','inward','inward','central']:['eruption','eruption','eruption','surge'];
  case'needle-curtain':return variant?['diagonal','diagonal','diagonal','fan']:['curtain','curtain','curtain','diagonal'];
  default:return variant?['opposed','opposed','opposed','opposed','lunge']:['mirror-fan','mirror-fan','mirror-fan','mirror-fan','lunge'];}
