@@ -36,4 +36,4 @@ No physical-controller verification or subjective listening evaluation. Simulate
 - Set NARUTO_PLAYWRIGHT_MODULE to the installed Playwright module when not available through normal Node resolution, NARUTO_TEST_URL to the target, optionally NARUTO_BROWSER to browser executable.
 - tools/ingest-chunin-art.py accepts the external selected-source directory; requires Pillow and NumPy. Compiled accepted WebPs and frame manifest are tracked, as are selected generation prompts.
 
-Publication: validated source ready for GitHub/Vercel. Final deployment receipt is recorded in PRODUCTION_LOG.md after success.
+Publication: source commit 207d87a is deployed successfully to https://narutovania.vercel.app/. Public production smoke passed with zero page errors or missing assets. Deployment receipt is recorded in PRODUCTION_LOG.md.
