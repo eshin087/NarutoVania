@@ -1,14 +1,67 @@
 # Naruto: Land of Waves
 
-A desktop browser story boss rush built with TypeScript, React, Phaser 3.90.0, and Vinext. Four fights follow Team 7 through the Zabuza and Haku encounters, with animated in-engine story scenes.
+<div align="center">
+
+**A cinematic 2D Naruto boss rush built for the browser.**
+
+[Play the game](https://narutovania.vercel.app/) · [Chapter workflow](docs/chapters/README.md) · [Audio credits](public/audio-v23/manifest.json)
+
+![Naruto: Land of Waves title screen](docs/readme-assets/title-screen.webp)
+
+</div>
+
+## Relive Team 7's first major battle
+
+Take control of Kakashi, Naruto, and Sasuke through four connected boss fights against Zabuza and Haku. The chapter recreates the Water Prison rescue, Haku's Crystal Ice Mirrors, Sasuke's sacrifice, Naruto's awakening, and Zabuza's final stand with animated in-engine story scenes.
+
+The combat mixes stamina management, perfect parries, blocking, ground and air dashes, substitution, character techniques, and dramatic ultimates. Every fight starts with an ultimate ready, then rewards aggressive play and well-timed defenses with another charge.
+
+| Zabuza's water barrage | Haku's Crystal Ice Mirrors |
+| :---: | :---: |
+| ![Kakashi facing Zabuza's Water Spirits](docs/readme-assets/zabuza-water-spirits.webp) | ![Sasuke surrounded by Haku's Crystal Ice Mirrors](docs/readme-assets/haku-crystal-mirrors.webp) |
+
+## Play as Team 7
+
+- **Kakashi Hatake** — Sharingan, Ninja Hounds, and a cinematic Chidori ultimate.
+- **Naruto Uzumaki** — Shadow Clones, transformation feints, Clone Barrage, and awakened Nine-Tails techniques.
+- **Sasuke Uchiha** — Great Fireball, Windmill Shuriken, and Sharingan Focus.
+- **Sakura Haruno** — Protects Tazuna through the story, with her combat kit available in Scene Select.
+
+![Kakashi charging Chidori](docs/readme-assets/kakashi-chidori.webp)
+
+## Four technical duels
+
+1. **Assassin of the Mist** — Kakashi reads Zabuza's sword pressure and water techniques.
+2. **Rescue Kakashi** — Naruto and Sasuke combine attacks against Zabuza's water clone.
+3. **Crystal Ice Mirrors** — Sasuke survives coordinated senbon volleys and exposes the real Haku.
+4. **The Broken Seal** — Awakened Naruto shatters the mirror formation and confronts Haku.
+
+Perfect-parried mirror needles return to the real Haku. Deflect two separate volleys to force him from the mirrors, or create an opening through guard breaks and character techniques. Boss barrages keep a viable ground route while rewarding precise dashes and parries.
+
+## Controls
+
+| Action | Keyboard | Controller |
+| --- | --- | --- |
+| Move / crouch | A/D or arrows; S/down | Left stick / D-pad |
+| Jump | Space | A / Cross |
+| Melee / charged heavy | J / down + hold J | X / Square |
+| Shuriken | K | Y / Triangle |
+| Dash / air dash / slide | Shift; down modifies | B / Circle |
+| Parry / block | Tap / hold F | Tap / hold LB / L1 |
+| Techniques | Q and E | RB/R1 and RT/R2 |
+| Substitution | L | LT / L2 |
+| Ultimate | R | Right-stick click |
+| Pause | Escape | Start / Options |
+
+The public **Scene Select** jumps directly to every fight, story transition, boss barrage, ultimate, and animation preview without changing normal saved progress.
 
 ## Creating future chapters
 
 Copy this prompt into Codex while this project is open:
 
-> Make a new chapter about [manga moment/fight]. Follow the chapter workflow.
+> **Make a new chapter about [manga moment/fight]. Follow the chapter workflow.**
 
-Start with the [chapter production guide](docs/chapters/README.md). The root [AGENTS.md](AGENTS.md) routes new chapter requests through canon research, generated art, delegated specialist work, independent game-development critique, validation and release. Per-chapter templates preserve progress across restarts.
+The root [AGENTS.md](AGENTS.md) and [chapter production guide](docs/chapters/README.md) cover canon research, generated artwork, specialist delegation, combat implementation, independent game-development critique, regression testing, and release. Per-chapter templates preserve decisions and progress across restarts.
 
 ## Run locally
 
@@ -19,33 +72,21 @@ npm ci
 npm run dev
 ```
 
-## Build and check
+Open the local URL printed by the development server.
 
 ```sh
 npm run typecheck
-npm run test
+npm test
 npm run lint
 npm run build
 ```
 
-The client-only production site is exported to `dist/client`. It needs no database, server runtime, or ChatGPT login.
+The client-only production build is exported to `dist/client`. The game uses TypeScript, React, Phaser 3.90.0, and Vinext, with no database or account required.
 
-## Deployment
+## Assets, credits, and deployment
 
-`vercel.json` builds the static export using `npm ci` and `npm run build`. Connect the repository to a Vercel project with the Other framework preset. The Sites build plugin is disabled on Vercel. `.openai/hosting.json` is retained solely for updates to the legacy Sites deployment.
+`public/` contains runtime artwork and licensed audio. `art/` retains generation prompts and audit notes, while `scripts/` contains repeatable preparation tools. Full audio attribution is available [in the repository](public/audio-v23/manifest.json) and inside the game.
 
-## Controls
+`vercel.json` builds the static export for Vercel. `.openai/hosting.json` retains the legacy Sites deployment configuration. Generated caches, recordings, screenshots, and build artifacts are excluded from Git; see the [latest cleanup report](docs/maintenance/2026-09-08-cleanup.md).
 
-A/D or arrows move; Space jumps; J performs a stationary three-hit melee combo; down + hold J charges a heavy attack. K throws a tool, Shift dashes, F parries/blocks, Q/E use techniques, L substitutes, and R uses the ultimate. Escape pauses. Controller controls and character techniques are listed in the in-game menu.
-
-Perfect-parried mirror needles return to the real Haku. Two distinct returned volleys force him out; melee, guard breaks, and ultimates remain alternatives.
-
-The public Scene Select provides fight, cutscene, mirror-deflection, Sharingan, hound, Fireball, and chakra previews without replacing normal saved progress. Settings and checkpoints are browser-local. Developer input-pilot controls are excluded from production.
-
-## Assets and licenses
-
-`public/` contains the game assets and audio license manifests. `art/` retains generation prompts and audit notes; `scripts/` contains preparation utilities. Credits are accessible in the game. This is an unofficial Naruto fan project and is not affiliated with the original rights holders. Audio assets retain their individual source licenses; do not treat the entire asset collection as MIT-licensed.
-
-## Folder maintenance
-
-`outputs/` stores disposable deployment archives, captures, and local test scripts. `dist/`, `.vinext/`, `.next/`, `.vercel/`, and `node_modules/` are generated. `work/` contains optional audio-preparation inputs and tools and is not needed to play or build the game. These folders are excluded from Git. Keep source artwork, manifests, attribution, and original audio inputs when deleting caches.
+This is an unofficial fan project. Naruto and its characters belong to Masashi Kishimoto and their respective rights holders. It is not affiliated with or endorsed by the rights holders.
