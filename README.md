@@ -2,6 +2,14 @@
 
 A desktop browser story boss rush built with TypeScript, React, Phaser 3.90.0, and Vinext. Four fights follow Team 7 through the Zabuza and Haku encounters, with animated in-engine story scenes.
 
+## Creating future chapters
+
+Copy this prompt into Codex while this project is open:
+
+> Make a new chapter about [manga moment/fight]. Follow the chapter workflow.
+
+Start with the [chapter production guide](docs/chapters/README.md). The root [AGENTS.md](AGENTS.md) routes new chapter requests through canon research, generated art, delegated specialist work, independent game-development critique, validation and release. Per-chapter templates preserve progress across restarts.
+
 ## Run locally
 
 Requires Node.js 22.13 or newer.
