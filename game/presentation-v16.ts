@@ -13,7 +13,7 @@ export function presentBody(sprite:Phaser.GameObjects.Sprite|Phaser.GameObjects.
  sprite.setData('presentation16',`${key}:${index}:${sprite.scaleX}:${sprite.scaleY}`);
 }
 export function actorHead(sprite:Phaser.GameObjects.Sprite|Phaser.GameObjects.Image){
- const fresh=sprite.texture.key.startsWith('v22-')?sprite.getData('v22Frame'):undefined;if(fresh?.head){return{x:sprite.x+(fresh.head[0]-fresh.root[0])*sprite.scaleX*(sprite.flipX?-1:1),y:sprite.y+(fresh.head[1]-fresh.root[1])*sprite.scaleY};}
+ const fresh=/^v2[23]-/.test(sprite.texture.key)?sprite.getData('v22Frame'):undefined;if(fresh?.head){return{x:sprite.x+(fresh.head[0]-fresh.root[0])*sprite.scaleX*(sprite.flipX?-1:1),y:sprite.y+(fresh.head[1]-fresh.root[1])*sprite.scaleY};}
  const record=(frames as Record<string,{head?:number[]}[]>)[sprite.texture.key]?.[Number(sprite.frame.name)];
  if(record?.head){const [x,y]=record.head;return{x:sprite.x+(sprite.flipX?-1:1)*(x-sprite.frame.width*(sprite.flipX?1-sprite.originX:sprite.originX))*sprite.scaleX,y:sprite.y+(y-sprite.frame.height*sprite.originY)*sprite.scaleY};}
  const bounds=visibleBodyBounds(sprite);return{x:bounds.centerX,y:bounds.top+8};
@@ -33,7 +33,7 @@ export function aimedWaterRoute(playerX:number,hand:{x:number;y:number},min:numb
 }
 
 export function visibleBodyBounds(sprite:Phaser.GameObjects.Sprite|Phaser.GameObjects.Image){
- const fresh=sprite.texture.key.startsWith('v22-')?sprite.getData('v22Frame'):undefined;const b=fresh?.contentBounds||(opaque as Record<string,number[][]>)[sprite.texture.key]?.[Number(sprite.frame.name)];
+ const fresh=/^v2[23]-/.test(sprite.texture.key)?sprite.getData('v22Frame'):undefined;const b=fresh?.contentBounds||(opaque as Record<string,number[][]>)[sprite.texture.key]?.[Number(sprite.frame.name)];
  if(!b)return sprite.getBounds();const w=sprite.frame.width,h=sprite.frame.height;
  const x=sprite.x+((sprite.flipX?w-b[2]:b[0])-sprite.originX*w)*sprite.scaleX,y=sprite.y+(b[1]-sprite.originY*h)*sprite.scaleY,width=(b[2]-b[0])*sprite.scaleX,height=(b[3]-b[1])*sprite.scaleY;
  return{x,y,width,height,left:x,right:x+width,top:y,bottom:y+height,centerX:x+width/2,centerY:y+height/2};

@@ -1,0 +1,17 @@
+import {describe,it,expect} from 'vitest';
+import {interceptionPositions} from './ending-timing-v23';
+import {selectMirrorVolley} from './mirror-volley-v23';
+import {entersCorridor} from './presentation-v15';
+import {MirrorFormation,BossBrain,HAKU_MOVES} from './boss-ai';
+import {Combatant} from './combat-core';
+import art from '../public/art-v23/manifest.json';
+import audio from '../public/audio-v23/manifest.json';
+describe('V23 story continuity and mirror cadence',()=>{
+ it('puts Haku between the Chidori hand and Zabuza before contact even with skipped frames',()=>{for(const positions of [[110,700,1200],[230,980,1500]]){const[k,z,h]=positions;const before=interceptionPositions(7100,k,z,h);expect(before.hakuX).toBe(before.contactX);expect(before.kakashiX+60).toBeLessThan(before.contactX);expect(before.contact).toBe(false);for(const age of [7150,7183,7250,9500]){const p=interceptionPositions(age,k,z,h);expect(p.contact).toBe(true);expect(p.kakashiX+60).toBe(p.hakuX);expect(p.hakuX).toBeLessThan(z-90);}}});
+ it('keeps two mirror origins while removing only shots that would cross the selected ground route',()=>{const shots=[{x:600,y:180,vx:0,vy:400,rx:18,ry:3,i:0},{x:640,y:180,vx:0,vy:400,rx:18,ry:3,i:1},{x:760,y:180,vx:0,vy:400,rx:18,ry:3,i:1}],r=selectMirrorVolley(590,80,1580,590,shots,[],true);expect(r).not.toBeNull();expect(r!.gap.right-r!.gap.left).toBeGreaterThanOrEqual(180);expect(new Set(r!.shots.map(s=>s.i)).size).toBe(2);expect(r!.shots.every(s=>!entersCorridor(s,r!.gap,590))).toBe(true);expect(shots).toHaveLength(3);});
+ it('omits a volley when every reachable route conflicts with existing needles',()=>{const wall=Array.from({length:50},(_,i)=>({x:i*34,y:510,vx:0,vy:0,rx:20,ry:3}));expect(selectMirrorVolley(600,80,1580,590,[{x:600,y:200,vx:0,vy:400,rx:18,ry:3,i:0}],wall,true)).toBeNull();});
+ it('does not idle just because the only available ranged move was used last',()=>{const b=new Combatant('haku',1200,true),brain=new BossBrain(b,'mirrors',()=>0);brain.readyAt=0;brain.recent=['senbon-fan'];for(const m of HAKU_MOVES)if(m.id!=='senbon-fan')b.cooldowns.set(m.id,30000);expect(brain.choose(5000,800,true)?.id).toBe('senbon-fan');});
+ it('forms an enclosing arch with a reachable upper apex and distinct positions',()=>{const f=new MirrorFormation();f.create(830,590);expect(f.mirrors).toHaveLength(8);expect(new Set(f.mirrors.map(m=>m.x+','+m.y)).size).toBe(8);expect(Math.min(...f.mirrors.map(m=>m.y))).toBeGreaterThanOrEqual(230);expect(f.mirrors.filter(m=>m.foreground)).toHaveLength(3);});
+ it('keeps a fixed body scale per generated choreography row and padded cells',()=>{for(const a of Object.values(art.assets)){for(const row of new Set(a.frames.map(f=>f.row))){const frames=a.frames.filter(f=>f.row===row);expect(new Set(frames.map(f=>f.scale)).size).toBe(1);}for(const f of a.frames){const[, ,w,h]=f.rect,[l,t,r,b]=f.contentBounds;expect(Math.min(l,t,w-r,h-b)).toBeGreaterThanOrEqual(20);}}});
+ it('retains documented sources and quiet measured peaks for all replacement effects',()=>{const records=audio.records.filter(r=>r.file.startsWith('/audio-v23'));expect(records.length).toBe(42);for(const r of records){expect(r.peakDb).toBeLessThanOrEqual(-11.99);expect(r.edits).toContain('no layering or pitch shifting');expect(r.source).toBeTruthy();}expect(audio.records.find(r=>r.id==='water-soft')!.file).toBe('/audio-v12/water-soft.mp3');});
+});

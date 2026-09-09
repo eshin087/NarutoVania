@@ -1,0 +1,1932 @@
+{
+  "version": 23,
+  "assets": {
+    "actors": {
+      "file": "actors.webp",
+      "columns": 6,
+      "frames": [
+        {
+          "rect": [
+            0,
+            0,
+            384,
+            288
+          ],
+          "contentBounds": [
+            98,
+            73,
+            294,
+            252
+          ],
+          "root": [
+            192.0,
+            260
+          ],
+          "head": [
+            127,
+            120
+          ],
+          "hand": [
+            150,
+            211
+          ],
+          "mouth": [
+            114,
+            127
+          ],
+          "scale": 0.55,
+          "authoredFacing": -1,
+          "row": 0,
+          "column": 0
+        },
+        {
+          "rect": [
+            384,
+            0,
+            384,
+            288
+          ],
+          "contentBounds": [
+            88,
+            86,
+            302,
+            252
+          ],
+          "root": [
+            192.0,
+            260
+          ],
+          "head": [
+            115,
+            140
+          ],
+          "hand": [
+            189,
+            157
+          ],
+          "mouth": [
+            102,
+            144
+          ],
+          "scale": 0.55,
+          "authoredFacing": -1,
+          "row": 0,
+          "column": 1
+        },
+        {
+          "rect": [
+            768,
+            0,
+            384,
+            288
+          ],
+          "contentBounds": [
+            87,
+            34,
+            286,
+            202
+          ],
+          "root": [
+            192.0,
+            260
+          ],
+          "head": [
+            108,
+            79
+          ],
+          "hand": [
+            99,
+            114
+          ],
+          "mouth": [
+            96,
+            83
+          ],
+          "scale": 0.55,
+          "authoredFacing": -1,
+          "row": 0,
+          "column": 2
+        },
+        {
+          "rect": [
+            1152,
+            0,
+            384,
+            288
+          ],
+          "contentBounds": [
+            67,
+            31,
+            333,
+            234
+          ],
+          "root": [
+            192.0,
+            260
+          ],
+          "head": [
+            125,
+            77
+          ],
+          "hand": [
+            83,
+            108
+          ],
+          "mouth": [
+            113,
+            85
+          ],
+          "scale": 0.55,
+          "authoredFacing": -1,
+          "row": 0,
+          "column": 3
+        },
+        {
+          "rect": [
+            1536,
+            0,
+            384,
+            288
+          ],
+          "contentBounds": [
+            135,
+            52,
+            323,
+            260
+          ],
+          "root": [
+            192.0,
+            260
+          ],
+          "head": [
+            164,
+            123
+          ],
+          "hand": [
+            153,
+            232
+          ],
+          "mouth": [
+            151,
+            129
+          ],
+          "scale": 0.55,
+          "authoredFacing": -1,
+          "row": 0,
+          "column": 4
+        },
+        {
+          "rect": [
+            1920,
+            0,
+            384,
+            288
+          ],
+          "contentBounds": [
+            103,
+            117,
+            299,
+            260
+          ],
+          "root": [
+            192.0,
+            260
+          ],
+          "head": [
+            154,
+            168
+          ],
+          "hand": [
+            118,
+            243
+          ],
+          "mouth": [
+            142,
+            173
+          ],
+          "scale": 0.55,
+          "authoredFacing": -1,
+          "row": 0,
+          "column": 5
+        },
+        {
+          "rect": [
+            0,
+            288,
+            384,
+            288
+          ],
+          "contentBounds": [
+            94,
+            97,
+            336,
+            249
+          ],
+          "root": [
+            192.0,
+            260
+          ],
+          "head": [
+            124,
+            143
+          ],
+          "hand": [
+            253,
+            151
+          ],
+          "mouth": [
+            114,
+            147
+          ],
+          "scale": 0.55,
+          "authoredFacing": -1,
+          "row": 1,
+          "column": 0
+        },
+        {
+          "rect": [
+            384,
+            288,
+            384,
+            288
+          ],
+          "contentBounds": [
+            54,
+            91,
+            357,
+            244
+          ],
+          "root": [
+            192.0,
+            260
+          ],
+          "head": [
+            123,
+            139
+          ],
+          "hand": [
+            65,
+            131
+          ],
+          "mouth": [
+            111,
+            144
+          ],
+          "scale": 0.55,
+          "authoredFacing": -1,
+          "row": 1,
+          "column": 1
+        },
+        {
+          "rect": [
+            768,
+            288,
+            384,
+            288
+          ],
+          "contentBounds": [
+            123,
+            58,
+            313,
+            254
+          ],
+          "root": [
+            192.0,
+            260
+          ],
+          "head": [
+            162,
+            96
+          ],
+          "hand": [
+            242,
+            103
+          ],
+          "mouth": [
+            173,
+            102
+          ],
+          "scale": 0.55,
+          "authoredFacing": -1,
+          "row": 1,
+          "column": 2
+        },
+        {
+          "rect": [
+            1152,
+            288,
+            384,
+            288
+          ],
+          "contentBounds": [
+            103,
+            105,
+            318,
+            260
+          ],
+          "root": [
+            192.0,
+            260
+          ],
+          "head": [
+            148,
+            158
+          ],
+          "hand": [
+            114,
+            240
+          ],
+          "mouth": [
+            138,
+            166
+          ],
+          "scale": 0.55,
+          "authoredFacing": -1,
+          "row": 1,
+          "column": 3
+        },
+        {
+          "rect": [
+            1536,
+            288,
+            384,
+            288
+          ],
+          "contentBounds": [
+            88,
+            125,
+            329,
+            255
+          ],
+          "root": [
+            192.0,
+            260
+          ],
+          "head": [
+            150,
+            184
+          ],
+          "hand": [
+            104,
+            243
+          ],
+          "mouth": [
+            140,
+            188
+          ],
+          "scale": 0.55,
+          "authoredFacing": -1,
+          "row": 1,
+          "column": 4
+        },
+        {
+          "rect": [
+            1920,
+            288,
+            384,
+            288
+          ],
+          "contentBounds": [
+            85,
+            177,
+            306,
+            250
+          ],
+          "root": [
+            192.0,
+            260
+          ],
+          "head": [
+            114,
+            214
+          ],
+          "hand": [
+            165,
+            236
+          ],
+          "mouth": [
+            109,
+            220
+          ],
+          "scale": 0.55,
+          "authoredFacing": -1,
+          "row": 1,
+          "column": 5
+        },
+        {
+          "rect": [
+            0,
+            576,
+            384,
+            288
+          ],
+          "contentBounds": [
+            106,
+            100,
+            258,
+            260
+          ],
+          "root": [
+            192.0,
+            260
+          ],
+          "head": [
+            230,
+            136
+          ],
+          "hand": [
+            234,
+            245
+          ],
+          "mouth": [
+            238,
+            145
+          ],
+          "scale": 0.6,
+          "authoredFacing": 1,
+          "row": 2,
+          "column": 0
+        },
+        {
+          "rect": [
+            384,
+            576,
+            384,
+            288
+          ],
+          "contentBounds": [
+            101,
+            89,
+            307,
+            259
+          ],
+          "root": [
+            192.0,
+            260
+          ],
+          "head": [
+            211,
+            124
+          ],
+          "hand": [
+            297,
+            145
+          ],
+          "mouth": [
+            225,
+            134
+          ],
+          "scale": 0.6,
+          "authoredFacing": 1,
+          "row": 2,
+          "column": 1
+        },
+        {
+          "rect": [
+            768,
+            576,
+            384,
+            288
+          ],
+          "contentBounds": [
+            104,
+            93,
+            314,
+            260
+          ],
+          "root": [
+            192.0,
+            260
+          ],
+          "head": [
+            210,
+            129
+          ],
+          "hand": [
+            301,
+            141
+          ],
+          "mouth": [
+            225,
+            139
+          ],
+          "scale": 0.6,
+          "authoredFacing": 1,
+          "row": 2,
+          "column": 2
+        },
+        {
+          "rect": [
+            1152,
+            576,
+            384,
+            288
+          ],
+          "contentBounds": [
+            105,
+            97,
+            265,
+            259
+          ],
+          "root": [
+            192.0,
+            260
+          ],
+          "head": [
+            213,
+            133
+          ],
+          "hand": [
+            235,
+            149
+          ],
+          "mouth": [
+            233,
+            143
+          ],
+          "scale": 0.6,
+          "authoredFacing": 1,
+          "row": 2,
+          "column": 3
+        },
+        {
+          "rect": [
+            1536,
+            576,
+            384,
+            288
+          ],
+          "contentBounds": [
+            112,
+            91,
+            279,
+            260
+          ],
+          "root": [
+            192.0,
+            260
+          ],
+          "head": [
+            221,
+            126
+          ],
+          "hand": [
+            164,
+            245
+          ],
+          "mouth": [
+            245,
+            137
+          ],
+          "scale": 0.6,
+          "authoredFacing": 1,
+          "row": 2,
+          "column": 4
+        },
+        {
+          "rect": [
+            1920,
+            576,
+            384,
+            288
+          ],
+          "contentBounds": [
+            106,
+            88,
+            268,
+            260
+          ],
+          "root": [
+            192.0,
+            260
+          ],
+          "head": [
+            219,
+            124
+          ],
+          "hand": [
+            159,
+            244
+          ],
+          "mouth": [
+            238,
+            136
+          ],
+          "scale": 0.6,
+          "authoredFacing": 1,
+          "row": 2,
+          "column": 5
+        },
+        {
+          "rect": [
+            0,
+            864,
+            384,
+            288
+          ],
+          "contentBounds": [
+            98,
+            56,
+            244,
+            259
+          ],
+          "root": [
+            192.0,
+            260
+          ],
+          "head": [
+            188,
+            101
+          ],
+          "hand": [
+            217,
+            126
+          ],
+          "mouth": [
+            197,
+            110
+          ],
+          "scale": 0.63,
+          "authoredFacing": 1,
+          "row": 3,
+          "column": 0
+        },
+        {
+          "rect": [
+            384,
+            864,
+            384,
+            288
+          ],
+          "contentBounds": [
+            94,
+            59,
+            233,
+            259
+          ],
+          "root": [
+            192.0,
+            260
+          ],
+          "head": [
+            193,
+            104
+          ],
+          "hand": [
+            210,
+            148
+          ],
+          "mouth": [
+            201,
+            113
+          ],
+          "scale": 0.63,
+          "authoredFacing": 1,
+          "row": 3,
+          "column": 1
+        },
+        {
+          "rect": [
+            768,
+            864,
+            384,
+            288
+          ],
+          "contentBounds": [
+            73,
+            57,
+            291,
+            259
+          ],
+          "root": [
+            192.0,
+            260
+          ],
+          "head": [
+            191,
+            102
+          ],
+          "hand": [
+            256,
+            122
+          ],
+          "mouth": [
+            198,
+            112
+          ],
+          "scale": 0.63,
+          "authoredFacing": 1,
+          "row": 3,
+          "column": 2
+        },
+        {
+          "rect": [
+            1152,
+            864,
+            384,
+            288
+          ],
+          "contentBounds": [
+            73,
+            62,
+            302,
+            260
+          ],
+          "root": [
+            192.0,
+            260
+          ],
+          "head": [
+            190,
+            107
+          ],
+          "hand": [
+            260,
+            126
+          ],
+          "mouth": [
+            199,
+            115
+          ],
+          "scale": 0.63,
+          "authoredFacing": 1,
+          "row": 3,
+          "column": 3
+        },
+        {
+          "rect": [
+            1536,
+            864,
+            384,
+            288
+          ],
+          "contentBounds": [
+            68,
+            62,
+            316,
+            260
+          ],
+          "root": [
+            192.0,
+            260
+          ],
+          "head": [
+            182,
+            107
+          ],
+          "hand": [
+            267,
+            128
+          ],
+          "mouth": [
+            195,
+            116
+          ],
+          "scale": 0.63,
+          "authoredFacing": 1,
+          "row": 3,
+          "column": 4
+        },
+        {
+          "rect": [
+            1920,
+            864,
+            384,
+            288
+          ],
+          "contentBounds": [
+            79,
+            61,
+            290,
+            259
+          ],
+          "root": [
+            192.0,
+            260
+          ],
+          "head": [
+            188,
+            106
+          ],
+          "hand": [
+            275,
+            125
+          ],
+          "mouth": [
+            197,
+            116
+          ],
+          "scale": 0.63,
+          "authoredFacing": 1,
+          "row": 3,
+          "column": 5
+        }
+      ]
+    },
+    "support": {
+      "file": "support.webp",
+      "columns": 8,
+      "frames": [
+        {
+          "rect": [
+            0,
+            0,
+            256,
+            288
+          ],
+          "contentBounds": [
+            44,
+            54,
+            225,
+            259
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            177,
+            76
+          ],
+          "hand": [
+            177,
+            76
+          ],
+          "mouth": [
+            191,
+            91
+          ],
+          "scale": 0.74,
+          "authoredFacing": 1,
+          "row": 0,
+          "column": 0
+        },
+        {
+          "rect": [
+            256,
+            0,
+            256,
+            288
+          ],
+          "contentBounds": [
+            47,
+            74,
+            206,
+            259
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            177,
+            96
+          ],
+          "hand": [
+            177,
+            96
+          ],
+          "mouth": [
+            191,
+            111
+          ],
+          "scale": 0.74,
+          "authoredFacing": 1,
+          "row": 0,
+          "column": 1
+        },
+        {
+          "rect": [
+            512,
+            0,
+            256,
+            288
+          ],
+          "contentBounds": [
+            42,
+            60,
+            218,
+            259
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            182,
+            86
+          ],
+          "hand": [
+            182,
+            86
+          ],
+          "mouth": [
+            196,
+            101
+          ],
+          "scale": 0.74,
+          "authoredFacing": 1,
+          "row": 0,
+          "column": 2
+        },
+        {
+          "rect": [
+            768,
+            0,
+            256,
+            288
+          ],
+          "contentBounds": [
+            41,
+            52,
+            224,
+            259
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            176,
+            76
+          ],
+          "hand": [
+            176,
+            76
+          ],
+          "mouth": [
+            190,
+            91
+          ],
+          "scale": 0.74,
+          "authoredFacing": 1,
+          "row": 0,
+          "column": 3
+        },
+        {
+          "rect": [
+            1024,
+            0,
+            256,
+            288
+          ],
+          "contentBounds": [
+            35,
+            76,
+            208,
+            260
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            164,
+            99
+          ],
+          "hand": [
+            164,
+            99
+          ],
+          "mouth": [
+            178,
+            114
+          ],
+          "scale": 0.74,
+          "authoredFacing": 1,
+          "row": 0,
+          "column": 4
+        },
+        {
+          "rect": [
+            1280,
+            0,
+            256,
+            288
+          ],
+          "contentBounds": [
+            38,
+            84,
+            201,
+            259
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            176,
+            112
+          ],
+          "hand": [
+            176,
+            112
+          ],
+          "mouth": [
+            190,
+            127
+          ],
+          "scale": 0.74,
+          "authoredFacing": 1,
+          "row": 0,
+          "column": 5
+        },
+        {
+          "rect": [
+            1536,
+            0,
+            256,
+            288
+          ],
+          "contentBounds": [
+            42,
+            64,
+            208,
+            260
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            178,
+            92
+          ],
+          "hand": [
+            178,
+            92
+          ],
+          "mouth": [
+            192,
+            107
+          ],
+          "scale": 0.74,
+          "authoredFacing": 1,
+          "row": 0,
+          "column": 6
+        },
+        {
+          "rect": [
+            1792,
+            0,
+            256,
+            288
+          ],
+          "contentBounds": [
+            35,
+            53,
+            229,
+            242
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            189,
+            79
+          ],
+          "hand": [
+            189,
+            79
+          ],
+          "mouth": [
+            203,
+            94
+          ],
+          "scale": 0.74,
+          "authoredFacing": 1,
+          "row": 0,
+          "column": 7
+        },
+        {
+          "rect": [
+            0,
+            288,
+            256,
+            288
+          ],
+          "contentBounds": [
+            65,
+            170,
+            202,
+            255
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            181,
+            192
+          ],
+          "hand": [
+            181,
+            192
+          ],
+          "mouth": [
+            195,
+            207
+          ],
+          "scale": 0.5,
+          "authoredFacing": 1,
+          "row": 1,
+          "column": 0
+        },
+        {
+          "rect": [
+            256,
+            288,
+            256,
+            288
+          ],
+          "contentBounds": [
+            47,
+            175,
+            194,
+            257
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            173,
+            196
+          ],
+          "hand": [
+            173,
+            196
+          ],
+          "mouth": [
+            187,
+            211
+          ],
+          "scale": 0.5,
+          "authoredFacing": 1,
+          "row": 1,
+          "column": 1
+        },
+        {
+          "rect": [
+            512,
+            288,
+            256,
+            288
+          ],
+          "contentBounds": [
+            45,
+            179,
+            195,
+            260
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            174,
+            215
+          ],
+          "hand": [
+            174,
+            215
+          ],
+          "mouth": [
+            188,
+            230
+          ],
+          "scale": 0.5,
+          "authoredFacing": 1,
+          "row": 1,
+          "column": 2
+        },
+        {
+          "rect": [
+            768,
+            288,
+            256,
+            288
+          ],
+          "contentBounds": [
+            46,
+            179,
+            195,
+            260
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            175,
+            217
+          ],
+          "hand": [
+            175,
+            217
+          ],
+          "mouth": [
+            189,
+            232
+          ],
+          "scale": 0.5,
+          "authoredFacing": 1,
+          "row": 1,
+          "column": 3
+        },
+        {
+          "rect": [
+            1024,
+            288,
+            256,
+            288
+          ],
+          "contentBounds": [
+            41,
+            181,
+            199,
+            260
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            179,
+            218
+          ],
+          "hand": [
+            179,
+            218
+          ],
+          "mouth": [
+            193,
+            233
+          ],
+          "scale": 0.5,
+          "authoredFacing": 1,
+          "row": 1,
+          "column": 4
+        },
+        {
+          "rect": [
+            1280,
+            288,
+            256,
+            288
+          ],
+          "contentBounds": [
+            45,
+            180,
+            192,
+            260
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            173,
+            214
+          ],
+          "hand": [
+            173,
+            214
+          ],
+          "mouth": [
+            187,
+            229
+          ],
+          "scale": 0.5,
+          "authoredFacing": 1,
+          "row": 1,
+          "column": 5
+        },
+        {
+          "rect": [
+            1536,
+            288,
+            256,
+            288
+          ],
+          "contentBounds": [
+            46,
+            179,
+            197,
+            257
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            176,
+            215
+          ],
+          "hand": [
+            176,
+            215
+          ],
+          "mouth": [
+            190,
+            230
+          ],
+          "scale": 0.5,
+          "authoredFacing": 1,
+          "row": 1,
+          "column": 6
+        },
+        {
+          "rect": [
+            1792,
+            288,
+            256,
+            288
+          ],
+          "contentBounds": [
+            59,
+            175,
+            199,
+            259
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            179,
+            196
+          ],
+          "hand": [
+            179,
+            196
+          ],
+          "mouth": [
+            193,
+            211
+          ],
+          "scale": 0.5,
+          "authoredFacing": 1,
+          "row": 1,
+          "column": 7
+        },
+        {
+          "rect": [
+            0,
+            576,
+            256,
+            288
+          ],
+          "contentBounds": [
+            37,
+            128,
+            217,
+            259
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            199,
+            171
+          ],
+          "hand": [
+            199,
+            171
+          ],
+          "mouth": [
+            213,
+            186
+          ],
+          "scale": 0.46,
+          "authoredFacing": 1,
+          "row": 2,
+          "column": 0
+        },
+        {
+          "rect": [
+            256,
+            576,
+            256,
+            288
+          ],
+          "contentBounds": [
+            34,
+            131,
+            211,
+            260
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            191,
+            174
+          ],
+          "hand": [
+            191,
+            174
+          ],
+          "mouth": [
+            205,
+            189
+          ],
+          "scale": 0.46,
+          "authoredFacing": 1,
+          "row": 2,
+          "column": 1
+        },
+        {
+          "rect": [
+            512,
+            576,
+            256,
+            288
+          ],
+          "contentBounds": [
+            32,
+            149,
+            204,
+            260
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            184,
+            193
+          ],
+          "hand": [
+            184,
+            193
+          ],
+          "mouth": [
+            198,
+            208
+          ],
+          "scale": 0.46,
+          "authoredFacing": 1,
+          "row": 2,
+          "column": 2
+        },
+        {
+          "rect": [
+            768,
+            576,
+            256,
+            288
+          ],
+          "contentBounds": [
+            33,
+            157,
+            207,
+            259
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            187,
+            203
+          ],
+          "hand": [
+            187,
+            203
+          ],
+          "mouth": [
+            201,
+            218
+          ],
+          "scale": 0.46,
+          "authoredFacing": 1,
+          "row": 2,
+          "column": 3
+        },
+        {
+          "rect": [
+            1024,
+            576,
+            256,
+            288
+          ],
+          "contentBounds": [
+            26,
+            155,
+            211,
+            260
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            190,
+            200
+          ],
+          "hand": [
+            190,
+            200
+          ],
+          "mouth": [
+            204,
+            215
+          ],
+          "scale": 0.46,
+          "authoredFacing": 1,
+          "row": 2,
+          "column": 4
+        },
+        {
+          "rect": [
+            1280,
+            576,
+            256,
+            288
+          ],
+          "contentBounds": [
+            32,
+            153,
+            211,
+            260
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            191,
+            198
+          ],
+          "hand": [
+            191,
+            198
+          ],
+          "mouth": [
+            205,
+            213
+          ],
+          "scale": 0.46,
+          "authoredFacing": 1,
+          "row": 2,
+          "column": 5
+        },
+        {
+          "rect": [
+            1536,
+            576,
+            256,
+            288
+          ],
+          "contentBounds": [
+            36,
+            135,
+            213,
+            260
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            193,
+            178
+          ],
+          "hand": [
+            193,
+            178
+          ],
+          "mouth": [
+            207,
+            193
+          ],
+          "scale": 0.46,
+          "authoredFacing": 1,
+          "row": 2,
+          "column": 6
+        },
+        {
+          "rect": [
+            1792,
+            576,
+            256,
+            288
+          ],
+          "contentBounds": [
+            48,
+            133,
+            218,
+            260
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            197,
+            176
+          ],
+          "hand": [
+            197,
+            176
+          ],
+          "mouth": [
+            211,
+            191
+          ],
+          "scale": 0.46,
+          "authoredFacing": 1,
+          "row": 2,
+          "column": 7
+        },
+        {
+          "rect": [
+            0,
+            864,
+            256,
+            288
+          ],
+          "contentBounds": [
+            40,
+            109,
+            227,
+            258
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            208,
+            146
+          ],
+          "hand": [
+            208,
+            146
+          ],
+          "mouth": [
+            222,
+            161
+          ],
+          "scale": 0.46,
+          "authoredFacing": 1,
+          "row": 3,
+          "column": 0
+        },
+        {
+          "rect": [
+            256,
+            864,
+            256,
+            288
+          ],
+          "contentBounds": [
+            33,
+            103,
+            224,
+            260
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            204,
+            164
+          ],
+          "hand": [
+            204,
+            164
+          ],
+          "mouth": [
+            218,
+            179
+          ],
+          "scale": 0.46,
+          "authoredFacing": 1,
+          "row": 3,
+          "column": 1
+        },
+        {
+          "rect": [
+            512,
+            864,
+            256,
+            288
+          ],
+          "contentBounds": [
+            30,
+            109,
+            222,
+            260
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            202,
+            184
+          ],
+          "hand": [
+            202,
+            184
+          ],
+          "mouth": [
+            216,
+            199
+          ],
+          "scale": 0.46,
+          "authoredFacing": 1,
+          "row": 3,
+          "column": 2
+        },
+        {
+          "rect": [
+            768,
+            864,
+            256,
+            288
+          ],
+          "contentBounds": [
+            30,
+            104,
+            224,
+            260
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            204,
+            170
+          ],
+          "hand": [
+            204,
+            170
+          ],
+          "mouth": [
+            218,
+            185
+          ],
+          "scale": 0.46,
+          "authoredFacing": 1,
+          "row": 3,
+          "column": 3
+        },
+        {
+          "rect": [
+            1024,
+            864,
+            256,
+            288
+          ],
+          "contentBounds": [
+            30,
+            102,
+            226,
+            259
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            206,
+            172
+          ],
+          "hand": [
+            206,
+            172
+          ],
+          "mouth": [
+            220,
+            187
+          ],
+          "scale": 0.46,
+          "authoredFacing": 1,
+          "row": 3,
+          "column": 4
+        },
+        {
+          "rect": [
+            1280,
+            864,
+            256,
+            288
+          ],
+          "contentBounds": [
+            30,
+            110,
+            224,
+            260
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            203,
+            185
+          ],
+          "hand": [
+            203,
+            185
+          ],
+          "mouth": [
+            217,
+            200
+          ],
+          "scale": 0.46,
+          "authoredFacing": 1,
+          "row": 3,
+          "column": 5
+        },
+        {
+          "rect": [
+            1536,
+            864,
+            256,
+            288
+          ],
+          "contentBounds": [
+            32,
+            102,
+            224,
+            260
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            203,
+            162
+          ],
+          "hand": [
+            203,
+            162
+          ],
+          "mouth": [
+            217,
+            177
+          ],
+          "scale": 0.46,
+          "authoredFacing": 1,
+          "row": 3,
+          "column": 6
+        },
+        {
+          "rect": [
+            1792,
+            864,
+            256,
+            288
+          ],
+          "contentBounds": [
+            31,
+            104,
+            224,
+            260
+          ],
+          "root": [
+            128.0,
+            260
+          ],
+          "head": [
+            203,
+            162
+          ],
+          "hand": [
+            203,
+            162
+          ],
+          "mouth": [
+            217,
+            177
+          ],
+          "scale": 0.46,
+          "authoredFacing": 1,
+          "row": 3,
+          "column": 7
+        }
+      ]
+    }
+  },
+  "notes": "Fixed per-row scale against approved body proportions; no per-frame resizing. Source Haku faces left. Ground and attachments are independent of effect bounds.",
+  "calibration": {
+    "method": "Compared head widths and torso lengths with the approved Haku, Zabuza and Naruto idle artwork at rendered scale; crouching height never used as standing height.",
+    "rowScales": [
+      0.55,
+      0.55,
+      0.6,
+      0.63
+    ],
+    "review": "V23 replacement Haku and kneeling Zabuza reduced after side-by-side idle comparison."
+  }
+}

@@ -1,4 +1,5 @@
-import {pose22,attachment22} from './art-v22';
+import {pose23,anchor23} from './art-v23';
+import {pose22} from './art-v22';
 import {makeEffect,animateEffect} from './effects-v14';
 import type * as Phaser from 'phaser';
 import manifest from '../public/art-v21/manifest.json';
@@ -18,8 +19,8 @@ export class HoundPack{
   if(age<arrive){const t=Math.min(1,age/arrive),orbit=i===0?0:Math.sin(t*Math.PI*2)*[0,66,90][i],x=this.fromX+(target.x+[-32,38,-15][i]-this.fromX)*t+orbit;
    const running=t<.66,dir=running?(target.x>this.fromX?1:-1):facing;pose22(dog,'hounds',i,running?Math.floor(age/90)%2:3,dir);
    dog.setPosition(x,this.floor-Math.sin(Math.max(0,(t-.66)/.34)*Math.PI)*[25,40,55][i]).setDepth(orbit<0?3:6).setAlpha(1);
-  }else{pose22(dog,'hound-hold',i,Math.floor((age-arrive)/115)%4,facing);const mouth=attachment22(dog,'mouth'),dx=mouth.x-dog.x,dy=mouth.y-dog.y;
-   dog.setPosition(target.x+[-27,31,-12][i]-dx,target.y-[26,40,56][i]-dy).setDepth(6).setAlpha(age<holdEnd?1:Math.max(0,1-(age-holdEnd)/300));}
+  }else{pose23(dog,'support',i+1,3+Math.floor((age-arrive)/150)%3,facing);const mouth=anchor23(dog,'mouth'),dx=mouth.x-dog.x;
+   dog.setPosition(target.x+[-27,31,-12][i]-dx,this.floor).setDepth(6).setAlpha(age<holdEnd?1:Math.max(0,1-(age-holdEnd)/300));}
   if(age>=holdEnd){pose22(dog,'hounds',i,6,facing);dog.setPosition(target.x+[-32,38,-15][i]-facing*Math.min(26,(age-holdEnd)*.09),this.floor);}
  }
  if(age>=contactAt)this.contact=true;if(release||age>=holdEnd+400){this.done=true;this.dogs.forEach(d=>dismissHound(this.scene,d.x,d.y-20));this.destroy();}return this.contact;}

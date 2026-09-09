@@ -1,0 +1,2641 @@
+{
+  "mode": "built-in imagegen",
+  "background_cleanup": "Both raw images were RGB with baked checkerboard. Neutral checkerboard connected regions were removed, character connected components extracted, isolated and repacked. Original files retained. No pose redrawing or regeneration.",
+  "anchor_notes": "Root anchors are common source row floor at nominal source cell center, not hip position. All source_to_final scales are1. Head, mouth and hand anchors are manually estimated from raw pixels, approximately +/-8px; verify in gameplay. Fixed floor preserves vertical leap/run motion. No per-frame opaque-box scaling.",
+  "sheets": [
+    {
+      "name": "sheet-a",
+      "path": "C:\\Users\\eshin\\.codex\\visualizations\\2026\\09\\05\\01a0700e-9aab-7040-b123-d472c87e3925\\v23-art\\sheet-a.png",
+      "raw_dimensions": [
+        1536,
+        1024
+      ],
+      "raw_mode": "RGB",
+      "final_dimensions": [
+        2304,
+        1152
+      ],
+      "final_mode": "RGBA",
+      "grid": [
+        6,
+        4
+      ],
+      "cell": [
+        384,
+        288
+      ],
+      "transparent_pixel_fraction": 0.86226,
+      "20px_border_opaque_count": 0,
+      "frame_count": 24,
+      "frames": [
+        {
+          "row": 0,
+          "column": 0,
+          "source_bbox": [
+            34,
+            76,
+            230,
+            255
+          ],
+          "opaque_bbox_in_cell": [
+            98,
+            73,
+            294,
+            252
+          ],
+          "safe_source_crop": [
+            0,
+            0,
+            384,
+            288
+          ],
+          "root_anchor_in_cell": [
+            192.0,
+            260
+          ],
+          "source_ground_y": 263,
+          "source_to_final_scale": 1,
+          "margins": [
+            98,
+            73,
+            90,
+            36
+          ],
+          "head_anchor_in_cell": [
+            127,
+            120
+          ],
+          "mouth_anchor_in_cell": [
+            114,
+            127
+          ],
+          "hand_anchor_in_cell": [
+            150,
+            211
+          ]
+        },
+        {
+          "row": 0,
+          "column": 1,
+          "source_bbox": [
+            280,
+            89,
+            494,
+            255
+          ],
+          "opaque_bbox_in_cell": [
+            88,
+            86,
+            302,
+            252
+          ],
+          "safe_source_crop": [
+            384,
+            0,
+            384,
+            288
+          ],
+          "root_anchor_in_cell": [
+            192.0,
+            260
+          ],
+          "source_ground_y": 263,
+          "source_to_final_scale": 1,
+          "margins": [
+            88,
+            86,
+            82,
+            36
+          ],
+          "head_anchor_in_cell": [
+            115,
+            140
+          ],
+          "mouth_anchor_in_cell": [
+            102,
+            144
+          ],
+          "hand_anchor_in_cell": [
+            189,
+            157
+          ]
+        },
+        {
+          "row": 0,
+          "column": 2,
+          "source_bbox": [
+            535,
+            37,
+            734,
+            205
+          ],
+          "opaque_bbox_in_cell": [
+            87,
+            34,
+            286,
+            202
+          ],
+          "safe_source_crop": [
+            768,
+            0,
+            384,
+            288
+          ],
+          "root_anchor_in_cell": [
+            192.0,
+            260
+          ],
+          "source_ground_y": 263,
+          "source_to_final_scale": 1,
+          "margins": [
+            87,
+            34,
+            98,
+            86
+          ],
+          "head_anchor_in_cell": [
+            108,
+            79
+          ],
+          "mouth_anchor_in_cell": [
+            96,
+            83
+          ],
+          "hand_anchor_in_cell": [
+            99,
+            114
+          ]
+        },
+        {
+          "row": 0,
+          "column": 3,
+          "source_bbox": [
+            771,
+            34,
+            1037,
+            237
+          ],
+          "opaque_bbox_in_cell": [
+            67,
+            31,
+            333,
+            234
+          ],
+          "safe_source_crop": [
+            1152,
+            0,
+            384,
+            288
+          ],
+          "root_anchor_in_cell": [
+            192.0,
+            260
+          ],
+          "source_ground_y": 263,
+          "source_to_final_scale": 1,
+          "margins": [
+            67,
+            31,
+            51,
+            54
+          ],
+          "head_anchor_in_cell": [
+            125,
+            77
+          ],
+          "mouth_anchor_in_cell": [
+            113,
+            85
+          ],
+          "hand_anchor_in_cell": [
+            83,
+            108
+          ]
+        },
+        {
+          "row": 0,
+          "column": 4,
+          "source_bbox": [
+            1095,
+            55,
+            1283,
+            263
+          ],
+          "opaque_bbox_in_cell": [
+            135,
+            52,
+            323,
+            260
+          ],
+          "safe_source_crop": [
+            1536,
+            0,
+            384,
+            288
+          ],
+          "root_anchor_in_cell": [
+            192.0,
+            260
+          ],
+          "source_ground_y": 263,
+          "source_to_final_scale": 1,
+          "margins": [
+            135,
+            52,
+            61,
+            28
+          ],
+          "head_anchor_in_cell": [
+            164,
+            123
+          ],
+          "mouth_anchor_in_cell": [
+            151,
+            129
+          ],
+          "hand_anchor_in_cell": [
+            153,
+            232
+          ]
+        },
+        {
+          "row": 0,
+          "column": 5,
+          "source_bbox": [
+            1319,
+            120,
+            1515,
+            263
+          ],
+          "opaque_bbox_in_cell": [
+            103,
+            117,
+            299,
+            260
+          ],
+          "safe_source_crop": [
+            1920,
+            0,
+            384,
+            288
+          ],
+          "root_anchor_in_cell": [
+            192.0,
+            260
+          ],
+          "source_ground_y": 263,
+          "source_to_final_scale": 1,
+          "margins": [
+            103,
+            117,
+            85,
+            28
+          ],
+          "head_anchor_in_cell": [
+            154,
+            168
+          ],
+          "mouth_anchor_in_cell": [
+            142,
+            173
+          ],
+          "hand_anchor_in_cell": [
+            118,
+            243
+          ]
+        },
+        {
+          "row": 1,
+          "column": 0,
+          "source_bbox": [
+            30,
+            347,
+            272,
+            499
+          ],
+          "opaque_bbox_in_cell": [
+            94,
+            97,
+            336,
+            249
+          ],
+          "safe_source_crop": [
+            0,
+            288,
+            384,
+            288
+          ],
+          "root_anchor_in_cell": [
+            192.0,
+            260
+          ],
+          "source_ground_y": 510,
+          "source_to_final_scale": 1,
+          "margins": [
+            94,
+            97,
+            48,
+            39
+          ],
+          "head_anchor_in_cell": [
+            124,
+            143
+          ],
+          "mouth_anchor_in_cell": [
+            114,
+            147
+          ],
+          "hand_anchor_in_cell": [
+            253,
+            151
+          ]
+        },
+        {
+          "row": 1,
+          "column": 1,
+          "source_bbox": [
+            246,
+            341,
+            549,
+            494
+          ],
+          "opaque_bbox_in_cell": [
+            54,
+            91,
+            357,
+            244
+          ],
+          "safe_source_crop": [
+            384,
+            288,
+            384,
+            288
+          ],
+          "root_anchor_in_cell": [
+            192.0,
+            260
+          ],
+          "source_ground_y": 510,
+          "source_to_final_scale": 1,
+          "margins": [
+            54,
+            91,
+            27,
+            44
+          ],
+          "head_anchor_in_cell": [
+            123,
+            139
+          ],
+          "mouth_anchor_in_cell": [
+            111,
+            144
+          ],
+          "hand_anchor_in_cell": [
+            65,
+            131
+          ]
+        },
+        {
+          "row": 1,
+          "column": 2,
+          "source_bbox": [
+            571,
+            308,
+            761,
+            504
+          ],
+          "opaque_bbox_in_cell": [
+            123,
+            58,
+            313,
+            254
+          ],
+          "safe_source_crop": [
+            768,
+            288,
+            384,
+            288
+          ],
+          "root_anchor_in_cell": [
+            192.0,
+            260
+          ],
+          "source_ground_y": 510,
+          "source_to_final_scale": 1,
+          "margins": [
+            123,
+            58,
+            71,
+            34
+          ],
+          "head_anchor_in_cell": [
+            162,
+            96
+          ],
+          "mouth_anchor_in_cell": [
+            173,
+            102
+          ],
+          "hand_anchor_in_cell": [
+            242,
+            103
+          ]
+        },
+        {
+          "row": 1,
+          "column": 3,
+          "source_bbox": [
+            807,
+            355,
+            1022,
+            510
+          ],
+          "opaque_bbox_in_cell": [
+            103,
+            105,
+            318,
+            260
+          ],
+          "safe_source_crop": [
+            1152,
+            288,
+            384,
+            288
+          ],
+          "root_anchor_in_cell": [
+            192.0,
+            260
+          ],
+          "source_ground_y": 510,
+          "source_to_final_scale": 1,
+          "margins": [
+            103,
+            105,
+            66,
+            28
+          ],
+          "head_anchor_in_cell": [
+            148,
+            158
+          ],
+          "mouth_anchor_in_cell": [
+            138,
+            166
+          ],
+          "hand_anchor_in_cell": [
+            114,
+            240
+          ]
+        },
+        {
+          "row": 1,
+          "column": 4,
+          "source_bbox": [
+            1048,
+            375,
+            1289,
+            505
+          ],
+          "opaque_bbox_in_cell": [
+            88,
+            125,
+            329,
+            255
+          ],
+          "safe_source_crop": [
+            1536,
+            288,
+            384,
+            288
+          ],
+          "root_anchor_in_cell": [
+            192.0,
+            260
+          ],
+          "source_ground_y": 510,
+          "source_to_final_scale": 1,
+          "margins": [
+            88,
+            125,
+            55,
+            33
+          ],
+          "head_anchor_in_cell": [
+            150,
+            184
+          ],
+          "mouth_anchor_in_cell": [
+            140,
+            188
+          ],
+          "hand_anchor_in_cell": [
+            104,
+            243
+          ]
+        },
+        {
+          "row": 1,
+          "column": 5,
+          "source_bbox": [
+            1301,
+            427,
+            1522,
+            500
+          ],
+          "opaque_bbox_in_cell": [
+            85,
+            177,
+            306,
+            250
+          ],
+          "safe_source_crop": [
+            1920,
+            288,
+            384,
+            288
+          ],
+          "root_anchor_in_cell": [
+            192.0,
+            260
+          ],
+          "source_ground_y": 510,
+          "source_to_final_scale": 1,
+          "margins": [
+            85,
+            177,
+            78,
+            38
+          ],
+          "head_anchor_in_cell": [
+            114,
+            214
+          ],
+          "mouth_anchor_in_cell": [
+            109,
+            220
+          ],
+          "hand_anchor_in_cell": [
+            165,
+            236
+          ]
+        },
+        {
+          "row": 2,
+          "column": 0,
+          "source_bbox": [
+            42,
+            603,
+            194,
+            763
+          ],
+          "opaque_bbox_in_cell": [
+            106,
+            100,
+            258,
+            260
+          ],
+          "safe_source_crop": [
+            0,
+            576,
+            384,
+            288
+          ],
+          "root_anchor_in_cell": [
+            192.0,
+            260
+          ],
+          "source_ground_y": 763,
+          "source_to_final_scale": 1,
+          "margins": [
+            106,
+            100,
+            126,
+            28
+          ],
+          "head_anchor_in_cell": [
+            230,
+            136
+          ],
+          "mouth_anchor_in_cell": [
+            238,
+            145
+          ],
+          "hand_anchor_in_cell": [
+            234,
+            245
+          ]
+        },
+        {
+          "row": 2,
+          "column": 1,
+          "source_bbox": [
+            293,
+            592,
+            499,
+            762
+          ],
+          "opaque_bbox_in_cell": [
+            101,
+            89,
+            307,
+            259
+          ],
+          "safe_source_crop": [
+            384,
+            576,
+            384,
+            288
+          ],
+          "root_anchor_in_cell": [
+            192.0,
+            260
+          ],
+          "source_ground_y": 763,
+          "source_to_final_scale": 1,
+          "margins": [
+            101,
+            89,
+            77,
+            29
+          ],
+          "head_anchor_in_cell": [
+            211,
+            124
+          ],
+          "mouth_anchor_in_cell": [
+            225,
+            134
+          ],
+          "hand_anchor_in_cell": [
+            297,
+            145
+          ]
+        },
+        {
+          "row": 2,
+          "column": 2,
+          "source_bbox": [
+            552,
+            596,
+            762,
+            763
+          ],
+          "opaque_bbox_in_cell": [
+            104,
+            93,
+            314,
+            260
+          ],
+          "safe_source_crop": [
+            768,
+            576,
+            384,
+            288
+          ],
+          "root_anchor_in_cell": [
+            192.0,
+            260
+          ],
+          "source_ground_y": 763,
+          "source_to_final_scale": 1,
+          "margins": [
+            104,
+            93,
+            70,
+            28
+          ],
+          "head_anchor_in_cell": [
+            210,
+            129
+          ],
+          "mouth_anchor_in_cell": [
+            225,
+            139
+          ],
+          "hand_anchor_in_cell": [
+            301,
+            141
+          ]
+        },
+        {
+          "row": 2,
+          "column": 3,
+          "source_bbox": [
+            809,
+            600,
+            969,
+            762
+          ],
+          "opaque_bbox_in_cell": [
+            105,
+            97,
+            265,
+            259
+          ],
+          "safe_source_crop": [
+            1152,
+            576,
+            384,
+            288
+          ],
+          "root_anchor_in_cell": [
+            192.0,
+            260
+          ],
+          "source_ground_y": 763,
+          "source_to_final_scale": 1,
+          "margins": [
+            105,
+            97,
+            119,
+            29
+          ],
+          "head_anchor_in_cell": [
+            213,
+            133
+          ],
+          "mouth_anchor_in_cell": [
+            233,
+            143
+          ],
+          "hand_anchor_in_cell": [
+            235,
+            149
+          ]
+        },
+        {
+          "row": 2,
+          "column": 4,
+          "source_bbox": [
+            1072,
+            594,
+            1239,
+            763
+          ],
+          "opaque_bbox_in_cell": [
+            112,
+            91,
+            279,
+            260
+          ],
+          "safe_source_crop": [
+            1536,
+            576,
+            384,
+            288
+          ],
+          "root_anchor_in_cell": [
+            192.0,
+            260
+          ],
+          "source_ground_y": 763,
+          "source_to_final_scale": 1,
+          "margins": [
+            112,
+            91,
+            105,
+            28
+          ],
+          "head_anchor_in_cell": [
+            221,
+            126
+          ],
+          "mouth_anchor_in_cell": [
+            245,
+            137
+          ],
+          "hand_anchor_in_cell": [
+            164,
+            245
+          ]
+        },
+        {
+          "row": 2,
+          "column": 5,
+          "source_bbox": [
+            1322,
+            591,
+            1484,
+            763
+          ],
+          "opaque_bbox_in_cell": [
+            106,
+            88,
+            268,
+            260
+          ],
+          "safe_source_crop": [
+            1920,
+            576,
+            384,
+            288
+          ],
+          "root_anchor_in_cell": [
+            192.0,
+            260
+          ],
+          "source_ground_y": 763,
+          "source_to_final_scale": 1,
+          "margins": [
+            106,
+            88,
+            116,
+            28
+          ],
+          "head_anchor_in_cell": [
+            219,
+            124
+          ],
+          "mouth_anchor_in_cell": [
+            238,
+            136
+          ],
+          "hand_anchor_in_cell": [
+            159,
+            244
+          ]
+        },
+        {
+          "row": 3,
+          "column": 0,
+          "source_bbox": [
+            34,
+            801,
+            180,
+            1004
+          ],
+          "opaque_bbox_in_cell": [
+            98,
+            56,
+            244,
+            259
+          ],
+          "safe_source_crop": [
+            0,
+            864,
+            384,
+            288
+          ],
+          "root_anchor_in_cell": [
+            192.0,
+            260
+          ],
+          "source_ground_y": 1005,
+          "source_to_final_scale": 1,
+          "margins": [
+            98,
+            56,
+            140,
+            29
+          ],
+          "head_anchor_in_cell": [
+            188,
+            101
+          ],
+          "mouth_anchor_in_cell": [
+            197,
+            110
+          ],
+          "hand_anchor_in_cell": [
+            217,
+            126
+          ]
+        },
+        {
+          "row": 3,
+          "column": 1,
+          "source_bbox": [
+            286,
+            804,
+            425,
+            1004
+          ],
+          "opaque_bbox_in_cell": [
+            94,
+            59,
+            233,
+            259
+          ],
+          "safe_source_crop": [
+            384,
+            864,
+            384,
+            288
+          ],
+          "root_anchor_in_cell": [
+            192.0,
+            260
+          ],
+          "source_ground_y": 1005,
+          "source_to_final_scale": 1,
+          "margins": [
+            94,
+            59,
+            151,
+            29
+          ],
+          "head_anchor_in_cell": [
+            193,
+            104
+          ],
+          "mouth_anchor_in_cell": [
+            201,
+            113
+          ],
+          "hand_anchor_in_cell": [
+            210,
+            148
+          ]
+        },
+        {
+          "row": 3,
+          "column": 2,
+          "source_bbox": [
+            521,
+            802,
+            739,
+            1004
+          ],
+          "opaque_bbox_in_cell": [
+            73,
+            57,
+            291,
+            259
+          ],
+          "safe_source_crop": [
+            768,
+            864,
+            384,
+            288
+          ],
+          "root_anchor_in_cell": [
+            192.0,
+            260
+          ],
+          "source_ground_y": 1005,
+          "source_to_final_scale": 1,
+          "margins": [
+            73,
+            57,
+            93,
+            29
+          ],
+          "head_anchor_in_cell": [
+            191,
+            102
+          ],
+          "mouth_anchor_in_cell": [
+            198,
+            112
+          ],
+          "hand_anchor_in_cell": [
+            256,
+            122
+          ]
+        },
+        {
+          "row": 3,
+          "column": 3,
+          "source_bbox": [
+            777,
+            807,
+            1006,
+            1005
+          ],
+          "opaque_bbox_in_cell": [
+            73,
+            62,
+            302,
+            260
+          ],
+          "safe_source_crop": [
+            1152,
+            864,
+            384,
+            288
+          ],
+          "root_anchor_in_cell": [
+            192.0,
+            260
+          ],
+          "source_ground_y": 1005,
+          "source_to_final_scale": 1,
+          "margins": [
+            73,
+            62,
+            82,
+            28
+          ],
+          "head_anchor_in_cell": [
+            190,
+            107
+          ],
+          "mouth_anchor_in_cell": [
+            199,
+            115
+          ],
+          "hand_anchor_in_cell": [
+            260,
+            126
+          ]
+        },
+        {
+          "row": 3,
+          "column": 4,
+          "source_bbox": [
+            1028,
+            807,
+            1276,
+            1005
+          ],
+          "opaque_bbox_in_cell": [
+            68,
+            62,
+            316,
+            260
+          ],
+          "safe_source_crop": [
+            1536,
+            864,
+            384,
+            288
+          ],
+          "root_anchor_in_cell": [
+            192.0,
+            260
+          ],
+          "source_ground_y": 1005,
+          "source_to_final_scale": 1,
+          "margins": [
+            68,
+            62,
+            68,
+            28
+          ],
+          "head_anchor_in_cell": [
+            182,
+            107
+          ],
+          "mouth_anchor_in_cell": [
+            195,
+            116
+          ],
+          "hand_anchor_in_cell": [
+            267,
+            128
+          ]
+        },
+        {
+          "row": 3,
+          "column": 5,
+          "source_bbox": [
+            1295,
+            806,
+            1506,
+            1004
+          ],
+          "opaque_bbox_in_cell": [
+            79,
+            61,
+            290,
+            259
+          ],
+          "safe_source_crop": [
+            1920,
+            864,
+            384,
+            288
+          ],
+          "root_anchor_in_cell": [
+            192.0,
+            260
+          ],
+          "source_ground_y": 1005,
+          "source_to_final_scale": 1,
+          "margins": [
+            79,
+            61,
+            94,
+            29
+          ],
+          "head_anchor_in_cell": [
+            188,
+            106
+          ],
+          "mouth_anchor_in_cell": [
+            197,
+            116
+          ],
+          "hand_anchor_in_cell": [
+            275,
+            125
+          ]
+        }
+      ],
+      "qa_dark": "C:\\Users\\eshin\\.codex\\visualizations\\2026\\09\\05\\01a0700e-9aab-7040-b123-d472c87e3925\\v23-art\\sheet-a-qa-dark.jpg",
+      "qa_light": "C:\\Users\\eshin\\.codex\\visualizations\\2026\\09\\05\\01a0700e-9aab-7040-b123-d472c87e3925\\v23-art\\sheet-a-qa-light.jpg",
+      "row_semantics": [
+        {
+          "id": "haku-mirror-entry",
+          "facing": "left",
+          "frames": [
+            "coil",
+            "push-off",
+            "rise",
+            "extended-leap",
+            "descend",
+            "low-land"
+          ],
+          "source_head_height_estimate": 54,
+          "source_standing_equivalent_height_estimate": 245,
+          "game_standing_reference_height": 146
+        },
+        {
+          "id": "haku-interception",
+          "facing": "left except recoil upward",
+          "frames": [
+            "dash",
+            "intercept",
+            "recoil",
+            "fold",
+            "collapse",
+            "fallen"
+          ],
+          "source_head_height_estimate": 54,
+          "source_standing_equivalent_height_estimate": 245,
+          "game_standing_reference_height": 146
+        },
+        {
+          "id": "zabuza-kunai-take",
+          "facing": "right",
+          "frames": [
+            "slumped-kneel",
+            "reach",
+            "extended-reach",
+            "draw-to-mouth",
+            "mouth-hold",
+            "settled-mouth-hold"
+          ],
+          "source_head_height_estimate": 56,
+          "source_kneel_height_range": [
+            160,
+            172
+          ],
+          "source_standing_equivalent_height_estimate": 285,
+          "game_standing_reference_height": 167
+        },
+        {
+          "id": "naruto-kunai-offer",
+          "facing": "right",
+          "frames": [
+            "ready",
+            "weight-shift",
+            "extend",
+            "offer",
+            "full-offer",
+            "empty-hand"
+          ],
+          "source_head_height_estimate": 56,
+          "source_standing_equivalent_height_estimate": 230,
+          "game_standing_reference_height": 125
+        }
+      ]
+    },
+    {
+      "name": "sheet-b",
+      "path": "C:\\Users\\eshin\\.codex\\visualizations\\2026\\09\\05\\01a0700e-9aab-7040-b123-d472c87e3925\\v23-art\\sheet-b.png",
+      "raw_dimensions": [
+        1774,
+        887
+      ],
+      "raw_mode": "RGB",
+      "final_dimensions": [
+        2048,
+        1152
+      ],
+      "final_mode": "RGBA",
+      "grid": [
+        8,
+        4
+      ],
+      "cell": [
+        256,
+        288
+      ],
+      "transparent_pixel_fraction": 0.84841,
+      "20px_border_opaque_count": 0,
+      "frame_count": 32,
+      "frames": [
+        {
+          "row": 0,
+          "column": 0,
+          "source_bbox": [
+            27,
+            51,
+            208,
+            256
+          ],
+          "opaque_bbox_in_cell": [
+            44,
+            54,
+            225,
+            259
+          ],
+          "safe_source_crop": [
+            0,
+            0,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 257,
+          "source_to_final_scale": 1,
+          "margins": [
+            44,
+            54,
+            31,
+            29
+          ],
+          "head_anchor_in_cell": [
+            177,
+            76
+          ],
+          "mouth_anchor_in_cell": [
+            191,
+            91
+          ]
+        },
+        {
+          "row": 0,
+          "column": 1,
+          "source_bbox": [
+            252,
+            71,
+            411,
+            256
+          ],
+          "opaque_bbox_in_cell": [
+            47,
+            74,
+            206,
+            259
+          ],
+          "safe_source_crop": [
+            256,
+            0,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 257,
+          "source_to_final_scale": 1,
+          "margins": [
+            47,
+            74,
+            50,
+            29
+          ],
+          "head_anchor_in_cell": [
+            177,
+            96
+          ],
+          "mouth_anchor_in_cell": [
+            191,
+            111
+          ]
+        },
+        {
+          "row": 0,
+          "column": 2,
+          "source_bbox": [
+            468,
+            57,
+            644,
+            256
+          ],
+          "opaque_bbox_in_cell": [
+            42,
+            60,
+            218,
+            259
+          ],
+          "safe_source_crop": [
+            512,
+            0,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 257,
+          "source_to_final_scale": 1,
+          "margins": [
+            42,
+            60,
+            38,
+            29
+          ],
+          "head_anchor_in_cell": [
+            182,
+            86
+          ],
+          "mouth_anchor_in_cell": [
+            196,
+            101
+          ]
+        },
+        {
+          "row": 0,
+          "column": 3,
+          "source_bbox": [
+            689,
+            49,
+            872,
+            256
+          ],
+          "opaque_bbox_in_cell": [
+            41,
+            52,
+            224,
+            259
+          ],
+          "safe_source_crop": [
+            768,
+            0,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 257,
+          "source_to_final_scale": 1,
+          "margins": [
+            41,
+            52,
+            32,
+            29
+          ],
+          "head_anchor_in_cell": [
+            176,
+            76
+          ],
+          "mouth_anchor_in_cell": [
+            190,
+            91
+          ]
+        },
+        {
+          "row": 0,
+          "column": 4,
+          "source_bbox": [
+            905,
+            73,
+            1078,
+            257
+          ],
+          "opaque_bbox_in_cell": [
+            35,
+            76,
+            208,
+            260
+          ],
+          "safe_source_crop": [
+            1024,
+            0,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 257,
+          "source_to_final_scale": 1,
+          "margins": [
+            35,
+            76,
+            48,
+            28
+          ],
+          "head_anchor_in_cell": [
+            164,
+            99
+          ],
+          "mouth_anchor_in_cell": [
+            178,
+            114
+          ]
+        },
+        {
+          "row": 0,
+          "column": 5,
+          "source_bbox": [
+            1130,
+            81,
+            1293,
+            256
+          ],
+          "opaque_bbox_in_cell": [
+            38,
+            84,
+            201,
+            259
+          ],
+          "safe_source_crop": [
+            1280,
+            0,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 257,
+          "source_to_final_scale": 1,
+          "margins": [
+            38,
+            84,
+            55,
+            29
+          ],
+          "head_anchor_in_cell": [
+            176,
+            112
+          ],
+          "mouth_anchor_in_cell": [
+            190,
+            127
+          ]
+        },
+        {
+          "row": 0,
+          "column": 6,
+          "source_bbox": [
+            1355,
+            61,
+            1521,
+            257
+          ],
+          "opaque_bbox_in_cell": [
+            42,
+            64,
+            208,
+            260
+          ],
+          "safe_source_crop": [
+            1536,
+            0,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 257,
+          "source_to_final_scale": 1,
+          "margins": [
+            42,
+            64,
+            48,
+            28
+          ],
+          "head_anchor_in_cell": [
+            178,
+            92
+          ],
+          "mouth_anchor_in_cell": [
+            192,
+            107
+          ]
+        },
+        {
+          "row": 0,
+          "column": 7,
+          "source_bbox": [
+            1570,
+            50,
+            1764,
+            239
+          ],
+          "opaque_bbox_in_cell": [
+            35,
+            53,
+            229,
+            242
+          ],
+          "safe_source_crop": [
+            1792,
+            0,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 257,
+          "source_to_final_scale": 1,
+          "margins": [
+            35,
+            53,
+            27,
+            46
+          ],
+          "head_anchor_in_cell": [
+            189,
+            79
+          ],
+          "mouth_anchor_in_cell": [
+            203,
+            94
+          ]
+        },
+        {
+          "row": 1,
+          "column": 0,
+          "source_bbox": [
+            48,
+            348,
+            185,
+            433
+          ],
+          "opaque_bbox_in_cell": [
+            65,
+            170,
+            202,
+            255
+          ],
+          "safe_source_crop": [
+            0,
+            288,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 438,
+          "source_to_final_scale": 1,
+          "margins": [
+            65,
+            170,
+            54,
+            33
+          ],
+          "head_anchor_in_cell": [
+            181,
+            192
+          ],
+          "mouth_anchor_in_cell": [
+            195,
+            207
+          ]
+        },
+        {
+          "row": 1,
+          "column": 1,
+          "source_bbox": [
+            252,
+            353,
+            399,
+            435
+          ],
+          "opaque_bbox_in_cell": [
+            47,
+            175,
+            194,
+            257
+          ],
+          "safe_source_crop": [
+            256,
+            288,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 438,
+          "source_to_final_scale": 1,
+          "margins": [
+            47,
+            175,
+            62,
+            31
+          ],
+          "head_anchor_in_cell": [
+            173,
+            196
+          ],
+          "mouth_anchor_in_cell": [
+            187,
+            211
+          ]
+        },
+        {
+          "row": 1,
+          "column": 2,
+          "source_bbox": [
+            471,
+            357,
+            621,
+            438
+          ],
+          "opaque_bbox_in_cell": [
+            45,
+            179,
+            195,
+            260
+          ],
+          "safe_source_crop": [
+            512,
+            288,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 438,
+          "source_to_final_scale": 1,
+          "margins": [
+            45,
+            179,
+            61,
+            28
+          ],
+          "head_anchor_in_cell": [
+            174,
+            215
+          ],
+          "mouth_anchor_in_cell": [
+            188,
+            230
+          ]
+        },
+        {
+          "row": 1,
+          "column": 3,
+          "source_bbox": [
+            694,
+            357,
+            843,
+            438
+          ],
+          "opaque_bbox_in_cell": [
+            46,
+            179,
+            195,
+            260
+          ],
+          "safe_source_crop": [
+            768,
+            288,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 438,
+          "source_to_final_scale": 1,
+          "margins": [
+            46,
+            179,
+            61,
+            28
+          ],
+          "head_anchor_in_cell": [
+            175,
+            217
+          ],
+          "mouth_anchor_in_cell": [
+            189,
+            232
+          ]
+        },
+        {
+          "row": 1,
+          "column": 4,
+          "source_bbox": [
+            911,
+            359,
+            1069,
+            438
+          ],
+          "opaque_bbox_in_cell": [
+            41,
+            181,
+            199,
+            260
+          ],
+          "safe_source_crop": [
+            1024,
+            288,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 438,
+          "source_to_final_scale": 1,
+          "margins": [
+            41,
+            181,
+            57,
+            28
+          ],
+          "head_anchor_in_cell": [
+            179,
+            218
+          ],
+          "mouth_anchor_in_cell": [
+            193,
+            233
+          ]
+        },
+        {
+          "row": 1,
+          "column": 5,
+          "source_bbox": [
+            1137,
+            358,
+            1284,
+            438
+          ],
+          "opaque_bbox_in_cell": [
+            45,
+            180,
+            192,
+            260
+          ],
+          "safe_source_crop": [
+            1280,
+            288,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 438,
+          "source_to_final_scale": 1,
+          "margins": [
+            45,
+            180,
+            64,
+            28
+          ],
+          "head_anchor_in_cell": [
+            173,
+            214
+          ],
+          "mouth_anchor_in_cell": [
+            187,
+            229
+          ]
+        },
+        {
+          "row": 1,
+          "column": 6,
+          "source_bbox": [
+            1359,
+            357,
+            1510,
+            435
+          ],
+          "opaque_bbox_in_cell": [
+            46,
+            179,
+            197,
+            257
+          ],
+          "safe_source_crop": [
+            1536,
+            288,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 438,
+          "source_to_final_scale": 1,
+          "margins": [
+            46,
+            179,
+            59,
+            31
+          ],
+          "head_anchor_in_cell": [
+            176,
+            215
+          ],
+          "mouth_anchor_in_cell": [
+            190,
+            230
+          ]
+        },
+        {
+          "row": 1,
+          "column": 7,
+          "source_bbox": [
+            1594,
+            353,
+            1734,
+            437
+          ],
+          "opaque_bbox_in_cell": [
+            59,
+            175,
+            199,
+            259
+          ],
+          "safe_source_crop": [
+            1792,
+            288,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 438,
+          "source_to_final_scale": 1,
+          "margins": [
+            59,
+            175,
+            57,
+            29
+          ],
+          "head_anchor_in_cell": [
+            179,
+            196
+          ],
+          "mouth_anchor_in_cell": [
+            193,
+            211
+          ]
+        },
+        {
+          "row": 2,
+          "column": 0,
+          "source_bbox": [
+            20,
+            488,
+            200,
+            619
+          ],
+          "opaque_bbox_in_cell": [
+            37,
+            128,
+            217,
+            259
+          ],
+          "safe_source_crop": [
+            0,
+            576,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 620,
+          "source_to_final_scale": 1,
+          "margins": [
+            37,
+            128,
+            39,
+            29
+          ],
+          "head_anchor_in_cell": [
+            199,
+            171
+          ],
+          "mouth_anchor_in_cell": [
+            213,
+            186
+          ]
+        },
+        {
+          "row": 2,
+          "column": 1,
+          "source_bbox": [
+            239,
+            491,
+            416,
+            620
+          ],
+          "opaque_bbox_in_cell": [
+            34,
+            131,
+            211,
+            260
+          ],
+          "safe_source_crop": [
+            256,
+            576,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 620,
+          "source_to_final_scale": 1,
+          "margins": [
+            34,
+            131,
+            45,
+            28
+          ],
+          "head_anchor_in_cell": [
+            191,
+            174
+          ],
+          "mouth_anchor_in_cell": [
+            205,
+            189
+          ]
+        },
+        {
+          "row": 2,
+          "column": 2,
+          "source_bbox": [
+            458,
+            509,
+            630,
+            620
+          ],
+          "opaque_bbox_in_cell": [
+            32,
+            149,
+            204,
+            260
+          ],
+          "safe_source_crop": [
+            512,
+            576,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 620,
+          "source_to_final_scale": 1,
+          "margins": [
+            32,
+            149,
+            52,
+            28
+          ],
+          "head_anchor_in_cell": [
+            184,
+            193
+          ],
+          "mouth_anchor_in_cell": [
+            198,
+            208
+          ]
+        },
+        {
+          "row": 2,
+          "column": 3,
+          "source_bbox": [
+            681,
+            517,
+            855,
+            619
+          ],
+          "opaque_bbox_in_cell": [
+            33,
+            157,
+            207,
+            259
+          ],
+          "safe_source_crop": [
+            768,
+            576,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 620,
+          "source_to_final_scale": 1,
+          "margins": [
+            33,
+            157,
+            49,
+            29
+          ],
+          "head_anchor_in_cell": [
+            187,
+            203
+          ],
+          "mouth_anchor_in_cell": [
+            201,
+            218
+          ]
+        },
+        {
+          "row": 2,
+          "column": 4,
+          "source_bbox": [
+            896,
+            515,
+            1081,
+            620
+          ],
+          "opaque_bbox_in_cell": [
+            26,
+            155,
+            211,
+            260
+          ],
+          "safe_source_crop": [
+            1024,
+            576,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 620,
+          "source_to_final_scale": 1,
+          "margins": [
+            26,
+            155,
+            45,
+            28
+          ],
+          "head_anchor_in_cell": [
+            190,
+            200
+          ],
+          "mouth_anchor_in_cell": [
+            204,
+            215
+          ]
+        },
+        {
+          "row": 2,
+          "column": 5,
+          "source_bbox": [
+            1124,
+            513,
+            1303,
+            620
+          ],
+          "opaque_bbox_in_cell": [
+            32,
+            153,
+            211,
+            260
+          ],
+          "safe_source_crop": [
+            1280,
+            576,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 620,
+          "source_to_final_scale": 1,
+          "margins": [
+            32,
+            153,
+            45,
+            28
+          ],
+          "head_anchor_in_cell": [
+            191,
+            198
+          ],
+          "mouth_anchor_in_cell": [
+            205,
+            213
+          ]
+        },
+        {
+          "row": 2,
+          "column": 6,
+          "source_bbox": [
+            1349,
+            495,
+            1526,
+            620
+          ],
+          "opaque_bbox_in_cell": [
+            36,
+            135,
+            213,
+            260
+          ],
+          "safe_source_crop": [
+            1536,
+            576,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 620,
+          "source_to_final_scale": 1,
+          "margins": [
+            36,
+            135,
+            43,
+            28
+          ],
+          "head_anchor_in_cell": [
+            193,
+            178
+          ],
+          "mouth_anchor_in_cell": [
+            207,
+            193
+          ]
+        },
+        {
+          "row": 2,
+          "column": 7,
+          "source_bbox": [
+            1583,
+            493,
+            1753,
+            620
+          ],
+          "opaque_bbox_in_cell": [
+            48,
+            133,
+            218,
+            260
+          ],
+          "safe_source_crop": [
+            1792,
+            576,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 620,
+          "source_to_final_scale": 1,
+          "margins": [
+            48,
+            133,
+            38,
+            28
+          ],
+          "head_anchor_in_cell": [
+            197,
+            176
+          ],
+          "mouth_anchor_in_cell": [
+            211,
+            191
+          ]
+        },
+        {
+          "row": 3,
+          "column": 0,
+          "source_bbox": [
+            23,
+            688,
+            210,
+            837
+          ],
+          "opaque_bbox_in_cell": [
+            40,
+            109,
+            227,
+            258
+          ],
+          "safe_source_crop": [
+            0,
+            864,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 839,
+          "source_to_final_scale": 1,
+          "margins": [
+            40,
+            109,
+            29,
+            30
+          ],
+          "head_anchor_in_cell": [
+            208,
+            146
+          ],
+          "mouth_anchor_in_cell": [
+            222,
+            161
+          ]
+        },
+        {
+          "row": 3,
+          "column": 1,
+          "source_bbox": [
+            238,
+            682,
+            429,
+            839
+          ],
+          "opaque_bbox_in_cell": [
+            33,
+            103,
+            224,
+            260
+          ],
+          "safe_source_crop": [
+            256,
+            864,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 839,
+          "source_to_final_scale": 1,
+          "margins": [
+            33,
+            103,
+            32,
+            28
+          ],
+          "head_anchor_in_cell": [
+            204,
+            164
+          ],
+          "mouth_anchor_in_cell": [
+            218,
+            179
+          ]
+        },
+        {
+          "row": 3,
+          "column": 2,
+          "source_bbox": [
+            456,
+            688,
+            648,
+            839
+          ],
+          "opaque_bbox_in_cell": [
+            30,
+            109,
+            222,
+            260
+          ],
+          "safe_source_crop": [
+            512,
+            864,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 839,
+          "source_to_final_scale": 1,
+          "margins": [
+            30,
+            109,
+            34,
+            28
+          ],
+          "head_anchor_in_cell": [
+            202,
+            184
+          ],
+          "mouth_anchor_in_cell": [
+            216,
+            199
+          ]
+        },
+        {
+          "row": 3,
+          "column": 3,
+          "source_bbox": [
+            678,
+            683,
+            872,
+            839
+          ],
+          "opaque_bbox_in_cell": [
+            30,
+            104,
+            224,
+            260
+          ],
+          "safe_source_crop": [
+            768,
+            864,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 839,
+          "source_to_final_scale": 1,
+          "margins": [
+            30,
+            104,
+            32,
+            28
+          ],
+          "head_anchor_in_cell": [
+            204,
+            170
+          ],
+          "mouth_anchor_in_cell": [
+            218,
+            185
+          ]
+        },
+        {
+          "row": 3,
+          "column": 4,
+          "source_bbox": [
+            900,
+            681,
+            1096,
+            838
+          ],
+          "opaque_bbox_in_cell": [
+            30,
+            102,
+            226,
+            259
+          ],
+          "safe_source_crop": [
+            1024,
+            864,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 839,
+          "source_to_final_scale": 1,
+          "margins": [
+            30,
+            102,
+            30,
+            29
+          ],
+          "head_anchor_in_cell": [
+            206,
+            172
+          ],
+          "mouth_anchor_in_cell": [
+            220,
+            187
+          ]
+        },
+        {
+          "row": 3,
+          "column": 5,
+          "source_bbox": [
+            1122,
+            689,
+            1316,
+            839
+          ],
+          "opaque_bbox_in_cell": [
+            30,
+            110,
+            224,
+            260
+          ],
+          "safe_source_crop": [
+            1280,
+            864,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 839,
+          "source_to_final_scale": 1,
+          "margins": [
+            30,
+            110,
+            32,
+            28
+          ],
+          "head_anchor_in_cell": [
+            203,
+            185
+          ],
+          "mouth_anchor_in_cell": [
+            217,
+            200
+          ]
+        },
+        {
+          "row": 3,
+          "column": 6,
+          "source_bbox": [
+            1345,
+            681,
+            1537,
+            839
+          ],
+          "opaque_bbox_in_cell": [
+            32,
+            102,
+            224,
+            260
+          ],
+          "safe_source_crop": [
+            1536,
+            864,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 839,
+          "source_to_final_scale": 1,
+          "margins": [
+            32,
+            102,
+            32,
+            28
+          ],
+          "head_anchor_in_cell": [
+            203,
+            162
+          ],
+          "mouth_anchor_in_cell": [
+            217,
+            177
+          ]
+        },
+        {
+          "row": 3,
+          "column": 7,
+          "source_bbox": [
+            1566,
+            683,
+            1759,
+            839
+          ],
+          "opaque_bbox_in_cell": [
+            31,
+            104,
+            224,
+            260
+          ],
+          "safe_source_crop": [
+            1792,
+            864,
+            256,
+            288
+          ],
+          "root_anchor_in_cell": [
+            128.0,
+            260
+          ],
+          "source_ground_y": 839,
+          "source_to_final_scale": 1,
+          "margins": [
+            31,
+            104,
+            32,
+            28
+          ],
+          "head_anchor_in_cell": [
+            203,
+            162
+          ],
+          "mouth_anchor_in_cell": [
+            217,
+            177
+          ]
+        }
+      ],
+      "qa_dark": "C:\\Users\\eshin\\.codex\\visualizations\\2026\\09\\05\\01a0700e-9aab-7040-b123-d472c87e3925\\v23-art\\sheet-b-qa-dark.jpg",
+      "qa_light": "C:\\Users\\eshin\\.codex\\visualizations\\2026\\09\\05\\01a0700e-9aab-7040-b123-d472c87e3925\\v23-art\\sheet-b-qa-light.jpg",
+      "row_semantics": [
+        {
+          "id": "mercenary-flee",
+          "facing": "right",
+          "source_pose_height_range": [
+            175,
+            207
+          ],
+          "frames": [
+            "contact-right",
+            "down",
+            "passing",
+            "flight",
+            "contact-left",
+            "down",
+            "passing",
+            "flight"
+          ]
+        },
+        {
+          "id": "pug-bite",
+          "facing": "right",
+          "source_pose_height_range": [
+            78,
+            85
+          ]
+        },
+        {
+          "id": "tan-dog-bite",
+          "facing": "right",
+          "source_pose_height_range": [
+            102,
+            131
+          ]
+        },
+        {
+          "id": "mastiff-bite",
+          "facing": "right",
+          "source_pose_height_range": [
+            149,
+            158
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Raw generation did not meet alpha or requested cell size/margins; cleaned and repacked finals pass20px transparent borders.",
+    "Haku mask dash and falling sequences have flowing-robes width variation; retain one body scale per row.",
+    "Zabuza frame2 is empty-handed reaching, kunai becomes visible at frame3. Frame4 and5 mouth hold poses differ subtly.",
+    "Dog bite silhouettes progress low with paws on ground, but tug frames are subtle.",
+    "Mercenary eight frames have visible stride and arm variation but natural cycle closure must be tuned in gameplay.",
+    "Standing-equivalent body heights and articulated anchors are estimates, not anatomical measurements; align using head and torso against approved reference sprites."
+  ],
+  "generation": {
+    "sheet_a_prompt": "Use case: stylized-concept.\nAsset type: production 2D side-scrolling game animation sprite sheet, actual transparent RGBA.\nReference images are STYLE AND CHARACTER REFERENCES ONLY; create new motions. Match original-series Naruto characters and reference outlines/colors faithfully. Sheet exactly 1536x1024, 6 equal columns x4 equal rows =24 complete separate poses, each cell256x256. No panels, no words, no gridlines, no environment, no drop shadows, no ground shadows, no checkerboard pixels. Background must be genuinely transparent.\nEvery pose fully inside its cell, >=20 pixel clear margin on ALL sides. Center each pose horizontally with feet/contact baseline y=230 in each cell. Keep identical anatomy and scale across each row; positions change only as motion requires. Crisp black outlines, restrained clean cel shading, teal and cream Haku robes, orange-blue young Naruto jacket, natural slim proportions, side-scroller profile, no super-deformed chibi.\nROW0: MASKED Haku, teal kimono outer robe and cream trim/sash, dark pleated skirt, white socks, sandals, long black hair, white hunter mask with red markings covering FACE in EVERY frame. Six mirror-entry/emergence leap frames, body facing LEFT. 0 coils low ready;1 pushes off left foot;2 rising leftward tucked knees flowing robe;3 extended leftward leap, robe trailing right;4 descending one foot reaches down;5 lands low. No mirror or separate effects baked into sprites.\nROW1: UNMASKED Haku same body and costume, face clearly exposed and no mask. Six dramatic non-graphic interception/fall frames facing LEFT. 0 accelerating low leftward dash;1 fully extended leftward intercept dash with long robe behind;2 torso recoils from intercept, arms bent;3 folds downward falling on left side;4 nearly down supporting body on one arm;5 settled fallen on side horizontally, full head arms robes and feet visible. No other character, no beam, no gore, no weapon impalement. Body remains same anatomical length even when falling.\nROW2: Injured Zabuza original-series adult: tall lean muscular bare torso, pale skin, spiky dark hair, slanted forehead protector, white bandage wrapping jaw/neck, dark charcoal pants, striped forearm and shin wraps, sandals. LOW KNEELING pose in all6 frames, facing RIGHT, one knee on ground, slumped torso. Do not enlarge him to fill cell: kneeling visible height only145px versus standing anatomical height210px. 0 slumped kneel;1 lifts chin and reaches right;2 extends near hand right toward an offered small kunai;3 draws the single kunai toward mouth;4 grips HANDLE between teeth with blade projecting right;5 settles determined low kneel with same kunai in mouth. Only one attached kunai in frames2-5; no detached flying projectile; no sword on back; no gore.\nROW3: Young Naruto original orange pants and orange jacket with dark blue shoulders, white collar, blond spiky hair, forehead protector, blue sandals. Six frames handing ONE kunai forward toward RIGHT with right arm. 0 ready with kunai near chest;1 shifts weight;2 elbow extends;3 arm forward holding kunai handle;4 maximal offering reach;5 relaxed forward hand after transfer (empty). Arm and hand anatomy readable, no other people, no separate flying projectiles.\nRelative standing body proportions in this game's world: Naruto125, Kakashi157, Zabuza167, Haku146. Within sheet Haku standing-equivalent185px, Naruto158px, Zabuza standing-equivalent210px but KNEELING145px. No per-pose autosizing. Keep spacious gutters. Make this exact24-sprite sheet only.",
+    "sheet_b_prompt": "Use case: stylized-concept.\nAsset type: production 2D side-scrolling game animation sprite sheet, actual transparent RGBA.\nReference images are STYLE AND CHARACTER REFERENCES ONLY; create new motions. Coherent clean black anime outlines, restrained cel shading, original Naruto game colors. Sheet exactly2048x1024,8 equal columns x4 equal rows=32 complete separate poses, eachcell256x256. No panels, text, gridlines, drop shadows, ground shadows, checkerboard pixels, scenery, or enemy legs. Truly transparent empty background.\nEvery pose complete inside its cell with20px minimum clear margin on all sides. Keep each subject body dimensions strictly identical across its row. All ground-contact/paw baselines at y230 within cell. Feet and paws remain within cells. Side view facing RIGHT in ALL frames.\nROW0 eight-frame natural running-away animation of a Gato mercenary adult man: lean average adult, shaggy short black hair, dark gray bandit shirt, charcoal pants with wrapped calves, dark sandals, dark cloth sash. Torso and FACE ALWAYS FACE RIGHT with forward running lean, no backwards torso/head, no moonwalk, no Naruto arms-behind dash. Adult height standing-equivalent200px, crouched running height~170px. Eight distinct sequential run poses with alternating naturally swinging bent arms and changing knees/legs: right leg forward contact, down compression, passing left knee forward, up flight, left leg forward contact, down compression, passing right knee forward, up flight. Hands empty, no weapons. Anatomical left-right stride changes clearly readable.\nROW1 eight frames small tan pug ninja hound like reference: black muzzle, curly tail, blue vest red spiral patch, blue leaf forehead protector. Small and low, anatomical standing height70px. Right-facing ankle-level bite sequence:0 low approach one step;1 front paw plants;2 lowers snout/open jaws;3 closes bite at low imaginary ankle target just in front of muzzle;4 braced gentle tug backward with paws grounded;5 opposing tug tension shoulders low;6 jaws release;7 settles alert. No ankle/leg target drawn, dog only. No leap or face-height bite. Four legs correct.\nROW2 same exact8-action sequence for medium tan shepherd dog with black snout, pointed ears, blue vest red spiral, blue ninja forehead protector. Medium dog height96px. Stays low paw-planted when biting/tugging; muzzle near lower chest/paw level, no jumping. Distinct changing neck jaw and leg poses.\nROW3 same exact8-action sequence for large broad dark charcoal mastiff ninja hound, floppy ears, thick muzzle, long tail, blue vest red spiral, forehead protector. Large dog height120px, heavier wider build. Low grounded ankle-bite/tug/release with planted paws and head lowered, no jumping. Correct four legs.\nDogs all face RIGHT and remain same scale across their respective8frames. No enlargement of little pug to match other dogs. No blood, no extra characters, no detached props, no foot shadows. Do not copy repeated static poses: all8frames in each row must represent distinct progression with coherent anatomy. Make this exact32-sprite sheet only.\nThe last image (Haku/Zabuza/Naruto) is only a style reference. The dog sheets are the dog identity references. Do not inherit or paint their gray checker pattern: output real alpha transparency.",
+    "tool_mode": "built-in imagegen",
+    "generation_count": 2,
+    "preflight_failure_count": 1,
+    "preflight_failure": "Initial path-reference request rejected before generation due sandbox helper apply deny-read ACLs. Retried using already-visible conversation images.",
+    "raw_a": "C:/Users/eshin/.codex/generated_images/01a0840e-6d4f-76b2-985d-3a7c6fda6598/exec-18ed880c-58e0-408d-b2f3-8dc11f5a003a.png",
+    "raw_b": "C:/Users/eshin/.codex/generated_images/01a0840e-6d4f-76b2-985d-3a7c6fda6598/exec-948b7599-8f3b-4996-b3a5-3b1207268b44.png"
+  }
+}

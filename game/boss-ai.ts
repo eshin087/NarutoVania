@@ -114,7 +114,8 @@ export class BossBrain {
 
     const fresh = eligible.filter(m => !this.recent.slice(-3).includes(m.id));
 
-    const pool = fresh.length ? fresh : eligible.filter(m => m.id !== this.recent.at(-1));
+    const different = eligible.filter(m => m.id !== this.recent.at(-1));
+    const pool = fresh.length ? fresh : different.length ? different : eligible;
 
     if (!pool.length) return null;
 
@@ -148,9 +149,9 @@ export class MirrorFormation {
 
     this.mirrors = [
 
-      [-465, -68, false], [-340, -255, false], [-120, -315, false], [120, -315, false], [340, -255, false], [465, -68, false],
+      [-530, -120, false], [-355, -295, false], [0, -350, false], [355, -295, false], [530, -120, false],
 
-      [-365, -65, true], [365, -65, true],
+      [-290, -85, true], [0, -85, true], [290, -85, true],
 
     ].map(([x, y, foreground]) => ({x: center + Number(x), y: floor + Number(y), foreground: Boolean(foreground), hp: 130, max: 130, broken: false}));
 

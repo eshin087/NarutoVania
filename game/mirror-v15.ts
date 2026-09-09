@@ -21,13 +21,15 @@ export function poseReflection(reflection:Phaser.GameObjects.Sprite,image:Phaser
  fitMirror(image.scene,image,reflection,kind);
 }
 export function fitAllMirrors(scene:Phaser.Scene){for(const child of scene.children.list){const image=child as Phaser.GameObjects.Image;if(!image.getData)continue;const reflection=image.getData('mirrorReflection') as Phaser.GameObjects.Sprite|undefined;if(reflection?.active)fitMirror(scene,image,reflection,image.getData('mirrorKind'));}}
-export function mirrorVisual(scene:Phaser.Scene,x:number,y:number,floor:number,kind:Kind,depth=2){
+export function mirrorVisual(scene:Phaser.Scene,x:number,y:number,floor:number,kind:Kind,depth=2,delay=0){
  const image=scene.add.image(x,y,'v16-mirror').setDepth(depth).setAlpha(.82);
  const reflection=scene.add.sprite(x,y,'haku-locomotion','6').setDepth(depth+.1).setAlpha(.82);
  image.setData({mirrorReflection:reflection,mirrorKind:kind,homeX:x,homeY:y,floor});
  const facing=x>830?-1:1;poseBattle(reflection,'haku','idle',0,facing);const idle=visibleBodyBounds(reflection),dx=reflection.x-idle.centerX,dy=reflection.y-idle.bottom;poseBattle(reflection,'haku','cast',120,facing);const cast=visibleBodyBounds(reflection);
  image.setData('layout',{width:Math.max(kind==='prison'?130:100,(Math.max(idle.width,cast.width)+8)/mirror.interior[2]),height:Math.max(kind==='prison'?230:184,(Math.max(idle.height,cast.height)+10)/mirror.interior[3]),dx,dy});
  poseReflection(reflection,image,kind,false,0,facing);
- scene.tweens.add({targets:image,alpha:{from:0,to:.82},duration:400});
+ image.setAlpha(0);reflection.setAlpha(0);image.setData('forming',true);
+ scene.tweens.add({targets:image,alpha:.82,delay,duration:420,ease:'Sine.easeOut',onComplete:()=>image.setData('forming',false)});
+ scene.tweens.add({targets:reflection,alpha:.82,delay:delay+200,duration:350});
  return{image,reflection};
 }

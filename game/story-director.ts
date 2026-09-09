@@ -1,5 +1,6 @@
 import {repairedClip} from './story-v22';
-import {rescueScene,snowScene} from './story-scenes-v14';
+import {endingClip} from './ending-v23';
+import {rescueScene} from './story-scenes-v14';
 import {dialogueDuration} from './presentation-v14';
 import type {CinemaMotion} from './cinematic-v13';
 import type {StorySceneId} from './scene-catalog';
@@ -231,17 +232,7 @@ export class StoryDirector {
 }
 
 /** Each ending entry reconstructs the actors at its own canonical starting point. */
-function endingSegment(index:number):CinemaClip {
- if(index===2)return snowScene();
- const full=withDialogue(outroClip('lightning')),starts=[0,11000,27600],ends=[11000,27600,36000],ids=['haku-interception','gatos-betrayal','snowy-rest'];
- const start=starts[index],end=ends[index];
- const actors=full.actors.map(a=>({...a,alpha:a.id.startsWith('hound')||a.id.startsWith('henchman')||a.id==='gato'?0:a.alpha}));
- for(const c of full.cues.filter(c=>c.at<start)){const a=actors.find(a=>a.id===c.actor);if(!a)continue;
-  if(c.x!==undefined)a.x=c.x;if(c.y!==undefined)a.y=c.y;if(c.facing)a.facing=c.facing;if(c.alpha!==undefined)a.alpha=c.alpha;
-  if(c.animation)a.animation=['run','dash','airdash','cast','hurt','light1','heavy'].includes(c.animation)?'idle':c.animation;
- }
- return{id:ids[index],arena:'bridge',offset:start,duration:end-start,actors,cues:[{at:0,camera:350,fade:'in'},...full.cues.filter(c=>c.at>=start&&c.at<end).map(c=>({...c,at:c.at-start}))]};
-}
+function endingSegment(index:number):CinemaClip {return endingClip(index);}
 
 /** Original, concise dialogue paraphrases the scene; these are not anime transcript extracts. */
 

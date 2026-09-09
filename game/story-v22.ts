@@ -16,7 +16,7 @@ export function repairedClip(phase:StoryPhaseId):CinemaClip|null{
  if(phase==='mist')return{...common,arena:'lakeside',id:'water-prison',duration:10800,actors:[actor('kakashi',700),actor('zabuza',910,-1),actor('naruto',400),actor('sasuke',300),actor('sakura',170),actor('tazuna',90)]};
  if(phase==='protect')return{...common,id:'simultaneous-bridge-battles',duration:12300,actors:[actor('sakura',210),actor('tazuna',110),actor('kakashi',90),actor('zabuza',510,-1),actor('sasuke',910),actor('haku',1310,-1)]};
  if(phase==='mirrors')return{...common,id:'sasuke-protects-naruto',duration:15400,actors:[actor('sasuke',750),actor('naruto',880,-1),actor('haku',1210,-1)]};
- if(phase==='seal')return{...common,id:'narutos-hesitation',duration:17400,actors:[actor('naruto',830),actor('haku',1060,-1),actor('sasuke',360,1,'defeat'),actor('kakashi',500),actor('zabuza',1080,-1)]};
+ if(phase==='seal')return{...common,id:'narutos-hesitation',duration:19400,actors:[actor('naruto',830),actor('haku',1060,-1),actor('sasuke',1130,1,'defeat'),actor('kakashi',110),actor('zabuza',700,-1)]};
  return null;
 }
 const lerp=(a:number,b:number,t:number)=>a+(b-a)*Math.max(0,Math.min(1,t));
@@ -101,19 +101,23 @@ export class StagedStory{
   if(a>=1250)this.say('awakening','sasuke','I can see them. Every needle.');
  }
  private hesitation(a:number){const n=this.sprite('naruto'),h=this.sprite('haku'),hs=this.starts.get('haku')!,ns=this.starts.get('naruto')!;
-  const hx=Math.max(90,Math.min(1500,hs.x)),side:1|-1=ns.x>=hs.x?1:-1,nx=Math.max(70,Math.min(1590,hx+side*130)),center=hx>830?650:1220,kbase=center-170,zbase=center+170;
-  h.setPosition(lerp(hs.x,hx,a/1200),lerp(hs.y,this.floor,Math.min(1,a/650)**2)).setAlpha(1);this.actors.get('haku')!.facing=side;
-  pose22(h,'haku-kneel',0,a<650?0:a<1400?1:a<2200?2:a<2900?3:a<3700?4:5,side);
-  n.setPosition(lerp(ns.x,nx,a/1200),this.floor).setAlpha(1);this.pose('naruto',a<1200&&Math.abs(ns.x-nx)>15?'run':'idle',a,-side as 1|-1);
-  if(a<9800){this.sprite('kakashi').setPosition(kbase,this.floor);this.sprite('zabuza').setPosition(zbase,this.floor);this.pose('kakashi','idle',0,1);this.pose('zabuza','idle',0,-1);}
-  if(a>=2000)this.say('recognition','naruto','You… the person from the forest?');if(a>=5200)this.say('precious','haku','I only wanted to protect someone precious.');if(a>=8500)this.say('danger','haku','Zabuza is in danger!');
-  const camera=this.scene.cameras.main;camera.setZoom(lerp(camera.zoom,.88,.045));camera.centerOn(lerp((hx+nx)/2,center,(a-9000)/1300),360);
-  if(a>=9800){const d=a-9800;if(d<2300)this.duel(d,kbase+75,zbase-95);
-   else if(d<4400){this.pose('kakashi','cast',d-2300,1);this.pose('zabuza','cast',d-2300,-1);this.sprite('kakashi').setPosition(lerp(kbase+75,kbase,(d-2300)/900),this.floor);this.sprite('zabuza').setPosition(lerp(zbase-95,zbase,(d-2300)/900),this.floor);
-    this.fx('last-water-k','water-dragon',lerp(kbase+55,center,(d-2300)/1500),this.floor-120,420,d-2300,2100);this.fx('last-water-z','water-dragon',lerp(zbase-55,center,(d-2300)/1500),this.floor-120,420,d-2300,2100,-1);
-   }else{const t=d-4400;this.pose('kakashi',t<1300?'cast':t<2000?'dash':'parry',t,1);this.pose('zabuza',t<1300?'heavy':'light2',t,-1);this.sprite('kakashi').setPosition(t<1300?kbase:t<2000?lerp(kbase,zbase-110,(t-1300)/700):lerp(zbase-110,kbase,(t-2000)/700),this.floor);this.sprite('zabuza').setPosition(zbase,this.floor);
-    if(t<2200){const k=this.sprite('kakashi');this.fx('chidori-duel','lightning',k.x+50,this.floor-85,t<1300?115:195,t,2300);}
-   }
+  const hx=Math.max(1110,Math.min(1410,hs.x)),nx=hx+130,center=400,kbase=110,zbase=700;
+  h.setPosition(lerp(hs.x,hx,a/2000),lerp(hs.y,this.floor,Math.min(1,a/650)**2)).setAlpha(1);this.actors.get('haku')!.facing=1;
+  if(a<2000&&Math.abs(hs.x-hx)>35)this.pose('haku',a<400?'hurt':'run',a,1);
+  else pose22(h,'haku-kneel',0,a<2300?0:a<2900?1:a<3600?2:a<4300?3:a<4900?4:5,1);
+  if(a>=17800){pose22(h,'haku-kneel',0,Math.max(0,5-Math.floor((a-17800)/250)),1);if(a>=19000)this.pose('haku','idle',0,-1);}
+  n.setPosition(lerp(ns.x,nx,a/2200),this.floor).setAlpha(1);this.pose('naruto',a<2200&&Math.abs(ns.x-nx)>15?'run':'idle',a,a<2200&&ns.x<nx?1:-1);
+  const s=this.sprite('sasuke');s.setPosition(hx-135,this.floor);pose22(s,'characters-b',1,5,-1);
+  if(a<11800){this.sprite('kakashi').setPosition(kbase,this.floor);this.sprite('zabuza').setPosition(zbase,this.floor);this.pose('kakashi','idle',0,1);this.pose('zabuza','idle',0,-1);}
+  if(a>=3200)this.say('recognition','naruto','You… the person from the forest?');if(a>=6500)this.say('precious','haku','I only wanted to protect someone precious.');if(a>=10300)this.say('danger','haku','Zabuza is in danger!');
+  const camera=this.scene.cameras.main;camera.setZoom(lerp(camera.zoom,.88,.045));camera.centerOn(lerp((h.x+n.x)/2,center,(a-11000)/1300),360);
+  if(a>=11800){const d=a-11800,k=this.sprite('kakashi'),z=this.sprite('zabuza');
+   if(d<2000){const t=d<700?d/700:d>1400?(2000-d)/600:1;this.duel(d,lerp(kbase,310,t),lerp(zbase,480,t));}
+   else if(d<3400){this.pose('kakashi','run',d-2000,-1);this.pose('zabuza','run',d-2000,1);k.setPosition(lerp(310,kbase,(d-2000)/1400),this.floor);z.setPosition(lerp(480,zbase,(d-2000)/1400),this.floor);}
+   else if(d<6500){const t=d-3400;this.pose('kakashi',t<2200?'cast':'parry',t,1);this.pose('zabuza',t<2200?'cast':'heavy',t,-1);k.setPosition(kbase,this.floor);z.setPosition(zbase,this.floor);
+    if(t<1900){const travel=Math.max(0,(t-650)/1250);this.fx('last-water-k','water-dragon',lerp(kbase+65,center-55,travel),this.floor-125,260,t,1900);this.fx('last-water-z','water-dragon',lerp(zbase-65,center+55,travel),this.floor-125,260,t,1900,-1);}
+    else this.fx('duel-collapse','waterfall',center,this.floor-105,330,t-1900,900);
+   }else{this.pose('kakashi','idle',0,1);this.pose('zabuza','idle',0,-1);k.setPosition(kbase,this.floor);z.setPosition(zbase,this.floor);}
   }
  }
  get ready(){return !this.active||this.clip!=='sasuke-protects-naruto'||this.hitAt!==null&&this.clock-this.hitAt>6500;}
