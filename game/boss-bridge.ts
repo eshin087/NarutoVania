@@ -1,3 +1,4 @@
+import {readChapters,writeChapter} from './chapter-registry';
 import {PHASE_IDS, PHASES, type StoryPhaseId, type Ability} from './chapter';
 import {clamp, type PlayerId} from './combat-core';
 export type Screen = 'loading' | 'title' | 'preview' | 'playing' | 'paused' | 'intro' | 'dead' | 'victory' | 'error';
@@ -41,7 +42,7 @@ export const bossBridge = {
   load: () => {
     try {settings = readSettings(JSON.parse(localStorage.getItem('narutovania.settings.v2') || localStorage.getItem('narutovania.settings.v1') || '{}'));} catch {settings = {...defaults};}
     try {if(localStorage.getItem('narutovania.audio.v11')!=='1'){settings={...settings,voiceVolume:0};localStorage.setItem('narutovania.settings.v2',JSON.stringify(settings));localStorage.setItem('narutovania.audio.v11','1');}}catch{}
-    try {const cp = readCheckpoint(JSON.parse(localStorage.getItem('narutovania.checkpoint.v2') || '{}')); snapshot = {...snapshot, checkpoint: cp.phase, seen: cp.seen};} catch {}
+    try {const entry=readChapters().chapters['land-of-waves']; const cp=readCheckpoint({version:2,phase:entry.checkpoint,seen:entry.seen}); snapshot = {...snapshot, checkpoint: cp.phase, seen: cp.seen};} catch {}
   },
   beginDebug:(entry:string)=>{if(!snapshot.debugEntry)normalCheckpoint={checkpoint:snapshot.checkpoint,seen:[...snapshot.seen],elapsed:snapshot.elapsed,parries:snapshot.parries,retries:snapshot.retries};bossBridge.patch({debugEntry:entry});},
   endDebug:()=>{if(normalCheckpoint){snapshot={...snapshot,...normalCheckpoint};normalCheckpoint=null;}bossBridge.patch({debugEntry:null,panelWaiting:false,canAdvance:false});},
@@ -49,8 +50,8 @@ export const bossBridge = {
     if(snapshot.debugEntry){bossBridge.patch({checkpoint:phase});return;}
     const seen = [...new Set([...snapshot.seen, phase])];
     try {localStorage.setItem('narutovania.checkpoint.v2', JSON.stringify({version: 2, phase, seen}));} catch {}
-    bossBridge.patch({checkpoint: phase, seen});
+    writeChapter('land-of-waves',{checkpoint:phase,seen}); bossBridge.patch({checkpoint: phase, seen});
   },
-  newRun: () => {normalCheckpoint=null;snapshot = {...initial, screen: snapshot.screen}; try {localStorage.setItem('narutovania.checkpoint.v2', JSON.stringify({version: 2, phase: 'mist', seen: []}));} catch {} emit();},
+  newRun: () => {writeChapter('land-of-waves',{checkpoint:'mist',seen:[],completed:false});normalCheckpoint=null;snapshot = {...initial, screen: snapshot.screen}; try {localStorage.setItem('narutovania.checkpoint.v2', JSON.stringify({version: 2, phase: 'mist', seen: []}));} catch {} emit();},
   reset: () => {normalCheckpoint=null;snapshot = {...initial}; emit();},
 };

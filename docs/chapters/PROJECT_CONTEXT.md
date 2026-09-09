@@ -1,3 +1,4 @@
+> Chapter 2 update, 2026-09-08: app/page.tsx now enters game/chapters.tsx. The selector mounts either the preserved boss-page/boss-runtime (Land of Waves) or game/chunin/page.tsx + runtime.ts (Lee versus Gaara). game/chapter-registry.ts validates v3 progress and imports the v2 Land of Waves checkpoint. Combatant has a generic ID without widening old character unions; BattleInput accepts an optional bridge port. See chunin-exams/PRODUCTION_LOG.md for current validation/release status. The single-chapter inventory below documents the prior baseline.
 # Current project context
 
 Baseline inspected: 2026-09-08, commit 0f54bd3 (V23). Recheck source before a future task; this is a navigation map, not a substitute for reading current code.

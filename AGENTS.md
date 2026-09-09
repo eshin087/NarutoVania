@@ -11,7 +11,7 @@ The coordinator owns integration. While Sites lifecycle restrictions apply, suba
 ## Production rules
 
 - Treat the latest user instructions as authoritative. Distinguish established project defaults from chapter-specific adaptations and historical experiments.
-- Preserve existing chapters by default. The current code is single-chapter; a registry, selection menu, chapter-aware saves, and loading are migration work for the first additional chapter, not existing features.
+- Preserve existing chapters by default. The chapter registry and selector now mount independent Land of Waves and Chunin Exam runtimes. Preserve per-chapter progress and shared settings; use game/chapter-registry.ts and read the active chapter production logs.
 - Research the requested moment and record sources before defining the story. Do not invent canon, chapter numbers, verified timestamps, or unavailable evidence.
 - Generate required new art with the available built-in image generator before integrating it. Read the imagegen skill. Do not claim a model version that cannot be selected or verified.
 - Reuse approved body proportions, stationary default melee, quiet idle, restored running cycles, shared controls, and lifecycle rules unless the user changes them.

@@ -23,6 +23,7 @@ The coordinator will research the moment, create a chapter brief, delegate bound
 | [Combat and audio](COMBAT_AND_AUDIO.md) | Technical combat, readable patterns, ownership and sound quality |
 | [QA and review](QA_AND_REVIEW.md) | Independent scene critique, evidence, severity and revision loop |
 | [Release and maintenance](RELEASE_AND_MAINTENANCE.md) | Saved progress, production checks, two destinations and upkeep |
+| [Chunin Exams](chunin-exams/CHAPTER_SPEC.md) | Lee versus Gaara production specification and implementation |
 | [Land of Waves baseline](land-of-waves/CHAPTER_SPEC.md) | Existing chapter continuity and accepted gameplay adaptations |
 
 Create a new chapter folder using [chapter specification](templates/CHAPTER_SPEC.md), [production log](templates/PRODUCTION_LOG.md), and [QA report](templates/QA_REPORT.md). Keep historical revision reports; mark which revision is current.
@@ -34,4 +35,4 @@ Create a new chapter folder using [chapter specification](templates/CHAPTER_SPEC
 - This documentation request does not grant blanket permission for future public releases. Follow explicit authorization in the active task/session. If absent, prepare a complete validated preview and make publication the final decision.
 - User replies and subsequent corrections supersede these defaults. Record them in the chapter log.
 
-The guides describe production work to perform. They do not claim that chapter selection, per-chapter saves, new characters, or new chapters are already implemented.
+Chapter 2 adds the chapter selector, independent Lee/Gaara runtime, and version-3 per-chapter saves. Consult its production log and QA report for the current validation and release state.

@@ -1,0 +1,144 @@
+.chapter-library {
+  min-height: 100vh;
+  background: radial-gradient(
+    ellipse at 80% 30%,
+    #304438 0,
+    #111b1a 45%,
+    #090f12 100%
+  );
+  color: #eee9d9;
+  padding: 44px max(32px, calc((100vw - 1120px) /2));
+  font-family: Arial, sans-serif;
+}
+.chapter-library header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+.chapter-seal {
+  display: grid;
+  place-items: center;
+  background: #d9b36b;
+  color: #16201c;
+  width: 44px;
+  height: 44px;
+  font-size: 26px;
+}
+.chapter-library small {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: #9caaa4;
+  margin-top: 5px;
+}
+.chapter-kicker {
+  color: #d8b26d;
+  font-size: 10px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+.chapter-library > .chapter-kicker {
+  margin-top: 65px;
+}
+.chapter-library h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(36px, 5vw, 66px);
+  margin: 18px 0;
+}
+.chapter-intro {
+  color: #aebbb4;
+  margin-bottom: 38px;
+}
+.chapter-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.chapter-card {
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #65705c55;
+  background: #15211fe0;
+  color: inherit;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    border-color 0.2s;
+}
+.chapter-card:hover {
+  transform: translateY(-5px);
+  border-color: #d6b570;
+}
+.chapter-cover {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.78;
+}
+.chapter-card-body {
+  padding: 24px;
+}
+.chapter-card h2 {
+  font:
+    30px Georgia,
+    serif;
+  margin: 14px 0;
+}
+.chapter-card p {
+  font-size: 12px;
+  color: #afb8b2;
+}
+.chapter-card b {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-top: 28px;
+  color: #ddc793;
+}
+.chapter-card b span {
+  float: right;
+  font-size: 20px;
+}
+.chapter-library footer {
+  margin-top: 42px;
+  font-size: 10px;
+  color: #7e9186;
+  line-height: 1.8;
+}
+.chapter-back {
+  position: fixed;
+  z-index: 90;
+  bottom: 12px;
+  left: 12px;
+  background: #16231fed;
+  border: 1px solid #727f6680;
+  color: #e6dfc8;
+  padding: 8px 12px;
+  font-size: 11px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.chapter-loading {
+  background: #0b1514;
+  color: #e8dcc1;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+@media (max-width: 680px) {
+  .chapter-grid {
+    grid-template-columns: 1fr;
+  }
+  .chapter-library {
+    padding: 25px;
+  }
+  .chapter-cover {
+    height: 160px;
+  }
+  .chapter-library > .chapter-kicker {
+    margin-top: 38px;
+  }
+}

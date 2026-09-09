@@ -1,1 +1,1 @@
-export {default} from '@/game/boss-page';
+export {default} from '@/game/chapters';

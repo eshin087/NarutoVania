@@ -1,4 +1,4 @@
-# Naruto: Land of Waves
+# Narutovania
 
 <div align="center">
 
@@ -9,6 +9,18 @@
 ![Naruto: Land of Waves title screen](docs/readme-assets/title-screen.webp)
 
 </div>
+
+## Chapter 2: The Power of Youth
+
+Play Rock Lee against Gaara in the indoor Chunin Exam preliminary arena. One substantial duel moves through the Shield of Sand, Lee dropping his weights, and the Fifth Gate. Use stationary taijutsu combos, timed parries, Hurricane kicks, Rising Wind, and cinematic Lotus techniques against shifting sand barrages.
+
+A short animated introduction gathers the observing shinobi around the arena. Completing all three phases preserves the manga outcome: Gaara wins, and Guy saves Lee. Each phase has its own retry checkpoint. Chapter Select keeps Land of Waves available with separate saved progress.
+
+![The Chunin Exam preliminary arena](public/art-chunin/arena.webp)
+
+Lee uses **stamina, not chakra**. K is a quick palm strike, L is a physical backstep, and Q/E are taijutsu techniques. Shared movement, parry, dash, heavy-attack and ultimate controls are unchanged.
+
+[Chapter 2 production guide](docs/chapters/chunin-exams/CHAPTER_SPEC.md)
 
 ## Relive Team 7's first major battle
 

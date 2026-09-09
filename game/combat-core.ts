@@ -69,7 +69,7 @@ export interface IncomingHit {damage: number; posture: number; red: boolean; fro
 export type DefenseResult = 'immune' | 'parry' | 'block' | 'guardbreak' | 'damage';
 export interface DefenseOutcome {result: DefenseResult; damage: number; attackerPosture: number;}
 
-export class Combatant {
+export class Combatant<Id extends string = CharacterId> {
   choreography=0; comboPresentations=0;
   health: number; stamina = 100; chakra = 100; ultimate = 0;
   x = 0; y = 0; facing: Facing = 1; grounded = true; airDashUsed = false;
@@ -80,7 +80,7 @@ export class Combatant {
   cooldowns = new Map<string, number>(); hitTargets = new Set<string>();
   meleeBufferedAt = -Infinity; combo = 0; comboExpires = 0; chargeStarted: number | null = null;
   lastActionEnded: AttackDefinition | null = null;
-  constructor(public id: CharacterId, public maxHealth = 100, public isBoss = false) {this.health = maxHealth;}
+  constructor(public id: Id, public maxHealth = 100, public isBoss = false) {this.health = maxHealth;}
   spend(amount: number, now: number) {
     if (this.stamina + 1e-7 < amount) return false;
     this.stamina = Math.max(0, this.stamina - amount); this.lastSpend = now; return true;

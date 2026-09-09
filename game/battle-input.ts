@@ -1,4 +1,4 @@
-import {bossBridge as bridge} from './boss-bridge';
+import {bossBridge} from './boss-bridge';
 export type Action = 'left' | 'right' | 'down' | 'jump' | 'melee' | 'tool' | 'dash' | 'parry' | 'skill1' | 'skill2' | 'substitute' | 'ultimate';
 export const KEYBOARD: Record<string, Action> = {KeyA: 'left', ArrowLeft: 'left', KeyD: 'right', ArrowRight: 'right', KeyS: 'down', ArrowDown: 'down', Space: 'jump', KeyJ: 'melee', KeyK: 'tool', ShiftLeft: 'dash', ShiftRight: 'dash', KeyF: 'parry', KeyQ: 'skill1', KeyE: 'skill2', KeyL: 'substitute', KeyR: 'ultimate'};
 const LOGICAL_KEYS:Record<string,Action>={a:'left',arrowleft:'left',d:'right',arrowright:'right',s:'down',arrowdown:'down',' ':'jump',j:'melee',k:'tool',shift:'dash',f:'parry',q:'skill1',e:'skill2',l:'substitute',r:'ultimate'};
@@ -10,38 +10,41 @@ export function mapGamepad(pad: Pick<Gamepad, 'axes' | 'buttons'>): Set<Action> 
   for (const [index, action] of Object.entries(PAD_BUTTONS)) if (pad.buttons[Number(index)]?.pressed || pad.buttons[Number(index)]?.value > .55) actions.add(action);
   return actions;
 }
+export interface InputBridge {get(): {screen: string; modalOpen?: boolean; seen: readonly unknown[]; debugEntry: string | null}; command(command: 'pause'|'resume'|'advance'|'start'|'continue'|'retry'|'debug-replay'): void;}
 export class BattleInput {
   keyboard = new Set<Action>(); pad = new Set<Action>(); virtual = new Set<Action>();
   edges = new Set<Action>(); releases = new Set<Action>(); device: 'keyboard' | 'gamepad' = 'keyboard'; padStart = false; padConfirm = false; enterHeld=false; confirmAfter=0;
   down = (event: KeyboardEvent) => {
-    if ((event.target as HTMLElement)?.closest('[role="dialog"],input,select,textarea')) return;
-    const screen = bridge.get().screen;
-    if (event.code === 'Escape'||event.key==='Escape') {event.preventDefault(); if (!event.repeat) bridge.command(screen === 'paused' ? 'resume' : 'pause'); return;}
+    if(this.bridge.get().modalOpen)return;
+    if ((event.target as HTMLElement)?.closest('dialog,[role="dialog"],input,select,textarea')) return;
+    const screen = this.bridge.get().screen;
+    if (event.code === 'Escape'||event.key==='Escape') {event.preventDefault(); if (!event.repeat) this.bridge.command(screen === 'paused' ? 'resume' : 'pause'); return;}
     if (event.code === 'Enter'||event.key==='Enter') {event.preventDefault(); const fresh=!this.enterHeld;this.enterHeld=true;if (!event.repeat&&fresh) this.confirm(); return;}
     const action = keyboardAction(event); if (!action) return;
     if (['playing', 'intro', 'dead', 'paused'].includes(screen)) event.preventDefault();
     this.device = 'keyboard'; if (!this.keyboard.has(action)) this.edges.add(action); this.keyboard.add(action);
   };
   up = (event: KeyboardEvent) => {if(event.code==='Enter'||event.key==='Enter')this.enterHeld=false;const action = keyboardAction(event); if (action) {this.keyboard.delete(action); this.releases.add(action);}};
-  blur = () => {this.enterHeld=false;this.clear(); if (['playing', 'intro','preview'].includes(bridge.get().screen)) bridge.command('pause');};
+  blur = () => {this.enterHeld=false;this.clear(); if (['playing', 'intro','preview'].includes(this.bridge.get().screen)) this.bridge.command('pause');};
   visibility = () => {if (document.hidden) this.blur();};
   disconnect = () => {for (const action of this.pad) this.releases.add(action); this.pad.clear(); this.padStart = false; this.padConfirm = false; this.device = 'keyboard';};
-  constructor() {window.addEventListener('keydown', this.down); window.addEventListener('keyup', this.up); window.addEventListener('blur', this.blur); window.addEventListener('gamepaddisconnected', this.disconnect); document.addEventListener('visibilitychange', this.visibility);}
+  constructor(private bridge: InputBridge = bossBridge) {window.addEventListener('keydown', this.down); window.addEventListener('keyup', this.up); window.addEventListener('blur', this.blur); window.addEventListener('gamepaddisconnected', this.disconnect); document.addEventListener('visibilitychange', this.visibility);}
   quarantineConfirm(){this.confirmAfter=performance.now()+350;}
   confirm() {
     if(performance.now()<this.confirmAfter)return;
-    switch (bridge.get().screen) {case 'title': bridge.command(bridge.get().seen.length ? 'continue' : 'start'); break; case 'intro': bridge.command('advance'); break; case 'dead': bridge.command('retry'); break; case 'paused': bridge.command('resume'); break; case 'victory': bridge.command(bridge.get().debugEntry?'debug-replay':'start'); break;}
+    switch (this.bridge.get().screen) {case 'title': this.bridge.command(this.bridge.get().seen.length ? 'continue' : 'start'); break; case 'intro': this.bridge.command('advance'); break; case 'dead': this.bridge.command('retry'); break; case 'paused': this.bridge.command('resume'); break; case 'victory': this.bridge.command(this.bridge.get().debugEntry?'debug-replay':'start'); break;}
   }
   poll() {
     let pads: (Gamepad | null)[] = []; try {pads = Array.from(navigator.getGamepads?.() || []);} catch {}
     const pad = pads.find(p => p?.connected);
+    if(this.bridge.get().modalOpen){this.keyboard.clear();this.edges.clear();this.releases.clear();this.pad=pad?mapGamepad(pad):new Set();this.padStart=!!pad?.buttons[9]?.pressed;this.padConfirm=!!pad?.buttons[0]?.pressed;return;}
     if (!pad) {if (this.pad.size || this.device === 'gamepad') this.disconnect(); return;}
     const next = mapGamepad(pad);
     for (const action of next) if (!this.pad.has(action)) {this.edges.add(action); this.device = 'gamepad';}
     for (const action of this.pad) if (!next.has(action)) this.releases.add(action);
     const start = !!pad.buttons[9]?.pressed, confirm = !!pad.buttons[0]?.pressed;
-    if (start && !this.padStart) {bridge.command(bridge.get().screen === 'paused' ? 'resume' : 'pause'); this.device = 'gamepad';}
-    if (confirm && !this.padConfirm && bridge.get().screen !== 'playing') {this.confirm(); this.device = 'gamepad';}
+    if (start && !this.padStart) {this.bridge.command(this.bridge.get().screen === 'paused' ? 'resume' : 'pause'); this.device = 'gamepad';}
+    if (confirm && !this.padConfirm && this.bridge.get().screen !== 'playing') {this.confirm(); this.device = 'gamepad';}
     this.pad = next; this.padStart = start; this.padConfirm = confirm;
   }
   held(action: Action) {return this.keyboard.has(action) || this.pad.has(action) || this.virtual.has(action);}

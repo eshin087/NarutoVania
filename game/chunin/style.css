@@ -1,0 +1,544 @@
+.ch-shell {
+  min-height: 100vh;
+  background: #0b1514;
+  color: #ede8d9;
+  font-family: Arial, sans-serif;
+  padding: 0 max(24px, calc((100vw - 1400px) /2)) 45px;
+}
+.ch-header {
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #49625855;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+.ch-shell button {
+  cursor: pointer;
+  color: inherit;
+  border: 1px solid #7c8c7050;
+  background: #12271fbc;
+  padding: 10px 14px;
+  border-radius: 3px;
+  font: inherit;
+}
+.ch-shell button:hover {
+  border-color: #dfbe76;
+  background: #294335;
+}
+.ch-header > button {
+  border: 0;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+.ch-header b {
+  background: #d5b06a;
+  color: #15211c;
+  padding: 5px 8px;
+  margin-right: 8px;
+}
+.ch-header nav {
+  display: flex;
+  gap: 8px;
+  font-size: 10px;
+  letter-spacing: 0;
+}
+.ch-header i {
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  background: #c6a464;
+  margin: 0 10px;
+}
+.ch-frame {
+  position: relative;
+  aspect-ratio: 16/9;
+  width: 100%;
+  margin: 20px auto 0;
+  overflow: hidden;
+  background: #101b18;
+  border: 1px solid #4e625255;
+  isolation: isolate;
+}
+.ch-canvas {
+  position: absolute;
+  inset: 0;
+}
+.ch-canvas canvas {
+  display: block;
+}
+.ch-full {
+  position: fixed;
+  inset: 0;
+  margin: 0;
+  z-index: 100;
+  max-width: none;
+  height: 100vh;
+  width: 100vw;
+  aspect-ratio: auto;
+}
+.ch-overlay {
+  position: absolute;
+  inset: 0;
+  background: #0c1b1bd9;
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  padding: 30px;
+  text-align: center;
+}
+.ch-overlay h1,
+.ch-overlay h2 {
+  font:
+    clamp(26px, 4vw, 52px) Georgia,
+    serif;
+  margin: 0 0 10px;
+}
+.ch-overlay p {
+  color: #b9c5b7;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.ch-overlay > .ch-meter {
+  width: 300px;
+}
+.ch-eyebrow {
+  letter-spacing: 2.5px;
+  font-size: 10px !important;
+  color: #dcc38b !important;
+}
+.ch-primary {
+  background: #c3a163 !important;
+  color: #0e211a !important;
+  border-color: #d8bf83 !important;
+  font-weight: bold !important;
+  padding: 14px 25px !important;
+}
+.ch-title {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #10231af0, transparent 90%);
+  padding: 6% 6%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+.ch-title h1 {
+  font:
+    900 clamp(28px, 5vw, 68px)/0.98 Georgia,
+    serif;
+  letter-spacing: -2px;
+  margin: 12px 0;
+}
+.ch-title h1 em {
+  color: #dac389;
+  font-style: normal;
+}
+.ch-title > p {
+  font-size: 18px;
+}
+.ch-title > p span {
+  font-size: 12px;
+  color: #a1ada1;
+  padding: 0 12px;
+}
+.ch-title-desc {
+  font-size: 13px !important;
+  line-height: 1.8;
+  color: #b9c7b8;
+  margin: 15px 0;
+}
+.ch-title-line {
+  width: 45px;
+  height: 2px;
+  background: #cdb777;
+  margin: 10px 0;
+}
+.ch-title button {
+  margin: 6px 0;
+}
+.ch-title small {
+  margin-top: 18px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #a8b8a6;
+}
+.ch-hud {
+  position: absolute;
+  top: 4%;
+  left: 4%;
+  right: 4%;
+  display: flex;
+  justify-content: space-between;
+  gap: 5%;
+  pointer-events: none;
+}
+.ch-fighter {
+  width: 40%;
+  background: linear-gradient(#132319bb, #13231911);
+  padding: 4px;
+}
+.ch-name {
+  display: flex;
+  justify-content: space-between;
+  font-size: clamp(9px, 1.1vw, 14px);
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px #000;
+}
+.ch-name span {
+  color: #d7d6bb;
+  font-size: 10px;
+}
+.ch-meter {
+  height: 10px;
+  background: #1a211e;
+  box-shadow: 0 0 0 1px #5b6c5555;
+  margin-top: 5px;
+  overflow: hidden;
+}
+.ch-meter i {
+  display: block;
+  background: linear-gradient(90deg, #758e54, #cfdfa2);
+  height: 100%;
+  transition: width 0.08s linear;
+}
+.ch-meter.boss i {
+  background: linear-gradient(90deg, #957245, #e5c590);
+}
+.ch-meter.stamina {
+  height: 4px;
+}
+.ch-meter.stamina i {
+  background: #f1d792;
+}
+.ch-meter.ultimate {
+  height: 3px;
+}
+.ch-meter.ultimate i {
+  background: #dfe7b1;
+}
+.ch-fighter small {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 1px;
+  color: #bcc6af;
+  margin-top: 6px;
+  text-shadow: 0 2px 3px #000;
+}
+.ch-open {
+  color: #fce0a0 !important;
+}
+.ch-phase {
+  font:
+    28px Georgia,
+    serif;
+  text-shadow: 0 2px 5px #000;
+}
+.ch-phase small {
+  font-size: 11px;
+  margin-left: 4px;
+  color: #c0c1a7;
+}
+.ch-phase-title {
+  position: absolute;
+  left: 4%;
+  top: 18%;
+  font:
+    15px Georgia,
+    serif;
+  text-shadow: 0 2px 4px #000;
+}
+.ch-phase-title span {
+  display: block;
+  font:
+    10px Arial,
+    sans-serif;
+  color: #d0d7c4;
+  margin-top: 5px;
+  max-width: 390px;
+}
+.ch-actions {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 7px;
+  pointer-events: none;
+}
+.ch-actions > div {
+  background: #13241ed9;
+  border: 1px solid #86917b66;
+  display: grid;
+  grid-template-columns: 23px 1fr;
+  min-width: 112px;
+  padding: 8px;
+  gap: 2px 7px;
+}
+.ch-actions kbd {
+  grid-row: span 2;
+  background: #aab89222;
+  text-align: center;
+  padding-top: 5px;
+  font-size: 12px;
+  border-radius: 2px;
+}
+.ch-actions b {
+  font-size: 10px;
+  white-space: nowrap;
+}
+.ch-actions small {
+  font-size: 8px;
+  letter-spacing: 1px;
+  color: #b6c99c;
+}
+.ch-actions .ch-cooling {
+  opacity: 0.55;
+}
+.ch-ready {
+  border-color: #e0c778 !important;
+  box-shadow: 0 0 18px #c0df6e33;
+}
+.ch-pause {
+  position: absolute;
+  right: 4%;
+  top: 18%;
+  padding: 5px 9px !important;
+}
+.ch-clock {
+  position: absolute;
+  bottom: 5%;
+  left: 4%;
+  font-size: 10px;
+  color: #c5cab2;
+}
+.ch-letterbox {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 6%;
+  background: #091311;
+}
+.ch-letterbox.top {
+  top: 0;
+}
+.ch-letterbox.bottom {
+  bottom: 0;
+}
+.ch-dialogue {
+  position: absolute;
+  bottom: 9%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 65%;
+  padding: 12px 18px;
+  background: #13211be8;
+  border-left: 2px solid #d7bb7b;
+  box-shadow: 0 8px 28px #0004;
+}
+.ch-dialogue b {
+  color: #e1c991;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+.ch-dialogue p {
+  margin: 7px 0 0;
+  font-size: clamp(11px, 1.2vw, 16px);
+  line-height: 1.45;
+}
+.ch-skip {
+  position: absolute;
+  right: 3%;
+  bottom: 8%;
+  font-size: 10px !important;
+}
+.ch-ultimate-title {
+  position: absolute;
+  left: 5%;
+  bottom: 20%;
+  font:
+    italic 36px Georgia,
+    serif;
+  color: #eef6b8;
+  text-shadow: 0 2px 12px #121f12;
+  pointer-events: none;
+}
+.ch-ultimate-title small {
+  display: block;
+  font: 10px Arial;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+.ch-debug-tag {
+  position: absolute;
+  left: 4%;
+  bottom: 12%;
+  font-size: 8px;
+  color: #eed38c;
+}
+.ch-debug-tag button {
+  margin-left: 8px;
+  padding: 4px 8px;
+}
+.ch-results div {
+  font-size: 12px;
+  color: #ccb784;
+  margin: 8px;
+}
+.ch-results div span {
+  padding: 0 16px;
+}
+.ch-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #839982;
+}
+.ch-footer button {
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+.ch-modal {
+  position: absolute;
+  inset: 5% 13%;
+  overflow: auto;
+  background: #102219fa;
+  border: 1px solid #9caa7866;
+  padding: 30px;
+  box-shadow: 0 20px 80px #0009;
+}
+.ch-modal h2 {
+  font:
+    27px Georgia,
+    serif;
+  margin: 12px 0 10px;
+}
+.ch-modal p {
+  font-size: 11px;
+  line-height: 1.7;
+  color: #b9c7ac;
+}
+.ch-close {
+  float: right;
+  font-size: 10px !important;
+}
+.ch-modal table {
+  width: 100%;
+  font-size: 11px;
+  border-collapse: collapse;
+}
+.ch-modal td {
+  border-bottom: 1px solid #5d775533;
+  padding: 6px 10px;
+}
+.ch-slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 9px 0;
+  font-size: 11px;
+}
+.ch-slider input {
+  width: 65%;
+  accent-color: #ccb778;
+}
+.ch-modal > label {
+  font-size: 11px;
+}
+.ch-scene-button {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  text-align: left;
+  font-size: 12px !important;
+}
+.ch-credit {
+  margin-top: 14px;
+}
+.ch-credit a {
+  text-decoration: underline;
+}
+@media (max-width: 800px) {
+  .ch-shell {
+    padding: 0 10px 40px;
+  }
+  .ch-header {
+    height: 56px;
+  }
+  .ch-header > span {
+    display: none;
+  }
+  .ch-title h1 {
+    font-size: 32px;
+  }
+  .ch-title .ch-title-desc {
+    display: none;
+  }
+  .ch-title small {
+    margin-top: 8px;
+    font-size: 7px;
+  }
+  .ch-title .ch-eyebrow {
+    font-size: 7px !important;
+  }
+  .ch-title .ch-primary {
+    padding: 9px 12px !important;
+  }
+  .ch-actions > div {
+    min-width: 82px;
+    padding: 5px;
+    grid-template-columns: 18px 1fr;
+  }
+  .ch-actions b {
+    font-size: 8px;
+  }
+  .ch-phase-title span {
+    display: none;
+  }
+  .ch-modal {
+    inset: 3% 5%;
+    padding: 14px;
+  }
+  .ch-footer > span:last-child {
+    display: none;
+  }
+  .ch-dialogue {
+    padding: 7px 12px;
+  }
+  .ch-overlay {
+    gap: 5px;
+  }
+  .ch-overlay p {
+    font-size: 11px;
+  }
+}
+.ch-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+dialog.ch-modal {
+  margin: 0;
+  color: #ede8d9;
+  width: auto;
+  height: auto;
+}
+.ch-full-exit {
+  position: absolute;
+  right: 15px;
+  bottom: 12px;
+  z-index: 40;
+  font-size: 10px !important;
+}

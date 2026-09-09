@@ -52,3 +52,10 @@ These rules summarize repeated user feedback and inspected fixes through V23. La
 - Source changes/HMR during a final run invalidate its claim as a continuous test of one build. Freeze the candidate; run focused regressions after later edits and broaden when shared systems change.
 - Ignored outputs may disappear on restart or a fresh clone. Track manifests, prompts, concise evidence reports and reusable tests; captures and archives can remain disposable.
 - Version age does not mean an asset is unused. Trace live references before cleanup. Keep source/license records and never commit credentials.
+
+## Chapter 2 implementation findings (2026-09-08)
+- Track the last major boss pattern separately from the last ordinary move. Requiring intervening ordinary attacks otherwise makes an intended alternating major unreachable. Regression: natural selection alternates storm/walls across five major opportunities.
+- Canceling an effect/projectile array during iteration does not cancel the iterator's old entries. Use a generation boundary and abort the current update after guard-break cleanup. Regression: two overlapping pellets, first parry breaks guard, second must not drain stamina.
+- Guaranteed canonical aftermaths require guaranteed setup even when a player ends a phase with an ordinary attack. Chapter 2 explicitly stages the Primary/Reverse Lotus before the sand-shell/cushion reveals.
+- Image tool previews can obscure genuine alpha. Check RGBA channels before assuming backgrounds are baked. Preserve generated alpha; chroma-key only genuine RGB chroma sheets. Compare idle/attack crowns and torso before choosing a stable sequence scale.
+- A modal must own gameplay input independently of DOM focus. Checking whether the key event target is inside a dialog misses a still-focused header button and all gamepad input. Chapter2 exposes modalOpen through its input bridge; keyboard and pad polling both honor it and held confirmations remain consumed. Regression covers Escape, Start/A, and close while held.
