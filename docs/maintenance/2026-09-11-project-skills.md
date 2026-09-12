@@ -27,3 +27,7 @@ Corrected stale source documentation that still called the chapter registry unim
 Known limitation: new skill discovery in a newly opened app task has not been exercised. Root AGENTS.md and the handbook provide direct paths if discovery does not refresh immediately. No personal skill installation or global-memory update was performed.
 
 Publication: completed local changes remain uncommitted for review. This task has not pushed or deployed them. No chapter production is active; Chapter 3 remains unselected.
+
+### Later publication receipt — 2026-09-11
+
+The preceding paragraph describes this documentation task's original stopping point. The skills, AGENTS.md, handbook and README are now included in pushed game revision `2c10a5c`, along with the separately authorized continuous Chapter 2 update. GitHub/Vercel publication and public smoke passed; see [chapter receipt](../chapters/chunin-exams/PRODUCTION_LOG.md). No personal/global skill installation was performed.

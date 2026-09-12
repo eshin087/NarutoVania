@@ -1,5 +1,15 @@
 # Chapter 2 production log
 
+## Published continuous-duel release — 2026-09-11
+
+Validated game source `2c10a5c692cad57bba73a2612934fa6be3d98acc` (`Rebuild Lee vs Gaara as a continuous parry duel`) is pushed to GitHub main. This also publishes the seven project skills, handbook, updated AGENTS.md and README chapter prompt. Local/remote source hashes matched before release.
+
+Vercel reported **Ready / Production**, deployment `dpl_c5CUy5mFnyohoz4X7RhnzEczimJy`, with [deployment URL](https://narutovania-a6j4jtjck-eshin087s-projects.vercel.app) and primary alias [narutovania.vercel.app](https://narutovania.vercel.app/). GitHub's Vercel commit status reports success. The prior deployment stayed live throughout the new build. Legacy Sites was not changed.
+
+Both public probes passed in fresh browser sessions: `tools/smoke-chapters.cjs` (Chapter 2 intro/ultimate/modal/controller/focus/resize/debug ending/save isolation; Chapter 1 four fight initializations; production pilot exclusion) and `tools/smoke-chunin-audio.cjs` (21 decodes, eight public auditions, combat/ultimate mix, pause/exit cleanup). Zero page errors or missing HTTP assets. Live monitored mix peak0.300965; zero paused effects/music and closed AudioContext after exit. [Full candidate QA](QA_CONTINUOUS_2026-09-11.md) records tests, complete duel runs, independent review and coverage limits. Subjective listening, physical controllers and representative human difficulty remain unverified.
+
+This receipt changes documentation only; subsequent receipt commit has identical game source/assets. No unfinished implementation or publication gate remains for this revision. Await user feedback on sound feel and human fight pacing.
+
 ## 2026-09-11 continuous-duel revision — validated locally
 
 User confirmed Audacity installed and enabled, and requested continuous Gaara health with threshold power-ups, bouncing reaction-fair projectiles, stronger ground/parry cues, double jump, and smoother spacing. Retry at latest power-up was confirmed. Gaara uses 6000 maximum with 4200/2100 thresholds; exact overkill and checkpoint-entry HP persist. Double jump is shared across both chapters by the recommended default; airborne parry already worked and is now covered explicitly.

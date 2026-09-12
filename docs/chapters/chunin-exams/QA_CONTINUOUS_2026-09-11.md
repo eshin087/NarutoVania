@@ -1,6 +1,6 @@
 # Continuous Lee/Gaara duel — validation, 2026-09-11
 
-Candidate: local revision based on `fc8687a`, following the [art/combat revision](QA_REVISION_2026-09-11.md). Final commit/deployment receipt belongs in the production log. This report supersedes the earlier three-independent-HP-pools timing, not its retained artwork evidence.
+Validated game source: `2c10a5c`, based on `fc8687a`, following the [art/combat revision](QA_REVISION_2026-09-11.md). Public deployment and smoke succeeded; see [production log](PRODUCTION_LOG.md). This report supersedes the earlier three-independent-HP-pools timing, not its retained artwork evidence.
 
 ## Accepted mechanics
 
@@ -54,4 +54,4 @@ Exports are 0.14–0.41s, maximum measured peak -7.4995dBFS, zero clipped sample
 
 `tools/smoke-chapters.cjs` passed against the final static build on port3002: Chapter 2 intro/ultimate, controls modal ownership, simulated controller connection/prompts, focus pause, resize, all power-level initializations, ending, debug save isolation and unmount; Chapter 1's four fight initializations; production pilot exclusion. Zero page errors or missing HTTP assets. This is not a new full Chapter 1 playthrough.
 
-Publication is authorized to GitHub/Vercel after these gates. The legacy ChatGPT Site is outside this Chapter 2 release scope. Record public smoke and commit parity in the production log after deployment.
+GitHub/Vercel publication completed on 2026-09-11. Both production browser probes passed on the primary public alias, with no page errors or missing assets. Live monitored audio peak0.300965 and clean pause/exit. The legacy ChatGPT Site is outside this Chapter 2 release scope. Exact deployment receipt is in the production log.
