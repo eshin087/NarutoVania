@@ -12,13 +12,13 @@
 
 ## Chapter 2: The Power of Youth
 
-Play Rock Lee against Gaara in the indoor Chunin Exam preliminary arena. One substantial duel moves through the Shield of Sand, Lee dropping his weights, and the Fifth Gate. Use stationary taijutsu combos, timed parries, Hurricane kicks, Rising Wind, and cinematic Lotus techniques against shifting sand barrages.
+Play Rock Lee against Gaara in the indoor Chunin Exam preliminary arena. One continuous health bar carries the duel through the Shield of Sand, Lee dropping his weights at 70%, and the Fifth Gate at 35%. Use stationary taijutsu combos, Hurricane kicks, Lotus Launcher, and cinematic Lotus techniques against shifting sand barrages and floor-bouncing projectiles.
 
-A short animated introduction gathers the observing shinobi around the arena. Completing all three phases preserves the manga outcome: Gaara wins, and Guy saves Lee. Each phase has its own retry checkpoint. Chapter Select keeps Land of Waves available with separate saved progress.
+A short animated introduction gathers the observing shinobi around the arena. Completing the duel preserves the manga outcome: Gaara wins, and Guy saves Lee. Retry resumes at the latest power-up with Gaara's saved remaining health. Chapter Select keeps Land of Waves available with separate saved progress.
 
 ![The Chunin Exam preliminary arena](public/art-chunin/arena.webp)
 
-Lee uses **stamina, not chakra**. K is a quick palm strike, L is a physical backstep, and Q/E are taijutsu techniques. Shared movement, parry, dash, heavy-attack and ultimate controls are unchanged.
+Lee uses **stamina, not chakra**. K is a quick palm strike, L is a physical backstep, and Q/E are taijutsu techniques. All travelling sand projectiles can be perfect-parried, including ricochets. Watch Gaara's pale hand glint, time the bright projectile core, and dodge the outlined ground spells. Both chapters support double jump and airborne parry.
 
 [Chapter 2 production guide](docs/chapters/chunin-exams/CHAPTER_SPEC.md)
 
@@ -55,7 +55,7 @@ Perfect-parried mirror needles return to the real Haku. Deflect two separate vol
 | Action | Keyboard | Controller |
 | --- | --- | --- |
 | Move / crouch | A/D or arrows; S/down | Left stick / D-pad |
-| Jump | Space | A / Cross |
+| Jump / double jump | Space; press again in the air | A / Cross; press again in the air |
 | Melee / charged heavy | J / down + hold J | X / Square |
 | Shuriken | K | Y / Triangle |
 | Dash / air dash / slide | Shift; down modifies | B / Circle |
@@ -65,7 +65,7 @@ Perfect-parried mirror needles return to the real Haku. Deflect two separate vol
 | Ultimate | R | Right-stick click |
 | Pause | Escape | Start / Options |
 
-The public **Scene Select** jumps directly to every fight, story transition, boss barrage, ultimate, and animation preview without changing normal saved progress.
+The public **Scene Select** jumps directly to fights, story transitions, and chapter-specific previews without changing normal saved progress. Chapter 2 also includes **Sound check** buttons for its new Audacity-edited combat cues.
 
 ## Creating future chapters
 
@@ -74,6 +74,12 @@ Copy this prompt into Codex while this project is open:
 > **Make a new chapter about [manga moment/fight]. Follow the chapter workflow.**
 
 The root [AGENTS.md](AGENTS.md) and [chapter production guide](docs/chapters/README.md) cover canon research, generated artwork, specialist delegation, combat implementation, independent game-development critique, regression testing, and release. Per-chapter templates preserve decisions and progress across restarts.
+
+## Project skills and continuity
+
+The [project handbook](docs/project/README.md) contains current status, decisions, known issues, the asset map, and the test map. Seven project-local skills cover chapter production, sprite consistency, combat tuning, scene continuity, audio, independent game QA, and releases. They live in `.agents/skills/` with this project.
+
+For a focused task, try `Use $narutovania-sprite-audit to review Lee's attack proportions.` After a restart, use `Continue from docs/project/STATUS.md and verify the last completed milestone.` Ordinary language still works; [AGENTS.md](AGENTS.md) points the agent to the relevant instructions.
 
 ## Run locally
 
@@ -97,7 +103,7 @@ The client-only production build is exported to `dist/client`. The game uses Typ
 
 ## Assets, credits, and deployment
 
-`public/` contains runtime artwork and licensed audio. `art/` retains generation prompts and audit notes, while `scripts/` contains repeatable preparation tools. Full audio attribution is available [in the repository](public/audio-v23/manifest.json) and inside the game.
+`public/` contains runtime artwork and licensed audio. `art/` retains generation prompts and audit notes, while `scripts/` contains repeatable preparation tools. Full audio attribution is available for [Chapter 1 and music](public/audio-v23/manifest.json) and [Chapter 2 effects](public/audio-chunin/manifest.json), and inside the game.
 
 `vercel.json` builds the static export for Vercel. `.openai/hosting.json` retains the legacy Sites deployment configuration. Generated caches, recordings, screenshots, and build artifacts are excluded from Git; see the [latest cleanup report](docs/maintenance/2026-09-08-cleanup.md).
 

@@ -1,6 +1,6 @@
 import { readChapters, writeChapter } from '../chapter-registry';
 import { bossBridge, type Settings } from '../boss-bridge';
-import { PHASES, type Phase } from './combat';
+import { PHASES, PHASE_INFO, GAARA_HEALTH, type Phase } from './combat';
 export type Screen =
   | 'loading'
   | 'title'
@@ -20,6 +20,7 @@ export type Command =
   | 'skip'
   | 'advance'
   | 'debug-replay'
+  | { type: 'audition'; cue: string }
   | { type: 'debug'; phase: Phase; scene?: string };
 export interface Snapshot {
   modalOpen: boolean;
@@ -30,6 +31,7 @@ export interface Snapshot {
   ultimate: number;
   bossHealth: number;
   bossMax: number;
+  checkpointBossHealth: number;
   bossStamina: number;
   bossMove: string;
   exposed: boolean;
@@ -58,8 +60,9 @@ const initial: Snapshot = {
   health: 100,
   stamina: 100,
   ultimate: 100,
-  bossHealth: 1800,
-  bossMax: 1800,
+  bossHealth: GAARA_HEALTH,
+  bossMax: GAARA_HEALTH,
+  checkpointBossHealth: GAARA_HEALTH,
   bossStamina: 100,
   bossMove: '',
   exposed: false,
@@ -114,12 +117,29 @@ export const bridge = {
         ? (p.checkpoint as Phase)
         : 'shield',
       seen: p.seen,
+      checkpointBossHealth: Math.min(
+        p.checkpointBossHealth ?? Infinity,
+        PHASE_INFO[
+          PHASES.includes(p.checkpoint as Phase)
+            ? (p.checkpoint as Phase)
+            : 'shield'
+        ].health,
+      ),
     };
   },
-  checkpoint: (phase: Phase, completed = false) => {
+  checkpoint: (
+    phase: Phase,
+    completed = false,
+    bossHealth = snapshot.checkpointBossHealth,
+  ) => {
     if (snapshot.debugEntry) return;
     const seen = [...new Set([...snapshot.seen, phase])];
-    writeChapter('lee-gaara', { checkpoint: phase, seen, completed });
-    bridge.patch({ phase, seen });
+    writeChapter('lee-gaara', {
+      checkpoint: phase,
+      seen,
+      completed,
+      checkpointBossHealth: bossHealth > 0 ? bossHealth : undefined,
+    });
+    bridge.patch({ phase, seen, checkpointBossHealth: bossHealth });
   },
 };

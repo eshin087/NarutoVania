@@ -54,6 +54,21 @@ These rules summarize repeated user feedback and inspected fixes through V23. La
 - Version age does not mean an asset is unused. Trace live references before cleanup. Keep source/license records and never commit credentials.
 
 ## Chapter 2 implementation findings (2026-09-08)
+
+### Revision findings (2026-09-11)
+- Continuous power-ups must advance the existing combatant instead of resetting it. Persist exact threshold-entry HP and a stable maximum; regress damage past thresholds, Retry, Continue, skips and debug isolation.
+- Bouncing projectiles require piecewise collision, including harmless rebound preparation. The fairness planner and renderer/resolver must share the same floor/lifetime behavior; replay both legs through actual collision at varied frame steps and action locks.
+- Close-range combat handoffs need visible separation before authored cinematics, and facing must come from the final staged actors. Preview target phase is not the current story power state: regress Gates aura order in direct Scene Select as well as natural progression.
+- An 80ms launch guard prevents stale grounded physics from immediately restoring an extra jump. Keep double-jump and air-dash budgets independent; test fresh presses, third-press rejection, coyote/landing reset and both active runtimes.
+- Audacity short fades can collapse when project beat snapping is enabled. Verify the actual selection and exported endpoints; normalize/DC removal before final fades. Standard bundled filters recovered this task after a ClassicFilters crash. Preserve user projects and distinguish signal measurements from listening.
+- An advancing technique can cross a close opponent before its contact event and fail the facing check. Hurricane now stops at a66px contact distance; test50/88/140/200px in both facings and at edges.
+- Cinematic and combat time differ. A95ms immunity deadline froze through an ultimate and rejected its only hit. Give owned ultimate contact an explicit immunity policy, retain exactly-once ownership, and test after recent normal damage.
+- Simultaneous pellets can turn a successful parry into several block costs. Group inseparable shots from one emission; reward one deflection and one returned hit. Different volley IDs must not inherit protection.
+- Continuous route planning can disagree with a discrete receiver collision. Include the entire remaining action duration and one40ms walking displacement of clearance; replay accepted routes through the real swept resolver.
+- Neutral-background cleanup can erase white wrist wraps and detach hands, even with exterior flood when ink outlines are open. Preserve source wrist pixels and inspect every packed frame.
+- Sprite bounds are not body anchors. Gaara's outstretched arm shifted the packed silhouette center by more than 20 logical pixels between cast and idle. Use measured foot midpoints, retain a stable sequence scale, and mirror noncentral origins with the actual renderer's flip transform. Regress against source sandal landmarks in every frame.
+- Component filtering must follow anatomy restoration. Removing Gaara's detached shoes as "small effects" hid damaged ankle wraps. Preserve original ankle pixels first, reconnect both sandals, then discard disconnected sand grains; verify every expected foot survives.
+- Combined-actor sprites hide their components. Skip/retry/exit must restore visibility and reset reused texture/origin/flip, not only alpha and position.
 - Track the last major boss pattern separately from the last ordinary move. Requiring intervening ordinary attacks otherwise makes an intended alternating major unreachable. Regression: natural selection alternates storm/walls across five major opportunities.
 - Canceling an effect/projectile array during iteration does not cancel the iterator's old entries. Use a generation boundary and abort the current update after guard-break cleanup. Regression: two overlapping pellets, first parry breaks guard, second must not drain stamina.
 - Guaranteed canonical aftermaths require guaranteed setup even when a player ends a phase with an ordinary attack. Chapter 2 explicitly stages the Primary/Reverse Lotus before the sand-shell/cushion reveals.

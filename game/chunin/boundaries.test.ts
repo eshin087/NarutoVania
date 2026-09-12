@@ -4,6 +4,7 @@ import { readChapters, writeChapter, SAVE_KEY } from '../chapter-registry';
 import { bridge } from './bridge';
 import { bossBridge } from '../boss-bridge';
 import manifest from '../../public/art-chunin/manifest.json';
+import sandalMeasurements from '../../tools/chunin-gaara-ankle-preservation.json';
 afterEach(() => {
   vi.unstubAllGlobals();
   bossBridge.reset();
@@ -99,6 +100,23 @@ describe('Chapter boundaries', () => {
         expect(f.rect[2]).toBe(a.frameWidth);
         expect(f.rect[3]).toBe(a.frameHeight);
       }
+    }
+  });
+  it('anchors Gaara between measured feet rather than the casting silhouette', () => {
+    const a = manifest.assets['gaara-actions'];
+    for (const frame of a.frames) {
+      const shoes = sandalMeasurements.polygons.filter(
+        (p) => p.frame === frame.index,
+      );
+      expect(shoes).toHaveLength(2);
+      const center =
+        shoes.reduce((sum, p) => sum + p.shoeBounds[0] + p.shoeBounds[2], 0) /
+        4;
+      const localCenter =
+        frame.opaqueBounds[0] + center - frame.sourceBounds[0];
+      expect(Math.abs(localCenter - frame.root[0]) * frame.scale).toBeLessThan(
+        2,
+      );
     }
   });
 });

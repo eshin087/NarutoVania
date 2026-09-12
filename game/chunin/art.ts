@@ -7,6 +7,7 @@ interface Frame {
   root: number[];
   head: number[];
   hand: number[];
+  scale?: number;
 }
 interface Asset {
   file: string;
@@ -15,6 +16,7 @@ interface Asset {
   columns: number;
   rows: number;
   frames: Frame[];
+  scale?: number;
 }
 const assets = source.assets as unknown as Record<string, Asset>;
 export function preloadArt(scene: Phaser.Scene) {
@@ -29,6 +31,37 @@ export function preloadArt(scene: Phaser.Scene) {
   }
 }
 export function registerArt(_scene: Phaser.Scene) {}
+export function framePose(
+  sprite: Phaser.GameObjects.Sprite,
+  key: string,
+  frame: number,
+  facing = 1,
+  scale?: number,
+) {
+  const a = assets[key];
+  if (!a || !sprite.scene.textures.exists(`ch-${key}`)) return false;
+  frame = Math.max(0, Math.min(a.frames.length - 1, frame));
+  const meta = a.frames[frame];
+  sprite
+    .setTexture(`ch-${key}`, frame)
+    .setOrigin(
+      (facing < 0 ? a.frameWidth - meta.root[0] : meta.root[0]) / a.frameWidth,
+      meta.root[1] / a.frameHeight,
+    )
+    .setFlipX(facing < 0)
+    .setScale(scale ?? meta.scale ?? a.scale ?? 0.6)
+    .setRotation(0);
+  return true;
+}
+/** Frame 3 owns contact. Anticipation and recovery remain tied to gameplay event time. */
+export function contactFrame(age: number, duration: number, hitAt: number) {
+  return age < hitAt
+    ? Math.min(2, Math.floor((Math.max(0, age) / Math.max(1, hitAt)) * 3))
+    : Math.min(
+        5,
+        3 + Math.floor(((age - hitAt) / Math.max(1, duration - hitAt)) * 3),
+      );
+}
 export function pose(
   sprite: Phaser.GameObjects.Sprite,
   id: 'lee' | 'gaara' | 'guy' | 'hayate',
@@ -38,6 +71,37 @@ export function pose(
   gates = false,
   duration = 400,
 ) {
+  if (id === 'guy' && assets['guy-actions']) {
+    framePose(
+      sprite,
+      'guy-actions',
+      animation === 'run'
+        ? Math.floor(time / 75) % 6
+        : animation === 'block'
+          ? 10
+          : animation === 'land'
+            ? 11
+            : 6,
+      facing,
+    );
+    return;
+  }
+  if (id === 'gaara' && assets['gaara-actions']) {
+    const frame =
+      animation === 'hurt'
+        ? 19 + Math.min(3, Math.floor(time / 65) % 4)
+        : animation === 'guardbreak' || animation === 'land'
+          ? 22
+          : animation === 'defeat'
+            ? 22
+            : animation === 'cast'
+              ? contactFrame(time % 950, 950, 550)
+              : animation === 'block' || animation === 'parry'
+                ? 0
+                : 5;
+    framePose(sprite, 'gaara-actions', frame, facing);
+    return;
+  }
   let key = id === 'guy' || id === 'hayate' ? 'support' : id,
     frame = 0;
   if (id === 'lee') {
@@ -86,7 +150,10 @@ export function pose(
   const meta = a.frames[Math.min(frame, a.frames.length - 1)];
   sprite
     .setTexture(`ch-${key}`, frame)
-    .setOrigin(meta.root[0] / a.frameWidth, meta.root[1] / a.frameHeight)
+    .setOrigin(
+      (facing < 0 ? a.frameWidth - meta.root[0] : meta.root[0]) / a.frameWidth,
+      meta.root[1] / a.frameHeight,
+    )
     .setFlipX(facing < 0)
     .setScale(
       id === 'lee'

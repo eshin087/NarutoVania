@@ -165,7 +165,7 @@ export default function ChuninPage() {
             {s.seen.length > 0 && (
               <button onClick={() => command('start')}>Begin again</button>
             )}
-            <small>THREE PHASES · KEYBOARD & CONTROLLER</small>
+            <small>ONE DUEL · THREE POWER LEVELS · KEYBOARD & CONTROLLER</small>
           </div>
         )}
         {active && (
@@ -226,7 +226,7 @@ export default function ChuninPage() {
             <div className="ch-actions">
               {[
                 [pad ? 'RB' : 'Q', 'Leaf Hurricane', s.skill1],
-                [pad ? 'RT' : 'E', 'Rising Wind', s.skill2],
+                [pad ? 'RT' : 'E', 'Lotus Launcher', s.skill2],
                 [pad ? 'LT' : 'L', 'Backstep', s.backstep],
               ].map(([key, name, cd]) => (
                 <div key={key} className={Number(cd) > 0 ? 'ch-cooling' : ''}>
@@ -349,14 +349,19 @@ export default function ChuninPage() {
               <>
                 <h2>Master your taijutsu.</h2>
                 <p>
-                  Parry as a hit lands. Hold to guard. Red ! attacks must be
-                  dodged.
+                  The pale hand glint signals a shot&apos;s release. Parry when
+                  its bright core reaches you, even in the air. Hold to guard.
+                  Outlined ground spells and red ! attacks must be dodged.
                 </p>
                 <table>
                   <tbody>
                     {[
                       ['Move / down', 'A D / S', 'Stick / D-pad'],
-                      ['Jump', 'Space', 'A / Cross'],
+                      [
+                        'Jump / double jump',
+                        'Space · press again in air',
+                        'A / Cross · press again',
+                      ],
                       ['Combo / heavy', 'J / down + hold J', 'X / Square'],
                       ['Quick palm', 'K', 'Y / Triangle'],
                       [
@@ -365,7 +370,7 @@ export default function ChuninPage() {
                         'B / Circle',
                       ],
                       ['Parry / guard', 'F', 'LB / L1'],
-                      ['Hurricane / Rising Wind', 'Q / E', 'RB / RT'],
+                      ['Hurricane / Lotus Launcher', 'Q / E', 'RB / RT'],
                       ['Backstep', 'L', 'LT'],
                       ['Lotus ultimate', 'R', 'R3'],
                       ['Pause', 'Escape', 'Start'],
@@ -410,11 +415,19 @@ export default function ChuninPage() {
                   Original-series tribute. Generated character art; reused
                   licensed audio.{' '}
                   <a
+                    href="/audio-chunin/manifest.json"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Chapter 2 sound credits
+                  </a>
+                  {' · '}
+                  <a
                     href="/audio-v23/manifest.json"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Audio sources & credits
+                    Music credits
                   </a>
                 </p>
               </>
@@ -456,6 +469,25 @@ export default function ChuninPage() {
                     }}
                   >
                     {label} →
+                  </button>
+                ))}
+                <h3>Sound check</h3>
+                <p>Audition the new cues without changing your save.</p>
+                {[
+                  ['hit-palm-1', 'Palm'],
+                  ['hit-kick-1', 'Kick'],
+                  ['hit-heavy', 'Lotus impact'],
+                  ['parry', 'Parry'],
+                  ['tell', 'Attack tell'],
+                  ['sand-cast', 'Sand cast'],
+                  ['sand-impact', 'Sand eruption'],
+                  ['sand-bounce', 'Ricochet'],
+                ].map(([cue, label]) => (
+                  <button
+                    key={cue}
+                    onClick={() => command({ type: 'audition', cue })}
+                  >
+                    {label}
                   </button>
                 ))}
               </>

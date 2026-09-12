@@ -15,7 +15,7 @@ import audioManifest from '../public/audio-v23/manifest.json';
 import '@/app/boss.css';
 
 const controls = [
-  ['Move / crouch', 'A D / S or arrows', 'Left stick / D-pad'], ['Jump', 'Space', 'A / Cross'],
+  ['Move / crouch', 'A D / S or arrows', 'Left stick / D-pad'], ['Jump / double jump', 'Space · press again in air', 'A / Cross · press again'],
   ['Melee / charged heavy', 'Tap J / down + hold J', 'X / Square'], ['Shuriken · 4 chakra', 'K', 'Y / Triangle'],
   ['Dash / air dash / slide', 'Shift / down + Shift', 'B / Circle'], ['Parry / hold block', 'F', 'LB / L1'],
   ['Signature techniques', 'Q / E', 'RB / RT'], ['Substitution', 'L', 'LT / L2'], ['Ultimate', 'R', 'Right-stick click'], ['Pause', 'Escape', 'Start'],

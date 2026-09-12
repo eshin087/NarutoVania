@@ -1,4 +1,5 @@
 import {selectMirrorVolley} from './mirror-volley-v23';
+import {JumpState} from './jump-state';
 import {EndingStory} from './ending-v23';
 import {pose23} from './art-v23';
 import {WaterPrison} from './water-prison';
@@ -51,6 +52,7 @@ interface Decoy {image: Phaser.GameObjects.Image; x: number; y: number; expires:
 interface CinemaVisual {sprite: Phaser.GameObjects.Sprite | Phaser.GameObjects.Image; id: ActorId; character?: CharacterId; animation: AnimationName; animationAt: number; facing: -1 | 1; settleAt?: number;}
 
 export class BossGameScene extends Phaser.Scene {
+  private jumps = new JumpState();
   inputs!: BattleInput; sounds!: RecordedAudio; director!: StoryDirector; phase: StoryPhaseId = 'mist';
   player!: Fighter; boss!: Fighter; brain!: BossBrain; fighters: Fighter[] = []; projectiles: Projectile[] = []; private effectStore=new OwnedEffects<VisualEffect>(38,e=>e.image.destroy()); get effects(){return this.effectStore.items;} set effects(items:VisualEffect[]){this.effectStore.clear();items.forEach(e=>this.effectStore.add(e));} decoys: Decoy[] = [];
   mirrorDeflections=new MirrorDeflections();mirrorExit:MirrorExit|null=null;mirrorExitAt=0;
@@ -129,7 +131,7 @@ export class BossGameScene extends Phaser.Scene {
   }
   private enterPhase(state: StoryState) {
     const handoff=this.handoff;this.handoff=null;this.renderedClip='';this.clearStage(); this.phase = state.phase; const data = PHASES[this.phase]; this.arena(data.arena);
-    this.now = 0; this.lastEmit = -100; this.lastHitStop = -9999; this.landedAt = -9999; this.phaseElapsed = 0; this.phaseEnding = false; this.gameOver = false; this.hitStop = 0; this.lastGround = 0; this.jumpQueued = -9999;
+    this.now = 0; this.lastEmit = -100; this.lastHitStop = -9999; this.landedAt = -9999; this.phaseElapsed = 0; this.phaseEnding = false; this.gameOver = false; this.hitStop = 0; this.lastGround = 0; this.jumpQueued = -9999; this.jumps.reset();
     this.ultimatesUsed=0;this.protection = 100; this.protectionHits = 0; this.protectionUntil = 0; this.sharingan = state.sharinganAwakened; this.narutoJoined = state.narutoInMirrors;
     this.mirrorGuardBreaks = 0; this.bossBreakAnnounced = 0; this.mirrorEnd = 0; this.mirrorInterruptUntil = 0; this.nextMirrorTransfer = 0; this.mistUntil = 0; this.readingUntil = 0; this.bossRestrainedUntil = 0;
     this.player = this.fighter('player', data.character, data.playerX, this.floor, false, 100); this.player.model.ultimate=100;
@@ -315,7 +317,8 @@ export class BossGameScene extends Phaser.Scene {
     const f = this.player, p = f.model, body = f.body.body, input = this.inputs;
     const axis = Number(input.held('right')) - Number(input.held('left'));
     if (p.grounded) {if (this.now - this.lastGround > 100) this.landedAt = this.now; this.lastGround = this.now;}
-    if (input.pressed('jump')) this.jumpQueued = this.now;
+    this.jumps.observe(this.now,p.grounded,body.velocity.y);
+    if (input.pressed('jump')) this.jumps.press(this.now);
     if (axis && (!p.action || p.canAct(this.now, true) && (input.pressed('dash') || input.pressed('parry'))) && this.now >= p.hurtUntil) p.facing = axis as -1 | 1;
     p.setGuard(input.held('parry'), input.pressed('parry'), this.now);
     if (input.pressed('dash')) {
@@ -324,8 +327,9 @@ export class BossGameScene extends Phaser.Scene {
       if (p.start(UNIVERSAL[action], this.now) && action === 'airdash') body.setVelocityY(-35);
     }
     if (input.pressed('substitute')) p.start(UNIVERSAL.substitute, this.now);
-    if (this.now - this.jumpQueued <= COMBAT.jumpBuffer && this.now - this.lastGround <= COMBAT.coyote && p.canAct(this.now) && !p.guard) {
-      body.setVelocityY(-COMBAT.jump); p.grounded = false; this.lastGround = -9999; this.jumpQueued = -9999;
+    const jump=this.jumps.consume(this.now,p.canAct(this.now)&&!p.guard);
+    if (jump) {
+      body.setVelocityY(-COMBAT.jump*(jump==='air'?.76:1)); p.grounded = false; this.lastGround = -9999;
     }
     if (input.released('jump') && body.velocity.y < -200) body.setVelocityY(body.velocity.y * .48);
     if (input.pressed('melee')) {

@@ -5,12 +5,15 @@ import {
   type AttackEvent,
   type DefenseOutcome,
 } from '../combat-core';
+import { planSandVolley } from './sand-fairness';
+import { traceSandFlight } from './sand-flight';
 export type Phase = 'shield' | 'speed' | 'gates';
 export const PHASES: Phase[] = ['shield', 'speed', 'gates'];
+export const GAARA_HEALTH = 6000;
 export const PHASE_INFO = {
-  shield: { title: 'The Shield of Sand', health: 3000, speed: 390 },
-  speed: { title: 'Weights Released', health: 3900, speed: 460 },
-  gates: { title: 'The Fifth Gate', health: 4600, speed: 500 },
+  shield: { title: 'The Shield of Sand', health: GAARA_HEALTH, speed: 390 },
+  speed: { title: 'Weights Released', health: GAARA_HEALTH * 0.7, speed: 460 },
+  gates: { title: 'The Fifth Gate', health: GAARA_HEALTH * 0.35, speed: 500 },
 };
 export const FLOOR = 586,
   LEFT = 90,
@@ -103,6 +106,9 @@ export interface SandShot {
   red: boolean;
   returned: boolean;
   volley: number;
+  bounces?: number;
+  bounceWait?: number;
+  expiresAt?: number;
 }
 export interface Zone {
   x: number;
@@ -124,8 +130,12 @@ export interface Move {
   emitted: number;
   serial: number;
   gap: number;
+  variant: number;
+  retryAt: number;
+  retries: number;
 }
 export interface CombatCue {
+  id: number;
   kind:
     | 'hit'
     | 'armor'
@@ -134,10 +144,28 @@ export interface CombatCue {
     | 'break'
     | 'cast'
     | 'impact'
+    | 'bounce'
+    | 'tell'
     | 'step';
   x: number;
   y: number;
   at: number;
+  defender?: 'lee' | 'gaara';
+  damage?: number;
+}
+/** Approach only until a planted kick can connect; never cross through the opponent. */
+export function hurricaneVelocity(
+  x: number,
+  targetX: number,
+  facing: number,
+  age: number,
+  dt: number,
+) {
+  if (age >= 290) return 0;
+  const remaining = (targetX - x) * facing - 66;
+  return (
+    facing * Math.min(430, Math.max(0, remaining) / Math.max(0.001, dt / 1000))
+  );
 }
 export function segmentHits(
   x1: number,
@@ -201,13 +229,17 @@ export class Duel {
   ultimates = 0;
   comboHits = 0;
   bossHits = 0;
+  punishUntil = 0;
+  parriedVolleys = new Map<number, number>();
+  returnedVolleys = new Set<number>();
   constructor(phase: Phase = 'shield') {
     this.reset(phase);
   }
   reset(phase: Phase) {
     this.phase = phase;
     this.lee = new Combatant('lee');
-    this.gaara = new Combatant('gaara', PHASE_INFO[phase].health, true);
+    this.gaara = new Combatant('gaara', GAARA_HEALTH, true);
+    this.gaara.health = PHASE_INFO[phase].health;
     this.lee.ultimate = 100;
     this.lee.x = 350;
     this.gaara.x = 940;
@@ -222,18 +254,67 @@ export class Duel {
     this.shots = [];
     this.zones = [];
     this.vx = this.vy = 0;
+    this.cues = [];
+    this.punishUntil = 0;
+    this.parriedVolleys.clear();
+    this.returnedVolleys.clear();
+  }
+  get pendingStory(): 'weights' | 'gates' | 'ending' | null {
+    if (this.phase === 'shield' && this.gaara.health <= PHASE_INFO.speed.health)
+      return 'weights';
+    if (this.phase === 'speed' && this.gaara.health <= PHASE_INFO.gates.health)
+      return 'gates';
+    return this.phase === 'gates' && this.gaara.health <= 0 ? 'ending' : null;
+  }
+  /** Same duel and health pool. A power-up clears actions, not accumulated damage. */
+  advancePower(phase: Phase) {
+    if (phase === this.phase) return;
+    this.phase = phase;
+    this.phaseTime = 0;
+    this.cancelAttack();
+    this.lastMajor = this.now;
+    this.ordinary = 0;
+    for (const fighter of [this.lee, this.gaara]) {
+      fighter.action = null;
+      fighter.guard = false;
+      fighter.chargeStarted = null;
+      fighter.hurtUntil = fighter.guardBrokenUntil = 0;
+      fighter.stamina = 100;
+      fighter.grounded = true;
+      fighter.airDashUsed = false;
+    }
+    // Keep the established ready-Lotus reward, while carrying Lee's injuries forward.
+    this.lee.health = Math.min(100, this.lee.health + 20);
+    this.lee.ultimate = 100;
+    this.lee.immuneUntil = this.now + 650;
+    this.cues = [];
   }
   random() {
     this.seed = (Math.imul(1664525, this.seed) + 1013904223) >>> 0;
     return this.seed / 4294967296;
   }
-  cue(kind: CombatCue['kind'], x: number, y: number) {
-    this.cues.push({ kind, x, y, at: this.now });
+  cue(
+    kind: CombatCue['kind'],
+    x: number,
+    y: number,
+    defender?: CombatCue['defender'],
+    damage?: number,
+  ) {
+    this.cues.push({
+      id: ++this.serial,
+      kind,
+      x,
+      y,
+      at: this.now,
+      defender,
+      damage,
+    });
     if (this.cues.length > 64) this.cues.shift();
   }
   get exposed() {
     return (
       this.now < this.gaara.guardBrokenUntil ||
+      this.now < this.punishUntil ||
       (!!this.move && this.now - this.move.start >= this.move.recovery)
     );
   }
@@ -247,6 +328,9 @@ export class Duel {
   hitGaara(damage: number, posture: number, ultimate = false) {
     const wasBroken = this.now < this.gaara.guardBrokenUntil;
     const armor = this.exposed ? 1 : 0.3;
+    // Cinematic contact owns one hit; combat-time immunity must not freeze through it.
+    if (ultimate)
+      this.gaara.immuneUntil = Math.min(this.gaara.immuneUntil, this.now);
     const outcome = this.gaara.receive(
       {
         damage: damage * (ultimate ? 1 : armor),
@@ -268,11 +352,13 @@ export class Duel {
         armor === 1 || ultimate ? 'hit' : 'armor',
         this.gaara.x,
         this.gaara.y - 76,
+        'gaara',
+        outcome.damage,
       );
     }
     if (!wasBroken && this.now < this.gaara.guardBrokenUntil) {
       this.cancelAttack();
-      this.cue('break', this.gaara.x, this.gaara.y - 90);
+      this.cue('break', this.gaara.x, this.gaara.y - 90, 'gaara');
     }
     return outcome.damage;
   }
@@ -290,16 +376,18 @@ export class Duel {
     if (out.result === 'parry') {
       this.gaara.deflected(out.attackerPosture, this.now);
       this.parries++;
-      this.cue('parry', this.lee.x, this.lee.y - 70);
+      this.cue('parry', this.lee.x, this.lee.y - 70, 'lee');
       if (this.now < this.gaara.guardBrokenUntil) this.cancelAttack();
     } else if (out.result === 'block')
-      this.cue('block', this.lee.x, this.lee.y - 70);
+      this.cue('block', this.lee.x, this.lee.y - 70, 'lee');
     else if (out.damage) {
       this.bossHits++;
       this.cue(
         out.result === 'guardbreak' ? 'break' : 'hit',
         this.lee.x,
         this.lee.y - 70,
+        'lee',
+        out.damage,
       );
     }
     return out;
@@ -309,6 +397,8 @@ export class Duel {
     this.move = null;
     this.zones = [];
     this.shots = [];
+    this.parriedVolleys.clear();
+    this.returnedVolleys.clear();
     this.nextMove = this.now + 1800;
   }
   chooseMove() {
@@ -327,12 +417,12 @@ export class Duel {
     ];
     this.lastMove = id;
     const data = {
-      hand: ['Sand Hand', 650, 1900, 1100],
-      fan: ['Sand Shuriken', 700, 2900, 1950],
+      hand: ['Sand Hand', 780, 2050, 1200],
+      fan: ['Sand Shuriken', 850, 3400, 2450],
       sweep: ['Sand Wave', 850, 2250, 1300],
       coffin: ['Sand Coffin', 1050, 2450, 1450],
-      storm: ['Sandstorm', 950, 6700, 5700],
-      walls: ['Sand Burial', 1000, 6600, 5600],
+      storm: ['Sand Shower', 1100, 7200, 6200],
+      walls: ['Sand Coffin · Pursuit', 1100, 7000, 6000],
     }[id] as [string, number, number, number];
     this.move = {
       id,
@@ -345,9 +435,13 @@ export class Duel {
       emitted: 0,
       serial: ++this.serial,
       gap: clamp(this.lee.x, 280, 1000),
+      variant: this.random() < 0.5 ? 0 : 1,
+      retryAt: 0,
+      retries: 0,
     };
     this.gaara.spend(canMajor ? 25 : 12, this.now);
     this.gaara.facing = this.lee.x < this.gaara.x ? -1 : 1;
+    this.cue('tell', this.gaara.x + this.gaara.facing * 42, this.gaara.y - 96);
     if (canMajor) {
       this.lastMajorId = id;
       this.lastMajor = this.now;
@@ -374,11 +468,25 @@ export class Duel {
     offset = 0,
   ) {
     if (this.shots.length >= 48) return;
+    this.shots.push({
+      ...this.makeShot(x, y, targetX, targetY, kind, volley, offset),
+      id: ++this.serial,
+    });
+  }
+  makeShot(
+    x: number,
+    y: number,
+    targetX: number,
+    targetY: number,
+    kind: SandShot['kind'],
+    volley: number,
+    offset = 0,
+  ): SandShot {
     const a = Math.atan2(targetY - y, targetX - x) + offset;
     const speed =
-      kind === 'hand' ? 600 : 620 + (this.phase === 'gates' ? 80 : 0);
-    this.shots.push({
-      id: ++this.serial,
+      kind === 'hand' ? 560 : 520 + (this.phase === 'gates' ? 50 : 0);
+    return {
+      id: 0,
       x,
       y,
       oldX: x,
@@ -392,7 +500,54 @@ export class Duel {
       red: false,
       returned: false,
       volley,
+    };
+  }
+  releaseBarrage(proposed: SandShot[], m: Move) {
+    const action = this.lee.action;
+    const lockMs = Math.max(
+      0,
+      this.lee.hurtUntil - this.now,
+      this.lee.guardBrokenUntil - this.now,
+      action ? action.started + action.definition.duration - this.now : 0,
+    );
+    const plan = planSandVolley({
+      player: {
+        x: clamp(this.lee.x, LEFT, RIGHT),
+        speed: PHASE_INFO[this.phase].speed,
+        lockMs,
+      },
+      desiredGap: m.gap + (m.emitted % 2 ? 120 : -120),
+      proposed,
+      existing: this.shots.filter((p) => !p.returned),
+      zones: this.zones.filter((z) => !z.hit),
+      now: this.now,
     });
+    if (!plan) {
+      if (++m.retries <= 4) {
+        m.retryAt = this.now + 120;
+        return false;
+      }
+      m.retries = 0;
+      m.retryAt = 0;
+      return true; // Omit an unsafe future volley, never erase an existing one.
+    }
+    m.gap = plan.gap;
+    m.retries = 0;
+    m.retryAt = 0;
+    const allowance = Math.max(0, 48 - this.shots.length);
+    const ids = plan.retainedIndices;
+    const retained =
+      ids.length <= allowance
+        ? ids
+        : Array.from(
+            { length: allowance },
+            (_, i) => ids[Math.floor((i * ids.length) / allowance)],
+          );
+    for (const index of retained)
+      this.shots.push({ ...proposed[index], id: ++this.serial });
+    if (retained.length)
+      this.cue('cast', this.gaara.x + this.gaara.facing * 38, FLOOR - 100);
+    return true;
   }
   updateBoss(dt: number) {
     if (
@@ -411,46 +566,61 @@ export class Duel {
       handY = this.gaara.y - 92;
     if (m.id === 'hand' && age >= m.windup && !m.emitted) {
       m.emitted++;
-      this.spawn(handX, handY, this.lee.x, this.lee.y - 65, 'hand', m.serial);
+      this.spawn(handX, handY, m.target, FLOOR - 65, 'hand', m.serial);
       this.cue('cast', handX, handY);
     }
-    if (
-      m.id === 'fan' &&
-      m.emitted < (this.phase === 'shield' ? 2 : 3) &&
-      age >= m.windup + m.emitted * 500
-    ) {
+    if (m.id === 'fan' && m.emitted < 3 && age >= m.windup + m.emitted * 650) {
       m.emitted++;
-      for (const offset of this.phase === 'gates'
-        ? [-0.3, -0.15, 0, 0.15, 0.3]
-        : [-0.2, 0, 0.2])
+      for (const offset of [-0.36, -0.18, 0, 0.18, 0.36])
         this.spawn(
           handX,
           handY,
-          this.lee.x,
-          this.lee.y - 64,
+          m.target,
+          FLOOR - 64,
           'pellet',
-          m.serial,
+          m.serial * 100 + m.emitted,
           offset,
         );
       this.cue('cast', handX, handY);
+      // Subsequent releases commit their next target one visible beat in advance.
+      m.target = this.lee.x;
     }
     if (
       m.id === 'storm' &&
-      m.emitted < 5 &&
-      age >= m.windup + m.emitted * 900
+      m.emitted < 7 &&
+      this.now >= m.retryAt &&
+      age >= m.windup + m.emitted * 780
     ) {
-      const nextGap = clamp(m.gap + (m.emitted % 2 ? 160 : -160), 280, 1000);
-      m.gap = nextGap;
-      m.emitted++;
-      // Every curtain uses parallel trajectories. Its broad lane shifts only 160px in 900ms.
-      for (const x of curtainOrigins(nextGap, 260))
-        this.spawn(x, 150, x, FLOOR + 80, 'pellet', m.serial + m.emitted);
-      this.cue('cast', 640, 180);
+      const volley = m.serial * 100 + m.emitted + 1;
+      const drift = m.variant
+        ? m.emitted % 2
+          ? 210
+          : -210
+        : m.emitted % 2
+          ? 50
+          : -50;
+      const shots = Array.from({ length: 15 }, (_, i) => {
+        const x = 110 + i * 76;
+        const shot = this.makeShot(
+          x,
+          175,
+          x + drift,
+          FLOOR + 80,
+          m.variant ? 'spike' : 'pellet',
+          volley,
+        );
+        if (m.variant && i % 2 === 0) {
+          shot.bounces = 1;
+          shot.expiresAt = this.now + 1800;
+        }
+        return shot;
+      });
+      if (this.releaseBarrage(shots, m)) m.emitted++;
     }
     if (
       m.id === 'walls' &&
       m.emitted < 4 &&
-      age >= m.windup - 700 + m.emitted * 1200
+      age >= m.windup - 950 + m.emitted * 1400
     ) {
       m.emitted++;
       m.gap = clamp(m.gap + (m.emitted % 2 ? 170 : -170), 280, 1000);
@@ -460,11 +630,24 @@ export class Duel {
             x,
             width: 100,
             warnAt: this.now,
-            hitAt: this.now + 750,
-            end: this.now + 1120,
+            hitAt: this.now + 950,
+            end: this.now + 1320,
             hit: false,
           });
       this.cue('cast', this.gaara.x, FLOOR);
+      // A later diagonal shower adds pressure only if the existing floor zones leave a route.
+      const shots = Array.from({ length: 12 }, (_, i) => {
+        const x = 125 + i * 93;
+        return this.makeShot(
+          x,
+          165,
+          x + (m.variant ? -90 : 90),
+          FLOOR + 80,
+          'spike',
+          m.serial * 100 + m.emitted,
+        );
+      });
+      this.releaseBarrage(shots, m);
     }
     if (age >= m.recovery && Math.abs(this.lee.x - this.gaara.x) < 95) {
       this.gaara.x = clamp(
@@ -474,6 +657,7 @@ export class Duel {
       );
     }
     if (this.now >= m.end) {
+      this.punishUntil = this.now + 350;
       this.move = null;
       this.nextMove = this.now + 350;
     }
@@ -485,43 +669,77 @@ export class Duel {
       if (generation !== this.attackGeneration) break;
       p.oldX = p.x;
       p.oldY = p.y;
-      p.x += (p.vx * dt) / 1000;
-      p.y += (p.vy * dt) / 1000;
+      const span = Math.min(
+        dt,
+        Math.max(0, (p.expiresAt ?? Infinity) - (this.now - dt)),
+      );
+      const flight = traceSandFlight(p, span, FLOOR - 18);
+      const paths = flight.segments.filter((s) => s.damaging);
+      p.x = flight.x;
+      p.y = flight.y;
+      p.vx = flight.vx;
+      p.vy = flight.vy;
+      p.bounces = flight.bounces;
+      p.bounceWait = flight.bounceWait;
+      if (flight.bounced) this.cue('bounce', flight.x, FLOOR - 18);
       if (p.returned) {
         if (
-          segmentHits(
-            p.oldX,
-            p.oldY,
-            p.x,
-            p.y,
-            this.gaara.x - 28,
-            FLOOR - 130,
-            56,
-            130,
+          paths.some((s) =>
+            segmentHits(
+              s.x1,
+              s.y1,
+              s.x2,
+              s.y2,
+              this.gaara.x - 28,
+              FLOOR - 130,
+              56,
+              130,
+            ),
           )
         ) {
-          this.hitGaara(35, 16);
+          if (!this.returnedVolleys.has(p.volley)) {
+            this.returnedVolleys.add(p.volley);
+            this.hitGaara(35, 16);
+          }
           this.cue('impact', p.x, p.y);
           continue;
         }
       } else {
         const h = this.lee.action?.definition.action === 'slide' ? 28 : 106;
         if (
-          segmentHits(
-            p.oldX,
-            p.oldY,
-            p.x,
-            p.y,
-            this.lee.x - 23 - p.radius,
-            this.lee.y - h - p.radius,
-            46 + p.radius * 2,
-            h + p.radius * 2,
+          paths.some((s) =>
+            segmentHits(
+              s.x1,
+              s.y1,
+              s.x2,
+              s.y2,
+              this.lee.x - 23 - p.radius,
+              this.lee.y - h - p.radius,
+              46 + p.radius * 2,
+              h + p.radius * 2,
+            ),
           )
         ) {
-          const out = this.hitLee(p.damage, 14, p.red, p.oldX, true);
+          // A tightly grouped volley is one deliberate deflection beat, not five stamina charges.
+          const grouped =
+            !p.red &&
+            this.lee.guard &&
+            this.lee.stamina > 0 &&
+            this.now <= (this.parriedVolleys.get(p.volley) ?? -1);
+          const fromX =
+            Math.abs(p.vy) > Math.abs(p.vx) * 1.5
+              ? this.lee.x + this.lee.facing * 50
+              : p.oldX;
+          const out = grouped
+            ? { result: 'parry' as const, damage: 0, attackerPosture: 0 }
+            : this.hitLee(p.damage, 14, p.red, fromX, true);
           if (generation !== this.attackGeneration) break;
           if (out.result === 'parry') {
+            if (!grouped) this.parriedVolleys.set(p.volley, this.now + 70);
             p.returned = true;
+            p.bounces = 0;
+            p.bounceWait = 0;
+            p.expiresAt = this.now + 4000;
             const a = Math.atan2(FLOOR - 75 - p.y, this.gaara.x - p.x);
             p.vx = Math.cos(a) * 850;
             p.vy = Math.sin(a) * 850;
@@ -534,11 +752,17 @@ export class Duel {
           }
         }
       }
-      if (p.y >= FLOOR + 15) {
+      if (flight.grounded) {
         this.cue('impact', p.x, FLOOR);
         continue;
       }
-      if (p.x < -140 || p.x > 1420 || p.y < -160 || this.now - p.born > 10000)
+      if (
+        p.x < -140 ||
+        p.x > 1420 ||
+        p.y < -160 ||
+        this.now - p.born > 10000 ||
+        this.now >= (p.expiresAt ?? Infinity)
+      )
         continue;
       remaining.push(p);
     }
@@ -562,6 +786,11 @@ export class Duel {
     this.elapsed += dt;
     this.phaseTime += dt;
     this.cues = this.cues.filter((c) => this.now - c.at < 500);
+    for (const [volley, until] of this.parriedVolleys)
+      if (this.now > until) this.parriedVolleys.delete(volley);
+    const liveVolleys = new Set(this.shots.map((p) => p.volley));
+    for (const volley of this.returnedVolleys)
+      if (!liveVolleys.has(volley)) this.returnedVolleys.delete(volley);
     const hits = this.lee.update(this.now, dt);
     this.gaara.update(this.now, dt);
     for (const { event, charge } of hits) this.playerEvent(event, charge);

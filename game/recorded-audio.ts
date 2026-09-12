@@ -1,6 +1,7 @@
 import manifest from '../public/audio-v23/manifest.json';
 import type {CharacterId, EffectName} from './combat-core';
 export interface AudioSettings {muted: boolean; musicVolume: number; effectsVolume: number; voiceVolume: number;}
+export interface AudioProfile {records:{id:string;file:string}[];pools:Record<string,string[]>;}
 type Track = 'lakeside' | 'mirrors' | 'snow';
 interface VoiceNode {source: AudioBufferSourceNode; gain: GainNode; group: 'effects' | 'voice';priority:number;}
 interface MusicNode {source: AudioBufferSourceNode; gain: GainNode; track: Track; started: number; offset: number;}
@@ -15,7 +16,7 @@ export class RecordedAudio {
   private lastEffect = new Map<string, number>(); private variant = new Map<string, number>(); private fading = new Set<MusicNode>();
   private auditionToken=0;private ducked = false; private cueDuckUntil=0;
   missing: string[] = [];
-  constructor(private settings: () => AudioSettings) {}
+  constructor(private settings: () => AudioSettings, private profile?:AudioProfile) {}
   async unlock() {
     if (this.disposed) return;
     if (!this.context) {
@@ -27,7 +28,8 @@ export class RecordedAudio {
       this.effects = this.context.createGain(); this.voices = this.context.createGain(); this.musicBus = this.context.createGain();
       this.effects.connect(this.master); this.voices.connect(this.master); this.musicBus.connect(this.master);
       const context = this.context;
-      this.loadPromise = Promise.all(manifest.records.map(async entry => {
+      const records=[...new Map([...manifest.records,...(this.profile?.records??[])].map(r=>[r.id,r])).values()];
+      this.loadPromise = Promise.all(records.map(async entry => {
         try {const response = await fetch(entry.file); if (!response.ok) throw new Error(String(response.status));
           const buffer = await context.decodeAudioData(await response.arrayBuffer());
           if (!this.disposed) this.buffers.set(entry.id, buffer);
@@ -101,16 +103,18 @@ export class RecordedAudio {
     const now = this.context?.currentTime || 0;
     if (now - (this.lastEffect.get(name) ?? -100) < (name === 'step' ? .13 : .055)) return;
     this.lastEffect.set(name, now);
-    const choices: Record<string,string[]> = {impact:manifest.pools.palm,impact2:manifest.pools.kick,swing:manifest.pools.swing,swing2:manifest.pools.sword,ice:manifest.pools.ice,parry:manifest.pools.parry,water:manifest.pools.water,water2:manifest.pools.water};
+    const pools={...manifest.pools,...this.profile?.pools};
+    const choices: Record<string,string[]> = {impact:pools.palm,impact2:pools.kick,swing:pools.swing,swing2:pools.sword,ice:pools.ice,parry:pools.parry,water:pools.water,water2:pools.water};
     const pool=choices[name]||[name], variant=this.variant.get(name)||0;this.variant.set(name,variant+1);
     this.playBuffer(pool[variant%pool.length], 'effects', volume * .9, rate);
   }
   strike(kind:'palm'|'kick'|'heavy'|'sword',volume=1){
-    const pools={...manifest.pools,sword:['sword-hit','hit-heavy-2','hit-heavy-3']};
+    const pools={...manifest.pools,sword:['sword-hit','hit-heavy-2','hit-heavy-3'],...this.profile?.pools};
     const index=this.variant.get(`strike-${kind}`)||0;this.variant.set(`strike-${kind}`,index+1);
     this.playBuffer(pools[kind][index%pools[kind].length],'effects',volume,1);
   }
   softWater(){const now=this.context?.currentTime||0;if(now-(this.lastEffect.get('water-soft')??-100)<.36)return;this.lastEffect.set('water-soft',now);this.playBuffer('water-soft','effects',.55,1);}
+  cue(id:string,volume=.5,minInterval=.18){const now=this.context?.currentTime||0;if(now-(this.lastEffect.get(id)??-100)<minInterval)return;this.lastEffect.set(id,now);this.playBuffer(id,'effects',volume,1);}
   swordRelease(){this.playBuffer('sword-swish','effects',.75,1);}
   swordCatch(){this.playBuffer('guard','effects',.65,1);}
   tool(){const index=this.variant.get('needle')||0;this.variant.set('needle',index+1);this.playBuffer(manifest.pools.needle[index%3],'effects',.55,1);}
@@ -134,7 +138,7 @@ export class RecordedAudio {
   private playBuffer(id: string, group: 'effects' | 'voice', volume: number, rate: number) {
     const c = this.context, buffer = this.buffers.get(id), bus = group === 'effects' ? this.effects : this.voices;
     if (!this.playing || !c || !buffer || !bus || this.disposed) return;
-    const priority=/parry|break|ultimate|lightning/.test(id)?3:/hit-|sword-hit|voice-.*-[45]/.test(id)?2:1;
+    const priority=/parry|break|ultimate|lightning/.test(id)?3:/hit-|sword-hit|voice-.*-[45]|tell/.test(id)?2:1;
     if(priority===3){this.cueDuckUntil=c.currentTime+.45;this.volumes();}
     const groupNodes = [...this.nodes].filter(n => n.group === group), limit = group === 'effects' ? 8 : 2;
     if (groupNodes.length >= limit){const victim=groupNodes.sort((a,b)=>a.priority-b.priority)[0];if(victim.priority>priority)return;this.stopNode(victim);}

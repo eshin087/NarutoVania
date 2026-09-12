@@ -2,10 +2,12 @@
 
 ## Destinations and authorization
 
-Current destinations, last inspected 2026-09-08:
+Destination records reviewed 2026-09-11; verify current configuration and live status when relevant:
 - Primary: https://narutovania.vercel.app/
 - Legacy: https://narutovania-land-of-waves.gcdone.chatgpt.site/
-- GitHub: https://github.com/eshin087/narutovania
+- GitHub: https://github.com/eshin087/NarutoVania
+
+Chapter 2 was published to Vercel only. The legacy Site is not automatically in scope for every new chapter or release. Consult [STATUS](../project/STATUS.md) and the active request for release scope and dated receipts.
 
 Verify current Git remotes, .vercel/project.json and .openai/hosting.json rather than copying opaque project/version IDs from old logs. Keep credentials out of documentation, files, Git config, command output and remote URLs.
 
@@ -31,11 +33,13 @@ Do not rerun builds/tests for a documentation-only change without a relevant rea
 1. Keep current public versions live while preparing and validating the candidate.
 2. Review Git diff for intended source/assets/licenses only; omit caches, captures, raw temporary audio and credentials.
 3. Commit the validated source when appropriate to the user's Git workflow. Push the intended branch; inspect Vercel deployment result rather than assuming a push means success.
-4. Package/deploy the same validated source to the existing Sites project using its current skill and tool workflow. Read current project metadata, use returned IDs, and verify terminal success.
-5. Smoke-test both public URLs: title/chapter selection, new fight, representative repaired/new scene, assets, controls, saved progress and production tool boundaries.
+4. If the legacy Site is also requested, package/deploy the same validated source to the existing Sites project using its current skill and tool workflow. Read current project metadata, use returned IDs, and verify terminal success. Otherwise leave that destination alone.
+5. Smoke-test each requested public URL: title/chapter selection, new fight, representative repaired/new scene, assets, controls, saved progress and production tool boundaries.
 6. Record revision, deployment URLs/status and actual coverage/limits in the chapter log and QA report.
 
 Do not publish an unreviewed preview as the production replacement. For a failed release, preserve the old working deployment and diagnose; use an intentional rollback/revert rather than force-pushing or destructive resets.
+
+Pushing main may start a Vercel deployment even for documentation. Account for that side effect when the user requests a source push; do not represent an automatic deployment as a manually verified game release. Documentation-only work does not itself require a push or a hosting action.
 
 ## Maintenance
 

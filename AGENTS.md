@@ -1,5 +1,13 @@
 # Narutovania project instructions
 
+## Start here and select relevant skills
+
+For non-trivial project work, read [current status](docs/project/STATUS.md), inspect Git, then read only the records relevant to the request. [Project handbook](docs/project/README.md) indexes decisions, open issues, asset ownership, regression coverage, and seven project-local skills under `.agents/skills/`.
+
+Match the task to a skill: chapter production, sprite audit, combat tuning, scene continuity, audio review, independent game QA, or release/cleanup. Read its SKILL.md when applicable; if automatic discovery is unavailable, use the handbook's direct link. Do not load every skill or run chapter production for a small fix. Respect review-only versus implementation requests.
+
+At meaningful milestones and before stopping, update the active chapter log (or dated maintenance report) and STATUS. Record changed decisions and unresolved issues in the handbook; link evidence instead of duplicating whole reports. These are project files, not global memory or an unattended service.
+
 ## New chapter requests
 
 When the user asks to create a chapter from a manga moment, arc, or fight, execute the chapter-production workflow in [docs/chapters/README.md](docs/chapters/README.md). Read [current context](docs/chapters/PROJECT_CONTEXT.md), [lessons](docs/chapters/LESSONS_LEARNED.md), and [workflow](docs/chapters/WORKFLOW.md) before implementation.

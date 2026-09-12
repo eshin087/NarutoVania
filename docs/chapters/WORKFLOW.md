@@ -4,6 +4,8 @@
 
 Read AGENTS.md, this guide, current context and lessons. Inspect Git status, package scripts, active chapter logs and relevant source. Preserve unrelated local work.
 
+Read [project STATUS](../project/STATUS.md) for the active handoff and release pointers. Use [decisions](../project/DECISIONS.md) to resolve scoped defaults and [issues](../project/ISSUES.md) to distinguish open findings from old fixed regressions. Update the active handoff when the task changes.
+
 If a matching chapter log exists, verify its last milestone and continue. Otherwise create a descriptive chapter directory from the templates. Record the user's exact requested moment, known preferences, current revision, likely scope and outstanding questions.
 
 Ask only questions whose answers change the chapter materially: ambiguous era/moment, playable character choice, missing reference, or desired adaptation. Continue independent work. Routine choreography, tools and implementation choices belong to the coordinator. Do not ask the user to approve each asset or each technical step.
@@ -70,3 +72,5 @@ Before a pause or after a meaningful milestone, write:
 - Publication status and remaining limitations.
 
 After restart verify files, processes and tool availability. Start only missing services; do not regenerate accepted art or restart the entire chapter. If the user's new instruction changes scope, update the spec and log, preserving compatible completed work.
+
+Keep STATUS short and current; keep chronological evidence in the chapter log. Update the asset index only when ownership/reference changes and the regression map when new coverage is added. Newly observed root causes belong in LESSONS_LEARNED with a regression check, not as another universal rule copied into every skill.

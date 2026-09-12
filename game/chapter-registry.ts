@@ -18,6 +18,7 @@ export interface ChapterProgress {
   checkpoint: string;
   seen: string[];
   completed: boolean;
+  checkpointBossHealth?: number;
 }
 export interface ChapterSave {
   version: 3;
@@ -63,6 +64,17 @@ export function parseChapters(raw: unknown, legacy?: unknown): ChapterSave {
         : [],
       completed: candidate?.completed === true,
     };
+    if (
+      id === 'lee-gaara' &&
+      candidate &&
+      'checkpointBossHealth' in candidate &&
+      typeof candidate.checkpointBossHealth === 'number' &&
+      Number.isFinite(candidate.checkpointBossHealth) &&
+      candidate.checkpointBossHealth > 0 &&
+      candidate.checkpointBossHealth <= 6000
+    ) {
+      entries[id].checkpointBossHealth = candidate.checkpointBossHealth;
+    }
   }
   return {
     version: 3,

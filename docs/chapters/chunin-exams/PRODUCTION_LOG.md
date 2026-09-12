@@ -1,5 +1,33 @@
 # Chapter 2 production log
 
+## 2026-09-11 continuous-duel revision — validated locally
+
+User confirmed Audacity installed and enabled, and requested continuous Gaara health with threshold power-ups, bouncing reaction-fair projectiles, stronger ground/parry cues, double jump, and smoother spacing. Retry at latest power-up was confirmed. Gaara uses 6000 maximum with 4200/2100 thresholds; exact overkill and checkpoint-entry HP persist. Double jump is shared across both chapters by the recommended default; airborne parry already worked and is now covered explicitly.
+
+Coordinator implemented shared piecewise one-floor-bounce flight with 180ms harmless rebound preparation and 1800ms finite lifetime, a 260ms route reaction budget, slower projectile travel, clearer complete ground footprints, pale hand release glints, and 700ms scene separation/landing when needed. Root/facing are preserved on handoff; Gates aura follows final recoil position. 264 tests / 31 files, typecheck, lint and production build pass. Independent route sweep passed 1944 paths plus 324 multi-wave scenarios; 162 cases are retained as a regression. Both ordinary-input full runs completed at 97.91s/109.79s combat with no retries. No further HP inflation; representative human pacing remains unverified.
+
+Audacity 3.7.9 pipe was verified read-only on an empty original project. Separate task project exported 21 Kenney/Fantozzi/Taira source cues. Classic Filters crashed and was replaced by normal bundled filters; task-project beat snapping was disabled after it collapsed a short fade selection. Sources remain intact, no user project overwritten. Selected WAVs, source/license manifest and edit recipes are integrated; raw packs and the large Audacity project remain outside the checkout. Quiet endpoints/zero clipped samples, all browser decodes, public sound previews and source cleanup pass. Actual monitored mix peak0.333184. Subjective listening is unperformed.
+
+Independent rendered review closed CONT-R09–R14 after both-facing spacing/facing/ground-glint/aura retests. Static production smoke passed both chapters, controller simulation, focus/modal/resize, debug save isolation and pilot exclusion. Full evidence and coverage limits: [continuous QA](QA_CONTINUOUS_2026-09-11.md). GitHub/Vercel publication is next; current public version remains live until replacement succeeds. Earlier project skills/docs are included in this release scope.
+
+
+
+## Earlier 2026-09-11 revision — superseded tuning, retained art evidence
+
+User requests recognizable Lee techniques, more spectacular parryable sand barrages, shorter/easier fights, better scale/cutscenes, a fiery Gates aura, and a new audio workflow. Confirmed duration: **2–3 minutes combat across three phases**. Audio editing waits for requested Audacity installation confirmation; independent work continues. Ground hazards versus projectile-only parry scope is awaiting the optional answer.
+
+Initial source reproductions confirmed Hurricane misses at 50/80/88px from overshoot, ultimate could do zero damage during frozen 95ms immunity, and five simultaneous pellets could consume all stamina despite an initial perfect parry. These are now fixed locally with regressions. HP is 1700/2150/2650, with unchanged shield damage multiplier. Chapter 1 and live build remain unchanged.
+
+Canon worker inspected 12 official episode stills plus chapter 81/86 images and the official taijutsu article. E is now the descriptive Lotus Launcher. Primary Lotus visibly wraps/inverts; Reverse Lotus has a bandage pull/downward strike; Guy's palm interception precedes dispersed sand. Full video playback/timestamps were unavailable. See [revision QA](QA_REVISION_2026-09-11.md) and [art prompts/references](REVISION_2026-09-11_ART.md).
+
+Local implementation milestone: six new atlases integrated, with stable sequence scales and preserved original pixels at Guy's wrists/Gaara's ankles. Independent raster review accepts all 108 frames. Rendered critique and revisions addressed Lotus choreography, persistent Gates aura, weight removal, speed reveal, Guy's interception and body spacing. Final Gaara foot-root correction removes a measured 20.6px cast-to-idle crop shift; targeted cast/idle and ending retest passed in both directions.
+
+Combat validation: full ordinary-input run completed in 125.23 seconds of combat with no retries, 55 HP, six parries and nine ultimates. No page errors or final hazards/effects. Fairness now plans around remaining movement lock and a 40ms discrete-collision allowance; focused resolver tests cover 8/16/40ms. 251 tests / 26 files, typecheck and lint pass. Final production build and static smoke pass after the last anchor change: both chapters, controller simulation, focus/resize/modal, debug saves and pilot exclusion. Zero page errors or missing assets. Existing Phaser bundle-size warning remains nonblocking.
+
+Resume gate: audio replacement awaits the user's requested Audacity 3.7.9 installation, mod-script-pipe enablement and restart confirmation. No audio edits or subjective listening sign-off. After confirmation, verify editor access, create/refine reusable Chapter 2 cues, audition the rendered mix, rerun relevant checks, then publish GitHub/Vercel. Do not regenerate accepted art or change Chapter 1 audio. Local ports 3000/3002 must be reverified after restart. No revision commit/push/deployment yet; retain earlier uncommitted project skills/docs.
+
+## Original production history
+
 2026-09-08 — Gate 1 complete. Baseline b1b0d43. User approved 5–8 minutes / three phases, canonical brief ending, Vercel publication after QA.
 
 Research agent ch2_canon delivered cited beats; official sources in CHAPTER_SPEC. Exact entrance/spectator placements unverified and labeled adaptation. Architecture agent ch2_architecture recommends isolated scene/runtime/page, generic shared Combatant and injected BattleInput bridge. Both read-only.
