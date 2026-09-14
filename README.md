@@ -18,7 +18,9 @@ A short animated introduction gathers the observing shinobi around the arena. Co
 
 ![The Chunin Exam preliminary arena](public/art-chunin/arena.webp)
 
-Lee uses **stamina, not chakra**. K is a quick palm strike, L is a physical backstep, and Q/E are taijutsu techniques. All travelling sand projectiles can be perfect-parried, including ricochets. Watch Gaara's pale hand glint, time the bright projectile core, and dodge the outlined ground spells. Both chapters support double jump and airborne parry.
+Lee now uses **Smash-inspired movement and directional attacks with health bars and parries**. Tilt or aerial attacks can launch Gaara during openings; chase with double jumps, air drift and fast-fall, or charge a directional smash. Major sand spells retain armor, and Gaara can escape repeated juggling. Ordinary attacks cost no stamina; defense and taijutsu techniques still do.
+
+K charges a smash, L is a physical backstep, and Q/E are Hurricane and Lotus Launcher. All travelling sand projectiles can be perfect-parried, including ricochets. Watch Gaara's pale hand glint, time the bright projectile core, and dodge the outlined ground spells. Both chapters support double jump and airborne parry.
 
 [Chapter 2 production guide](docs/chapters/chunin-exams/CHAPTER_SPEC.md)
 
@@ -51,6 +53,10 @@ The combat mixes stamina management, perfect parries, blocking, ground and air d
 Perfect-parried mirror needles return to the real Haku. Deflect two separate volleys to force him from the mirrors, or create an opening through guard breaks and character techniques. Boss barrages keep a viable ground route while rewarding precise dashes and parries.
 
 ## Controls
+
+**Chapter 2 — Lee vs. Gaara:** direction + **J / X** selects ground kicks and aerial attacks; hold **K / Y** for a charged directional smash on the ground. Use **W/S or up/down** for vertical attacks, tap jump for a short hop, and press down while falling to fast-fall. **Shift / B** plus a direction performs an air dodge. F/LB parry, Q/E techniques, L backstep, and R ultimate remain available.
+
+**Chapter 1 — Land of Waves:**
 
 | Action | Keyboard | Controller |
 | --- | --- | --- |

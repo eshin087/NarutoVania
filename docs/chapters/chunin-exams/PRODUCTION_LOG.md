@@ -1,5 +1,13 @@
 # Chapter 2 production log
 
+## Published HP platform-fighter release — 2026-09-13
+
+Game source `a3d19daf91dc1ffaae5d780978dbdd84a92e0f1b` is pushed to GitHub main and deployed to [narutovania.vercel.app](https://narutovania.vercel.app/). GitHub's Vercel status reports success for [deployment8Xfv8AxDL6KA9obpTh7eKAVVcRpT](https://vercel.com/eshin087s-projects/narutovania/8Xfv8AxDL6KA9obpTh7eKAVVcRpT). Prior production stayed live until success; legacy Sites was not changed.
+
+Fresh public browser smoke passed Chapter2 intro/ultimate/modal/controller/focus/resize/debug ending/save isolation, Chapter1's four fight initializations, and production pilot exclusion. No page errors or missing HTTP assets. Separate public check verified new directional/charged controls and exact SHA256 parity for Lee and Gaara atlases (`4f2eac48…e3da4`, `18f23782…b5610`). The documentation receipt and README update retain identical validated game source/assets; no new gameplay verification gate is implied by that docs commit.
+
+All required implementation/review/publication gates are complete. Await user feedback on the new combat feel. Physical-controller, subjective-audio and representative human pacing remain unverified; audio was not replaced in this revision.
+
 ## HP platform-fighter revision — 2026-09-13, validated candidate
 
 User asked for Smash-style combat and confirmed health bars. After Continue, implementation defaults were Chapter2 first and retained fresh F/LB parry/held block; no pending answer blocks work. [Spec](SMASH_COMBAT_SPEC.md), [new art record](PLATFORM_ART_2026-09-13.md), [QA](QA_PLATFORM_2026-09-13.md).
@@ -8,7 +16,7 @@ Implemented directional ground normals and five air directions, charged directio
 
 275 tests /32files, typecheck/lint and production build passed. Final static smoke passed both chapter entries, Ch2 intro/ultimate/modal/controller/focus/resize/debug-ending/save isolation and all four Ch1 fight initializations; no page errors/missing assets, no production pilot. Independent read-only critic found no blocking issues after rendered both-facing attacks, tumble/land, charged strike, major armor, airborne perfect-parry, pause and four transition timelines. [Independent receipt](QA_PLATFORM_INDEPENDENT_2026-09-13.json).
 
-Candidate1 ordinary-input full completion69.16s/4parries/9ultimates/0retries. Final frozen run completed77.17s/2parries/9ultimates/0retries and the canonical ending, no errors, final shots/effects0, observed~165fps. Efficient pilot pacing does not establish human difficulty; physical-controller and subjective-audio coverage remain unavailable. Existing audio is unchanged. GitHub/Vercel publication is next; existing production remains live until replacement succeeds.
+Candidate1 ordinary-input full completion69.16s/4parries/9ultimates/0retries. Final frozen run completed77.17s/2parries/9ultimates/0retries and the canonical ending, no errors, final shots/effects0, observed~165fps. Efficient pilot pacing does not establish human difficulty; physical-controller and subjective-audio coverage remain unavailable. Existing audio is unchanged. Publication completed as recorded above.
 
 ## Published continuous-duel release — 2026-09-11
 

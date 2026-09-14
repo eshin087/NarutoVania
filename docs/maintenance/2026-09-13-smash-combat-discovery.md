@@ -1,5 +1,7 @@
 # Smash-style combat redesign — discovery, 2026-09-13
 
+Historical discovery snapshot, superseded by the [implemented Chapter2 spec](../chapters/chunin-exams/SMASH_COMBAT_SPEC.md). User confirmed HP; Continue authorized proceeding with stated Chapter2/F-parry defaults. The questions below are not pending.
+
 User requests combat that feels like Smash Bros. while retaining parries. Starting checkout `7232a42`; Git was clean before these notes. No gameplay edits or deployment for this request.
 
 ## Pending choices

@@ -1,6 +1,6 @@
 # Current status and handoff
 
-Last source inspection: **2026-09-11**, published game source `2c10a5c`. This is a dated repository snapshot, not continuous monitoring. Recheck Git and live deployment status when a task depends on them.
+Last source inspection: **2026-09-13**, published game source `a3d19da`. This is a dated repository snapshot, not continuous monitoring. Recheck Git and live deployment status when a task depends on them.
 
 ## Shipped baseline
 
@@ -9,15 +9,17 @@ Last source inspection: **2026-09-11**, published game source `2c10a5c`. This is
 | 01 — Land of Waves | Four fights: mist, rescue, mirrors, seal; automatic in-engine story | [Spec](../chapters/land-of-waves/CHAPTER_SPEC.md), [V23 receipt](../../art/v23/validation.md) |
 | 02 — The Power of Youth | Lee vs. Gaara; shield, speed, gates; short canonical ending | [Spec](../chapters/chunin-exams/CHAPTER_SPEC.md), [production log](../chapters/chunin-exams/PRODUCTION_LOG.md), [QA](../chapters/chunin-exams/QA_REPORT.md) |
 
-Last recorded game release: `2c10a5c`, published 2026-09-11 to [Vercel](https://narutovania.vercel.app/), replacing `207d87a`/receipt `fc8687a`. Vercel Ready and GitHub status success; both chapter and audio public probes passed. 264 automated tests, final static build and independent rendered checks passed. [Release receipt](../chapters/chunin-exams/PRODUCTION_LOG.md), [GitHub repository](https://github.com/eshin087/NarutoVania).
+Last recorded game release: `a3d19da`, published 2026-09-13 to [Vercel](https://narutovania.vercel.app/), replacing `7232a42`/game source `2c10a5c`. GitHub's Vercel status reports success; live new controls and both generated asset hashes match the candidate. 275 automated tests, final static build, full ordinary-input duel and independent rendered review passed. [Release receipt](../chapters/chunin-exams/PRODUCTION_LOG.md), [GitHub repository](https://github.com/eshin087/NarutoVania).
 
 Legacy [ChatGPT Site](https://narutovania-land-of-waves.gcdone.chatgpt.site/) was not updated in the Chapter 2 release. Its current parity has not been checked for this documentation task.
 
 ## Completed revision / handoff
 
-### New active request — 2026-09-13
+### Completed HP platform-fighter revision — 2026-09-13
 
-User requests a Smash Bros.-style combat overhaul with parries and confirmed **keep HP bars**. After Continue, coordinator stated defaults: Chapter 2 first and existing F/LB fresh-press parry/held block. No answer is required to proceed. Starting checkout `7232a42`. [Discovery](../maintenance/2026-09-13-smash-combat-discovery.md), [active combat spec](../chapters/chunin-exams/SMASH_COMBAT_SPEC.md), [candidate QA](../chapters/chunin-exams/QA_PLATFORM_2026-09-13.md). Directional attacks, charged smashes, air movement/dodges and launch/landing physics are integrated with42 generated animation frames. 275 tests, typecheck/lint/build, independent rendered critique and static chapter smoke passed. Final full run and GitHub/Vercel publication receipt pending. Chapter1 gameplay and audio preserved. The completed revision below is the previous live baseline; old combat decisions do not override this new request.
+User requested a Smash Bros.-style combat overhaul with parries and confirmed **keep HP bars**. Chapter2-first and F/LB fresh-press parry/held block were stated defaults after Continue. [Combat spec](../chapters/chunin-exams/SMASH_COMBAT_SPEC.md), [QA](../chapters/chunin-exams/QA_PLATFORM_2026-09-13.md). Directional attacks, charged smashes, air movement/dodges and launch/landing physics are integrated with42 generated animation frames. Final ordinary-input completion77.17s,2parries,9ultimates,0retries; representative human pacing remains unverified. Chapter1 gameplay and existing audio preserved. No answer or implementation/release gate is pending. Fresh public cross-chapter smoke and new-asset hash checks passed. Await user review of the new combat feel.
+
+### Previous continuous-duel baseline — 2026-09-11 (historical)
 
 - Completed request: one continuous Lee/Gaara health bar, power-ups at health thresholds, fairer bouncing sand barrages, readable floor/parry tells, double jump, smoother scene spacing and replacement Chapter 2 audio.
 - User confirmed Retry resumes at the latest power-up checkpoint. Gaara has 6000 total HP; weight removal at 70% and Gates at 35%. Damage beyond thresholds is retained and saved at checkpoint entry. No boss refill on power-up. Lee retains injuries with a small recovery; the established ready-Lotus power-up reward remains.
