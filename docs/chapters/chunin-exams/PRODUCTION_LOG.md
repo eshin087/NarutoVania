@@ -1,5 +1,15 @@
 # Chapter 2 production log
 
+## HP platform-fighter revision — 2026-09-13, validated candidate
+
+User asked for Smash-style combat and confirmed health bars. After Continue, implementation defaults were Chapter2 first and retained fresh F/LB parry/held block; no pending answer blocks work. [Spec](SMASH_COMBAT_SPEC.md), [new art record](PLATFORM_ART_2026-09-13.md), [QA](QA_PLATFORM_2026-09-13.md).
+
+Implemented directional ground normals and five air directions, charged directional K/Y smashes, no stamina cost for normals, acceleration/air drift/short hop/double jump/fast-fall, directional air dodge, directional hitboxes and launch impulses, bounded Gaara combo escape and distinct launch/landing poses. Major sand casting retains armor. HP, thresholds, incoming damage, parry windows, ultimate economy and Chapter1 gameplay remain. Accepted24-frame Lee kick and18-frame Gaara reaction sheets were generated, cleaned with prior authorization, inspected and stored with prompts/anchors.
+
+275 tests /32files, typecheck/lint and production build passed. Final static smoke passed both chapter entries, Ch2 intro/ultimate/modal/controller/focus/resize/debug-ending/save isolation and all four Ch1 fight initializations; no page errors/missing assets, no production pilot. Independent read-only critic found no blocking issues after rendered both-facing attacks, tumble/land, charged strike, major armor, airborne perfect-parry, pause and four transition timelines. [Independent receipt](QA_PLATFORM_INDEPENDENT_2026-09-13.json).
+
+Candidate1 ordinary-input full completion69.16s/4parries/9ultimates/0retries. Final frozen run completed77.17s/2parries/9ultimates/0retries and the canonical ending, no errors, final shots/effects0, observed~165fps. Efficient pilot pacing does not establish human difficulty; physical-controller and subjective-audio coverage remain unavailable. Existing audio is unchanged. GitHub/Vercel publication is next; existing production remains live until replacement succeeds.
+
 ## Published continuous-duel release — 2026-09-11
 
 Validated game source `2c10a5c692cad57bba73a2612934fa6be3d98acc` (`Rebuild Lee vs Gaara as a continuous parry duel`) is pushed to GitHub main. This also publishes the seven project skills, handbook, updated AGENTS.md and README chapter prompt. Local/remote source hashes matched before release.

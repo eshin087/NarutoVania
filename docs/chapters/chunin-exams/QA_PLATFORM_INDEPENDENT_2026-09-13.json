@@ -1,0 +1,146 @@
+{
+  "errors": [],
+  "results": [
+    {
+      "name": "high-upair",
+      "time": 1362.79333333333,
+      "action": "rising-wind",
+      "leeY": 369.44200000000023,
+      "velocity": 190,
+      "leeFrame": "ch-lee-actions:10",
+      "gaaraFrame": "ch-gaara-actions:5",
+      "parries": 0,
+      "hurt": 0,
+      "landing": 0,
+      "bounds": {
+        "type": 5,
+        "x": 492.48,
+        "y": 194.72200000000024,
+        "width": 215.03999999999996,
+        "height": 197.11999999999998
+      },
+      "bossY": 586
+    },
+    {
+      "name": "downair",
+      "time": 2260.253333333327,
+      "action": "pf-air-down",
+      "leeY": 537.6666666666665,
+      "velocity": 1430,
+      "leeFrame": "ch-lee-directional:20",
+      "gaaraFrame": "ch-gaara-actions:5",
+      "parries": 0,
+      "hurt": 0,
+      "landing": 0,
+      "bounds": {
+        "type": 5,
+        "x": 481,
+        "y": 297.4266666666665,
+        "width": 215.03999999999996,
+        "height": 250.88
+      },
+      "bossY": 586
+    },
+    {
+      "name": "landing",
+      "time": 2304.403333333327,
+      "leeY": 586,
+      "velocity": 0,
+      "leeFrame": "ch-lee:22",
+      "gaaraFrame": "ch-gaara-actions:5",
+      "parries": 0,
+      "hurt": 0,
+      "landing": 2382.643333333327,
+      "bounds": {
+        "type": 5,
+        "x": 504.96,
+        "y": 423.64,
+        "width": 190.07999999999998,
+        "height": 190.08000000000004
+      },
+      "bossY": 586
+    },
+    {
+      "name": "charge",
+      "time": 3121.19333333333,
+      "leeY": 586,
+      "velocity": 0,
+      "leeFrame": "ch-lee-combo:17",
+      "gaaraFrame": "ch-gaara-actions:5",
+      "parries": 0,
+      "hurt": 0,
+      "landing": 0,
+      "bounds": {
+        "type": 5,
+        "x": 503.535,
+        "y": 413.13,
+        "width": 192.93,
+        "height": 192.92999999999995
+      },
+      "bossY": 586
+    },
+    {
+      "name": "charged-contact",
+      "time": 3321.2933333333285,
+      "action": "pf-smash-up",
+      "leeY": 586,
+      "velocity": 0,
+      "leeFrame": "ch-lee-directional:2",
+      "gaaraFrame": "ch-gaara-actions:5",
+      "parries": 0,
+      "hurt": 0,
+      "landing": 0,
+      "bounds": {
+        "type": 5,
+        "x": 498.64,
+        "y": 401.76,
+        "width": 215.04000000000008,
+        "height": 250.88
+      },
+      "bossY": 586
+    },
+    {
+      "name": "major-armor",
+      "time": 4237.053333333326,
+      "action": "pf-tilt-up",
+      "leeY": 586,
+      "velocity": 0,
+      "leeFrame": "ch-lee-directional:2",
+      "gaaraFrame": "ch-gaara-actions:12",
+      "parries": 0,
+      "hurt": 0,
+      "landing": 0,
+      "bounds": {
+        "type": 5,
+        "x": 498.64,
+        "y": 401.76,
+        "width": 215.04000000000008,
+        "height": 250.88
+      },
+      "bossY": 586
+    },
+    {
+      "name": "air-parry",
+      "time": 4819.343333333328,
+      "leeY": 387.5,
+      "velocity": 270,
+      "leeFrame": "ch-lee:19",
+      "gaaraFrame": "ch-gaara-actions:5",
+      "parries": 1,
+      "hurt": 0,
+      "landing": 0,
+      "bounds": {
+        "type": 5,
+        "x": 512.0562,
+        "y": 219.32,
+        "width": 190.08000000000004,
+        "height": 190.07999999999998
+      },
+      "bossY": 586
+    },
+    {
+      "name": "pause",
+      "frozen": true
+    }
+  ]
+}

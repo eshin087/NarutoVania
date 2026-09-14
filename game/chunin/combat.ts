@@ -1,12 +1,13 @@
 import {
   Combatant,
   clamp,
+  overlaps,
   type AttackDefinition,
-  type AttackEvent,
   type DefenseOutcome,
 } from '../combat-core';
 import { planSandVolley } from './sand-fairness';
 import { traceSandFlight } from './sand-flight';
+import { attackBox, LaunchState, type LaunchEvent } from './platform-combat';
 export type Phase = 'shield' | 'speed' | 'gates';
 export const PHASES: Phase[] = ['shield', 'speed', 'gates'];
 export const GAARA_HEALTH = 6000;
@@ -232,6 +233,11 @@ export class Duel {
   punishUntil = 0;
   parriedVolleys = new Map<number, number>();
   returnedVolleys = new Set<number>();
+  bossLaunch = new LaunchState();
+  playerLaunch = new LaunchState();
+  airHits = 0;
+  chainAt = -10000;
+  escapeUntil = 0;
   constructor(phase: Phase = 'shield') {
     this.reset(phase);
   }
@@ -254,6 +260,10 @@ export class Duel {
     this.shots = [];
     this.zones = [];
     this.vx = this.vy = 0;
+    this.bossLaunch.reset();
+    this.playerLaunch.reset();
+    this.airHits = 0;
+    this.escapeUntil = 0;
     this.cues = [];
     this.punishUntil = 0;
     this.parriedVolleys.clear();
@@ -272,6 +282,9 @@ export class Duel {
     this.phase = phase;
     this.phaseTime = 0;
     this.cancelAttack();
+    this.bossLaunch.reset();
+    this.playerLaunch.reset();
+    this.airHits = 0;
     this.lastMajor = this.now;
     this.ordinary = 0;
     for (const fighter of [this.lee, this.gaara]) {
@@ -313,6 +326,7 @@ export class Duel {
   }
   get exposed() {
     return (
+      !this.gaara.grounded ||
       this.now < this.gaara.guardBrokenUntil ||
       this.now < this.punishUntil ||
       (!!this.move && this.now - this.move.start >= this.move.recovery)
@@ -327,6 +341,11 @@ export class Duel {
   }
   hitGaara(damage: number, posture: number, ultimate = false) {
     const wasBroken = this.now < this.gaara.guardBrokenUntil;
+    const previousHurt = this.gaara.hurtUntil;
+    const majorArmor =
+      this.move &&
+      ['storm', 'walls', 'coffin'].includes(this.move.id) &&
+      !this.exposed;
     const armor = this.exposed ? 1 : 0.3;
     // Cinematic contact owns one hit; combat-time immunity must not freeze through it.
     if (ultimate)
@@ -340,6 +359,8 @@ export class Duel {
       },
       this.now,
     );
+    if (majorArmor && !ultimate && this.now >= this.gaara.guardBrokenUntil)
+      this.gaara.hurtUntil = previousHurt;
     if (outcome.damage) {
       this.gaara.exhaust(posture, this.now);
       if (!ultimate)
@@ -381,6 +402,12 @@ export class Duel {
     } else if (out.result === 'block')
       this.cue('block', this.lee.x, this.lee.y - 70, 'lee');
     else if (out.damage) {
+      this.playerLaunch.launch(
+        (this.lee.x >= fromX ? 1 : -1) * (red ? 330 : 210),
+        red ? -380 : -235,
+        this.now,
+        320,
+      );
       this.bossHits++;
       this.cue(
         out.result === 'guardbreak' ? 'break' : 'hit',
@@ -551,6 +578,8 @@ export class Duel {
   }
   updateBoss(dt: number) {
     if (
+      !this.gaara.grounded ||
+      this.now < this.bossLaunch.landedAt + 220 ||
       this.gaara.health <= 0 ||
       this.now < this.gaara.guardBrokenUntil ||
       this.now < this.gaara.hurtUntil
@@ -691,7 +720,7 @@ export class Duel {
               s.x2,
               s.y2,
               this.gaara.x - 28,
-              FLOOR - 130,
+              this.gaara.y - 130,
               56,
               130,
             ),
@@ -740,7 +769,7 @@ export class Duel {
             p.bounces = 0;
             p.bounceWait = 0;
             p.expiresAt = this.now + 4000;
-            const a = Math.atan2(FLOOR - 75 - p.y, this.gaara.x - p.x);
+            const a = Math.atan2(this.gaara.y - 75 - p.y, this.gaara.x - p.x);
             p.vx = Math.cos(a) * 850;
             p.vy = Math.sin(a) * 850;
             remaining.push(p);
@@ -793,25 +822,65 @@ export class Duel {
       if (!liveVolleys.has(volley)) this.returnedVolleys.delete(volley);
     const hits = this.lee.update(this.now, dt);
     this.gaara.update(this.now, dt);
+    this.bossLaunch.step(this.gaara, this.now, dt, FLOOR, LEFT, RIGHT);
+    if (this.gaara.grounded && this.now > this.chainAt + 1000) this.airHits = 0;
     for (const { event, charge } of hits) this.playerEvent(event, charge);
     this.updateBoss(dt);
     this.updateProjectiles(dt);
   }
-  playerEvent(e: AttackEvent, charge: number) {
+  playerEvent(e: LaunchEvent, charge: number) {
     if (e.kind === 'effect') {
       this.cue('step', this.lee.x, this.lee.y - 55);
       return;
     }
     if (
       e.kind === 'hit' &&
-      Math.abs(this.gaara.x - this.lee.x) < (e.range || 100) &&
-      Math.abs(this.gaara.y - this.lee.y) < (e.height || 100) &&
-      (this.gaara.x - this.lee.x) * this.lee.facing >= -25
-    )
-      this.hitGaara(
+      overlaps(
+        attackBox(
+          this.lee.x,
+          this.lee.y,
+          this.lee.action?.facing ?? this.lee.facing,
+          e,
+        ),
+        { x: this.gaara.x - 28, y: this.gaara.y - 130, width: 56, height: 130 },
+      )
+    ) {
+      const launching =
+        e.launchY !== undefined ||
+        this.lee.action?.definition.id === 'rising-wind';
+      const armored =
+        this.move &&
+        ['storm', 'walls', 'coffin'].includes(this.move.id) &&
+        !this.exposed;
+      const damage = this.hitGaara(
         (e.damage || 0) * charge * (this.phase === 'gates' ? 1.3 : 1),
         e.posture || 8,
       );
+      if (damage && launching && !armored && this.now >= this.escapeUntil) {
+        this.airHits++;
+        this.chainAt = this.now;
+        const escape = this.airHits >= 4;
+        const direction =
+          e.hitDirection === 'back'
+            ? -(this.lee.action?.facing ?? this.lee.facing)
+            : Math.sign(this.gaara.x - this.lee.x) || this.lee.facing;
+        this.move = null; // Interrupt future casts without erasing visible projectiles.
+        this.nextMove = this.now + 500;
+        this.bossLaunch.launch(
+          escape ? direction * 480 : direction * (e.launchX ?? 100) * charge,
+          escape ? 380 : (e.launchY ?? -710) * Math.min(1.2, charge),
+          this.now,
+          280,
+        );
+        if (this.bossLaunch.vy < 0) this.gaara.grounded = false;
+        this.gaara.hurtUntil = this.now + 280;
+        this.punishUntil = this.now + 550;
+        if (escape) {
+          this.escapeUntil = this.now + 1300;
+          this.cue('armor', this.gaara.x, this.gaara.y - 75, 'gaara');
+        }
+      }
+    }
   }
   ultimateImpact() {
     this.ultimates++;

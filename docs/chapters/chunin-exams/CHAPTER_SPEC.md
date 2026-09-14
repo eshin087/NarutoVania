@@ -1,5 +1,7 @@
 # Chapter 2 — The Power of Youth
 
+Current combat adaptation (2026-09-13): [HP platform-fighter spec](SMASH_COMBAT_SPEC.md) supersedes the earlier Chapter2 normal/heavy control mapping and movement rules. Story, continuous HP thresholds, parry windows, checkpoints and ultimate economy below remain active.
+
 ## Approved scope
 Rock Lee versus Gaara, ninth Chunin Exam preliminary. One continuous fight in three checkpointed phases; revised successful combat target **2–3 minutes**, confirmed 2026-09-11. Short automatic in-engine opening showing the indoor arena and observers. Brief canonical ending: completing the gameplay does not change Lee's loss. Publish to the existing Vercel game after QA. Preserve Chapter 1.
 

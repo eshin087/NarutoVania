@@ -15,6 +15,10 @@ Legacy [ChatGPT Site](https://narutovania-land-of-waves.gcdone.chatgpt.site/) wa
 
 ## Completed revision / handoff
 
+### New active request — 2026-09-13
+
+User requests a Smash Bros.-style combat overhaul with parries and confirmed **keep HP bars**. After Continue, coordinator stated defaults: Chapter 2 first and existing F/LB fresh-press parry/held block. No answer is required to proceed. Starting checkout `7232a42`. [Discovery](../maintenance/2026-09-13-smash-combat-discovery.md), [active combat spec](../chapters/chunin-exams/SMASH_COMBAT_SPEC.md), [candidate QA](../chapters/chunin-exams/QA_PLATFORM_2026-09-13.md). Directional attacks, charged smashes, air movement/dodges and launch/landing physics are integrated with42 generated animation frames. 275 tests, typecheck/lint/build, independent rendered critique and static chapter smoke passed. Final full run and GitHub/Vercel publication receipt pending. Chapter1 gameplay and audio preserved. The completed revision below is the previous live baseline; old combat decisions do not override this new request.
+
 - Completed request: one continuous Lee/Gaara health bar, power-ups at health thresholds, fairer bouncing sand barrages, readable floor/parry tells, double jump, smoother scene spacing and replacement Chapter 2 audio.
 - User confirmed Retry resumes at the latest power-up checkpoint. Gaara has 6000 total HP; weight removal at 70% and Gates at 35%. Damage beyond thresholds is retained and saved at checkpoint entry. No boss refill on power-up. Lee retains injuries with a small recovery; the established ready-Lotus power-up reward remains.
 - Double jump is implemented in both active chapter runtimes using one shared controller, preserving coyote time, fresh inputs and an independent air-dash allowance. Both chapters was the recommended default; the optional scope question has not received an answer. Air parry already existed and now has explicit regression coverage.

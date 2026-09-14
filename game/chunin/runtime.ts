@@ -19,6 +19,14 @@ import { pose, framePose, contactFrame, preloadArt, registerArt } from './art';
 import { lotusStaging } from './lotus-choreography';
 import { JumpState } from '../jump-state';
 import { sceneSpacing } from './scene-spacing';
+import {
+  chargedSmash,
+  directionalAim,
+  selectNormal,
+  steerVelocity,
+  type AttackAim,
+  type PlatformAttack,
+} from './platform-combat';
 interface FX {
   image: Phaser.GameObjects.Sprite;
   born: number;
@@ -72,6 +80,24 @@ export class ChuninScene extends Phaser.Scene {
   lotusPair!: Phaser.GameObjects.Sprite;
   zoneFX = new Set<string>();
   failed = false;
+  bufferedAttack: { aim: AttackAim; at: number; running: boolean } | null =
+    null;
+  smashAim: AttackAim = 'forward';
+  airDodge = { x: 0, y: 0 };
+  landingUntil = 0;
+  wasGrounded = true;
+  launchSeen = 0;
+  combo = 0;
+  comboUntil = 0;
+  resetMotion() {
+    this.bufferedAttack = null;
+    this.landingUntil = 0;
+    this.wasGrounded = true;
+    this.combo = 0;
+    this.comboUntil = 0;
+    this.launchSeen = this.duel.playerLaunch.serial;
+    this.duel.lee.chargeStarted = null;
+  }
   constructor() {
     super('Chunin');
   }
@@ -182,7 +208,10 @@ export class ChuninScene extends Phaser.Scene {
   }
   command(c: Command) {
     if (typeof c === 'object') {
-      if(c.type==='audition'){void this.sounds.audition(c.cue);return;}
+      if (c.type === 'audition') {
+        void this.sounds.audition(c.cue);
+        return;
+      }
       this.debugScene = c.scene as Story | undefined;
       bridge.patch({ debugEntry: c.scene || c.phase });
       this.begin(c.phase, this.debugScene);
@@ -228,6 +257,7 @@ export class ChuninScene extends Phaser.Scene {
     this.jumps.reset();
     this.phase = phase;
     this.duel.reset(phase);
+    this.resetMotion();
     if (savedHP !== undefined && Number.isFinite(savedHP) && savedHP > 0)
       this.duel.gaara.health = Math.min(savedHP, PHASE_INFO[phase].health);
     this.checkpointHP = this.duel.gaara.health;
@@ -392,11 +422,39 @@ export class ChuninScene extends Phaser.Scene {
     l.grounded = this.bodyPhysics.blocked.down || this.body.y >= FLOOR - 0.5;
     const dir =
       (this.inputs.held('right') ? 1 : 0) - (this.inputs.held('left') ? 1 : 0);
-    if (dir && l.canAct(d.now, true)) l.facing = dir as -1 | 1;
-    l.setGuard(this.inputs.held('parry'), this.inputs.pressed('parry'), d.now);
+    const vertical =
+      (this.inputs.held('down') ? 1 : 0) - (this.inputs.held('up') ? 1 : 0);
+    if (!this.wasGrounded && l.grounded) {
+      const active = l.action?.definition as PlatformAttack | undefined;
+      if (active?.action === 'aerial') {
+        this.landingUntil = d.now + (active.landingLag || 100);
+        l.action = null;
+      }
+    }
+    this.wasGrounded = l.grounded;
+    if (
+      dir &&
+      l.grounded &&
+      !l.action &&
+      l.chargeStarted === null &&
+      l.canAct(d.now)
+    )
+      l.facing = dir as -1 | 1;
+    const aim = directionalAim(dir, vertical, l.facing);
+    const landedReady = d.now >= this.landingUntil;
+    if (dir && this.inputs.held('parry') && l.canAct(d.now, true))
+      l.facing = dir as -1 | 1;
+    l.setGuard(
+      landedReady && this.inputs.held('parry'),
+      this.inputs.pressed('parry'),
+      d.now,
+    );
     this.jumps.observe(d.now, l.grounded, this.bodyPhysics.velocity.y);
     if (this.inputs.pressed('jump')) this.jumps.press(d.now);
-    const jump = this.jumps.consume(d.now, l.canAct(d.now) && !l.guard);
+    const jump = this.jumps.consume(
+      d.now,
+      landedReady && l.canAct(d.now) && !l.guard && l.chargeStarted === null,
+    );
     if (jump) {
       this.bodyPhysics.setVelocityY(-COMBAT.jump * (jump === 'air' ? 0.76 : 1));
       l.grounded = false;
@@ -404,8 +462,8 @@ export class ChuninScene extends Phaser.Scene {
     }
     if (this.inputs.released('jump') && this.bodyPhysics.velocity.y < -280)
       this.bodyPhysics.setVelocityY(this.bodyPhysics.velocity.y * 0.55);
-    if (this.inputs.pressed('dash'))
-      l.start(
+    if (this.inputs.pressed('dash') && landedReady) {
+      const dodged = l.start(
         UNIVERSAL[
           l.grounded
             ? this.inputs.held('down') && dir
@@ -415,18 +473,77 @@ export class ChuninScene extends Phaser.Scene {
         ],
         d.now,
       );
-    for (const key of ['skill1', 'skill2', 'tool', 'substitute'] as const)
-      if (this.inputs.pressed(key)) l.start(LEE_SKILLS[key], d.now);
-    if (this.inputs.pressed('melee')) {
-      if (this.inputs.held('down') && l.grounded) l.beginCharge(d.now);
-      else l.bufferMelee(d.now);
+      if (dodged && !l.grounded) {
+        const length = Math.hypot(dir, vertical) || 1;
+        this.airDodge = {
+          x: (dir / length) * 620,
+          y: (vertical / length) * 620,
+        };
+      }
     }
-    if (this.inputs.released('melee')) l.releaseCharge(d.now);
-    l.consumeMelee(d.now);
+    for (const key of ['skill1', 'skill2', 'substitute'] as const)
+      if (
+        this.inputs.pressed(key) &&
+        landedReady &&
+        l.start(LEE_SKILLS[key], d.now)
+      ) {
+        if (key === 'skill2') {
+          this.bodyPhysics.setVelocityY(-620);
+          l.grounded = false;
+        }
+      }
+    if (this.inputs.pressed('melee')) {
+      this.bufferedAttack = {
+        aim,
+        at: d.now,
+        running:
+          Math.abs(this.bodyPhysics.velocity.x) >
+          PHASE_INFO[this.phase].speed * 0.72,
+      };
+    }
+    if (
+      this.inputs.pressed('tool') &&
+      landedReady &&
+      l.grounded &&
+      l.canAct(d.now) &&
+      !l.guard
+    ) {
+      this.smashAim = aim;
+      l.chargeStarted = d.now;
+    }
+    if (
+      l.chargeStarted !== null &&
+      (this.inputs.released('tool') || d.now - l.chargeStarted >= 1000)
+    ) {
+      const charge = 1 + clamp((d.now - l.chargeStarted) / 1000, 0, 1) * 0.8;
+      l.chargeStarted = null;
+      l.start(chargedSmash(this.smashAim), d.now, charge);
+    }
+    if (this.bufferedAttack && d.now - this.bufferedAttack.at > 150)
+      this.bufferedAttack = null;
+    if (
+      this.bufferedAttack &&
+      landedReady &&
+      l.canAct(d.now) &&
+      !l.guard &&
+      l.chargeStarted === null
+    ) {
+      const b = this.bufferedAttack;
+      if (d.now > this.comboUntil) this.combo = 0;
+      if (
+        l.start(selectNormal(b.aim, l.grounded, this.combo, b.running), d.now)
+      ) {
+        this.combo =
+          b.aim === 'neutral' && l.grounded ? (this.combo + 1) % 3 : 0;
+        this.comboUntil = d.now + 650;
+        this.bufferedAttack = null;
+      }
+    }
     if (
       this.inputs.pressed('ultimate') &&
       l.ultimate >= 100 &&
-      l.canAct(d.now)
+      l.canAct(d.now) &&
+      landedReady
     ) {
       this.beginUltimate();
       return;
@@ -434,6 +551,20 @@ export class ChuninScene extends Phaser.Scene {
     let vx = l.action
       ? (l.action.definition.move || 0) * l.action.facing
       : dir * (l.guard ? COMBAT.guardSpeed : PHASE_INFO[this.phase].speed);
+    if (!l.grounded && l.action?.definition.action !== 'airdash')
+      vx = steerVelocity(
+        this.bodyPhysics.velocity.x,
+        dir * PHASE_INFO[this.phase].speed * 0.85,
+        1800,
+        dt,
+      );
+    else if (!l.action)
+      vx = steerVelocity(
+        this.bodyPhysics.velocity.x,
+        vx,
+        dir ? 5800 : 7000,
+        dt,
+      );
     if (l.action?.definition.id === 'hurricane')
       vx = hurricaneVelocity(
         l.x,
@@ -442,16 +573,38 @@ export class ChuninScene extends Phaser.Scene {
         d.now - l.action.started,
         dt,
       );
-    if (d.now < l.hurtUntil || d.now < l.guardBrokenUntil) vx = 0;
+    if (d.now < l.hurtUntil || d.now < l.guardBrokenUntil)
+      vx = steerVelocity(this.bodyPhysics.velocity.x, dir * 75, 500, dt);
     if (l.chargeStarted !== null) vx = 0;
+    if (d.now < this.landingUntil) vx = 0;
     this.bodyPhysics.setVelocityX(vx);
     if (l.action?.definition.action === 'airdash')
-      this.bodyPhysics.setVelocityY(0);
+      this.bodyPhysics.setVelocity(this.airDodge.x, this.airDodge.y);
+    else if (
+      !l.grounded &&
+      vertical > 0 &&
+      this.bodyPhysics.velocity.y > 0 &&
+      d.now >= l.hurtUntil
+    )
+      this.bodyPhysics.setVelocityY(
+        Math.max(1100, this.bodyPhysics.velocity.y),
+      );
     this.body.x = clamp(this.body.x, LEFT, RIGHT);
+    if (this.body.y < 270) {
+      this.body.y = 270;
+      this.bodyPhysics.setVelocityY(Math.max(0, this.bodyPhysics.velocity.y));
+    }
     d.update(dt);
+    if (this.launchSeen !== d.playerLaunch.serial) {
+      this.launchSeen = d.playerLaunch.serial;
+      this.bodyPhysics.setVelocity(d.playerLaunch.vx, d.playerLaunch.vy);
+      l.grounded = false;
+      this.bufferedAttack = null;
+    }
     this.lee.setPosition(this.body.x, this.body.y);
     this.gaara.setPosition(d.gaara.x, d.gaara.y);
     let anim = l.animation(d.now);
+    if (d.now < this.landingUntil && d.now >= l.hurtUntil) anim = 'land';
     if (anim === 'idle' && Math.abs(vx) > 5) anim = 'run';
     pose(
       this.lee,
@@ -463,7 +616,7 @@ export class ChuninScene extends Phaser.Scene {
       l.action?.definition.duration || 400,
     );
     if (l.action && d.now >= l.hurtUntil && d.now >= l.guardBrokenUntil) {
-      const a = l.action.definition,
+      const a = l.action.definition as PlatformAttack,
         age = d.now - l.action.started;
       const hitAt =
         a.events.find((e) => e.kind === 'hit')?.at ?? a.duration / 2;
@@ -486,6 +639,40 @@ export class ChuninScene extends Phaser.Scene {
           row * 6 + contactFrame(age, a.duration, hitAt),
           l.facing,
         );
+      if (a.art) {
+        const newRow =
+          a.art === 'up' || a.art === 'up-air'
+            ? 0
+            : a.art === 'down'
+              ? 1
+              : a.art === 'back-air'
+                ? 2
+                : a.art === 'down-air'
+                  ? 3
+                  : -1;
+        if (newRow >= 0) {
+          const frame =
+            age < hitAt
+              ? Math.min(1, Math.floor((age / hitAt) * 2))
+              : Math.min(
+                  5,
+                  2 + Math.floor(((age - hitAt) / (a.duration - hitAt)) * 4),
+                );
+          framePose(
+            this.lee,
+            'lee-directional',
+            newRow * 6 + frame,
+            l.action.facing,
+          );
+        } else if (a.art !== 'jab')
+          framePose(
+            this.lee,
+            'lee-actions',
+            (a.art.includes('air') ? 2 : 0) * 6 +
+              contactFrame(age, a.duration, hitAt),
+            l.action.facing,
+          );
+      }
     }
     const g = d.gaara;
     const ga: AnimationName =
@@ -524,10 +711,41 @@ export class ChuninScene extends Phaser.Scene {
     if (d.now - g.damagedAt < 100)
       this.gaara.setTint(d.exposed ? 0xffdbb3 : 0xd5b878);
     else this.gaara.clearTint();
+    if (!g.grounded)
+      framePose(
+        this.gaara,
+        'gaara-airborne',
+        d.bossLaunch.vy < -80 ? 1 : d.bossLaunch.vy < 100 ? 2 : 3,
+        g.facing,
+      );
+    else if (d.now - d.bossLaunch.landedAt < 220)
+      framePose(
+        this.gaara,
+        'gaara-airborne',
+        12 +
+          Math.min(5, Math.floor(((d.now - d.bossLaunch.landedAt) / 220) * 6)),
+        g.facing,
+      );
     if (d.now - l.damagedAt < 100) this.lee.setTint(0xffad8b);
     else if (this.phase === 'gates') this.lee.setTint(0xffd6bc);
     else this.lee.clearTint();
     this.renderCombat();
+    if (l.chargeStarted !== null) {
+      const p = clamp((d.now - l.chargeStarted) / 1000, 0, 1),
+        x = l.x,
+        y = l.y - 65;
+      this.graphics.lineStyle(2 + 2 * p, 0xecfff1, 0.3 + 0.5 * p);
+      for (let i = 0; i < 4; i++) {
+        const angle = this.clock * 0.004 + (i * Math.PI) / 2,
+          r = 30 + 18 * p;
+        this.graphics.lineBetween(
+          x + Math.cos(angle) * r,
+          y + Math.sin(angle) * r,
+          x + Math.cos(angle) * (r + 9),
+          y + Math.sin(angle) * (r + 9),
+        );
+      }
+    }
     if (l.health <= 0) {
       this.physics.world.pause();
       d.cancelAttack();
@@ -589,7 +807,7 @@ export class ChuninScene extends Phaser.Scene {
       if (d.now >= z.hitAt && !this.zoneFX.has(key)) {
         this.zoneFX.add(key);
         this.effect('eruption', z.x, FLOOR - 72, z.width * 1.75, 400);
-        this.sounds.cue('sand-impact',.7,.3);
+        this.sounds.cue('sand-impact', 0.7, 0.3);
       }
     }
     const ids = new Set(d.shots.map((p) => p.id));
@@ -731,15 +949,15 @@ export class ChuninScene extends Phaser.Scene {
         this.sounds.effect('guard', 0.3);
       } else if (cue.kind === 'bounce') {
         this.effect('sand', cue.x, cue.y, 105, 250);
-        this.sounds.cue('sand-bounce',.6,.2);
+        this.sounds.cue('sand-bounce', 0.6, 0.2);
       } else if (cue.kind === 'tell') {
         // The cue is anchored to preparation; it does not reveal the future parry frame.
-        this.sounds.cue('tell',.65,.3);
+        this.sounds.cue('tell', 0.65, 0.3);
       } else if (cue.kind === 'impact')
         this.effect('sand', cue.x, cue.y, 110, 450);
       else if (cue.kind === 'cast') {
         this.effect('sand', cue.x, cue.y, 75, 420);
-        this.sounds.cue('sand-cast',.65,.3);
+        this.sounds.cue('sand-cast', 0.65, 0.3);
       } else if (cue.kind === 'step') this.sounds.effect('swing', 0.25);
     }
     if (d.cues.length) this.lastCue = d.cues[d.cues.length - 1].id;
@@ -797,6 +1015,7 @@ export class ChuninScene extends Phaser.Scene {
     if (this.clock - this.feedbackAt > 500) this.feedback.setText('');
   }
   startStory(story: Story) {
+    this.resetMotion();
     this.story = story;
     this.storyContact = false;
     this.storySettled = false;
@@ -1233,6 +1452,7 @@ export class ChuninScene extends Phaser.Scene {
       gx = clamp(this.gaara.x, LEFT, RIGHT);
     this.phase = next;
     this.duel.advancePower(next);
+    this.resetMotion();
     this.jumps.reset();
     this.duel.lee.x = lx;
     this.duel.gaara.x = gx;
@@ -1252,6 +1472,10 @@ export class ChuninScene extends Phaser.Scene {
   }
   beginUltimate() {
     const d = this.duel;
+    this.resetMotion();
+    d.bossLaunch.reset();
+    d.playerLaunch.reset();
+    this.launchSeen = d.playerLaunch.serial;
     d.lee.ultimate = 0;
     d.lee.action = null;
     d.cancelAttack();
@@ -1299,6 +1523,9 @@ export class ChuninScene extends Phaser.Scene {
       this.duel.lee.x = this.lee.x;
       this.duel.lee.y = FLOOR;
       this.duel.gaara.y = FLOOR;
+      this.duel.gaara.x = this.gaara.x;
+      this.duel.gaara.grounded = this.duel.lee.grounded = true;
+      this.resetMotion();
       this.bodyPhysics.reset(this.lee.x, FLOOR);
       this.bodyPhysics.setVelocity(0, 0);
       this.physics.world.resume();

@@ -4,6 +4,7 @@ Recorded 2026-09-11 from the approved chapter specs, source, and prior productio
 
 | ID | Scope | Active decision and reason | Evidence / superseded direction |
 | --- | --- | --- | --- |
+| D-15 | Chapter 2 platform combat | User chose HP rather than percentages/ring-outs. Chapter2-first and retained F/LB parry are coordinator defaults stated after Continue. Directional normals/aerials, charged K/Y smashes, launches, air drift/fast-fall and directional air dodge; normals cost no stamina. | [Active platform spec](../chapters/chunin-exams/SMASH_COMBAT_SPEC.md). Supersedes Chapter2 down+J heavy/quick-palm K; Chapter1 remains unchanged. |
 | D-01 | Product | Add boss-rush chapters alongside earlier chapters. Favor iconic fights in story order, minimal cutscenes, and no filler traversal/waves. | [Chapter guide](../chapters/README.md), user's chapter-roadmap choices; Chapter 1's four fights are not a future chapter quota. |
 | D-02 | Story presentation | Automatic concise speech bubbles and in-engine choreography. Keep causal story beats and scene-local skip. | [Land of Waves spec](../chapters/land-of-waves/CHAPTER_SPEC.md); supersedes manga panels, portrait ultimates, and tap-to-continue panel chains. |
 | D-03 | Shared presentation | Approved quiet idle/runs, stationary default light melee, normal body anatomy across poses. Enlarge effects separately. | [Lessons](../chapters/LESSONS_LEARNED.md); supersedes constant swaying, forward melee drift, and pose-to-height scaling. |

@@ -21,6 +21,8 @@ Verified paths: 2026-09-11, continuous-duel revision based on `fc8687a`. The rev
 
 ## Commands and scope
 
+Chapter2 platform-fighter adaptation: [platform-combat.test.ts](../../game/chunin/platform-combat.test.ts) covers directional contacts, launch/escape, parry versus damage impulses and power-up cleanup. [check-platform-combat.cjs](../../tools/check-platform-combat.cjs) checks rendered directional controls, hops, air dodge, fast-fall and hit motion with labeled development setup; it cannot establish a full ordinary-input completion.
+
 Read [package.json](../../package.json) before use. Standard code validation: `npm run typecheck`, `npm test`, `npm run lint`, `npm run build`. Static client output is `dist/client`. Use installed dependencies; do not reinstall merely to check Markdown.
 
 - [tools/playtest-chunin.cjs](../../tools/playtest-chunin.cjs): development ordinary-input pilot, no HP/position/time/outcome overrides. Writes ignored `outputs/` receipts. Efficient automated behavior cannot certify human feel.

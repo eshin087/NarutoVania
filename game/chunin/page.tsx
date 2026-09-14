@@ -349,6 +349,12 @@ export default function ChuninPage() {
               <>
                 <h2>Master your taijutsu.</h2>
                 <p>
+                  Direction + attack selects kicks and aerials. Hold K / Y on
+                  the ground for a charged smash. Launch Gaara during openings,
+                  jump to follow, then steer or fast-fall into your next strike.
+                  Ordinary attacks cost no stamina; dodges and techniques do.
+                </p>
+                <p>
                   The pale hand glint signals a shot&apos;s release. Parry when
                   its bright core reaches you, even in the air. Hold to guard.
                   Outlined ground spells and red ! attacks must be dodged.
@@ -356,14 +362,27 @@ export default function ChuninPage() {
                 <table>
                   <tbody>
                     {[
-                      ['Move / down', 'A D / S', 'Stick / D-pad'],
+                      ['Move / aim', 'A D / W S', 'Stick / D-pad'],
                       [
                         'Jump / double jump',
                         'Space · press again in air',
                         'A / Cross · press again',
                       ],
-                      ['Combo / heavy', 'J / down + hold J', 'X / Square'],
-                      ['Quick palm', 'K', 'Y / Triangle'],
+                      [
+                        'Directional attack / aerial',
+                        'Direction + J',
+                        'Direction + X / Square',
+                      ],
+                      [
+                        'Charged smash',
+                        'Direction + hold K',
+                        'Direction + hold Y / Triangle',
+                      ],
+                      [
+                        'Short hop / fast-fall',
+                        'Tap Space / S while falling',
+                        'Tap A / down while falling',
+                      ],
                       [
                         'Dash / air dash / slide',
                         'Shift / down + Shift',
