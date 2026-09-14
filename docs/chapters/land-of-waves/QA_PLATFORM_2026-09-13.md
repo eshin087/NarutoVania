@@ -30,3 +30,7 @@ Sword ownership, mirror exits and ultimates were probed separately. Dedicated mi
 ## Limits
 
 No physical controller or new subjective audio listening coverage. Existing sounds are unchanged. Simulated input and this machine's observed frame rate do not certify other hardware, human difficulty or exact Smash Bros. behavior. Independent verdict: accepted with no remaining blocking findings; [retained receipt](QA_PLATFORM_INDEPENDENT_2026-09-13.json). Public verification is recorded in the production log.
+
+## Public verification
+
+Game source `c80a24f` is live on Vercel. Public cross-chapter smoke passed with zero page errors/missing assets; new controls, canonical manifest and exact binary atlas hashes matched. [Public receipt](QA_PLATFORM_PUBLIC_2026-09-13.json). The manifest hash intentionally canonicalizes JSON to avoid a false Windows/Linux line-ending mismatch.

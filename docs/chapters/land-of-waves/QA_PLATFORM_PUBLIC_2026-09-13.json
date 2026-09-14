@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "url": "https://narutovania.vercel.app/",
+  "assets": {
+    "manifest.json": "7e769c55d90968f2bc2f0f466bf55675e0c05ddcf7ca1e99e52b9b5b9b7b964a",
+    "kakashi.webp": "a4ac53286f0f9ca149a919d37c334a1add3b55b1b7470bc1b6e84cc0a3eb96ff",
+    "naruto.webp": "03d28d80973466ce26cdef083f9b233317286059c3889b33409889734f857c17",
+    "sasuke.webp": "1820501fb50977345e86add44e70c1e4be85daba7c06af5c946c3337932b2190"
+  },
+  "errors": []
+}

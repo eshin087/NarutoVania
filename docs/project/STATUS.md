@@ -1,6 +1,6 @@
 # Current status and handoff
 
-Last source inspection: **2026-09-13**, published game source `a3d19da`. This is a dated repository snapshot, not continuous monitoring. Recheck Git and live deployment status when a task depends on them.
+Last source inspection: **2026-09-13**, published game source `c80a24f`. This is a dated repository snapshot, not continuous monitoring. Recheck Git and live deployment status when a task depends on them.
 
 ## Shipped baseline
 
@@ -9,13 +9,13 @@ Last source inspection: **2026-09-13**, published game source `a3d19da`. This is
 | 01 — Land of Waves | Four fights: mist, rescue, mirrors, seal; automatic in-engine story | [Spec](../chapters/land-of-waves/CHAPTER_SPEC.md), [V23 receipt](../../art/v23/validation.md) |
 | 02 — The Power of Youth | Lee vs. Gaara; shield, speed, gates; short canonical ending | [Spec](../chapters/chunin-exams/CHAPTER_SPEC.md), [production log](../chapters/chunin-exams/PRODUCTION_LOG.md), [QA](../chapters/chunin-exams/QA_REPORT.md) |
 
-Last recorded game release: `a3d19da`, published 2026-09-13 to [Vercel](https://narutovania.vercel.app/), replacing `7232a42`/game source `2c10a5c`. GitHub's Vercel status reports success; live new controls and both generated asset hashes match the candidate. 275 automated tests, final static build, full ordinary-input duel and independent rendered review passed. [Release receipt](../chapters/chunin-exams/PRODUCTION_LOG.md), [GitHub repository](https://github.com/eshin087/NarutoVania).
+Last recorded game release: `c80a24f`, published 2026-09-13 to [Vercel](https://narutovania.vercel.app/), replacing `a3d19da`. Chapter 1 now shares HP platform-fighter controls with Chapter 2. GitHub's Vercel status reports success; live controls, canonical manifest and all three generated atlas hashes match. 287 tests, static build, full ordinary-input Chapter 1 completion and independent rendered review passed. [Release receipt](../chapters/land-of-waves/PRODUCTION_LOG.md), [GitHub repository](https://github.com/eshin087/NarutoVania).
 
 Legacy [ChatGPT Site](https://narutovania-land-of-waves.gcdone.chatgpt.site/) was not updated in the Chapter 2 release. Its current parity has not been checked for this documentation task.
 
-## Active work — Chapter 1 platform combat
+## Completed — Chapter 1 platform combat
 
-2026-09-13: user approved Chapter 2's combat and asked to apply it to Land of Waves. Directional controls, launches and 72 generated frames are integrated locally; independent QA and full chapter playthrough underway. Public baseline remains unchanged. [Production log](../chapters/land-of-waves/PRODUCTION_LOG.md).
+2026-09-13: user approved Chapter 2's combat and requested Land of Waves parity. Directional normals/aerials, charged smashes, air steering/dodges, launches and 72 generated frames are published. K/Y charges smash; Chapter 1 ranged tool is I/L3. Four fights, kits, parries, HP and ultimate economy retained. Final live smoke passed both chapters; no implementation/release gate remains. [Production log](../chapters/land-of-waves/PRODUCTION_LOG.md), [QA](../chapters/land-of-waves/QA_PLATFORM_2026-09-13.md). Await user review of the new feel.
 
 ## Completed revision / handoff
 
