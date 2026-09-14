@@ -29,7 +29,7 @@ export function registerBossTools(inputs: BattleInput, scene: () => BossGameScen
       const game = scene(); if (busy || !game || !['playing', 'paused', 'intro'].includes(bridge.get().screen)) return {error: 'Start a fight first.'};
       busy = true; try {const {driveCombat} = await import('./playtest-driver'); return await driveCombat(game, inputs, Math.max(1000, Math.min(30000, Number(args.milliseconds))), args.noUltimate === true,args.casual===true);} finally {busy = false;}
     }});
-    const actions: Action[] = ['left', 'right', 'down', 'jump', 'melee', 'tool', 'dash', 'parry', 'skill1', 'skill2', 'substitute', 'ultimate'];
+    const actions: Action[] = ['left', 'right', 'up', 'ranged', 'down', 'jump', 'melee', 'tool', 'dash', 'parry', 'skill1', 'skill2', 'substitute', 'ultimate'];
     add({name: 'play_input_sequence', description: 'Development browser playtest: hold ordinary game inputs for bounded durations. No stat, phase or outcome overrides. Pauses after the sequence by default.',
       inputSchema: {type: 'object', properties: {steps: {type: 'array', minItems: 1, maxItems: 24, items: {type: 'object', properties: {actions: {type: 'array', items: {type: 'string', enum: actions}}, ms: {type: 'integer', minimum: 16, maximum: 3000}}, required: ['actions', 'ms'], additionalProperties: false}}, pauseAfter: {type: 'boolean'}}, required: ['steps'], additionalProperties: false},
       execute: async args => {

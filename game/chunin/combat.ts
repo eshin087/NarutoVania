@@ -7,7 +7,7 @@ import {
 } from '../combat-core';
 import { planSandVolley } from './sand-fairness';
 import { traceSandFlight } from './sand-flight';
-import { attackBox, LaunchState, type LaunchEvent } from './platform-combat';
+import { attackBox, LaunchState, type LaunchEvent } from '../platform-combat';
 export type Phase = 'shield' | 'speed' | 'gates';
 export const PHASES: Phase[] = ['shield', 'speed', 'gates'];
 export const GAARA_HEALTH = 6000;

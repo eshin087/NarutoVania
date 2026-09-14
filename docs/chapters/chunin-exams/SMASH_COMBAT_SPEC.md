@@ -1,6 +1,6 @@
 # Chapter 2 platform-fighter combat revision — 2026-09-13
 
-User confirmed health bars: no percentages, stocks or ring-outs. On Continue, coordinator stated defaults for the unanswered optional questions: Chapter 2 first; keep fresh F/LB parry and held block. These are stated implementation defaults, not fabricated user answers. Chapter 1 retains its released combat. No new story scenes, enemy waves or multiplayer.
+User confirmed health bars: no percentages, stocks or ring-outs. On Continue, coordinator stated defaults for the unanswered optional questions: Chapter 2 first; keep fresh F/LB parry and held block. These are stated implementation defaults, not fabricated user answers. This was the initial Chapter 2-only scope. The user subsequently approved applying it to Chapter 1; see [Land of Waves spec](../land-of-waves/CHAPTER_SPEC.md). No new story scenes, enemy waves or multiplayer.
 
 ## Target
 

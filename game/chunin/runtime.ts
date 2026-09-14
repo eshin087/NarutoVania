@@ -26,7 +26,7 @@ import {
   steerVelocity,
   type AttackAim,
   type PlatformAttack,
-} from './platform-combat';
+} from '../platform-combat';
 interface FX {
   image: Phaser.GameObjects.Sprite;
   born: number;

@@ -29,6 +29,7 @@ Adding a third chapter still requires explicit registry/save-parser/selector wir
 | Area | Files |
 | --- | --- |
 | UI/runtime | game/boss-page.tsx, game/boss-runtime.ts, game/boss-gameplay.ts |
+| Platform combat | game/platform-combat.ts, game/land-platform.ts, game/chunin/combat.ts |
 | Kits/story route | game/chapter.ts, game/story-director.ts |
 | Bosses/barrages | game/boss-ai.ts, game/barrages.ts, game/mirror-volley-v23.ts |
 | Story staging | game/story-v22.ts, game/ending-v23.ts, game/ending-timing-v23.ts plus referenced older cinematic controllers |

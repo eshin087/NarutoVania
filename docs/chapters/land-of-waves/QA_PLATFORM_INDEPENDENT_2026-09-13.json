@@ -1,0 +1,68 @@
+{
+  "verdict": "Accept the reviewed Chapter 1 platform-combat candidate; no remaining blocking findings in focused independent review.",
+  "candidate": "Local http://127.0.0.1:3000/ after final grounded-root and opacity handoff correction; reviewed 2026-09-13",
+  "method": "Independent headless Edge/Playwright rendering, public Scene Select, shared ordinary input sequences and DEV ordinary-input pilot; no gameplay state overrides or source changes.",
+  "closed_findings": [
+    {
+      "id": "LAND-PF-R01",
+      "issue": "Down aerial used forward-facing horizontal kick art",
+      "closure": "All three characters show downward full-body contact frame20; inspected rendered contact poses."
+    },
+    {
+      "id": "LAND-PF-R02",
+      "issue": "Directionally incorrect forward whiff hit star",
+      "closure": "Up/down/back normals no longer show forward whiff hit stars; real target contact remains."
+    },
+    {
+      "id": "LAND-PF-R03",
+      "issue": "Inherited drag erased backward air steering and boss launch impulse",
+      "closure": "All four fights show air drift and smooth boss launch; independent backward input165ms yields21-23px displacement and vx about-305.6 with facing retained."
+    },
+    {
+      "id": "LAND-PF-R04",
+      "issue": "Generic landing recovery looked like idle",
+      "closure": "All four ground recovery snapshots show exact floor592/590, visible landing pose and0.17-0.18s HUD recovery."
+    },
+    {
+      "id": "LAND-PF-R05",
+      "issue": "Combat-to-story snapshot inherited blink opacity and stale grounded root",
+      "closure": "Final r6 first cinematic Naruto is fully opaque at y594, floor592+2. Earlier r5 airborne zero-HP completion held until landing before transition."
+    }
+  ],
+  "ownership": {
+    "generic_launch": "Actual up-tilt hits launched bosses in all four fights; smooth ascent/descent and220ms grounded recovery verified.",
+    "mirror_exit": "20 sampled dedicated mirror exits: zero generic-launch overlaps and zero visible reflections; rendered emergence/landing inspected.",
+    "sword_ultimate": "Observed one sword projectile and weaponless Zabuza while away; ultimate cleanup left zero sword projectiles and restored held sword.",
+    "hounds": "Grounded skill start/end rendered; no duplicate weapon or residual launch in observed contact."
+  },
+  "handoff_evidence": {
+    "r5": "BossHP0 at t7032 while Naruto y464; remained playing through descent; intro at t7416. Identified opacity/root issue then fixed.",
+    "r6": "Repeated ordinary rescue completion: full-opacity first cinematic, Naruto y594. Final hit in this repeat happened after landing, so this receipt verifies cosmetic handoff rather than independently re-proving airborne gate."
+  },
+  "errors": "Zero page errors in completed focused runs. R3 final mirror samples interrupted by coordinator HMR and excluded from gameplay judgment.",
+  "evidence_files": [
+    "receipt-r2.json",
+    "receipt-r3.json",
+    "receipt-r4.json",
+    "receipt-r5.json",
+    "receipt-r6.json",
+    "r2-mist-down-air.png",
+    "r2-rescue-down-air.png",
+    "r2-mirrors-down-air.png",
+    "r2-rescue-back-air.png",
+    "r4-mist-ground-recovery.png",
+    "r4-mirrors-ground-recovery.png",
+    "r3-sword-flight.png",
+    "r3-sword-post-ultimate.png",
+    "r3-mirror-exit-2.png",
+    "r3-mirror-exit-7.png",
+    "r6-first-scene.png"
+  ],
+  "coverage_limits": [
+    "Independent focused combat/ownership/handoff review only; complete four-fight chapter and ending owned by coordinator, not duplicated here.",
+    "No physical-controller or subjective-audio coverage.",
+    "Browser reported uncapped133-162fps in samples; no separately forced60Hz/120Hz timing comparison.",
+    "Main new directional art reviewed facing-right independently; coordinator retained both-facing input checks.",
+    "No broad re-audit of unchanged story cinematics."
+  ]
+}

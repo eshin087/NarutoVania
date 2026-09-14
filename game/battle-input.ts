@@ -1,11 +1,11 @@
 import {bossBridge} from './boss-bridge';
-export type Action = 'left' | 'right' | 'up' | 'down' | 'jump' | 'melee' | 'tool' | 'dash' | 'parry' | 'skill1' | 'skill2' | 'substitute' | 'ultimate';
-export const KEYBOARD: Record<string, Action> = {KeyA: 'left', ArrowLeft: 'left', KeyD: 'right', ArrowRight: 'right', KeyS: 'down', ArrowDown: 'down', Space: 'jump', KeyJ: 'melee', KeyK: 'tool', ShiftLeft: 'dash', ShiftRight: 'dash', KeyF: 'parry', KeyQ: 'skill1', KeyE: 'skill2', KeyL: 'substitute', KeyR: 'ultimate'};
-const LOGICAL_KEYS:Record<string,Action>={a:'left',arrowleft:'left',d:'right',arrowright:'right',s:'down',arrowdown:'down',' ':'jump',j:'melee',k:'tool',shift:'dash',f:'parry',q:'skill1',e:'skill2',l:'substitute',r:'ultimate'};
+export type Action = 'left' | 'right' | 'up' | 'down' | 'jump' | 'melee' | 'tool' | 'ranged' | 'dash' | 'parry' | 'skill1' | 'skill2' | 'substitute' | 'ultimate';
+export const KEYBOARD: Record<string, Action> = {KeyA: 'left', ArrowLeft: 'left', KeyD: 'right', ArrowRight: 'right', KeyS: 'down', ArrowDown: 'down', Space: 'jump', KeyJ: 'melee', KeyK: 'tool', KeyI: 'ranged', ShiftLeft: 'dash', ShiftRight: 'dash', KeyF: 'parry', KeyQ: 'skill1', KeyE: 'skill2', KeyL: 'substitute', KeyR: 'ultimate'};
+const LOGICAL_KEYS:Record<string,Action>={a:'left',arrowleft:'left',d:'right',arrowright:'right',s:'down',arrowdown:'down',' ':'jump',j:'melee',k:'tool',i:'ranged',shift:'dash',f:'parry',q:'skill1',e:'skill2',l:'substitute',r:'ultimate'};
 export const keyboardAction=(event:Pick<KeyboardEvent,'code'|'key'>)=>KEYBOARD[event.code]||LOGICAL_KEYS[event.key?.toLowerCase()];
 KEYBOARD.KeyW = KEYBOARD.ArrowUp = 'up';
 LOGICAL_KEYS.w = LOGICAL_KEYS.arrowup = 'up';
-export const PAD_BUTTONS: Record<number, Action> = {0: 'jump', 1: 'dash', 2: 'melee', 3: 'tool', 4: 'parry', 5: 'skill1', 6: 'substitute', 7: 'skill2', 11: 'ultimate', 13: 'down', 14: 'left', 15: 'right'};
+export const PAD_BUTTONS: Record<number, Action> = {0: 'jump', 1: 'dash', 2: 'melee', 3: 'tool', 4: 'parry', 5: 'skill1', 6: 'substitute', 7: 'skill2', 10: 'ranged', 11: 'ultimate', 13: 'down', 14: 'left', 15: 'right'};
 export function mapGamepad(pad: Pick<Gamepad, 'axes' | 'buttons'>): Set<Action> {
   const actions = new Set<Action>();
   if ((pad.axes[1] || 0) < -.45 || pad.buttons[12]?.pressed) actions.add('up');

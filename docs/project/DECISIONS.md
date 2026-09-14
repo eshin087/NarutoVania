@@ -20,4 +20,6 @@ Recorded 2026-09-11 from the approved chapter specs, source, and prior productio
 | D-13 | Shared movement | One extra jump in the air, with independent air dash and existing airborne parry. | User requested double jump; both active chapters use the recommended default scope, which was not separately answered. [Jump controller](../../game/jump-state.ts). |
 | D-14 | Chapter 2 sand | Travelling projectiles and single-floor ricochets are parryable; marked ground spells remain dodge-only. Preserve reaction time and reachable ground routes. | [Shared flight trace](../../game/chunin/sand-flight.ts), [fairness](../../game/chunin/sand-fairness.ts), actual resolver regression. |
 
+| D-15 | Both chapters | HP-based platform-fighter movement and directional attacks; no stocks/ring-outs. Chapter 1 K/Y charges smash; ranged tool is I/L3. Preserve signature techniques and parries. | User approved Chapter 2's revision then requested Chapter 1 parity. [Land of Waves spec](../chapters/land-of-waves/CHAPTER_SPEC.md), [shared attacks](../../game/platform-combat.ts). |
+
 When changing a decision, retain its ID, mark it superseded, link the replacement and evidence, and update the affected spec. Keep exact tuning in source and chapter-specific logs rather than duplicating rapidly changing numbers here.

@@ -19,6 +19,8 @@ Verified paths: 2026-09-11, continuous-duel revision based on `fc8687a`. The rev
 | Audio | [audio-v9.test.ts](../../game/audio-v9.test.ts), [audio-v11.test.ts](../../game/audio-v11.test.ts) | Actual active-manifest cues, source counts, mix under repetition and slider behavior. Old file names do not imply full V23 listening coverage. |
 | Chapter 2 audio profile | [audio-profile.test.ts](../../game/chunin/audio-profile.test.ts), [audio smoke](../../tools/smoke-chunin-audio.cjs) | Exact exported hashes, PCM/sample boundaries, pools/licensing, all 21 browser decodes, public auditions, actual output peak and cleanup. Analyser data is not listening. |
 
+Chapter 1 adaptation: [land-platform.test.ts](../../game/land-platform.test.ts) covers shared inputs, landing and protected movement ownership. [check-land-platform.cjs](../../tools/check-land-platform.cjs) uses ordinary inputs to catch Arcade drag cancelling air steering. [playtest-land-platform.cjs](../../tools/playtest-land-platform.cjs) runs the full chapter through normal actions and automatic story scenes; no position/stat/time overrides.
+
 ## Commands and scope
 
 Chapter2 platform-fighter adaptation: [platform-combat.test.ts](../../game/chunin/platform-combat.test.ts) covers directional contacts, launch/escape, parry versus damage impulses and power-up cleanup. [check-platform-combat.cjs](../../tools/check-platform-combat.cjs) checks rendered directional controls, hops, air dodge, fast-fall and hit motion with labeled development setup; it cannot establish a full ordinary-input completion.

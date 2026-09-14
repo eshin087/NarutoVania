@@ -13,6 +13,10 @@ Last recorded game release: `a3d19da`, published 2026-09-13 to [Vercel](https://
 
 Legacy [ChatGPT Site](https://narutovania-land-of-waves.gcdone.chatgpt.site/) was not updated in the Chapter 2 release. Its current parity has not been checked for this documentation task.
 
+## Active work — Chapter 1 platform combat
+
+2026-09-13: user approved Chapter 2's combat and asked to apply it to Land of Waves. Directional controls, launches and 72 generated frames are integrated locally; independent QA and full chapter playthrough underway. Public baseline remains unchanged. [Production log](../chapters/land-of-waves/PRODUCTION_LOG.md).
+
 ## Completed revision / handoff
 
 ### Completed HP platform-fighter revision — 2026-09-13

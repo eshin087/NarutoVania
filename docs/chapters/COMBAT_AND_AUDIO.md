@@ -6,7 +6,7 @@ Use the existing shared action inputs. New bosses need distinctive patterns and 
 
 For each move define anticipation, locked targeting, active geometry, contact count, recovery, costs, cooldown, eligibility, interruption behavior and player response. Keep minimum readable tells and reachable ground routes. Alternate pressure and punish opportunities; avoid indefinite stun locks or mandatory perfect play.
 
-Ordinary melee remains stationary. Animation events determine hit timing. Buffer/cancel rules remain explicit. Visual size changes must not silently alter collision, reach or damage.
+Neutral jab remains stationary; an intentional running attack may advance. Both chapters use HP-based directional normals, aerials and charged smashes from game/platform-combat.ts. Animation events determine hit timing. Buffer/cancel rules remain explicit. Visual size changes must not silently alter collision, reach or damage.
 
 Each signature barrage needs:
 - A readable beginning, multiple meaningful positioning decisions and a visible recovery.
@@ -46,3 +46,9 @@ Keep source URL, author, license, attribution, edits and runtime path for every 
 4. Record actual listening as passed, failed or not performed, separately from signal measurements.
 
 A lower peak or low-pass filter does not prove a sound is soothing. If listening is unavailable, state that limitation; do not issue a subjective audio sign-off.
+
+## Platform motion ownership (2026-09-13)
+
+Chapter 1 uses `LandPlatformControls` and `LandLaunch`; Chapter 2 keeps its existing duel resolver. Disable inherited Arcade drag where the platform controller owns velocity: 1900 drag cancelled 1800 air steering despite pure unit tests passing. Retain the ordinary-input browser regression in tools/check-land-platform.cjs.
+
+Generic launches cannot take movement from mirrors, barrages, returning swords, restraint or committed red attacks. Hounds wait for grounded contact. Completion after a generic airborne finish waits for landing before story snapshots. Impacts appear at actual targets; directional whiffs must not create forward-facing hit stars.

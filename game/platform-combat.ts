@@ -1,4 +1,4 @@
-import { clamp, type AttackDefinition, type AttackEvent } from '../combat-core';
+import { clamp, type AttackDefinition, type AttackEvent } from './combat-core';
 
 export type AttackAim = 'neutral' | 'forward' | 'back' | 'up' | 'down';
 export interface LaunchEvent extends AttackEvent {

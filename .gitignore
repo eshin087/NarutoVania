@@ -40,3 +40,6 @@ next-env.d.ts
 
 .vercel
 .env*
+
+# Python asset-processing caches
+__pycache__/

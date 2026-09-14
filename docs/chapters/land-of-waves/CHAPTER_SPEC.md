@@ -1,6 +1,16 @@
 # Existing chapter: Land of Waves
 
-Baseline: V23 / 0f54bd3, inspected 2026-09-08. This is the current project's continuity and adaptation record, not a fresh manga research report or proof of current runtime quality.
+Story baseline: V23 / 0f54bd3. Combat adaptation: 2026-09-13, see [production log](PRODUCTION_LOG.md). This is the current project's continuity and adaptation record, not a fresh manga research report or proof of current runtime quality.
+
+## HP platform combat
+
+User approved applying Chapter 2's platform-fighter controls to this chapter. Keep HP, four fights, existing boss pools, parry windows, kits and ultimate economy; no stocks or ring-outs.
+
+- Direction + J/X selects grounded normals or neutral/forward/back/up/down aerials. Neutral jab stays planted; only an intentional running attack advances.
+- Direction + hold K/Y charges a smash. I/L3 throws the existing chakra-cost ranged tool. Q/E, L, R and F/LB retain techniques, substitution, ultimate and parry/block.
+- Ground acceleration, short/full/double jump, air steering, fast-fall and directional air dodge match Chapter 2's control style.
+- Exposed bosses launch, land and recover; four quick launch hits trigger a bounded escape. Mirrors, barrages, returning sword and restraint retain their own movement. Ordinary attacks and mirror parries remain alternative exposure routes.
+- 72 generated directional frames use stable body scales; hit events own contact timing. Quiet idle, approved runs, story art and audio remain.
 
 ## Playable route
 

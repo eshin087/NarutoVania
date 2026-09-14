@@ -43,7 +43,7 @@ export async function driveCombat(scene: BossGameScene, inputs: BattleInput, mil
       const face: Action = incoming ? incoming.q.x > p.x ? 'right' : 'left' : b.x > p.x ? 'right' : 'left';
       actions = [face, 'parry']; held = actions; holdUntil = now + (guardEarly?340:145);
     } else if (p.chargeStarted !== null) {
-      actions = now < heavyRelease ? ['down', 'melee'] : [];
+      actions = now < heavyRelease ? ['down', 'tool'] : [];
     } else if (p.action) {
       if (p.action.definition.action.startsWith('light') && now - p.action.started > p.action.definition.duration - 95 && delay > 550 && p.stamina > 28 && distance < 140) actions = ['melee'];
     } else if (p.stamina < 27) {
@@ -64,10 +64,10 @@ export async function driveCombat(scene: BossGameScene, inputs: BattleInput, mil
       if (occupied && occupied.y < scene.floor - 180) {
         if (distance > 115) actions = [direction];
         else if (p.grounded && now - lastJump > 1100) {actions = [direction, 'jump']; held = actions; holdUntil = now + 330; lastJump = now;}
-        else if (!p.grounded) actions = [direction, 'tool'];
+        else if (!p.grounded) actions = [direction, 'ranged'];
       } else if (distance > 102) actions = [direction];
       else if (now - lastAttack > 200 && !previous.includes('melee')) {
-        if (b.guardBrokenUntil > now + 1050 && p.stamina > 55) {actions = ['down', 'melee']; heavyRelease = now + 470;}
+        if (b.guardBrokenUntil > now + 1050 && p.stamina > 55) {actions = ['down', 'tool']; heavyRelease = now + 470;}
         else actions = [direction, 'melee'];
         lastAttack = now;
       }

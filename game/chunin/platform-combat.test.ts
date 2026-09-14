@@ -7,7 +7,7 @@ import {
   attackBox,
   LaunchState,
   steerVelocity,
-} from './platform-combat';
+} from '../platform-combat';
 import { Duel, FLOOR, LEFT, RIGHT } from './combat';
 import { Combatant, overlaps, UNIVERSAL } from '../combat-core';
 

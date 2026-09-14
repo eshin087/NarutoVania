@@ -54,16 +54,17 @@ Perfect-parried mirror needles return to the real Haku. Deflect two separate vol
 
 ## Controls
 
-**Chapter 2 — Lee vs. Gaara:** direction + **J / X** selects ground kicks and aerial attacks; hold **K / Y** for a charged directional smash on the ground. Use **W/S or up/down** for vertical attacks, tap jump for a short hop, and press down while falling to fast-fall. **Shift / B** plus a direction performs an air dodge. F/LB parry, Q/E techniques, L backstep, and R ultimate remain available.
+**Both chapters:** direction + **J / X** selects ground kicks and aerial attacks; hold **K / Y** for a charged directional smash on the ground. Use **W/S or up/down** for vertical attacks, tap jump for a short hop, and press down while falling to fast-fall. **Shift / B** plus a direction performs an air dodge. F/LB parry, Q/E techniques, L defense, and R ultimate remain available. Lee uses a physical backstep; Team 7 retains substitution and character-specific techniques.
 
 **Chapter 1 — Land of Waves:**
 
 | Action | Keyboard | Controller |
 | --- | --- | --- |
-| Move / crouch | A/D or arrows; S/down | Left stick / D-pad |
+| Move / attack direction | W/A/S/D or arrows | Left stick / D-pad |
 | Jump / double jump | Space; press again in the air | A / Cross; press again in the air |
-| Melee / charged heavy | J / down + hold J | X / Square |
-| Shuriken | K | Y / Triangle |
+| Directional melee / aerial | Direction + J | Stick + X / Square |
+| Charged smash | Direction + hold K | Stick + hold Y / Triangle |
+| Shuriken | I | Left-stick click |
 | Dash / air dash / slide | Shift; down modifies | B / Circle |
 | Parry / block | Tap / hold F | Tap / hold LB / L1 |
 | Techniques | Q and E | RB/R1 and RT/R2 |
